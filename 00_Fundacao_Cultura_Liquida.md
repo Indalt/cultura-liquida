@@ -579,18 +579,66 @@ O que o wiki oferece:
 
 ## 6. Modelo de dados mínimo [PROPOSTA — vira contrato dos agentes no Passo 1]
 
-- **Ambiente:** id · nome · tipo (hemeroteca, periódico científico, repositório de teses, revista, jornal, blog, substack, rede social, documento oficial como RTID, RCID ou Diário Oficial, acervo pessoal, outro) · acesso (feed, API, busca, manual) · booleanos em uso (vindos da terminologia) · janela temporal · estado · pegadas (o que já foi visto: IDs, URLs, períodos) · vácuos (o que se sabe que falta) · última visita.
-- **Entrada:** id · canal · ambiente · data de entrada · URL ou arquivo · cópia arquivada · quem enviou e consentimento (quando há pessoa) · status (bruto → triagem → quarentena ou aceito → extraído → verificado → publicado) · valências · parecer.
-- **Fonte:** id · referência completa · tipo · data da fonte · URL, DOI ou link permanente · cópia arquivada · data de acesso.
-- **Afirmação:** id · CLB ou termo · atributo (insumo, processo, recipiente, lugar, época, transmissão, uso, risco…) · valor · fonte · localizador · trecho literal · data da fonte · período a que se refere (Z; dupla marcação temporal, P9) · matriz epistêmica (W) · status (verificado, fragmento, em tensão, pendente) · verificado por e quando · evidência (μ, λ), só a partir do Passo 7 e calculada por script.
-- **Termo:** id · designação · variantes (com o tipo de variação) · definição · abonações (as afirmações que o atestam) · relações · booleanos derivados.
-- **Ficha CLB:**
-  - cabeçalho: id, termos, X insumos, Y processos, Z períodos (com a dupla marcação), W matrizes, territórios, status, avisos (preenchidos sob demanda);
-  - seções: definição · modo de fazer · ilustração técnica · temporalidade · quem ensina e como se transmite · territórios · tensões · avisos · educação · fontes · como citar;
-  - toda frase aponta para as afirmações que a sustentam; a marcação (por exemplo, uma nota de rodapé com o ID da afirmação) é definida no Passo 1.
-- **Aresta do grafo:** origem · destino · tipo · afirmações que a sustentam · Z · W · (μ, λ).
-- **Matriz de Pegadas e Vácuos** (P89): critérios de busca (todos menos o tempo) × ambiente × períodos já percorridos → o que já foi visto e o que falta ver.
-- **Trilha (registro de execução):** agente · habilidade · data · entrada · buscas feitas · resultados · o que foi aceito, descartado ou posto em quarentena, e por quê · saídas.
+Esta seção lista as entidades (os tipos de registro) do sistema: o que cada uma é, os campos mínimos e a ligação com as outras. Os campos são [PROPOSTA]: o contrato final, em JSON Schema (um arquivo que descreve os campos de um registro e permite a um script recusar o que estiver fora dele), sai no Passo 1, no caso-piloto; o rascunho da Falta já está em `esquemas/falta.schema.json`. São [VIGENTE] só as regras que Vicente decidiu e que o modelo apenas obedece: a Falta é dita e nunca completada (D-018); não julgamos (D-019); o Jurídico cria Faltas e nunca autoriza (D-020).
+
+**Regras de todo registro [PROPOSTA]:**
+- **IDs imutáveis:** cada registro recebe um ID com prefixo do tipo (ex.: F-0001 para Falta, P-0042 para pessoa); o ID nunca muda nem é reaproveitado. Fusão de duplicatas deixa o ID antigo apontando para o novo; retirada deixa o ID com a marca "retirado", sem o conteúdo. Assim, todo link e toda trilha continuam válidos.
+- **campos de proteção:** todo registro que toca pessoa, comunidade ou texto de terceiro traz: licença ou regra da fonte; consentimento (só a referência; o termo fica fora do Git, §5.1); restrição comunitária, que vale acima de todas as licenças (§5.4); precisão de lugar publicada (exata, localidade, município, UF ou bioma; generalizada por padrão para territórios tradicionais, lugares sagrados e onde houver planta); marca de dado sensível, que vira Falta até haver base legal; marca de criança ou adolescente, que impede imagem, voz e nome; e o estado de pedido de retirada ("havia uma fala retirada"). Nenhum desses campos guarda dado pessoal: no Git, só códigos opacos.
+- **Data e origem em tudo:** quem criou (agente, script ou Vicente), quando, e de qual Execução.
+
+**Busca**
+- **Ambiente:** o lugar onde se busca (§5.2). Campos: id · nome · tipo (hemeroteca, periódico científico, repositório de teses, revista, jornal, blog, substack, rede social, documento oficial como RTID, RCID ou Diário Oficial, acervo pessoal, outro) · via e protocolo · ficha de acesso (§5.2) · pegadas e vácuos · **dois eixos de estado:** escavação (proposto → mapeando → minerando → exaurido, sempre por Recorte) e monitoramento, que nunca se exaure · última visita. Liga-se a Consultas, Recortes e Entradas.
+- **Consulta:** uma busca nomeada, independente do ambiente. Campos: id · tipo (termo, mista ou só descritores) · Termos e variantes de origem · descritores processuais (P3) · tradução para a sintaxe de cada Ambiente · rendimento (as descobertas que produziu). Nasce dos Termos (princípio 2).
+- **Recorte:** a unidade do trabalho de busca, Ambiente × Consulta × período × lugar de publicação × modo (termo, descritores ou folheio). Campos do arquivo de estado: cursor · total informado · total visto · saturação · erros · próxima ação · reserva (código opaco e prazo) · teto de chamadas e de divisões da janela · estado: "percorrido pela busca" (todas as ocorrências informadas abertas e triadas, sem resposta saturada, bola de neve fechada) ou "lido por inteiro" (só com folheio). A fonte que não informa o total nunca é dada como exaurida e leva a Falta "total desconhecido"; teto estourado leva a Falta "busca interrompida por teto". Reabrem o Recorte: variante nova, título novo, OCR refeito, novidade no canal da fonte, esquema ou validador novo, Falta resolvida. A cobertura mede o que a busca vê, não o que existe.
+- **Execução:** o registro de cada rodada de agente, script ou pessoa (a trilha, acordo 4). Campos: agente ou script · habilidade · versão do harness · modelo · data · Recortes e Consultas usados · resultados · o que foi aceito, descartado ou posto em quarentena, e por quê · saídas · consumo. Os logs seguem `esquemas/log.schema.json`. A **Matriz de Pegadas e Vácuos** (P89) é gerada das Execuções (§5.2).
+
+**Entrada e fonte**
+- **Entrada:** cada item que chega, por qualquer canal (§5.4); uma só por item, mesmo que várias Consultas o achem. Campos: id · canal · Ambiente e Recortes que a acharam · data de entrada · URL ou arquivo · cópia no Wayback · pessoa que enviou (código opaco e papel) e consentimento, quando há pessoa · declaração de interesse, sem julgar nem excluir · valências · parecer · status no eixo 1 (abaixo). Gera Fontes e Trechos.
+- **Fonte:** o documento de onde vem a informação. Campos: id · referência completa · tipo de evidência (as portas do §5.4) · data da fonte · URL, DOI ou link permanente · cópia no Wayback · data de acesso · **perspectiva** (de onde a fonte fala: repórter, médico, folclorista, pesquisador, instituição, anúncio, quem pratica) · **`deriva_de`** (as Fontes que ela copia ou de que deriva; define a linhagem usada por μ e λ, princípio 3) · **Correção** (relação com a Fonte que ela corrige, a si mesma ou a outra, e o que corrige; documentada, nunca aplicada por nós, D-019).
+- **Trecho:** a passagem literal de uma Fonte, guardada conforme a custódia do princípio 1. Campos: id · Fonte · texto exato · um pedaço antes e outro depois (o seletor de citação da W3C Web Annotation) · localizador (página, URL, ou `t=início,fim` para áudio e vídeo) · hash do texto lido · data da conferência · origem do texto lido (fonte, Wayback ou transcrição por IA, marcada e com o link da imagem da página) · grau de semelhança · status no eixo 2. Abaixo do limiar, vira Falta "não verificável por máquina" e vai para a cota humana.
+
+**Afirmação**
+- **Evidência:** um Trecho posto a serviço de uma Proposição. Campos: id · Trecho · Proposição · sentido (a favor ou divergente) · **voz** (quem fala: o autor, uma pessoa citada em fala direta, uma instituição, um anúncio) · três Lugares (o da prática, o da publicação e o de quem pesquisa; só o da prática organiza o wiki, e sem ele há Falta) · critério de prática cultural que atesta, se atesta · status no eixo 3. W só se ancora na fala de quem pratica.
+- **Proposição:** uma afirmação sobre a CLB situada, na forma CLB situada × atributo (insumo, processo, recipiente, lugar, época, transmissão, uso, risco…) × valor × período. Campos: id · CLB situada · atributo · valor · período (Z, com a dupla marcação temporal da P9: a data da fonte e o período a que ela se refere) · Evidências · μ e λ, calculados por script e contados por linhagem (Passo 7) · status no eixo 4. A fonte contrária entra como Evidência divergente e não derruba a Proposição (D-019).
+
+**Prática e grafo**
+- **CLB situada:** a bebida num lugar, num grupo e num período (bebida × Lugar × grupo × período). Campos: id · Termos (muitos para muitos, M:N, enquanto a pergunta do §10 sobre a unidade da ficha não for decidida) · Lugares · grupo ou comunidade · períodos · um campo por critério de prática cultural (referência à identidade ou à memória de um grupo; reconhecimento pelo grupo; transmissão entre gerações; recriação, que é a Transformação de W), cada um com a Evidência que o atesta ou com Falta, nunca recusa (princípio 10) · Elementos de prática · status no eixo 5. A **ficha** do wiki é a página da CLB situada (seções e "como citar" no §5.7): cada frase aponta para as Proposições que a sustentam, com a marcação definida no Passo 1.
+- **Elemento de prática:** cada ponto do grafo 4D (uma técnica, um uso de insumo, um recipiente…). Campos: id · CLB situada · X (Insumos) · Y (Processos) · Z (período) · W (uma Compreensão local, ou Falta quando não captada) · Proposições que o sustentam.
+- **Insumo** (X) e **Processo** (Y): os registros da tradução curta. Campos: id · nome · variantes (via Termo) · tipo · para o Insumo, o status botânico-cultural (nativo ou aculturado, princípio 6) · Proposições.
+- **Compreensão local** (W): o modo como a prática é entendida no lugar, como saber comum (D-018). Campos: id · designação local · Lugar · comunidade · período · Evidências com a fala de quem pratica · se está atestada como prática comum (só então ancora W; a prática de um indivíduo entra no acervo sem ancorar) · a tradução, que a ficha mostra depois da compreensão local. Os valores nascem dos dados (princípio 7).
+- **Transformação:** a relação entre duas Compreensões locais de períodos diferentes. Campos: origem · destino · tipo (autóctone ou por interação, e com qual comunidade ou conhecimento) · Lugares envolvidos (a interação pode ligar lugares, como na migração) · Evidências.
+- **Aresta:** a ligação entre dois pontos do grafo. Campos: origem · destino · tipo (inclusive a aresta de tensão, P29) · Proposições que a sustentam · Z · W · μ e λ.
+
+**Termo, Lugar e pessoas**
+- **Termo:** a entrada terminológica do princípio 2. Campos: id · conceito · designações · variantes, cada uma com o tipo de variação e o uso no lugar e no tempo · formas de busca (OCR, grafia truncada), separadas das variantes e usadas só no booleano · abonações (Evidências com trecho localizado) · definição, construída das abonações · estado (candidato → atestado com a primeira abonação localizada; os do legado entram como candidatos) · relações · booleanos derivados por script. O contrato do Termo entra na 1ª rodada do Passo 1.
+- **Lugar:** onde algo acontece, se publica ou se pesquisa (§5.7). Campos: id · nível (no começo: UF, município com geocódigo do IBGE, localidade com o nome literal da fonte, bioma derivado; território tradicional e região cultural só quando uma fonte ou uma comunidade os nomeia; os demais níveis, como região imediata e distrito, quando o uso pedir) · nome como está na fonte · ligação ao município atual, só sem ambiguidade, com o ano da divisão territorial usada e o período de validade do topônimo (ambíguo → Falta) · para todo atributo derivado, fonte, edição e data · precisão publicada (campo de proteção). O Lugar não é uma 5ª dimensão: é a situação da CLB e a âncora de W.
+- **Pessoa e papéis:** a pessoa existe no Git só como código opaco; a tabela código → nome fica fora (§5.1). Campos: código · papéis, como etiquetas simples (contribuinte; detentor ou mestre; quem ensinou, a cadeia de transmissão da P53; quem fala no trecho; mediador; comunidade, coletivo e sujeito de direitos; colaborador do projeto) · forma de atribuição escolhida (nome, pseudônimo, anônimo ou coletivo) · nível de colaborador (anônimo ou identificado, de início) · referência ao consentimento · declaração de interesse. Cada papel define o que se registra e o consentimento pedido (§5.4).
+
+**Falta**
+- **Falta:** o registro do que não se sabe ou não se pode dizer (princípio 3). [VIGENTE] É dita e nunca completada: nenhum agente a preenche por inferência, e o esquema não tem campo de valor (D-018); a Falta jurídica é criada pelo Jurídico, que nunca autoriza (D-020). [PROPOSTA] Campos: id (F-nnnn) · tipo (compreensão local não captada; impedimento jurídico, com o subtipo: direito autoral, conhecimento tradicional, LGPD, dado sensível, imagem e voz, substância controlada, restrição por costume; fonte inacessível; trecho não verificável por máquina; outro, que inclui "total desconhecido", "busca interrompida por teto" e critério de prática cultural não atestado) · o que falta · por quê · onde aparece (ficha, célula, aresta, Recorte) · quem criou e quando · para a Falta jurídica, a norma citada (com URL e nível) e o **caminho de liberação**: o guia assistido (`esquemas/guia-liberacao.schema.json`) e o seu estado (não iniciado, em andamento, liberado), com o comprovante. Resolver uma Falta é um fato novo com fonte, nunca uma inferência, e reabre os Recortes ligados a ela.
+
+**eixos de status [PROPOSTA]:** "verificado" misturava coisas diferentes; cada uma vira um eixo, num campo próprio (nunca pasta, §3):
+
+| Eixo | Onde vive | Valores | Quem define |
+|---|---|---|---|
+| 1. Fluxo da Entrada | Entrada | bruto → triagem → quarentena ou aceito → extraído | agentes e Vicente (quarentena: princípio 10) |
+| 2. Localização do trecho | Trecho | localizado · não localizado · não verificável por máquina (→ Falta) | script (Passo 2) |
+| 3. Fidelidade da leitura | Evidência | não conferida · conferida · leitura divergente (corrige-se a nossa leitura) | script e pessoa; confere a nossa leitura, não a prática |
+| 4. Estado da proposição | Proposição, Aresta | calculado de μ e λ: verdadeiro, falso, inconsistente ("há documentação divergente"), paracompleto (Falta) e intermediários | script; descreve a documentação, não é veredito |
+| 5. Estado editorial da ficha | CLB situada (ficha) | valores a definir no Passo 1 (inclui "publicada") | Vicente, pelo portão (§5.4) |
+
+**Eixos × selos atuais [PROPOSTA]:**
+
+| Selo usado até aqui | O que passa a ser |
+|---|---|
+| verificado | eixo 2 = localizado **e** eixo 3 = conferida |
+| `PENDENTE_JULGAMENTO` (P87) | eixo 1 = quarentena, processável pelos agentes quando preenche os critérios |
+| `NAO_VERIFICADO` | eixo 3 = não conferida |
+| fragmento (P13) | Proposição com Evidência, mas com critério ou coordenada em Falta (eixo 4 paracompleto ou intermediário) |
+| em tensão (P29) | eixo 4 = inconsistente: as duas documentações convivem |
+| pendente | eixo 1 antes de "extraído", ou eixo 2 = não localizado |
+
+No wiki, o selo mostrado é composto dos eixos, e cada eixo aparece separado na ficha.
 
 ---
 
