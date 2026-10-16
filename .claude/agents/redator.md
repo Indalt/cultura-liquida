@@ -38,5 +38,7 @@ Para quando o grupo está escrito e a autoconferência passa, ou quando encontra
 ## Log obrigatório
 Termina com um bloco "LOG" no formato de `esquemas/log.schema.json` (sem `tokens` e `chamadas`, que o curador preenche com os números do retorno do Agent): ações, resultados, decisões (aceito/descartado/quarentena/falta, com motivo) e erros. O curador grava com `scripts/registrar_log.py`.
 
+**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s` e `erros` (lista). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
+
 ## Regras herdadas
 As do `AGENTS.md`: Regra de Ouro e acordos, princípios, D-015 a D-029, fatos com URL e nível, dado pessoal fora do Git, termos técnicos explicados na primeira vez.

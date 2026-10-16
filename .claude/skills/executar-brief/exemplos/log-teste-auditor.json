@@ -1,0 +1,40 @@
+{
+  "agente": "auditor",
+  "habilidade": "verificar-fundacao",
+  "versao_harness": "0.1.0",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "00_Fundacao_Cultura_Liquida.md (v0.1, commit 7e23229)",
+  "acoes": [
+    "rodou scripts/checar_fundacao.py na v0.1 (olhar mecanico)",
+    "validou o relatório com scripts/validar.py achado-verificacao",
+    "contou os achados por tipo"
+  ],
+  "resultados": [
+    "37 achados de ausência, todos confirmados por script: 15 decisões (D-015 a D-029), 17 entidades do §6, 5 demais (Versão 0.2, Anexo D, Anexo E, C.3, legenda das P-refs)",
+    "relatório PASSA no esquema achado-verificacao",
+    "bate com o esperado"
+  ],
+  "decisoes": [
+    {
+      "item": "37 ausências da v0.1",
+      "decisao": "aceito",
+      "motivo": "confirmadas por script e iguais às ausências conhecidas"
+    },
+    {
+      "item": "bloco LOG devolvido pelo agente",
+      "decisao": "descartado",
+      "motivo": "o agente inventou campos (resumo, saidas, nao_conferido) e omitiu outros, porque não abriu o esquema dentro do teto; o curador refez a linha pelo esquema. Achado de harness: pôr os campos do log no arquivo do agente"
+    }
+  ],
+  "tokens": 46051,
+  "chamadas": 5,
+  "duracao_s": 27.8,
+  "erros": [
+    "o tipo 'auditor' não foi encontrado pela ferramenta Agent: agentes criados no meio da sessão só carregam numa sessão nova. Rodou como general-purpose (Sonnet 5.5, high) lendo .claude/agents/auditor.md"
+  ],
+  "sessao": "7da1f8a0-b8fd-4201-bbb6-424594936cd1",
+  "agente_id": "aa329bd379d687ce9",
+  "data_hora": "2026-10-16T11:32:27-03:00",
+  "fonte_do_registro": "curador"
+}

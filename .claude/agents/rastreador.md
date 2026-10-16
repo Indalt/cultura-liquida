@@ -39,5 +39,7 @@ Quando a ficha tem todos os campos de aceitação; ou, na consulta, quando o tot
 ## Log obrigatório
 Termina com um bloco "LOG" (formato de `esquemas/log.schema.json`, sem `tokens` e `chamadas`): consultas feitas, respostas (código HTTP), totais, o que foi aceito, descartado ou posto em quarentena e por quê. O curador grava com `scripts/registrar_log.py`.
 
+**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s` e `erros` (lista). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
+
 ## Regras herdadas
 As do `AGENTS.md`: fatos com URL e nível, anti-robô, dado pessoal fora do Git, exemplos não limitam.
