@@ -657,126 +657,119 @@ A ordem segue as dependências do sistema:
 9. como age (campo de ação, sob demanda);
 10. como se mantém (governança).
 
-Cada passo entrega algo verificável e só começa quando o anterior está pronto. Os Passos 1 a 4 montam a base e já entregam o primeiro valor visível, o boletim. Os Passos 5 a 7 constroem o wiki e o grafo. Os Passos 8 a 10 dependem de conteúdo verificado.
+Cada passo entrega algo verificável e só começa quando o anterior está pronto. As fases mudam só a ordem em que as partes de cada passo entram; o conceito fica inteiro.
 
-### Passo 0 — Fundação (este documento) e uma proteção urgente
-- **Ação de Vicente, hoje, sem IA:** conferir o compartilhamento no Drive e deixar como Restrito a pasta raiz e as planilhas `Controle_Usuarios_e_Tiers` e `Respostas_Coleta_Cidada_Tier1`.
-- **Pronto quando:** Vicente aprova o documento e abre a sessão nesta pasta; e, numa janela anônima, os links da pasta e das duas planilhas pedem acesso.
+**Passo corrente:** Passo 1. O único bloqueio é a escolha do caso-piloto (§8).
 
-### Passo 1 — Agentes e habilidades (primeiro trabalho previsto por Vicente na pasta, em nova sessão)
-- **Objetivo:** definir quem faz o quê, com que entrada e saída, quando para e como deixa trilha.
-- **Começa por:** as perguntas abertas que travam os contratos de dados (§10: perguntas 3, 6 e 15) e a escala de valências (§8). Se Vicente preferir seguir sem respondê-las, a sessão usa valores provisórios, marcados [PROPOSTA], e anota no Registro de Decisões.
+### Fase 1, fase 2 e gatilho
+
+**Fase 1, para caber em 1 a 3 h de curadoria por semana (D-016):**
+- **Pessoas [VIGENTE]:** só Vicente e os agentes, com logs; a segunda leitura vem do validador, de um verificador com harness diferente e da amostra sorteada (D-026). A fase 1 não recebe contribuições externas (§5.4).
+- [PROPOSTA] **Fontes:** o caso-piloto, com 2 ou 3 fontes reais.
+- [PROPOSTA] **Máquina:** o validador; o GitHub Actions só para o validador e as buscas do piloto, a partir do Passo 4 (§5.5).
+- [PROPOSTA] **Ferramenta:** o kit de fonte primária para educadores (§5.9). **Lugar:** UF, município, localidade e bioma derivado (§5.7). **Admissão:** as portas escritas no §5.4; o relato de contribuinte espera a fase 2.
+- [PROPOSTA] **Jurídico** com regras fixas por script (Passo 1). **Legado** como ambiente (Passo 3, D-024).
+- **Dados em 4D desde o início** [PROPOSTA]: cada elemento de prática nasce com X, Y, Z e W (§5.7).
+
+**Fase 2, depois de medir as horas reais [PROPOSTA]:** contribuições externas e os degraus 2 e 3 do §5.4; rotina do Claude na nuvem, depois de um teste (§5.5); mutirão, bola de neve, relatório do funil, Wikidata e fichas de acesso das demais fontes (§5.2, §5.3); mapa, território e região cultural (§5.7); outros grupos e ferramentas (§5.9); exportações para SKOS, TBX e PROV, com os campos já compatíveis desde a fase 1 (§6).
+
+**Gatilho** (a condição que abre a fase 2) [PROPOSTA]: as três condições juntas:
+1. o caso-piloto foi do bruto à ficha com a trilha completa;
+2. as horas reais de 4 semanas couberam em 1 a 3 h;
+3. as decisões do degrau 2 do §5.4 (licença, aviso de privacidade, canal com o titular) estão tomadas.
+
+**Revisão de essencialidade [VIGENTE] (D-025):** depois das coletas e verificações da fase 1, as regras jurídicas, de colaboração e de organização são revistas, e fica só o essencial para a biblioteca existir. Nenhuma obrigação legal é desprezada, e cada barreira traz o porquê e o caminho assistido. O grafo 4D fica fora dessa revisão.
+
+### Passo 0 — Fundação e uma proteção urgente
+- **Estado:** feito e testado, segundo Vicente. Se o compartilhamento do Drive foi de fato revisto não foi conferido nesta execução (§3.4).
+- **Ações que ficam com Vicente, sem IA (D-024):**
+  - arquivar a implantação "App da Web" do Apps Script (a publicação do script como página, que pode ler as planilhas restritas; Implantar > Gerenciar implantações);
+  - despublicar o Google Site, que não é aproveitado.
+
+### Passo 1 — Caso-piloto, harness e testes de modelos
+- **Já existe [VIGENTE] (D-029):** os agentes, as habilidades e o harness ficam em `.claude/` desde antes da v0.2, operados só pelo Claude Code, e escreveram esta versão com logs. São 8 agentes e 14 habilidades; as da rodada B (Avaliador, Arquivista, Campo de Ação) têm os exemplos marcados "pendente: caso-piloto (Passo 1)" e não são chamadas antes dele.
+- **Começa por:** o **caso-piloto**, uma CLB e as 2 ou 3 primeiras fontes reais, levadas do bruto à ficha para medir e testar tudo antes de crescer. A escolha é de Vicente e é o único bloqueio (§8). As fontes escolhidas decidem quais adaptadores nascem primeiro (§5.3).
 - **Entregas:**
-  - um arquivo por agente;
-  - uma pasta por habilidade (SKILL.md + references/ + scripts/ + assets/, P37), em formato portátil (Anexo C);
-  - os contratos de dados (§6);
-  - a Regra de Ouro e os acordos de trabalho (§0) embutidos em cada agente;
-  - um arquivo de instruções do projeto (`AGENTS.md` e/ou `CLAUDE.md`) com um resumo curto, de até 150 linhas: princípios, Regra de Ouro, passo corrente e últimas decisões, apontando para este documento.
-- **Caminhos verificados** (Anexo C):
-  - o Antigravity lê `AGENTS.md` ou `GEMINI.md` e `.agents/rules/`, e habilidades em `.agents/skills/<nome>/SKILL.md`;
-  - o Claude Code lê `CLAUDE.md`, habilidades em `.claude/skills/<nome>/SKILL.md` e subagentes em `.claude/agents/<nome>.md`;
-  - o formato SKILL.md é um padrão aberto (agentskills.io), portável por natureza;
-  - [PROPOSTA] enquanto o Claude Code for a ferramenta em uso, as habilidades vivem só em `.claude/`; espelhar para `.agents/` apenas se o agente do Antigravity também for operá-las (§10, pergunta 15), para evitar manutenção dupla.
-- **Ponto de partida:** os 5 agentes do legado e os 4 da P16. Mapa inicial [PROPOSTA], a discutir:
-
-| Agente | Papel | Habilidades | Origem |
-|---|---|---|---|
-| Curador | guarda o plano e o Registro de Decisões; orquestra; para quando o plano não resolve | consolidação de etapa (P36); registro de decisões | curador-bebidas-brasileiras |
-| Rastreador | ambientes, RSS, mineração semanal, pegadas e vácuos | terminologia e booleanos; registro de ambientes; mineração | rastreador-culturas-liquidas |
-| Avaliador | triagem por valências, quarentena e pareceres; extração de afirmações com trecho literal | valências; extração | P16 |
-| Arquivista | termos, fichas, grafo e anotação paraconsistente; diagrama técnico | fichas; grafo (μ, λ); diagrama | arquivista-grafo-4d |
-| Auditor | checagens mecânicas, contagens calculadas, amostra para revisão humana (P93) | verificação; relatório calculado | auditoria-consolidacao-sistema |
-| Redator | camada Educação das fichas; boletim semanal | educação; boletim | P16 |
-| Campo de Ação (sob demanda) | salvaguarda e política; pedagogia (planejador de aulas); tecnologia comunitária (avisos e cartilha) | uma habilidade por campo | intervencao-territorial-bebidas |
-
-- **Regra de desenho:** o que é repetitivo vira script; a IA entra onde há juízo. Cada habilidade declara também o que não faz.
-- **Escopo da primeira rodada** [PROPOSTA]:
-  - todos os agentes no nível de papel, um parágrafo cada;
-  - contratos e habilidades detalhados só para Rastreador, Avaliador e Auditor, com os contratos de Ambiente, Entrada, Fonte e Afirmação;
-  - os demais agentes são detalhados nos passos em que entram.
-- **Pronto quando:** cada habilidade da primeira rodada tem entradas, saídas, critério de parada, estimativa de custo por execução e um par de exemplo (entrada e saída esperada) gravado em arquivo, que vira teste do validador no Passo 2; e Vicente aprova.
-- **Honra:** P16, P36, P37, P38, P42, P62.
+  - os contratos de dados do §6 como arquivos em `esquemas/`, a começar pelo Termo (princípio 2), Proposição, Evidência, Fonte e Falta;
+  - os pares de exemplo reais do caso-piloto para as habilidades da rodada B;
+  - o **Jurídico** [PROPOSTA no formato; o papel é VIGENTE, D-020]: regras fixas por script para os casos óbvios (licença, pessoa identificável, dado pessoal, possível conhecimento tradicional, substância controlada), para não depender só da percepção do agente; e os **guias de liberação assistidos** (D-025), em ordem de provável uso: cadastro no SisGen e consentimento prévio informado (Lei 13.123); licença de uso de texto, imagem e áudio de terceiros (Lei 9.610); termo de consentimento e atendimento ao titular (LGPD); pedido de registro de bem imaterial no IPHAN (Passo 9). Cada guia diz por que está barrado, o que destravaria, o passo a passo com os documentos e o estado do caminho. O agente orienta e prepara, e nunca autoriza nem protocola em nome de Vicente. Um guia só é publicado depois de os formulários e prazos serem conferidos no portal oficial.
+  - as respostas que travam contratos: a escala de valências (§8) e a unidade da ficha (§10, pergunta 6). Sem resposta, a sessão usa valores provisórios, marcados [PROPOSTA].
+- **Modelos [VIGENTE] (D-027):** a execução roda em Opus 5.5 com esforço médio e harness, sem ultracode, e os subagentes em Sonnet 5.5 alto, sugestão apoiada em medições; depois, os modelos por tarefa são escolhidos por teste, e a v0.2 não fixa modelo-alvo.
+- **Testes de modelos** [PROPOSTA]: cada habilidade roda nos modelos candidatos sobre os pares de exemplo reais; fica o mais barato que passar nos validadores. Se falhar, reforça-se o harness primeiro; só se não bastar, sobe-se de modelo. Hipóteses de partida, não decididas: Sonnet 5.5 alto para ajustes e Haiku 5.5 para rotinas. Antes de executar, o agente diz qual é o modelo indicado; se a sessão estiver em outro, avisa e para.
+- **Logs:** cada agente grava um registro por execução (`scripts/registrar_log.py`, `trilhas/logs/`), sem dado pessoal: modelo, habilidade, versão do harness, entrada, o que foi aceito, descartado ou posto em quarentena e por quê, tokens, tempo e erros.
+- **Custos:** são **medidos** no caso-piloto, não estimados antes de executar (P96, pedido 96 de Vicente, Anexo A; buscar `#### P96`).
+- **Pronto quando:** cada habilidade usada no caso-piloto passa nos validadores com os pares reais, no modelo escolhido por teste; o custo medido de cada uma está nos logs; as regras fixas do Jurídico reprovam os casos de teste; e Vicente aprova.
+- **Honra:** P16, P36, P37, P38, P42, P62, P96.
 
 ### Passo 2 — Casa e esqueleto
-- **Entregas:** estrutura de pastas; esquemas como arquivos; validador mecânico (script); Registro de Decisões; Git; cópia remota [PENDENTE]; README para humanos.
-- **Pré-requisitos locais:**
-  - Git e uma conta GitHub;
-  - Python 3.12 com ambiente virtual da pasta (`.venv`), nunca o `python` do PATH, que no Windows é o atalho da Microsoft Store;
-  - Node, só no Passo 6;
-  - arquivo `.gitignore` com `legado/` e tudo o que tiver dados pessoais (§5.1).
-- **Estrutura sugerida** (o local de agentes e habilidades depende do formato escolhido no Passo 1):
+- **Já feito (Blocos 1 e 2.5):** o repositório público `Indalt/cultura-liquida`, sincronizado (D-021); o `.gitignore` com `legado/` e tudo o que tiver dado pessoal (§5.1); o ambiente `.venv` com o Python real (o `python` do PATH, no Windows, é um atalho da Microsoft Store) e o `requirements.txt`; os esquemas de log, conferência, Falta, guia de liberação, achado e decisão; os scripts de validação, de busca de dado pessoal, de comparação dos anexos e de log.
+- **Falta entregar:**
+  - o validador mecânico das fichas, Proposições e Evidências, sobre os contratos do Passo 1, rodado antes de cada commit (rodar a cada envio pelo GitHub Actions entra no Passo 4);
+  - o README para humanos;
+  - o **teste de reconstituição** (princípio 11): uma sessão nova, só com o repositório, retoma o trabalho do ponto salvo;
+  - **sem cópia do Apps Script:** ele deixou de ser agendador (§5.5) e o site não é aproveitado (D-024).
+- **Estrutura** (as pastas marcadas nascem no passo em que entram):
 
 ```
 Cultura Líquida/
   00_Fundacao_Cultura_Liquida.md   este documento
-  decisoes/                        Registro de Decisões
-  .agents/  .claude/               agentes e habilidades (Passo 1)
+  AGENTS.md  CLAUDE.md             resumo para as sessões de IA
+  .claude/agents/  .claude/skills/ agentes e habilidades (D-029)
   esquemas/                        contratos de dados
-  legado/                          exportação do Drive, somente leitura, fora do Git
-  ambientes/                       um arquivo por ambiente
-  entrada/                         caixa de entrada: registro sem dados pessoais + brutos
-  acervo/termos/  acervo/fichas/  acervo/afirmacoes/  acervo/fontes/
-  grafo/
-  site/                            gerador do wiki
-  campo_de_acao/                   artefatos sob demanda
-  trilhas/                         registros de execução
-  scripts/                         rotinas e verificações, com cópia do Apps Script
+  scripts/                         validador e rotinas, sem cópia do Apps Script
+  testes/                          relatórios dos testes dos validadores
+  trilhas/  trilhas/logs/          diário, checklist, conferências e logs
+  legado/                          exportação do Drive, só leitura, fora do Git
+  [PROPOSTA] ambientes/  entrada/  acervo/  grafo/  site/  campo_de_acao/
 ```
 
-- **Pronto quando:** uma ficha de exemplo e uma afirmação de exemplo passam no validador, e um exemplo com erro é reprovado.
+- **Pronto quando:** uma ficha e uma Proposição de exemplo passam no validador, um exemplo com erro é reprovado, e o teste de reconstituição passa.
 
-### Passo 3 — Migração do legado, com verificação
-- **Antes de começar:** confirmar que a proteção do Passo 0 foi feita.
-- **Etapa A, por script e sem IA:**
-  - exportar a pasta inteira de uma vez e converter para texto (§3.5), deixando de fora as planilhas com dados pessoais;
-  - inventariar 100% do legado e reconciliar 45 verbetes × 69 bebidas;
-  - testar todos os links: abrem? há cópia arquivada?
-- **Etapa B, com IA:** verificar se o texto é sustentado pela fonte numa amostra de 10 verbetes escolhida por Vicente. O restante recebe o selo `NAO_VERIFICADO` até haver orçamento.
-- **Semear** a terminologia (termos e variantes que aparecem nos nomes e textos) e o Registro de Ambientes (as fontes citadas).
+### Passo 3 — Legado como ambiente, com verificação
+- **Regra [VIGENTE] (D-024):** o legado é tratado como mais um ambiente. Só entra no acervo o que for verificável e condizente com as regras novas; o resto não se apaga e fica no Drive e em `legado/`, só leitura; o site não é aproveitado.
+- **Antes de começar:** o legado já está em `legado/` (§3.5): o Drive exportou os Docs em .docx, sem as planilhas com dados pessoais, que ficam no Drive; a conversão para texto é feita por script na Etapa A.
+- **Etapa A, por script e sem IA:** inventariar 100% do legado e reconciliar 45 verbetes × 69 bebidas; testar todos os links (abrem? há cópia arquivada?); separar os termos e as fontes citadas.
+- **Etapa B, com IA** [PROPOSTA]: verificar se o texto é sustentado pela fonte numa amostra sorteada, com semente registrada, dentro da cota de juízo (§11). O restante recebe o selo `NAO_VERIFICADO` até haver orçamento.
+- **Semear:** os termos do legado entram como **candidatos**, que servem de busca até ganharem abonação (§3.3); as fontes citadas entram no Registro de Ambientes.
 - Recuperar no legado a régua de 4 filtros da P14 (resposta seg.10).
-- É a primeira execução real das habilidades desenhadas no Passo 1.
 - Nada é descartado: o que não se verifica fica em quarentena, com o motivo.
 - **Pronto quando:** um relatório calculado mostra quantos itens há, quantos links abrem e, na amostra, quantos sustentam o texto e quantos ficaram em quarentena, e por quê.
 - **Honra:** P42, P85–P87, P90–P93, P97.
 
-### Passo 4 — Ambientes, RSS e caixa de entrada multicanal
-- **O que se faz:**
-  - Registro de Ambientes (a partir do legado e de P74 e P75);
-  - RSS criados por nós;
-  - caixa de entrada única;
-  - formulário atualizado (consentimento, atribuição);
-  - canal de e-mail;
-  - envio de documentos por um único grupo, "colaboradores" (os tiers são definidos no Passo 6);
-  - rotina diária automática.
-- **Primeiro valor visível** [PROPOSTA]: um boletim semanal do que entrou. É o "RSS" da ideia original (P1), antes mesmo do wiki.
-- **Antes de começar:** consulta jurídica sobre o termo de consentimento (LGPD) e a política de cópias arquivadas (Lei 9.610/1998).
-- **Pronto quando:** por 7 dias seguidos chega a Vicente o e-mail diário de resultado, e o registro mostra entradas novas com data, canal e origem; e, num teste, uma falha provocada gera aviso.
+### Passo 4 — Ambientes, monitoramento e caixa de entrada
+- **Precondições:** antes de abrir qualquer canal de pessoas, os guias do Jurídico (Passo 1) e o termo de consentimento (LGPD) com licença de quem contribui e aviso de privacidade, que são os deveres do degrau 2 (§5.4); a política de cópias arquivadas (Lei 9.610) também passa pelo Jurídico.
+- **Fase 1:** Registro de Ambientes (do legado e de P74 e P75), fichas de acesso das fontes do caso-piloto e o monitoramento delas (§5.2, §5.3), na camada 1 do §5.5 (GitHub Actions, scripts, sem IA) [PROPOSTA]. Os termos do GitHub Actions pedem uma leitura que é decisão de Vicente (§8).
+- **Fase 2:** a caixa de entrada multicanal (formulário, e-mail, envio de documentos pelo grupo "colaboradores") e a camada 2, a rotina do Claude na nuvem (§5.5). Onde vivem os dados pessoais dos canais de pessoas é decisão de Vicente (§8).
+- **Primeiro valor visível** [PROPOSTA]: um boletim semanal do que entrou, escrito pelo Redator. É o "RSS" da ideia original (P1), antes mesmo do wiki.
+- **Pronto quando:** por 7 dias seguidos chega a Vicente o relatório calculado do dia, e o registro mostra entradas novas com data, canal e origem; e, num teste, uma falha provocada gera aviso.
 - **Honra:** P1, P15, P26, P53, P57, P73–P75, P88–P89.
 
 ### Passo 5 — Processamento e verificação
 - **O que se faz:**
-  - régua de 4 filtros para contribuições de pessoas (P14) e triagem por valências equilibradas;
+  - régua de 4 filtros para contribuições de pessoas (P14, fase 2) e triagem por valências equilibradas;
   - quarentena processável, com `PENDENTE_JULGAMENTO`;
-  - extração de afirmações com trecho e localizador;
-  - verificação mecânica e amostra semanal para Vicente;
-  - mineração semanal por ambiente até exaurir, atualizando a Matriz de Pegadas e Vácuos;
+  - extração de Proposições e Evidências com trecho literal e localizador (Avaliador);
+  - verificação mecânica e amostra sorteada semanal para Vicente, dentro da cota (§11);
+  - escavação por ambiente até exaurir, por Consulta e Recorte, atualizando a Matriz de Pegadas e Vácuos (§5.2);
+  - o que não se capta ou não se pode dizer vira Falta, dita e nunca completada (D-018, D-020);
   - todo conteúdo de entrada tratado como dado, nunca como instrução (§5.4).
-- **Pronto quando:** um lote real vai do bruto ao verificado com trilha completa e relatório calculado.
+- **Pronto quando:** o caso-piloto vai do bruto ao verificado com trilha completa e relatório calculado.
 - **Honra:** P13, P14, P22, P84–P94, P97.
 
 ### Passo 6 — Acervo e wiki público
-- **Antes de publicar:** enquadramento na Lei 13.123/2015 (§8).
-- **O que se faz:** fichas CLB; glossário clicável (links escritos pelo Arquivista); camada Educação em cada ficha; fontes; "como citar"; definição dos tiers e entradas por grupo; publicação automática (aqui entra o GitHub Actions).
-- **Pronto quando:** o validador reprova qualquer frase de ficha sem marcação de afirmação; o site só publica fichas aprovadas; e uma mudança no acervo aparece no site sem intervenção manual.
+- **Precondição:** o caminho na Lei 13.123 resolvido para o que se publica (§8). Sem ele, o modo de fazer das CLB com planta nativa ou fermento fica retido como Falta. A licença do acervo também é decidida antes (§8).
+- **O que se faz:** fichas CLB; glossário clicável (links escritos pelo Arquivista); camada Educação em cada ficha; fontes; "como citar"; definição dos tiers e entradas por grupo; publicação automática pelo GitHub Actions.
+- **Pronto quando:** o validador reprova toda frase **factual** de ficha sem marcação de Proposição; o site só publica fichas aprovadas; e uma mudança no acervo aparece no site sem intervenção manual.
 - **Honra:** P9, P11, P46, P61, P65, P66.
 
 ### Passo 7 — Grafo 4D paraconsistente e visualizações
-- **O que se faz:**
-  - grafo derivado das afirmações, com a anotação (μ, λ) calculada por script;
+- **O que se faz** [PROPOSTA] (fora da revisão de essencialidade, D-025):
+  - grafo derivado dos dados 4D que nascem na fase 1, com a anotação (μ, λ) calculada por script (§5.7);
   - vistas geradas primeiro como páginas e tabelas: matriz X×Y com vácuos, linha do tempo Z, filtros W e rede de nomes;
-  - interface mais rica só se Vicente sentir falta;
+  - a primeira vista navegável pode vir antes, já na fase 1, com os dados do caso-piloto: depende da pergunta de pesquisa de Vicente (§10);
+  - a vista 4D precisa de componente próprio, porque o Quartz mostra só ligações entre notas (§5.7);
   - clique da ficha ao grafo e de volta (P11).
-- **Pronto quando:** duas afirmações em tensão aparecem juntas, cada uma com sua fonte; o script lista como vácuo toda célula X×Y com zero afirmações verificadas, e a matriz publicada mostra essa lista; e o clique leva da ficha ao grafo e de volta.
+- **Pronto quando:** duas Proposições em tensão aparecem juntas, cada uma com sua Evidência; a célula X×Y sem nenhuma Evidência verificada aparece como "não observada", e só vira Falta ou vácuo com indício; e o clique leva da ficha ao grafo e de volta.
 - **Honra:** P7, P8, P10, P11, P27–P29, P83.
 
 ### Passo 8 — Ilustrações técnicas
@@ -784,46 +777,54 @@ Cultura Líquida/
 
 ### Passo 9 — Campo de ação, sob demanda
 - **Salvaguarda e política:** dentro da moldura legal brasileira (Anexo C).
-  - O registro de um bem imaterial no IPHAN segue o Decreto 3.551/2000 e a Resolução IPHAN 001/2006. A exigência de anuência dos detentores deve ser conferida no texto da resolução antes de qualquer dossiê.
+  - O registro de um bem imaterial no IPHAN segue o Decreto 3.551/2000 e a Resolução IPHAN 001/2006. A anuência dos detentores consta do art. 4º, VII, da resolução segundo fonte secundária (Anexo C); conferir no texto oficial antes de qualquer dossiê.
+  - O pedido de registro volta como **guia assistido** do Jurídico (Passo 1), com revisão de profissional habilitado.
   - CLB que envolvem substâncias controladas (ex.: o vinho de jurema e a DMT, na Lista F2 da Portaria SVS/MS 344/1998) pedem análise jurídica própria antes de se publicar o modo de fazer. A Resolução CONAD 1/2010 trata da ayahuasca, não da jurema.
 - **Educação:** já está no wiki (Passo 6).
-- **Pedagogia:** planejador de aulas por CLB ou por conjunto de CLB, com conteúdo vindo das fichas verificadas [PROPOSTA: alinhar à LDB, art. 26-A, e à BNCC; Anexo C].
-- **Tecnologia comunitária:** quando uma CLB causar problemas a quem a realiza, um aviso pedindo mais pesquisa, sem apagamento nem discriminação. [PENDENTE] Cartilha de biossegurança quando o risco já estiver verificado (leitura a confirmar, §10, pergunta 13).
-- A estrutura dos campos está aberta a melhoria (13/10).
-- Os 5 documentos do legado entram como rascunhos a revisar.
+- **Pedagogia:** na fase 1, o kit de fonte primária (§5.9); depois, o planejador de aulas por CLB ou por conjunto de CLB (D-006), com conteúdo vindo das fichas verificadas [PROPOSTA: alinhar à LDB, art. 26-A, e à BNCC; Anexo C].
+- **Tecnologia comunitária:** quando uma CLB causar problemas a quem a realiza, um aviso pedindo mais pesquisa, sem apagamento nem discriminação. [PENDENTE] Cartilha de biossegurança quando o risco já estiver verificado (§10, pergunta 13).
+- A estrutura dos campos está aberta a melhoria (13/10). Os 5 documentos do legado entram como rascunhos a revisar.
 - O que for jurídico ou sanitário passa por revisão de profissional habilitado antes de circular.
 - **Pronto quando:** um pedido real gera um rascunho com fontes, revisado por Vicente e, quando for o caso, por profissional habilitado.
 - **Honra:** P17, P30, P56; 13/10.
 
 ### Passo 10 — Governança contínua
-- Registro de Decisões em dia.
-- Revisão periódica dos tiers.
-- Devolutiva a quem contribui.
-- Auditoria periódica: mecânica e por amostra humana.
-- Inclusão de novos ambientes.
-- Expansões adiadas (WhatsApp, áudios).
+- Registro de Decisões em dia, pela essência confirmada (§0).
+- Revisão de essencialidade depois da fase 1 (D-025) e revisão periódica dos tiers.
+- Devolutiva a quem contribui (fase 2).
+- Auditoria periódica: mecânica, por verificador com harness diferente e por amostra sorteada (D-026).
+- Inclusão de novos ambientes; expansões adiadas (WhatsApp, áudios; D-009).
 - **Pronto quando** (contínuo): um checklist mensal de 5 itens é cumprido por 2 meses seguidos.
 
 ---
 
 ## 8. Decisões pendentes
 
-| Decisão | Recomendação | Por quê | Quando |
-|---|---|---|---|
-| Formato e local dos agentes e habilidades | formato aberto (SKILL.md) em `.claude/` enquanto o Claude Code for a ferramenta; espelhar para `.agents/` se o Antigravity também operar | portabilidade (P42) sem manutenção dupla | Passo 1 |
-| Unidade da ficha | o termo, com variantes, tendo as CLB situadas como ocorrências [ABERTO] | socioterminologia (P23) | Passo 1 |
-| Onde fica o repositório | GitHub (privado ou público) | histórico, automação, publicação | Passo 2 |
-| Gerador do wiki | Quartz, com a primeira versão só nos recursos nativos | wikilinks, backlinks, grafo, busca e RSS prontos (Anexo C) | Passo 6 |
-| Onde rodam as rotinas | um só agendador, o Apps Script; GitHub Actions só para publicar o site | menos peças para manter (princípio 16) | Passo 4 |
-| Tamanho do lote de tratamento | definir com Vicente; a cadência já foi definida em 13/10, mas os "15" de P84, P94 e P95 divergiram | um só parâmetro vigente | Passos 4 e 5 |
-| Escala de valências e critério de `PENDENTE_JULGAMENTO` | definir com Vicente | funil qualificado (P85–P87) | Passo 5 |
-| Grupos (tiers) | quem são e o que cada um vê primeiro | princípio 14 | Passo 6 |
-| Enquadramento legal: Lei 13.123/2015 (consentimento prévio informado para conhecimento tradicional de origem identificável; cadastro no SisGen antes de divulgar resultados) e Lei 9.610/1998 (trechos e imagens), mais a LGPD no consentimento | consultar especialista | coletar e publicar com segurança | consentimento e cópias antes do Passo 4; Lei 13.123/2015 antes do Passo 6 |
-| Modo de produzir a ilustração | desenho técnico de baixa resolução, feito a partir das etapas da ficha e validado | fidelidade (princípio 1) e convite à leitura | Passo 8 |
-| Tratamento do Drive | legado somente leitura [PROPOSTA] | uma fonte de verdade | Passo 3 |
-| Régua de 4 filtros (P14) | recuperar no legado (resposta seg.10) | não perder um mecanismo pedido | Passo 3 |
-| Orçamento de tokens do sistema | definir com Vicente (§10, pergunta 16) | planejar o ritmo real | Passo 1 |
-| Papel da cartilha de biossegurança | confirmar a leitura do princípio 12 (§10, pergunta 13) | fidelidade | Passo 1 |
+A execução não para para aprovar o que já foi decidido (D-028): para só diante de decisão nova, da regra de orçamento, de bloqueio que só Vicente resolve ou de conflito com decisão vigente.
+
+| Decisão | O que está em jogo | Quando |
+|---|---|---|
+| **Caso-piloto:** qual CLB e quais as 2 ou 3 primeiras fontes reais | **único bloqueio** do próximo passo; decide os primeiros adaptadores e pesa na Lei 13.123 | Passo 1 |
+| **Caminho na Lei 13.123:** cadastro no SisGen (o sistema federal de cadastro de acesso ao patrimônio genético e ao conhecimento tradicional associado), consentimento prévio informado, consulta ao CGen (o conselho que gere esse patrimônio) ou nenhum por ora; e como o projeto se apresenta, o que decide se a Res. CNS 510/2016 o alcança | **bloqueia publicar** (o kit e o wiki), não o início da fase 1 (§5.4) | antes do Passo 6 |
+| **Repositório público e degraus:** até onde o conteúdo do Git já está no degrau 3 do §5.4 (publicação) | Falta aberta; a cargo do Jurídico e de Vicente; até lá, a custódia do §5.1 e o princípio 1 | Passo 1 |
+| Unidade da ficha [ABERTO] | termo ou CLB situada; até lá, ligação muitos para muitos (§6; §10, pergunta 6) | Passo 1 |
+| Escala de valências e critério de `PENDENTE_JULGAMENTO` | funil qualificado (P85–P87) | Passo 1 (provisório) e Passo 5 |
+| Tamanho do lote e da cota de juízo | os "15" nunca são teto de coleta (D-016); a separação é [PROPOSTA] (§5.5) | Passos 4 e 5 |
+| Camadas de execução e leitura dos termos do GitHub Actions | duas camadas [PROPOSTA] (§5.5); se a leitura não for aceita, as buscas do piloto rodam em sessão | Passo 4 |
+| Onde vivem os dados pessoais dos canais de pessoas; consulta jurídica pontual antes do primeiro contribuinte | deveres do degrau 2 (§5.4) | Passo 4, fase 2 |
+| P48 para entrevistas feitas pelo projeto | entrevista é áudio (D-009); hoje a porta está fechada (§5.4) | fase 2 |
+| Licença do acervo | em camadas; uso comercial ou não (§5.4) | antes do Passo 6 |
+| Gerador do wiki e componente da vista 4D | Quartz [PENDENTE], só com recursos nativos; a vista 4D pede componente próprio (§5.7) | Passos 6 e 7 |
+| Grupos (tiers) | quem são e o que cada um vê primeiro (princípio 14; §10, pergunta 5) | Passo 6 |
+| Régua de 4 filtros (P14) | recuperar no legado (resposta seg.10) | Passo 3 |
+| Modo de produzir a ilustração | desenho técnico de baixa resolução, a partir das etapas da ficha | Passo 8 |
+| Papel da cartilha de biossegurança | leitura do princípio 12 (§10, pergunta 13) | Passo 9 |
+| Teto das rotinas na nuvem | dentro da guarda de orçamento (D-023) | fase 2 |
+| Forma jurídica do projeto | hoje, Vicente, pessoa natural (D-026) | se o projeto ganhar uma organização |
+
+**Decisões que nascem de perguntas do §10:** a pergunta de pesquisa do grafo (pergunta 19), o critério de revisionismo (pergunta 17) e W e etnografia (pergunta 18).
+
+**Resolvidas desde a v0.1:** formato e local dos agentes (D-029); onde fica o repositório (D-021); tratamento do Drive (D-024); orçamento do sistema (D-023, provisório); quem trabalha na fase 1 e quem responde (D-026).
 
 ---
 
@@ -845,41 +846,87 @@ Cultura Líquida/
 | D-012 | 13/10/2026 | Entradas processadas por rotinas diárias; alimentação semanal de cada ambiente até ser exaurido |
 | D-013 | 13/10/2026 | Caixa de entrada multicanal, aberta a ideias melhores de organização |
 | D-014 | 13/10/2026 | Glossário de palavras clicáveis que levam à informação completa, com ilustração de baixa resolução, como um desenho técnico do modo de produzir |
+| D-015 | 15–16/10/2026 | A Fundação passa à v0.2, com as melhorias da análise de 15 e 16/10 |
+| D-016 | 15–16/10/2026 | Vicente tem de 1 a 3 h por semana para curadoria humana. Os "15" nunca são teto de coleta. A separação em lote de máquina (P94) e cota humana (P84) é [PROPOSTA] |
+| D-017 | 15–16/10/2026 | Exemplos ilustram e nunca limitam o trabalho |
+| D-018 | 15–16/10/2026 | W é o modo como se entende o que se coleta: a prática comum (conhecimento compartilhado) da região, não a de um indivíduo. É uma episteme própria, mas traduzível, e deve ser tratada como dimensão. O que não foi captado é Falta, dita e nunca completada. O saber comum muda de forma autóctone ou por interação com outras comunidades. O registro próprio de W ("Compreensão local") é [PROPOSTA] |
+| D-019 | 15–16/10/2026 | Não julgamos. A fonte contrária não corrige, só documenta; se a fonte corrige, documenta-se a correção. Não é preciso documentar tudo. A prática que atende aos critérios de prática cultural é admitida como evidência e pode ignorar tentativas de revisionismo |
+| D-020 | 15–16/10/2026 | O agente Jurídico é de precaução: cria Faltas e nunca autoriza |
+| D-021 | 16/10/2026 | GitHub na conta Indalt, sincronizado, com commits de Vicente. O repositório é público: o que entra no Git é publicação aberta, e o legado e os dados pessoais de terceiros continuam fora. A proteção do `main` fica como está, com o dono liberado. Futuro: depois de tudo ajeitado, pensar em fechar o repositório e abrir só para quem Vicente quiser. Google só se for necessário. Considerar a nuvem para buscas e tratamentos com IA, sem compromisso firme |
+| D-022 | 15–16/10/2026 | Os critérios de prática cultural vêm da lei: CF art. 216; Convenção da UNESCO de 2003 (Decreto 5.753/2006, art. 2); Decreto 3.551/2000 |
+| D-023 | 15–16/10/2026 | Medir e parar antes de acabar, com o estado salvo. Teto provisório de 300 mil tokens por semana em agentes na operação da fase 1 |
+| D-024 | 15–16/10/2026 | Do legado, só entra no acervo o que for verificável e condizente com as regras novas. O resto não se apaga: fica como está (Drive e `legado/`, só leitura), o que concilia com o princípio 10. O site não é aproveitado |
+| D-025 | 16/10/2026 | As regras valem "de início" e são proporcionais. Depois das coletas e verificações da fase 1, há uma revisão de essencialidade (jurídico, colaboração, organização). Nenhuma obrigação legal é desprezada, e toda barreira jurídica traz o porquê e um caminho de liberação assistido. É uma biblioteca informativa com proposições, não uma réplica da legislação. O grafo 4D fica fora dessa revisão |
+| D-026 | 16/10/2026 | Na fase 1 trabalham só Vicente e os agentes, com logs; não há segunda pessoa. A segunda leitura vem do validador, de um verificador com harness diferente e da amostra sorteada. O responsável é Vicente, pessoa natural |
+| D-027 | 16/10/2026 | O planejamento rodou em Opus 5.5 com esforço máximo, ultracode e thinking. A execução roda em Opus 5.5 com esforço médio, com harness e sem ultracode, e os subagentes em Sonnet 5.5 alto (sugestão apoiada em medições). Depois, os modelos por tarefa são escolhidos por teste: a v0.2 não fixa modelo-alvo. Harness qualificado |
+| D-028 | 16/10/2026 | A execução não para para aprovar o que já foi decidido |
+| D-029 | 16/10/2026 | Antes da v0.2, os agentes, suas habilidades e seus harness ficam na pasta do projeto, e a v0.2 é escrita por eles, com logs. Só o Claude Code opera os agentes (pasta `.claude/`, sem espelho `.agents/`). O caso-piloto continua no Passo 1 |
+
+**Como as entradas antigas se leem hoje:** o legado somente leitura da D-001 foi resolvido pela D-024; o "primeiro trabalho" da D-002 foi feito antes da v0.2 (D-029); os "RSS criados por nós" da D-010 se leem pelo modelo monitoramento × escavação (§1); a D-012 está cumprida em parte enquanto o tratamento com IA não estiver agendado [PROPOSTA] (§5.5). O diário de cada sessão fica em `trilhas/`, não aqui.
 
 ---
 
 ## 10. Perguntas abertas para compreender
 
+Perguntas servem para compreender, nunca para escolher entre opções (acordo 1). As respondidas ficam, com a resposta, para a trilha.
+
 1. Pense numa pessoa concreta abrindo o wiki pela primeira vez: o que ela procura e o que leva embora?
-2. Que tipo de item, chegando pelo RSS, faria você pensar "é exatamente isso"?
-3. Quando você diz "um determinado local (ambiente)", o que conta como um ambiente: um acervo, um periódico, um site, um território, uma combinação deles?
+2. Que tipo de item, chegando pelo monitoramento, faria você pensar "é exatamente isso"?
+3. Quando você diz "um determinado local (ambiente)", o que conta como um ambiente para você?
 4. O que "fidedigno e seguro" precisa garantir para quem envia documentação, e para o acervo?
-5. Quem são hoje os grupos de cada tier, e o que cada grupo mais precisa encontrar? Os tiers continuam cumulativos, e ainda faz sentido um cadastro prévio (P45)? O que "tier mais caro" (P48) queria dizer?
-6. Para você, a unidade do glossário é o termo (ex.: cauim, com suas variantes) ou cada CLB situada (ex.: Cauim de Caju Tremembé)? Como você imagina a relação entre os dois?
-7. O que você encontrou quando conferiu os links de rastreamento do legado?
+5. Quem são hoje os grupos de cada tier, e o que cada grupo mais precisa encontrar? Como você vê hoje a ideia de tiers cumulativos e de um cadastro prévio (P45)? O que "tier mais caro" (P48) queria dizer?
+6. *(reformulada)* Quando você procura uma bebida no wiki, o que espera encontrar primeiro? Como você vê a relação entre um nome, com suas variantes (ex.: cauim), e cada prática situada num lugar e num tempo que ele nomeia (ex.: o cauim de caju de uma comunidade)?
+7. *(respondida em parte)* Os links de rastreamento do legado serão testados por script no Passo 3 (D-024). Fica o que só você sabe: o que notou quando os usava, e quais mais importam para você?
 8. Que relação você tem, ou quer ter, com as comunidades que aparecem nas fichas?
-9. Quanto tempo por semana você consegue dedicar à curadoria humana (quarentena, amostra de fontes)?
+9. *(respondida, D-016)* De 1 a 3 h por semana de curadoria humana.
 10. Se a IA saísse de cena, com que ferramentas você se sentiria à vontade para manter o sistema?
 11. Os documentos da raiz do Drive (o PDF "além dos bares" e as pesquisas de 2025–2026) são o seu acervo de pesquisa? Entraram no Módulo 2?
-12. Que ritmo e que tamanho de lote fazem sentido para você hoje, diante dos "15" de P84, P94 e P95?
-13. No princípio 12, a leitura "aviso para mais pesquisa; cartilha quando o risco já foi verificado" corresponde ao que você quis dizer?
-14. A camada Educação de cada ficha é parte permanente do wiki, ou também é produzida sob demanda, como os artefatos do campo de ação?
-15. Na nova pasta, quem vai operar os agentes: o Claude Code, o agente do próprio Antigravity, ou os dois?
-16. Que orçamento de tokens você imagina para o sistema funcionando, por semana, depois da fundação?
+12. Os "15" nunca são teto de coleta (D-016). Que tamanho de lote e que ritmo de revisão fazem sentido para você hoje, diante da proposta de separar lote de máquina (P94) e cota de juízo humano (P84) (§4, §5.5)?
+13. *(relida à luz da Falta)* No princípio 12, o aviso pede mais pesquisa, e a cartilha de biossegurança só vem quando o risco já foi verificado; enquanto não foi, o risco aparece como Falta, dita e não completada. Como você vê essa leitura, e o que nela não corresponde ao que você quis dizer?
+14. Como você imagina a camada Educação de cada ficha em relação aos artefatos do campo de ação, que são feitos sob demanda?
+15. *(respondida, D-029)* Só o Claude Code opera os agentes.
+16. *(respondida em parte, D-023)* O teto provisório é de 300 mil tokens por semana em agentes na fase 1. Fica: como você quer distribuir o consumo quando houver rotinas na nuvem (fase 2)?
+17. *(nova)* Quem reconhece que uma fonte é tentativa de revisionismo, e por que critério, sem julgar a prática (D-019, princípio 3)? Que casos você tem em mente, sabendo que eles ilustram e não limitam?
+18. *(nova)* W se ancora na fala de quem pratica ([PROPOSTA], §5.4). Quando uma etnografia descreve uma prática como comum na região, o que ela precisa mostrar para ancorar W?
+19. *(nova)* Que pergunta de pesquisa você gostaria de responder olhando o grafo 4D? A resposta decide se a primeira vista entra já na fase 1 ou fica para o Passo 7 (§5.7).
+20. *(nova)* No princípio 4, o que sustenta decisão (política, saúde, ensino) exige fonte forte, e não há peso por tipo de fonte. O que faz uma fonte ser forte para você nesses casos?
+21. *(nova)* A entrevista feita pelo projeto é áudio e esbarra na P48 (D-009). O que você espera de uma entrevista própria, e em que momento ela faria sentido?
 
 ---
 
 ## 11. Orçamento e ritmo
 
-Nesta sessão de fundação restavam cerca de 2% dos tokens semanais. O orçamento do sistema em funcionamento está [ABERTO] (§10, pergunta 16). Regras de prudência [PROPOSTA]:
+**Cota de juízo [VIGENTE] (D-016):** Vicente tem de 1 a 3 h por semana de curadoria humana. [PROPOSTA] Até 15 itens por semana, que cabem em 1,25 a 2,5 h, na ordem: o que sustenta aviso, saúde ou política; as contribuições de pessoas; uma amostra sorteada, com semente registrada (§4, §5.5).
 
+**Guarda de orçamento [VIGENTE] (D-023):** medir e parar antes de acabar, com o estado salvo. Na operação da fase 1, o teto provisório é de 300 mil tokens por semana em agentes (token é a unidade em que se mede o consumo dos modelos de IA). A mecânica [PROPOSTA] está no §5.5.
+
+**Nesta execução (escrita da v0.2):** teto de 600 mil tokens de subagentes por janela de uso da conta (o limite que zera de tempos em tempos, não o contexto da conversa). Antes de cada agente, consumido + estimativa ≤ 600 mil; não se abre lote se a folga for menor que 2× o maior lote já medido. A escrita na sessão principal não entra nessa conta.
+
+**Medidas reais** (tokens informados pela ferramenta Agent; o checklist em `trilhas/2026-10-16_execucao-v0.2.md` traz o resto):
+
+| Agente | Modelo / esforço | Tokens | Chamadas |
+|---|---|---|---|
+| Conferência C1 (jurídico) | Sonnet 5.5 / alto | 81.852 | 19 |
+| Conferência C2 (padrões e serviços) | Sonnet 5.5 / alto | 77.351 | 19 |
+| Teste do auditor | Sonnet 5.5 / alto | 46.051 | 5 |
+| Redator, grupo 1 (cabeçalho, §0, §1) | Opus 5.5 / médio | 52.745 | 12 |
+| Redator, grupo 2 (§2) | Opus 5.5 / médio | 61.871 | 10 |
+| Redator, grupo 3a (§3, §4) | Opus 5.5 / médio | 62.893 | 11 |
+| Redator, grupo 3b (§5) | Opus 5.5 / médio | 115.624 | 18 |
+| Redator, grupo 4 (§6) | Opus 5.5 / médio | 73.986 | 21 |
+
+Antes, em 15/10 (plano, medido): agentes Sonnet com teto de 15 a 18 consultas à web gastaram de 34 a 54 mil tokens cada; agentes Opus que leem arquivos, sem teto, 118 e 142 mil; agentes Opus de pesquisa web, sem teto, de 200 a 450 mil, e cerca de 544 mil se perderam em frentes interrompidas. O custo por chamada fica entre 2 e 3 mil tokens.
+
+**Ainda não medido:** o consumo da sessão principal; o custo por habilidade em cada modelo (testes do Passo 1); as horas reais de curadoria (4 semanas da fase 1, gatilho do §7).
+
+**Regras de prudência:**
 1. O que é repetitivo vira script, sem IA.
-2. A IA trabalha em sessões planejadas, uma habilidade por vez, com entrada e saída definidas, e cada habilidade declara seu custo estimado por execução.
-3. Cada sessão lê o que o §0 indica, em vez de reler inteiros este documento ou o legado.
-4. Cada sessão termina com o que foi feito e verificado, o que ficou pendente e uma entrada no Registro de Decisões.
+2. Um agente por vez, com teto de chamadas declarado; pesquisa web com 15 a 20 chamadas no máximo.
+3. Leitura só dos trechos necessários, por `grep -n` e faixas de linhas; nunca este documento ou o legado inteiros.
+4. Todo agente grava log, e o consumo medido é somado no checklist.
+5. Cada sessão termina com o estado salvo: o que foi feito e verificado, o que ficou pendente, commit e push.
 
 ---
-
 ## Anexo A — Índice P1–P97 (verbatim)
 
 Texto integral, como Vicente o forneceu em 12/10/2026. Só os níveis de título foram ajustados para caber neste documento.

@@ -58,7 +58,7 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 
 ## Passo corrente
 - **Feito:** Blocos 1 e 2 (repositório, conferências C1 e C2) e Bloco 2.5 (agentes, habilidades, harness).
-- **Próximo:** Blocos 3 e 4 do brief (escrever a v0.2, conduzida pelos agentes). Depois, Passo 1 da Fundação (caso-piloto, testes de modelos).
+- **Em curso:** Bloco 3 (v0.2): grupos 1 a 5 escritos (cabeçalho a §11) na janela 3; faltam o grupo 6 (Anexos C, D, E), a verificação (auditor e juridico) e o Bloco 4. Depois, Passo 1 da Fundação (caso-piloto, testes de modelos).
 - **Estado do trabalho:** `trilhas/2026-10-16_execucao-v0.2.md` (checklist). Leia-o antes de qualquer passo.
 
 ## Agentes e habilidades (`.claude/agents/`, `.claude/skills/`)
