@@ -1,0 +1,224 @@
+{
+  "lote": "C2",
+  "data": "2026-10-16",
+  "modelo": "sonnet-5.5",
+  "esforco": "alto",
+  "chamadas_usadas": 18,
+  "itens": [
+    {
+      "id": "C2.1",
+      "pergunta": "TK Labels (Local Contexts): o que sao, quem aplica, como convivem com licencas abertas (CC), diferenca para TK Notices.",
+      "resposta": "TK Labels sao etiquetas para comunidades indigenas e organizacoes locais indicarem condicoes especificas de acesso e uso de material cultural. So podem ser aplicadas por conta de comunidade no Hub do Local Contexts. Nao substituem a licenca: foram feitas para complementar as licencas Creative Commons e funcionam fora da lei (extra-legais); nao exigem ser titular de direito autoral. TK Notices sao avisos usados por pesquisadores e instituicoes, nao personalizaveis; Labels sao personalizados pela comunidade.",
+      "partes": [
+        {
+          "afirmacao": "O que sao TK Labels",
+          "citacao": "identify cultural material that has community-specific conditions regarding access and use",
+          "url": "https://localcontexts.org/labels/traditional-knowledge-labels/",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Quem aplica: apenas conta de comunidade",
+          "citacao": "Labels can only be applied by a community account.",
+          "url": "https://localcontexts.org/support/frequently-asked-questions/",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Labels representam a comunidade coletivamente e sao aplicados por representantes autorizados",
+          "citacao": "customized and applied by authorized representatives through a community account on the Local Contexts Hub",
+          "url": "https://localcontexts.org/support/frequently-asked-questions/",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Complementam (nao substituem) as licencas Creative Commons",
+          "citacao": "have been developed to complement Creative Commons licenses",
+          "url": "https://localcontexts.org/support/frequently-asked-questions/",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Sao mecanismos extra-legais e nao exigem ser titular do direito autoral (CC exige)",
+          "citacao": "extra-legal mechanisms, meaning that they work outside existing legislation. / To use Creative Commons, you need to already be a copyright holder. / To use the Labels or Notices you do not need to be a copyright holder.",
+          "url": "https://localcontexts.org/support/frequently-asked-questions/",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Diferenca Labels x Notices",
+          "citacao": "Labels are for use by Indigenous communities and local organizations to clarify their rights ... Notices are for use by researchers and institutions to identify Indigenous rights and interests. Notices are not customizable.",
+          "url": "https://localcontexts.org/support/frequently-asked-questions/",
+          "nivel": "oficial"
+        }
+      ],
+      "observacao": "A pagina de Labels sozinha nao trata de CC nem de Notices; essas partes vem da FAQ. A FAQ nao diz se Labels tem forca juridica vinculante (so que sao extra-legais). Nota: existe tambem 'TK Licenses' (outra ferramenta), nao conferida na fonte oficial."
+    },
+    {
+      "id": "C2.2",
+      "pergunta": "Principios CARE (GIDA): URL oficial, enunciado curto de cada um, relacao com FAIR.",
+      "resposta": "A pagina oficial da GIDA e https://www.gida-global.org/careprinciples (a URL /care devolveu 404). A pagina diz que CARE complementa FAIR e e orientada a pessoas e propositos. O enunciado curto de cada um dos quatro principios NAO foi lido: o texto recuperado da pagina nao os trazia (provavelmente estao no PDF de uma pagina linkado).",
+      "partes": [
+        {
+          "afirmacao": "URL oficial da pagina CARE da GIDA",
+          "citacao": "The CARE Principles for Indigenous Data Governance (link /careprinciples na navegacao do site)",
+          "url": "https://www.gida-global.org/careprinciples",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Relacao com FAIR: complementa",
+          "citacao": "complement the existing FAIR principles",
+          "url": "https://www.gida-global.org/careprinciples",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Critica a FAIR: foco em caracteristicas dos dados que facilitam compartilhamento, ignorando assimetrias de poder e contextos historicos",
+          "citacao": "ignoring power differentials and historical contexts",
+          "url": "https://www.gida-global.org/careprinciples",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Enunciado curto de cada principio (Collective Benefit, Authority to Control, Responsibility, Ethics)",
+          "citacao": "",
+          "url": "https://www.gida-global.org/careprinciples",
+          "nivel": "nao conferido"
+        }
+      ],
+      "observacao": "Os nomes dos quatro principios vieram do enunciado da tarefa e de resumos de busca (nao abertos); nao contam como conferidos. Resultados de busca indicam 3 subprincipios por principio, tambem nao conferido. Proximo passo: abrir o PDF de uma pagina linkado em /careprinciples."
+    },
+    {
+      "id": "C2.3",
+      "pergunta": "Flora e Funga do Brasil: ha campo de origem (nativa, naturalizada, cultivada)? Valores exatos? API ou exportacao IPT/Darwin Core com esse campo?",
+      "resposta": "Existe uma coluna 'origin' na tabela derivada pelo pacote R florabr, mas os valores exatos NAO foram conferidos. Os dados sao publicados como Darwin Core Archive, atualizado semanalmente, com recurso IPT do JBRJ. Nao foi achada API web documentada. A pagina do IPT deu 403 e a pagina da Flora nao foi aberta.",
+      "partes": [
+        {
+          "afirmacao": "Dados guardados em Darwin Core Archive, atualizados semanalmente",
+          "citacao": "stored in Darwin Core Archive data sets, which is updated weekly",
+          "url": "https://cran.csiro.au/web/packages/florabr/vignettes/getting_started.html",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Existe uma coluna chamada 'origin' (versoes curta de 23 colunas e completa de 39) no objeto do florabr; valores nao listados na vinheta",
+          "citacao": "\"origin\"",
+          "url": "https://cran.csiro.au/web/packages/florabr/vignettes/getting_started.html",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Recurso IPT do JBRJ citado pela vinheta do florabr",
+          "citacao": "https://ipt.jbrj.gov.br/jbrj/resource?r=lista_especies_flora_brasil",
+          "url": "https://ipt.jbrj.gov.br/jbrj/resource?r=lista_especies_flora_brasil",
+          "nivel": "nao conferido"
+        },
+        {
+          "afirmacao": "Valores exatos do campo de origem (nativa/naturalizada/cultivada) e termo Darwin Core correspondente (por ex. establishmentMeans)",
+          "citacao": "",
+          "url": "https://floradobrasil.jbrj.gov.br/",
+          "nivel": "nao conferido"
+        },
+        {
+          "afirmacao": "Existencia de API web",
+          "citacao": "",
+          "url": "https://floradobrasil.jbrj.gov.br/",
+          "nivel": "nao conferido"
+        }
+      ],
+      "observacao": "A vinheta do florabr e fonte nao oficial (pacote de terceiros). Termos 'native', 'naturalized', 'cultivated' nao aparecem na vinheta lida. O IPT retornou HTTP 403 ao WebFetch (nao contornado). Qualquer valor citado de memoria seria 'nao conferido'."
+    },
+    {
+      "id": "C2.4",
+      "pergunta": "Rotinas do Claude Code: rede da nuvem (padrao e configuravel), modelo por rotina, cobranca/limites.",
+      "resposta": "Rede: o ambiente Default usa acesso 'Trusted' (so lista de dominios permitidos: gerenciadores de pacotes, APIs de nuvem, etc.); e configuravel por ambiente para 'Custom' (dominios proprios, com opcao de manter a lista padrao) ou 'Full' (irrestrito). Modelo: ha seletor de modelo no campo do prompt, e a rotina usa o modelo escolhido em toda execucao. Custo: rotinas consomem o uso da assinatura como sessoes interativas; alem disso ha limites por hora (100 execucoes agendadas/h por conta; 30/h por rotina para Run now e API; sem excedente); sem creditos de uso, execucoes alem do limite da assinatura sao rejeitadas. Rotinas estao em research preview.",
+      "partes": [
+        {
+          "afirmacao": "Rede padrao: Trusted com lista de dominios permitidos",
+          "citacao": "A Default environment is provided with Trusted network access, which allows only the default allowlist of package registries, cloud provider APIs, container registries, and common development domains",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Rede configuravel: Custom ou Full",
+          "citacao": "change Network access to Custom and enter your domains in Allowed domains ... Select Full instead for unrestricted access.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Conectores (MCP) passam pelos servidores da Anthropic, sem depender da lista de dominios",
+          "citacao": "MCP connector traffic is routed through Anthropic's servers rather than that path",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Modelo escolhido por rotina",
+          "citacao": "The prompt input includes a model selector. Claude uses the selected model on every run.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Cobranca: consome uso da assinatura",
+          "citacao": "Routines draw down subscription usage the same way interactive sessions do.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Limites por hora e overage",
+          "citacao": "Scheduled runs, including one-off runs | 100 per hour | Your account ... None of these hourly limits has overage. / Without usage credits, additional runs are rejected until your usage window resets.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Disponibilidade e intervalo minimo",
+          "citacao": "Routines are available on Pro, Max, Team, and Enterprise plans. / The minimum interval is one hour",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ],
+      "observacao": "A pagina avisa 'Routines are in research preview. Behavior, limits, and the API surface may change.' Ha tambem a pagina /docs/en/cloud-environments (lista exata de dominios padrao), nao aberta."
+    },
+    {
+      "id": "C2.5",
+      "pergunta": "Save Page Now do Internet Archive (SPN2): exige chave S3? Limites de taxa/concorrencia? Uso sem chave e possivel?",
+      "resposta": "A doc da SPN2 diz que a API exige autenticacao, preferencialmente chaves S3 do archive.org (alternativa: cookies de login, que expiram em poucos dias). A mesma doc, porem, diz que usuarios anonimos podem usar SPN2 com limites menores: 3 capturas/min (autenticado: 7), 200/dia (autenticado: 30 mil), 5 capturas por URL por dia; mais de 20 capturas simultaneas no mesmo host sao atrasadas. Ha contradicao interna sobre o teto de dados anonimo (500MB vs 2GB/dia).",
+      "partes": [
+        {
+          "afirmacao": "Exige autenticacao; chaves S3 preferidas, cookies como alternativa",
+          "citacao": "SPN2 runs on https://web.archive.org/save which requires authentication using two alternative methods: S3 API keys ... Cookies",
+          "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Uso anonimo e possivel, com teto diario menor",
+          "citacao": "Anonymous users can use SPN2 but their total captures per day cannot be more than this limit.",
+          "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Limite por minuto",
+          "citacao": "Max captures per minute for authenticated users = 7 and for anonymous users = 3.",
+          "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Limites diarios",
+          "citacao": "Max captures per day for anonymous users = 200 ... authenticated users = 30k ... Max captures per day for a URL = 5",
+          "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Concorrencia por host",
+          "citacao": "When more than 20 concurrent captures target the same host, additional requests are delayed",
+          "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic",
+          "nivel": "secundaria"
+        },
+        {
+          "afirmacao": "Pagina oficial web.archive.org/save (nao abre via WebFetch: dominio bloqueado) e docs em archive.org",
+          "citacao": "",
+          "url": "https://web.archive.org/save",
+          "nivel": "nao conferido"
+        }
+      ],
+      "observacao": "O Google Doc 'Save Page Now 2 Public API Docs' e o documento de referencia usado pela comunidade e citado pelo proprio ecossistema do Archive, mas esta fora do dominio archive.org, entao foi classificado 'secundaria'. Um resultado de busca (nao aberto) cita um limite de 6 URLs/min em discussao de 2023; sem confirmacao. Numeros podem estar desatualizados; conferir pelo endpoint de status do usuario com chaves."
+    }
+  ],
+  "nao_conferido": [
+    "C2.2: enunciado curto de cada principio CARE (a pagina /careprinciples nao trouxe as definicoes no texto recuperado; provavelmente estao no PDF de uma pagina linkado, nao aberto por limite de chamadas).",
+    "C2.3: valores exatos do campo de origem da Flora e Funga do Brasil (nativa/naturalizada/cultivada) e o termo Darwin Core correspondente; a pagina do IPT do JBRJ retornou 403 e a pagina floradobrasil.jbrj.gov.br nao foi aberta.",
+    "C2.3: existencia de API web da Flora e Funga do Brasil.",
+    "C2.5: documentacao oficial em web.archive.org/save / archive.org (dominio nao acessivel pela ferramenta); limites vieram apenas de documento secundario.",
+    "C2.4: lista exata de dominios do acesso 'Trusted' (pagina cloud-environments nao aberta)."
+  ]
+}
