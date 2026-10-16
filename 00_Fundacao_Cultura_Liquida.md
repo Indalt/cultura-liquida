@@ -150,15 +150,18 @@ Os princípios valem "de início" e são proporcionais: depois das coletas e ver
 
 ## 3. Legado: o que existe e o que a análise aprendeu
 
+**Regra [VIGENTE] (D-024):** do legado, só entra no acervo o que for verificável e condizente com as regras novas. O resto **não se apaga**: fica como está, no Drive e em `legado/`, só leitura, o que concilia com o princípio 10 (quarentena não descarta). O site não é aproveitado. O processamento é o Passo 3, que trata o legado como mais um ambiente (§1, §7): o que ele traz passa pelas mesmas conferências de qualquer fonte.
+
 ### 3.1 Onde está
 
 - Google Drive, `Meu Drive/Bebidas nativas brasileiras/`, com as pastas `00_Inbox_Multicanal`, `01_Diretrizes_do_Sistema`, `02_Acervo_e_Conhecimento` e `03_Campo_de_Acao`.
 - Fora dessa pasta, na raiz do Meu Drive:
-  - o site `Culturas Líquidas Brasileiras.gsite`;
+  - o site `Culturas Líquidas Brasileiras.gsite`, que não é aproveitado (D-024);
   - o Apps Script `Projeto sem título.gscript` (10/10, 22:00, provável backend);
   - `grafo_dados_v4.json` e `grafo_dados_v5.json`;
   - `Lote_02_15_Bebidas_Autorizadas_Quarentena.md`.
 - Também na raiz, possível acervo de pesquisa anterior [ABERTO]: `alem dos bares.estudo.bebidasalcoolicas.pdf`, `Bebidas Históricas do Brasil – Pesquisa`, `Bebidas Pré-coloniais Sul-Americanas – Artigos`, `Bebidas Brasileiras` e `Roteiro de curta metragem sobre bebidas`.
+- Cópia exportada em 16/10 na pasta `legado/` deste projeto, fora do Git e só leitura (§3.5).
 
 ### 3.2 Inventário (12/10/2026)
 
@@ -174,50 +177,45 @@ Os princípios valem "de início" e são proporcionais: depois das coletas e ver
 | Entrada e usuários | 1 formulário + 2 planilhas | respostas do formulário; controle de usuários e tiers |
 | Diretrizes e registros | 7 diretrizes + 10 consolidações | Plano Mestre, Protocolo de Rotina, Ciclo Semanal e Lotes 15, Sites e Formulário, Backend, Template de Verbete e Manual de Reconstituição |
 
-### 3.3 O que vale manter
+### 3.3 O que vale aproveitar
 
 - **Os conceitos** (§2 e §4). São o ativo principal.
-- **O conteúdo com links de rastreamento** (verbetes, Feed, extratos, inventários). Entra como legado a verificar no Passo 3. Nada é descartado.
+- **O conteúdo com links de rastreamento** (verbetes, Feed, extratos, inventários). Vai ao Passo 3 como legado a verificar: passa ao acervo só o que se verifica e condiz com as regras novas; o resto fica onde está, sem apagar (D-024).
+- **Os termos do legado**, como candidatos: servem de busca até ganharem abonação (o trecho de fonte que atesta o uso do termo) [PROPOSTA].
+- **A régua de 4 filtros** (P14), a recuperar no Passo 3, para triar contribuições de pessoas.
 - **O formulário de 8 perguntas** mapeadas aos eixos X, Y, Z e W (P53).
-- **Os papéis dos agentes**, como ponto de partida do Passo 1.
+- **Os papéis dos agentes**, como referência; os agentes atuais ficam em `.claude/` (D-029).
 - **As varreduras pensadas** (P74, P75). Viram o primeiro Registro de Ambientes.
 
 ### 3.4 O que melhorar (análise de 12/10, revisada em 13/10)
 
-A análise viu a estrutura, as datas e o índice da conversa, sem ler o conteúdo dos Docs.
+A análise viu a estrutura, as datas e o índice da conversa, sem ler o conteúdo dos Docs. As rajadas de criação de arquivos (15 verbetes em 2 minutos; o extrato de mineração criado depois dos verbetes) mostram que a escrita foi feita em lote; os documentos trazem links de rastreamento (Vicente, 13/10). O que faltou foi registrar o percurso entre a busca e o texto. Se os links abrem e sustentam o que o texto afirma é o que o Passo 3 verifica.
 
-**Revisão.** A análise de 12/10 leu as rajadas de criação de arquivos (15 verbetes em 2 minutos; o extrato de mineração criado depois dos verbetes) como sinal de texto gerado sem pesquisa. Em 13/10, Vicente esclareceu que os documentos existem e trazem links de rastreamento. Leitura revisada: as rajadas mostram que a escrita foi feita em lote. O que faltou foi registrar o percurso entre a busca e o texto. Se os links abrem e sustentam o que o texto afirma é o que o Passo 3 verifica.
-
-1. **Meio errado.** 103 dos 108 arquivos são Google Docs: os ".md", ".json", ".html", ".py" e ".csv" eram Docs com a extensão no nome. Do jeito que estavam, não podiam ser lidos como dados por um programa nem executados. É a causa provável de o HTML mostrar o código (P51) e de o grafo não funcionar (P60; hipótese: o Docs troca aspas retas por curvas e quebra o JSON). Se os scripts chegaram a rodar em outro lugar, isso não está registrado na pasta. → Arquivos reais (§5.1).
-2. **Percurso a verificar.** Os documentos trazem links de rastreamento (Vicente, 13/10). Esta análise não leu o conteúdo, então só o Passo 3 mostra se o percurso entre a busca e o texto ficou registrado. → Trilha obrigatória (princípio 1).
-3. **Plano parado.** O Plano Mestre parou em 10/10 às 18:05, o Manual de Reconstituição às 17:54 e o Template de Verbete às 14:44. As decisões da P46 à P97 ficaram fora do plano, e a Regra de Ouro apontava para um plano defasado. → Este documento e o Registro de Decisões, com versão.
-4. **Versões concorrentes.** 3 SKILLs do auditor, 3 Feeds, grafo de v1 a v7, 5 visualizadores com sufixos "(1)", "(2)", "(3)". → Uma fonte de verdade por artefato; o histórico fica no versionamento, não em cópias.
-5. **Componentes fora da pasta.** O site, o Apps Script, o grafo v4/v5 e o Lote 02 estão na raiz. → Tudo dentro da casa do projeto.
-6. **Rotinas que não rodavam sozinhas.** Nada novo surgiu depois de 11/10 às 16:08. O "Relógio" (P15) não existia como mecanismo, e a cadência mudou três vezes (P84, P94, P95). → Agendamento real e parâmetros únicos.
-7. **Auditor igual ao produtor.** A auditoria era feita pelo mesmo modelo que produzia. → Checagens mecânicas, amostra humana e números calculados.
+1. **Meio errado.** 103 dos 108 arquivos são Google Docs: os ".md", ".json", ".html", ".py" e ".csv" eram Docs com a extensão no nome, e não podiam ser lidos como dados por um programa nem executados. É a causa provável de o HTML mostrar o código (P51) e de o grafo não funcionar (P60; hipótese: o Docs troca aspas retas por curvas e quebra o JSON). → Arquivos reais no repositório (§5.1).
+2. **Percurso a verificar.** Só o Passo 3 mostra se o percurso entre a busca e o texto ficou registrado. → Trilha obrigatória (princípio 1).
+3. **Plano parado.** O Plano Mestre parou em 10/10 às 18:05, o Manual de Reconstituição às 17:54 e o Template de Verbete às 14:44. As decisões da P46 à P97 ficaram fora do plano, e a Regra de Ouro apontava para um plano defasado. → Este documento e o Registro de Decisões, com versão (§9).
+4. **Versões concorrentes.** 3 SKILLs do auditor, 3 Feeds, grafo de v1 a v7, 5 visualizadores com sufixos "(1)", "(2)", "(3)". → Uma fonte de verdade por artefato; o histórico fica no Git, não em cópias.
+5. **Componentes fora da pasta.** O site, o Apps Script, o grafo v4/v5 e o Lote 02 estão na raiz. → Tudo no repositório do projeto (D-021).
+6. **Rotinas que não rodavam sozinhas.** Nada novo surgiu depois de 11/10 às 16:08. O "Relógio" (P15) não existia como mecanismo, e a cadência mudou três vezes (P84, P94, P95). → Agendamento real (§5.5) e dois parâmetros separados, lote de máquina e cota humana [PROPOSTA] (§4.2).
+7. **Auditor igual ao produtor.** A auditoria era feita pelo mesmo modelo que produzia. → Checagens mecânicas por script, verificador com harness diferente e amostra sorteada (D-026).
 8. **Contagens divergentes.** 45 verbetes contra 69 bebidas no Feed. → Reconciliar no Passo 3.
 9. **Status como pasta.** `A_Processar` guardava o destino vivo do formulário e lotes já consumidos; `Processados` guardava entradas brutas. → Status como campo (§6).
-10. **Privacidade.** Se a pasta raiz foi aberta para "Qualquer pessoa com o link" (P55), `Controle_Usuarios_e_Tiers` e `Respostas_Coleta_Cidada_Tier1` ficaram expostas. → Verificar já, no Passo 0 (LGPD, Anexo C).
+10. **Privacidade.** Se a pasta raiz foi aberta para "Qualquer pessoa com o link" (P55), `Controle_Usuarios_e_Tiers` e `Respostas_Coleta_Cidada_Tier1` ficaram expostas. → Tarefa do Passo 0 (§7). Se o compartilhamento da pasta foi de fato revisto **não foi conferido** nesta execução; essas planilhas não vieram para `legado/` (§3.5).
 11. **4D como imagem.** Tentou-se ver quatro dimensões de uma vez. X e Y independentes (P28) pedem uma matriz. → O grafo é 4D nos dados; a interface mostra projeções coordenadas (§5.7).
 12. **Campo de ação automático.** Cinco documentos foram gerados em 2 minutos (10/10, 18:41–18:42) sobre uma base ainda não verificada. → Sob demanda e a partir de fichas verificadas; os 5 atuais viram rascunhos.
-13. **Tiers que não controlavam acesso.** A janela de cadastro do Sites não restringia nada, e "tier mais caro" sugeria cobrança. → Grupos de interesse (princípio 14); acesso restrito só onde necessário, com o controle de permissões do próprio Google.
+13. **Tiers que não controlavam acesso.** A janela de cadastro do Sites não restringia nada, e "tier mais caro" sugeria cobrança. → Grupos de interesse (princípio 14); acesso restrito só onde for necessário (§5.9).
 
-### 3.5 Como acessar o conteúdo do legado
+### 3.5 Acesso ao conteúdo do legado [RESOLVIDO 16/10]
 
-- O Google Drive para desktop guarda só atalhos dos Docs; o conteúdo não pode ser lido pelo disco.
-- **Caminho (a):** conectar o Google Drive nas configurações de conectores do claude.ai.
-- **Caminho (b):** exportar para a pasta `legado/` deste projeto:
-  - os pseudo-arquivos (".md", ".json", ".csv", ".html", ".py") como texto simples (.txt), para preservar o texto cru;
-  - os documentos de texto como Markdown (.md) (Anexo C);
-  - as planilhas como .csv, exceto as que têm dados pessoais, que ficam no Drive (§5.1);
-  - mais rápido: baixar a pasta inteira de uma vez (o Drive converte os Docs em .docx) e converter tudo para texto por script (Passo 3).
+- O Google Drive para desktop guarda só atalhos dos Docs, e o conteúdo não podia ser lido pelo disco. Em 16/10, o conteúdo foi exportado: o Drive converteu os Docs em .docx, e os arquivos estão em `legado/`, fora do Git (D-021). As planilhas com dados pessoais não vieram e ficam no Drive.
+- A conversão para texto é feita por script no Passo 3. Antes dele, nenhum agente lê nem descreve o conteúdo de `legado/`.
 - O legado é somente leitura: é fonte, não rascunho.
 
 ---
 
 ## 4. Memória conceitual: cada pedido, seu contexto e seu status
 
-Cada linha guarda o conceito nas palavras de Vicente (ou em síntese fiel), o lugar de onde veio na conversa e o status em 13/10/2026. O índice completo, verbatim, está no Anexo A; a mensagem de 13/10, verbatim, no Anexo B.
+Cada linha guarda o conceito nas palavras de Vicente (ou em síntese fiel), o lugar de onde veio na conversa e o status em 13/10/2026, atualizado em 16/10 para os pedidos afetados pelas decisões de 15 e 16/10 (P14, P26, P48, P73, P84, P94–P95). O índice completo, verbatim, está no Anexo A; a mensagem de 13/10, verbatim, no Anexo B.
 
 ### 4.1 Origem e modo de trabalhar
 
@@ -239,13 +237,13 @@ Cada linha guarda o conceito nas palavras de Vicente (ou em síntese fiel), o lu
 | P3 | Palavras de referência não genéricas: devem carregar o que é descrito, para não buscar só o que já se conhece | [VIGENTE] princípio 8; base dos booleanos (princípio 2) |
 | P4 | Matriz de Descoberta: cruzamento de descritores | [VIGENTE]; [PROPOSTA] usá-la para gerar buscas, nunca respostas |
 | P5 | Processos rigorosamente conhecidos, sem excluir os ainda não conhecidos | [VIGENTE] princípio 5 |
-| P73 | De quanto em quanto tempo o sistema atualiza e o que alimenta o RSS | [REFORMULADO 13/10] rotinas diárias para as entradas; alimentação semanal por ambiente até exaurir; RSS criado por nós em cada ambiente. Só o tamanho do lote está [PENDENTE] |
+| P73 | De quanto em quanto tempo o sistema atualiza e o que alimenta o RSS | [REFORMULADO 13/10] rotinas diárias para as entradas e alimentação semanal por ambiente até exaurir (D-012). [REFORMULADO 16/10] o "RSS criado por nós" dá lugar ao modelo monitoramento × escavação [PROPOSTA] (§1, §5). O tamanho do lote: ver P94–P95 |
 | P74 | Varrer drives abertos; dados de territórios concedidos; documentação obrigatória e estudos que legitimam a cessão de terras como fonte | [VIGENTE] ambientes do tipo "documento oficial" (Anexo C) |
 | P75 | Revistas, sites, jornais, hemerotecas, blogs de não ficção, substacks, "tudo o que a internet pode disponibilizar" | [VIGENTE] Registro de Ambientes |
-| P84 | Vicente decide o ritmo e o que entra; o mapeamento prévio pode demorar, "mas não pode acabar até ser exaurido e gravado na pasta de forma organizada" | [VIGENTE] |
+| P84 | Vicente decide o ritmo e o que entra; o mapeamento prévio pode demorar, "mas não pode acabar até ser exaurido e gravado na pasta de forma organizada" | [VIGENTE] o ritmo e o que entra são de Vicente, que tem de 1 a 3 h por semana de curadoria; os "15" nunca são teto de coleta (D-016). [PROPOSTA] cota de juízo humano de até 15 itens por semana, separada do lote de máquina (P94), na ordem: o que sustenta aviso, saúde ou política; as contribuições de pessoas; uma amostra sorteada, com semente registrada (o número que permite refazer o mesmo sorteio) (§5.5, §11) |
 | P88 | Mapeamento persistente e cumulativo, em arquivo próprio | [VIGENTE] Registro de Ambientes |
 | P89 | Marcar com tags o que já foi visto, para que, ao olhar o mesmo local e tempo, se pegue o que não foi visto; "um arquivo de todos os critérios menos tempo"; Matriz de Pegadas e Vácuos | [VIGENTE] pegadas e vácuos por ambiente (§6) |
-| P94–P95 | Dados brutos são "tudo de um determinado período de acordo com as buscas"; tratamento de 15 em 15, de hora em hora; mineração semanal com o máximo de dados; depois, "serão 15" | [REFORMULADO 13/10] rotinas diárias + alimentação semanal por ambiente até exaurir. Mantida a distinção entre mineração (trazer o máximo de dados brutos) e tratamento (processar em lotes); tamanho do lote [PENDENTE] |
+| P94–P95 | Dados brutos são "tudo de um determinado período de acordo com as buscas"; tratamento de 15 em 15, de hora em hora; mineração semanal com o máximo de dados; depois, "serão 15" | [REFORMULADO 13/10] rotinas diárias + alimentação semanal por ambiente até exaurir. Mantida a distinção entre mineração (trazer o máximo de dados brutos) e tratamento (processar em lotes). [VIGENTE] os "15" nunca são teto de coleta (D-016). [PROPOSTA] lote de máquina de 15 itens por rodada, separado da cota humana (P84); o tamanho só vira plano com decisão |
 
 ### 4.3 Insumos, cultura e crítica
 
@@ -292,11 +290,11 @@ Cada linha guarda o conceito nas palavras de Vicente (ou em síntese fiel), o lu
 |---|---|---|
 | P12 | Como alimentar: duas portas de entrada e um pipeline de 4 etapas | [REFORMULADO] caixa de entrada multicanal (§5.4) |
 | P13 | Quando os critérios não se preenchem: governança de lacunas e "Sala de Fragmentos e Pistas" | [VIGENTE] estado paracompleto (princípio 3) e selo de fragmento |
-| P14 | Contribuição de qualquer pessoa: quarentena e régua de 4 filtros | [VIGENTE] |
+| P14 | Contribuição de qualquer pessoa: quarentena e régua de 4 filtros | [VIGENTE] a régua tria só as contribuições de pessoas e não define o que é prática cultural, cujos critérios vêm da lei (D-022). Na fase 1 não há contribuições externas (decisão de 16/10; D-026). A régua é recuperada do legado no Passo 3 |
 | P22 | "O rigor é fundamental, mas nos vestígios não precisa ter rigor? talvez não?": rigor com o poder, hospitalidade com o vestígio | [VIGENTE] princípio 4 |
-| P26 | E-mail e WhatsApp como alternativa a entrar no Drive; funil convergindo para uma caixa | e-mail [VIGENTE]; WhatsApp [ADIADO] (P48) |
+| P26 | E-mail e WhatsApp como alternativa a entrar no Drive; funil convergindo para uma caixa | e-mail [VIGENTE] como canal, aberto no Passo 4, depois das precondições (guias e consentimento); na fase 1 não há contribuições externas (D-026). WhatsApp [ADIADO] (P48) |
 | P47 | As pessoas também são fonte de dados e fragmentos quando respondem perguntas objetivas | [VIGENTE] |
-| P48 | Sem WhatsApp nem áudios por ora; ficam para uma expansão | [ADIADO] |
+| P48 | Sem WhatsApp nem áudios por ora; ficam para uma expansão | [ADIADO]. A entrevista feita pelo projeto também é áudio: reabrir a P48 para ela é decisão de Vicente e fica como pergunta (§10). Até lá, entrevista própria e observação de campo ficam fechadas, e o depoimento já gravado em acervo entra por link com marca de tempo, sem republicar o áudio [PROPOSTA]. O protocolo (consentimento registrado, cessão de direitos, áudio fora do Git) e as normas a conferir ficam no §5.4 e no Anexo C |
 | P53 | Formulário com perguntas de resposta curta, texto de no máximo 500 caracteres e links: insumos, técnicas (modo de fazer), temporalidade (desde quando) e quem ensinou como eixo epistemológico | [VIGENTE] canal "formulário" (§5.4) |
 | P57 | O que entra pelo site entra na ferramenta | [VIGENTE] caixa de entrada única |
 | 13/10 | Local aberto para determinados tiers enviarem documentação, sem sistema complexo, mas fidedigno e seguro | [VIGENTE] §5.4 |
