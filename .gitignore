@@ -1,0 +1,10 @@
+# Fora do Git: legado e dados pessoais
+legado/
+.venv/
+.claude/settings.local.json
+Controle_Usuarios_e_Tiers*
+Respostas_Coleta_Cidada_Tier1*
+
+# Arquivos de sistema
+Thumbs.db
+desktop.ini
