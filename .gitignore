@@ -8,3 +8,5 @@ Respostas_Coleta_Cidada_Tier1*
 # Arquivos de sistema
 Thumbs.db
 desktop.ini
+__pycache__/
+*.pyc
