@@ -1,0 +1,69 @@
+{
+  "lote": "C1",
+  "data": "2026-10-16",
+  "modelo": "sonnet-5.5",
+  "esforco": "alto",
+  "chamadas_usadas": 18,
+  "itens": [
+    {
+      "id": "C1.1",
+      "pergunta": "Lei 9.610/1998: em qual inciso do art. 7º estão as obras orais (conferências, alocuções, sermões)? Texto literal do art. 46, II.",
+      "resposta": "Art. 7º, inciso II. Art. 46, II: não é ofensa aos direitos autorais a reprodução, em um só exemplar, de pequenos trechos, para uso privado do copista, feita por este, sem intuito de lucro.",
+      "citacao": "Art. 7º São obras intelectuais protegidas as criações do espírito, expressas por qualquer meio ou fixadas em qualquer suporte, tangível ou intangível, conhecido ou que se invente no futuro, tais como: [...] II - as conferências, alocuções, sermões e outras obras da mesma natureza; || Art. 46. Não constitui ofensa aos direitos autorais: [...] II - a reprodução, em um só exemplar de pequenos trechos, para uso privado do copista, desde que feita por este, sem intuito de lucro;",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+      "nivel": "oficial",
+      "observacao": "Página do Planalto abriu (com cabeçalho de navegador; sem ele a conexão caiu) e o texto foi lido. O inciso I do art. 7º trata de textos de obras literárias, artísticas ou científicas; o art. 46, III trata de citação para estudo, crítica ou polêmica."
+    },
+    {
+      "id": "C1.2",
+      "pergunta": "LGPD (Lei 13.709/2018), art. 4º, I e II, alínea b: texto literal.",
+      "resposta": "A LGPD não se aplica ao tratamento por pessoa natural para fins exclusivamente particulares e não econômicos (I) nem ao realizado para fins exclusivamente jornalísticos e artísticos (II, a) ou acadêmicos (II, b), este último com aplicação dos arts. 7º e 11.",
+      "citacao": "Art. 4º Esta Lei não se aplica ao tratamento de dados pessoais: I - realizado por pessoa natural para fins exclusivamente particulares e não econômicos; II - realizado para fins exclusivamente: a) jornalístico e artísticos; ou b) acadêmicos, aplicando-se a esta hipótese os arts. 7º e 11 desta Lei;",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+      "nivel": "oficial",
+      "observacao": "A página do Planalto exibe também a redação anterior da alínea b dada pela MP 869/2018 ('b) acadêmicos;'), que aparece junto no texto extraído sem a marcação de tachado; a redação em vigor é a que cita os arts. 7º e 11 (conferir visualmente no site antes de transcrever em documento formal). Atenção para o projeto: o inciso I exige fins 'exclusivamente particulares e não econômicos'; um acervo público não se enquadra com folga nele."
+    },
+    {
+      "id": "C1.3",
+      "pergunta": "Lei 13.123/2015, art. 2º, I: a definição de patrimônio genético inclui microrganismos?",
+      "resposta": "Inclui espécies microbianas: a definição fala em 'espécies vegetais, animais, microbianas ou espécies de outra natureza'. A palavra 'microrganismos' em si não aparece na definição; o termo é 'microbianas'.",
+      "citacao": "I - patrimônio genético - informação de origem genética de espécies vegetais, animais, microbianas ou espécies de outra natureza, incluindo substâncias oriundas do metabolismo destes seres vivos;",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
+      "nivel": "oficial",
+      "observacao": "Busca textual por 'microrganismos' em toda a lei não retornou ocorrência. O art. 2º, VIII define acesso ao patrimônio genético como 'pesquisa ou desenvolvimento tecnológico realizado sobre amostra de patrimônio genético' (relevante para saber se práticas culturais com fermentos/microbiota configuram acesso: depende de haver pesquisa ou desenvolvimento tecnológico sobre a amostra; essa conclusão é interpretação, não texto de lei)."
+    },
+    {
+      "id": "C1.4",
+      "pergunta": "SisGen: o cadastro é declaratório? Pessoa natural pode cadastrar acesso? Passos, campos e documentos.",
+      "resposta": "Sim, é declaratório (Lei 13.123, art. 2º, XII: 'instrumento declaratório obrigatório'). Pessoa natural pode: Decreto 8.772/2016, art. 22 diz 'pessoa natural ou jurídica nacional' e o art. 22-A (pesquisa sem exploração econômica) diz 'pessoa física ou jurídica nacional'. Campos do formulário: ver citação e observação. O passo a passo operacional da tela (login, módulo de segurança, etc.) NÃO foi conferido em fonte oficial; só há fonte secundária indireta.",
+      "citacao": "Lei 13.123, art. 2º, XII: 'cadastro de acesso ou remessa de patrimônio genético ou de conhecimento tradicional associado - instrumento declaratório obrigatório das atividades de acesso ou remessa de patrimônio genético ou de conhecimento tradicional associado'. || Lei 13.123, art. 12, I: 'acesso ao patrimônio genético ou ao conhecimento tradicional associado dentro do País realizado por pessoa natural ou jurídica nacional, pública ou privada'. || Lei 13.123, art. 12, § 2º: 'O cadastramento deverá ser realizado previamente à remessa, ou ao requerimento de qualquer direito de propriedade intelectual, ou à comercialização do produto intermediário, ou à divulgação dos resultados, finais ou parciais, em meios científicos ou de comunicação, ou à notificação de produto acabado ou material reprodutivo desenvolvido em decorrência do acesso.' || Decreto 8.772, art. 22: 'Para a realização do cadastro de acesso ao patrimônio genético ou ao conhecimento tradicional associado, a pessoa natural ou jurídica nacional deverá preencher o formulário eletrônico do SisGen que exigirá: I - identificação do usuário; II - informações sobre as atividades de pesquisa ou desenvolvimento tecnológico, incluindo: a) resumo da atividade e seus respectivos objetivos; b) setor de aplicação, no caso de desenvolvimento tecnológico; c) resultados esperados ou obtidos [...]; d) equipe responsável [...]; e) período das atividades; f) identificação do patrimônio genético no nível taxonômico mais estrito possível ou do conhecimento tradicional associado [...]; g) declaração se o patrimônio genético é variedade tradicional local ou crioula [...]; h) informações da instituição sediada no exterior associada [...]; i) identificação das instituições nacionais parceiras, quando houver; III - número do cadastro ou autorização anterior [...]; IV - comprovação da obtenção do consentimento prévio informado [...], quando for o caso; V - solicitação de reconhecimento de hipótese legal de sigilo; e VI - declaração, conforme o caso, de enquadramento em hipótese de isenção legal ou de não incidência de repartição de benefícios.' || Decreto 8.772, art. 23: 'Concluído o preenchimento do formulário [...] o SisGen emitirá automaticamente comprovante de cadastro de acesso.' || Decreto 8.772, art. 22-A (incluído pelo Decreto 10.844/2021): 'Quando se tratar de pesquisa que não tenha como finalidade a exploração econômica, [...] a pessoa física ou jurídica nacional deverá preencher o formulário eletrônico específico disponível no módulo de pesquisa científica do SisGen' (campos: identificação do usuário; resumo da atividade e objetivos; identificação do patrimônio genético ou do conhecimento tradicional; procedência ao menos em nível de Município; declarações; instituições parceiras).",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm ; https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm ; https://www.gov.br/mma/pt-br/assuntos/bioeconomia/patrimonio-genetico/sisgen",
+      "nivel": "oficial",
+      "observacao": "OFICIAL (lido): natureza declaratória; pessoa natural/física pode cadastrar; campos do art. 22 e 22-A; comprovante automático (art. 23); momento do cadastro (prévio a remessa, pedido de PI, comercialização de produto intermediário, divulgação de resultados em meios científicos ou de comunicação, notificação de produto acabado); consentimento prévio informado para conhecimento tradicional de origem identificável (Decreto arts. 12 a 17; art. 13: a população indígena, comunidade tradicional ou agricultor tradicional 'poderá negar o consentimento ao acesso a seu conhecimento tradicional associado de origem identificável'). Página oficial gov.br/mma do SisGen abriu, mas só diz: 'Antes de utilizar o SisGen sugerimos a leitura do Manual do SisGen' e lista a função 'Cadastrar acesso ao patrimônio genético ou ao conhecimento tradicional associado'; não detalha passos nem login. sisgen.gov.br abriu apenas com redirecionamento para a página de login (sem conteúdo útil). NÃO CONFERIDO em fonte oficial: forma atual de login (gov.br ou certificado), instalação de módulo de segurança, lista de documentos a anexar, tela a tela. SECUNDÁRIA (não aberta por mim; só resumo de busca, de 2017-2018, possivelmente desatualizada): cartilha UFRRJ e manual MMA v1.0 de nov/2017 mencionam instalar módulo de segurança, liberar pop-ups, cadastrar-se na tela inicial e confirmar e-mail. Cartilha: https://institucional.ufrrj.br/sisgen/files/2018/05/Cartilha-sobre-o-SisGen.pdf. O cadastro só é obrigatório se a atividade for 'acesso' (pesquisa ou desenvolvimento tecnológico sobre amostra de patrimônio genético ou conhecimento tradicional associado); catalogar uma prática cultural, em si, não foi analisado aqui."
+    },
+    {
+      "id": "C1.5",
+      "pergunta": "Resolução CGen 47/2025: URL oficial, do que trata e como se pede a consulta voluntária (se prevê).",
+      "resposta": "Resolução CGen nº 47, de 04/06/2025, publicada no DOU de 27/08/2025, Seção 1, págs. 107-108. Ementa: cria a base de dados de referência do CGen sobre conhecimentos tradicionais associados. Se prevê consulta voluntária e como se pede: NÃO CONFERIDO (o texto do PDF não foi aberto).",
+      "citacao": "Determina a criação da base de dados de referência do CGen sobre conhecimentos tradicionais associados",
+      "url": "https://www.gov.br/mma/pt-br/assuntos/bioeconomia/patrimonio-genetico/conselho-de-gestao-do-patrimonio-genetico-cgen-1/normas-do-cgen/Resoluo_CGen_n_47_de_04_06_2025_DOU_27_08_2025.pdf",
+      "nivel": "oficial",
+      "observacao": "Oficial apenas quanto a título, data, ementa e publicação (listagem em gov.br/mma, página de Resoluções do CGen, que abriu; ementa lida via WebFetch, que resume a página). O PDF do texto não foi aberto por falta de chamadas, portanto o conteúdo dos artigos e qualquer 'consulta voluntária' ficam não conferidos. Uma pauta do CGen de abril/2026 (gov.br/mma) cita 'listas de referência e base de dados sobre conhecimentos tradicionais' criadas pela Res. 47, e a apresentação da base de referência: coerente com a ementa. Resoluções vizinhas na mesma página: 46/2025 (fluxo da verificação administrativa, alterada pela 49), 48/2025 (traduções simples), 49/2025, 50/2025 (ARB não monetária)."
+    },
+    {
+      "id": "C1.6",
+      "pergunta": "Resolução IPHAN 1/2006: texto oficial e situação (vigente, revogada ou substituída).",
+      "resposta": "Texto oficial localizado no portal do IPHAN. A página oficial de legislação do patrimônio imaterial a lista sem indicar revogação, substituição ou alteração; busca web não achou norma revogadora. Conclusão provisória: vigente (ausência de indício de revogação), mas o DOU não foi consultado para descartar portaria posterior.",
+      "citacao": "Resolução nº 1, de 3 de agosto de 2006 - Determina os procedimentos a serem observados na instauração e instrução do processo administrativo de Registro de Bens Culturais de Natureza Imaterial.",
+      "url": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial/legislacoes-e-documentos-de-referencia/resolucao_001_de_3_de_agosto_de_2006-1.pdf/@@display-file/file",
+      "nivel": "oficial",
+      "observacao": "Oficial quanto a existência, título e link do texto (página https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial/legislacoes-e-documentos-de-referencia abriu; o PDF não foi aberto). A página do IPHAN 'Registro do Bem' (bcr.iphan.gov.br/registro-do-bem/) diz, segundo resumo de busca, que as etapas do processo são regidas pela Resolução nº 1/2006 e que a política federal não reconhece demanda individual (nível: resumo de busca de fonte oficial, não lido na íntegra). Norma-mãe: Decreto 3.551/2000 (não conferido nesta rodada). Fonte secundária: https://www.legisweb.com.br/legislacao/?id=103301 (apareceu na busca, não aberta). Citação do art. 2º-4º e da exigência de declaração da comunidade: não conferidos no texto."
+    }
+  ],
+  "nao_conferido": [
+    "C1.4: passo a passo operacional do SisGen (login atual, módulo de segurança, anexos/documentos a enviar, telas) - página gov.br/mma do SisGen só remete ao Manual; manual oficial atual não foi aberto; sisgen.gov.br redireciona para login.",
+    "C1.5: texto integral da Resolução CGen 47/2025 (PDF não aberto); existência e procedimento de 'consulta voluntária' não confirmados.",
+    "C1.6: texto do PDF da Resolução IPHAN 1/2006 (arts. 2º a 4º) e checagem no DOU de eventual revogação por portaria posterior.",
+    "C1.2: conferência visual do tachado da alínea b do art. 4º, II (a extração de texto mostra duas redações)."
+  ]
+}
