@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "log.schema.json",
+  "title": "Linha de log de execução de agente",
+  "description": "Uma linha de trilhas/logs/AAAA-MM-DD_<agente>.jsonl, gravada por scripts/registrar_log.py (log completo, pelo curador) ou pelo hook SubagentStop (linha mínima). Sem dado pessoal de terceiros.",
+  "type": "object",
+  "required": ["data_hora", "agente", "habilidade", "versao_harness", "modelo", "esforco", "entrada_ref", "acoes", "resultados", "decisoes", "tokens", "chamadas", "duracao_s", "erros"],
+  "additionalProperties": false,
+  "properties": {
+    "data_hora": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"},
+    "agente": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+    "habilidade": {"type": "string", "minLength": 1},
+    "versao_harness": {"type": "string", "pattern": "^([0-9]+\\.[0-9]+\\.[0-9]+|n/a)$"},
+    "modelo": {"type": "string", "minLength": 1},
+    "esforco": {"enum": ["low", "medium", "high", "xhigh", "max", "n/a"]},
+    "entrada_ref": {"type": "string", "minLength": 1, "description": "Caminho, commit ou ID da entrada; nunca o conteúdo."},
+    "acoes": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "resultados": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "decisoes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "decisao", "motivo"],
+        "additionalProperties": false,
+        "properties": {
+          "item": {"type": "string", "minLength": 1},
+          "decisao": {"enum": ["aceito", "descartado", "quarentena", "falta"]},
+          "motivo": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "tokens": {"type": ["integer", "null"], "minimum": 0, "description": "Total informado pelo retorno do Agent. null só na linha do hook, que não recebe tokens."},
+    "chamadas": {"type": ["integer", "null"], "minimum": 0},
+    "duracao_s": {"type": ["number", "null"], "minimum": 0},
+    "erros": {"type": "array", "items": {"type": "string"}},
+    "sessao": {"type": "string"},
+    "agente_id": {"type": "string"},
+    "fonte_do_registro": {"enum": ["curador", "hook-SubagentStop"]}
+  },
+  "if": {"properties": {"fonte_do_registro": {"const": "hook-SubagentStop"}}, "required": ["fonte_do_registro"]},
+  "else": {"properties": {"tokens": {"type": "integer"}, "chamadas": {"type": "integer"}}}
+}

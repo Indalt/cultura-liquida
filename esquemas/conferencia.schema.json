@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "conferencia.schema.json",
+  "title": "Resultado de conferência de fatos (lote Cn)",
+  "description": "Saída da habilidade conferir-fato. Cada item traz nível e URL no próprio item (formato do C1) ou em partes (formato do C2). Nível 'oficial' exige URL http(s) e citação literal.",
+  "type": "object",
+  "required": ["lote", "data", "modelo", "esforco", "chamadas_usadas", "itens", "nao_conferido"],
+  "properties": {
+    "lote": {"type": "string", "pattern": "^C[0-9]+[a-z]?$"},
+    "data": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "modelo": {"type": "string", "minLength": 1},
+    "esforco": {"type": "string", "minLength": 1},
+    "chamadas_usadas": {"type": "integer", "minimum": 0},
+    "itens": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/item"}},
+    "nao_conferido": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "nivel": {"enum": ["oficial", "secundária", "secundaria", "não conferido", "nao conferido"]},
+    "com_nivel": {
+      "type": "object",
+      "required": ["nivel"],
+      "properties": {
+        "nivel": {"$ref": "#/$defs/nivel"},
+        "url": {"type": "string"},
+        "citacao": {"type": "string"}
+      },
+      "if": {"properties": {"nivel": {"const": "oficial"}}, "required": ["nivel"]},
+      "then": {
+        "required": ["url", "citacao"],
+        "properties": {
+          "url": {"type": "string", "pattern": "^https?://\\S+"},
+          "citacao": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "parte": {
+      "allOf": [
+        {"$ref": "#/$defs/com_nivel"},
+        {"type": "object", "required": ["afirmacao"], "properties": {"afirmacao": {"type": "string", "minLength": 1}}}
+      ]
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "pergunta", "resposta"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^C[0-9]+[a-z]?\\.[0-9]+$"},
+        "pergunta": {"type": "string", "minLength": 1},
+        "resposta": {"type": "string", "minLength": 1},
+        "observacao": {"type": "string"},
+        "partes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/parte"}}
+      },
+      "oneOf": [
+        {"required": ["partes"], "not": {"required": ["nivel"]}},
+        {"required": ["nivel"], "not": {"required": ["partes"]}, "allOf": [{"$ref": "#/$defs/com_nivel"}]}
+      ]
+    }
+  }
+}

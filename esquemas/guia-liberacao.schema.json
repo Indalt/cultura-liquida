@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guia-liberacao.schema.json",
+  "title": "Guia de liberação assistido",
+  "description": "Saída da habilidade guia-de-liberacao (plano, item 7; D-025). Explica por que está barrado, o que destravaria e o passo a passo. Nunca autoriza nem protocola em nome de Vicente. Cada passo traz o nível do que afirma; passo oficial exige URL; o que não foi conferido fica listado.",
+  "type": "object",
+  "required": ["id", "titulo", "por_que_barrado", "o_que_destravaria", "quem_pode_fazer", "passos", "documentos", "limites", "nao_conferido", "estado", "versao", "data"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^G-[a-z0-9-]+$"},
+    "titulo": {"type": "string", "minLength": 1},
+    "por_que_barrado": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["explicacao", "norma", "trecho", "url", "nivel"],
+        "properties": {
+          "explicacao": {"type": "string", "minLength": 1},
+          "norma": {"type": "string", "minLength": 1},
+          "trecho": {"type": "string", "minLength": 1},
+          "url": {"type": "string", "pattern": "^https?://\\S+"},
+          "nivel": {"enum": ["oficial", "secundária", "não conferido"]}
+        }
+      }
+    },
+    "o_que_destravaria": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "quem_pode_fazer": {
+      "type": "object",
+      "required": ["texto", "nivel"],
+      "properties": {
+        "texto": {"type": "string", "minLength": 1},
+        "nivel": {"enum": ["oficial", "secundária", "não conferido"]},
+        "url": {"type": "string"}
+      }
+    },
+    "passos": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["n", "o_que_fazer", "onde", "nivel"],
+        "properties": {
+          "n": {"type": "integer", "minimum": 1},
+          "o_que_fazer": {"type": "string", "minLength": 1},
+          "onde": {"type": "string", "minLength": 1},
+          "como_preencher": {"type": "string"},
+          "nivel": {"enum": ["oficial", "secundária", "não conferido"]},
+          "url": {"type": "string"}
+        },
+        "if": {"properties": {"nivel": {"const": "oficial"}}, "required": ["nivel"]},
+        "then": {"required": ["url"], "properties": {"url": {"pattern": "^https?://\\S+"}}}
+      }
+    },
+    "documentos": {"type": "array", "items": {"type": "string"}},
+    "exige_profissional": {"type": "boolean"},
+    "limites": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "estado": {"enum": ["não iniciado", "em andamento", "liberado"]},
+    "nao_conferido": {"type": "array", "items": {"type": "string"}},
+    "versao": {"type": "string"},
+    "data": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+  }
+}

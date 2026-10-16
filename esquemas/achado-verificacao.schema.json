@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "achado-verificacao.schema.json",
+  "title": "Relatório de verificação (achados)",
+  "description": "Saída da habilidade verificar-fundacao e de scripts/checar_fundacao.py. Um achado só vale se confirmado por grep ou script, com o comando e (quando o achado não é uma ausência) a linha citada. Não se decide por votação.",
+  "type": "object",
+  "required": ["arquivo", "data", "verificador", "olhar", "achados"],
+  "properties": {
+    "arquivo": {"type": "string", "minLength": 1},
+    "commit": {"type": "string"},
+    "data": {"type": "string"},
+    "verificador": {"type": "string", "minLength": 1},
+    "olhar": {"enum": ["mecanico", "a-decisoes", "b-contradicoes", "c-nivel-e-termos"]},
+    "achados": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "tipo", "descricao", "confirmacao", "estado"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "tipo": {"enum": ["ausencia", "divergencia_de_essencia", "contradicao", "fato_sem_nivel", "termo_sem_explicacao", "anexo_alterado", "dado_pessoal", "transcricao_no_lugar_da_essencia", "outro"]},
+          "descricao": {"type": "string", "minLength": 1},
+          "linha": {"type": ["integer", "null"], "minimum": 1},
+          "trecho": {"type": "string"},
+          "confirmacao": {
+            "type": "object",
+            "required": ["metodo", "comando"],
+            "properties": {
+              "metodo": {"enum": ["grep", "script"]},
+              "comando": {"type": "string", "minLength": 1},
+              "saida": {"type": "string"}
+            }
+          },
+          "estado": {"enum": ["confirmado", "nao_confirmado", "corrigido"]}
+        },
+        "if": {"properties": {"tipo": {"enum": ["divergencia_de_essencia", "contradicao", "fato_sem_nivel", "termo_sem_explicacao", "dado_pessoal", "transcricao_no_lugar_da_essencia"]}}, "required": ["tipo"]},
+        "then": {"required": ["linha", "trecho"], "properties": {"linha": {"type": "integer"}}}
+      }
+    },
+    "resumo": {"type": "object"}
+  }
+}
