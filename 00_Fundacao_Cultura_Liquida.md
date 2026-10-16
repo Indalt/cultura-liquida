@@ -360,123 +360,220 @@ Cada linha guarda o conceito nas palavras de Vicente (ou em síntese fiel), o lu
 
 ## 5. Arquitetura proposta [PROPOSTA]
 
-Mantém a complexidade conceitual e simplifica a infraestrutura: nenhum servidor próprio. O que é repetitivo roda como código agendado; o wiki é gerado a partir dos arquivos; a entrada usa ferramentas do Google que já cuidam de login e permissões.
+Mantém a complexidade conceitual e simplifica a infraestrutura: nenhum servidor próprio. A casa é o repositório (§5.1); o que é repetitivo roda como código, sem IA; o tratamento com IA roda em sessão na fase 1; o wiki é gerado a partir dos arquivos. O Google só entra se for necessário para os canais de pessoas (D-021; decisão no Passo 4). **Nada desta seção é criado agora:** não há rotina na nuvem nem GitHub Actions antes do Passo 4, e nada se publica antes do Passo 6.
 
 ```
-AMBIENTES (mapeados + novos)            PESSOAS
-  │ RSS, APIs, buscas booleanas           │ formulário · e-mail · envio por grupo
-  ▼                                        ▼
-        CAIXA DE ENTRADA ÚNICA (cada entrada com ID, canal, data, origem)
-                     │ rotina diária, só código: deduplica, arquiva cópia, checa link
+AMBIENTES (Registro + novos)                   PESSOAS (fase 2)
+  │ Consultas: monitoramento · escavação          │ formulário · e-mail · envio de documentos
+  ▼                                               ▼
+        CAIXA DE ENTRADA ÚNICA, entrada/ (cada Entrada com ID, canal, data, origem)
+                     │ código, sem IA: deduplica, arquiva cópia, checa link
                      ▼
-        TRIAGEM por valências ──► QUARENTENA (não descarta; PENDENTE_JULGAMENTO)
+        TRIAGEM por valências + triagem jurídica leve ──► QUARENTENA (não descarta; PENDENTE_JULGAMENTO)
                      │
                      ▼
-        EXTRAÇÃO com trecho literal + localizador ──► AFIRMAÇÕES
-                     │ verificação mecânica + amostra humana
+        EXTRAÇÃO com trecho literal + localizador ──► PROPOSIÇÕES E EVIDÊNCIAS
+                     │ portão: validador por script + verificador de harness diferente + amostra sorteada
                      ▼
-        ACERVO: termos · fichas CLB · grafo anotado (μ, λ)
-           │                     │ publicação automática
+        ACERVO, acervo/: termos · fichas CLB · Lugares · grafo 4D anotado (μ, λ)
+           │                     │ site gerado (Passo 6)
            │                     ▼
            │   WIKI PÚBLICO: glossário clicável · fichas com prova · ilustração técnica
            │                 matriz X×Y (vácuos) · linha do tempo Z · filtros W
-           │                 rede de nomes · entradas por grupo · RSS de saída
+           │                 páginas por lugar · rede de nomes · entradas por tier · RSS de saída
            │
-           └──► CAMPO DE AÇÃO, sob demanda: salvaguarda e política ·
-                pedagogia (planejador de aulas) · tecnologia comunitária
+           └──► CAMPO DE AÇÃO, sob demanda: ferramentas por tier ·
+                salvaguarda e política · pedagogia · tecnologia comunitária
 
-Laço vivo: termos e variantes novos ──► booleanos novos ──► buscas nos ambientes
+Laço vivo: termos e variantes novos ──► booleanos novos ──► Consultas novas nos ambientes
 ```
 
-### 5.1 Casa do projeto
+### 5.1 Casa do projeto e custódia
 
-Esta pasta, com arquivos reais (`.md` com cabeçalho YAML, `.csv` ou `.jsonl`, `.yml`), versionada com Git. O histórico do Git mostra cada mudança, quando e por quem: é a transparência no tempo. A cópia remota está [PENDENTE] (recomendação: GitHub; no plano gratuito, publicar o site pelo GitHub Pages exige repositório público; Anexo C).
+- **Repositório [VIGENTE]** (D-021): `Indalt/cultura-liquida`, no GitHub, na conta Indalt, que é conta pessoal de Vicente (não há empresa por trás), sincronizado com esta pasta e com commits de Vicente. Arquivos reais (`.md` com cabeçalho YAML, `.csv` ou `.jsonl`, `.yml`); o histórico do Git mostra cada mudança, quando e por quem: é a transparência no tempo.
+- **Público [VIGENTE]:** o que entra no Git é publicação aberta, e isso inclui o que está em quarentena, com o seu selo. O legado e os dados pessoais de terceiros ficam fora. Fechar o repositório e abri-lo só para quem Vicente quiser é decisão futura, depois de tudo ajeitado.
+- **Regra:** dados pessoais (cadastros, respostas de formulário, contatos, identidade e consentimento de quem envia, a tabela que liga os códigos às pessoas) nunca entram no Git, porque o Git não apaga de verdade o que já registrou (LGPD). Também ficam fora o texto integral de terceiros (§2, princípio 1) e o conteúdo que uma comunidade pediu para restringir. Antes de cada commit roda `scripts/procurar_dado_pessoal.py`.
+- **Proteção do `main` [VIGENTE]:** fica como está: exige revisão, e o dono fica liberado para gravar direto. No plano gratuito, exigir revisão antes de juntar uma proposta só existe em repositório público (oficial, documentação do GitHub, conferida em 15/10; Anexo C). Na fase 1, o portão é combinado: o validador roda em toda proposta, os agentes gravam logs e a segunda leitura vem do validador, de um verificador de harness diferente e da amostra sorteada (D-026). Rever na fase 2.
+- O ritual de sincronização (`git pull` no começo, commit e `git push` no fim) e o teste de reconstituição do Passo 2 estão no princípio 11.
 
-- **Regra:** dados pessoais (cadastros, respostas de formulário, contatos, identidade e consentimento de quem envia) nunca entram no Git, porque o Git não apaga de verdade o que já registrou (LGPD). Ficam no Google, com acesso restrito. O mesmo vale para as planilhas de usuários e respostas do legado, as cópias arquivadas de páginas de terceiros e o conteúdo que uma comunidade pediu para restringir. No repositório vão só ID, canal, data, origem, status e o link da cópia arquivada.
-- **Repositório privado** [PROPOSTA] até o Passo 6. Para publicar o wiki, só o site gerado sai do repositório (por exemplo, para um repositório público separado ou para outro serviço de hospedagem; decisão no Passo 6).
+**Mapa de custódia [PROPOSTA]** (custódia é quem guarda cada coisa, e onde):
 
-### 5.2 Registro de Ambientes
-
-- **Ambiente** é o lugar onde a informação mora: um acervo, uma hemeroteca, um periódico, um repositório de teses, um site, um conjunto de documentos oficiais [ABERTO: confirmar o sentido de "local (ambiente)" com Vicente].
-- Um arquivo por ambiente, com estado (proposto → mapeando → minerando → exaurido → monitorando), pegadas e vácuos (P88, P89).
-- Um ambiente novo, descoberto durante o trabalho, entra como "proposto".
-- **Matriz de Pegadas e Vácuos** (P89): um arquivo com todos os critérios menos o tempo, para que, ao voltar ao mesmo local e período, se pegue o que ainda não foi visto. Esses são **vácuos de busca**; não se confundem com os **vácuos de conhecimento** da matriz X×Y (§5.7).
-
-### 5.3 RSS criados por nós
-
-- Onde há feed, usa-se o feed.
-- Onde não há, o sistema cria um: buscas booleanas periódicas (vindas da terminologia) em APIs abertas, alertas e buscas de notícias com saída em RSS, ou geradores de feed para sites sem feed.
-- Ambientes sem acesso automatizável (ex.: hemerotecas) entram na mineração semanal assistida, sempre com link permanente por página.
-- Detalhes de cada fonte no Anexo C.
-
-### 5.4 Caixa de entrada multicanal
-
-Canais diferentes, um só registro e um só fluxo.
-
-| Canal | Para quem | Como |
+| O quê | Onde vive | No Git? |
 |---|---|---|
-| Feeds | automático | rotina diária |
-| Formulário público | qualquer pessoa | as 8 perguntas curtas, 500 caracteres e links (P53), mais termo de consentimento e escolha de atribuição (nome, anônimo ou coletivo) |
-| E-mail dedicado | qualquer pessoa | um script salva a mensagem e os anexos na caixa (a ideia do "salvar anexos gmail" já usada por Vicente pode ser reaproveitada) |
-| Envio de documentos | grupos (tiers) | formulário com upload de arquivo: exige login numa Conta Google, e os arquivos vão para uma pasta no Drive do dono do formulário (Anexo C). Que quem envia não vê os envios dos outros é inferência, a testar. Tende a ser mais seguro que uma pasta aberta para edição |
-| Pasta de leitura | grupos (tiers) | pasta do Drive compartilhada com um Google Group por tier, no papel de leitor (com grupo criado por conta gmail pessoal, a testar; Anexo C) |
+| Fundação, trilhas, logs, esquemas, scripts, agentes e habilidades | esta pasta e o repositório | sim |
+| Entradas brutas (`entrada/`) e acervo (`acervo/`): termos, fichas, Proposições, Evidências (trecho, contexto curto, localizador, hash e data), Lugares, Registro de Ambientes, fichas de acesso, Consultas e arquivos de estado | esta pasta e o repositório | sim |
+| Pessoas: só o código opaco (ex.: P-0042) e o papel | esta pasta e o repositório | sim |
+| Tabela código → nome, consentimentos, contatos, respostas de formulário, conteúdo restrito por comunidade | lugar com acesso controlado, que Vicente define no Passo 4 (o Google só se for necessário) | não |
+| Texto integral e cópias de páginas de terceiros | a própria fonte e o Wayback | não |
+| Legado | Drive e `legado/`, só leitura (D-024) | não |
+| Chaves de acesso a serviços (ex.: OpenAlex, Internet Archive) | fora da pasta versionada; onde, a decidir | não |
+
+### 5.2 Registro de Ambientes e ficha de acesso
+
+- **Ambiente** é o lugar onde se busca (§1): um acervo, uma hemeroteca, um periódico, um repositório de teses, um site, um conjunto de documentos oficiais [ABERTO: confirmar o sentido de "local (ambiente)" com Vicente].
+- [VIGENTE] O mapeamento é persistente e cumulativo, em arquivo próprio (P88), com pegadas e vácuos (P89).
+- [PROPOSTA] Um arquivo por ambiente, com estado (proposto → mapeando → minerando → exaurido → monitorando). Um ambiente descoberto durante o trabalho entra como "proposto". "Exaurido" vale por ambiente × Consulta × período; uma variante nova reabre o ambiente, mas o gatilho só marca "a reabrir", e a reabertura entra na fila por prioridade (§5.5).
+- [PROPOSTA] **Matriz de Pegadas e Vácuos** (P89): gerada do registro de execuções, com todos os critérios menos o tempo, para que, ao voltar ao mesmo local e período, se pegue o que ainda não foi visto. Esses são **vácuos de busca**; não se confundem com os **vácuos de conhecimento** da matriz X×Y (§5.7).
+- [PROPOSTA] O legado é um ambiente do Registro (Passo 3; D-024); por isso o Passo 3 não bloqueia o Passo 4.
+- **Ficha de acesso** [PROPOSTA]: cada ambiente ganha uma ficha testada e datada, conferida em cada lugar de execução (navegador, script local, GitHub, rotina do Claude). Ela registra a via permitida, a sintaxe de busca, o texto disponível (OCR, PDF ou nenhum), o padrão de link permanente, os termos de uso, o robots.txt (o arquivo em que cada site diz o que robôs podem ler), os limites de uso, o acesso (aberto, assinado ou físico) e a licença. Nenhuma rotina usa senha institucional de ninguém.
+- **Proteção contra robôs nunca é contornada** [PROPOSTA, a confirmar por Vicente; os agentes já a seguem]. Em 15/10, 8 de 20 sites históricos recusaram o leitor automático (erro HTTP 403, "acesso negado"), e o SIAN pediu captcha (plano, item 13). O que é barrado vira escavação por pessoa, pedido de acesso à instituição ou a Falta "fonte inacessível".
+- O catálogo dos ambientes candidatos, com via, sintaxe, termos, uso (monitoramento ou escavação) e nível de verificação, está no Anexo E; os textos conferidos, no Anexo C.
+
+### 5.3 Consulta, Recorte e o modelo monitoramento × escavação
+
+O "RSS criado por nós" da v0.1 dá lugar a este modelo (§1). [PROPOSTA] em todos os itens.
+
+- **Consulta:** registrada, com tipo (termo, mista ou só descritores; §1). Um arquivo traduz cada Consulta para a sintaxe de cada ambiente.
+- **Recorte:** a unidade do trabalho de busca, ambiente × Consulta × período × lugar de publicação × modo (termo, descritores ou **folheio**, a leitura página a página). Recortes nascem sob demanda, nunca como a grade inteira de combinações. Cada um tem um arquivo de estado (cursor, isto é, o marcador de onde a coleta parou; total informado; total visto; saturação; erros; próxima ação; reserva, com código opaco e prazo) e um teto de chamadas e de divisões da janela; ao estourar, salva o estado e registra a Falta "busca interrompida por teto". Campos no §6.
+- **Monitoramento** (o que é novo; automático e barato): onde há feed, usa-se o feed; onde não há, uma Consulta repetida anota só o que ainda não foi visto e publica um feed com as novidades, gerado por script próprio em Python que respeita o robots.txt e espaça os pedidos. Não se usam servidores de RSS de terceiros (RSS-Bridge, RSSHub, changedetection.io, instâncias públicas). **Novidade é um ID ainda não visto, nunca uma data:** o RSS da BDTD só traz o ano, e a Embrapa reescreveu datas antigas em 10/10/2026 (plano, item 14).
+- **Escavação** (para trás, a partir de 1900; assistida e cara): por API ou por OAI-PMH (o protocolo em que um programa pede ao acervo "o que mudou desde a data X") quando a fonte permite; por pessoa, em modo assistido que registra a busca manual, quando a fonte barra robôs (na fase 1, a pessoa é Vicente). Nas hemerotecas, sempre com link permanente por página.
+- **Adaptadores por protocolo:** um adaptador (o código que conversa com um tipo de fonte) por protocolo, e não por fonte: VuFind, OAI-PMH, API com cursor, dados abertos (CKAN) e modo assistido. Nascem só os que as fontes do caso-piloto pedirem; um ambiente novo com protocolo conhecido entra com uma linha de configuração.
+- **Regras de busca:**
+  - a **resposta saturada**, que bate no limite da fonte, divide a janela e repete; só a passada completa e não saturada conta como pegada;
+  - grafias antigas e erros de OCR geram **variantes por família** (ph/f, th/t, y/i, consoantes dobradas, acentos, trema, hífen), sem data de corte; só ficam se renderem ocorrências, cada uma guarda a regra, a norma e a data, e **nunca corrigem o texto da fonte** (normas e níveis no Anexo C);
+  - país e idioma **anotam, nunca recortam**;
+  - uma Entrada por item, mesmo quando várias Consultas o acham; as descobertas medem o rendimento de cada Consulta;
+  - o relatório do funil traz números calculados e é **"inspirado em"** PRISMA, um guia de relato de revisões sistemáticas (secundária; Anexo C), sem alegar conformidade, porque a CLB não é uma revisão e não julga qualidade.
+- **Fontes com regra própria** (conferidas em 15/10; níveis e URLs no Anexo C): o RSS de busca do Google Notícias e os feeds do Google Alertas saem, porque o robots.txt e os termos do Google vedam a leitura automática, e os Alertas chegam por e-mail à caixa do projeto; a Meta proíbe a coleta automática, e a do TikTok foi lida só nos termos dos EUA; o YouTube só pela API oficial; postagens e vídeos entram quando uma pessoa manda o link; o Google Acadêmico é só manual; o OpenAlex, com chave grátis, tem orçamento de US$ 1 por dia.
+- **Fase 2:** bola de neve (o que cada fonte admitida cita, quem a cita e os assuntos que os catalogadores lhe deram, com o caminho registrado, P97); Wikidata como semente de termos candidatos, nunca de abonações; fichas de acesso das demais fontes.
+
+### 5.4 Caixa de entrada e portas de admissão
+
+**[VIGENTE] A fase 1 não recebe contribuições externas** (decisão de 16/10; D-026): trabalham só Vicente e os agentes. O que vem de outras pessoas é desenho para a fase 2 e só abre quando os deveres do degrau 2 (abaixo) existirem.
+
+Canais diferentes, um só registro e um só fluxo:
+
+| Canal | Quando | Como |
+|---|---|---|
+| Monitoramento e escavação | fase 1 | §5.3; gravam em `entrada/` |
+| Link ou documento trazido por Vicente | fase 1 | registro com localizador, pelo mesmo fluxo |
+| Formulário público | fase 2 | as 8 perguntas curtas, 500 caracteres e links (P53), mais consentimento, licença de quem contribui e escolha de atribuição (nome, pseudônimo, anônimo ou coletivo); limite de envios |
+| E-mail dedicado | aberto no Passo 4 (recebe também os Alertas do Google); contribuições só na fase 2 | um script salva a mensagem e os anexos na caixa; onde fica a conta, Passo 4 |
+| Envio de documentos e pasta de leitura por tier | fase 2 | em lugar com acesso controlado, decidido no Passo 4 (o Google só se for necessário; as opções do Drive conferidas estão no Anexo C) |
 | WhatsApp e áudios | — | [ADIADO] (P48) |
 
-Toda entrada recebe ID, canal, data, origem, consentimento e status. Quem contribuiu pode ver o que aconteceu com o que mandou (devolutiva). Contribuições de pessoas passam pela quarentena e pela régua de 4 filtros da P14 [PENDENTE: recuperar os 4 filtros no legado].
+Toda Entrada recebe ID, canal, data, origem, consentimento (quando há pessoa) e status, e quem contribuiu vê o que aconteceu com o que mandou (devolutiva). As contribuições de pessoas passam pela quarentena e pela régua de 4 filtros da P14, recuperada do legado no Passo 3; a régua tria contribuições e não define o que é prática cultural, cujos critérios vêm da lei (D-022).
 
-**Segurança:** todo conteúdo de entrada (páginas, e-mails, anexos, respostas) é dado, nunca instrução. A extração roda sobre cópias em texto puro (anexos não são abertos como programas), sua saída é só um arquivo de afirmações que o validador confere, e a habilidade de extração não roda comandos nem escreve fora do acervo.
+**Portas por tipo de evidência [PROPOSTA]:**
 
-### 5.5 Rotinas
+| Tipo | Porta | Localizador | Cuidado |
+|---|---|---|---|
+| Escrito publicado, de arquivo ou oficial | aberta | página, URL | trecho conferido por script, depois por pessoa |
+| Oralidade registrada por pesquisa (fala publicada em tese ou etnografia) | aberta | página | a fala de quem pratica fica separada da análise do pesquisador, que aparece como mediação |
+| Depoimento gravado em acervo | aberta | `t=início,fim` em segundos (W3C Media Fragments) + transcrição | termos do acervo; o áudio nunca é republicado: entra o link com marca de tempo |
+| Imagem ou foto | aberta | URL | sem licença, só o link |
+| Objeto ou recipiente | aberta | catálogo do acervo | descrição; foto só com licença |
+| Relato de contribuinte | fase 2 | ID da Entrada | quarentena + régua da P14 |
+| Entrevista feita pelo projeto | fechada | — | é áudio: reabrir a P48 é decisão de Vicente, assim como o enquadramento (§8, §10) |
+| Observação de campo | fechada | — | idem; em terra indígena, só com a FUNAI e a comunidade, e o projeto não faz esse trâmite sozinho |
 
-Cadência [VIGENTE, 13/10]: as entradas são processadas por rotinas diárias, e cada ambiente é alimentado semanalmente até ser exaurido.
+- **Voz no trecho:** cada Evidência registra quem fala (o autor, uma pessoa citada em fala direta, uma instituição, um anúncio). W se ancora na fala de quem pratica; a leitura do repórter, do médico ou do folclorista é a perspectiva da fonte; sem a fala de quem pratica, W fica como Falta (D-018). Se uma etnografia que descreve a prática como comum basta é pergunta do §10.
+- **Papéis de pessoa** [PROPOSTA], como etiquetas simples: contribuinte; detentor ou mestre; quem ensinou (a cadeia de transmissão, P53); quem fala no trecho; mediador (pesquisador ou entrevistador); comunidade (coletivo e sujeito de direitos); colaborador do projeto. Cada papel define o que se registra, o consentimento e a forma de atribuição; no Git ficam só o código opaco e o papel. Colaboradores começam em dois níveis, anônimo e identificado; "de confiança" e "guardião indicado pela comunidade" só existem quando houver pessoa ou comunidade concreta. A declaração de interesse (ex.: quem vende a bebida) é um campo registrado, sem julgar nem excluir (P18; D-019).
+- **Cuidados** [PROPOSTA]: o pedido de retirada deixa o registro "havia uma fala retirada", sem o conteúdo; de crianças e adolescentes, nunca imagem, voz nem nome; do YouTube, guarda-se o ID público do vídeo, nunca o canal nem o @; se a fila passar de uma semana de trabalho de curadoria, nenhuma porta nova se abre.
+- **Portão único** [PROPOSTA]: nada entra em `acervo/` direto, nem pessoa, nem IA, nem script que produz conteúdo; a máquina grava em `entrada/`. Quem produz propõe por *pull request* (pedido de inclusão revisável no GitHub), o validador confere e quem propõe não aprova; o que sustenta aviso, saúde ou política exige segunda leitura (princípio 4; na fase 1, como no §5.1). Na fase 2: quem não usa GitHub manda pelo formulário e um curador faz a proposta; reserva de trabalho com prazo; mutirão de escavação, que respeita os termos de cada fonte e não serve para contorná-los; divergência de leitura posta lado a lado, nunca julgamento da prática; crédito na ficha e no "como citar", do jeito que a pessoa escolheu.
 
-- **Diária, automática, sem IA:** ler feeds, deduplicar, arquivar cópia das páginas, checar links, registrar entradas e mandar a Vicente um e-mail com o resultado do dia, calculado.
-- **Semanal, por ambiente (mineração):** trazer o máximo de dados brutos do período buscado (P94, P95).
-- **Tratamento, com IA, em sessão:** triagem, extração de afirmações e atualização de fichas, em lotes de N itens [PENDENTE: N; os "15" de P84, P94 e P95]. Pode virar rotina agendada na nuvem se o orçamento permitir.
-- **Um só agendador** [PROPOSTA]:
-  - o Apps Script faz tudo o que é automático (feeds, deduplicação, e-mail, formulário, boletim) e grava numa planilha ou pasta do Drive; em conta pessoal, a cota é de 90 minutos de execução e 20.000 chamadas de URL por dia (Anexo C);
-  - uma sessão semanal exporta esses registros para esta pasta e faz o commit;
-  - o código do Apps Script tem cópia versionada em `scripts/apps_script/` (P42);
-  - o GitHub Actions só entra no Passo 6, para publicar o site.
+**Degraus jurídicos, do uso individual ao coletivo [PROPOSTA]** (detalhe e níveis no Anexo C). O uso coletivo não tem o mesmo tratamento jurídico do individual: as exceções pensadas para o uso privado deixam de cobrir o caso, e surgem responsáveis.
+
+| Degrau | O que ainda vale | O que começa |
+|---|---|---|
+| 1. Só Vicente pesquisa | cópia de pequenos trechos, em um só exemplar, para uso privado do copista e sem intuito de lucro (Lei 9.610, art. 46, II; oficial, https://www.planalto.gov.br/ccivil_03/leis/l9610.htm); a LGPD não se aplica a pessoa natural com fins exclusivamente particulares e não econômicos (art. 4º, I; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) | trilha e Faltas, como sempre |
+| 2. Outras pessoas enviam (fase 2) | — | licença de quem contribui, em texto curto e simples (arts. 49 e 50 da Lei 9.610, a conferir); o projeto vira **controlador**, quem decide sobre os dados (LGPD, art. 5º, VI): base legal, aviso de privacidade, canal com o titular, segurança e registro das operações (arts. 7º, 18, 37 e 46, a conferir); triagem jurídica leve antes da quarentena; dado sensível (saúde, religião, origem étnica, comunidade tradicional) vira Falta até haver base legal (art. 11, a conferir) |
+| 3. O projeto publica | citação curta com autor e origem (art. 46, III; conferido em 15/10) | autorização para o resto (art. 29, a conferir); canal de notificação e retirada; imagem e voz só com autorização de quem aparece e de quem gravou (Código Civil, art. 20, a conferir), e o link só serve quando a fonte é legitimamente pública; Lei 13.123, se o trabalho configurar "acesso" |
+
+- **Repositório público e degraus:** com a D-021, o que entra no Git já é publicação aberta, e a obra oral também é protegida (Lei 9.610, art. 7º, II; oficial, C1). Até onde o conteúdo do Git já está no degrau 3 é **Falta aberta**, a cargo do Jurídico, e pergunta para Vicente (§8). Até lá, valem as regras de custódia do §5.1 e do princípio 1.
+- **Lei 13.123:** o cadastro no SisGen é declaratório e pode ser feito por pessoa natural (art. 2º, XII, e art. 12, I; Decreto 8.772, art. 22; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm), e vem antes da divulgação de resultados (art. 12, §2º; oficial). O patrimônio genético inclui espécies microbianas (art. 2º, I; oficial); aplicar isso a fermentos é interpretação, não texto de lei, e na dúvida fica Falta. Quem contribui nunca consente em nome de uma comunidade (art. 9º, §1º, a conferir). O caminho para desfazer essas Faltas é decisão de Vicente (§8): não bloqueia o início da fase 1, bloqueia o que se publica.
+- **Simplificação possível:** pela Resolução CD/ANPD 2/2022 (oficial, conferida em 15/10), uma pessoa natural pode ser agente de tratamento de pequeno porte, salvo tratamento de alto risco (art. 3º; o art. 4º está a conferir), com dispensa do encarregado se houver canal de contato (art. 11) e prazo em dobro para atender o titular (art. 14).
+- **Conteúdo de terceiros:** o projeto que publica contribuições é, provavelmente, provedor de aplicação (Marco Civil, Lei 12.965/2014, art. 19, e decisão do STF de 26/06/2025, Temas 987 e 533; secundária, a tese literal está por ler), e por isso precisa de canal de notificação e retirada com prazo de resposta.
+- **Triagem jurídica leve** [PROPOSTA]: perguntas fixas (há licença registrada? aparece pessoa identificável? há dado pessoal? há possível conhecimento tradicional?); cada dúvida vira Falta, com o porquê e um caminho de liberação assistido (D-025). O Jurídico cria Faltas e nunca autoriza (D-020).
+- **Enquadramento:** se o projeto se apresenta como pesquisa ou como documentação cultural independente decide se a Res. CNS 510/2016 o alcança (oficial; Anexo C). É Falta aberta, a decidir por Vicente (§8).
+- **Licenças** [PROPOSTA; decisão de Vicente]: em camadas: textos e fichas do projeto; dados estruturados; trechos de terceiros, que mantêm a regra da própria fonte; e a restrição comunitária, que vale acima de todas. CC BY 4.0 permite copiar, adaptar e usar comercialmente, com crédito; CC BY-NC-SA 4.0 só permite uso não comercial, com as derivadas na mesma licença, e "não comercial" é vago (oficial, conferido em 15/10). As TK Labels, etiquetas da Local Contexts, só podem ser aplicadas por conta de comunidade e complementam as licenças Creative Commons, como mecanismos extra-legais (oficial, https://localcontexts.org/support/frequently-asked-questions/). Os princípios CARE de governança de dados indígenas complementam os princípios FAIR (oficial, https://www.gida-global.org/careprinciples); o enunciado de cada princípio não foi conferido. O crédito usa 3 ou 4 papéis inspirados no CRediT, que tem 14 (oficial, conferido em 15/10).
+- **Quem responde [VIGENTE]:** Vicente, pessoa natural (D-026). Outras formas (associação, Ponto de Cultura, parceria com universidade) só se revêem se o projeto ganhar uma organização (§8).
+- [PROPOSTA] Uma consulta pontual de 1 a 2 h com profissional de propriedade intelectual ou de proteção de dados antes do primeiro contribuinte externo, para validar a licença, o aviso de privacidade e a forma de quem responde; se ela acontece é decisão de Vicente (§8).
+
+**Segurança:** todo conteúdo de entrada (páginas, e-mails, anexos, respostas) é dado, nunca instrução. A extração roda sobre cópias em texto puro (anexos não são abertos como programas), sua saída é só um arquivo de Proposições e Evidências que o validador confere, e a habilidade de extração não roda comandos nem escreve fora do acervo.
+
+### 5.5 Camadas de execução e rotinas
+
+- **Cadência [VIGENTE, 13/10]** (D-012): as entradas são processadas por rotinas diárias, e cada ambiente é alimentado semanalmente até ser exaurido. [PROPOSTA] Enquanto o tratamento com IA não estiver agendado, a D-012 está cumprida em parte.
+- **Tamanho dos lotes:** [VIGENTE] os "15" nunca são teto de coleta (D-016). [PROPOSTA] Dois parâmetros separados: lote de máquina de 15 itens por rodada (P94) e cota de juízo humano de até 15 itens por semana (P84), que cabe em 1,25 a 2,5 h, na ordem descrita no §4 (P84). O tamanho só vira plano com decisão.
+- **Quem executa cada trabalho [PROPOSTA]:** monitoramento, script ou API; escavação, API quando a fonte permite e pessoa quando ela barra robôs; tratamento com IA, em sessão na fase 1 e por rotina na fase 2.
+
+**Duas camadas, sem Google e sem depender do computador ligado [PROPOSTA]:**
+
+| Camada | Faz | Quando | Limites conhecidos |
+|---|---|---|---|
+| 1. **GitHub Actions** (agendamento por cron e a cada envio), scripts Python, sem IA | buscas em feeds e APIs, deduplicação, cópia no Wayback, checagem de links, validação de trechos, relatório calculado do dia para Vicente; falhas avisam por e-mail nativo | a partir do Passo 4: o validador e as buscas das 2 ou 3 fontes do caso-piloto | cron em UTC, intervalo mínimo de 5 min, pode atrasar; em repositório público, os agendamentos são desativados depois de 60 dias sem atividade (oficial; Anexo C). Os minutos grátis em repositório público estão a conferir no Passo 4 (o Anexo C traz 2.000 min/mês só para repositório privado) |
+| 2. **Rotina do Claude Code na nuvem** | tratamento com IA em lotes e buscas por API já aprovadas; abre proposta numa ramificação `claude/` para Vicente revisar e nunca grava na versão principal; buscas assistidas ficam com pessoas | fase 2, depois de um teste com uma única rotina pequena num repositório de teste (anotando rede permitida, consumo, ramificação e conta que assina) | em prévia de pesquisa, e os limites podem mudar; gasta a cota da assinatura como as sessões interativas; rede padrão restrita a uma lista de domínios permitidos, configurável; seletor de modelo por rotina; intervalo mínimo de 1 hora; até 100 execuções agendadas por hora por conta e 30 por hora por rotina, sem excedente (oficial, https://code.claude.com/docs/en/routines). A lista exata de domínios padrão não foi conferida |
+
+- **Termos do GitHub Actions** (oficial, conferido em 15/10; Anexo C): as máquinas do Actions não devem ser usadas em atividades alheias à produção, ao teste, à implantação ou à publicação do projeto do repositório. Leitura proposta: a coleta produz o conteúdo que o próprio repositório publica, como faz o Flat Data, do GitHub Next. Vicente decide se aceita essa leitura; se não, as buscas do piloto rodam em sessão, na máquina de Vicente.
+- **Cópia no Wayback** pelo Save Page Now 2, o serviço de captura do Internet Archive: segundo a documentação de comunidade (secundária, https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic), exige autenticação por chaves, mas aceita anônimos com limites menores: 7 capturas por minuto autenticado e 3 anônimo; 30 mil por dia autenticado e 200 anônimo; no máximo 5 por URL por dia. A página oficial não foi conferida e os números podem estar desatualizados. [PROPOSTA] Pedir captura em ritmo baixo, com a chave da conta (§5.1).
+- **Apps Script não é agendador:** saiu como camada fixa. O Google só fica se for necessário para os canais de pessoas (Passo 4); as cotas conferidas ficam no Anexo C como referência.
+- **Guarda de orçamento:** [VIGENTE] medir e parar antes de acabar, com o estado salvo; teto provisório de 300 mil tokens por semana em agentes na operação da fase 1 (D-023). [PROPOSTA] A mecânica: medir o custo de cada lote no caso-piloto; antes de cada lote, comparar o custo esperado com o que resta; nunca lançar agentes em paralelo sem teto de chamadas e de tokens; usar o modelo mais barato que faça bem a tarefa; anotar o uso das rotinas (lido em claude.ai/settings/usage) antes e depois de cada rodada; o teto das rotinas é de Vicente (§8, §11); ao atingi-lo, tudo para com o estado salvo.
+- **Ritual de cada sessão ou rotina [PROPOSTA]:** começa com `git pull` e o relatório calculado das frentes; grava um ponto de retomada (commit) depois de cada lote; termina atualizando o estado e com `git push`. Cada lote gera uma revisão curta, de uma tela (o que entrou, o que ficou em quarentena, as Faltas novas), que Vicente aprova ou devolve. Prioridade: risco (princípio 4) → CLB do caso-piloto → vácuos por região e período → escolha de Vicente.
 
 ### 5.6 Acervo
 
-Termos, fichas, afirmações, fontes e grafo; os campos estão em §6. [ABERTO: a unidade da ficha é o termo ou a CLB situada? Ver §10.]
+Termos, fichas, Proposições e Evidências, fontes, Lugares e grafo; os campos estão no §6. Nada entra sem passar pelo portão (§5.4). [ABERTO: a unidade da ficha é o termo ou a CLB situada? Ver §10. Até lá, termos e fichas se ligam muitos para muitos.]
 
-### 5.7 Wiki público e o que ele oferece a quem usa
+### 5.7 Wiki público, Lugar e grafo 4D
 
-Site estático gerado a partir do acervo e republicado sozinho a cada mudança (recomendação: Quartz [PENDENTE]; Anexo C).
+Site estático gerado a partir do acervo e republicado sozinho a cada mudança (recomendação: Quartz [PENDENTE]; tem ligações entre notas, grafo de notas, busca e RSS, e não tem mapa nativo; oficial, Anexo C). A hospedagem e a publicação ficam para o Passo 6, com a precondição da Lei 13.123 resolvida para o que se publica (§5.4, §8).
 
-Primeira versão [PROPOSTA]: fichas com links escritos pelo Arquivista, mais o grafo e a busca nativos do Quartz. As vistas próprias do grafo 4D chegam no Passo 7, primeiro como páginas e tabelas geradas por script, sem programação de interface.
+Primeira versão [PROPOSTA]: fichas com links escritos pelo Arquivista, mais o grafo e a busca nativos do Quartz.
 
 O que o wiki oferece:
 
 - **Glossário clicável:** qualquer termo ou variante no texto vira link para a ficha.
-- **Ficha com prova:** cada frase leva à fonte e ao trecho; selo de status (verificado, fragmento, em tensão, pendente); "como citar".
+- **Ficha com prova:** cada frase leva à fonte e ao trecho; selo de status (§6); "como citar".
 - **Ilustração técnica** do modo de fazer (§5.8).
 - **Camada Educação** dentro de cada ficha (13/10) [ABERTO: parte permanente da ficha ou também sob demanda?].
 - **Avisos e cartilha** de tecnologia comunitária, produzidos sob demanda (princípio 15), aparecem na ficha quando existirem.
-- **Vistas do grafo 4D:**
-  - matriz X×Y com os vácuos de conhecimento à mostra (a célula vazia convida contribuição);
-  - linha do tempo Z;
-  - filtros e cores por W;
-  - rede de nomes (P8);
-  - se for útil, uma vista 3D com Z em profundidade (P10, P11).
-- **Entradas por grupo** (tiers).
+- **Páginas por lugar** e **vistas do grafo 4D** (abaixo).
+- **Entradas e ferramentas por tier** (§5.9).
 - **Boletim e RSS de saída:** o que entrou e o que mudou na semana.
-- **Dados abertos:** exportação das fichas e das afirmações.
+- **Dados abertos:** exportação das fichas, das Proposições e das Evidências.
+
+**Lugar [PROPOSTA]** (campos no §6):
+
+- **No começo:** UF, município (geocódigo do IBGE), localidade com o nome literal da fonte e bioma derivado da tabela do IBGE de 2024, que dá o bioma predominante de cada município (oficial, com uma só conferência; 963 municípios estão em mais de um bioma, e há revisão de limites de 2025, secundária). Território tradicional, com o nome que a comunidade usa, e **região cultural**, com o nome dado pelas fontes ou pelas pessoas, só nascem quando uma fonte ou uma comunidade os nomeia (princípio 7).
+- **Três lugares por Evidência:** o da prática, que vem do trecho; o da publicação; e o de quem pesquisa. Só o da prática organiza o wiki; sem ele, Falta.
+- **Topônimo histórico:** guardado como está na fonte e ligado ao município atual só quando não há ambiguidade, com o ano da divisão territorial usada (a de 2017 não vale para 1930); se for ambíguo, Falta. Todo atributo derivado guarda a fonte, a edição e a data.
+- **O lugar não é uma 5ª dimensão:** é a situação da CLB (bebida × lugar × grupo × período) e a âncora de W, o saber comum "da região" (D-018); a transformação de W por interação liga lugares, como na migração.
+- **Precisão publicada por registro** (exata, localidade, município, UF, bioma), escolhida pela restrição; por padrão, generalizada para territórios tradicionais, lugares sagrados e onde houver planta.
+- **No wiki:** páginas geradas só para UF, município, território e região cultural com pelo menos um registro, cada uma com as CLB, os termos, o "não observado" e as Faltas; o bioma é filtro e contagem, não página. O Passo 6 começa com tabelas por UF e município; o mapa vem depois (Leaflet, uma biblioteca de mapas gratuita, ou SVG estático). Os códigos do IBGE ficam em cópia local; as malhas da FUNAI e do INCRA só entram com a licença confirmada por escrito (a FUNAI declara CC BY-ND 3.0, que proíbe obra derivada; Anexo E).
+
+**Grafo 4D com interações reais [PROPOSTA]** (fora da revisão de essencialidade, D-025):
+
+- **Os dados nascem em 4D desde a fase 1:** cada elemento de prática tem X, Y, Z e W, e as relações têm tipo (sustenta, tensão, transformação de W, correção). Assim a visualização é uma leitura dos dados, nunca um desenho feito à mão (P61, P66).
+- **Primeira vista navegável**, gerada por script a partir dos dados do caso-piloto: os nós são os elementos de prática; as arestas, as relações, com as tensões à vista e as Faltas como nós vazios; filtros por Z e por W; a cor mostra o estado. Cada nó e cada aresta leva à ficha e à Evidência: é o circuito wiki ↔ grafo (P11).
+- **Outras vistas:** matriz X×Y com os vácuos de conhecimento à mostra (a célula vazia convida contribuição); linha do tempo Z; filtros e cores por W; rede de nomes (P8); se for útil, uma vista 3D com Z em profundidade (P10, P11).
+- O Quartz mostra só ligações entre notas (oficial), e não as quatro dimensões; a vista 4D precisa de um componente próprio, que o Passo 6 ou o 7 avalia.
+- **O que o grafo dá à pesquisa:** tensões, lacunas por região e período e relações entre bebidas e técnicas que nenhuma ficha mostra sozinha. Se a vista entra já na fase 1 ou fica para o Passo 7 depende da pergunta de pesquisa que Vicente quer responder com ele (§10).
 
 ### 5.8 Ilustração técnica de baixa resolução
 
-- Cada item pode ter uma ilustração de baixa resolução, como um desenho técnico do modo de produzir e das técnicas, para que a visualidade anime a pessoa a ler a ficha (13/10).
-- [PROPOSTA] Produzi-la a partir das etapas descritas na ficha (por exemplo, um diagrama gerado dos dados), para que fique sempre fiel ao texto.
+- Cada item pode ter uma ilustração de baixa resolução, como um desenho técnico do modo de produzir e das técnicas, para que a visualidade anime a pessoa a ler a ficha (13/10; D-014).
+- [PROPOSTA] Produzi-la a partir das etapas descritas na ficha, como desenho técnico gerado dos dados (não como fluxograma, que não atende à D-014), para que fique sempre fiel ao texto.
 - [PROPOSTA] Toda imagem traz legenda de origem (fonte, autor ou IA) e status de validação. Nada na imagem pode contradizer a ficha.
 
-### 5.9 Tiers como grupos de interesse
+### 5.9 Tiers como grupos de interesse e ferramentas de ação
 
 - [VIGENTE, 13/10] Cada tier mostra o que mais interessa ao grupo organizado nele. Não é monetização e pode mudar.
-- [PROPOSTA] O site é público e inteiro; cada tier é uma entrada curada para o seu grupo, com o que mais interessa primeiro. Se as entradas continuam cumulativas (P48) e se há cadastro prévio (P45) está [ABERTO].
-- [PROPOSTA] Um site estático não tem login. Por isso, o que for restrito (dados de quem contribui, conhecimento que a comunidade pediu para restringir) fica só em pastas do Drive compartilhadas com grupos, e nunca entra no repositório nem no site.
+- [PROPOSTA] O site é público e inteiro. Cada tier tem duas coisas: o que o grupo vê primeiro e as **ferramentas de ação sob demanda** (princípio 15). Ferramenta não é controle de acesso: é pública, salvo o que já é restrito. Se as entradas continuam cumulativas (P48) e se há cadastro prévio (P45) está [ABERTO].
+- [PROPOSTA] Um site estático não tem login. O que for restrito (dados de quem contribui, conhecimento que a comunidade pediu para restringir) fica fora do Git e do site, no lugar com acesso controlado do §5.1.
+- **Grupos candidatos e ferramentas** [PROPOSTA; os grupos ilustram e não limitam (D-017), e quais são continua pergunta do §10]:
+  - **educadores, inclusive de escolas indígenas e quilombolas:** planejador de aulas por CLB ou por conjunto (D-006); kits de fonte primária; materiais que já existem no eduCAPES e na Embrapa; habilidades da BNCC sugeridas;
+  - **comunidades e detentores:** pedido de restrição, correção ou retirada; devolutiva do que o projeto tem sobre elas; inventário participativo (só o link e um resumo; se uma comunidade quiser, ela conduz, e a CLB documenta o que ela entregar, com crédito); a página "o que a lei pede", com as citações literais da CF art. 216 e do Decreto 3.551 e o aviso "não é orientação jurídica" (no lugar do modelo de pedido de registro, descartado por ser quase assessoria jurídica);
+  - **pesquisadores:** dados abertos, citação e, na fase 2, o mutirão de escavação;
+  - **gestores e legisladores:** kit com as leis existentes (fontes oficiais a conferir no Passo 4) e a moldura legal do Anexo C;
+  - **praticantes e produtores:** cartilha de biossegurança só com risco verificado e um profissional revisor identificado (princípio 12); até lá, a ficha mostra a Falta "risco sanitário não verificado" e o link do órgão oficial;
+  - **comunicadores:** kit de pauta com fontes conferidas e "como citar".
+- **Três jeitos de construir, sem servidor próprio** [PROPOSTA]:
+  1. **gerador no navegador**, a partir dos dados publicados das fichas verificadas e de modelos: sem IA, sem servidor e rastreável. É a base;
+  2. **IA sob demanda por fila** (pedido → rotina do Claude, dentro da guarda de orçamento → validador → entrega): adiada até haver demanda real;
+  3. **"traga sua IA"**: pacote de dados e instruções para a IA que a pessoa já usa, com o aviso dentro do pacote: "saída gerada fora da CLB, não conferida".
+- **Regras** [PROPOSTA]: só conteúdo verificado, com as Faltas visíveis; o que é jurídico ou sanitário passa por profissional antes de circular; toda saída leva o carimbo mínimo (fichas com versão, nível, Faltas, data, "como citar" e o aviso "não é orientação jurídica nem sanitária"); nada é guardado automaticamente; a medição de uso é só contagem agregada, sem identificar pessoas; um plano de aula testado pode voltar como contribuição, com crédito.
+- **Começar com 1 grupo e 1 ferramenta** [PROPOSTA]: educadores, com o kit de fonte primária numa página estática, a ferramenta da fase 1 (§7); ampliar só depois de uso real. Antes de qualquer material para escolas indígenas e quilombolas, registra-se como Falta se a comunidade foi ouvida. Os códigos da BNCC vêm de uma tabela estática tirada do PDF do MEC, com a página citada (no Ensino Fundamental, etapa + ano ou bloco de anos + componente + posição, ex.: EF05HI04; não há API oficial do MEC; oficial, conferido em 15/10) e aparecem como "habilidades sugeridas", interpretação da CLB, nunca alinhamento oficial. A LDB art. 26-A e o manual de inventário participativo do IPHAN estão a conferir.
 
 ---
 
