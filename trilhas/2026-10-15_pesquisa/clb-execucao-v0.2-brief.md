@@ -12,12 +12,18 @@
 **Autorização (D-028):** a primeira mensagem de Vicente na janela nova autoriza explicitamente os blocos indicados nela. Essa autorização vale para todos os passos desses blocos.
 - **As memórias "plano não é execução" e "registrar a essência" não pedem nova autorização** para o que este brief já cobre.
 - **As essências da tabela da seção 2 já foram confirmadas por Vicente,** e não se reconfirmam. Pedir confirmação de essência vale só para **comentários novos**.
+- **Janelas (atualizado em 16/10, D-029):**
+  - **janela 1** = Blocos 1 e 2 (**feita**);
+  - **janela 2** = **Bloco 2.5** (agentes, habilidades e harness);
+  - **janela 3** = Blocos 3 e 4 (a v0.2, conduzida pelos agentes).
+  - Se a regra de orçamento mandar parar, a janela 3 continua numa quarta, pela retomada.
 
 **Modelos desta execução (D-027):**
 - **Sessão principal:** Opus 5.5, **esforço médio**, **sem ultracode**. O ultracode, o esforço máximo e o thinking foram a configuração do **planejamento**, não da execução.
   - O `~/.claude/settings.json` já fixa `effortLevel: "medium"` para `claude-opus-5-5`.
   - A sessão confere o ID do modelo. Se não for `claude-opus-5-5`, avisa e para.
 - **Subagentes** (conferências do Bloco 2 e verificadores do Bloco 3): **Sonnet 5.5, esforço alto**, chamados pela ferramenta Agent, **um por vez**, com `model: "sonnet"` e `effort: "high"` explícitos.
+  - Depois do Bloco 2.5, os subagentes são **os agentes do projeto** (`.claude/agents/`). Cada um declara o seu modelo; os valores iniciais estão no Bloco 2.5.
   - **Por que este modelo:** é a sugestão do planejamento, apoiada nas medições de 15 e 16/10. Agentes Sonnet com teto fizeram conferência na web com qualidade, gastando de 34 a 54 mil tokens cada.
   - **Registro:** anote no checklist o modelo e o esforço de cada agente.
 - **Sem Workflow nesta execução:** sem ultracode, a sessão não orquestra rodadas de vários agentes.
@@ -80,6 +86,13 @@
   - `wf_*.journal.jsonl`: os mesmos resultados, uma linha por agente.
 - **Plano completo:** `C:\Users\alqui\.claude\plans\vamos-planejar-com-as-modular-kurzweil.md`, com cerca de 1.010 linhas. Ache as seções com `grep -n "^### "` e não o leia inteiro.
 
+**Estado depois da janela 1 (16/10):**
+- Blocos 1 e 2 feitos (ver o checklist).
+- O repositório `Indalt/cultura-liquida` é **público**.
+- A proteção do `main` está ligada (1 aprovação, `enforce_admins: false`): o dono grava direto, e assim fica.
+- As conferências C1 e C2 estão em `trilhas/2026-10-16_conferencias/` e custaram 82 mil e 77 mil tokens, com 19 chamadas cada.
+- O commit 1, base da comparação dos anexos, é `e868a98`. A cópia de trabalho usa CRLF, então a comparação normaliza os fins de linha.
+
 **Retomada: sempre, ao abrir uma janela, antes de qualquer passo:**
 1. Se `trilhas/2026-10-16_execucao-v0.2.md` existir, leia esse checklist.
 2. Rode `git log --oneline`, `git remote -v` e `gh repo view Indalt/cultura-liquida --json name,visibility || true`.
@@ -97,7 +110,7 @@
 | D-018 | W é o modo como se entende o que se coleta: a prática **comum** (conhecimento compartilhado) da região, não a de um indivíduo. É uma episteme própria, **mas traduzível**, e deve ser tratada como dimensão. O que não foi captado é Falta, dita e nunca completada. O saber comum muda de forma autóctone ou por interação com outras comunidades. O registro próprio de W ("Compreensão local") é [PROPOSTA] |
 | D-019 | **Não julgamos.** Fonte contrária não corrige, só documenta; se a fonte corrige, documenta-se a correção. Não é preciso documentar tudo. A prática que atende aos critérios de prática cultural **é admitida como evidência** e pode ignorar tentativas de revisionismo |
 | D-020 | O agente Jurídico é de precaução: cria Faltas e nunca autoriza |
-| D-021 | GitHub privado na conta Indalt, sincronizado, com commits de Vicente; publicação externa privada aprovada. Google só se for necessário. **Considerar** a nuvem para buscas e para tratamentos com IA, sem compromisso firme |
+| D-021 | GitHub na conta Indalt, sincronizado, com commits de Vicente. **O repositório é público** (essência confirmada em 16/10, depois da janela 1): o que entra no Git é publicação aberta, e o legado e os dados pessoais de terceiros continuam fora. A proteção do `main` fica como está, com o dono liberado. **Futuro:** depois de tudo ajeitado, pensar em fechar o repositório e abrir só para quem Vicente quiser. Google só se for necessário. **Considerar** a nuvem para buscas e para tratamentos com IA, sem compromisso firme |
 | D-022 | Os critérios de prática cultural vêm da lei: CF art. 216; Convenção UNESCO 2003 (Decreto 5.753/2006, art. 2); Decreto 3.551/2000 |
 | D-023 | Medir e parar antes de acabar, com o estado salvo. Teto provisório de 300 mil tokens por semana em agentes **na operação da fase 1** |
 | D-024 | Do legado, só entra no acervo o que for verificável e condizente com as regras novas. **O resto não se apaga**: fica como está (Drive e `legado/`, só leitura), o que concilia com o princípio 10. O site não é aproveitado |
@@ -105,6 +118,7 @@
 | D-026 | Na fase 1 trabalham só Vicente e os agentes, com logs; não há segunda pessoa. A segunda leitura vem do validador, de um verificador com harness diferente e da amostra sorteada. O responsável é Vicente, pessoa natural |
 | D-027 | O **planejamento** rodou em Opus 5.5 com esforço máximo, ultracode e thinking. A **execução** roda em Opus 5.5 com esforço médio, com harness e sem ultracode, e os subagentes em Sonnet 5.5 alto (sugestão apoiada em medições). Depois, os modelos por tarefa são escolhidos **por teste**: a v0.2 não fixa modelo-alvo, e Sonnet 5.5 alto (ajustes) e Haiku 5.5 (rotinas) são hipóteses de partida. Harness qualificado |
 | D-028 | A execução não para para aprovar o que já foi decidido |
+| D-029 | **Antes da v0.2,** os agentes, suas habilidades e seus harness ficam na pasta do projeto, e a v0.2 é escrita **por eles**, com logs (16/10). **Só o Claude Code opera** os agentes (pasta `.claude/`, sem espelho `.agents/`), o que responde a pergunta 15. O **caso-piloto continua no Passo 1**: o Avaliador e o Arquivista nascem com os exemplos marcados como pendentes até ele |
 
 ---
 
@@ -164,7 +178,136 @@ Rode um agente por vez. Salve o resultado em `trilhas/2026-10-16_conferencias/lo
 
 **Parada obrigatória:** atualize o checklist, faça o commit e o push, e entregue a Vicente um relatório de uma tela (o que foi feito, o consumo, o que ficou "não conferido").
 
-### Bloco 3: escrever a v0.2 (na janela seguinte; sessão principal em Opus 5.5 com esforço médio)
+### Bloco 2.5: agentes, habilidades e harness (janela 2; sessão principal em Opus 5.5 com esforço médio)
+
+**Objetivo (D-029):** pôr na pasta do projeto os agentes, suas habilidades e seus harness, para que a v0.2 (janela 3) e todo o trabalho seguinte sejam conduzidos por eles, com logs. **Harness** é tudo o que faz um agente acertar mesmo num modelo barato: instruções claras, formato de entrada e saída, validadores por script, exemplos reais, limites de custo e de passos, critério de parada e registro do que fez.
+
+**Fontes para escrever o harness.** Ler por `grep -n` e faixas de linhas, nunca os arquivos inteiros:
+- **v0.1:** §0 (Regra de Ouro e acordos), §2 (princípios), §6 (modelo de dados) e §7, Passo 1 (mapa de agentes, por volta das linhas 479–511);
+- **plano** (`trilhas/2026-10-15_pesquisa/vamos-planejar-com-as-modular-kurzweil.md`), itens 1 a 8, 15, 16, 16-J, 19 e 22;
+- `trilhas/2026-10-16_conferencias/` (C1 e C2) e `trilhas/2026-10-15_pesquisa/indice.md`.
+
+**Passo 2.5.1: conferir os formatos oficiais do Claude Code** (no máximo 6 chamadas web; registrar o nível no checklist):
+- frontmatter de subagente em `.claude/agents/` (`name`, `description`, `tools`, `model`; aceita `effort`?);
+- estrutura de habilidade em `.claude/skills/<nome>/SKILL.md`;
+- eventos de hook (existe `SubagentStop`? que JSON chega na entrada padrão?);
+- importação de arquivo no `CLAUDE.md` (`@AGENTS.md`).
+
+Fontes: as páginas oficiais em code.claude.com/docs (sub-agents, skills, hooks, memory). **O que não se confirmar fica pelo jeito mais simples que funcione**, e isso é registrado.
+
+**Passo 2.5.2: regras do projeto**
+- **`AGENTS.md`** (até 150 linhas):
+  - o projeto em 5 linhas;
+  - os princípios e as decisões D-015 a D-029, pela essência, uma linha cada;
+  - a Regra de Ouro e os acordos;
+  - o passo corrente;
+  - uma tabela curta de agentes e habilidades;
+  - o orçamento;
+  - onde está cada coisa;
+  - o que não fazer.
+- **`CLAUDE.md`:** importa o `AGENTS.md` e traz só as notas do Claude Code: Python real, `PYTHONUTF8`, `|| true`, os modelos por agente, e os commits (autor Vicente local; push depois de cada commit; linha de atribuição).
+
+**Passo 2.5.3: base comum**
+- **`.venv`:** criada com o Python real, com `jsonschema`. Se a instalação falhar, use validação mínima em Python puro e registre.
+- **`esquemas/`:** JSON Schema só do que esta rodada usa: log, resultado de conferência, Falta (com caminho de liberação), guia de liberação, achado de verificação.
+- **`scripts/`:**
+  - `registrar_log.py`: acrescenta uma linha validada em `trilhas/logs/AAAA-MM-DD_<agente>.jsonl`, com data e hora, agente, habilidade, versão do harness, modelo, esforço, referência da entrada, ações, resultados, decisões (cada item: aceito, descartado, quarentena ou Falta, com o motivo), tokens, chamadas, duração e erros. **Reprova dado pessoal de terceiros**;
+  - `procurar_dado_pessoal.py`;
+  - `comparar_anexos.py`: compara os Anexos A e B com o commit `e868a98`, normalizando CRLF;
+  - `checar_fundacao.py`: marcadores, D-015 a D-029, legenda das P-refs e entidades do §6;
+  - `validar.py`: confere um JSON contra um esquema.
+
+**Passo 2.5.4: agentes e habilidades.** Um arquivo por agente em `.claude/agents/`, com:
+- papel;
+- quando é chamado;
+- ferramentas permitidas (o mínimo necessário);
+- modelo e esforço;
+- habilidades que usa;
+- o que não faz;
+- critério de parada;
+- **log obrigatório** (via `registrar_log.py`);
+- as regras herdadas do `AGENTS.md`.
+
+**Os modelos são iniciais e provisórios** até os testes do Passo 1 (D-027).
+
+| Agente | Rodada | Papel | Habilidades | Modelo inicial |
+|---|---|---|---|---|
+| **curador** | A | conduz o brief e o plano; cuida do Registro de Decisões, do checklist, do orçamento e dos logs; para quando o plano não resolve (Regra de Ouro). Na prática, é a sessão principal | `executar-brief`, `registrar-decisao` | sessão principal (Opus 5.5, médio) |
+| **redator** | A | escreve os textos do projeto: agora a v0.2; depois, a camada Educação e o boletim | `escrever-secao-fundacao` | Opus 5.5, médio |
+| **auditor** | A | faz as verificações mecânicas e independentes, porque quem produz não confere: relatórios calculados e achados confirmados por `grep` ou script | `verificar-fundacao`, `conferir-fato` | Sonnet 5.5, alto |
+| **juridico** | A | precaução: cria Faltas e nunca autoriza. Confere normas e prepara guias de liberação com porquê, passo a passo, documentos e modo de preencher (D-025) | `conferir-fato`, `triagem-juridica`, `guia-de-liberacao` | Sonnet 5.5, alto |
+| **rastreador** | B | ambientes, fichas de acesso, consultas, recortes e pegadas | `ficha-de-acesso`, `consulta` | Sonnet 5.5, alto (a testar contra o Haiku) |
+| **avaliador** | B | triagem por valências, quarentena e extração de evidência com trecho literal | `extrair-evidencia` | a definir no Passo 1 |
+| **arquivista** | B | termos, fichas e grafo 4D | `registrar-termo`, `montar-ficha`, `gerar-grafo` | a definir no Passo 1 |
+| **campo-de-acao** | B | ferramentas de ação sob demanda, como o kit de fonte primária | `kit-fonte-primaria` | a definir |
+
+**Harness de cada habilidade.** Cada `.claude/skills/<habilidade>/` tem:
+- **`SKILL.md`**, com:
+  - frontmatter no formato conferido;
+  - objetivo; quando usar e quando não usar;
+  - entradas e saídas (apontando para `esquemas/`);
+  - passos numerados;
+  - regras herdadas: nível de verificação, essência, dado pessoal, anti-robô, Falta dita;
+  - teto de chamadas e de tokens estimados;
+  - critério de parada;
+  - o que não faz;
+  - campos do log;
+  - versão do harness e histórico de mudanças;
+- **`exemplos/`** com pares reais: entrada e saída esperada, ou critérios de aceitação;
+- um **validador**, comum ou próprio.
+
+**Exemplos reais por habilidade:**
+- **`conferir-fato`:** C1 e C2. O validador tem que **passar** nos JSON reais e **reprovar** um caso com "oficial" sem URL.
+- **`guia-de-liberacao`:** o SisGen. Cadastro declaratório, que pessoa natural pode fazer (Decreto 8.772, arts. 22 e 22-A; C1, oficial). As telas não foram conferidas e ficam marcadas assim.
+- **`triagem-juridica`:** os casos do 16-J (dado sensível; conhecimento tradicional de origem identificável).
+- **`verificar-fundacao`:** as divergências reais que os revisores acharam em 16/10. Por exemplo, a D-018 tinha perdido "traduzível".
+- **`registrar-decisao`:** dois casos reais: o "por princípio" que era "de início", e a D-021, que passou a público.
+- **`escrever-secao-fundacao`:** as essências da seção 2. O caso de reprovação é uma transcrição literal no lugar da essência.
+- **`ficha-de-acesso` e `consulta` (rodada B):**
+  - Hemeroteca respondendo 403; a API da BDTD funcionando; o Querido Diário instável;
+  - "cauim": 54 resultados no OpenAlex, 10 na BDTD, 30 no Oasisbr e 12 na Crossref, mais a bola de neve do artigo do Boletim Goeldi.
+
+  Tudo isso está nos JSON da pesquisa.
+- **Avaliador, Arquivista e Campo de Ação (rodada B):** papel, formato e passos escritos; **exemplos marcados "pendente: caso-piloto (Passo 1)"**.
+
+**Passo 2.5.5: log automático**
+- **Se o formato conferido permitir,** um hook `SubagentStop` no `.claude/settings.json` do projeto grava uma linha mínima a cada fim de subagente. É uma rede de segurança: o log completo continua sendo gravado pelo curador, via `registrar_log.py`, depois de cada chamada, porque é ele quem tem os tokens.
+- **Teste:** uma chamada curta ao **auditor**, que roda `checar_fundacao.py` na v0.1 e cujo resultado esperado são as ausências conhecidas. Confira se as duas linhas de log foram gravadas.
+
+**Passo 2.5.6: testes e fechamento**
+- Rode os validadores sobre todos os exemplos e registre em `testes/relatorio-rodada-A.md` o que passou, o que reprovou como esperado e o que ficou pendente.
+- **Comparação entre modelos** (Haiku × Sonnet × Opus): **não é agora**. Ela vem no Passo 1, com o caso-piloto e os logs reais.
+- Commit e push a cada passo, com o checklist atualizado.
+
+**Parada obrigatória no fim do Bloco 2.5,** com relatório de uma tela a Vicente.
+
+**Pronto quando:**
+- cada agente tem o seu arquivo, com todos os campos;
+- cada habilidade da rodada A passa nos exemplos reais e reprova o exemplo com erro;
+- o teste de log gravou as linhas;
+- o `AGENTS.md` tem até 150 linhas;
+- nada com dado pessoal de terceiros entrou no Git;
+- tudo está no GitHub.
+
+**Estimativa:** de 200 a 300 mil tokens, quase tudo de escrita na sessão principal. Subagente, só o do teste. A regra de orçamento vale.
+
+### Bloco 3: escrever a v0.2 (janela 3; conduzida pelos agentes do Bloco 2.5)
+
+**Quem faz o quê (D-029):**
+- o **curador**, que é a sessão principal, orquestra pelo mapa abaixo, grava os logs, controla o orçamento e faz um commit por grupo;
+- o **redator** escreve cada grupo de seções direto no arquivo. Ele recebe só as faixas de linhas necessárias: a seção da v0.1, as essências da seção 2 e as fontes no plano;
+- o **auditor** verifica cada grupo depois de escrito;
+- o **juridico** confere os trechos jurídicos (§5, §7, §8 e o Anexo C).
+
+**Grupos de seções:**
+1. cabeçalho, §0 e §1;
+2. §2;
+3. §3, §4 e §5;
+4. §6;
+5. §7 a §11;
+6. Anexos C, D e E.
+
+Se o orçamento apertar, pare no fim de um grupo; a retomada continua do próximo.
 **Base:** a v0.1, este brief, o mapa abaixo e os resultados do Bloco 2. Use a lista de edição do plano ("Implementação", passo 4, por volta das linhas 938–994) como **lista de conferência**. Faça um commit e um push por grupo de seções.
 
 | Seção da v0.2 | O que fazer | Fonte no plano |
@@ -199,7 +342,7 @@ Rode um agente por vez. Salve o resultado em `trilhas/2026-10-16_conferencias/lo
    - o trecho entre `## Anexo A` e `## Anexo C` é idêntico ao do commit 1 (`git show <hash>:00_Fundacao_Cultura_Liquida.md`);
    - a busca por "Versão 0.2", "D-015" a "D-028", "Anexo D", "Anexo E", "C.3", "Falta" e pela legenda das P-refs acha cada um;
    - o §6 contém cada entidade da lista.
-2. **Independente:** até três verificadores pela ferramenta Agent, um por vez, em Sonnet 5.5 com esforço alto. Cada um tem um olhar e teto de leitura por `grep`. Os olhares:
+2. **Independente:** o **auditor** (habilidade `verificar-fundacao`), em até três passadas, uma por olhar, com teto de leitura por `grep`. Os trechos jurídicos passam também pelo **juridico**. Os olhares:
    - (a) as decisões D-015 a D-028 têm o sentido certo;
    - (b) não há contradições;
    - (c) todo fato tem nível e todo termo tem explicação.
@@ -220,7 +363,7 @@ Rode um agente por vez. Salve o resultado em `trilhas/2026-10-16_conferencias/lo
 ---
 
 ## 4. Não fazer nesta execução
-- Não criar agentes nem habilidades do projeto. Isso é o Passo 1.
+- Não completar o harness do avaliador, do arquivista e do campo-de-acao sem o caso-piloto: isso fica para o Passo 1. No Bloco 2.5 eles ganham papel, formato e passos, com os exemplos marcados como pendentes.
 - Não processar o legado nem abrir os Docs. Isso é o Passo 3.
 - Não criar rotinas na nuvem nem workflows do GitHub Actions. Isso é o Passo 4 e a fase 2.
 - Não publicar site nenhum.
@@ -245,3 +388,5 @@ Rode um agente por vez. Salve o resultado em `trilhas/2026-10-16_conferencias/lo
 - **"Anexo D com as propostas completas":** o Anexo D é um resumo; as propostas ficam em `trilhas/`.
 - **"Aqui o Haiku 5.5" (item 22):** os modelos-alvo são decididos por teste.
 - **"Commits assinados":** quer dizer autoria, não assinatura GPG.
+- **Agentes depois da v0.2 (o plano e o §7 da v0.1):** a D-029 mudou. Os agentes vêm **antes** da v0.2, no Bloco 2.5, e o caso-piloto continua no Passo 1.
+- **"Repositório privado":** a D-021 mudou. O repositório é **público**, e fechá-lo é uma decisão futura.
