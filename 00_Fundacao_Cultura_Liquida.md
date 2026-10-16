@@ -1,8 +1,20 @@
 # Cultura Líquida — Documento de Fundação
 
-**Versão 0.1 · 15/10/2026** (decisões de 13/10/2026) · Responsável: Vicente (vicente@dacaatinga.com.br)
+**Versão 0.2 · 16/10/2026** (substitui a v0.1 de 15/10/2026; a passagem à v0.2 é a D-015) · Responsável: Vicente, pessoa natural (vicente@dacaatinga.com.br)
 
 **Para quem lê:** Vicente e qualquer sessão de IA aberta nesta pasta. Antes de agir, leia o §0: ele diz o que ler em cada sessão.
+
+**Quem escreveu esta versão [VIGENTE]:** antes da v0.2, os agentes do projeto passaram a ficar em `.claude/`, com suas habilidades e seu harness (o conjunto de instruções, exemplos e verificações que envolve cada agente); são operados só pelo Claude Code, escreveram esta versão com logs em `trilhas/logs/`, e o caso-piloto continua no Passo 1 (D-029).
+
+**O que mudou da v0.1 para a v0.2:**
+1. As decisões de 15 e 16/10 entram pela essência confirmada por Vicente (D-015 a D-029, §9).
+2. Governança no §0: legenda das referências Pn, acordo 6 (exemplos não limitam), "[PROPOSTA] não é plano" e registro de comentários pela essência.
+3. Rastrear deixa de ser "RSS criados por nós" e passa ao modelo monitoramento × escavação (§1, §5).
+4. A casa do projeto é o repositório público `Indalt/cultura-liquida` (§1, §5.1).
+5. Os princípios ganham W como dimensão, a Falta, o "não julgamos" e a reconstituição (§2).
+6. O legado segue a D-024: só entra o verificável, o resto não se apaga e o site não é aproveitado (§3); o modelo de dados é reescrito (§6).
+7. Os passos ganham fase 1, fase 2 e gatilho (§7); pendências, perguntas e orçamento são atualizados (§8, §10, §11).
+8. O Anexo C ganha o C.3 (nível de cada referência); entram os Anexos D (trilha da análise) e E (ambientes candidatos).
 
 ## Sumário
 
@@ -21,28 +33,37 @@
 - Anexo A — Índice P1–P97 (verbatim)
 - Anexo B — Mensagem de 13/10/2026 (verbatim)
 - Anexo C — Referências verificadas
+  - C.1 Leis e normas brasileiras (textos conferidos)
+  - C.2 Ferramentas e métodos (com as correções)
+  - C.3 Nível de verificação de cada referência
+- Anexo D — Trilha da análise (resumo)
+- Anexo E — Ambientes candidatos
 
 ---
 
 ## 0. Como usar este documento
 
 - Este é o primeiro arquivo da pasta e a **fonte de verdade** do projeto. Vale até ser substituído por uma versão posterior anotada no Registro de Decisões (§9).
-- O sistema anterior, construído com o Gemini no Google Drive entre 10 e 12/10/2026, continua no Drive como está. Este documento propõe tratá-lo como **legado** [PROPOSTA]: fonte a verificar e lição, não base técnica (§3).
-- **Como ler sem gastar demais:** cada sessão lê §0, §1, §2, o passo corrente em §7, §8 e §9. O §4 e os Anexos A e B são consultados por busca da referência (ex.: "P89"), não lidos inteiros sem necessidade.
+- **Como ler sem gastar demais:** cada sessão lê §0, §1, §2, o passo corrente em §7, §8 e §9, e o checklist de execução em `trilhas/`. O §4 e os Anexos A, B, D e E são consultados por busca da referência, não lidos inteiros sem necessidade.
+- **Legenda das referências [VIGENTE]:** "Pn" é o pedido n de Vicente na conversa original, transcrito no Anexo A; para achá-lo, buscar `#### Pn` (ex.: `#### P38`). "D-nnn" é a decisão n do Registro de Decisões (§9).
 - **Marcadores de status:**
   - **[VIGENTE]**: decidido e valendo.
   - **[REFORMULADO 13/10]**: decidido antes e redefinido em 13/10/2026.
   - **[ADIADO]**: decidido para depois.
-  - **[PROPOSTA]**: sugestão da análise, ainda não aprovada por Vicente.
+  - **[PROPOSTA]**: desenho da análise, ainda não aprovado por Vicente.
   - **[PENDENTE]**: decisão a tomar no passo indicado (§8).
   - **[ABERTO]**: precisa ser compreendido antes de decidir (§10).
-- **Regra de Ouro** (P38, mantida): nenhum agente inventa solução fora do plano. Diante de uma dificuldade, recorre a este documento. Se ele não resolver, para e pergunta a Vicente.
+- **[PROPOSTA] não é plano [VIGENTE]:** nenhum agente executa um item [PROPOSTA]. Um item vira plano um a um, com uma entrada no §9 que traz a essência confirmada por Vicente e a diretriz resultante.
+- **Regra de Ouro** (P38, mantida): nenhum agente inventa solução fora do plano. Diante de uma dificuldade, recorre a este documento e ao passo corrente; se não resolverem, para e pergunta a Vicente.
 - **Acordos de trabalho:**
-  1. Perguntas servem para compreender. Nada de perguntas binárias para direcionar (pedido de Vicente em 12/10/2026, na conversa que analisou o legado).
-  2. Nada de simulação apresentada como execução (P96). O que não foi feito não é relatado como feito.
-  3. Não simplificar para conseguir executar (P79). Se algo não couber, dizer e parar.
+  1. Perguntas servem para compreender, nunca para direcionar com escolhas binárias (pedido de Vicente em 12/10/2026, na conversa que analisou o legado).
+  2. Nada de simulação apresentada como execução (P96): o que não foi feito não é relatado como feito.
+  3. Não simplificar para conseguir executar (P79): se algo não couber, dizer e parar.
   4. Tudo o que é feito deixa trilha: o que se buscou, onde, o que se encontrou, o que se descartou e por quê.
   5. O plano só muda com uma entrada no Registro de Decisões e uma nova versão deste documento.
+  6. Exemplos ilustram e nunca limitam o trabalho (D-017): uma lista de exemplos nunca vira critério de exclusão.
+- **Comentário novo de Vicente [VIGENTE]:** registra-se pela essência, nunca como transcrição. Passos: (1) captar o sentido; (2) conferir palavras ambíguas pelo contexto ("por princípio" pode querer dizer "de início"); (3) devolver o entendido e pedir confirmação; (4) só então escrever a diretriz. A fala original fica só na trilha.
+- **Trilhas:** o diário de sessão, o checklist, a pesquisa, as conferências e os logs ficam em `trilhas/`, não no Registro de Decisões. O resumo da análise que gerou esta versão está no Anexo D.
 
 ---
 
@@ -52,11 +73,21 @@
 
 **Propósito:** encontrar, organizar e devolver o que se pode saber sobre as CLB, a partir de 1900 e com o eixo do tempo elástico para outros períodos (P9, P31), com cada informação rastreável até a origem e com o caminho à vista.
 
+**Quem trabalha [VIGENTE]:** na fase 1, só Vicente e os agentes, com logs; o responsável é Vicente, pessoa natural (D-026). A segunda leitura vem do validador, de um verificador com harness diferente e de uma amostra sorteada.
+
 **Três movimentos:**
 
-1. **Rastrear.** RSS criados por nós nos ambientes já pensados e em novos ambientes, conforme forem descobertos. Abertura para receber documentação de outras pessoas. Entradas processadas por rotinas diárias; alimentação semanal de cada ambiente até que tudo dele esteja coletado e organizado.
-2. **Organizar.** Um wiki com glossário de palavras clicáveis que levam à informação completa de cada item. Cada item pode ter uma ilustração de baixa resolução, como um desenho técnico do modo de produzir e das técnicas, para que a visualidade anime a leitura. Termos e booleanos seguem a ciência terminológica; o grafo 4D é organizado pela lógica paraconsistente.
+1. **Rastrear** [PROPOSTA quanto ao desenho; detalhe no §5]. Um **ambiente** é um lugar onde se busca (acervo, arquivo, base, site). Cada ambiente recebe dois tipos de trabalho:
+   - **monitoramento:** acompanhar o que aparece de novo, de forma automática e barata, por script ou API (interface que um sistema oferece para ser consultado por programas);
+   - **escavação:** buscar para trás, a partir de 1900, o que o ambiente já guarda; é assistida e cara, por API quando a fonte permite e por pessoa quando ela barra robôs.
+
+   Cada **Consulta** fica registrada com o seu tipo, inclusive a busca **só por descritores** (sem o nome da bebida), a única que acha o que ainda não tem nome (P3, P5). Um ambiente é dado como exaurido por consulta e período; uma variante nova o reabre. O projeto também fica aberto a receber documentação de outras pessoas (canais no Passo 4). O tratamento com IA roda em sessão na fase 1 e, se aprovado, por rotina na fase 2 (§7).
+2. **Organizar.** Um wiki com glossário de palavras clicáveis que levam à informação completa de cada item. Cada item pode ter uma ilustração de baixa resolução, como um desenho técnico do modo de produzir e das técnicas, para que a visualidade anime a leitura. Termos e booleanos (os operadores de busca E, OU, NÃO) seguem a ciência terminológica, que estuda os termos de uma área a partir do uso. O grafo 4D (X insumo, Y processo, Z tempo, W compreensão local) é organizado pela lógica paraconsistente, que admite contradições sem que o conjunto desabe.
 3. **Devolver e agir.** Educação dentro da ficha de cada CLB; pedagogia como ferramenta de planejar aulas; salvaguarda e política dentro das leis brasileiras; tecnologia comunitária que avisa, sem apagar nem discriminar. Os artefatos do campo de ação são feitos sob demanda. Os tiers organizam o que cada grupo de interesse vê primeiro.
+
+**Casa do projeto [VIGENTE]:** o repositório `Indalt/cultura-liquida` no GitHub, na conta Indalt, sincronizado com esta pasta e com commits de Vicente (D-021). O repositório é **público**: o que entra no Git é publicação aberta, e o legado e os dados pessoais de terceiros ficam fora. O Google só entra se for necessário; usar a nuvem para buscas e tratamentos com IA fica a considerar, sem compromisso firme. No futuro, pensar em fechar o repositório e abri-lo só para quem Vicente quiser. Detalhe no §5.1.
+
+**Legado [VIGENTE]:** o sistema anterior, feito com o Gemini no Google Drive entre 10 e 12/10/2026, é legado: só entra no acervo o que for verificável e condizente com as regras novas; o resto não se apaga e fica como está, só leitura (D-024, §3).
 
 ---
 
