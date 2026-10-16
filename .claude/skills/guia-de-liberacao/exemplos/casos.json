@@ -1,0 +1,15 @@
+{
+  "habilidade": "guia-de-liberacao",
+  "rodada": "A",
+  "casos": [
+    {"nome": "guia SisGen (C1, oficial; telas não conferidas)", "espera": "passa", "esquema": "guia-liberacao",
+     "entrada": ".claude/skills/guia-de-liberacao/exemplos/guia-sisgen.json",
+     "criterio": "porquê com norma, trecho e URL; quem pode fazer = pessoa natural (oficial); passo de tela 'não conferido'; limites ditos"},
+    {"nome": "passo de tela 'oficial' sem URL", "espera": "reprova", "esquema": "guia-liberacao",
+     "entrada": ".claude/skills/guia-de-liberacao/exemplos/erro-tela-oficial-sem-url.json",
+     "criterio": "afirmar como oficial uma tela que ninguém abriu deve ser recusado"},
+    {"nome": "guia sem limites", "espera": "reprova", "esquema": "guia-liberacao",
+     "entrada": ".claude/skills/guia-de-liberacao/exemplos/erro-sem-limites.json",
+     "criterio": "todo guia diz o que o agente não faz (nunca autoriza, nunca protocola)"}
+  ]
+}

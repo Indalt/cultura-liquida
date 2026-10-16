@@ -1,0 +1,15 @@
+{
+  "agente": "rastreador",
+  "habilidade": "consulta",
+  "versao_harness": "0.1.0",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "CASO DE TESTE",
+  "acoes": ["consulta 'cauim' na BDTD"],
+  "resultados": ["autora contatada em maria.exemplo@gmail.com"],
+  "decisoes": [],
+  "tokens": 1000,
+  "chamadas": 1,
+  "duracao_s": 10,
+  "erros": []
+}

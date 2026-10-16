@@ -1,0 +1,18 @@
+{
+  "habilidade": "triagem-juridica",
+  "rodada": "A",
+  "casos": [
+    {"nome": "caso A: dado sensível → Falta (norma não conferida, dita como tal)", "espera": "passa", "esquema": "falta",
+     "entrada": ".claude/skills/triagem-juridica/exemplos/falta-dado-sensivel.json",
+     "criterio": "Falta jurídica com subtipo, norma (nível 'não conferido' declarado) e caminho de liberação"},
+    {"nome": "caso B: conhecimento tradicional de origem identificável → Falta", "espera": "passa", "esquema": "falta",
+     "entrada": ".claude/skills/triagem-juridica/exemplos/falta-conhecimento-tradicional.json",
+     "criterio": "norma oficial com trecho literal (C1) e caminho = guia SisGen"},
+    {"nome": "Falta jurídica sem caminho de liberação", "espera": "reprova", "esquema": "falta",
+     "entrada": ".claude/skills/triagem-juridica/exemplos/erro-falta-juridica-sem-caminho.json",
+     "criterio": "D-025: barreira jurídica sem caminho deve ser recusada"},
+    {"nome": "Falta completada por inferência", "espera": "reprova", "esquema": "falta",
+     "entrada": ".claude/skills/triagem-juridica/exemplos/erro-falta-completada.json",
+     "criterio": "D-018: a Falta é dita, nunca completada"}
+  ]
+}

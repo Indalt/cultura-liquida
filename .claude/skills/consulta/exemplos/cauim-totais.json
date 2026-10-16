@@ -1,0 +1,53 @@
+{
+  "fonte_do_exemplo": "trilhas/2026-10-15_pesquisa/w16qvy0xk.output.json (frente PA; resposta sobre exaustão e catálogo) e indice.md, fatos do OpenAlex; consultas de 15/10/2026",
+  "termo": "cauim",
+  "data": "2026-10-15",
+  "consultas": [
+    {
+      "ambiente": "OpenAlex",
+      "consulta": "https://api.openalex.org/works?filter=title_and_abstract.search:cauim&per_page=3",
+      "total_informado": 54,
+      "total_visto": null,
+      "nivel": "oficial",
+      "observacao": "'Do cauim à garapa' (2026, W7202258054) não tem país de autor nem idioma: um filtro de país ou idioma o cortaria (PA-4)"
+    },
+    {
+      "ambiente": "BDTD",
+      "consulta": "lookfor=cauim",
+      "total_informado": 10,
+      "total_visto": null,
+      "nivel": "não registrado por item (número da frente PA, pesquisa de 15/10)",
+      "observacao": "a busca trouxe também itens sem relação (ex.: uma tese sobre Rorty): ruído anotado, não apagado"
+    },
+    {
+      "ambiente": "Oasisbr",
+      "consulta": "lookfor=cauim",
+      "total_informado": 30,
+      "total_visto": null,
+      "nivel": "não registrado por item (número da frente PA, pesquisa de 15/10)"
+    },
+    {
+      "ambiente": "Crossref",
+      "consulta": "query.bibliographic=cauim",
+      "total_informado": 12,
+      "total_visto": null,
+      "nivel": "não registrado por item (número da frente PA, pesquisa de 15/10)",
+      "observacao": "entre eles Mana (2015) e Campos (2007)"
+    }
+  ],
+  "bola_de_neve": {
+    "semente": "'Cauim: entre comida e ebriedade' (OpenAlex W2901077422), Boletim do Museu Paraense Emílio Goeldi, licença cc-by",
+    "citantes": {
+      "consulta": "https://api.openalex.org/works?filter=cites:W2901077422&per_page=5",
+      "total": 8
+    },
+    "citadas": {
+      "consulta": "https://api.openalex.org/works/W2901077422",
+      "total": 22
+    },
+    "nivel": "oficial"
+  },
+  "saturacao": "não exaurido: o total visto ainda não foi registrado em nenhuma das quatro bases",
+  "proxima_acao": "paginar cada base até o total informado, comparar com as pegadas e seguir a bola de neve dos 8 citantes e das 22 referências",
+  "nota": "total_visto = null porque a pesquisa de 15/10 só mediu os totais; é exatamente o estado que a habilidade deve registrar."
+}

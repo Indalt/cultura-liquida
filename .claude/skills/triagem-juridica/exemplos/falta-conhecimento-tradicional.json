@@ -1,0 +1,21 @@
+{
+  "id": "F-0002",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "conhecimento_tradicional",
+  "o_que_falta": "consentimento prévio informado da comunidade detentora (e, se a atividade for 'acesso', o cadastro no SisGen) para publicar o modo de fazer descrito no trecho T-0001",
+  "por_que": "O modo de fazer é conhecimento tradicional associado a patrimônio genético (planta nativa e fermentação) e tem origem identificável. A comunidade pode negar o consentimento. Sem consentimento, o modo de fazer fica retido como Falta; a origem do conhecimento continua indicada.",
+  "onde_aparece": ["trecho T-0001", "ficha da CLB correspondente, seção 'modo de fazer'"],
+  "norma": {
+    "referencia": "Decreto 8.772/2016, art. 13",
+    "trecho": "poderá negar o consentimento ao acesso a seu conhecimento tradicional associado de origem identificável",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-sisgen-cadastro-de-acesso",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico (triagem-juridica 0.1.0)",
+  "data": "2026-10-16",
+  "nota": "Caso de exemplo construído a partir do plano (item 7 e 16-J); sem pessoa real. Trecho do art. 13 conferido no C1 (16/10)."
+}

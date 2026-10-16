@@ -1,0 +1,17 @@
+{
+  "id": "F-9001",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "conhecimento_tradicional",
+  "o_que_falta": "consentimento prévio informado",
+  "por_que": "origem identificável",
+  "onde_aparece": ["trecho T-0001"],
+  "norma": {
+    "referencia": "Decreto 8.772/2016, art. 13",
+    "trecho": "poderá negar o consentimento ao acesso a seu conhecimento tradicional associado de origem identificável",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm",
+    "nivel": "oficial"
+  },
+  "criada_por": "CASO DE TESTE",
+  "data": "2026-10-16",
+  "nota": "Sem caminho_de_liberacao: fere a D-025 (toda barreira jurídica traz o porquê e um caminho). Deve reprovar."
+}

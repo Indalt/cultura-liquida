@@ -1,0 +1,23 @@
+{
+  "id": "G-sisgen-teste-sem-limites",
+  "titulo": "CASO DE TESTE: guia sem a lista de limites (deve reprovar)",
+  "por_que_barrado": [
+    {
+      "explicacao": "O cadastro é declaratório.",
+      "norma": "Lei 13.123/2015, art. 2º, XII",
+      "trecho": "instrumento declaratório obrigatório das atividades de acesso ou remessa de patrimônio genético ou de conhecimento tradicional associado",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
+      "nivel": "oficial"
+    }
+  ],
+  "o_que_destravaria": ["cadastro no SisGen"],
+  "quem_pode_fazer": {"texto": "Pessoa natural ou jurídica nacional.", "nivel": "oficial", "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm"},
+  "passos": [
+    {"n": 1, "o_que_fazer": "Preencher o formulário do SisGen.", "onde": "https://sisgen.gov.br", "nivel": "não conferido"}
+  ],
+  "documentos": [],
+  "estado": "não iniciado",
+  "nao_conferido": ["telas do SisGen"],
+  "versao": "0.1.0",
+  "data": "2026-10-16"
+}

@@ -4,6 +4,7 @@ Uso:
     python scripts/validar.py <esquema> <arquivo> [<arquivo>...] [--minimo]
 
 <esquema>: nome em esquemas/ (ex.: conferencia, log) ou caminho.
+<arquivo>: "-" lê um objeto JSON da entrada padrão.
 --minimo: força o validador mínimo em Python puro (sem jsonschema).
 Saída: "PASSA" ou "REPROVA" por arquivo, com os erros. Código 0 se todos passam, 1 se algum reprova.
 """
@@ -39,7 +40,10 @@ def main() -> int:
     falhou = False
     for arq in a.arquivos:
         try:
-            erros = validar_arquivo(Path(arq), esquema, a.minimo)
+            if arq == "-":  # objeto JSON pela entrada padrão (agentes sem Write)
+                erros = validar_objeto(json.loads(sys.stdin.read()), esquema, a.minimo)
+            else:
+                erros = validar_arquivo(Path(arq), esquema, a.minimo)
         except (OSError, json.JSONDecodeError) as e:
             erros = [f"não foi possível ler: {e}"]
         print(f"{'PASSA' if not erros else 'REPROVA'}  {arq}")

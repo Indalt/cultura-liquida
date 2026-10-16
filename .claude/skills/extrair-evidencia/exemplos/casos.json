@@ -1,0 +1,11 @@
+{
+  "habilidade": "extrair-evidencia",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "exemplos do caso-piloto",
+      "espera": "pendente",
+      "criterio": "pendente: caso-piloto (Passo 1). Entradas reais do caso-piloto com as Evidências esperadas (trecho, localizador, voz) e um caso que deve reprovar (trecho não localizado marcado como localizado)."
+    }
+  ]
+}

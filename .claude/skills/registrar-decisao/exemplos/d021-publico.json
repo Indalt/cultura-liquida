@@ -1,0 +1,14 @@
+{
+  "id": "D-021",
+  "data": "2026-10-16",
+  "essencia": "O repositório é público. O que entra no Git é publicação aberta. O legado e os dados pessoais de terceiros continuam fora.",
+  "diretriz": "Antes de cada commit, rodar a busca de dado pessoal; nada de legado/ nem de dados de terceiros no Git. A proteção do main fica como está, com o dono liberado. Fechar o repositório é uma decisão futura.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-16",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seção 'Depois da parada (16/10/2026): repositório público'",
+  "palavras_conferidas": [
+    {"palavra": "privado", "sentido_confirmado": "deixou de valer: Vicente tornou o repositório público depois da janela 1"}
+  ],
+  "substitui": "D-021 de 15/10 (\"GitHub privado\")",
+  "marcador": "VIGENTE"
+}

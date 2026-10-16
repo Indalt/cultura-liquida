@@ -1,0 +1,9 @@
+{
+  "id": "D-030",
+  "data": "2026-10-16",
+  "essencia": "CASO DE TESTE: o agente escolheu sozinho a CLB do caso-piloto, sem perguntar a Vicente.",
+  "diretriz": "Começar o Passo 1 pela CLB escolhida pelo agente.",
+  "confirmada_por_vicente": false,
+  "fala_original_ref": "nenhuma",
+  "palavras_conferidas": []
+}

@@ -1,0 +1,91 @@
+{
+  "id": "G-sisgen-cadastro-de-acesso",
+  "titulo": "Cadastro de acesso no SisGen (Lei 13.123/2015)",
+  "por_que_barrado": [
+    {
+      "explicacao": "Se o trabalho do projeto for 'acesso' a conhecimento tradicional associado ou a patrimônio genético, o cadastro no SisGen tem de ser feito antes de divulgar os resultados. Enquanto não houver cadastro (ou a conclusão de que não é 'acesso'), o modo de fazer fica retido como Falta.",
+      "norma": "Lei 13.123/2015, art. 12, § 2º",
+      "trecho": "O cadastramento deverá ser realizado previamente à remessa, ou ao requerimento de qualquer direito de propriedade intelectual, ou à comercialização do produto intermediário, ou à divulgação dos resultados, finais ou parciais, em meios científicos ou de comunicação, ou à notificação de produto acabado ou material reprodutivo desenvolvido em decorrência do acesso.",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
+      "nivel": "oficial"
+    },
+    {
+      "explicacao": "O cadastro é declaratório: é uma declaração obrigatória, não um pedido de licença.",
+      "norma": "Lei 13.123/2015, art. 2º, XII",
+      "trecho": "cadastro de acesso ou remessa de patrimônio genético ou de conhecimento tradicional associado - instrumento declaratório obrigatório das atividades de acesso ou remessa de patrimônio genético ou de conhecimento tradicional associado",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
+      "nivel": "oficial"
+    }
+  ],
+  "o_que_destravaria": [
+    "concluir que a atividade do projeto não é 'acesso' (pesquisa ou desenvolvimento tecnológico sobre amostra ou sobre o conhecimento), com o raciocínio registrado; na dúvida, a Falta continua",
+    "fazer o cadastro de acesso no SisGen antes da divulgação e guardar o comprovante",
+    "para conhecimento tradicional de origem identificável, além do cadastro: o consentimento prévio informado da comunidade (que pode negá-lo; Decreto 8.772, art. 13)",
+    "consulta ao CGen (a forma de pedir não foi conferida; ver nao_conferido)"
+  ],
+  "quem_pode_fazer": {
+    "texto": "Pessoa natural ou jurídica nacional. Vicente, como pessoa natural e responsável pelo projeto (D-026), pode cadastrar. Para pesquisa sem finalidade de exploração econômica há formulário próprio no módulo de pesquisa científica.",
+    "nivel": "oficial",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm"
+  },
+  "passos": [
+    {
+      "n": 1,
+      "o_que_fazer": "Decidir se o trabalho é 'acesso'. Ler a definição de acesso (art. 2º, VIII) e registrar a conclusão. Sem conclusão firme, tratar como Falta (regra de Vicente).",
+      "onde": "Lei 13.123/2015, art. 2º, VIII; decisão de Vicente registrada no §8 da Fundação",
+      "como_preencher": "Registrar em uma linha: a atividade, se há pesquisa ou desenvolvimento tecnológico sobre amostra ou sobre o conhecimento, e a conclusão. A conclusão é de Vicente; o agente só prepara.",
+      "nivel": "oficial",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm"
+    },
+    {
+      "n": 2,
+      "o_que_fazer": "Se for acesso a conhecimento tradicional de origem identificável: obter e guardar a comprovação do consentimento prévio informado antes do cadastro (é um campo do formulário).",
+      "onde": "Decreto 8.772/2016, arts. 12 a 17 e art. 22, IV",
+      "como_preencher": "O comprovante fica fora do Git (contém dados de pessoas); no projeto entra só um ID opaco e a data.",
+      "nivel": "oficial",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm"
+    },
+    {
+      "n": 3,
+      "o_que_fazer": "Reunir as informações que o formulário exige: identificação do usuário; resumo da atividade e objetivos; resultados esperados ou obtidos; equipe; período; identificação do conhecimento tradicional ou do patrimônio genético no nível taxonômico mais estrito possível; instituições parceiras; cadastro anterior; consentimento, quando for o caso; pedido de sigilo; declaração de isenção ou não incidência de repartição de benefícios.",
+      "onde": "Decreto 8.772/2016, art. 22 (e art. 22-A para pesquisa sem exploração econômica, com procedência ao menos em nível de município)",
+      "como_preencher": "O agente deixa um rascunho com cada campo e a fonte do que for preenchido; campos sem dado ficam em branco para Vicente. Nada é inventado.",
+      "nivel": "oficial",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm"
+    },
+    {
+      "n": 4,
+      "o_que_fazer": "Entrar no SisGen e preencher o formulário eletrônico de cadastro de acesso (no módulo de pesquisa científica, se não houver exploração econômica).",
+      "onde": "https://sisgen.gov.br (a página redireciona para o login)",
+      "como_preencher": "Telas, forma de login (gov.br ou certificado), módulo de segurança e anexos: NÃO CONFERIDOS. Há só fonte secundária de 2017-2018, possivelmente desatualizada. Conferir no Manual do SisGen atual antes de usar este passo.",
+      "nivel": "não conferido"
+    },
+    {
+      "n": 5,
+      "o_que_fazer": "Guardar o comprovante de cadastro emitido automaticamente pelo SisGen e mudar o estado da Falta para 'liberado', com a data e a referência do comprovante.",
+      "onde": "Decreto 8.772/2016, art. 23",
+      "como_preencher": "O comprovante fica fora do Git; na Falta entram o número do cadastro e a data.",
+      "nivel": "oficial",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm"
+    }
+  ],
+  "documentos": [
+    "rascunho dos campos do art. 22 ou 22-A do Decreto 8.772, preparado pelo agente",
+    "comprovação do consentimento prévio informado, quando o conhecimento for de origem identificável",
+    "comprovante de cadastro (emitido pelo SisGen)"
+  ],
+  "exige_profissional": false,
+  "limites": [
+    "o agente orienta e prepara; nunca autoriza, nunca protocola e nunca preenche o cadastro em nome de Vicente",
+    "a conclusão sobre ser ou não 'acesso' é de Vicente; não existe orientação do CGen sobre acervo histórico-cultural (plano, item 7)",
+    "quem contribui nunca consente em nome de uma comunidade; o consentimento é só da comunidade",
+    "este guia não é parecer jurídico; antes da fase 2, a consulta pontual com advogado continua prevista"
+  ],
+  "estado": "não iniciado",
+  "nao_conferido": [
+    "telas do SisGen, login, módulo de segurança e documentos a anexar (C1.4)",
+    "texto integral da Res. CGen 47/2025 e se ela prevê consulta voluntária (C1.5)"
+  ],
+  "versao": "0.1.0",
+  "data": "2026-10-16"
+}

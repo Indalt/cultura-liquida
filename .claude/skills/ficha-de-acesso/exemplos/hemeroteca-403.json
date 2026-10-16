@@ -1,0 +1,20 @@
+{
+  "fonte_do_exemplo": "trilhas/2026-10-15_pesquisa/w16qvy0xk.output.json (frente FH) e indice.md, seção 1; teste de 15/10/2026",
+  "nome": "Hemeroteca Digital Brasileira (Biblioteca Nacional)",
+  "tipo": "hemeroteca nacional: jornais e revistas digitalizados",
+  "acesso": "Web gratuita (DocReader). Alguns títulos só nos terminais da BN, e PDF só para os títulos sem restrição autoral.",
+  "como_buscar": "Abas Periódico, Período e Local, mais um termo. Aspas para frase; + (e), - (não), | (ou) com parênteses; * no início ou no fim; acento indiferente.",
+  "endpoint": "memoria.bn.gov.br; não há API pública documentada",
+  "link_permanente": "DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (secundária; a BN não declara que é permanente)",
+  "texto_integral": "OCR usado na busca, com falhas; o PDF do fascículo tem texto pesquisável quando é liberado",
+  "termos": "A BN não licencia imagens; domínio público por tipo de obra",
+  "uso": "escavação",
+  "nivel": "oficial",
+  "teste": {
+    "data": "2026-10-15",
+    "pedido": "leitura automática da página de busca",
+    "resposta": "HTTP 403 (acesso negado)",
+    "observacao": "bloqueio vale para este leitor; não se contorna (o recurso do pyHDB para contornar foi descartado). Via: busca humana no navegador, ou mutirão."
+  },
+  "decisao": "falta: fonte_inacessivel para leitura automática; via humana"
+}

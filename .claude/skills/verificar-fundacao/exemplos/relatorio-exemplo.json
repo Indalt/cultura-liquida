@@ -1,0 +1,21 @@
+{
+  "arquivo": "d018-sem-traduzivel.md",
+  "data": "2026-10-16",
+  "verificador": "auditor (verificar-fundacao 0.1.0)",
+  "olhar": "a-decisoes",
+  "achados": [
+    {
+      "id": "A-001",
+      "tipo": "divergencia_de_essencia",
+      "descricao": "D-018 perdeu 'traduzível': a essência confirmada diz 'uma episteme própria, mas traduzível'",
+      "linha": 5,
+      "trecho": "É uma episteme própria e deve ser tratada como dimensão.",
+      "confirmacao": {
+        "metodo": "script",
+        "comando": "python scripts/checar_fundacao.py .claude/skills/verificar-fundacao/exemplos/d018-sem-traduzivel.md --so-essencias --essencias .claude/skills/escrever-secao-fundacao/referencias/essencias.json",
+        "saida": "D-018: faltam termos da essência confirmada: traduzível"
+      },
+      "estado": "confirmado"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "habilidade": "executar-brief",
+  "rodada": "A",
+  "casos": [
+    {"nome": "conta real da janela 1 antes do C2: pode", "espera": "passa",
+     "comando": ["scripts/orcamento.py", "--teto", "600000", "--medidos", "81852", "--estimativa", "60000"],
+     "saida_contem": "folga = 600.000 - 81.852 = 518.148",
+     "criterio": "a mesma conta registrada no checklist em 16/10"},
+    {"nome": "folga menor que 2x o maior lote: parar", "espera": "reprova",
+     "comando": ["scripts/orcamento.py", "--teto", "600000", "--medidos", "300000", "200000", "--estimativa", "60000"],
+     "saida_contem": "regra 2 falhou",
+     "criterio": "a regra da folga manda parar com o estado salvo"},
+    {"nome": "log real do teste do auditor (Bloco 2.5)", "espera": "passa", "esquema": "log",
+     "entrada": ".claude/skills/executar-brief/exemplos/log-teste-auditor.json",
+     "criterio": "linha completa gravada pelo curador depois do teste do passo 2.5.5"},
+    {"nome": "log com e-mail de terceiro é recusado", "espera": "reprova",
+     "comando": ["scripts/registrar_log.py", ".claude/skills/executar-brief/exemplos/erro-log-com-email.json", "--simular"],
+     "saida_contem": "dado pessoal de terceiros",
+     "criterio": "registrar_log.py reprova dado pessoal de terceiros"}
+  ]
+}

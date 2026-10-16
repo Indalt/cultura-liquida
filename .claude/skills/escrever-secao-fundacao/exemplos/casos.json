@@ -1,0 +1,22 @@
+{
+  "habilidade": "escrever-secao-fundacao",
+  "rodada": "A",
+  "casos": [
+    {"nome": "§9 pelas essências da seção 2", "espera": "passa",
+     "comando": ["scripts/checar_fundacao.py", ".claude/skills/escrever-secao-fundacao/exemplos/secao9-boa.md", "--so-essencias",
+                 "--essencias", ".claude/skills/escrever-secao-fundacao/referencias/essencias.json",
+                 "--falas", ".claude/skills/escrever-secao-fundacao/referencias/falas.json"],
+     "criterio": "cada D-nnn tem os termos-chave da essência e nenhuma frase da fala original"},
+    {"nome": "D-018 como transcrição literal da fala", "espera": "reprova",
+     "comando": ["scripts/checar_fundacao.py", ".claude/skills/escrever-secao-fundacao/exemplos/secao9-transcricao.md", "--so-essencias",
+                 "--essencias", ".claude/skills/escrever-secao-fundacao/referencias/essencias.json",
+                 "--falas", ".claude/skills/escrever-secao-fundacao/referencias/falas.json"],
+     "saida_contem": "transcricao_no_lugar_da_essencia",
+     "criterio": "transcrição no lugar da essência é recusada"},
+    {"nome": "AGENTS.md segue as essências", "espera": "passa",
+     "comando": ["scripts/checar_fundacao.py", "AGENTS.md", "--so-essencias",
+                 "--essencias", ".claude/skills/escrever-secao-fundacao/referencias/essencias.json",
+                 "--falas", ".claude/skills/escrever-secao-fundacao/referencias/falas.json"],
+     "criterio": "o resumo do projeto também usa a essência, não a fala"}
+  ]
+}

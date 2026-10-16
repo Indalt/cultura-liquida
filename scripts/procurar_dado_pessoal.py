@@ -50,6 +50,12 @@ PADROES = [
         r"/@?[A-Za-z0-9_.-]{2,}|youtube\.com/(?:@|c/|channel/|user/)[A-Za-z0-9_.-]+", re.I)),
 ]
 
+# Casos de teste que DEVEM conter um dado pessoal fictício para provar que o registrar_log.py o recusa.
+# Só a varredura de arquivos os pula; a função achar() (usada pelo registrar_log.py) continua acusando.
+FIXTURES_COM_DADO_FICTICIO = {
+    ".claude/skills/executar-brief/exemplos/erro-log-com-email.json",
+}
+
 EXT_ARQUIVO = re.compile(r"\.(md|json|jsonl|py|txt|csv|yml|yaml|html)$", re.I)
 IGNORAR_PASTAS = {".git", ".venv", "legado", "__pycache__", "node_modules"}
 EXT_TEXTO = {".md", ".json", ".jsonl", ".py", ".txt", ".csv", ".yml", ".yaml", ".html", ".gitignore", ""}
@@ -110,6 +116,11 @@ def main() -> int:
             total += 1
     arqs = arquivos_git() if a.git else arquivos_de(a.caminhos)
     for f in arqs:
+        try:
+            if f.resolve().relative_to(RAIZ).as_posix() in FIXTURES_COM_DADO_FICTICIO:
+                continue
+        except ValueError:
+            pass
         try:
             texto = f.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):

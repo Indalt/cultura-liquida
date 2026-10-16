@@ -1,0 +1,15 @@
+{
+  "habilidade": "ficha-de-acesso",
+  "rodada": "B",
+  "casos": [
+    {"nome": "Hemeroteca respondendo 403", "espera": "pendente",
+     "entrada": ".claude/skills/ficha-de-acesso/exemplos/hemeroteca-403.json",
+     "criterio": "exemplo real pronto; validador pendente do contrato de Ambiente (Passo 1). Aceitação: teste com data e resposta literal; bloqueio registrado e não contornado; decisão = falta com via humana"},
+    {"nome": "API da BDTD funcionando", "espera": "pendente",
+     "entrada": ".claude/skills/ficha-de-acesso/exemplos/bdtd-api.json",
+     "criterio": "exemplo real pronto; validador pendente (Passo 1). Aceitação: endpoint, link permanente, termos e cobertura com data; decisão = aceito"},
+    {"nome": "Querido Diário instável", "espera": "pendente",
+     "entrada": ".claude/skills/ficha-de-acesso/exemplos/querido-diario-instavel.json",
+     "criterio": "exemplo real pronto; validador pendente (Passo 1). Aceitação: falhas registradas tal como vieram; 'não conferido' onde cabe"}
+  ]
+}

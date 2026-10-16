@@ -1,0 +1,15 @@
+{
+  "arquivo": "00_Fundacao_Cultura_Liquida.md",
+  "data": "2026-10-16",
+  "verificador": "CASO DE TESTE",
+  "olhar": "b-contradicoes",
+  "achados": [
+    {
+      "id": "A-001",
+      "tipo": "contradicao",
+      "descricao": "o §5 parece contradizer o §2 sobre o repositório",
+      "confirmacao": {"metodo": "grep", "comando": "impressão de leitura"},
+      "estado": "confirmado"
+    }
+  ]
+}

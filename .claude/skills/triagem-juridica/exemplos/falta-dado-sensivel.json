@@ -1,0 +1,21 @@
+{
+  "id": "F-0001",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "dado_sensivel",
+  "o_que_falta": "base legal para tratar os dados sensíveis do relato E-0001 (religião, saúde e ligação a comunidade tradicional de pessoa identificável)",
+  "por_que": "No uso coletivo o projeto vira controlador dos dados de quem contribui, e dado sensível só pode ser tratado com base legal própria. Até haver base legal, o trecho com esses dados não é usado nem publicado.",
+  "onde_aparece": ["entrada E-0001"],
+  "norma": {
+    "referencia": "LGPD (Lei 13.709/2018), art. 11",
+    "trecho": "não conferido: o texto do art. 11 ainda não foi lido na fonte oficial (fica para o passo em que entra, brief, Bloco 2)",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "nivel": "não conferido"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-lgpd-consentimento-e-titular (a preparar)",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico (triagem-juridica 0.1.0)",
+  "data": "2026-10-16",
+  "nota": "Caso de exemplo construído a partir do 16-J; sem pessoa real."
+}

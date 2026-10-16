@@ -1,0 +1,21 @@
+{
+  "fonte_do_exemplo": "trilhas/2026-10-15_pesquisa/w16qvy0xk.output.json (frente PA) e indice.md; teste de 15/10/2026",
+  "nome": "BDTD — Biblioteca Digital Brasileira de Teses e Dissertações (IBICT)",
+  "tipo": "agregador de metadados de teses e dissertações",
+  "acesso": "Aberta, sem cadastro. API do VuFind em JSON e RSS 2.0 de qualquer busca.",
+  "como_buscar": "Monitoramento: rodar cada consulta (termo e variantes) toda semana, paginar até o total e anotar só os IDs fora das pegadas. Escavação: a mesma paginação completa a cada consulta nova; depois, buscar o texto no repositório de origem.",
+  "endpoint": "https://bdtd.ibict.br/vufind/api/v1/search?lookfor=<consulta>&limit=<n> ; RSS: https://bdtd.ibict.br/vufind/Search/Results?lookfor=<consulta>&type=AllFields&view=rss",
+  "link_permanente": "https://bdtd.ibict.br/vufind/Record/<id> e o handle da instituição",
+  "texto_integral": "Não. O registro aponta o repositório da instituição (campo urls).",
+  "termos": "Nenhum limite de uso publicado foi encontrado. Proposta: 1 requisição por segundo, com o robô identificado.",
+  "cobertura": "1.156.392 registros (822.991 dissertações e 333.401 teses) em 15/10/2026",
+  "uso": "ambos",
+  "nivel": "oficial",
+  "teste": {
+    "data": "2026-10-15",
+    "pedido": "API v1 search",
+    "resposta": "funcionou (JSON)",
+    "observacao": "o RSS data cada item em 1º de janeiro do ano de publicação, não na entrada na base; a busca por 'cauim' trouxe também itens sem relação"
+  },
+  "decisao": "aceito como via automática"
+}

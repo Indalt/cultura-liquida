@@ -1,0 +1,15 @@
+{
+  "habilidade": "registrar-decisao",
+  "rodada": "A",
+  "casos": [
+    {"nome": "D-025: 'por princípio' era 'de início'", "espera": "passa", "esquema": "decisao",
+     "entrada": ".claude/skills/registrar-decisao/exemplos/d025-de-inicio.json",
+     "criterio": "palavra ambígua conferida e anotada; essência confirmada; fala só por referência"},
+    {"nome": "D-021: repositório passou a público", "espera": "passa", "esquema": "decisao",
+     "entrada": ".claude/skills/registrar-decisao/exemplos/d021-publico.json",
+     "criterio": "decisão que substitui outra traz 'substitui' e a confirmação"},
+    {"nome": "diretriz sem confirmação de Vicente", "espera": "reprova", "esquema": "decisao",
+     "entrada": ".claude/skills/registrar-decisao/exemplos/erro-sem-confirmacao.json",
+     "criterio": "sem confirmação não há decisão (memória 'registrar a essência')"}
+  ]
+}

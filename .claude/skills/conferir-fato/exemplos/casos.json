@@ -1,0 +1,18 @@
+{
+  "habilidade": "conferir-fato",
+  "rodada": "A",
+  "casos": [
+    {"nome": "C1 real (jurídico essencial, nível no item)", "espera": "passa", "esquema": "conferencia",
+     "entrada": "trilhas/2026-10-16_conferencias/lote-C1.json",
+     "criterio": "saída real do lote C1 de 16/10; cada item oficial tem URL e citação"},
+    {"nome": "C2 real (padrões e serviços, nível por parte)", "espera": "passa", "esquema": "conferencia",
+     "entrada": "trilhas/2026-10-16_conferencias/lote-C2.json",
+     "criterio": "saída real do lote C2 de 16/10; partes oficiais, secundárias e não conferidas"},
+    {"nome": "oficial sem URL", "espera": "reprova", "esquema": "conferencia",
+     "entrada": ".claude/skills/conferir-fato/exemplos/erro-oficial-sem-url.json",
+     "criterio": "o item C1.1 marcado oficial teve a URL removida: o validador deve recusar"},
+    {"nome": "oficial sem citação, em parte", "espera": "reprova", "esquema": "conferencia",
+     "entrada": ".claude/skills/conferir-fato/exemplos/erro-parte-oficial-sem-citacao.json",
+     "criterio": "uma parte oficial sem citação literal: o validador deve recusar"}
+  ]
+}

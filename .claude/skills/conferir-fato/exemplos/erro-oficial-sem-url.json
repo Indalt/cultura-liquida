@@ -1,0 +1,18 @@
+{
+  "lote": "C1",
+  "data": "2026-10-16",
+  "modelo": "sonnet-5.5",
+  "esforco": "alto",
+  "chamadas_usadas": 18,
+  "itens": [
+    {
+      "id": "C1.1",
+      "pergunta": "Lei 9.610/1998: em qual inciso do art. 7º estão as obras orais (conferências, alocuções, sermões)? Texto literal do art. 46, II.",
+      "resposta": "Art. 7º, inciso II.",
+      "citacao": "II - as conferências, alocuções, sermões e outras obras da mesma natureza;",
+      "nivel": "oficial",
+      "observacao": "CASO DE TESTE: cópia do C1.1 real sem o campo url. Deve reprovar."
+    }
+  ],
+  "nao_conferido": []
+}

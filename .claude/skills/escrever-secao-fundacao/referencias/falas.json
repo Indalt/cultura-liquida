@@ -1,0 +1,28 @@
+{
+  "fonte": "trilhas/2026-10-15_pesquisa/vamos-planejar-com-as-modular-kurzweil.md, linhas 7-49 ('O que Vicente decidiu em 15/10 e 16/10'). São falas originais de Vicente: ficam só na trilha. Na Fundação vai a essência, nunca a transcrição.",
+  "uso": "scripts/checar_fundacao.py --falas: uma frase daqui (6 palavras ou mais) encontrada literalmente no texto é achado 'transcricao_no_lugar_da_essencia'.",
+  "falas": [
+    {"id": "D-017", "frases": ["nunca usar exemplos para limitar o nosso trabalho"]},
+    {"id": "D-018", "frases": [
+      "a matriz identificada como prática comum e não como prática de um indivíduo",
+      "uma episteme própria, mas não como algo impossível de tradução",
+      "é o modo como se entende do que se pode coletar",
+      "quando não é possível captar a compreensão local, se diz isso como falta e não se tenta completar",
+      "o saber comum muda com o tempo de forma autóctone ou em razão de interações de conhecimentos com outras comunidades"
+    ]},
+    {"id": "D-019", "frases": [
+      "uma fonte contrária não corrige evidência por nós, apenas documenta",
+      "uma prática lida como atendendo aos critérios de prática cultural será admitida como evidência e pode ignorar as tentativas de revisionismo"
+    ]},
+    {"id": "D-020", "frases": [
+      "se o agente jurídico percebe que não se pode falar por questões de direito autoral"
+    ]},
+    {"id": "D-021", "frases": [
+      "se for possível alimentar a nuvem com as buscas e os tratamentos por IA vamos considerar",
+      "não é necessário Google se não é necessário"
+    ]},
+    {"id": "D-022", "frases": ["Práticas culturais têm critérios objetivos na legislação brasileira"]},
+    {"id": "D-023", "frases": ["se deve medir para parar antes de acabarem"]},
+    {"id": "D-024", "frases": ["vamos apenas aproveitar o que já foi coletado se for verificável e condizente com as novas regras"]}
+  ]
+}

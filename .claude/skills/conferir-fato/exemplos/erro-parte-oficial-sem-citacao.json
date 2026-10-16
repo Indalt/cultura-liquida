@@ -1,0 +1,19 @@
+{
+  "lote": "C2",
+  "data": "2026-10-16",
+  "modelo": "sonnet-5.5",
+  "esforco": "alto",
+  "chamadas_usadas": 18,
+  "itens": [
+    {
+      "id": "C2.1",
+      "pergunta": "TK Labels (Local Contexts): quem aplica?",
+      "resposta": "Só conta de comunidade no Hub do Local Contexts.",
+      "partes": [
+        {"afirmacao": "Quem aplica: apenas conta de comunidade", "url": "https://localcontexts.org/support/frequently-asked-questions/", "nivel": "oficial"}
+      ],
+      "observacao": "CASO DE TESTE: parte do C2.1 real sem a citação literal. Deve reprovar."
+    }
+  ],
+  "nao_conferido": []
+}

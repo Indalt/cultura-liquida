@@ -1,0 +1,11 @@
+{
+  "id": "F-9002",
+  "tipo": "compreensao_local_nao_captada",
+  "o_que_falta": "como a comunidade entende a bebida (W)",
+  "por_que": "a fonte só traz a leitura do pesquisador, sem a fala de quem pratica",
+  "onde_aparece": ["ficha da CLB, coordenada W"],
+  "valor_inferido": "provavelmente entendida como bebida ritual",
+  "criada_por": "CASO DE TESTE",
+  "data": "2026-10-16",
+  "nota": "A Falta foi completada por inferência (campo valor_inferido): fere a regra 'a Falta é dita, nunca completada' (D-018). Deve reprovar."
+}

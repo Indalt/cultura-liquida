@@ -1,0 +1,9 @@
+{
+  "habilidade": "consulta",
+  "rodada": "B",
+  "casos": [
+    {"nome": "'cauim' em quatro bases + bola de neve do Boletim Goeldi", "espera": "pendente",
+     "entrada": ".claude/skills/consulta/exemplos/cauim-totais.json",
+     "criterio": "exemplo real pronto; validador pendente do contrato de Consulta (Passo 1). Aceitação: total informado e data por base; total visto nunca maior que o informado; 'não exaurido' até tudo ser visto e a bola de neve não trazer nada novo; país e idioma só anotam"}
+  ]
+}

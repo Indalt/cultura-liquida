@@ -1,0 +1,22 @@
+{
+  "fonte_do_exemplo": "trilhas/2026-10-15_pesquisa/wviefxn3h.output.json (lote A) e indice.md; testes de 15/10/2026",
+  "nome": "Querido Diário (API)",
+  "tipo": "diários oficiais municipais",
+  "acesso": "API REST aberta, JSON, sem chave. Documentação Swagger em api.queridodiario.org.br/docs.",
+  "como_buscar": "GET /gazettes?querystring=...&territory_ids=...&published_since=...&size=...&excerpt_size=...&number_of_excerpts=... A busca de texto tem muito ruído e o total aparece capado em 10000: restringir por município e por data, com frases curtas.",
+  "endpoint": "https://api.queridodiario.org.br/gazettes",
+  "link_permanente": "https://data.queridodiario.ok.org.br/{ibge}/{data}/{hash}.pdf (PDF e .txt por edição)",
+  "texto_integral": "sim, por edição (.txt)",
+  "termos": "licença não conferida; a página de docs não trouxe texto legível",
+  "robots": "api.queridodiario.org.br/robots.txt: resposta vazia; não conferido",
+  "cobertura": "municípios cobertos pelo projeto, com datas variadas (apareceram 2017 a 2025); cobertura não uniforme",
+  "uso": "ambos",
+  "nivel": "oficial",
+  "teste": {
+    "data": "2026-10-15",
+    "pedido": "5 chamadas à API",
+    "resposta": "3 de 5 funcionaram; houve 'Internal Server Error' e 'no available server'",
+    "observacao": "a WebFetch falhou por SSL; só o curl funcionou. Instável: repetir com intervalo e registrar cada falha."
+  },
+  "decisao": "aceito como via automática, com repetição e registro de falhas"
+}
