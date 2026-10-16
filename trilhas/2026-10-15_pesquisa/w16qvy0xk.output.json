@@ -1,0 +1,1836 @@
+{
+  "summary": "Pesquisa e verifica fontes de busca, admissão de dados e pessoas, trabalho coletivo, região, continuidade e ferramentas por tier para a Fundação v0.2",
+  "agentCount": 14,
+  "logs": [
+    "Lançando 10 frentes de pesquisa; cada uma segue direto para o seu verificador.",
+    "[pesquisa:metodos-de-busca] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[pesquisa:admissao-pessoas-oralidade] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[pesquisa:trabalho-coletivo] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[pesquisa:regiao-lugar] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[pesquisa:continuidade-exaustao] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[pesquisa:tiers-ferramentas-acao] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[verifica:fontes-historicas] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[verifica:fontes-academicas] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[verifica:fontes-contemporaneas-oralidade] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "[pesquisa:fontes-oficiais-patrimonio] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)",
+    "Frentes sem resultado: fontes-oficiais-patrimonio, metodos-de-busca, admissao-pessoas-oralidade, trabalho-coletivo, regiao-lugar, continuidade-exaustao, tiers-ferramentas-acao",
+    "3 frentes concluídas. Rodando o crítico de completude.",
+    "[critico-completude] failed: You've hit your session limit · resets 10am (America/Sao_Paulo)"
+  ],
+  "result": {
+    "fronts": [
+      {
+        "front": "FH: Fontes históricas digitalizadas e imprensa (de 1900 em diante, e anteriores pelo eixo Z elástico)",
+        "summary": "Conferi 20 fontes históricas e de imprensa. Em 15/10, 8 delas recusaram nosso leitor automático em pelo menos uma página (HTTP 403, que quer dizer \"acesso negado\"), e o SIAN pediu captcha. Além disso, a busca por palavra só encontra o que o OCR leu bem. Por isso, \"exaurir\" uma fonte precisa ser medido por recorte, com cursor e cobertura, e a conferência dos trechos precisa de uma escada que vai da máquina à pessoa e que caiba na cota de Vicente. As 8 propostas (FH-1 a FH-8) partem dos itens 2, 3, 5, 6, 9, 10 e 11 do plano. Na v0.2 de 00_Fundacao_Cultura_Liquida.md, elas entram em §5.2–§5.4, §6, §7 (Passos 1, 4, 5 e 9) e no Anexo C.3.",
+        "answers": [
+          {
+            "question": "O plano também deve considerar a revisão das fontes de busca e como estas buscas podem ser feitas?",
+            "answer": "Sim, e nesta frente há o que melhorar. Conferi 20 fontes e encontrei três coisas que o plano ainda não trata. Primeiro, muitas recusam robôs: em 15/10, 8 delas devolveram 'acesso negado' ao nosso leitor automático, e o SIAN pediu captcha, aquele teste de 'não sou robô'. Segundo, cada fonte tem sua própria linguagem de busca: a Hemeroteca aceita aspas, +, -, | e *, e o Gallica filtra até pela qualidade do OCR, que é o texto que a máquina leu da imagem da página. Terceiro, a busca por palavra só acha o que o OCR leu bem. Proponho uma ficha de acesso testada para cada fonte (FH-1), consultas escritas na sintaxe de cada uma (FH-4) e a regra de nunca contornar proteção anti-robô: o que ela barra vira trabalho de pessoa, pedido à instituição ou Falta."
+          },
+          {
+            "question": "E o modo de admissão de novos dados, incluindo a admissão de pessoas, oralidades etc.?",
+            "answer": "Nas fontes históricas, a voz das pessoas chega por meio de quem escreveu: um jornal pode citar quem faz a bebida, mas quem escreve é o repórter, o médico ou o folclorista. Proponho registrar quem fala em cada trecho (FH-5). A fala citada de quem pratica pode ancorar a compreensão local (W); a leitura de quem escreve é a perspectiva da fonte; e, sem a fala de quem pratica, a W fica como Falta. Pessoas citadas pelo nome passam pelo agente Jurídico (item 7). Áudios e WhatsApp seguem adiados (P48), e não proponho rever essa decisão."
+          },
+          {
+            "question": "O modelo de ingestão e de trabalho coletivo pode ser melhorado? Uma ferramenta de uso coletivo tem o mesmo tratamento de um trabalho individual?",
+            "answer": "O registro pode ser o mesmo, mas o tratamento não deve ser igual. No trabalho individual, a segunda leitura de um trecho é feita pelo script ou pela cota de Vicente. No coletivo entram regras que hoje não existem: reservar um recorte para não duplicar trabalho; quem transcreve não valida o próprio trecho (como no Wikisource, onde 'validada' exige duas pessoas diferentes); leituras divergentes ficam lado a lado; a identidade fica fora do Git; e quem contribuiu recebe a devolutiva (FH-6)."
+          },
+          {
+            "question": "O wiki está organizado por região (bioma, estados, localidades)?",
+            "answer": "Ainda não. A v0.1 só tem 'territórios' como campo da ficha (§6) e nenhuma vista por região no wiki (§5.7). Nas fontes históricas existem dois lugares, o de onde o texto foi publicado e o de que ele fala, e os nomes mudam com o tempo. Proponho guardar o nome como está na fonte e ligá-lo ao código atual do município no IBGE quando não houver dúvida. O bioma viria da tabela do IBGE de 2024, marcado como derivado, porque o próprio IBGE diz que ela tem só fim estatístico (FH-5)."
+          },
+          {
+            "question": "As fontes não devem ser consideradas exauridas quando se coleta apenas 15 CLB, correto?",
+            "answer": "Correto. O 15 é o tamanho do lote de cada rodada (P94), não um limite de coleta. Uma fonte só se esgota para uma consulta e um período, quando todas as ocorrências que a própria fonte informa foram abertas e triadas, com todas as variantes. Mesmo assim, isso significa 'percorrida pela busca', não 'lida por inteiro': um estudo sobre a Hemeroteca mostrou que a busca não acha todas as vezes em que o termo aparece, por causa do OCR. Uma variante nova, um título novo ou um OCR refeito reabrem o recorte (FH-2)."
+          },
+          {
+            "question": "Como vamos organizar as continuidades do trabalho em cima das fontes?",
+            "answer": "Com recortes que guardam onde paramos (FH-2). Cada recorte junta fonte, consulta, período, lugar de publicação e modo: busca por termo, busca por descritores ou folheio, que é ler página por página. O recorte guarda o estado, o total de ocorrências informado pela fonte, quantas foram abertas, um cursor (a marca da última edição ou página vista) e quem trabalhou nele. Toda sessão, pessoa ou rotina começa lendo o cursor. A Matriz de Pegadas e Vácuos é gerada dos recortes, e um canal de novidades em cada fonte reabre o que mudou (FH-7)."
+          },
+          {
+            "question": "Para os tiers de uso, está considerada também a criação de ferramentas de ação para além de ser informativo? Criação de planos de aula etc.",
+            "answer": "Em parte. A v0.1 prevê um planejador de aulas sob demanda (§1, §7 Passo 9, D-006), mas os tiers (§5.9) só ordenam o que cada grupo vê primeiro. Desta frente, proponho o kit de fonte primária (FH-8): a página com link permanente, a transcrição conferida, quem fala, onde e quando, e a situação de direitos pela tabela da BN. Aulas, oficinas e dossiês são montados com esses kits, e o tier só decide quais aparecem primeiro."
+          },
+          {
+            "question": "Quanto isso custa em horas de Vicente?",
+            "answer": "Ainda não sabemos, e não vou apresentar uma estimativa como se fosse medida (P96); o caso-piloto mede os minutos por página aberta e por trecho conferido. Pela conta do próprio plano (item 9: até 15 juízos em 1,25 a 2,5 h), cada conferência humana leva de 5 a 10 minutos, então a cota confere no máximo 15 trechos de OCR ruim por semana. Por isso a máquina vem primeiro, e o excedente fica como Falta visível, sem travar a coleta (FH-3). Já a escavação em fontes que recusam robôs, como a Hemeroteca e o SIAN, não é curadoria e não cabe nas 1 a 3 h. Ela precisa de outro braço (coletivo ou acordo com a instituição) ou de horas que Vicente decida acrescentar; até lá, o recorte fica declarado como não percorrido."
+          }
+        ],
+        "sources": [
+          {
+            "name": "Hemeroteca Digital Brasileira (Biblioteca Nacional)",
+            "kind": "hemeroteca nacional: jornais e revistas digitalizados",
+            "access": "Web gratuita (DocReader). Alguns títulos só nos terminais da BN, e PDF só para os títulos sem restrição autoral. Recusou nosso leitor automático (403) em 15/10.",
+            "how_to_search": "Abas Periódico, Período e Local, mais um termo. Aspas para frase; + (e), - (não), | (ou) com parênteses; * no início ou no fim; acento indiferente. Mostra contador de ocorrências e as páginas com ocorrência em cada edição.",
+            "use": "escavação",
+            "level": "oficial",
+            "coverage": "Periódicos brasileiros dos séculos XIX e XX (a amplitude total não foi conferida).",
+            "endpoint": "memoria.bn.gov.br. A URL de busca segue DocReader…?bib=<acervo>&pasta=ano%20<década>&pesq=<termo> (secundária). Não encontrei API pública documentada.",
+            "fulltext": "OCR usado na busca, com falhas (Brasil e Nascimento, 2020). O PDF do fascículo tem texto pesquisável quando é liberado.",
+            "permalink": "DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (secundária; a BN não declara que é permanente).",
+            "relevance": "Alta: imprensa de todo o país a partir de 1900, com recorte por local de publicação.",
+            "terms": "A BN não licencia imagens. Domínio público por tipo de obra (fascículo: 70 anos após a publicação; artigo assinado: 70 anos após a morte do autor; foto: 70 anos após a divulgação). Download só para uso privativo. Não contornar a proteção anti-robô."
+          },
+          {
+            "name": "Projeto Resgate Barão do Rio Branco (BN)",
+            "kind": "manuscritos coloniais digitalizados (Arquivo Histórico Ultramarino e outros)",
+            "access": "Web gratuita (DocReader).",
+            "how_to_search": "Catálogos por capitania e catálogos temáticos (ex.: 'Fauna, flora e cultura na região do semiárido'), com resumo, data e código AHU de cada documento.",
+            "use": "escavação",
+            "level": "oficial",
+            "coverage": "Documentação manuscrita anterior a 1822 (eixo Z elástico).",
+            "endpoint": "resgate.bn.br/docreader/docmulti.aspx?bib=resgate",
+            "fulltext": "Os resumos dos catálogos são texto. Imagens dos manuscritos sem texto pesquisável (não conferido).",
+            "permalink": "Código AHU (ex.: AHU_ACL_CU_004, caixa, documento).",
+            "relevance": "Média: contexto colonial de insumos e bebidas. No catálogo de Alagoas, só aparece 'vinho' para uso religioso.",
+            "terms": "Não conferido."
+          },
+          {
+            "name": "BNDigital — Acervo Digital (BN)",
+            "kind": "biblioteca digital nacional: obras raras, manuscritos, iconografia, periódicos",
+            "access": "Web. O site recusou nosso leitor (403) em 15/10.",
+            "how_to_search": "Busca pelo nome no Acervo Digital, segundo o guia da BN. Recursos avançados não conferidos.",
+            "use": "escavação",
+            "level": "oficial",
+            "endpoint": "bndigital.bn.gov.br/acervodigital (existência confirmada pelo guia oficial; API e OAI-PMH não conferidos).",
+            "relevance": "Média a alta (a conferir): obras raras e iconografia."
+          },
+          {
+            "name": "Biblioteca Brasiliana Guita e José Mindlin (USP)",
+            "kind": "biblioteca digital: livros, periódicos, folhetos, manuscritos, imagens",
+            "access": "Aberto, com PDF de cada item.",
+            "how_to_search": "Busca simples e navegação por autor, assunto, data e coleção. Busca no texto não declarada.",
+            "use": "escavação",
+            "level": "oficial",
+            "coverage": "Em 15/10: Livros 2874, Periódicos 433, Folhetos 415, Imagens 578 (contagens da página inicial).",
+            "endpoint": "digital.bbm.usp.br (DSpace). OAI-PMH e RSS não encontrados nos caminhos padrão (404).",
+            "fulltext": "PDF; camada de texto não declarada.",
+            "permalink": "/handle/bbm/<número>",
+            "relevance": "Alta: obras raras sobre o Brasil (relatos a conferir item a item).",
+            "terms": "Não informados na página do item."
+          },
+          {
+            "name": "Biblioteca Digital Curt Nimuendajú (etnolinguistica.org)",
+            "kind": "biblioteca digital de línguas e culturas indígenas sul-americanas",
+            "access": "Aberto. Respondeu ao nosso leitor.",
+            "how_to_search": "Tags e página de últimos acréscimos. O próprio site avisa que a busca interna tem problemas.",
+            "use": "ambos",
+            "level": "oficial",
+            "endpoint": "etnolinguistica.org/index:ultimos (sem RSS; migração para Tainacan anunciada).",
+            "fulltext": "PDFs; texto não declarado.",
+            "permalink": "Página de acesso declarada permanente (ex.: etnolinguistica.org/biblio:abreu-1914-caxinauas).",
+            "relevance": "Alta para bebidas indígenas e para a compreensão local (W).",
+            "terms": "Site em CC BY 3.0, salvo indicação. Fonte secundária diz que os documentos são só para pesquisa e ensino, sem uso comercial; conferir item a item."
+          },
+          {
+            "name": "Biodiversity Heritage Library (BHL)",
+            "kind": "biblioteca digital de literatura de biodiversidade, com periódicos brasileiros históricos (secundária)",
+            "access": "Aberto; a API exige chave. O site principal recusou nosso leitor (403).",
+            "how_to_search": "Busca em texto completo no site e na API v3, OAI-PMH e exportação mensal do OCR.",
+            "use": "ambos",
+            "level": "oficial",
+            "endpoint": "biodiversitylibrary.org/api3 (com chave); biodiversitylibrary.org/oai; OCR no DOI 10.25573/data.21422193.v4",
+            "fulltext": "Sim (OCR).",
+            "permalink": "/page/<id> (secundária: IDs de página persistentes).",
+            "relevance": "Média a alta: insumos (X) e etnobotânica.",
+            "terms": "Metadados em CC0. A API v2 será desligada em 31/12/2026."
+          },
+          {
+            "name": "Internet Archive",
+            "kind": "arquivo digital de livros e periódicos, incluindo cópias de outras bibliotecas",
+            "access": "Aberto; obras com direitos só por empréstimo.",
+            "how_to_search": "Advanced Search de metadados (AND, OR, NOT, TO) com saída em JSON, XML, CSV, HTML ou RSS; Full-Text Search sobre o OCR.",
+            "use": "ambos",
+            "level": "oficial",
+            "endpoint": "archive.org/advancedsearch.php",
+            "fulltext": "Sim (OCR derivado dos PDFs e das imagens).",
+            "permalink": "archive.org/details/<identificador> (o padrão de link por página não foi conferido).",
+            "relevance": "Média: livros e periódicos digitalizados.",
+            "terms": "O IA não reivindica novos direitos sobre o acervo. A página de regras para robôs não foi aberta."
+          },
+          {
+            "name": "HathiTrust",
+            "kind": "biblioteca digital de bibliotecas universitárias",
+            "access": "Busca aberta; leitura limitada por direitos e por país. Recusou nosso leitor (403).",
+            "how_to_search": "Busca em texto completo (babel.hathitrust.org/cgi/ls?q1=…), que mostra as páginas e as contagens mesmo nos volumes só pesquisáveis.",
+            "use": "escavação",
+            "level": "secundária",
+            "fulltext": "Sim para busca; leitura bloqueada nas obras protegidas.",
+            "relevance": "Média: achar a página exata em livros do século XX.",
+            "terms": "Obras não americanas de 1898 a 1927 são tratadas como protegidas fora dos EUA. Data API desligado em 07/2024."
+          },
+          {
+            "name": "Gallica (Bibliothèque nationale de France)",
+            "kind": "biblioteca digital nacional da França",
+            "access": "Aberto, com APIs SRU e Document. A API SRU recusou nosso leitor (403).",
+            "how_to_search": "SRU com CQL: gallica all, text (OCR), dc.date, dc.language e ocrquality de 0 a 100, com até 50 registros por chamada.",
+            "use": "ambos",
+            "level": "oficial",
+            "endpoint": "gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=…",
+            "fulltext": "Sim: .texteBrut por documento e ALTO por página.",
+            "permalink": "ARK ark:/12148/<id>, com /f<n> para a página.",
+            "relevance": "Alta para relatos de viajantes e textos em francês sobre o Brasil (eixo Z elástico).",
+            "terms": "Reuso não comercial livre, com o crédito 'Source gallica.bnf.fr / BnF' (secundária); uso comercial é pago."
+          },
+          {
+            "name": "Google Livros (Books API)",
+            "kind": "índice de livros com busca no texto",
+            "access": "API com chave ou token; leitura conforme os direitos de cada obra.",
+            "how_to_search": "volumes?q=…, com filter=full ou partial e langRestrict=pt; até 40 resultados por chamada.",
+            "use": "escavação",
+            "level": "oficial",
+            "endpoint": "www.googleapis.com/books/v1/volumes",
+            "fulltext": "Busca no texto; leitura integral só em obras liberadas.",
+            "relevance": "Média: livros do século XX.",
+            "terms": "Exige identificador (chave de API); as cotas ficam no console do Google."
+          },
+          {
+            "name": "Hemeroteca Digital Catarinense 'João Chrysóstomo Paiva'",
+            "kind": "hemeroteca estadual (SC)",
+            "access": "Aberto.",
+            "how_to_search": "Palavras-chave no conteúdo e listas por título e por cidade.",
+            "use": "escavação",
+            "level": "oficial",
+            "coverage": "Jornais de Santa Catarina a partir do século XIX.",
+            "endpoint": "hemeroteca.ciasc.sc.gov.br",
+            "fulltext": "PDF; OCR não declarado.",
+            "permalink": "Não informado.",
+            "relevance": "Média: imprensa regional do Sul."
+          },
+          {
+            "name": "Arquivo Público Mineiro — Hemeroteca Digital do Triângulo Mineiro e Alto Paranaíba",
+            "kind": "hemeroteca estadual (MG)",
+            "access": "Gratuito, pelo Memorial da Imprensa do SIAAPM.",
+            "how_to_search": "A existência de busca por palavra não é informada.",
+            "use": "escavação",
+            "level": "oficial",
+            "coverage": "Cerca de 50 mil edições de jornais de Uberaba e região, de 1875 a 1990.",
+            "endpoint": "siaapm.cultura.mg.gov.br/modules/memorial_imprensa/index.php",
+            "relevance": "Média: Cerrado mineiro."
+          },
+          {
+            "name": "Outras hemerotecas estaduais (SP, ES, PI e demais UF)",
+            "kind": "arquivos e bibliotecas estaduais",
+            "access": "Variado.",
+            "how_to_search": "Levantar UF por UF no Passo 4.",
+            "use": "escavação",
+            "level": "secundária",
+            "coverage": "SP: a 'Memória da Imprensa' do APESP tinha 14 títulos de 1854 a 1981 em 2012 (FAPESP), mas a página inicial do APESP não mostrava esse acervo em 15/10. ES: Acervo Online do APEES (ICA-AtoM, sobretudo fotos e documentos). PI: hemeroteca citada em monografia. Demais UF: não conferido.",
+            "relevance": "Média: imprensa local."
+          },
+          {
+            "name": "Acervos de jornais comerciais (Estadão, Folha)",
+            "kind": "arquivos de imprensa de empresas jornalísticas",
+            "access": "Por assinatura. No Estadão, quem não assina vê partes limitadas depois de se cadastrar (segundo o CRL).",
+            "how_to_search": "Busca por palavra; o Estadão usa um dicionário de grafias antigas (notícia de 2012).",
+            "use": "escavação",
+            "level": "secundária",
+            "coverage": "Estadão desde 1875; Folha desde 1921.",
+            "relevance": "Alta para a imprensa paulista do século XX, com custo de assinatura.",
+            "terms": "Conteúdo protegido: só citação curta com a fonte (Lei 9.610, art. 46, III; item 7 do plano)."
+          },
+          {
+            "name": "Arquivo Nacional — SIAN",
+            "kind": "arquivo nacional: fundos, coleções e documentos digitalizados",
+            "access": "Cadastro obrigatório ou login gov.br, com aceite de termos. Captcha ao acesso automatizado (15/10).",
+            "how_to_search": "Pesquisa simples, avançada e multinível (Fundos/Coleções), com o campo Código de Referência.",
+            "use": "escavação",
+            "level": "oficial",
+            "endpoint": "sian.an.gov.br",
+            "permalink": "Código de Referência arquivístico (o link pode exigir login).",
+            "relevance": "Média: documentos oficiais do século XX sobre saúde, agricultura e fiscalização."
+          },
+          {
+            "name": "CNFCP — Acervo Virtual (DocReader Web)",
+            "kind": "acervo do Centro Nacional de Folclore e Cultura Popular: Biblioteca Amadeu Amaral, Museu Edison Carneiro e arquivo",
+            "access": "Aberto; respondeu ao nosso leitor.",
+            "how_to_search": "Termo, com aspas para frase; outros operadores não são descritos.",
+            "use": "escavação",
+            "level": "oficial",
+            "endpoint": "acervosdigitais.cnfcp.gov.br/AcervoFolclore",
+            "relevance": "Alta: folclore e cultura popular, incluindo recortes de jornal sobre esses temas (Portaria 82/2026)."
+          },
+          {
+            "name": "CNFCP — Tesauro de Folclore e Cultura Popular Brasileira",
+            "kind": "vocabulário controlado (tesauro)",
+            "access": "cnfcp.gov.br/tesauro recusou nosso leitor (403); o estado on-line não foi conferido.",
+            "how_to_search": "Navegação por termos (não conferida).",
+            "use": "referência",
+            "level": "oficial",
+            "coverage": "Termos principais, entre eles Alimento, Artefato, Atividade produtiva, Lugar, Matéria-prima, Sistema de crença e Tempo (Portaria CNFCP/IPHAN 82/2026).",
+            "relevance": "Alta como forma de busca nos catálogos que o usam e como correspondência SKOS com os nossos termos. Nunca como hierarquia do projeto (princípio 7)."
+          },
+          {
+            "name": "Biblioteca Digital do Iphan",
+            "kind": "repositório institucional: patrimônio material e imaterial, publicações",
+            "access": "Aberto; respondeu ao nosso leitor.",
+            "how_to_search": "Busca e navegação por data, autor, título e assunto.",
+            "use": "ambos",
+            "level": "oficial",
+            "endpoint": "bibliotecadigital.iphan.gov.br (OAI-PMH e API não encontrados nos caminhos padrão).",
+            "permalink": "/items/<identificador> (permanência não declarada).",
+            "relevance": "Média: publicações sobre patrimônio imaterial.",
+            "terms": "Conteúdo do site em CC BY-ND 3.0."
+          },
+          {
+            "name": "CRL — Brazilian Government Documents",
+            "kind": "documentos oficiais seriados digitalizados",
+            "access": "digitalcollections.crl.edu; recusou nosso leitor (403).",
+            "how_to_search": "Por província e ano (relatórios de presidentes, 1830–1930) e por ministério e ano (relatórios ministeriais, 1821–1960). Busca no texto não confirmada.",
+            "use": "escavação",
+            "level": "secundária",
+            "relevance": "Média: produção, comércio e fiscalização no início do século XX."
+          },
+          {
+            "name": "IBGE — Enciclopédia dos Municípios Brasileiros (1957–1964)",
+            "kind": "obra de referência municipal, em 36 volumes organizados por estado",
+            "access": "PDFs na Biblioteca do IBGE: o arquivo liv27295_1.pdf respondeu em 15/10 com mais de 10 MB; o catálogo recusou nosso leitor (403).",
+            "how_to_search": "Por volume e estado; texto não conferido.",
+            "use": "escavação",
+            "level": "secundária",
+            "endpoint": "biblioteca.ibge.gov.br/visualizacao/livros/liv27295_<n>.pdf",
+            "relevance": "Média a alta: descrições de cada município em meados do século XX, já organizadas por estado."
+          }
+        ],
+        "proposals": [
+          {
+            "id": "FH-1",
+            "title": "Ficha de acesso por fonte, testada antes de depender dela",
+            "gap": "Em §5.3 ('onde há feed, usa-se o feed'; hemerotecas na mineração assistida) e em §6 (Ambiente: 'acesso (feed, API, busca, manual)') não se registram sintaxe, texto disponível, padrão de link, termos de uso nem resultado de teste. O Anexo C deixa tudo 'a testar', e o item 10 só pergunta se os feeds bloqueiam o GitHub. Em 15/10, 8 de 20 fontes recusaram o leitor automático (403), e o SIAN pediu captcha, um teste de 'não sou robô'.",
+            "proposal": "Cada Ambiente ganha uma ficha de acesso com: sintaxe de busca, texto disponível (OCR da fonte, PDF ou nenhum), padrão de link e de localizador, termos (robôs, reuso, domínio público), modo (monitoramento ou escavação) e um teste datado em cada ambiente de execução (navegador de pessoa, script local, GitHub Actions, rotina do Claude). As chaves de API (BHL, Google Livros) ficam como segredos do GitHub, fora dos arquivos. Regra: proteção anti-robô não se contorna. O que ela barra vira escavação por pessoa, pedido à instituição ou Falta do tipo 'fonte inacessível'.",
+            "complexity": "baixa",
+            "step": "4 (o campo entra no contrato de Ambiente no Passo 1)",
+            "vicente_decides": "Se aprova a regra de nunca contornar proteções (a ferramenta acadêmica pyHDB contorna o Cloudflare da Hemeroteca). Também se quer pedir acesso a dados às instituições, por exemplo à BN, pelo contato da Divisão de Publicações Seriadas que está no guia oficial.",
+            "honors": "Princípios 9 (P90–P92) e 16; P97; item 10; acordo 2 (P96).",
+            "risks": "O 403 pode ser específico do nosso leitor e não atingir um script identificado e lento. Por isso o teste é feito em cada ambiente de execução e fica datado.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-2",
+            "title": "Recorte de escavação com cursor e cobertura calculada",
+            "gap": "O item 11 define 'exaurido' por ambiente × consulta × período, e o §5.2 tem estados por ambiente. Faltam uma unidade de continuidade e uma medida de cobertura, e por isso o '15' ainda pode ser lido como fim da coleta.",
+            "proposal": "A unidade de trabalho passa a ser o Recorte: ambiente × consulta × período × lugar de publicação × modo (busca por termo, busca por descritores ou folheio, isto é, leitura página a página). Cada recorte guarda estado, total de ocorrências informado pela fonte, quantas foram abertas e triadas, o cursor (marca da última edição ou página vista), quem trabalhou e quando. 'Percorrido pela busca' só vale quando as abertas igualam o total em todas as formas de busca; 'lido por inteiro' só com folheio. Variante nova, título novo ou OCR refeito reabrem o recorte, e a Matriz de Pegadas e Vácuos é gerada a partir dos recortes.",
+            "complexity": "média",
+            "step": "5 (o contrato entra no Passo 1; a Matriz no Passo 4)",
+            "vicente_decides": "A ordem de prioridade dos recortes (por exemplo, a partir da CLB do caso-piloto) e quando vale pagar o custo do folheio.",
+            "honors": "P84, P88, P89, P94–P95; D-012; item 11. Funciona qualquer que seja a resposta à pergunta 3 do §10 (o que é ambiente).",
+            "risks": "A contagem da própria fonte depende do OCR (Brasil e Nascimento, 2020). Então a cobertura mede o que a busca vê, não o que existe, e isso fica escrito no recorte.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-3",
+            "title": "Escada de verificação do trecho em fonte digitalizada (OCR ruim)",
+            "gap": "O item 5 diz que 'o difícil é ter o texto da fonte' e manda para a cota humana o que fica abaixo do limiar. Não diz de onde vem o texto em cada fonte nem quem faz a segunda leitura.",
+            "proposal": "Degrau 1: um script pega o texto da própria fonte (texteBrut ou ALTO do Gallica, que é o arquivo com o texto de cada página; OCR da BHL; texto do IA; PDF liberado da Hemeroteca, que tem camada de texto) e faz uma comparação aproximada. Degrau 2: transcrição feita a partir da imagem, marcada como de IA ou de pessoa, com o link da página. Degrau 3: conferência por outra pessoa, que é Vicente dentro da cota ou um colaborador que não fez a transcrição. Se nenhum degrau for alcançado, fica a Falta 'não verificável por máquina'. O texto é sempre guardado como está na fonte, com a grafia antiga, e com o registro de quem o leu.",
+            "complexity": "média",
+            "step": "2 (validador) e 5",
+            "vicente_decides": "Se uma transcrição por IA ainda não conferida pode aparecer no wiki com selo próprio, ou só depois do degrau 3.",
+            "honors": "P90–P93, P97; itens 5 e 9; acordo 2 (P96).",
+            "risks": "Custo humano. Pela conta do item 9 (até 15 juízos em 1,25 a 2,5 h), cada conferência leva de 5 a 10 minutos, então a cota cobre no máximo 15 trechos por semana. O excedente fica como Falta visível e não trava a coleta.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-4",
+            "title": "Consultas na sintaxe de cada fonte, com formas de busca medidas",
+            "gap": "O item 6 separa variante de forma de busca, e o item 11 classifica as consultas por tipo. Não há tradução para a sintaxe de cada fonte nem registro de quanto cada forma rende.",
+            "proposal": "Um script traduz o Termo para a consulta de cada fonte: Hemeroteca (aspas, +, -, | e *); Gallica (CQL, a linguagem de consulta dele, com text, dc.date e ocrquality); IA (AND, OR, NOT); API v3 da BHL; HathiTrust; Google Livros (filter=full). Formas de busca para erros de OCR e grafias antigas são geradas por regra e só ficam se renderem ocorrências, com o rendimento registrado por forma. Nos catálogos que usam o Tesauro do CNFCP, os descritores dele servem de forma de busca e de correspondência SKOS (padrão para publicar vocabulários e suas equivalências, a conferir no C.3), nunca de hierarquia do projeto.",
+            "complexity": "média",
+            "step": "4 (o contrato entra no Passo 1)",
+            "vicente_decides": "nada",
+            "honors": "P3, P5, P23, P24; princípios 2, 7 e 8; itens 6 e 11.",
+            "risks": "Formas geradas por regra trazem ruído. O registro de rendimento e a triagem por lote evitam que o ruído vire evidência.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-5",
+            "title": "Voz e lugar no trecho histórico (para a W e para a organização por região)",
+            "gap": "O §6 tem 'matriz epistêmica (W)' na Afirmação e 'territórios' na Ficha, e o item 3 dá perspectiva à Fonte. Mas nada separa quem fala no trecho, nem o lugar de publicação do lugar de que o texto fala, e o §5.7 não tem vista por região.",
+            "proposal": "Cada Evidência histórica registra quem fala (autor do texto, pessoa citada em fala direta, instituição ou anúncio) e dois lugares: o de publicação e o referido, com o nome escrito como está na fonte. A Compreensão local (W) só se ancora na fala citada de quem pratica. A leitura do repórter, do médico ou do folclorista é perspectiva da fonte, e, sem a fala de quem pratica, W fica como Falta. O lugar se liga ao geocódigo atual do IBGE quando não há ambiguidade, e o bioma vem da tabela do IBGE de 2024, marcado como derivado e como interbioma quando for o caso.",
+            "complexity": "média",
+            "step": "1 (contratos) e 6 (vistas)",
+            "vicente_decides": "Se o bioma derivado aparece no wiki como porta de entrada ou só como filtro.",
+            "honors": "Decisão sobre a W de 15/10; P19 (lente de leitura); P13; princípio 7.",
+            "risks": "Topônimos históricos ambíguos. A ligação ao município atual é uma inferência marcada como tal e vira Falta quando não houver correspondência segura.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-6",
+            "title": "Mutirão de escavação: mesmo registro, tratamento coletivo",
+            "gap": "O §5.4 trata as pessoas como remetentes de contribuições, e o item 10 deixa os canais para o Passo 4. Não há regra para várias pessoas trabalharem sobre a mesma fonte.",
+            "proposal": "Os recortes abertos ficam numa fila publicada. Quem participa reserva um recorte por prazo e registra cada achado com link, localizador e transcrição. Quem transcreveu não valida o próprio trecho, como no Wikisource, onde 'validada' exige duas pessoas diferentes. Leituras divergentes ficam lado a lado; identidade e consentimento ficam fora do Git, com só um ID no repositório; e a devolutiva sai sozinha. No trabalho individual, a segunda leitura é o script ou a cota de Vicente.",
+            "complexity": "alta",
+            "step": "4 (canais) e 10 (governança)",
+            "vicente_decides": "Se abre a escavação coletiva, para quais grupos, e onde as pessoas se identificam (decisão do Passo 4 que já está pendente).",
+            "honors": "P14, P46, P47; D-011, D-013; princípio 10; regra de dados pessoais do §5.1.",
+            "risks": "Coordenação e qualidade desiguais. A reserva com prazo e a validação por outra pessoa limitam o problema, mas pedem uma pessoa de referência além de Vicente.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-7",
+            "title": "Canal de novidades em cada fonte histórica",
+            "gap": "O §5.3 pensa o RSS para notícias, e o item 11 separa monitoramento de escavação. Mas os acervos históricos crescem, e o plano não diz como se fica sabendo que um recorte já percorrido ganhou material novo.",
+            "proposal": "Cada fonte declara seu canal de novidades. Pode ser OAI-PMH com data (protocolo para colher os registros novos de um acervo; ex.: BHL), RSS da Advanced Search (IA), página de últimos acréscimos comparada por script (Curt Nimuendajú, Biblioteca Digital do Iphan), nova execução da consulta comparando identificadores (Gallica, Google Livros) ou verificação manual mensal (Hemeroteca, SIAN). Uma novidade dentro de um recorte já percorrido o reabre (FH-2).",
+            "complexity": "baixa",
+            "step": "4",
+            "vicente_decides": "nada",
+            "honors": "P1, P73, P88; D-010, D-012; item 11.",
+            "risks": "Uma página que muda de layout quebra a comparação. A falha do script avisa por e-mail (item 10) em vez de passar em silêncio.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "FH-8",
+            "title": "Kit de fonte primária para aulas e outras ações",
+            "gap": "O §7, Passo 9, e a D-006 preveem o planejador de aulas a partir das fichas, e o §5.9 só ordena o que cada grupo vê. Não existe uma peça reutilizável que leve a fonte histórica à sala de aula com segurança jurídica.",
+            "proposal": "Sob demanda, cada Evidência histórica validada gera um kit: link permanente da página, transcrição conferida, quem fala, onde e quando, contexto do recorte e situação de direitos pela tabela da BN (fascículo, artigo assinado, foto), junto com a citação permitida pela Lei 9.610, art. 46, III (item 7). Planos de aula, oficinas e dossiês são montados com os kits, e o tier só decide quais kits aparecem primeiro, sem restringir o acesso.",
+            "complexity": "baixa",
+            "step": "9 (os campos entram no Passo 1)",
+            "vicente_decides": "Se a tabela de domínio público da BN vira a regra de precaução do agente Jurídico para reproduzir a imagem de uma página em material didático.",
+            "honors": "P17, P30, P56; D-005, D-006; princípios 14 e 15.",
+            "risks": "A tabela é a leitura da BN, não o texto da lei. Na dúvida, o Jurídico cria uma Falta, e o kit fica só com o link e uma transcrição curta.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          }
+        ],
+        "dropped": [],
+        "facts": [
+          {
+            "claim": "Na Hemeroteca Digital Brasileira (memoria.bn.gov.br), a busca combina Periódico, Período e Local com um termo. Aceita aspas para frase exata, + (e), - (não), | (ou) com parênteses e * no início ou no fim da palavra, e não diferencia acento. Mostra o total de ocorrências e, em cada edição, quantas páginas têm a palavra. Alguns títulos só podem ser consultados nos terminais da BN.",
+            "url": "https://www.gov.br/bn/pt-br/atuacao/colecoes-e-servicos-aos-leitores/publicacoes-seriadas/tutorial-basico_hdb_v5.pdf",
+            "level": "oficial",
+            "quote": "Alguns títulos estão disponíveis para consulta somente localmente."
+          },
+          {
+            "claim": "A BN declara não ter autoridade para licenciar as imagens da Hemeroteca e indica prazos de domínio público: fascículo completo, 70 anos após a publicação; artigo assinado, 70 anos após a morte do autor; foto assinada, 70 anos após a divulgação. Títulos com restrição autoral não têm PDF, e o PDF disponível pode ser pesquisado com Ctrl+F.",
+            "url": "https://www.gov.br/bn/pt-br/atuacao/colecoes-e-servicos-aos-leitores/publicacoes-seriadas/tutorial-basico_hdb_v5.pdf",
+            "level": "oficial",
+            "quote": "O download de qualquer imagem estará livre para uso privativo do copista, sem permissão de reprodução em qualquer meio, exceto quando o conteúdo fizer parte do domínio público (caso em que o uso é livre)."
+          },
+          {
+            "claim": "Os links da Hemeroteca usados em citações seguem o padrão DocReader.aspx?bib=<acervo>&pagfis=<página física> para uma página e DocReader…?bib=<acervo>&pasta=ano%20<década>&pesq=<termo> para uma busca (o código do pyHDB monta o mesmo 'pasta=ano …&pesq='). A BN não declara esses links como permanentes.",
+            "url": "https://pt.wikipedia.org/wiki/Diario_de_Pernambuco",
+            "level": "secundária",
+            "quote": "http://memoria.bn.gov.br/docreader/DocReader.aspx?bib=029033_04&pagfis=2446"
+          },
+          {
+            "claim": "Observação direta em 15/10/2026: nosso leitor automático recebeu HTTP 403 (acesso negado) da Hemeroteca, do site da BNDigital, da BHL, do HathiTrust, da API SRU do Gallica, do catálogo da Biblioteca do IBGE, do CRL e do tesauro do CNFCP. O SIAN respondeu com um captcha. Isso vale para este leitor; scripts identificados ainda precisam ser testados.",
+            "url": "https://memoria.bn.gov.br/hdb/periodico.aspx",
+            "level": "oficial"
+          },
+          {
+            "claim": "A ferramenta acadêmica pyHDB (Eric Brasil, v2.0, 29/09/2025) raspa a Hemeroteca com automação de navegador. Ela traz cache com retomada automática, saída em CSV e JSON e um contorno da proteção Cloudflare.",
+            "url": "https://zenodo.org/records/17228982",
+            "level": "secundária",
+            "quote": "Bypass de Cloudflare com `undetected-chromedriver` e `selenium-stealth`."
+          },
+          {
+            "claim": "Um estudo sobre a Hemeroteca (Brasil e Nascimento, Estudos Históricos, 2020) mostra que a busca por termo não encontra todas as ocorrências por causa do OCR. Registra 1.272 ocorrências de um único termo em 204 periódicos cariocas de 1910 a 1919 e recomenda salvar o link de cada página consultada.",
+            "url": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-21862020000100196&tlng=pt",
+            "level": "secundária",
+            "quote": "não correspondem à totalidade das vezes que o termo aparece no periódico"
+          },
+          {
+            "claim": "O Gallica tem uma API SRU (gallica.bnf.fr/SRU, com consultas em CQL). Ela oferece o índice 'text' para o texto do OCR, o filtro 'ocrquality' de 0 a 100 e até 50 registros por chamada. O texto bruto de um documento se obtém acrescentando .texteBrut ao identificador ARK, e o de cada página sai em ALTO pelo RequestDigitalElement.",
+            "url": "https://api.bnf.fr/fr/api-gallica-de-recherche",
+            "level": "oficial"
+          },
+          {
+            "claim": "A BHL oferece API v3 com busca em texto completo (exige chave), OAI-PMH em biodiversitylibrary.org/oai e exportação mensal do OCR de mais de 60 milhões de páginas (DOI 10.25573/data.21422193.v4). Os metadados estão em CC0, e a API v2 será desligada em 31/12/2026.",
+            "url": "https://about.biodiversitylibrary.org/?p=996",
+            "level": "oficial",
+            "quote": "users are required to obtain an API Key"
+          },
+          {
+            "claim": "O Internet Archive tem uma busca em texto completo sobre o OCR dos livros e uma Advanced Search de metadados com saída em JSON, XML, CSV, HTML e RSS.",
+            "url": "https://help.archive.org/help/search-a-basic-guide/",
+            "level": "oficial",
+            "quote": "It uses the OCRed text file derived from the processing of uploaded text formatted files such as PDF"
+          },
+          {
+            "claim": "No HathiTrust, a busca em texto completo cobre todo o acervo e, nos volumes só pesquisáveis, mostra as páginas e as contagens. Obras publicadas fora dos EUA entre 1898 e 1927 são tratadas como protegidas para quem acessa de fora dos EUA, e o Data API foi desligado em julho de 2024. Trechos exibidos pelo mecanismo de busca a partir de hathitrust.org; as páginas oficiais recusaram a abertura (403).",
+            "url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/research-datasets/",
+            "level": "secundária",
+            "quote": "Volumes published outside the US from 1898 through 1927 are treated as public domain for users accessing the volumes from US IP addresses; however, they are treated as in-copyright for users that come from non-US IP addresses."
+          },
+          {
+            "claim": "A Biblioteca Digital Curt Nimuendajú declara permanente o endereço da página de acesso de cada item e pede que se cite essa página, não o PDF. Está em migração para a plataforma Tainacan, não oferece RSS e teve o último acréscimo em 11/10/2026.",
+            "url": "https://www.etnolinguistica.org/biblio",
+            "level": "oficial",
+            "quote": "O endereço da página de acesso é permanente"
+          },
+          {
+            "claim": "A Portaria CNFCP/IPHAN nº 82/2026 confirma que o CNFCP é responsável pelo Tesauro de Folclore e Cultura Popular Brasileira. Lista termos principais, entre eles Alimento, Artefato, Atividade produtiva, Lugar, Matéria-prima, Sistema de crença e Tempo. Informa também que a Biblioteca Amadeu Amaral guarda recortes de jornal sobre folclore e cultura popular só em formato digital, no sistema DocPro.",
+            "url": "https://www.gov.br/iphan/pt-br/unidades-especiais/centro-nacional-de-folclore-e-cultura-popular/PortariaCNFCP.Iphann82de14dejaneirode2026.pdf/@@display-file/file",
+            "level": "oficial",
+            "quote": "Destaca-se que o CNFCP é o responsável pelo Tesauro de Folclore e Cultura Popular Brasileira (http://www.cnfcp.gov.br/tesauro/apresentacao.html)."
+          },
+          {
+            "claim": "No Wikisource em português, uma página transcrita passa por cinco níveis. O nível 'validada' exige a revisão de dois contribuidores, e o botão de validar só aparece se outra pessoa já revisou a página.",
+            "url": "https://pt.wikisource.org/wiki/Ajuda:Progresso_das_p%C3%A1ginas",
+            "level": "oficial",
+            "quote": "Validada significa que foi revisada e corrigida por dois contribuidores."
+          },
+          {
+            "claim": "O IBGE publica (edição de 2024) o bioma predominante de cada município, com geocódigo, em tabela CSV e XLSX. São 963 os municípios em mais de um bioma (interbiomas), e a associação tem só fim estatístico.",
+            "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102097.pdf",
+            "level": "oficial",
+            "quote": "É importante ressaltar que a associação ora apresentada não tem como objetivo a definição legal do Bioma no qual se enquadra cada Município, tendo apenas um fim estatístico"
+          },
+          {
+            "claim": "O SIAN, do Arquivo Nacional, exige cadastro (ou login gov.br) para consultar os documentos digitalizados. Os itens são localizados pela Pesquisa Multinível e pelo campo Código de Referência.",
+            "url": "https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/noticias/pesquise-o-acervo-do-arquivo-nacional-das-midias-sociais-para-o-sian",
+            "level": "oficial",
+            "quote": "Não tenho cadastro"
+          }
+        ],
+        "facts_checked": [],
+        "missing": [],
+        "open_questions": [
+          "Quando você imagina pessoas escavando fontes junto com o projeto, quem são elas e como costumam trabalhar hoje: sozinhas, em turma, em grupo de pesquisa?",
+          "Que relação você tem, ou imagina ter, com as instituições que guardam essas fontes, como a Biblioteca Nacional, o CNFCP e os arquivos estaduais?",
+          "Como você imagina que os relatos anteriores a 1900 (viajantes, documentos coloniais), acolhidos pelo eixo Z elástico, aparecem nas fichas?",
+          "Quando um jornal descreve uma bebida pela voz de um médico, de um repórter ou de quem a faz, como você gostaria que essas vozes aparecessem para quem lê?",
+          "De onde vem, para você, a divisão por bioma, estado e localidade, e o que uma pessoa ganha ao entrar no wiki por ela?"
+        ],
+        "verified": false
+      },
+      {
+        "front": "PRODUÇÃO ACADÊMICA E TÉCNICA",
+        "summary": "Conferi 20 fontes acadêmicas e técnicas na web em 15/10/2026. Quase todas têm uma porta automática: API (porta de consulta para programas), OAI-PMH (protocolo em que um programa pede ao repositório “o que mudou desde a data X”) ou dados abertos. Com isso, cinco adaptadores substituem um script por fonte, e o “RSS criado por nós” passa a ser uma consulta repetida que anota só o que ainda não foi visto. As oito propostas acrescentam ao plano: o estado de continuidade e um critério calculado de “exaurido”; a bola de neve pelas citações e pelos assuntos; a separação entre o lugar da prática e o lugar de quem pesquisa; licença e acesso registrados na Fonte; um filtro que tira os dados pessoais na entrada; a oralidade registrada por pesquisa como evidência de W; e a produção técnica e educacional como ponto de partida das ferramentas de ação. Só o OpenAlex cobra, e os preços foram conferidos; o volume de uso será medido no caso-piloto.",
+        "answers": [
+          {
+            "question": "O plano deve considerar a revisão das fontes de busca e como as buscas podem ser feitas?",
+            "answer": "Sim. Na produção acadêmica, quase todas as bases grandes têm uma porta para programas. Por isso, o “RSS criado por nós” é um script que repete cada consulta toda semana e anota só o que ainda não foi visto (PA-1). Poucas fontes exigem trabalho manual: o Google Acadêmico, o conteúdo pago e os anais antigos em PDF. Só o OpenAlex cobra: US$ 1 por mil buscas, dentro de uma cota grátis de US$ 1 por dia. O volume real é medido no caso-piloto."
+          },
+          {
+            "question": "Como fica a admissão de novos dados, incluindo pessoas e oralidades?",
+            "answer": "Nesta frente, a maior reserva de oralidade já registrada está nas teses e etnografias: falas gravadas, transcritas e publicadas. Elas entram como evidência, com trecho e localizador; quem falou entra como “pessoa citada” (PA-7). Nenhum canal de áudio é aberto, e a P48 continua adiada. Pesquisadores podem ser convidados a contribuir pelos canais de pessoas, com consentimento; o nome do autor de uma tese entra só como autoria da referência."
+          },
+          {
+            "question": "O modelo de ingestão e de trabalho coletivo pode ser melhorado?",
+            "answer": "Sim, de três formas. Um adaptador por protocolo faz de cada fonte nova uma linha de configuração (PA-1). Cada consulta fica registrada e pode ser repetida por qualquer pessoa ou IA. E um arquivo de estado por consulta mostra onde se parou e quem está trabalhando nela, por ID (PA-2)."
+          },
+          {
+            "question": "Uma ferramenta de uso coletivo tem o mesmo tratamento de um trabalho individual?",
+            "answer": "Não. Uma pessoa pode ler um artigo pago com o login da universidade ou buscar à mão no Google Acadêmico. Uma ferramenta coletiva e automática não pode usar a senha de ninguém, não pode raspar o Google Acadêmico (o arquivo robots.txt, em que o site diz o que robôs podem acessar, proíbe) e só republica o que a licença permite (PA-5). O que alguém ler individualmente entra como contribuição de pessoa, com trecho e localizador, e passa pela verificação."
+          },
+          {
+            "question": "O wiki está organizado por região (bioma, estados, localidades)?",
+            "answer": "Ainda não: a v0.1 só tem “territórios” na ficha (§6). Nesta frente há uma armadilha: as bases acadêmicas informam o estado da universidade ou o país dos autores, não o lugar da prática. Por isso o lugar precisa vir do trecho; quando o trecho não diz, é Falta (PA-4). Assim, a navegação por bioma, estado e localidade fica possível sem inventar lugar."
+          },
+          {
+            "question": "As fontes não devem ser consideradas exauridas quando se coleta apenas 15 CLB, correto?",
+            "answer": "Correto: 15 é o tamanho do lote de tratamento, nunca o limite da coleta. Só para “cauim”, em 15/10/2026, a BDTD informou 10 registros, o Oasisbr 30, a Crossref 12 e o OpenAlex 54. Um ambiente só fica exaurido quando tudo o que cada consulta informa já foi visto e a bola de neve não traz nada novo; uma variante nova reabre o ambiente (PA-2)."
+          },
+          {
+            "question": "Como vamos organizar as continuidades do trabalho em cima das fontes?",
+            "answer": "Cada consulta, em cada fonte, terá um arquivo de estado: até onde a coleta foi, quantos registros a fonte diz ter, quantos já foram vistos, o que falta tratar e qual é a próxima ação. A rotina semanal retoma desse ponto sozinha, e cada sessão, humana ou de IA, pega os próximos 15 da fila. Ninguém precisa lembrar onde parou."
+          },
+          {
+            "question": "Nos tiers, está considerada a criação de ferramentas de ação, como planos de aula?",
+            "answer": "Ainda não está no plano, mas cabe. A produção técnica e educacional (eduCAPES, dissertações de mestrados profissionais, cartilhas da Embrapa feitas também para professores de escolas rurais) é ao mesmo tempo fonte e inventário de ferramentas que já existem (PA-8). O tier de educadores veria esses materiais primeiro, com autoria e licença, e pediria sob demanda um plano novo feito a partir das fichas verificadas (princípio 15)."
+          }
+        ],
+        "sources": [
+          {
+            "name": "BDTD — Biblioteca Digital Brasileira de Teses e Dissertações (IBICT)",
+            "kind": "agregador de metadados de teses e dissertações",
+            "access": "Aberta, sem cadastro. Tem API do VuFind em JSON e RSS 2.0 de qualquer busca.",
+            "endpoint": "https://bdtd.ibict.br/vufind/api/v1/search?lookfor=<consulta>&limit=<n> ; RSS: https://bdtd.ibict.br/vufind/Search/Results?lookfor=<consulta>&type=AllFields&view=rss",
+            "coverage": "1.156.392 registros (822.991 dissertações e 333.401 teses) em 15/10/2026. Inclui teses de brasileiros defendidas no exterior.",
+            "fulltext": "Não. O registro aponta o repositório da instituição (campo urls).",
+            "how_to_search": "RSS nosso: rodar cada consulta (termo e variantes, item 6) toda semana, paginar até o total e anotar só os IDs fora das pegadas. Escavação: a mesma paginação completa a cada consulta nova; depois, buscar o texto no repositório de origem.",
+            "permalink": "https://bdtd.ibict.br/vufind/Record/<id> e o handle (link permanente de repositório) da instituição",
+            "terms": "Nenhum limite de uso publicado foi encontrado. Proposta: 1 requisição por segundo, com o robô identificado. Custo zero.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Teses com etnografia, oralidade registrada e microbiologia de bebidas indígenas (ex.: bebidas fermentadas Tapirapé, UFLA)."
+          },
+          {
+            "name": "Oasisbr (IBICT)",
+            "kind": "agregador nacional de repositórios (artigos, teses, TCC, anais, livros)",
+            "access": "Aberta, com API do VuFind em JSON. Em 15/10/2026 a página inicial pediu verificação de navegador ao robô; a API respondeu.",
+            "endpoint": "https://oasisbr.ibict.br/vufind/api/v1/search",
+            "coverage": "6.364.932 registros em 15/10/2026: 2.534.768 artigos, 1.757.806 dissertações, 610.426 TCC, 513.471 teses e 246.549 trabalhos de evento. Inclui repositórios portugueses (RCAAP) e a Embrapa.",
+            "fulltext": "Não; link para o repositório de origem.",
+            "how_to_search": "Igual à BDTD, que usa o mesmo software. A faceta de formato separa TCC e anais. Deduplicar com BDTD, Embrapa e LA Referencia por handle, DOI ou título.",
+            "permalink": "/vufind/Record/<id> e o handle de origem",
+            "terms": "Nenhum limite publicado foi encontrado. Testar o acesso a partir do GitHub Actions.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "A maior porta única para a literatura cinzenta brasileira: “bebida fermentada” deu 776 registros, 190 deles TCC."
+          },
+          {
+            "name": "Catálogo de Teses e Dissertações da CAPES (dados abertos e site)",
+            "kind": "conjunto de dados oficial (CSV e XLSX por ano) e catálogo na web",
+            "access": "Aberta, pelo portal CKAN (software de dados abertos), que tem API. O site catalogodeteses.capes.gov.br não documenta API.",
+            "endpoint": "https://dadosabertos.capes.gov.br/group/catalogo-de-teses-e-dissertacoes-brasil ; API: https://dadosabertos.capes.gov.br/api/3/action/package_show?id=<conjunto>",
+            "coverage": "1987 a 2024, em quatro conjuntos. O de 2021–2024 foi atualizado em 12/12/2025; o ano de 1987 tem 4.496 registros.",
+            "fulltext": "Não. Resumo e palavras-chave estão no próprio arquivo, e a URL do texto completo aparece quando o programa a informou.",
+            "how_to_search": "Escavação: baixar os CSV e filtrar localmente título, resumo e palavras-chave, inclusive com consultas só de descritores (item 11). A API mostrou só 2.000 linhas para 2024, o que parece carga parcial (a conferir). RSS nosso: verificar uma vez por ano se saiu um novo ano-base.",
+            "permalink": "ID da produção no CSV e URL do texto completo; o site serve para conferência manual",
+            "terms": "Licença Creative Commons Atribuição. Os arquivos trazem identificadores de pessoas, que não entram no Git (PA-6). Custo zero.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "O censo das teses brasileiras desde 1987: mostra o que existe antes de se procurar o texto."
+          },
+          {
+            "name": "CAPES — Detalhes da Produção Intelectual Técnica dos programas de pós-graduação (dados abertos)",
+            "kind": "conjunto de dados oficial",
+            "access": "Aberta, pela API CKAN.",
+            "endpoint": "https://dadosabertos.capes.gov.br/api/3/action/package_search?q=producao%20tecnica",
+            "coverage": "Três conjuntos: 2013–2016, 2017–2020 e 2021–2024.",
+            "fulltext": "Não conferido (provavelmente só metadados).",
+            "how_to_search": "Escavação: baixar e filtrar por termos e por subtipo de produto (os subtipos não foram conferidos). RSS nosso: verificação anual.",
+            "permalink": "não conferido",
+            "terms": "Licença do conjunto não conferida.",
+            "use": "escavação",
+            "level": "oficial",
+            "relevance": "Inventário de produtos técnicos e didáticos já feitos nas universidades (PA-8)."
+          },
+          {
+            "name": "SciELO Brasil",
+            "kind": "biblioteca de periódicos de acesso aberto",
+            "access": "Aberta, com OAI-PMH, a API ArticleMeta e um feed Atom por revista. A busca search.scielo.org recusou o robô (HTTP 403).",
+            "endpoint": "OAI: https://oaipmh.scielo.org/br/ (conjuntos por ISSN) ; ArticleMeta: https://articlemeta.scielo.org/api/v1/article/identifiers/?collection=scl&from=AAAA-MM-DD ; feed: https://www.scielo.br/journal/<sigla>/feed/",
+            "coverage": "566.290 documentos na coleção Brasil (ArticleMeta, 15/10/2026). O OAI vai desde 01/08/1998.",
+            "fulltext": "Sim, em HTML e PDF, em geral com licença CC BY.",
+            "how_to_search": "RSS nosso: listar os identificadores processados desde a última data (foram 903 entre 1º e 15/10/2026, inclusive artigos antigos reprocessados) e filtrar localmente pelos termos. Escavação: o conjunto OAI das revistas-chave e a busca no OpenAlex e na Crossref pelos DOI 10.1590 (DOI é o identificador permanente do artigo).",
+            "permalink": "DOI e https://www.scielo.br/j/<sigla>/a/<id>",
+            "terms": "Nenhum limite publicado foi encontrado; a licença varia por revista.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "As principais revistas brasileiras de antropologia, história e alimentação."
+          },
+          {
+            "name": "OpenAlex",
+            "kind": "índice aberto mundial da produção científica, com grafo de citações",
+            "access": "Por API. Sem chave, US$ 0,10 por dia; com chave grátis, US$ 1 por dia. A paginação por cursor exige chave.",
+            "endpoint": "https://api.openalex.org/works?filter=title_and_abstract.search:<termo> ; filtro cites:<ID> ; PDFs: https://content.openalex.org/works/<ID>.pdf",
+            "coverage": "Mundial. Deu 54 obras para “cauim” em título e resumo (15/10/2026).",
+            "fulltext": "Cópia de mais de 50 milhões de obras de acesso aberto, a US$ 0,01 por PDF; os direitos originais se mantêm.",
+            "how_to_search": "RSS nosso: repetir cada consulta e comparar com as pegadas, porque o filtro por data de criação é pago. Escavação: paginar com cursor e fazer a bola de neve pelas referências e citações (PA-3). Nunca recortar por país ou idioma (PA-4).",
+            "permalink": "ID do OpenAlex (W…) e DOI",
+            "terms": "Mil buscas custam US$ 1, mil listas com filtro US$ 0,10 e mil PDFs US$ 10. Limite de 10 requisições por segundo sem chave e 30 com chave. Dados em CC0, domínio público (informação de fonte secundária).",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Liga a literatura brasileira à estrangeira e é, nesta lista, a única fonte com grafo de citações aberto."
+          },
+          {
+            "name": "Crossref REST API",
+            "kind": "metadados de obras com DOI",
+            "access": "Aberta, sem cadastro. Pôr um e-mail no parâmetro mailto dá acesso ao pool polite, a fila de quem se identifica.",
+            "endpoint": "https://api.crossref.org/works?query.bibliographic=<termo>&filter=from-index-date:AAAA-MM-DD,until-index-date:AAAA-MM-DD&cursor=*",
+            "coverage": "12 resultados para “cauim” em 15/10/2026, entre eles Mana (2015) e Campos (2007).",
+            "fulltext": "Não; às vezes o registro traz link e licença.",
+            "how_to_search": "RSS nosso: novidades pela data de indexação (from-index-date junto com until-index-date). Escavação: paginação por cursor, com até 1.000 linhas por página. Serve também para conferir DOIs.",
+            "permalink": "DOI",
+            "terms": "Pool público com limite 5 e concorrência 1; pool polite com limite 10 e concorrência 3. Quase nenhum metadado tem direito autoral; alguns resumos podem ter. Custo zero.",
+            "use": "ambos",
+            "level": "oficial"
+          },
+          {
+            "name": "Embrapa — Alice (Acesso Livre à Informação Científica)",
+            "kind": "repositório institucional de produção científica",
+            "access": "Aberta, por OAI-PMH.",
+            "endpoint": "http://www.alice.cnptia.embrapa.br/alice-oai/request",
+            "coverage": "Registros desde 2011, a data mais antiga do OAI. Entre 1º e 15/10/2026, 3.427 registros foram alterados. Total não conferido.",
+            "fulltext": "Frequente (direitos “openAccess”), sem licença declarada no OAI.",
+            "how_to_search": "Escavação: uma colheita completa e o filtro local por termos e pelos assuntos de cada registro. RSS nosso: colher desde a última data e comparar por ID, porque registros antigos ganham data nova.",
+            "permalink": "http://www.alice.cnptia.embrapa.br/alice/handle/doc/<n>",
+            "terms": "Nenhum limite publicado foi encontrado. Licença: “não informada”. Custo zero.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Insumos nativos, fermentação e processamento (X e Y)."
+          },
+          {
+            "name": "Embrapa — Infoteca-e (Informação Tecnológica em Agricultura)",
+            "kind": "repositório de publicações técnicas: cartilhas, livros para transferência de tecnologia, programas de rádio e de TV",
+            "access": "Aberta, por OAI-PMH. O rodapé do site diz que o conteúdo está sob “Licença Creative Commons”, sem dizer qual.",
+            "endpoint": "http://www.infoteca.cnptia.embrapa.br/infoteca-oai/request",
+            "coverage": "59.132 itens por ano de publicação, dos quais 12.293 de 1900 a 1999. Entre 1º/09 e 15/10/2026, 1.577 registros foram alterados.",
+            "fulltext": "PDF na maioria das publicações (não conferido item a item). Os programas de rádio são áudio e ficam só como referência enquanto a P48 estiver adiada.",
+            "how_to_search": "Igual ao Alice. Escavar também os anos de 1900 a 1999.",
+            "permalink": "handle doc/<n>",
+            "terms": "Nenhum limite publicado foi encontrado. Qual licença Creative Commons vale não foi conferido.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Técnica escrita para “produtores rurais, extensionistas, técnicos agrícolas, estudantes e professores de escolas rurais”: é fonte de Y e molde de ferramentas de ação (PA-8)."
+          },
+          {
+            "name": "LA Referencia",
+            "kind": "agregador latino-americano de repositórios",
+            "access": "Aberta, com API do VuFind.",
+            "endpoint": "https://buscador.lareferencia.info/api/v1/search",
+            "coverage": "5.810.998 registros (3.631.636 artigos) em 15/10/2026. Nove países membros, entre eles o Brasil.",
+            "fulltext": "Não; link para a origem.",
+            "how_to_search": "Escavação por termos em português e em espanhol (“chicha” deu 359 resultados), deduplicando com o Oasisbr. RSS nosso só para as consultas que cruzam fronteiras.",
+            "permalink": "/Record/<id> e o link de origem",
+            "terms": "Nenhum limite publicado foi encontrado.",
+            "use": "escavação",
+            "level": "oficial",
+            "relevance": "Práticas e insumos compartilhados com países vizinhos."
+          },
+          {
+            "name": "Redalyc",
+            "kind": "plataforma de revistas de acesso aberto da América Latina",
+            "access": "OAI-PMH documentado na página oficial. Não foi testado aqui, porque o endereço é só HTTP e usa um IP.",
+            "endpoint": "http://148.215.1.70/redalyc/oai",
+            "coverage": "não conferida",
+            "fulltext": "não conferido",
+            "how_to_search": "Colheita OAI e filtro local. Até o teste, usar o OpenAlex e a Crossref para os DOIs das revistas da Redalyc.",
+            "permalink": "não conferido",
+            "terms": "não conferidos",
+            "use": "escavação",
+            "level": "oficial",
+            "relevance": "Revistas latino-americanas que não estão na SciELO."
+          },
+          {
+            "name": "Google Acadêmico",
+            "kind": "buscador acadêmico",
+            "access": "Só manual. O robots.txt (arquivo em que o site diz o que robôs podem acessar) proíbe robôs em /scholar. Não há API nem acesso em lote; os alertas chegam por e-mail.",
+            "endpoint": "nenhum",
+            "coverage": "Não declarada; no máximo 1.000 resultados por consulta.",
+            "fulltext": "Links para versões da obra.",
+            "how_to_search": "Escavação manual, registrada como Consulta (termo, data, quantos resultados foram vistos, links), dentro da cota humana. RSS nosso: alertas por e-mail na caixa dedicada (§5.4), lidos como dado.",
+            "permalink": "O link da própria obra, nunca o do Google.",
+            "terms": "Respeitar o robots.txt e não raspar o site. Os termos gerais do Google sobre o uso dos alertas não foram conferidos.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Acha livros, capítulos e anais que as outras bases não indexam."
+          },
+          {
+            "name": "Portal de Periódicos CAPES",
+            "kind": "portal de acesso a conteúdo assinado e gratuito",
+            "access": "O conteúdo assinado só abre nos IPs das instituições participantes ou pelo login CAFe; o gratuito abre para todos, sem login.",
+            "endpoint": "https://www.periodicos.capes.gov.br (nenhuma API documentada foi encontrada)",
+            "coverage": "não conferida",
+            "fulltext": "Só para quem tem vínculo, no conteúdo assinado.",
+            "how_to_search": "Uso individual, por quem tem vínculo. O que essa pessoa ler entra como contribuição de pessoa, com trecho e localizador, e vai para a cota humana. Rotinas na nuvem nunca usam credencial pessoal.",
+            "permalink": "DOI da obra",
+            "terms": "Valem as licenças das editoras: não republicar texto além do trecho.",
+            "use": "referência",
+            "level": "oficial"
+          },
+          {
+            "name": "Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas",
+            "kind": "periódico-chave (antropologia, arqueologia, história, linguística indígena)",
+            "access": "Aberta, na SciELO (conjunto OAI 1981-8122), com feed Atom do último fascículo.",
+            "endpoint": "https://www.scielo.br/journal/bgoeldi/feed/ ; https://oaipmh.scielo.org/br/ (conjunto 1981-8122)",
+            "coverage": "A série atual está na SciELO. Há volumes da série antiga na BHL, segundo registro da AGRIS (fonte secundária).",
+            "fulltext": "Sim, CC BY 4.0.",
+            "how_to_search": "RSS nosso: o feed da revista. Escavação: o conjunto OAI inteiro e, para a série antiga, a BHL.",
+            "permalink": "DOI",
+            "terms": "CC BY 4.0",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Publicou “Cauim: entre comida e ebriedade” (2018), semente já conferida para a bola de neve."
+          },
+          {
+            "name": "Revistas brasileiras em OJS (ex.: Revista de Antropologia, USP)",
+            "kind": "periódicos em Open Journal Systems, o software de revistas usado por muitas universidades",
+            "access": "Aberta, com feed Atom e OAI-PMH próprios do software.",
+            "endpoint": "<revista>/gateway/plugin/WebFeedGatewayPlugin/atom ; OAI, ex.: https://revistas.usp.br/ra/pt_BR/oai",
+            "coverage": "Varia por revista. A data mais antiga do OAI é a da migração para o OJS (2020 na Revista de Antropologia), não a do primeiro número.",
+            "fulltext": "Em geral sim; a licença varia por revista.",
+            "how_to_search": "RSS nosso: o feed de cada revista-chave (o da Revista de Antropologia trazia 30 entradas). Escavação: o OAI completo da revista, com filtro local.",
+            "permalink": "DOI ou URL do artigo",
+            "terms": "Nenhum limite publicado foi encontrado; a licença varia por revista.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Revistas universitárias fora da SciELO. A lista de revistas-chave nasce das próprias fontes."
+          },
+          {
+            "name": "ABA — Anais das Reuniões Brasileiras de Antropologia (RBA)",
+            "kind": "anais de associação científica",
+            "access": "Aberta: uma página por edição e PDFs.",
+            "endpoint": "https://portal.abant.org.br/anais-rbas/ ; https://anais.abant.org.br/<n>rba/",
+            "coverage": "RBAs de 2008 a 2026 (a de 2008 está em manutenção), a 22ª (2000) e PDFs de 1955, 1958, 1998 e 2004.",
+            "fulltext": "Não conferido se cada edição traz trabalhos completos ou só resumos.",
+            "how_to_search": "Escavação por edição: baixar, extrair o texto (nos PDFs escaneados, o OCR fica marcado como tal) e buscar localmente. RSS nosso: verificação a cada dois anos.",
+            "permalink": "URL do trabalho ou do PDF, com a página",
+            "terms": "não conferidos",
+            "use": "escavação",
+            "level": "oficial"
+          },
+          {
+            "name": "ANPUH — Anais dos Simpósios Nacionais de História",
+            "kind": "anais de associação científica",
+            "access": "Aberta. A busca é só por título e autor, e não há RSS.",
+            "endpoint": "https://anpuh.org.br/index.php/documentos/anais",
+            "coverage": "De 1961 a 2023: 11.496 comunicações, 3.518 resumos e 2.406 textos completos.",
+            "fulltext": "PDF; parte foi digitalizada do impresso.",
+            "how_to_search": "Escavação: listar por evento, baixar os textos, extrair e buscar localmente. RSS nosso: verificação a cada dois anos.",
+            "permalink": "URL do PDF (/uploads/anais-simposios/pdf/...)",
+            "terms": "não conferidos",
+            "use": "escavação",
+            "level": "oficial"
+          },
+          {
+            "name": "Biodiversity Heritage Library (BHL)",
+            "kind": "biblioteca digital de literatura científica histórica",
+            "access": "API com chave (a versão 3 busca no texto completo), OAI-PMH e exportação mensal.",
+            "endpoint": "https://www.biodiversitylibrary.org/oai ; API v3 (com chave)",
+            "coverage": "Mais de 60 milhões de páginas com OCR. Há volumes do Boletim do Museu Goeldi (fonte secundária).",
+            "fulltext": "Sim, OCR por página.",
+            "how_to_search": "Escavação: busca no texto completo por termos e grafias antigas (as formas de busca do item 6), com o trecho localizado na página.",
+            "permalink": "link da página na BHL",
+            "terms": "Metadados em CC0. A página não declara a licença do OCR. Volumes podem ter direitos: o registro do Boletim diz “in copyright”, digitalizado com permissão (fonte secundária).",
+            "use": "escavação",
+            "level": "oficial",
+            "relevance": "Dá profundidade ao eixo do tempo: literatura histórica sobre plantas úteis e seus usos."
+          },
+          {
+            "name": "eduCAPES",
+            "kind": "repositório de recursos educacionais",
+            "access": "Aberta, por OAI-PMH.",
+            "endpoint": "https://educapes.capes.gov.br/oai/request",
+            "coverage": "Registros desde 2012, a data mais antiga do OAI. Total não conferido.",
+            "fulltext": "Os arquivos dos próprios recursos; a licença de cada um não foi conferida.",
+            "how_to_search": "Escavação: colheita OAI e filtro por termos. RSS nosso: colheita incremental com data inicial (from).",
+            "permalink": "handle do recurso",
+            "terms": "Nenhum limite publicado foi encontrado.",
+            "use": "ambos",
+            "level": "oficial",
+            "relevance": "Planos de aula, sequências didáticas e produtos educacionais que já existem (PA-8)."
+          },
+          {
+            "name": "Repositórios institucionais das universidades (DSpace, TEDE)",
+            "kind": "fonte do texto completo de teses e artigos",
+            "access": "Aberta na maioria. Os links vêm da BDTD, do Oasisbr e da CAPES.",
+            "endpoint": "O handle de cada repositório; o OAI-PMH próprio, quando houver.",
+            "coverage": "A soma do que a BDTD e o Oasisbr agregam.",
+            "fulltext": "Sim, em PDF.",
+            "how_to_search": "Não se busca neles um a um. Usa-se o link do agregador para baixar o texto que o validador confere (item 5).",
+            "permalink": "handle",
+            "terms": "O direito autoral é do autor. O arquivo fica fora do Git (PA-5).",
+            "use": "escavação",
+            "level": "oficial",
+            "relevance": "É onde o trecho literal das teses é conferido."
+          }
+        ],
+        "proposals": [
+          {
+            "id": "PA-1",
+            "title": "Cinco adaptadores por protocolo fazem o “RSS criado por nós” de toda a frente acadêmica",
+            "gap": "O §5.3 e o Anexo C (l. 1427) deixam OpenAlex e BDTD “a testar” e não dizem como cada ambiente vira “RSS criado por nós”. O item 11 do plano registra a Consulta e a Execução, mas não diz como a coleta é feita.",
+            "proposal": "No lugar de um script por fonte, cinco adaptadores em Python cobrem as 20 fontes:\n(1) a API do VuFind, software de busca usado por BDTD, Oasisbr e LA Referencia;\n(2) o OAI-PMH com data inicial (SciELO, Embrapa, Redalyc, revistas em OJS, eduCAPES, BHL);\n(3) as APIs que entregam os resultados por partes, com um marcador de onde se parou (OpenAlex, Crossref, ArticleMeta);\n(4) os arquivos de dados abertos, pelo CKAN, o software do portal da CAPES;\n(5) o modo “assistido”, que só registra a busca manual e o que se viu (Google Acadêmico, conteúdo assinado, anais em PDF).\nTodos entregam o mesmo registro (CSL-JSON, item 12), comparam com as pegadas e geram, para cada ambiente, as Entradas novas e um feed Atom (um formato de RSS) só com as novidades: esse é o “RSS criado por nós”. Um ambiente novo que use um protocolo conhecido entra com uma linha de configuração.",
+            "complexity": "média",
+            "step": "Passo 4 (o contrato do adaptador fica pronto no Passo 1)",
+            "honors": "P1, P73, P75, P88; D-010; princípio 16",
+            "risks": "Alguns sites barram servidores de nuvem. Em 15/10, a página inicial do Oasisbr pediu verificação de navegador (a API dele respondeu) e a busca da SciELO recusou o robô (HTTP 403). Cada adaptador será testado a partir do GitHub Actions no Passo 4.",
+            "vicente_decides": "Quais revistas, associações e grupos de pesquisa entram primeiro como ambientes (a lista desta frente não limita).",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-2",
+            "title": "Estado de continuidade por consulta e “exaurido” calculado (ajusta o item 11)",
+            "gap": "O item 11 diz que “exaurido” vale por ambiente × consulta × período, mas não diz como medir isso nem de onde a próxima sessão retoma. O §5.2 só lista os estados do ambiente.",
+            "proposal": "Cada par ambiente × consulta ganha um arquivo de estado com:\n- o protocolo;\n- o cursor, isto é, o marcador de onde a coleta parou: a data no OAI, o from-index-date na Crossref, o processing_date no ArticleMeta, ou “repetir e comparar” no OpenAlex e no VuFind (no OpenAlex, o filtro por data de criação é pago);\n- o total que a fonte informa e o total já visto;\n- a última execução e a próxima ação;\n- quem está trabalhando na consulta, por ID e nunca pelo nome.\nNovidade é um ID que ainda não está nas pegadas, nunca uma data: o RSS da BDTD só traz o ano, e o Alice mudou em 10/10/2026 a data de registros publicados em 2005. “Exaurido” passa a ter conta: o total visto é igual ao informado em todas as consultas do ambiente e a bola de neve está fechada (PA-3). Uma variante nova reabre o ambiente; uma fonte que não informa o total nunca é dada como exaurida e fica com a Falta “total desconhecido”.",
+            "complexity": "baixa",
+            "step": "Passo 4 (estado) e Passo 5 (fila de tratamento em lotes de 15)",
+            "honors": "P84, P88, P89 (os critérios viram a consulta e o tempo vira o cursor), P94; D-012",
+            "risks": "Fontes que mudam a data de muitos registros de uma vez geram tráfego: no Alice, 3.427 registros foram alterados em duas semanas. Comparar por ID custa pouco, mas exige pegadas completas e versionadas.",
+            "vicente_decides": "nada",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-3",
+            "title": "Bola de neve pelas citações e pelos assuntos, como novo tipo de Consulta",
+            "gap": "O item 11 prevê consultas por termo, mistas e só de descritores. Falta uma rota pelo que a literatura cita, por quem a cita e pelos assuntos que os catalogadores atribuem. É essa rota que acha os textos que não usam o nome da bebida (P3, P5).",
+            "proposal": "A partir de cada fonte admitida com trecho localizado, o script:\n- pede ao OpenAlex o que ela cita e quem a cita (o grafo de citações, a rede de quem cita quem);\n- lê os assuntos e as palavras-chave do registro (BDTD, Embrapa, CAPES) como candidatos a “forma de busca” do item 6, nunca como variante do glossário sem abonação.\nCada achado entra com o caminho “semente → citação” ou “semente → assunto” (P97). Uma rodada sem nada novo e pertinente fecha aquela semente. Exemplo conferido: “Cauim: entre comida e ebriedade” (Boletim Goeldi, 2018) tem 22 referências e é citado por 8 trabalhos, entre eles um sobre ebriedades no Rio Negro colonial e outro sobre a origem da cachaça; a consulta de citações custou US$ 0,0001.",
+            "complexity": "baixa",
+            "step": "Passo 5 (escavação)",
+            "honors": "P3, P5, P97; princípio 2 (o laço que leva do termo à busca)",
+            "risks": "O OpenAlex cobre mal teses e anais brasileiros sem DOI. As referências dessas obras só aparecem com a leitura (cota humana ou rotina do Claude) e entram na fila, não servem de atalho.",
+            "vicente_decides": "Se a bola de neve parte só das fontes admitidas ou também das que estão em quarentena.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-4",
+            "title": "Lugar da prática separado do lugar de quem pesquisa; país e idioma anotam, não recortam",
+            "gap": "O §6 tem “territórios” na ficha e o item 2 dá lugar à Compreensão local, mas nada separa o lugar da prática do lugar de quem pesquisa. O plano também não alerta que os filtros de país e de idioma das bases acadêmicas cortam fontes.",
+            "proposal": "**Regra de busca:** país e idioma nunca recortam a consulta; só anotam o resultado. O filtro de país do OpenAlex é o país das instituições dos autores, e “Do cauim à garapa” (2026) está sem país e sem idioma: com esse filtro, sumiria.\n**Regra de dados:** a Fonte guarda o lugar de quem pesquisa (por exemplo, a UF da instituição no CSV da CAPES). A Evidência guarda o lugar da prática, tirado do trecho, com o código do IBGE e o bioma quando o trecho permitir. Se o trecho não diz o lugar, é Falta.\nAssim o wiki pode ser navegado por bioma, estado e localidade sem inventar lugar.",
+            "complexity": "baixa",
+            "step": "Passo 1 (contrato) e Passo 4 (consultas)",
+            "honors": "princípio 7; P74; item 2 do plano",
+            "risks": "Muitos resumos não dizem o lugar. Haverá muitas Faltas de lugar até a leitura do texto completo.",
+            "vicente_decides": "Nada nesta frente. A forma de navegar por região no wiki é decisão da frente de organização.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-5",
+            "title": "Licença e acesso na Fonte: o que a ferramenta coletiva pode republicar e de onde vem o texto",
+            "gap": "A Fonte do §6 não tem licença nem modo de acesso. O item 7 aplica o art. 46, III, mas não lê a licença da própria fonte. O item 5 diz que “o difícil é ter o texto da fonte” sem dizer de onde vem o texto acadêmico.",
+            "proposal": "A Fonte ganha dois campos, lidos na própria fonte:\n- **acesso:** aberto, assinado ou físico;\n- **licença:** por exemplo CC BY, que permite reusar com crédito; ou “não informada”, quando o repositório só diz openAccess, como o Alice.\n**No wiki:** metadado e trecho curto sempre (item 7). Trecho longo, figura ou PDF, só se a licença permitir; o resto vira link.\n**Para o validador (item 5)**, o texto é buscado nesta ordem: repositório da instituição → PDF da SciELO → cópia do OpenAlex (US$ 0,01 por PDF) → OCR da BHL (texto reconhecido na imagem da página). O arquivo fica fora do Git: entram só o trecho, o hash (impressão digital do arquivo) e o localizador. Nenhuma rotina na nuvem usa senha pessoal de acesso institucional (CAFe, o login federado das universidades).",
+            "complexity": "média",
+            "step": "Passo 1 (contrato), Passo 5 (validador) e Passo 6 (publicação)",
+            "honors": "princípios 1, 9 e 13; P90–P93, P97",
+            "risks": "A licença pode faltar ou estar errada na própria fonte. Na dúvida, o Jurídico cria uma Falta para qualquer republicação além do trecho.",
+            "vicente_decides": "Se o projeto cria uma chave grátis do OpenAlex com um e-mail do projeto, e não pessoal.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-6",
+            "title": "Dados abertos acadêmicos entram sem dados pessoais (lista positiva de campos)",
+            "gap": "O §5.1 proíbe dados pessoais no Git, mas não prevê que dados abertos oficiais tragam identificadores de pessoas junto com a bibliografia, como acontece nos CSV da CAPES.",
+            "proposal": "O adaptador de dados abertos usa uma lista positiva: só entra o que está na lista. São eles: autor como citado, título, ano, programa, instituição, resumo, palavras-chave e URL. DocumentoDiscente, ID_PESSOA_DISCENTE, ID_PESSOA_ORIENTADOR e campos semelhantes são descartados antes de gravar. O validador no envio (item 5) reprova qualquer arquivo com coluna fora da lista. O nome do autor fica só como autoria da referência, que o art. 46, III, exige.",
+            "complexity": "baixa",
+            "step": "Passo 2 (validador) e Passo 4 (ingestão)",
+            "honors": "§5.1 (LGPD); princípio 16",
+            "risks": "A CAPES muda os nomes dos campos entre períodos (os de 1987 e os de 2024 já diferem). A lista precisa de uma correspondência para cada período.",
+            "vicente_decides": "nada",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-7",
+            "title": "Oralidade registrada por pesquisa como evidência e como fonte típica de W",
+            "gap": "O item 2 cria o registro Compreensão local (W), mas não diz de onde ela costuma vir. O §4.7 trata as pessoas só por formulário e e-mail, e os áudios seguem adiados (P48).",
+            "proposal": "Teses, etnografias e anais trazem falas já gravadas, transcritas e publicadas. Elas entram como Evidência do tipo “oralidade registrada por pesquisa”, com:\n- trecho literal e localizador;\n- duas datas, a da fala e a da publicação (P9);\n- o pesquisador visível como mediação.\nA designação local que a etnografia registra alimenta a Compreensão local (W). A análise do pesquisador entra como tradução, separada da fala.\nQuem falou entra como “pessoa citada” (item 7), do jeito que a fonte o nomeia, ou anônimo se a fonte anonimizou; o Jurídico decide se o nome aparece no wiki. Não é uma revisão da P48: nenhum canal de áudio é aberto, só se leem fontes escritas.",
+            "complexity": "baixa",
+            "step": "Passo 1 (contrato) e Passo 5 (extração)",
+            "honors": "P9, P27, P47; itens 2, 3 e 7 do plano",
+            "risks": "Confundir a leitura do pesquisador com a compreensão local. A extração separa o trecho de fala do trecho de análise e marca quando não é possível separar.",
+            "vicente_decides": "Se uma etnografia que descreve a prática como comum no lugar basta para atestar prática comum e ancorar W, ou se isso pede outra atestação.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "PA-8",
+            "title": "Produção técnica e educacional como ambiente e como ponto de partida das ferramentas de ação dos tiers",
+            "gap": "O Passo 9 (§7) prevê o planejador de aulas a partir das fichas, mas nenhum ambiente mapeia os planos de aula, sequências didáticas, cartilhas e manuais técnicos que já existem. Os itens 1 a 12 do plano não tratam de ferramentas de ação.",
+            "proposal": "Registrar como ambientes:\n- o eduCAPES (repositório de recursos educacionais, com OAI-PMH conferido);\n- a Produção Intelectual Técnica da CAPES (2013–2024);\n- as dissertações de mestrados profissionais, que o CSV da CAPES permite separar pelo grau acadêmico (os valores ainda estão a conferir);\n- a Infoteca-e da Embrapa, que publica cartilhas e livros para “produtores rurais, extensionistas, técnicos agrícolas, estudantes e professores de escolas rurais”.\nCada achado entra como Fonte (técnica, insumo, recipiente) e também como “ferramenta existente” ligada à CLB, com autoria e licença (PA-5). O tier de educadores e extensionistas vê essas ferramentas primeiro, e o planejador de aulas do Passo 9 parte delas e das fichas verificadas, sob demanda (princípio 15).",
+            "complexity": "média",
+            "step": "Passo 4 (ambientes) e Passo 9 (uso)",
+            "honors": "P17, P30, P56; D-005, D-006; princípios 14 e 15",
+            "risks": "O material didático pode repetir informação não verificada. Ele entra como uma Fonte comum, e o selo de status da ficha vale para ele.",
+            "vicente_decides": "Que tipos de ferramenta cada tier vê primeiro (plano de aula, roteiro de oficina, cartilha, nota técnica).",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          }
+        ],
+        "dropped": [],
+        "facts": [
+          {
+            "claim": "OpenAlex: com chave grátis, o orçamento é de US$ 1 por dia; sem chave, de US$ 0,10 por dia. Mil chamadas de lista com filtro custam US$ 0,10, mil buscas custam US$ 1 e mil downloads de conteúdo custam US$ 10.",
+            "url": "https://help.openalex.org/access/example-costs",
+            "level": "oficial",
+            "quote": "Without a key you get $0.10/day"
+          },
+          {
+            "claim": "OpenAlex: sem chave, a paginação por cursor só entrega a primeira página. O limite é de 10 requisições por segundo sem chave e 30 com a chave grátis.",
+            "url": "https://help.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+            "level": "oficial",
+            "quote": "only the first page works"
+          },
+          {
+            "claim": "OpenAlex: os filtros from_created_date e from_updated_date, que dariam as novidades por data de entrada, são de plano pago.",
+            "url": "https://help.openalex.org/api-entities/works/filter-works",
+            "level": "oficial"
+          },
+          {
+            "claim": "OpenAlex: a consulta cites:W2901077422 achou 8 trabalhos que citam “Cauim: entre comida e ebriedade” e custou US$ 0,0001. O registro da obra (api.openalex.org/works/W2901077422) lista 22 referências, licença cc-by e o Boletim Goeldi como revista.",
+            "url": "https://api.openalex.org/works?filter=cites:W2901077422&per_page=5",
+            "level": "oficial",
+            "quote": "count: 8, cost_usd: 0.0001"
+          },
+          {
+            "claim": "OpenAlex: a busca por “cauim” em título e resumo deu 54 obras em 15/10/2026. Uma delas, “Do cauim à garapa” (2026, W7202258054), não tem país de autor nem idioma e seria cortada por um filtro de país ou de idioma.",
+            "url": "https://api.openalex.org/works?filter=title_and_abstract.search:cauim&per_page=3",
+            "level": "oficial"
+          },
+          {
+            "claim": "OpenAlex guarda cópia do texto completo de mais de 50 milhões de obras de acesso aberto, mas os PDFs mantêm o direito autoral original.",
+            "url": "https://help.openalex.org/access/fulltext/",
+            "level": "oficial",
+            "quote": "OpenAlex does not grant any additional rights to the content"
+          },
+          {
+            "claim": "Crossref: o pool público tem limite 5 e concorrência 1; o pool polite (de quem se identifica com e-mail) tem limite 10 e concorrência 3. O intervalo de tempo vem no cabeçalho x-rate-limit-interval.",
+            "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+            "level": "oficial",
+            "quote": "Include your email address in the `mailto` parameter or `agent` header."
+          },
+          {
+            "claim": "Crossref: quase nenhum metadado tem direito autoral e pode ser usado para qualquer fim; alguns resumos podem ter.",
+            "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+            "level": "oficial",
+            "quote": "almost none of the metadata is subject to copyright"
+          },
+          {
+            "claim": "A BDTD não guarda o texto completo: ele fica nos repositórios das instituições. Os resultados podem ser exportados em RIS e CSV.",
+            "url": "https://bdtd.ibict.br/vufind/faq/home",
+            "level": "oficial",
+            "quote": "Não é possível obter acesso ao texto completo ou o PDF da obra na BDTD."
+          },
+          {
+            "claim": "Qualquer busca da BDTD pode sair como RSS 2.0, mas a data de cada item é 1º de janeiro do ano de publicação, não a data de entrada na base. A busca por “cauim” trouxe também itens sem relação, como uma tese sobre Rorty.",
+            "url": "https://bdtd.ibict.br/vufind/Search/Results?lookfor=cauim&type=AllFields&view=rss",
+            "level": "oficial"
+          },
+          {
+            "claim": "Em 15/10/2026, a API do Oasisbr somava 6.364.932 registros, entre eles 2.534.768 artigos e 610.426 TCC. Nesse mesmo dia, a página inicial pediu verificação de navegador ao robô, mas a API respondeu.",
+            "url": "https://oasisbr.ibict.br/vufind/api/v1/search?limit=0&facet[]=format",
+            "level": "oficial"
+          },
+          {
+            "claim": "O arquivo da CAPES de 2024 traz resumo (DS_RESUMO), palavras-chave, URL do texto completo e a UF da instituição (SG_UF_IES). Traz também identificadores de pessoas (ID_PESSOA_DISCENTE, ID_PESSOA_ORIENTADOR). Não há campo de município nem do lugar estudado. Pela API, esse recurso de 2024 mostrou total de 2.000 linhas.",
+            "url": "https://dadosabertos.capes.gov.br/api/3/action/datastore_search?resource_id=87133ba7-ac99-4d87-966e-8f580bc96231&limit=1",
+            "level": "oficial"
+          },
+          {
+            "claim": "No OAI-PMH do Alice (Embrapa), registros publicados em 2005 e depositados em 2022 aparecem com data de alteração de 10/10/2026. O campo de direitos diz só “openAccess”, sem licença.",
+            "url": "https://www.alice.cnptia.embrapa.br/alice-oai/request?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-10&until=2026-10-10",
+            "level": "oficial"
+          },
+          {
+            "claim": "Google Acadêmico: o robots.txt proíbe robôs em /scholar. A ajuda diz que não há acesso em lote, que cada consulta mostra no máximo 1.000 resultados e que os alertas chegam por e-mail.",
+            "url": "https://scholar.google.com/robots.txt",
+            "level": "oficial",
+            "quote": "Disallow: /scholar"
+          },
+          {
+            "claim": "Portal de Periódicos CAPES: o conteúdo assinado só abre nos IPs das instituições participantes ou pelo login CAFe; o conteúdo gratuito abre sem login.",
+            "url": "https://www.periodicos.capes.gov.br/index.php/acesso-cafe.html",
+            "level": "oficial",
+            "quote": "O conteúdo assinado com as editoras científicas está disponível para os IPs identificados das instituições participantes."
+          }
+        ],
+        "facts_checked": [],
+        "missing": [],
+        "open_questions": [
+          "Que revistas, associações, grupos de pesquisa ou autores você já reconhece como lugares onde as CLB são estudadas? A lista desta frente não limita; é só um começo.",
+          "Os arquivos do Drive “Bebidas Pré-coloniais Sul-Americanas – Artigos” e “Bebidas Históricas do Brasil – Pesquisa” (§3.1) já reúnem uma bibliografia acadêmica que possa ser a primeira semente da bola de neve?",
+          "Você, ou alguém próximo do projeto, tem vínculo com uma instituição participante do Portal de Periódicos CAPES? Como você imagina esse acesso individual alimentando o trabalho coletivo?",
+          "A produção anterior a 1987 fica fora da CAPES e da BDTD. Que tipos de texto você espera encontrar nesse período: revistas de museus, anais, livros de folcloristas, relatórios técnicos, outros?",
+          "Como você imagina a relação da CLB com os pesquisadores que gravam oralidades: ler o que eles publicam, fazer parceria, ou outra coisa? Se houver gravação em parceria com universidades, a Resolução CNS 510/2016 pode valer; ela não foi conferida no texto oficial.",
+          "Pendências técnicas para o Anexo C.3 (não são perguntas a Vicente): testar o OAI da Redalyc, que só funciona por HTTP; testar BDTD, Oasisbr e SciELO a partir do GitHub Actions; conferir se o arquivo de 2024 da CAPES está incompleto na API (só 2.000 linhas); conferir no site oficial a licença CC0 dos dados do OpenAlex; localizar online o Tesauro de Folclore e Cultura Popular Brasileira do CNFCP, que não foi encontrado."
+        ],
+        "verified": false
+      },
+      {
+        "front": "Monitoramento contemporâneo, mídia e oralidade já gravada",
+        "summary": "Conferi 19 fontes de monitoramento e de oralidade já gravada. A principal mudança: o RSS de busca do Google Notícias e os feeds do Google Alertas ficam fora do que o robots.txt do Google libera, e os termos do Google proíbem o acesso automatizado que contrarie esse arquivo. As vias permitidas são os Alertas por e-mail, o GDELT, o Media Cloud e as APIs oficiais (YouTube, Apple); Instagram, TikTok e Facebook entram só quando uma pessoa manda o link. Proponho: a via de acesso registrada em cada ambiente; consultas adaptadas a cada ambiente, com o limite de resultados de cada um; uma guarda contra dado pessoal e contra dado de prazo curto no Git; o depoimento gravado como Fonte, com marca de tempo; a continuidade por arquivos de estado e fatias de escuta; geradores próprios em Python, com o risco dos termos do GitHub Actions registrado; e o Wikidata como semente de termos candidatos. Os fatos podem entrar no Anexo C.3.",
+        "answers": [
+          {
+            "question": "O plano também deve considerar a revisão das fontes de busca e como estas buscas podem ser feitas?",
+            "answer": "Sim, e a revisão já mudou coisas. Em 15/10 conferi que o RSS de busca do Google Notícias e os feeds do Google Alertas estão fora do que o robots.txt do Google libera, e que os termos do Google proíbem o acesso automático que contrarie esse arquivo; o caminho permitido é receber os Alertas por e-mail (MO-1). As vias oficiais para notícias são o GDELT (3 meses, até 250 resultados por consulta, saída em RSS) e o Media Cloud (só links, com conta); para vídeo, a API do YouTube (100 buscas por dia); para podcast, a busca da Apple e o RSS de cada podcast. Cada busca nasce do Termo e é adaptada à sintaxe e aos limites de cada ambiente (MO-2)."
+          },
+          {
+            "question": "...assim como o modo de admissão de novos dados incluindo a admissão de pessoas, oralidades e etc?",
+            "answer": "A oralidade que outros já gravaram (Museu da Pessoa, CPDOC, Missão de 1938, Cinemateca, IMS, YouTube, podcasts) entra como Fonte do tipo 'depoimento gravado', com o trecho marcado em minutos e segundos, os termos do acervo e a citação (MO-4). Ela vale muito para a W, porque traz a compreensão local nas palavras de quem fala; anotar se a pessoa fala de si, da família ou do grupo ajuda a ver se é prática comum. Quem aparece nas mídias entra pela autoria publicada, nunca por cadastro. Nada disso reabre o adiamento do WhatsApp e dos áudios enviados por pessoas (P48)."
+          },
+          {
+            "question": "o modelo de ingestão e de trabalho coletivo pode ser melhorado?",
+            "answer": "Sim, em três pontos desta frente. A mesma notícia achada por duas consultas vira uma Entrada só, com as duas descobertas anotadas, o que mostra quais consultas rendem. Um resultado que aponta para um site com feed próprio vira proposta de novo ambiente (MO-6). E as fontes longas são divididas em fatias de escuta que qualquer pessoa pode reservar por um prazo (MO-5)."
+          },
+          {
+            "question": "uma ferramenta de uso coletivo tem o mesmo tratamento de um trabalho individual?",
+            "answer": "Não. No uso coletivo, as regras ficam escritas, e não na cabeça de alguém; quem propõe não é quem aprova; cada ação leva um ID opaco, sem dado pessoal no Git; e o trabalho é dividido em partes que se reservam, para que duas pessoas não façam a mesma coisa nem parem no meio sem deixar rastro. O que alguém produz, como o trecho de uma fatia de escuta, continua sendo contribuição de pessoa: passa pela quarentena e pela régua de 4 filtros (P14)."
+          },
+          {
+            "question": "o wiki está organizado por região (bioma, estados, localidades)?",
+            "answer": "Não na v0.1: a ficha só tem o campo 'territórios' (§6), e nada organiza a navegação por bioma, estado ou localidade. Nesta frente, cada Entrada pode trazer dois lugares distintos, o lugar do veículo e o lugar mencionado, sempre como candidatos e nunca como fato. O Media Cloud já agrupa veículos em coleções nacionais e locais por país, o que permite monitorar por região. A organização regional do wiki em si cabe a outra frente."
+          },
+          {
+            "question": "as fontes não devem ser consideradas exauridas quando se coleta apenas 15 CLB, correto?",
+            "answer": "Correto. O 15 é o tamanho do lote de tratamento por rodada (P94) e a cota de juízo humano por semana (P84), nunca um limite de coleta. Um ambiente de monitoramento (notícias, vídeo, podcast) nunca se esgota: fica ligado enquanto existir. Na escavação, 'exaurido' vale só para ambiente × consulta × período, depois de uma passada completa que não bateu no limite da API, e reabre quando surge uma variante nova (item 11 e MO-2)."
+          },
+          {
+            "question": "como vamos organizar as continuidades do trabalho em cima das fontes?",
+            "answer": "Com o estado escrito em arquivo, no repositório. Cada ambiente × consulta guarda onde parou: última rodada, último item, próxima janela e erros. Cada fonte longa guarda até que minuto foi ouvida e por quem (ID opaco). A próxima sessão, a rotina na nuvem ou outra pessoa recomeça desse ponto, sem depender de memória (MO-5)."
+          },
+          {
+            "question": "para os tiers de uso, está considerado também a criação de ferramentas de ação para além de ser informativo. Criação de planos de aula etc.",
+            "answer": "Em parte. A v0.1 prevê o planejador de aulas por CLB ou por conjunto de CLB, sob demanda (Passo 9, D-006), e a P48 diz que o tier 3 'pode gerar cartilhas'; quais grupos pedem quais ferramentas segue em aberto (§10, pergunta 5). Desta frente vem um material útil para aula: o trecho de depoimento com marca de tempo, usado por link e com citação curta, sem republicar o áudio. Isso respeita os acervos; o do Museu da Pessoa, por exemplo, admite uso cultural e acadêmico, segundo resultado de busca."
+          }
+        ],
+        "sources": [
+          {
+            "name": "Google Notícias — RSS de busca",
+            "kind": "agregador de notícias",
+            "access": "Feed público sem chave, mas o robots.txt de news.google.com não libera /rss, e os termos do Google proíbem o acesso automatizado que contrarie o robots.txt.",
+            "how_to_search": "Não automatizar. Se for útil, consulta humana no navegador durante a escavação assistida.",
+            "use": "referência",
+            "level": "oficial",
+            "permalink": "https://news.google.com/robots.txt",
+            "terms": "https://policies.google.com/terms?hl=pt-BR",
+            "relevance": "Cobre muitos veículos brasileiros, mas a via automática fica como Falta."
+          },
+          {
+            "name": "Google Alertas — entrega por e-mail",
+            "kind": "alerta de busca",
+            "access": "A ajuda oficial descreve a entrega por e-mail. Segundo fontes secundárias, também existe um feed RSS, mas ele fica sob /alerts/, que o robots.txt bloqueia. Se é preciso conta Google: a testar (as fontes secundárias divergem).",
+            "how_to_search": "Um alerta por consulta gerada a partir do Termo (termo, variante ou só descritores), em português e com região Brasil, entregue no e-mail do projeto (§5.4). O script lê o e-mail e extrai de cada link o endereço de destino, sem passar pelo redirecionador do Google.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "endpoint": "https://www.google.com/alerts",
+            "permalink": "https://support.google.com/websearch/answer/4815696?hl=pt-BR",
+            "coverage": "Só o que aparece daqui em diante; não serve para escavação."
+          },
+          {
+            "name": "GDELT DOC 2.0 API",
+            "kind": "índice global de notícias (API aberta)",
+            "access": "Sem chave, mas limita o ritmo de pedidos: no teste de 15/10, dois de três pedidos receberam 429.",
+            "how_to_search": "Frase entre aspas, OR, sourcelang:por e sourcecountry:BR; mode=artlist, format=rss, maxrecords até 250, timespan dentro de 3 meses. A busca roda sobre a tradução automática em inglês: preferir consultas só de descritores.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "endpoint": "https://api.gdeltproject.org/api/v2/doc/doc",
+            "permalink": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+            "coverage": "Últimos 3 meses por padrão; 65 línguas traduzidas, o português incluído (data.gdeltproject.org/api/v2/guides/LOOKUP-LANGUAGES.TXT).",
+            "fulltext": "Não: só URL e título, e o título vem alterado. O trecho literal sai sempre da página original.",
+            "terms": "Uso livre, inclusive redistribuição, com citação do GDELT e link (gdeltproject.org/about.html)."
+          },
+          {
+            "name": "Media Cloud",
+            "kind": "arquivo e índice de notícias",
+            "access": "Exige conta (termos de 16/05/2023); a API tem cota padrão de 4.000 pedidos por semana, e alguns métodos aceitam só 2 pedidos por minuto.",
+            "how_to_search": "Busca por termo dentro de coleções geográficas: 'National' e 'State & Local' por país, e coleções por estado (blog de 2020; conferir as do Brasil no Directory). Exporta CSV de URLs.",
+            "use": "ambos",
+            "level": "oficial",
+            "permalink": "https://www.mediacloud.org/documentation/faqs",
+            "coverage": "Desde que cada fonte entrou na coleta por RSS.",
+            "fulltext": "Não: só URLs e agregados, por causa do direito autoral.",
+            "terms": "Feito para pesquisa acadêmica, sem fins lucrativos e jornalística; não concede direito sobre o conteúdo de terceiros (mediacloud.org/legal/media-cloud-terms-of-use).",
+            "relevance": "Permite monitorar por região do veículo (mediacloud.org/blog/approaches-to-searching-by-place-in-media-cloud)."
+          },
+          {
+            "name": "Feeds próprios de veículos, blogs e portais (por exemplo, a Agência Brasil)",
+            "kind": "feed RSS/Atom",
+            "access": "Feed oficial de cada site; robots.txt e termos conferidos um a um. A Agência Brasil oferece RSS (rss.ebc.com.br), e o rodapé atual diz '© Todos os direitos reservados pela EBC'.",
+            "how_to_search": "Quando um resultado do GDELT, do Media Cloud ou dos Alertas aponta para um site com feed, o script descobre o feed e propõe o site como Ambiente.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "permalink": "https://agenciabrasil.ebc.com.br/",
+            "fulltext": "Depende do feed; guardar só link, título, data e trecho curto."
+          },
+          {
+            "name": "Substack",
+            "kind": "newsletters e blogs",
+            "access": "Feed em /feed de cada publicação, segundo a ajuda da Substack vista em resultado de busca (a página respondeu 403 à leitura automática).",
+            "how_to_search": "Monitorar o /feed das publicações que forem descobertas; não foi conferida nenhuma busca geral por API.",
+            "use": "monitoramento",
+            "level": "secundária",
+            "permalink": "https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication"
+          },
+          {
+            "name": "YouTube Data API v3",
+            "kind": "plataforma de vídeo (API oficial)",
+            "access": "Chave num projeto do Google Cloud; por padrão, 100 buscas por dia, mais 10.000 unidades diárias para os outros métodos.",
+            "how_to_search": "search.list com q (| para OU, - para NÃO), regionCode=BR, relevanceLanguage=pt e publishedAfter/publishedBefore para janelas antigas; até 50 resultados por página.",
+            "use": "ambos",
+            "level": "oficial",
+            "endpoint": "https://developers.google.com/youtube/v3/docs/search/list",
+            "permalink": "https://developers.google.com/youtube/v3/determine_quota_cost",
+            "fulltext": "Não: as legendas só ficam acessíveis para quem pode editar o vídeo, e baixar áudio ou vídeo é proibido. A transcrição de trecho é humana.",
+            "terms": "Dados da API guardados no máximo 30 dias sem atualização; o robots.txt bloqueia /feeds/videos.xml e /results."
+          },
+          {
+            "name": "Busca de podcasts da Apple (Search API)",
+            "kind": "diretório de podcasts",
+            "access": "Aberta, sem chave citada na página; cerca de 20 chamadas por minuto.",
+            "how_to_search": "itunes.apple.com/search?term=...&media=podcast. O resultado leva ao RSS de cada podcast, que vira Ambiente.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "endpoint": "https://itunes.apple.com/search",
+            "permalink": "https://performance-partners.apple.com/search-api"
+          },
+          {
+            "name": "Podcast Index API e transcrições no RSS (podcast:transcript)",
+            "kind": "índice aberto de podcasts",
+            "access": "Chave e segredo gratuitos, segundo fontes secundárias; o site oficial respondeu 403 à leitura automática.",
+            "how_to_search": "search/byterm?q=.... No RSS do episódio, a etiqueta podcast:transcript aponta a transcrição (texto, HTML, VTT, JSON ou SRT), e com ela o script pode conferir o trecho; essa etiqueta foi conferida na especificação oficial.",
+            "use": "ambos",
+            "level": "secundária",
+            "permalink": "https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/tags/transcript.md",
+            "fulltext": "Só quando o podcast publica a transcrição; sem ela, o conteúdo fica só em áudio (ver MO-4 e P48)."
+          },
+          {
+            "name": "Instagram — busca de hashtag (API oficial)",
+            "kind": "rede social",
+            "access": "Só pela API, com o recurso 'Instagram Public Content Access', e no máximo 30 hashtags únicas a cada 7 dias. Fora disso, os termos da Meta proíbem a coleta automática.",
+            "how_to_search": "Hashtags derivadas dos Termos, se Vicente decidir pedir o acesso; senão, só links enviados por pessoas.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "permalink": "https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-hashtag-search"
+          },
+          {
+            "name": "Meta Content Library (Facebook, Instagram, Threads, Canais do WhatsApp)",
+            "kind": "ferramenta de pesquisa em conteúdo público",
+            "access": "Exige vínculo com instituição acadêmica ou organização sem fins lucrativos cuja atividade principal seja a pesquisa; não cobra taxas. O pedido é feito pelo Meta Research Tools Manager.",
+            "how_to_search": "Busca por palavra no conteúdo público, dentro do ambiente seguro da Meta.",
+            "use": "escavação",
+            "level": "oficial",
+            "permalink": "https://transparency.meta.com/researchtools/meta-content-library/",
+            "relevance": "Até haver vínculo, fica registrada como Falta."
+          },
+          {
+            "name": "TikTok",
+            "kind": "rede social",
+            "access": "Os termos proíbem 'usar scripts automatizados para colher informações dos Serviços'. No Brasil, a Research API só aceita estudos sobre a segurança de jovens online.",
+            "how_to_search": "Só links enviados por pessoas.",
+            "use": "referência",
+            "level": "oficial",
+            "permalink": "https://developers.tiktok.com/products/research-api/",
+            "terms": "https://www.tiktok.com/legal/page/row/terms-of-service/pt-BR"
+          },
+          {
+            "name": "Wikidata (consulta SPARQL)",
+            "kind": "base de conhecimento aberta",
+            "access": "query.wikidata.org; dados estruturados, inclusive Lexemas, em CC0. O serviço está mais lento desde 2026-05.",
+            "how_to_search": "Rótulos, nomes alternativos em português e lexemas de bebidas e insumos; com User-Agent descritivo e um pedido por vez.",
+            "use": "referência",
+            "level": "oficial",
+            "permalink": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+            "relevance": "Semeia Termos candidatos; nunca serve como abonação."
+          },
+          {
+            "name": "Wikipédia em português",
+            "kind": "enciclopédia aberta",
+            "access": "API MediaWiki; texto em CC BY-SA 4.0 (e GFDL).",
+            "how_to_search": "O verbete serve só para chegar às referências, que são seguidas até a fonte original.",
+            "use": "referência",
+            "level": "oficial",
+            "permalink": "https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Direitos_de_autor"
+          },
+          {
+            "name": "Museu da Pessoa",
+            "kind": "acervo de histórias de vida (oralidade gravada)",
+            "access": "O site respondeu 403 à leitura automática em 15/10/2026: a consulta é humana, no navegador.",
+            "how_to_search": "Busca no acervo por palavra, tema e lugar (a conferir na sessão humana); registrar a história, o minuto e o trecho.",
+            "use": "escavação",
+            "level": "secundária",
+            "permalink": "https://museudapessoa.org/politica-de-acesso-e-uso/",
+            "terms": "CC BY-NC-SA 4.0 e uso 'exclusivamente para fins culturais e acadêmicos' (vistos em resultado de busca).",
+            "relevance": "Alta para a W: traz a compreensão local nas palavras de quem fala."
+          },
+          {
+            "name": "CPDOC/FGV — Programa de História Oral",
+            "kind": "acervo de história oral",
+            "access": "A maior parte do acervo está aberta, em áudio, transcrição ou audiovisual. Só se abrem as entrevistas autorizadas formalmente pelos entrevistados, e o acesso a documentos exige, em regra, cadastro.",
+            "how_to_search": "Consulta por entrevistado ou por assunto. Parte das transcrições está em PDF para download, o que permite conferir trechos por script.",
+            "use": "escavação",
+            "level": "oficial",
+            "endpoint": "https://www18.fgv.br/cpdoc/acervo/historia-oral",
+            "permalink": "https://cpdoc.fgv.br/acervo/historia-oral",
+            "terms": "Cópias só para uso privado; outros usos, com autorização prévia (cpdoc.fgv.br/termos). A citação curta se apoia na Lei 9.610, art. 46, III.",
+            "relevance": "O acervo é voltado a elites políticas e instituições; a relevância para as CLB está por medir."
+          },
+          {
+            "name": "Missão de Pesquisas Folclóricas (1938) — Discoteca Oneyda Alvarenga, Centro Cultural São Paulo",
+            "kind": "acervo sonoro e documental",
+            "access": "Mais de 20 mil itens guardados pela Discoteca. O acesso online não foi confirmado; a consulta é presencial ou por contato com a Discoteca.",
+            "how_to_search": "Escavação assistida presencial ou por contato; registrar o item, a faixa e o minuto.",
+            "use": "escavação",
+            "level": "oficial",
+            "permalink": "https://prefeitura.sp.gov.br/web/cultura/w/noticias/18883",
+            "coverage": "Gravações e registros de 1938."
+          },
+          {
+            "name": "Instituto Moreira Salles — Acervo IMS",
+            "kind": "acervo multimídia (música, fotografia, iconografia, literatura)",
+            "access": "Catálogo online com busca; os termos de uso não foram lidos nesta rodada.",
+            "how_to_search": "Busca por palavra nos catálogos de Música (discos de 78 rotações, segundo fonte secundária) e de Fotografia.",
+            "use": "escavação",
+            "level": "oficial",
+            "permalink": "https://acervos.ims.com.br/"
+          },
+          {
+            "name": "Cinemateca Brasileira — Filmografia Brasileira e Banco de Conteúdos Culturais",
+            "kind": "acervo audiovisual",
+            "access": "A base Filmografia tem cerca de 56 mil títulos (inclui cinejornais e obras institucionais), e há 6.775 filmes digitais de acesso público. As condições de reprodução são tratadas por atendimento@cinemateca.org.br.",
+            "how_to_search": "Busca na base Filmografia (bases.cinemateca.org.br) por assunto e título; os filmes digitais estão no BCC (bcc.cinemateca.org.br).",
+            "use": "escavação",
+            "level": "oficial",
+            "permalink": "https://cinemateca.org.br/acervo/base-de-dados/"
+          }
+        ],
+        "proposals": [
+          {
+            "id": "MO-1",
+            "title": "Via de acesso permitida por ambiente: termos e robots.txt conferidos antes de automatizar",
+            "gap": "O §5.3 prevê 'alertas e buscas de notícias com saída em RSS, ou geradores de feed para sites sem feed', e o Anexo C.2 deixa o RSS do Google Notícias 'a testar'. Nem o §6 (Ambiente: 'acesso (feed, API, busca, manual)') nem as perguntas do agente Jurídico (item 7) tratam dos termos de uso ou do robots.txt de cada ambiente.",
+            "proposal": "Cada Ambiente ganha estes campos: via permitida (feed oficial, API, e-mail do serviço, consulta humana ou vedada); termos lidos (URL e data); resultado do robots.txt, o arquivo em que cada site diz o que robôs podem ler; limites; e o que se pode guardar. Antes de cada leitura automática, o script consulta o robots.txt com o módulo padrão do Python (docs.python.org/3/library/urllib.robotparser.html). O Jurídico ganha a pergunta 'os termos deste ambiente permitem esta via?'; a resposta 'não' vira a Falta 'acesso automatizado vedado', com a via humana anotada. Primeira aplicação: o RSS do Google Notícias sai, e os Alertas do Google chegam por e-mail à caixa do projeto (§5.4), que é a entrega descrita na ajuda oficial.",
+            "complexity": "baixa",
+            "step": "Passo 1 (contrato de Ambiente) e Passo 4 (ligar os monitores)",
+            "honors": "P75, P88; princípios 9 e 13; ajusta o item 7",
+            "risks": "Termos mudam sem aviso, por isso entram no checklist mensal do Passo 10. Alguns ambientes úteis ficam só para consulta humana e disputam a cota de 1 a 3 h.",
+            "vicente_decides": "Se a leitura de precaução (o robots.txt vale também para um leitor de feed agendado) fica como regra do projeto.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-2",
+            "title": "Consulta adaptada a cada ambiente, com o limite de cada um: resposta cortada no limite não é exaustão",
+            "gap": "O item 6 gera os booleanos por script e o item 11 define 'exaurido' por ambiente × consulta × período, mas nada registra a sintaxe e os limites de cada ambiente. Se a resposta vem cortada no máximo da API, a janela seria contada como vista (§5.2).",
+            "proposal": "Um arquivo por ambiente traduz a Consulta para a sintaxe dele (GDELT: frase entre aspas, sourcelang:por, sourcecountry:BR; YouTube: | para OU, - para NÃO, regionCode=BR, publishedAfter e publishedBefore) e guarda os limites conferidos (GDELT: 250 por resposta e 3 meses; YouTube: 50 por página e 100 buscas por dia). Uma resposta que bate no limite é chamada de 'saturada': o script divide a janela e repete, e só a passada completa e não saturada vira pegada. O GDELT busca sobre a tradução automática em inglês; por isso, ali valem as consultas só de descritores, e a designação local é conferida no texto original.",
+            "complexity": "média",
+            "step": "Passo 4",
+            "honors": "P3, P5, P89, P94; constrói sobre os itens 6 e 11",
+            "risks": "Os limites mudam sem aviso. Janelas divididas gastam mais minutos do GitHub Actions (2.000 por mês em repositório privado, Anexo C): medir no caso-piloto.",
+            "vicente_decides": "nada",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-3",
+            "title": "Nem dado pessoal nem dado de prazo curto no Git: guarda automática antes do commit",
+            "gap": "O §5.1 trata dos dados de quem envia, mas não dos do monitoramento: URLs de rede social com @perfil, nomes em metadados e dados da API do YouTube, que só podem ser guardados por 30 dias. O validador do item 5 não procura dado pessoal, e o Git não apaga o que registrou.",
+            "proposal": "Um script roda antes de cada commit (cada gravação de versão no Git), na máquina e na rotina da nuvem. Ele desvia para o lugar restrito fora do Git (item 10) e-mails, telefones, CPFs e URLs com identificador de pessoa, e deixa no Git um ID opaco, como o do §5.1; o GitHub Actions repete a checagem depois do envio, só como alarme. Do YouTube, só entra no Git a impressão digital (hash: código que não deixa reconstituir o original) do ID do vídeo, como pegada: título, canal e números ficam no relatório do dia, e a Fonte é registrada por uma pessoa a partir da página pública. O User-Agent dos scripts (a identificação que apresentam aos sites) aponta para o endereço do projeto, nunca para um e-mail pessoal.",
+            "complexity": "média",
+            "step": "Passo 2 (validador) e Passo 4",
+            "honors": "Regra de dados pessoais do §5.1 (LGPD); princípio 11; P42; constrói sobre os itens 5 e 10",
+            "risks": "Alarme falso com nomes de autores de livros (ver MO-4). A pegada em hash é ilegível para quem lê o arquivo.",
+            "vicente_decides": "Se uma URL com @perfil de rede social conta como dado pessoal para a regra do Git.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-4",
+            "title": "Depoimento já gravado como Fonte: trecho por marca de tempo, termos do acervo e autoria publicada",
+            "gap": "O trecho do item 5 é só texto (o seletor de citação da W3C), e o §6 não tem tipo de Fonte para oralidade gravada. Não há regra para o nome do depoente diante da regra do Git, nem para áudio que já está num acervo público.",
+            "proposal": "Uma Fonte do tipo 'depoimento gravado' com: acervo; link permanente; termos lidos (URL e data); data da gravação e período de que fala (dupla marcação, P9); projeto e entrevistador, como publicados; origem da transcrição (do acervo, nossa ou de máquina, marcada); e o campo 'fala de si, da família ou do grupo', que alimenta a W (item 2) e os critérios de prática cultural (item 3). O Trecho junta duas marcações: o intervalo de tempo 't=início,fim', em segundos (Media Fragments URI 1.0, w3.org/TR/media-frags; exemplo 't=30,60' em w3.org/TR/annotation-model), e o texto citado da transcrição, que o script confere. Sem transcrição, o trecho é 'não verificável por máquina' e vai para a cota humana ou vira Falta. No wiki, áudio e vídeo nunca são republicados: entra o link com marca de tempo (no YouTube, os parâmetros start e end) e uma citação curta (Lei 9.610, art. 46, III, já conferida no plano).",
+            "complexity": "média",
+            "step": "Passo 1 (contrato de Fonte e Trecho) e Passo 5",
+            "honors": "P9, P47, P53 (quem ensinou), P97; constrói sobre os itens 2, 3 e 5",
+            "risks": "O YouTube não permite baixar áudio nem ler legendas de terceiros: no YouTube, a transcrição de trecho é sempre humana. Os termos de alguns acervos restringem mais que a citação (o CPDOC permite cópia só para uso privado).",
+            "vicente_decides": "Se o nome do depoente, como o acervo o publica, é autoria (vai na citação, no Git) ou dado pessoal (fica fora). Também: se ouvir depoimentos que só existem em áudio cabe agora. Não é canal de entrada (P48), mas toca 'a questão dos áudios'. Se Vicente entender que a P48 cobre isso, é revisão de decisão, justificada porque muito da compreensão local (W) só existe em áudio.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-5",
+            "title": "Continuidade: arquivo de estado por consulta, fatias de escuta e dois eixos de estado por ambiente",
+            "gap": "O §5.2 põe 'monitorando' depois de 'exaurido' numa sequência única. O item 11 gera a Matriz de Pegadas a partir das execuções, mas não diz onde a próxima rodada recomeça nem até onde se ouviu uma fonte longa (um depoimento de 3 h, uma temporada de podcast). Também não há como reservar trabalho entre várias pessoas.",
+            "proposal": "Cada par ambiente × consulta tem um arquivo de estado: última rodada, último item, se saturou, erros e próxima janela. Cada fonte longa é dividida em fatias de tempo, e cada fatia fica livre, reservada (ID opaco e prazo), ouvida ou com trechos. O Ambiente passa a ter dois eixos de estado, como no item 4: escavação (proposto → mapeando → minerando → exaurido por consulta × período, reaberto por variante nova) e monitoramento (desligado, ligado, suspenso por erro ou por termos), que nunca se exaure; a Matriz do item 11 lê também esses estados.",
+            "complexity": "baixa",
+            "step": "Passo 2 (arquivos de estado) e Passo 5 (uso)",
+            "honors": "P84, P88, P89, P94, P95; constrói sobre os itens 4 e 11",
+            "risks": "Uma reserva esquecida trava a fatia; por isso, toda reserva tem prazo e expira sozinha.",
+            "vicente_decides": "nada",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-6",
+            "title": "Geradores próprios em Python, sem servidor de RSS de terceiros (ajusta o item 10)",
+            "gap": "O §5.3 fala em 'geradores de feed para sites sem feed' sem escolher ferramenta. O item 10 põe a coleta no GitHub Actions sem tratar dos termos do próprio GitHub.",
+            "proposal": "Um gerador em Python para cada ambiente sem feed, dentro do repositório: ele confere o robots.txt, espaça os pedidos e grava RSS e linhas de Entrada; se um resultado aponta para um site com feed próprio, o script propõe esse site como novo Ambiente. Não hospedar RSS-Bridge (aplicação PHP que pede servidor; github.com/RSS-Bridge/rss-bridge), RSSHub (licença AGPL-3.0; docs.rsshub.app) nem changedetection.io (Docker ou US$ 8,99/mês, e o README põe no usuário a responsabilidade pelos termos; github.com/dgtlmoon/changedetection.io). Também não usar instâncias públicas, que coletariam por nós nas plataformas que proíbem a coleta. Registrar o risco dos termos do GitHub Actions (fato abaixo): a leitura proposta é que a coleta produz o conteúdo que o próprio repositório publica; o Flat Data, do GitHub Next, faz exatamente isso (githubnext.com/projects/flat-data), embora não seja produto oficial do GitHub.",
+            "complexity": "média",
+            "step": "Passo 4",
+            "honors": "P1, P75, D-010; princípio 16; ajusta o item 10",
+            "risks": "Sites podem bloquear servidores de nuvem: no teste de 15/10, o GDELT recusou dois de três pedidos (erro 429, 'pedidos demais'). Os geradores quebram quando o site muda.",
+            "vicente_decides": "Se aceita essa leitura dos termos do GitHub Actions ou prefere rodar a coleta em outra máquina, por exemplo na rotina do Claude na nuvem.",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-7",
+            "title": "Redes sociais e vídeo: só por via oficial ou por indicação humana",
+            "gap": "A P1 inclui 'redes sociais', e o §6 lista 'rede social' como tipo de Ambiente sem dizer a via de acesso. Meta e TikTok proíbem a coleta automática, e o YouTube só a permite pela API.",
+            "proposal": "Instagram, Facebook e TikTok ficam sem coleta automática: uma postagem pública entra quando alguém manda o link pelos canais existentes, com trecho feito por pessoa e a regra do MO-3 para o @perfil. As vias oficiais ficam registradas como Faltas até haver condição: Meta Content Library (exige vínculo com instituição acadêmica ou de pesquisa sem fins lucrativos; não cobra taxa); Research API do TikTok (no Brasil, só para estudos de segurança de jovens online); busca de hashtag do Instagram (30 hashtags únicas a cada 7 dias, com o recurso 'Instagram Public Content Access'). O YouTube entra só pela Data API, sem baixar nada, com a transcrição de trecho feita por pessoa.",
+            "complexity": "baixa",
+            "step": "Passo 4",
+            "honors": "P1, P47, P75; princípio 13",
+            "risks": "Parte da prática contemporânea vive nas redes e vai ficar como Falta ou depender de quem contribui.",
+            "vicente_decides": "Se busca uma parceria acadêmica para usar a Meta Content Library. Se usa a API do YouTube, que exige um projeto no Google Cloud (Google só se necessário).",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          },
+          {
+            "id": "MO-8",
+            "title": "Wikidata e Wikipédia semeiam termos candidatos, nunca abonações",
+            "gap": "No item 6, o Termo nasce candidato a partir do legado, mas nenhuma fonte externa de variantes está listada. O Anexo C não tem Wikidata nem Wikipédia.",
+            "proposal": "Uma consulta SPARQL periódica (a linguagem de consulta do Wikidata) traz rótulos, nomes alternativos em português e lexemas de bebidas e insumos, como Termos candidatos com origem 'Wikidata' (dados em CC0; wikidata.org/wiki/Wikidata:Licensing). Nunca entram como abonação. Da Wikipédia (texto em CC BY-SA 4.0), só se seguem as referências do verbete até a fonte original, que entra como Fonte. Os scripts seguem a etiqueta da API MediaWiki: User-Agent descritivo e um pedido por vez (mediawiki.org/wiki/API:Etiquette).",
+            "complexity": "baixa",
+            "step": "Passo 3 (semear a terminologia) e Passo 4",
+            "honors": "P23, P24; princípios 2 e 7; constrói sobre o item 6",
+            "risks": "O Wikidata traz categorias pensadas de cima para baixo (contra o princípio 7); por isso, só candidatos. A página de limites do Wikidata diz que o serviço está 'much less responsive' desde 2026-05.",
+            "vicente_decides": "nada",
+            "verdict": "não verificado",
+            "verdict_reason": "",
+            "adjusted": ""
+          }
+        ],
+        "dropped": [],
+        "facts": [
+          {
+            "claim": "O robots.txt de news.google.com bloqueia tudo para qualquer robô e libera só uma lista de caminhos que não inclui /rss. Logo, a leitura automática do RSS de busca do Google Notícias contraria o robots.txt (conferido em 15/10/2026).",
+            "url": "https://news.google.com/robots.txt",
+            "level": "oficial",
+            "quote": "User-agent: * / Disallow: / / Allow: /$ / Allow: /? / Allow: /home$ / ... / Allow: /topics/ / Allow: /publications/ / Allow: /stories/ / Allow: /swg/ / Allow: /about$"
+          },
+          {
+            "claim": "Os Termos de Serviço do Google proíbem acessar o conteúdo de seus serviços por meios automatizados que violem instruções legíveis por máquina, e dão o robots.txt como exemplo.",
+            "url": "https://policies.google.com/terms?hl=pt-BR",
+            "level": "oficial",
+            "quote": "usando meios automatizados para acessar o conteúdo de qualquer um dos nossos serviços que viole as instruções legíveis [...] (a frase continua com o exemplo dos arquivos robots.txt)"
+          },
+          {
+            "claim": "O robots.txt de www.google.com bloqueia /alerts/ e só libera /alerts/$, /alerts/manage e /alerts/remove. Que os feeds dos Alertas ficam em /alerts/feeds/... foi visto só em fonte secundária (howtogeek.com).",
+            "url": "https://www.google.com/robots.txt",
+            "level": "oficial",
+            "quote": "Allow: /alerts/manage / Allow: /alerts/remove / Disallow: /alerts/ / Allow: /alerts/$"
+          },
+          {
+            "claim": "A DOC 2.0 API do GDELT busca por padrão os últimos 3 meses, devolve até 250 resultados, tem saída RSS no modo ArtList e busca sobre a tradução automática em inglês das notícias em outras línguas. O português consta da tabela de línguas como 'por', e o Brasil da tabela de países como 'BR'.",
+            "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+            "level": "oficial",
+            "quote": "By default the DOC API searches the last 3 months of coverage monitored by GDELT. / search across all 65 machine translated languages supported by GDELT using English keywords/phrases"
+          },
+          {
+            "claim": "Teste em 15/10/2026: a consulta 'cachaça sourcecountry:BR' em RSS devolveu 10 notícias de veículos brasileiros. Os títulos vieram com espaços antes da pontuação e com acentos perdidos ('edio' no lugar de 'edição'), e houve uma duplicata (o mesmo endereço com e sem 'www.'). Dois de três pedidos receberam 'HTTP 429 Too Many Requests'.",
+            "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=cachaça%20sourcecountry:BR&mode=artlist&maxrecords=10&format=rss",
+            "level": "oficial"
+          },
+          {
+            "claim": "O Media Cloud não entrega o texto das notícias, só URLs e agregados. A cota padrão da API é de 4.000 pedidos por semana, e só há dados de uma fonte desde que seu RSS passou a ser coletado. Os termos de 2023 exigem conta e dizem que a plataforma é feita para pesquisa acadêmica, sem fins lucrativos e jornalística.",
+            "url": "https://www.mediacloud.org/documentation/faqs",
+            "level": "oficial",
+            "quote": "Due to copyright restrictions we cannot provide the actual news content / The default quota is 4000 API requests per week. / We only have data for a source from the time we started scraping its RSS feeds."
+          },
+          {
+            "claim": "As políticas de desenvolvedor da API do YouTube limitam a guarda de dados não autorizados a 30 dias (depois, é preciso apagar ou atualizar). Também proíbem baixar, guardar ou copiar conteúdo audiovisual sem aprovação prévia por escrito.",
+            "url": "https://developers.google.com/youtube/terms/developer-policies",
+            "level": "oficial",
+            "quote": "(III.E.4.d) but not longer than 30 calendar days / (III.E.1.a) download, import, backup, cache, or store copies of YouTube audiovisual content"
+          },
+          {
+            "claim": "Os Termos do YouTube proíbem o acesso por meios automatizados, salvo para mecanismos de pesquisa públicos que sigam o robots.txt ou com permissão escrita. O robots.txt do YouTube bloqueia /feeds/videos.xml (o RSS de canal) e /results (a busca).",
+            "url": "https://www.youtube.com/t/terms?hl=pt-BR&gl=BR",
+            "level": "oficial",
+            "quote": "acessar o Serviço usando qualquer meio automatizado (como robôs, botnets ou scrapers), exceto (a) no caso de mecanismos de pesquisa públicos compatíveis com o arquivo robots.txt do YouTube; ou (b) mediante permissão prévia por escrito do YouTube;"
+          },
+          {
+            "claim": "Baixar legendas pela API do YouTube exige permissão para editar o vídeo; por essa via, não há acesso às legendas de vídeos de terceiros.",
+            "url": "https://developers.google.com/youtube/v3/docs/captions/download",
+            "level": "oficial",
+            "quote": "This method requires the user to have permission to edit the video."
+          },
+          {
+            "claim": "Os Termos do Facebook (Meta) proíbem acessar ou coletar dados de seus produtos por meios automatizados sem permissão prévia.",
+            "url": "https://www.facebook.com/terms.php",
+            "level": "oficial",
+            "quote": "Você não pode acessar ou coletar dados dos nossos Produtos usando meios automatizados (sem nossa permissão prévia)"
+          },
+          {
+            "claim": "No Brasil, a Research API do TikTok aceita só instituições acadêmicas ou sem fins lucrativos que estudem a segurança de jovens online.",
+            "url": "https://developers.tiktok.com/products/research-api/",
+            "level": "oficial",
+            "quote": "Academic institutions or not-for-profit organizations based in Brazil and looking to study online youth safety."
+          },
+          {
+            "claim": "Os Termos de Uso do CPDOC/FGV limitam as cópias ao uso privado e exigem autorização prévia e expressa para qualquer uso além disso. A página de consulta à base de História Oral diz que o CPDOC abre só as entrevistas cuja liberação foi formalmente autorizada pelos entrevistados.",
+            "url": "https://cpdoc.fgv.br/termos",
+            "level": "oficial",
+            "quote": "qualquer uso que exceda as autorizações conferidas nestes Termos de Uso deve ser prévia e expressamente autorizado"
+          },
+          {
+            "claim": "Segundo resultados de busca, o acervo do Museu da Pessoa declara a licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 e uso 'exclusivamente para fins culturais e acadêmicos'. A página não pôde ser aberta: o site respondeu 403 à leitura automática em 15/10/2026.",
+            "url": "https://museudapessoa.org/politica-de-acesso-e-uso/",
+            "level": "secundária",
+            "quote": "Os conteúdos presentes no acervo do Museu da Pessoa podem ser utilizados exclusivamente para fins culturais e acadêmicos (trecho visto no resultado de busca, não na página aberta)"
+          },
+          {
+            "claim": "Os termos de produtos adicionais do GitHub dizem que as máquinas fornecidas pelo GitHub para o Actions não devem ser usadas em atividades alheias à produção, ao teste, à implantação ou à publicação do projeto de software do repositório.",
+            "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+            "level": "oficial",
+            "quote": "If using GitHub-hosted runners, any other activity unrelated to the production, testing, deployment, or publication [...] of the software project associated with the repository where GitHub Actions are used"
+          },
+          {
+            "claim": "A LGPD manda que o tratamento de dado pessoal de acesso público considere a finalidade, a boa-fé e o interesse público da disponibilização. Ela dispensa o consentimento para dado tornado manifestamente público pelo titular, resguardados os seus direitos, e classifica origem racial ou étnica e convicção religiosa como dados sensíveis (art. 5º, II).",
+            "url": "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-normaatualizada-pl.html",
+            "level": "oficial",
+            "quote": "§ 3º O tratamento de dados pessoais cujo acesso é público deve considerar a finalidade, a boa-fé e o interesse público que justificaram sua disponibilização. § 4º É dispensada a exigência do consentimento previsto no caput deste artigo para os dados tornados manifestamente públicos pelo titular, resguardados os direitos do titular e os princípios previstos nesta Lei."
+          }
+        ],
+        "facts_checked": [],
+        "missing": [],
+        "open_questions": [
+          "Para você, 'a questão dos áudios' (P48) inclui ouvir depoimentos já publicados em acervos, ou trata só de áudios enviados por pessoas?",
+          "Quando um acervo publica o nome de quem deu o depoimento, você vê esse nome como autoria, que acompanha a citação, ou como dado pessoal?",
+          "Que acervos de oralidade, regionais, universitários ou comunitários, você já conhece e gostaria de ver tratados junto com os grandes acervos nacionais?",
+          "O projeto tem, ou poderia ter, vínculo com alguma universidade ou organização de pesquisa sem fins lucrativos?",
+          "O que você imagina encontrar nas redes sociais (P1) que não apareça em jornais, vídeos ou acervos?",
+          "O e-mail do projeto, que receberia os Alertas e as contribuições, já existe? Em que serviço?",
+          "A testar na implementação: criar um Alerta do Google exige conta Google? As fontes secundárias divergem."
+        ],
+        "verified": false
+      }
+    ],
+    "failed": [
+      "fontes-oficiais-patrimonio",
+      "metodos-de-busca",
+      "admissao-pessoas-oralidade",
+      "trabalho-coletivo",
+      "regiao-lugar",
+      "continuidade-exaustao",
+      "tiers-ferramentas-acao"
+    ],
+    "critic": null,
+    "gaps": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Pesquisa"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verificação"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 3,
+      "title": "Completude"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 4,
+      "title": "Lacunas"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "pesquisa:fontes-historicas",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "a7784a9bce4741806",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1792058422427,
+      "queuedAt": 1792058422379,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FH: Fontes históricas digitalizadas e imprensa (de 1900 em …",
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792059985225,
+      "tokens": 420648,
+      "toolCalls": 136,
+      "durationMs": 1562797,
+      "resultPreview": "{\"front\":\"FH: Fontes históricas digitalizadas e imprensa (de 1900 em diante, e anteriores pelo eixo Z elástico)\",\"summary\":\"Conferi 20 fontes históricas e de imprensa. Em 15/10, 8 delas recusaram nosso leitor automático em pelo menos uma página (HTTP 403, que quer dizer \\\"acesso negado\\\"), e o SIAN pediu captcha. Além disso, a busca por palavra só encontra o que o OCR leu bem. Por isso, \\\"exaurir\\…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "pesquisa:fontes-academicas",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "aae9c039ad9d5a57a",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1792058422428,
+      "queuedAt": 1792058422380,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "PRODUÇÃO ACADÊMICA E TÉCNICA",
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792059995946,
+      "tokens": 238815,
+      "toolCalls": 118,
+      "durationMs": 1572473,
+      "resultPreview": "{\"front\":\"PRODUÇÃO ACADÊMICA E TÉCNICA\",\"summary\":\"Conferi 20 fontes acadêmicas e técnicas na web em 15/10/2026. Quase todas têm uma porta automática: API (porta de consulta para programas), OAI-PMH (protocolo em que um programa pede ao repositório “o que mudou desde a data X”) ou dados abertos. Com isso, cinco adaptadores substituem um script por fonte, e o “RSS criado por nós” passa a ser uma co…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "pesquisa:fontes-oficiais-patrimonio",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "ac6e974058460f27a",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792059985304,
+      "queuedAt": 1792058422380,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Quote verbatim the law number, date, ementa and Art. 1º.",
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061694227,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 450315,
+      "toolCalls": 174,
+      "durationMs": 1708922
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "pesquisa:fontes-contemporaneas-oralidade",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "a5fc8d4570019753a",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1792059995984,
+      "queuedAt": 1792058422380,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Monitoramento contemporâneo, mídia e oralidade já gravada",
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061468345,
+      "tokens": 198341,
+      "toolCalls": 107,
+      "durationMs": 1472360,
+      "resultPreview": "{\"front\":\"Monitoramento contemporâneo, mídia e oralidade já gravada\",\"summary\":\"Conferi 19 fontes de monitoramento e de oralidade já gravada. A principal mudança: o RSS de busca do Google Notícias e os feeds do Google Alertas ficam fora do que o robots.txt do Google libera, e os termos do Google proíbem o acesso automatizado que contrarie esse arquivo. As vias permitidas são os Alertas por e-mail,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "pesquisa:metodos-de-busca",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "aa8b8f6ab7e01950f",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061468375,
+      "queuedAt": 1792058422381,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Transcreva LITERALMENTE a seção \"1. Memória breve dos acord…",
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061618027,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 93683,
+      "toolCalls": 10,
+      "durationMs": 149651
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "pesquisa:admissao-pessoas-oralidade",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "ad6aa98481d082faf",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061618039,
+      "queuedAt": 1792058422381,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061618547,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 506
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "pesquisa:trabalho-coletivo",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "ae5df90232f7b4f53",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061618560,
+      "queuedAt": 1792058422381,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061619114,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 553
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "pesquisa:regiao-lugar",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "a332f6a31a9e3158a",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061619132,
+      "queuedAt": 1792058422382,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061619682,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 549
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "pesquisa:continuidade-exaustao",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "a977176ffa2a31cf3",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061619695,
+      "queuedAt": 1792058422382,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061620259,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 563
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "pesquisa:tiers-ferramentas-acao",
+      "phaseIndex": 1,
+      "phaseTitle": "Pesquisa",
+      "agentId": "a4f29cb0abd4868e1",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061620274,
+      "queuedAt": 1792058422382,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061620829,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 554
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "verifica:fontes-historicas",
+      "phaseIndex": 2,
+      "phaseTitle": "Verificação",
+      "agentId": "a0c77d0a46fd7b3b7",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061620943,
+      "queuedAt": 1792059985413,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061621614,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 670
+    },
+    {
+      "type": "workflow_agent",
+      "index": 12,
+      "label": "verifica:fontes-academicas",
+      "phaseIndex": 2,
+      "phaseTitle": "Verificação",
+      "agentId": "a62de585942dc9178",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061621628,
+      "queuedAt": 1792059996060,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061622167,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 538
+    },
+    {
+      "type": "workflow_agent",
+      "index": 13,
+      "label": "verifica:fontes-contemporaneas-oralidade",
+      "phaseIndex": 2,
+      "phaseTitle": "Verificação",
+      "agentId": "a132cdb353f28206a",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061622182,
+      "queuedAt": 1792061468458,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061622738,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 555
+    },
+    {
+      "type": "workflow_agent",
+      "index": 14,
+      "label": "critico-completude",
+      "phaseIndex": 3,
+      "phaseTitle": "Completude",
+      "agentId": "a6f5f53fd74d78c83",
+      "agentType": "Plan",
+      "model": "claude-opus-5-5",
+      "state": "error",
+      "startedAt": 1792061694267,
+      "queuedAt": 1792061694233,
+      "attempt": 1,
+      "promptPreview": "Você está ajudando a planejar o projeto \"Cultura Líquida Brasileira\" (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (insumos, modos de fazer, técnicas, recipientes, tempos, lugares, pessoas e modos de transmitir), a partir de 1900 e com eixo do tempo elástico, com cada informação rastreável até a origem.\n\nMODO SOMENTE LEITURA…",
+      "promptFramed": true,
+      "lastProgressAt": 1792061694749,
+      "error": "You've hit your session limit · resets 10am (America/Sao_Paulo)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 482
+    }
+  ],
+  "totalTokens": 1401802,
+  "totalToolCalls": 545
+}

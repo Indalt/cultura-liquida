@@ -1,0 +1,1149 @@
+{
+  "summary": "Lote A (com teto de custo): fontes oficiais, admissão de pessoas, ferramentas por tier, região e reconferência de 10 fatos-chave",
+  "agentCount": 5,
+  "logs": [
+    "Lote A: 5 agentes em paralelo, modelo Sonnet, com teto de consultas à web. Cada resultado fica gravado ao terminar."
+  ],
+  "result": {
+    "results": [
+      {
+        "front": "Fontes oficiais, de patrimônio e de territórios como ambientes de busca (P74)",
+        "summary": "Usei 17 chamadas web (limite 18) e 3 consultas diretas por curl ao Querido Diário. A API do Querido Diário funciona, mas é instável e ruidosa; o LexML pediu verificação anti-robô e não foi contornado. Não achei lei municipal de bebida como patrimônio. Achei um autógrafo (texto aprovado pela Assembleia, sanção não confirmada) de Santa Catarina para a Cachaça com Butiá. O robots.txt só foi lido para bcr.iphan.gov.br e a API do Querido Diário. As demais fontes ficam \"não conferido\" nesse ponto.",
+        "facts": [
+          {
+            "claim": "A Assembleia Legislativa de SC aprovou o autógrafo do PL 169/2023, que declara a Cachaça com Butiá integrante do Patrimônio Cultural Imaterial de SC e altera o Anexo I da Lei 17.565/2018. Assinado em 04/07/2024. O despacho do governador aparece no documento, mas a sanção e o número da lei não foram confirmados.",
+            "url": "https://portalelegis.alesc.sc.gov.br/documentos/Np0Ag",
+            "level": "oficial",
+            "quote": "Art. 1º Fica declarada integrante do Patrimônio Cultural Imaterial do Estado de Santa Catarina a Cachaça com Butiá, que representa os sabores e fazeres do litoral catarinense.",
+            "verdict": "novo"
+          },
+          {
+            "claim": "Há projetos de lei estaduais sobre cachaça como patrimônio imaterial: CE PL 543/2023, TO 2023 (região sudeste) e PB PL 1.296/2013. Não confirmei aprovação de nenhum. Vieram só do resumo da busca; só abri os PDFs de SC. Os links do CE, TO e PB não foram abertos.",
+            "url": "https://www2.al.ce.gov.br/legislativo/legislacao5/leis2023/pl5432023.pdf",
+            "level": "secundária",
+            "verdict": "novo"
+          },
+          {
+            "claim": "Não localizei lei municipal que reconheça bebida tradicional como patrimônio, nem pelo Querido Diário nem pelo LexML. A busca por 'cachaça patrimônio imaterial' no Querido Diário devolveu ruído (pagamento a consórcio Circuito da Cachaça, plano de cultura, Rota da Cana). Em 15/10/2026 a API respondeu com 'total_gazettes' travado em 10000.",
+            "url": "https://api.queridodiario.org.br/gazettes?querystring=cacha%C3%A7a%20patrim%C3%B4nio%20imaterial&size=3",
+            "level": "oficial",
+            "verdict": "novo"
+          },
+          {
+            "claim": "O decreto 3.551/2000 instituiu o Registro de Bens Culturais de Natureza Imaterial e criou o PNPI. O registro fica em bcr.iphan.gov.br e o INRC em inrc.iphan.gov.br.",
+            "url": "https://www.gov.br/iphan/pt-br/assuntos/patrimonio-cultural/patrimonio-imaterial",
+            "level": "oficial",
+            "quote": "instituiu o Registro de Bens Culturais de Natureza Imaterial",
+            "verdict": "confirmado"
+          },
+          {
+            "claim": "A FUNAI publica geodados de terras indígenas em WFS (geoserver.funai.gov.br), com shapefile, KML, CSV e XLSX, atualizados mensalmente. O rodapé do site declara CC BY-ND 3.0.",
+            "url": "https://www.gov.br/funai/pt-br/atuacao/terras-indigenas/geoprocessamento-e-mapas",
+            "level": "oficial",
+            "verdict": "novo"
+          },
+          {
+            "claim": "A Fundação Palmares divulga as comunidades certificadas numa planilha Google Sheets, atualizada mensalmente. A página não cita publicação no DOU, mas o tema de portarias no DOU não foi verificado.",
+            "url": "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/certificacao-quilombola",
+            "level": "oficial",
+            "verdict": "novo"
+          },
+          {
+            "claim": "O INLABS (Imprensa Nacional) entrega o DOU em XML e PDF, com cadastro por e-mail. O XML só existe no INLABS e no dados.gov.br, e o portal avisa que não substitui a versão certificada.",
+            "url": "https://inlabs.in.gov.br/",
+            "level": "oficial",
+            "verdict": "novo"
+          },
+          {
+            "claim": "A Câmara publica dados abertos de proposições, temas e eventos em CSV, JSON, XML, XLSX e ODS. A página consultada não documenta um parâmetro de palavra-chave nem termos de uso.",
+            "url": "https://dadosabertos.camara.leg.br/swagger/api.html",
+            "level": "oficial",
+            "verdict": "novo"
+          },
+          {
+            "claim": "A biblioteca de normas de vinhos e bebidas do MAPA existe, mas a página consultada não listou o Decreto 6.871/2009 nem a consulta a estabelecimentos registrados. Faltam duas páginas de lista, e 21 mil caracteres da página não foram lidos.",
+            "url": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacao-vinhos-e-bebidas",
+            "level": "oficial",
+            "verdict": "novo"
+          },
+          {
+            "claim": "O LexML mostrou tela 'Verificando sua conexão' (verificação anti-robô do Senado) em vez dos resultados. Não tentei contornar.",
+            "url": "https://www.lexml.gov.br/busca/search?keyword=cacha%C3%A7a+patrim%C3%B4nio+cultural+imaterial",
+            "level": "não conferido",
+            "verdict": "novo"
+          }
+        ],
+        "draft_review": [],
+        "sources": [
+          {
+            "name": "Querido Diário (API)",
+            "kind": "diários oficiais municipais",
+            "access": "API REST aberta, JSON, sem chave. Em 3 de 5 chamadas funcionou. Houve 'Internal Server Error' e 'no available server'. A WebFetch falhou por SSL, só o curl funcionou. Documentação Swagger em api.queridodiario.org.br/docs.",
+            "how_to_search": "GET /gazettes?querystring=...&territory_ids=...&published_since=...&size=...&excerpt_size=...&number_of_excerpts=.... A busca de texto tem muito ruído, e o total aparece capado em 10000. Convém restringir por município e por data, e usar frases curtas.",
+            "use": "ambos",
+            "level": "oficial",
+            "coverage": "Municípios cobertos pelo projeto, com datas variadas (apareceram 2017 a 2025). A cobertura não é uniforme.",
+            "endpoint": "https://api.queridodiario.org.br/gazettes",
+            "permalink": "https://data.queridodiario.ok.org.br/{ibge}/{data}/{hash}.pdf (PDF e .txt por edição)",
+            "robots": "api.queridodiario.org.br/robots.txt: resposta vazia na consulta; não conferido",
+            "terms": "Licença não conferida; a página de docs não trouxe texto legível."
+          },
+          {
+            "name": "LexML Brasil",
+            "kind": "legislação federal, estadual e municipal",
+            "access": "Busca web atrás de verificação anti-robô (Senado). A API SRU não foi testada.",
+            "how_to_search": "lexml.gov.br/busca/search?keyword=... Não foi possível ver os resultados nesta rodada.",
+            "use": "escavação",
+            "level": "não conferido",
+            "coverage": "Não conferido nesta rodada.",
+            "endpoint": "https://www.lexml.gov.br/busca/search",
+            "permalink": "URN LEX (formato conhecido, não testado)",
+            "robots": "não conferido; a página usou desafio anti-robô",
+            "terms": "não conferido"
+          },
+          {
+            "name": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
+            "kind": "bens registrados, dossiês e inventários",
+            "access": "Site WordPress aberto em bcr.iphan.gov.br. A interface de busca não foi examinada nesta rodada.",
+            "how_to_search": "Navegar no BCR; INRC em inrc.iphan.gov.br. Busca por texto não testada.",
+            "use": "ambos",
+            "level": "oficial",
+            "coverage": "Bens do Registro desde o Decreto 3.551/2000. Período exato não conferido.",
+            "endpoint": "https://bcr.iphan.gov.br/",
+            "permalink": "https://bcr.iphan.gov.br/ (o link permanente por bem não foi conferido)",
+            "robots": "Permite. O robots.txt só bloqueia /wp-admin/ e libera admin-ajax.php; o sitemap fica em bcr.iphan.gov.br/wp-sitemap.xml.",
+            "terms": "Não conferido."
+          },
+          {
+            "name": "IPHAN: Inventário Nacional de Referências Culturais (INRC)",
+            "kind": "inventário de referências culturais",
+            "access": "Site aberto em inrc.iphan.gov.br, mas a busca não foi testada.",
+            "how_to_search": "Não testado.",
+            "use": "escavação",
+            "level": "oficial",
+            "coverage": "Metodologia testada de 2000 a 2004, segundo a página do IPHAN.",
+            "endpoint": "https://inrc.iphan.gov.br/",
+            "permalink": "https://inrc.iphan.gov.br/",
+            "robots": "não conferido",
+            "terms": "não conferido"
+          },
+          {
+            "name": "Diário Oficial da União via INLABS",
+            "kind": "diário oficial federal",
+            "access": "Cadastro com e-mail e senha. Entrega XML e PDF por dia. O XML também sai no dados.gov.br.",
+            "how_to_search": "Baixar o pacote diário e filtrar por termo localmente. Não testei os filtros do site.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "coverage": "Publicações diárias. O período histórico disponível não foi conferido.",
+            "endpoint": "https://inlabs.in.gov.br/",
+            "permalink": "não conferido",
+            "robots": "não conferido",
+            "terms": "Disclaimer: a versão certificada é a publicada; o XML serve à análise de dados."
+          },
+          {
+            "name": "Câmara dos Deputados, dados abertos",
+            "kind": "proposições e eventos legislativos federais",
+            "access": "Arquivos em lote e API RESTful, em CSV, JSON, XML, XLSX e ODS.",
+            "how_to_search": "Baixar proposições por ano e filtrar localmente. Parâmetro de palavra-chave não confirmado.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "coverage": "Proposições e votações por ano. O recorte histórico exato não foi lido.",
+            "endpoint": "https://dadosabertos.camara.leg.br/",
+            "permalink": "não conferido",
+            "robots": "não conferido",
+            "terms": "A página consultada não traz termos."
+          },
+          {
+            "name": "Senado, dados abertos",
+            "kind": "proposições e legislação federais",
+            "access": "Não aberta nesta rodada.",
+            "how_to_search": "Não conferido.",
+            "use": "monitoramento",
+            "level": "não conferido",
+            "coverage": "Não conferido.",
+            "endpoint": "não conferido",
+            "permalink": "não conferido",
+            "robots": "não conferido",
+            "terms": "não conferido"
+          },
+          {
+            "name": "FUNAI: geoprocessamento de terras indígenas",
+            "kind": "dados de territórios (terras indígenas, aldeias)",
+            "access": "WFS aberto em geoserver.funai.gov.br, com download em shapefile, KML, CSV e XLSX.",
+            "how_to_search": "GetFeature com typeName=Funai:tis_poligonais e filtro CQL por UF (uf_sigla). O teto de maxFeatures nos links é 10000.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "coverage": "Camada atual, com atualização mensal. Não é série histórica.",
+            "endpoint": "https://geoserver.funai.gov.br/geoserver/Funai/ows",
+            "permalink": "https://www.gov.br/funai/pt-br/atuacao/terras-indigenas/geoprocessamento-e-mapas",
+            "robots": "não conferido para o geoserver",
+            "terms": "Pode reproduzir citando a fonte. O rodapé do site declara CC BY-ND 3.0 (sem obras derivadas); isso exige atenção ao derivar dados."
+          },
+          {
+            "name": "Fundação Cultural Palmares: certificação quilombola",
+            "kind": "certidões de autodefinição de comunidades quilombolas",
+            "access": "Lista de comunidades certificadas numa planilha Google Sheets, atualizada mensalmente, exportável.",
+            "how_to_search": "Filtrar a planilha por UF e município.",
+            "use": "monitoramento",
+            "level": "oficial",
+            "coverage": "Certidões emitidas; período exato não conferido.",
+            "endpoint": "https://docs.google.com/spreadsheets/d/1WBjixnnjJWrDXsA2WvElj65rrZ4nkNM-u5LclRV0lGs/",
+            "permalink": "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/certificacao-quilombola",
+            "robots": "não conferido",
+            "terms": "não conferido"
+          },
+          {
+            "name": "MAPA: legislação de vinhos e bebidas",
+            "kind": "normas e registro de bebidas",
+            "access": "Página aberta em gov.br com PDFs. A consulta de estabelecimentos registrados não foi encontrada nesta rodada.",
+            "how_to_search": "Navegar a lista de normas (3 páginas). Link possível: gov.br/agricultura/pt-br/assuntos/defesa-agropecuaria/registros-de-estabelecimentos-e-produtos (não aberto).",
+            "use": "referência",
+            "level": "oficial",
+            "coverage": "Normas de 1984 a 2018 na primeira página da lista.",
+            "endpoint": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacao-vinhos-e-bebidas",
+            "permalink": "mesma URL",
+            "robots": "não conferido",
+            "terms": "não conferido"
+          },
+          {
+            "name": "INCRA (RTID quilombola), ISA (Povos Indígenas no Brasil), Museu do Índio",
+            "kind": "territórios quilombolas, estudos e acervos indígenas",
+            "access": "Não abertos nesta rodada.",
+            "how_to_search": "Não conferido.",
+            "use": "escavação",
+            "level": "não conferido",
+            "coverage": "Não conferido.",
+            "endpoint": "não conferido",
+            "permalink": "não conferido",
+            "robots": "não conferido",
+            "terms": "não conferido"
+          }
+        ],
+        "additions": [
+          {
+            "title": "Ficha de acesso por ambiente, com teste datado",
+            "proposal": "Cada fonte ganha uma ficha com: endpoint, robots.txt lido (data e resultado), termos, chave exigida, limites, última consulta com sucesso e o que falhou. Estados da ficha: 'testado', 'falhou', 'bloqueado por anti-robô', 'não conferido'. O LexML entra como 'bloqueado por anti-robô' até haver outro caminho oficial.",
+            "why": "Nesta rodada o Querido Diário falhou em 2 de 5 chamadas, a WebFetch falhou por SSL e o LexML pediu verificação. Sem ficha, o sistema trataria falha como ausência de dado.",
+            "step": "Ficha de acesso"
+          },
+          {
+            "title": "Funil de busca em duas passagens, sem teto de coleta",
+            "proposal": "Primeira passagem: Querido Diário com frases curtas por bebida e por município, guardando o trecho e o link do PDF. Segunda passagem: baixar o .txt só dos acertos plausíveis e procurar 'Lei nº', 'patrimônio', 'registro'. A cota de 15 vale para a curadoria de Vicente, não para a coleta.",
+            "why": "A busca ampla devolveu plano de cultura, pagamentos a consórcio e rota turística. O total capado em 10000 mostra que consulta ampla não mede nada. Todo acerto é vestígio: guardar com fonte e data, e quarentena em vez de descarte.",
+            "step": "Busca e triagem"
+          },
+          {
+            "title": "Monitoramento por consulta periódica das fontes abertas",
+            "proposal": "Rodar semanalmente, por GitHub Actions ou agenda local, consultas salvas ao Querido Diário (published_since) e ao pacote diário do DOU (INLABS, filtro local). FUNAI e Palmares, que mudam todo mês, entram por comparação mensal da camada ou planilha. Armazenar só metadados e link, sem texto integral quando os termos não permitirem.",
+            "why": "Cabe na infraestrutura simples e sem backend. O cadastro do INLABS usa e-mail e senha: isso são dados pessoais e as credenciais ficam fora do Git (segredos do GitHub).",
+            "step": "Monitoramento"
+          },
+          {
+            "title": "Tratar projeto de lei e autógrafo como vestígios com status",
+            "proposal": "Registrar o achado de SC como 'autógrafo aprovado pela Assembleia, sanção não confirmada'. Só vira 'lei' depois de achar a publicação no diário oficial estadual. Registrar as vias de busca: portal do ALESC e, para CE, TO e PB, os sites das assembleias.",
+            "why": "Rigor com o poder: não completar o que a fonte não diz. Sem a sanção, o status verificado é de projeto aprovado.",
+            "step": "Registro de achados",
+            "vicente_decides": "Aceitar o autógrafo como vestígio com status parcial, ou exigir a publicação oficial antes de entrar no grafo?"
+          },
+          {
+            "title": "Cuidar de licenças que proíbem obra derivada",
+            "proposal": "No campo de termos da ficha, marcar fontes com cláusula do tipo 'sem derivados', como o rodapé da FUNAI (CC BY-ND 3.0). Guardar apenas referência, trecho citado e link. Só republicar dados transformados depois de ler os termos específicos do conjunto.",
+            "why": "Rastreabilidade e hospitalidade com o vestígio, sem violar licença. Os termos do conjunto de dados podem diferir do rodapé do site.",
+            "step": "Termos e licenças"
+          }
+        ],
+        "answers": [],
+        "open_questions": [
+          "A lei de SC foi sancionada e publicada? Qual o número? Falta achar a publicação no diário oficial estadual.",
+          "Existe lei municipal de bebida tradicional como patrimônio? A busca ampla não achou; falta tentar municípios candidatos, um a um.",
+          "O LexML tem caminho oficial sem o desafio anti-robô, como API SRU ou dados abertos? Não testei.",
+          "O robots.txt e os termos de Câmara, Senado, INLABS, FUNAI, Palmares e MAPA continuam não conferidos.",
+          "INCRA (RTID), ISA e Museu do Índio não foram abertos nesta rodada.",
+          "A busca do BCR/IPHAN e a Biblioteca Digital do Iphan ainda precisam de teste de sintaxe, para saber se há busca por texto ou API."
+        ],
+        "web_calls_used": 17
+      },
+      {
+        "front": "Item 15: admissão de novos dados, pessoas e oralidades (verificação jurídica e revisão do rascunho)",
+        "summary": "Consegui abrir na fonte oficial a Res. CNS 510/2016, a Res. CNS 304/2000 e a página de atos vigentes da FUNAI. Não abri nenhuma das três leis do Planalto: Código Civil, Lei 9.610 e LGPD deram erro de conexão em todas as tentativas, e ficam \"não conferidas\". Há um provável erro no rascunho: obras orais parecem estar no art. 7º, III da Lei 9.610, e não no inciso I (conferir). Não, não dá para ir direto à execução do item inteiro: as portas de entrada (a), (b), (c), (e), (f) e (g) podem começar, e (d) e (h) ficam fechadas até a Falta jurídica ser resolvida por Vicente. Usei 13 das 15 chamadas permitidas.",
+        "facts": [
+          {
+            "claim": "Res. CNS 510/2016, art. 1º: o alcance é pesquisa em Ciências Humanas e Sociais com dados obtidos diretamente dos participantes, informações identificáveis ou riscos maiores que os da vida cotidiana.",
+            "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/legislacao/resolucoes/2016/resolucao-no-510.pdf",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "Art. 1º Esta Resolução dispõe sobre as normas aplicáveis a pesquisas em Ciências Humanas e Sociais cujos procedimentos metodológicos envolvam a utilização de dados diretamente obtidos com os participantes ou de informações identificáveis ou que possam acarretar riscos maiores do que os existentes na vida cotidiana, na forma definida nesta Resolução."
+          },
+          {
+            "claim": "Res. 510/2016, parágrafo único do art. 1º: o que fica fora do sistema CEP/CONEP (os comitês de ética em pesquisa). O texto abriu como PDF e li por extração local; os acentos saíram corrompidos e restaurei.",
+            "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/legislacao/resolucoes/2016/resolucao-no-510.pdf",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "Parágrafo único. Não serão registradas nem avaliadas pelo sistema CEP/CONEP: I - pesquisa de opinião pública com participantes não identificados; II - pesquisa que utilize informações de acesso público, nos termos da Lei no 12.527, de 18 de novembro de 2011; III - pesquisa que utilize informações de domínio público; IV - pesquisa censitária; V - pesquisa com bancos de dados, cujas informações são agregadas, sem possibilidade de identificação individual; e VI - pesquisa realizada exclusivamente com textos científicos para revisão da literatura científica; VII - ... VIII - ..."
+          },
+          {
+            "claim": "Res. 510, art. 2º, XVI: a definição de pesquisa em CHS é ampla e inclui valores culturais e saberes, de forma direta ou indireta. Ela não diz 'só pesquisa científica'; a palavra 'científicas' aparece nos considerandos. Por isso um projeto independente de documentação cultural pode ser enquadrado como pesquisa, ou não. O texto não decide isso.",
+            "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/legislacao/resolucoes/2016/resolucao-no-510.pdf",
+            "level": "oficial",
+            "verdict": "novo",
+            "quote": "XVI - pesquisa em ciências humanas e sociais: aquelas que se voltam para o conhecimento, compreensão das condições, existência, vivência e saberes das pessoas e dos grupos, em suas relações sociais, institucionais, seus valores culturais, suas ordenações históricas e políticas e suas formas de subjetividade e comunicação, de forma direta ou indireta, incluindo as modalidades de pesquisa que envolvam intervenção;"
+          },
+          {
+            "claim": "Res. 510, art. 13: em comunidades tradicionais, a autorização do líder ou coletivo é exigida sem prejuízo do consentimento individual. Isso é útil para o papel 'comunidade' e 'guardião'.",
+            "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/legislacao/resolucoes/2016/resolucao-no-510.pdf",
+            "level": "oficial",
+            "verdict": "novo",
+            "quote": "Art. 13. Em comunidades cuja cultura reconheça a autoridade do líder ou do coletivo sobre o indivíduo, como é o caso de algumas comunidades tradicionais, indígenas ou religiosas, por exemplo, a obtenção da autorização para a pesquisa deve respeitar tal particularidade, sem prejuízo do consentimento individual, quando possível e desejável."
+          },
+          {
+            "claim": "Res. CNS 304/2000 (pesquisa com povos indígenas): o texto oficial abriu, sem cláusula de revogação nas partes que li, e não li o fim do documento. O gov.br (busca) e outras páginas a listam como 'em vigor'. A resolução se diz complementar à 196/96, que foi substituída pela 466/2012. Em 2018 a CONEP quis atualizá-la.",
+            "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/atos-normativos/resolucoes/2000/resolucao-no-304.pdf",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "A necessidade de regulamentação complementar da Resolução CNS nº 196/96 (...) no que diz respeito à área temática especial “populações indígenas” (item VIII.4.c.6). Resolve; - Aprovar as seguintes Normas para Pesquisas Envolvendo Seres Humanos – Área de Povos Indígenas."
+          },
+          {
+            "claim": "Res. 304, item III.2.4: exige a concordância da comunidade, por organizações indígenas ou conselhos locais, além do consentimento individual. Quem recomendou a 580/2018 como substituta foi uma busca sem fonte; fica 'não conferido'.",
+            "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/atos-normativos/resolucoes/2000/resolucao-no-304.pdf",
+            "level": "oficial",
+            "verdict": "novo",
+            "quote": "2.4 - Ter a concordância da comunidade alvo da pesquisa que pode ser obtida por intermédio das respectivas organizações indígenas ou conselhos locais, sem prejuízo do consentimento individual, que em comum acordo com as referidas comunidades designarão o intermediário para o contato entre pesquisador e a comunidade."
+          },
+          {
+            "claim": "FUNAI: a página oficial de atos vigentes lista a IN nº 01, de 29/11/1995, sobre ingresso em Terras Indígenas para pesquisa científica. Correção ao rascunho: a sigla correta não leva 'PRESI' na página. A página também lista a Portaria nº 177 como de 24/7/1986, e não de 2006. A Portaria nº 1.401/2026 'revoga atos normativos' sem dizer quais; não abri o texto, então não sei se afeta a IN de 1995. A citação literal vem do resumo do WebFetch, não de leitura direta da página.",
+            "url": "https://www.gov.br/funai/pt-br/centrais-de-conteudo/publicacoes/atos-normativos/atos-normativos-vigentes",
+            "level": "oficial",
+            "verdict": "corrigido",
+            "quote": "Instrução Normativa nº 01, de 29 de novembro de 1995: normas que disciplinam o ingresso em Terras Indígenas para pesquisa científica. Revoga a IN nº 01/PRES/94, de 8/4/1994."
+          },
+          {
+            "claim": "Código Civil, art. 20 (uso de imagem, divulgação de escritos e da palavra sem autorização quando afeta honra ou fim comercial).",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "quote": "Não abriu: erro de conexão (ECONNRESET) em 3 tentativas. Sem citação literal. Pela minha lembrança, e sem conferir, o STF na ADI 4815 deu interpretação conforme sobre biografias."
+          },
+          {
+            "claim": "Lei 9.610/1998, art. 7º, I (obras orais). Suspeito de erro no rascunho: pela minha lembrança, o inciso I trata de textos de obras literárias, artísticas ou científicas, e conferências, alocuções e sermões estão no inciso III. Não conferido.",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "quote": "Não abriu: erro de conexão (ECONNRESET) em 3 tentativas. Sem citação literal."
+          },
+          {
+            "claim": "LGPD (Lei 13.709/2018), art. 11 (dados sensíveis, como origem racial ou étnica e convicção religiosa) e art. 18 (direitos do titular: acesso, correção, eliminação etc.).",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "quote": "Não abriu: erro de conexão (ECONNRESET) em 2 tentativas. Sem citação literal."
+          }
+        ],
+        "draft_review": [
+          {
+            "point": "(a) Escrito publicado: coleta ou pessoa; trecho conferido por script, depois por pessoa.",
+            "verdict": "manter",
+            "reason": "Barato, sem dado pessoal novo, cabe em 1 a 3 h por semana. A 510 exclui da avaliação ética pesquisa com informação pública (art. 1º, par. único, II e III)."
+          },
+          {
+            "point": "(b) Oralidade registrada por pesquisa: a fala de quem pratica fica separada da análise do pesquisador.",
+            "verdict": "manter",
+            "reason": "Respeita 'não julgamos' e a regra de que W é ancorado só na fala de quem pratica. Acrescentar que a tese ou etnografia tem direito autoral do pesquisador: só trecho curto, com citação e fonte."
+          },
+          {
+            "point": "(c) Depoimento em acervo: trecho por marca de tempo t=início,fim (W3C Media Fragments) + transcrição; áudio nunca republicado.",
+            "verdict": "ajustar",
+            "reason": "'W3C Media Fragments' é jargão; falta a definição. A transcrição própria de um depoimento pode ser cópia da obra (direito autoral, não conferido). Cada acervo tem termos próprios.",
+            "adjusted": "Depoimento em acervo (Museu da Pessoa, CPDOC, YouTube): guardar o endereço da fonte e o trecho por tempo, no padrão público 'Media Fragments' (ex.: t=65,98 significa do segundo 65 ao 98). Citar só trecho curto, conforme os termos do acervo, e nunca republicar o áudio. Transcrição integral só se os termos do acervo permitirem; senão, registrar a Falta."
+          },
+          {
+            "point": "(d) Entrevista feita pelo próprio projeto: reabre a P48.",
+            "verdict": "ajustar",
+            "reason": "Boa decisão de deixar com Vicente. Mas a P48 adiou WhatsApp e áudio como canal de entrada; entrevista própria é outro caso e pode ser feita sem áudio guardado. A 510 pode alcançar a entrevista se o projeto for tratado como pesquisa (art. 2º, XVI); isso é Falta aberta.",
+            "adjusted": "Entrevista própria: porta fechada. Reabrir exige (1) decisão de Vicente sobre a P48 e (2) Falta jurídica sobre a 510 e a 304 registrada e olhada por Vicente, que decide como enquadrar o projeto (documentação cultural ou pesquisa). Até lá, não se grava nem se entrevista."
+          },
+          {
+            "point": "(e) Relato de contribuinte pelas 8 perguntas: quarentena + régua de 4 filtros (P14).",
+            "verdict": "manter",
+            "reason": "Consistente com 'quarentena não descarta'. Falta só dizer, em português simples, que 'quarentena' é guardar o relato separado, sem usar, e que 'régua' é a lista de 4 conferências."
+          },
+          {
+            "point": "(f) Imagem: sem licença, só link; (g) objeto: foto só com licença.",
+            "verdict": "manter",
+            "reason": "Simples e seguro, sem infraestrutura. Lembrar: foto com rosto de pessoa é dado pessoal mesmo com licença da foto."
+          },
+          {
+            "point": "(h) Observação de campo: colaborador de confiança, nota datada, consentimento de quem aparece.",
+            "verdict": "ajustar",
+            "reason": "Com 1 a 3 h por semana, treinar colaboradores de confiança e coletar termos assinados é pesado e depende de norma não conferida (LGPD art. 11, Código Civil art. 20). Em terra indígena a FUNAI entra (IN 01/1995).",
+            "adjusted": "Observação de campo: porta fechada no começo. Só abre com um colaborador já identificado, nota datada e consentimento de quem aparece. Em terra indígena, só com autorização da FUNAI e da comunidade; o projeto não faz esse trâmite por conta própria. Antes disso, o Jurídico registra Falta."
+          },
+          {
+            "point": "Voz no trecho: registrar quem fala; W só na fala de quem pratica; sem fala de quem pratica, W é Falta.",
+            "verdict": "manter",
+            "reason": "Coerente com a decisão vigente sobre W. Nenhuma mudança."
+          },
+          {
+            "point": "Sete papéis de pessoas, cada um com registro, consentimento e atribuição; no Git só ID opaco e papel.",
+            "verdict": "ajustar",
+            "reason": "Correto em princípio, mas sete papéis × três campos é pesado para começar. 'ID opaco' precisa de explicação, e a tabela que liga ID a nome precisa de lugar definido.",
+            "adjusted": "Papéis como etiquetas simples no registro: contribuinte, detentor ou mestre, quem ensinou, quem fala no trecho, mediador, comunidade, colaborador. Cada trecho aponta para um código sem sentido (ID opaco, ex.: P-0042). A tabela que liga o código ao nome fica fora do Git, em lugar privado combinado por Vicente. Começar só com 'quem fala no trecho' e 'mediador'; os demais entram quando o primeiro caso real pedir."
+          },
+          {
+            "point": "Colaboradores em quatro níveis (anônimo, identificado, de confiança, guardião indicado pela comunidade).",
+            "verdict": "ajustar",
+            "reason": "Quatro níveis e termos assinados criam administração que não cabe em 1 a 3 h por semana. 'Guardião' só faz sentido com comunidade real que o indique.",
+            "adjusted": "Dois níveis ao começar: anônimo e identificado. 'De confiança' e 'guardião indicado pela comunidade' ficam descritos, mas só são criados quando houver uma pessoa ou comunidade concreta."
+          },
+          {
+            "point": "Declaração de interesse (ex.: quem vende a bebida) como campo, sem julgar.",
+            "verdict": "manter",
+            "reason": "Alinhado a 'não julgamos': o campo só documenta. Sem custo de infraestrutura."
+          },
+          {
+            "point": "Entrevista própria: roteiro, consentimento escrito ou gravado, carta de cessão de direitos, transcrição literal com marca de tempo (IA marcada), revisão pela pessoa, devolutiva, áudio fora do Git.",
+            "verdict": "manter",
+            "reason": "É um bom protocolo se a porta abrir. 'Carta de cessão' é o papel em que a pessoa autoriza o uso da fala; o conteúdo exato depende da Lei 9.610 (não conferida). Já está sob o item (d), fechado."
+          },
+          {
+            "point": "Normas a conferir: 510, 304, FUNAI, Código Civil art. 20, Lei 9.610 art. 7º, LGPD art. 11; até conferir, o Jurídico registra Falta.",
+            "verdict": "ajustar",
+            "reason": "Boa regra, mas a lista tem um provável erro (art. 7º, I) e falta o art. 18 da LGPD. Também falta dizer o estado de cada norma, agora que 3 estão conferidas.",
+            "adjusted": "Estado das normas: Res. CNS 510/2016: conferida, enquadramento do projeto é Falta aberta. Res. CNS 304/2000: conferida, listada como em vigor (fonte secundária). FUNAI: IN 01/1995 listada como vigente; Portaria 1.401/2026 não lida. Lei 9.610 (art. 7º, III ou I? e art. 29), Código Civil art. 20 e LGPD arts. 11 e 18: não conferidas. O Jurídico registra Falta para cada uma; não autoriza nada."
+          },
+          {
+            "point": "Guarda de dado pessoal antes de cada commit: e-mail, telefone, CPF e URL com @perfil fora do Git; do YouTube, só o hash do ID do vídeo.",
+            "verdict": "ajustar",
+            "reason": "'Hash' é jargão e, num ID público de vídeo, é reversível (qualquer um calcula o hash de IDs conhecidos), então protege pouco e quebra a rastreabilidade (ninguém reencontra o vídeo). O ponto real é o @perfil e o nome do canal.",
+            "adjusted": "Antes de cada commit, um script varre o texto procurando e-mail, telefone, CPF e endereço com @perfil, e Vicente confere uma amostra. Para YouTube: guardar o ID do vídeo (que é público) e não o nome do canal nem o @; se Vicente quiser esconder o vídeo, guardar o ID no cofre privado. O script não acha nomes próprios, apelidos nem lugares que identificam alguém, por isso a conferência humana por amostra continua."
+          }
+        ],
+        "additions": [
+          {
+            "title": "Pedido de retirada (direitos do titular)",
+            "step": "Antes de abrir (e), (c) ou (h)",
+            "proposal": "Uma regra de uma página: quem aparece no registro pode pedir que o nome ou a fala saia do uso. O registro passa a dizer 'havia uma fala retirada', sem o conteúdo, e o fato fica documentado.",
+            "why": "A LGPD art. 18 (não conferida) dá ao titular direito de correção e eliminação; isso pode tensionar com 'quarentena não descarta'. Resolver antes de coletar, com o Jurídico registrando Falta.",
+            "vicente_decides": "Retirar apaga o conteúdo e guarda só o aviso, ou o conteúdo vai para um cofre privado inacessível ao público?"
+          },
+          {
+            "title": "Saber tradicional e patrimônio genético",
+            "step": "Jurídico, norma a conferir",
+            "proposal": "Acrescentar à lista de normas a Lei 13.123/2015 (patrimônio genético e conhecimento tradicional associado), a verificar. O Jurídico registra Falta; nada é presumido.",
+            "why": "Bebidas tradicionais usam plantas e saberes de povos e comunidades; pode haver regra sobre o acesso a esse conhecimento. Não conferi: é lembrança minha.",
+            "vicente_decides": "Aceita incluir essa lei na lista, só como Falta até alguém conferir?"
+          },
+          {
+            "title": "Pessoas vulneráveis e crianças",
+            "step": "Regras de (h) e (e)",
+            "proposal": "Regra mínima: não registrar imagem, voz nem nome de criança ou adolescente, e não registrar dados de saúde. Se aparecer, vai para quarentena.",
+            "why": "A 510 trata de assentimento e de vulnerabilidade (arts. 2º e 12). Relatos sobre bebida podem citar menor, doença ou religião, que são dados sensíveis na LGPD (art. 11, não conferido).",
+            "vicente_decides": "Aceita 'ao menor sinal, quarentena' como regra?"
+          },
+          {
+            "title": "Portas abrem por etapas",
+            "step": "Ordem de execução",
+            "proposal": "Abrir já (a), (b), (c), (e), (f), (g), com as regras ajustadas. Manter (d) e (h) fechadas até Vicente decidir a P48 e o enquadramento do projeto, olhando a Falta jurídica.",
+            "why": "Responde à pergunta 'vamos direto à execução?': só o que não envolve pessoa nova nem gravação. Cabe em 1 a 3 h por semana.",
+            "vicente_decides": "Concorda com essa ordem?"
+          },
+          {
+            "title": "Medir carga semanal da curadoria",
+            "step": "Guarda de orçamento",
+            "proposal": "Registrar semanalmente quantos itens entraram, quantos esperam em quarentena e quantos minutos Vicente gastou. Se a fila passar de uma semana de trabalho, parar de abrir portas.",
+            "why": "Cumpre 'medir e parar antes de acabar'. O lote de 15 é cota de revisão, não teto de coleta: a fila é que limita, não a coleta.",
+            "vicente_decides": "Qual fila máxima de espera é aceitável?"
+          }
+        ],
+        "open_questions": [
+          "O projeto se apresenta como pesquisa (com universidade ou publicação científica) ou como documentação cultural independente? Isso muda se a Res. 510 pode alcançá-lo.",
+          "Existe, hoje, alguma comunidade ou pessoa concreta (indígena, tradicional, de terreiro) que o projeto já pretende ouvir? Isso muda a prioridade da 304, da FUNAI e do papel de guardião.",
+          "Onde Vicente aceita guardar a tabela que liga os códigos aos nomes (ex.: um arquivo privado fora do Git, em pasta protegida do seu computador)?"
+        ],
+        "web_calls_used": 13,
+        "answers": [
+          {
+            "question": "Saímos do plano direto para a execução?",
+            "answer": "Não do item inteiro. Podem começar as portas que usam material já publicado ou aberto: (a), (b), (c), (f), (g), e (e) com quarentena. As portas (d) entrevista própria e (h) campo ficam fechadas até Vicente decidir a P48 e o enquadramento jurídico. Três normas foram conferidas; as demais continuam Falta."
+          },
+          {
+            "question": "A Res. 510/2016 alcança um projeto independente de documentação cultural?",
+            "answer": "O texto oficial fala em 'pesquisas em Ciências Humanas e Sociais' e define essa pesquisa de modo amplo (art. 2º, XVI), incluindo saberes e valores culturais. Ele não diz com clareza se um projeto fora de universidade entra. Isso fica como Falta; quem decide o enquadramento é Vicente, não o Jurídico."
+          },
+          {
+            "question": "O que fica fora do sistema CEP/CONEP?",
+            "answer": "CEP/CONEP são os comitês que avaliam a ética das pesquisas. Ficam fora, entre outros, pesquisa só com informação de acesso público ou de domínio público e pesquisa com dados agregados sem identificação individual (art. 1º, parágrafo único). Isso dá apoio às portas (a), (b) e (c) quando só se usa material já publicado. Entrevista própria é outra coisa."
+          },
+          {
+            "question": "A Res. CNS 304/2000 está em vigor?",
+            "answer": "O texto oficial abriu, sem cláusula de revogação nas partes que li; páginas do governo a listam como 'em vigor'. A confirmação plena é secundária. Ela pede concordância da comunidade e do intermediário indicado por ela (item III.2.4)."
+          },
+          {
+            "question": "Qual a norma da FUNAI?",
+            "answer": "A página oficial de atos vigentes lista a Instrução Normativa nº 01/1995, sobre ingresso em terras indígenas para pesquisa. Há uma portaria de 2026 que revoga atos sem dizer quais; não li, então não sei se mexe nessa IN. Só importa se alguém for fisicamente a uma terra indígena."
+          },
+          {
+            "question": "O que a Lei 9.610/1998 implica para depoimentos?",
+            "answer": "Não consegui abrir a lei. Em geral, falas podem ser obras protegidas, então usar mais que um trecho curto, ou regravar, exige autorização por escrito. O rascunho cita art. 7º, I para obras orais, mas pela minha lembrança é o inciso III (não conferido). Registrar como Falta."
+          },
+          {
+            "question": "Código Civil art. 20 e LGPD arts. 11 e 18: o que significam?",
+            "answer": "Não abri nenhum dos textos. Pela lembrança, sem conferir: o art. 20 trata de usar imagem, escritos ou voz de alguém sem autorização; o art. 11 da LGPD trata de dados sensíveis (como origem étnica e religião); o art. 18 trata dos direitos de quem aparece, como corrigir ou pedir eliminação. O Jurídico registra Falta para cada um."
+          }
+        ]
+      },
+      {
+        "front": "Item 20 – Tiers com ferramentas de ação (educadores, comunidades, pesquisadores, gestores, praticantes, comunicadores)",
+        "summary": "Confirmei na fonte oficial só a estrutura dos códigos da BNCC (PDF do MEC aberto agora) e, por cópia secundária, o trecho da Res. CNE/CEB 5/2012 sobre conhecimentos tradicionais. O art. 26-A da LDB, a Res. 8/2012 e o manual do IPHAN seguem não conferidos na fonte oficial: o Planalto caiu 3 vezes (ECONNRESET), o portal do MEC não resolveu e o IPHAN redirecionou. Não achei API oficial do MEC para a BNCC; existe um conjunto aberto independente (bncc.dev), que não é oficial. O item é viável se a base for o jeito 1 (gerador no navegador); os jeitos 2 e 3 devem ficar como fase posterior. Usei as 15 chamadas web.",
+        "facts": [
+          {
+            "claim": "Código de habilidade da BNCC do Ensino Fundamental (ex.: EF67EF01): 1º par de letras = etapa; 1º par de números = ano (01 a 09) ou bloco de anos; 2º par de letras = componente curricular; último par de números = posição na sequência do ano ou bloco.",
+            "url": "https://www.gov.br/mec/pt-br/cne/arquivos/bncc_ensino_medio.pdf",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "O primeiro par de letras indica a etapa de Ensino Fundamental. O último par de números indica a posição da habilidade na numeração sequencial do ano ou do bloco de anos. O primeiro par de números indica o ano (01 a 09) a que se refere a habilidade [...] O segundo par de letras indica o componente curricular: AR = Arte CI = Ciências EF = Educação Física ER = Ensino Religioso GE = Geografia HI = História LI = Língua Inglesa LP = Língua Portuguesa MA = Matemática"
+          },
+          {
+            "claim": "Logo, EF05HI04 = Ensino Fundamental, 5º ano, História, 4ª habilidade da sequência (decodificação minha a partir da regra acima; o texto da habilidade não foi lido). Em Língua Portuguesa, Arte e Educação Física o número pode ser bloco de anos (15 = 1º ao 5º; 67 = 6º e 7º).",
+            "url": "https://www.gov.br/mec/pt-br/cne/arquivos/bncc_ensino_medio.pdf",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "Língua Portuguesa/ Arte 15 = 1º ao 5º ano 69 = 6º ao 9º ano [...] 67 = 6º e 7º anos 89 = 8º e 9º anos"
+          },
+          {
+            "claim": "Educação Infantil tem outra regra: EI02TS01 = etapa Infantil, grupo etário 02, campo de experiências TS, posição 01. Ensino Médio também difere (ex.: EM13LGG101, não lido).",
+            "url": "https://www.gov.br/mec/pt-br/cne/arquivos/bncc_ensino_medio.pdf",
+            "level": "oficial",
+            "verdict": "novo",
+            "quote": "O primeiro par de números indica o grupo por faixa etária: 01 = Bebês (zero a 1 ano e 6 meses) 02 = Crianças bem pequenas (1 ano e 7 meses a 3 anos e 11 meses) 03 = Crianças pequenas (4 anos a 5 anos e 11 meses)"
+          },
+          {
+            "claim": "Base oficial da BNCC em formato aberto ou API do MEC: não encontrei. A BNCC oficial é publicada em PDF. Existe o projeto independente bncc.dev (dados em JSON/CSV, licença CC BY 4.0), que se declara verificado contra o MEC, mas é afirmação do próprio projeto.",
+            "url": "https://github.com/bncc-dev",
+            "level": "secundária",
+            "verdict": "não verificável",
+            "quote": "não abri a página do projeto; só o resultado de busca o descreve (1.721 aprendizagens, CC BY 4.0, sem chave de API)"
+          },
+          {
+            "claim": "LDB, art. 26-A (texto atual no Planalto): NÃO CONFERIDO. O Planalto deu ECONNRESET em 3 tentativas (LDB, Lei 11.645/2008, Lei 10.639/2003). O que sei de memória: o artigo torna obrigatório o estudo da história e cultura afro-brasileira e indígena no ensino fundamental e médio, públicos e privados (redação da Lei 11.645/2008, que alterou a 10.639/2003). Não use como citação.",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9394.htm",
+            "level": "não conferido",
+            "verdict": "não verificável"
+          },
+          {
+            "claim": "Resolução CNE/CEB 5/2012 existe: define as Diretrizes Curriculares Nacionais para a Educação Escolar Indígena na Educação Básica, de 22/06/2012. Li uma cópia em PDF hospedada por terceiro (cabeçalho da ABMES, obtida via link do MPRJ), não a página do MEC.",
+            "url": "https://www.mprj.mp.br/documents/20184/1347392/Resolucao_CEB_n_005_2012.pdf",
+            "level": "secundária",
+            "verdict": "confirmado",
+            "quote": "§ 1º O Ensino Fundamental deve garantir aos estudantes indígenas condições favoráveis à construção do bem viver de suas comunidades, aliando, em sua formação escolar, conhecimentos científicos, conhecimentos tradicionais e práticas culturais próprias."
+          },
+          {
+            "claim": "Mesma resolução, sobre detentores de saber: as escolas devem envolver os sábios, especialistas nos conhecimentos tradicionais.",
+            "url": "https://www.mprj.mp.br/documents/20184/1347392/Resolucao_CEB_n_005_2012.pdf",
+            "level": "secundária",
+            "verdict": "novo",
+            "quote": "promover a participação das famílias e dos sábios, especialistas nos conhecimentos tradicionais de cada comunidade, em todas as fases de implantação e desenvolvimento da Educação Infantil"
+          },
+          {
+            "claim": "Resolução CNE/CEB 8/2012 (Educação Escolar Quilombola), de 20/11/2012, existe e há PDF no gov.br/mec. Só vi o resultado de busca; não abri o texto, então não há trecho literal sobre conhecimentos tradicionais. Um resumo secundário cita memória coletiva, práticas culturais e acervos orais.",
+            "url": "https://www.gov.br/mec/pt-br/media/etnico_racial/pdf/resolucao_8_201112.pdf",
+            "level": "não conferido",
+            "verdict": "não verificável"
+          },
+          {
+            "claim": "Manual do IPHAN 'Educação Patrimonial: Inventários Participativos – Manual de Aplicação' (2016): existe segundo fontes acadêmicas; serve para mobilizar detentores a reconhecer e documentar suas próprias referências culturais, fora dos instrumentos formais (registro, tombamento, inventário nacional). A URL antiga do IPHAN redirecionou para a home e não abri o PDF.",
+            "url": "https://www.gov.br/iphan/",
+            "level": "secundária",
+            "verdict": "corrigido",
+            "corrected": "Existência e finalidade confirmadas só por secundárias (dissertação UFPB, artigo Udesc). Manter 'a conferir' no item até abrir o PDF oficial.",
+            "quote": "permite ao público documentar e identificar seu próprio patrimônio cultural (paráfrase da busca; não é citação do manual)"
+          }
+        ],
+        "draft_review": [
+          {
+            "point": "Estrutura geral: tier = o que vê primeiro + ferramentas sob demanda; ferramenta não é controle de acesso",
+            "verdict": "manter",
+            "reason": "Respeita 'tiers são grupos de interesse' e 'campo de ação sob demanda'."
+          },
+          {
+            "point": "Jeito 1: gerador no navegador a partir de dados publicados e modelos (sem IA, sem servidor)",
+            "verdict": "manter",
+            "reason": "Mais simples, rastreável, sem backend e sem dado pessoal. É a base certa. Cada saída precisa listar de quais fichas veio."
+          },
+          {
+            "point": "Jeito 2: IA sob demanda por fila (pedido → rotina do Claude → validador → entrega)",
+            "verdict": "ajustar",
+            "reason": "Fila é infraestrutura (alguém recebe pedidos, guarda e responde) e o pedido pode trazer dado pessoal, que não pode ir ao Git. Pesa na guarda de orçamento e nas 1 a 3 h de Vicente.",
+            "adjusted": "Jeito 2 adiado: só depois de o jeito 1 rodar e de haver demanda real. Se vier, o pedido não guarda dado pessoal, cada entrega passa por validador e Vicente aprova um lote por semana dentro da cota de orçamento."
+          },
+          {
+            "point": "Jeito 3: 'traga sua IA' com pacote de dados e instruções",
+            "verdict": "ajustar",
+            "reason": "Barato, mas a rastreabilidade se perde fora do projeto. O aviso de 'não conferido' precisa estar no próprio pacote, não só no site, e o pacote só pode ter fichas já liberadas.",
+            "adjusted": "Jeito 3 com pacote que traz as fichas liberadas, as Faltas e um aviso fixo: 'saída gerada fora do CLB, não conferida; não use o selo do projeto'."
+          },
+          {
+            "point": "Educadores: planejador de aulas e kits de fonte primária com link permanente, transcrição conferida, quem fala, onde, quando e situação de direitos",
+            "verdict": "ajustar",
+            "reason": "Kit é bom, mas depende de ter fichas verificadas e de direitos resolvidos; no começo haverá poucas. O tempo de Vicente limita o número de kits. Voz de pessoa identificável (quem fala) pode ser dado pessoal.",
+            "adjusted": "Educadores: kit de fonte primária só com fontes de situação de direitos clara; mostrar 'quem fala' só se a ficha já tiver autorização ou for fonte pública. Começar por poucos kits-modelo; o planejador por CLB ou conjunto vem depois."
+          },
+          {
+            "point": "Alinhamento à BNCC (códigos de habilidade)",
+            "verdict": "ajustar",
+            "reason": "A regra do código foi confirmada no PDF oficial do MEC e permite uma tabela simples (ano, componente). Mas não há API oficial; o alinhamento é uma sugestão a conferir, não um fato do projeto. Quem decide a habilidade é o professor.",
+            "adjusted": "Tabela estática de códigos BNCC (extraída do PDF do MEC, com página citada). O projeto oferece 'habilidades sugeridas', marcadas como interpretação do CLB, nunca como alinhamento oficial."
+          },
+          {
+            "point": "Alinhamento à LDB art. 26-A e às diretrizes indígenas e quilombolas",
+            "verdict": "ajustar",
+            "reason": "O art. 26-A e a Res. 8/2012 não foram conferidos; a Res. 5/2012 tem o trecho confirmado por cópia secundária. Citar o texto de lei como fundamento, sem prometer que a bebida 'cumpre' a lei.",
+            "adjusted": "Citar a Res. CNE/CEB 5/2012 (conhecimentos tradicionais e práticas culturais próprias) como moldura, com o trecho literal e a fonte. Art. 26-A e Res. 8/2012: manter 'a conferir' até abrir o texto oficial."
+          },
+          {
+            "point": "Materiais que já existem no eduCAPES e na Embrapa",
+            "verdict": "ajustar",
+            "reason": "Nenhum dos dois foi conferido aqui. Pode haver restrição de licença, e é preciso saber como pesquisar.",
+            "adjusted": "Tratar como 'a conferir': listar apenas os materiais cuja página aberta mostre a licença, e só linkar, nunca copiar."
+          },
+          {
+            "point": "Comunidades e detentores: pedido de restrição, correção ou retirada; devolutiva",
+            "verdict": "manter",
+            "reason": "Alinha com rigor com o poder e hospitalidade com o vestígio. Atenção: o canal de pedido recebe dado pessoal, então não pode usar o Git. Fora do Git, e simples (formulário privado ou e-mail). WhatsApp segue adiado (P48). Pedido de retirada vira Falta ou restrição, não descarte (quarentena não descarta)."
+          },
+          {
+            "point": "Inventário participativo (manual IPHAN 2016)",
+            "verdict": "ajustar",
+            "reason": "Existência só por fontes secundárias; é um método de mobilização que exige trabalho de campo com a comunidade, o que não cabe em 1 a 3 h por semana.",
+            "adjusted": "Oferecer apenas o link para o manual e um resumo do que ele é, sem o CLB conduzir inventários. Se uma comunidade quiser, ela conduz; o CLB documenta o que ela entregar, com crédito."
+          },
+          {
+            "point": "Modelo de pedido de registro com exigências (anuência pela Res. IPHAN 1/2006, secundária)",
+            "verdict": "descartar",
+            "reason": "Para este momento. Preparar pedido de registro é peça jurídica e vira quase assessoria; exige profissional e conferência da norma que ainda é secundária. Cabe ao Agente Jurídico apenas criar Faltas, nunca autorizar.",
+            "adjusted": "Substituir por uma página 'o que a lei pede' (CF art. 216, Decreto 3.551/2000) com citações literais e a nota de que não é orientação jurídica."
+          },
+          {
+            "point": "Pesquisadores: dados abertos, citação, mutirão de escavação",
+            "verdict": "manter",
+            "reason": "Natural no projeto de baixo para cima. Mutirão sai pelo mesmo caminho de curadoria; ele nunca vira teto de coleta."
+          },
+          {
+            "point": "Gestores e legisladores: kit com as leis existentes e a moldura legal",
+            "verdict": "manter",
+            "reason": "Respeita 'leis brasileiras como moldura'. Cada lei com citação literal e nível de verificação."
+          },
+          {
+            "point": "Praticantes e produtores: cartilha de biossegurança",
+            "verdict": "ajustar",
+            "reason": "É conteúdo sanitário, com risco real, e depende de risco verificado e de revisão profissional que o projeto talvez não tenha em breve.",
+            "adjusted": "Só criar a cartilha quando houver risco verificado e profissional revisor identificado. Até lá, a ficha mostra a Falta ('risco sanitário não verificado') e o link para o órgão oficial."
+          },
+          {
+            "point": "Comunicadores: kit de pauta",
+            "verdict": "manter",
+            "reason": "Barato, gerável pelo jeito 1. Cuidado para que a pauta cite fichas e mostre as Faltas, sem sensacionalismo."
+          },
+          {
+            "point": "Regras finais: só verificado, Faltas visíveis, jurídico/sanitário passa por profissional, carimbo, nada guardado automaticamente, contribuição volta com crédito",
+            "verdict": "manter",
+            "reason": "Estão de acordo com as decisões vigentes. Falta dizer quem é o profissional e como é remunerado ou voluntário, pois hoje a regra pode travar tudo."
+          }
+        ],
+        "additions": [
+          {
+            "title": "Começar com 1 grupo e 1 ferramenta",
+            "proposal": "Escolher um grupo (sugestão: educadores) e uma saída (um kit de fonte primária em página estática) e só ampliar depois de uso real.",
+            "why": "Com 1 a 3 h por semana, seis grupos ao mesmo tempo não cabem; o 15 é lote, não meta de ferramentas.",
+            "step": "Escolha do grupo piloto",
+            "vicente_decides": "Qual grupo vem primeiro."
+          },
+          {
+            "title": "Carimbo mínimo comum a toda saída",
+            "proposal": "Padronizar um bloco: fichas usadas (com versão), nível de verificação, Faltas, data, como citar, aviso 'não é orientação jurídica nem sanitária'.",
+            "why": "Dá rastreabilidade total sem exigir trabalho extra por saída, pois o gerador monta o bloco sozinho.",
+            "step": "Modelo de carimbo"
+          },
+          {
+            "title": "Consulta prévia às comunidades antes de materiais para escola indígena ou quilombola",
+            "proposal": "Antes de oferecer qualquer kit para essas escolas, registrar como Falta se a comunidade foi ouvida. A Res. 5/2012 fala em consulta livre, prévia e informada a comunidades (trecho em cópia secundária, aparece truncado na minha leitura).",
+            "why": "O projeto trata W (compreensão local) como dado; um kit feito sem a comunidade pode fixar uma versão que ela não reconhece.",
+            "step": "Regra para materiais escolares",
+            "vicente_decides": "Se o kit para escola indígena ou quilombola só sai com participação de alguém da comunidade."
+          },
+          {
+            "title": "Medir o uso sem identificar pessoas",
+            "proposal": "Contar quantas saídas foram geradas por ferramenta, sem cookies nem cadastro, só contagem agregada, ou nem isso.",
+            "why": "Dá evidência para decidir o próximo grupo sem expor dado pessoal.",
+            "step": "Indicador simples",
+            "vicente_decides": "Se mede ou não."
+          },
+          {
+            "title": "Conferir as fontes pendentes antes de citar",
+            "proposal": "Abrir o texto oficial do art. 26-A (Planalto), da Res. 8/2012 (gov.br/mec) e o PDF do manual do IPHAN; só então tirar o 'a conferir'.",
+            "why": "Esses fatos sustentam o alinhamento legal, e hoje estão não conferidos ou só em fontes secundárias.",
+            "step": "Verificação pendente"
+          }
+        ],
+        "open_questions": [
+          "Quem será o primeiro público real do projeto: uma escola, uma comunidade, um pesquisador? Isso muda qual tier merece ficar pronto antes.",
+          "Há algum profissional (jurídico ou sanitário) que Vicente possa chamar para revisar, mesmo que só de vez em quando, ou a regra de revisão precisa de outra saída?",
+          "Os materiais gerados poderão circular em nome do projeto, ou só como 'rascunho' até Vicente conferir?"
+        ],
+        "answers": [
+          {
+            "question": "Saímos do plano direto para execução?",
+            "answer": "Não. Neste item ainda há fatos não conferidos (art. 26-A, Res. 8/2012, manual do IPHAN) e escolhas suas pendentes (grupo piloto, profissional revisor). O que já dá para começar sem risco é o gerador do jeito 1 com um kit-modelo. Isso eu não executei; é só proposta."
+          },
+          {
+            "question": "Como ler um código como EF05HI04?",
+            "answer": "EF = Ensino Fundamental; 05 = 5º ano; HI = História; 04 = a quarta habilidade da lista desse ano. Conferido no PDF oficial do MEC. O número 04 só indica posição, não ordem de importância."
+          },
+          {
+            "question": "Existe uma base oficial aberta ou API da BNCC?",
+            "answer": "Não achei do MEC; a BNCC oficial está em PDF. Há um projeto independente (bncc.dev) com dados abertos, mas ele não é oficial e eu não abri a página dele."
+          }
+        ],
+        "web_calls_used": 15
+      },
+      {
+        "front": "17 – Lugar e organização do wiki por região",
+        "summary": "Das 12 chamadas web usadas, só o site do Quartz abriu na fonte oficial. Todas as páginas do IBGE falharam (403 ou erro de certificado), então os fatos do IBGE ficam como \"secundária\". O item 17 é coerente com as decisões vigentes, mas ambicioso para 1 a 3 h por semana. Proponho começar com poucos níveis (UF, município, \"lugar da prática\" literal, bioma derivado) e deixar os demais nascerem de baixo para cima. O mapa não é nativo no Quartz, então o Passo 6 precisa de um componente externo.",
+        "facts": [
+          {
+            "claim": "Biomas do IBGE: mapa de 30/10/2019, escala 1:250.000, com seis biomas continentais (Amazônia, Mata Atlântica, Caatinga, Cerrado, Pantanal, Pampa) mais o Sistema Costeiro-Marinho. A edição anterior era de 2004, em 1:5.000.000.",
+            "url": "https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/25798-ibge-lanca-mapa-inedito-de-biomas-e-sistema-costeiro-marinho.html",
+            "level": "secundária",
+            "verdict": "confirmado",
+            "quote": "não conferido (a página não abriu; só o resumo da busca)"
+          },
+          {
+            "claim": "Existe revisão posterior dos limites: Notas metodológicas n. 01/2025, 'Alterações nos limites dos Biomas'. Convém conferir qual versão a tabela municipal de 2024 usa.",
+            "url": "https://metadadosgeo.ibge.gov.br/geonetwork_ibge/srv/api/records/db2ee491-64e4-443c-8992-6d2881efd5ac",
+            "level": "secundária",
+            "verdict": "novo"
+          },
+          {
+            "claim": "Tabela do IBGE (2024) com o bioma predominante por município e 963 municípios interbiomas.",
+            "url": "",
+            "level": "não conferido",
+            "verdict": "não verificável"
+          },
+          {
+            "claim": "Regiões Geográficas Imediatas e Intermediárias, divisão de 2017, substituem as antigas microrregiões e mesorregiões. Não alteram a divisão em municípios, UFs e Grandes Regiões. Em 2018 o IBGE corrigiu a composição de Maranhão e Pernambuco. Os totais (510 imediatas e 133 intermediárias) não foram confirmados.",
+            "url": "https://www.ibge.gov.br/novo-portal-erramos/22529-substituicao-da-base-de-dados-da-divisao-regional-do-brasil-em-regioes-geograficas-imediatas-e-regioes-geograficas-intermediarias-2017.html",
+            "level": "secundária",
+            "verdict": "corrigido",
+            "corrected": "Os totais ficam como 'não conferido'. Usar a base corrigida de 2018. Para a CLB de 1900 em diante, essa divisão é anacrônica: serve só como camada atual de consulta."
+          },
+          {
+            "claim": "API de Localidades do IBGE: documentação em servicodados.ibge.gov.br/api/docs/localidades. Tem grupos para regiões, UFs, regiões imediatas e intermediárias, municípios e distritos, sem chave de acesso. Não consegui abrir a página nem fazer chamada de teste (erro de certificado).",
+            "url": "https://servicodados.ibge.gov.br/api/docs/localidades",
+            "level": "não conferido",
+            "verdict": "não verificável"
+          },
+          {
+            "claim": "Evolução da Divisão Territorial do Brasil 1872-2010 (IBGE, 2011): mapas políticos de 1872 a 2010, com malhas territoriais de 1872 a 1991. Os nomes são os da época, e os limites derivam da malha municipal de 1991.",
+            "url": "https://agenciadenoticias.ibge.gov.br/pt/agencia-sala-de-imprensa/14147-asi-publicacao-aborda-evolucao-da-divisao-territorial-brasileira-de-1872-a-2010.html",
+            "level": "secundária",
+            "verdict": "confirmado"
+          },
+          {
+            "claim": "Linked Places (LPF) é uma extensão do GeoJSON-LD (GeoJSON com dados ligados) do World Historical Gazetteer. Traz nomes, tipos, geometrias, relações e objetos 'when' para o período de validade. O LP-TSV é a versão em planilha: uma geometria por lugar e citação só para o nome principal. A documentação do WHG recomenda LP-TSV na maioria dos casos.",
+            "url": "https://whgazetteer.org/tutorials/choosing/",
+            "level": "secundária",
+            "verdict": "confirmado"
+          },
+          {
+            "claim": "O Quartz não tem mapa geográfico nativo. A lista de recursos traz visão de grafo de notas, Bases (tabelas e cartões), Canvas, Mermaid e comentários.",
+            "url": "https://quartz.jzhao.xyz/features/",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "\"Interactive graph visualization of note connections\"; \"Database-like views for your notes (tables, cards, galleries, and more).\""
+          },
+          {
+            "claim": "FUNAI, terras indígenas: não achei licença explícita. Registros de terceiros (INPE, SIBBR) apontam o geoserver da FUNAI como origem e mandam seguir os termos do autor. Uma lista de 2013 relata que a FUNAI disse ser domínio público, mas isso é secundário e antigo.",
+            "url": "https://data.inpe.br/geonetwork/srv/api/records/9f2b8d5a-0a65-4441-b217-8b632c82ebd5",
+            "level": "secundária",
+            "verdict": "não verificável"
+          },
+          {
+            "claim": "INCRA, quilombolas: os shapefiles vêm do Acervo Fundiário, e os endereços técnicos podem mudar. O IBGE publica 'Territórios Quilombolas Oficialmente Delimitados' (2022), com 495 territórios em 24 estados e no DF, com aviso de imprecisões. Um espelho estadual indica Creative Commons Atribuição, mas a licença do original não foi confirmada.",
+            "url": "https://metadadosgeo.ibge.gov.br/geonetwork_ibge/srv/api/records/2dfb5757-255c-4b13-8d65-cbca4d23e5a1",
+            "level": "secundária",
+            "verdict": "não verificável"
+          }
+        ],
+        "draft_review": [
+          {
+            "point": "Níveis de Lugar (bioma até região cultural)",
+            "verdict": "ajustar",
+            "reason": "Nove níveis são demais para 1 a 3 h por semana. Os níveis oficiais vêm de tabela e API, então são baratos. Os de baixo para cima (localidade, território, região cultural) só nascem quando uma fonte os diz.",
+            "adjusted": "Lugar tem uma lista aberta de níveis. Na partida: UF, município (geocódigo IBGE), localidade com o nome literal da fonte, e bioma derivado. Território tradicional e região cultural só são criados quando uma fonte ou comunidade os nomeia. Grande região, região imediata/intermediária e distrito ficam como atributo derivado, sem página própria."
+          },
+          {
+            "point": "Três lugares por evidência (prática, publicação, pesquisa); só o da prática organiza o wiki; sem ele, Falta",
+            "verdict": "manter",
+            "reason": "Respeita 'Falta dita, nunca completada' e o princípio de baixo para cima. Pesa pouco: são três campos. Explicar 'evidência' como 'o trecho da fonte que sustenta uma informação'."
+          },
+          {
+            "point": "Topônimo histórico guardado como na fonte, ligado ao município atual só sem ambiguidade, com período de validade; ambíguo vira Falta",
+            "verdict": "manter",
+            "reason": "Combina com ciência terminológica e quarentena. O IBGE avisa que os nomes de 1872 a 2010 são os da época, e os limites derivam da malha de 1991. Por isso o vínculo ao município atual deve ser 'aproximado' e nunca um dado exato."
+          },
+          {
+            "point": "Bioma pela tabela do IBGE (2024), marcado 'derivado', 963 municípios interbiomas, fim só estatístico",
+            "verdict": "ajustar",
+            "reason": "A tabela de 2024 e o número 963 não foram conferidos. Há revisão de limites (Notas 01/2025). Um município pode ter vários biomas, e 'predominante' esconde isso.",
+            "adjusted": "Bioma é atributo derivado do município, com a edição e a data do IBGE registradas, e nunca organiza a prática. Se a tabela de 2024 não for localizada, usar o mapa de 2019 e marcar 'não conferido'. O número 963 sai do texto até ser conferido."
+          },
+          {
+            "point": "Lugar não é 5ª dimensão: é a situação da CLB e a âncora de W; a Transformação de W por interação liga lugares",
+            "verdict": "manter",
+            "reason": "Coerente com o grafo 4D e com W. Explicar 'âncora' como 'o lugar a que a compreensão local se refere'. A migração só entra quando a fonte a diz."
+          },
+          {
+            "point": "Precisão publicada por registro (exata, localidade, município, UF, bioma), com padrão generalizado para territórios tradicionais, lugares sagrados e plantas",
+            "verdict": "manter",
+            "reason": "Protege contra expor dado sensível. Deve valer também para pessoas: localidade exata de uma pessoa ou propriedade é dado pessoal e nunca vai ao Git. Quando houver dúvida, publicar no nível mais largo."
+          },
+          {
+            "point": "Wiki com páginas geradas por bioma, UF, município, território e região cultural, com CLB, termos, 'não observado' e Faltas",
+            "verdict": "ajustar",
+            "reason": "Páginas por bioma contradizem 'bioma só estatístico'. Página gerada para município que não tem registro enche o wiki de vazio.",
+            "adjusted": "Gerar página só para UF, município, território e região cultural que tenham pelo menos um registro. Bioma vira um filtro ou tabela de contagem, sem página própria. Cada página mostra CLB, termos, 'não observado' e Faltas."
+          },
+          {
+            "point": "Mapa estático no navegador, componente a conferir no Passo 6",
+            "verdict": "ajustar",
+            "reason": "O Quartz não tem mapa nativo (confirmado na página oficial). Será preciso um componente externo, o que pesa na infraestrutura simples. Um mapa por município exige malhas, que são arquivos grandes.",
+            "adjusted": "Passo 6: começar com uma tabela por UF e município, sem mapa. Depois testar um mapa leve (Leaflet, uma biblioteca de mapas gratuita, ou um SVG estático) com pontos só em nível de município. Malhas de terras indígenas e quilombolas ficam fora da primeira versão, por causa de licença não confirmada e do risco de exposição."
+          },
+          {
+            "point": "Uso do formato Linked Places",
+            "verdict": "ajustar",
+            "reason": "O item não o cita, mas o topônimo histórico com período de validade pede esse tipo de estrutura. O Linked Places completo é pesado.",
+            "adjusted": "Usar só como inspiração para os campos (nome, tipo, 'when' de período, fonte). Se um dia for exportar, o LP-TSV é o caminho simples, em planilha. Não adotar como formato interno agora."
+          }
+        ],
+        "additions": [
+          {
+            "title": "Registro do que é derivado",
+            "proposal": "Todo atributo vindo de tabela externa (bioma, região imediata, geocódigo) guarda a fonte, a edição e a data de consulta, e é marcado 'derivado'.",
+            "why": "Rastreabilidade total. Os limites do IBGE mudam (Notas 01/2025 e correção de 2018), e sem isso o dado envelhece sem aviso."
+          },
+          {
+            "title": "Cópia local dos códigos do IBGE",
+            "proposal": "Baixar uma vez a lista de municípios e UFs do IBGE em arquivo simples no repositório, em vez de chamar a API a cada uso.",
+            "why": "A API não abriu para mim hoje (erro de certificado). Uma cópia local evita backend, não depende de rede e é reprodutível."
+          },
+          {
+            "title": "Regra de licença antes de baixar malhas",
+            "proposal": "Nenhuma malha de FUNAI ou INCRA entra no repositório antes de a licença ser confirmada por escrito na fonte, e o registro guarda a página e a data.",
+            "why": "A licença de FUNAI e INCRA não foi confirmada. Terras e territórios são sensíveis para as comunidades."
+          },
+          {
+            "title": "Escala de 1900 em diante",
+            "proposal": "Cada vínculo de lugar guarda o 'ano da divisão territorial usada'. A divisão de 2017 não vale para 1930.",
+            "why": "Municípios e estados mudaram muito no período, e o IBGE publica a evolução territorial até 2010."
+          }
+        ],
+        "answers": [
+          {
+            "question": "Saímos do plano direto para execução?",
+            "answer": "Não pelo que verifiquei. Esta tarefa só confere fatos do item 17, e nada foi executado. Dois pontos ainda dependem de conferência: a tabela de biomas de 2024 e a API do IBGE, que não abriu para mim. Há também a licença de FUNAI e INCRA. Recomendo uma execução pequena: UF, município e localidade literal. Os pontos em aberto ficam como Falta."
+          },
+          {
+            "question": "O Quartz tem mapa?",
+            "answer": "Não nativo. A página oficial lista grafo de notas, tabelas, Canvas e diagramas, mas nenhum mapa geográfico. Seria preciso acrescentar um componente externo."
+          },
+          {
+            "question": "O que é 'derivado'?",
+            "answer": "É um dado que a CLB não colheu de uma fonte sobre a bebida, e sim calculou ou copiou de outra tabela. Exemplo: o bioma do município. Fica sempre marcado, com a fonte e a data."
+          },
+          {
+            "question": "Os dados do IBGE são oficiais e abertos?",
+            "answer": "São publicados pelo IBGE, e a API de localidades é descrita como gratuita e sem chave. Não consegui abrir as páginas oficiais hoje, então a licença exata fica 'não conferida'."
+          }
+        ],
+        "open_questions": [
+          "Quando uma fonte diz que a bebida é 'do sertão' ou 'da beira do rio', você quer que isso vire região cultural já na primeira vez ou só depois de várias fontes usarem o mesmo nome?",
+          "O mapa é para você explorar o material ou para o público ver? Isso muda o quanto de precisão e de malhas faz sentido mostrar.",
+          "Para comunidades e territórios tradicionais, você prefere que o padrão seja publicar só o nível de UF ou de município até haver consentimento da comunidade?"
+        ],
+        "web_calls_used": 12
+      },
+      {
+        "front": "Reconferência independente de 10 fatos de apoio (limite de 15 chamadas web, todas usadas)",
+        "summary": "Das 10 afirmações, 5 foram confirmadas ou corrigidas em página oficial aberta agora (1 parcial, 2, 3, 4 parcial, 5, 6 parcial). Os fatos 7, 8, 9 e 10 ficaram \"não verificável\": as páginas deram 404, 403 ou vieram vazias, e o limite de chamadas acabou. O fato 2 precisa de correção: /alerts/ está bloqueado, mas com exceções.",
+        "facts": [
+          {
+            "claim": "(1a) robots.txt de news.google.com não libera /rss",
+            "url": "https://news.google.com/robots.txt",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "Disallow: /"
+          },
+          {
+            "claim": "(1b) Termos de Serviço do Google proíbem acesso automatizado que viole instruções legíveis por máquina",
+            "url": "https://policies.google.com/terms",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "corrected": "Não abri os Termos do Google (limite de chamadas)."
+          },
+          {
+            "claim": "(2) robots.txt de www.google.com bloqueia /alerts/",
+            "url": "https://www.google.com/robots.txt",
+            "level": "oficial",
+            "verdict": "corrigido",
+            "quote": "Disallow: /alerts/",
+            "corrected": "/alerts/ é bloqueado, mas há exceções: Allow /alerts/manage, Allow /alerts/remove e Allow /alerts/$ (só a raiz). Os feeds RSS dos Alertas ficam em /alerts/feeds/, que continua bloqueado; porém não abri um feed para confirmar o caminho exato."
+          },
+          {
+            "claim": "(3) Termos do GitHub para Actions: máquinas não devem ser usadas para atividade alheia à produção, teste, implantação ou publicação do projeto do repositório",
+            "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "any other activity unrelated to the production, testing, deployment, or publication of the software project"
+          },
+          {
+            "claim": "(4a) OpenAlex: US$ 1 por dia com chave grátis",
+            "url": "https://help.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "with a free account's $1 a day"
+          },
+          {
+            "claim": "(4b) OpenAlex: US$ 0,10 por dia sem chave",
+            "url": "https://help.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+            "level": "oficial",
+            "verdict": "corrigido",
+            "quote": "raises your daily budget 10×",
+            "corrected": "A página diz só que a chave grátis multiplica o orçamento por 10 em relação ao sem chave; coerente com US$ 0,10, mas o valor em dólar não aparece literalmente."
+          },
+          {
+            "claim": "(4c) OpenAlex: paginação por cursor exige chave",
+            "url": "https://help.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+            "level": "oficial",
+            "verdict": "corrigido",
+            "quote": "required for cursor paging past the first page",
+            "corrected": "A chave é exigida para paginar por cursor além da primeira página; sem chave só a primeira página funciona."
+          },
+          {
+            "claim": "(4d) OpenAlex: filtros from_created_date e from_updated_date são pagos",
+            "url": "https://help.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+            "level": "oficial",
+            "verdict": "não verificável",
+            "corrected": "A página aberta não menciona esses filtros. Falta checar a página de preços ou de filtros."
+          },
+          {
+            "claim": "(5a) API do YouTube: dados guardados no máximo 30 dias",
+            "url": "https://developers.google.com/youtube/terms/developer-policies",
+            "level": "oficial",
+            "verdict": "corrigido",
+            "quote": "After 30 calendar days, the [API Client] must either delete or refresh the stored data.",
+            "corrected": "A regra é apagar ou atualizar após 30 dias corridos (para dados autorizados fora de exceções), não apenas 'guardar no máximo 30 dias'; há exceções na seção III.E.4.b."
+          },
+          {
+            "claim": "(5b) Legendas de vídeos de terceiros não acessíveis pela API",
+            "url": "https://developers.google.com/youtube/v3/docs/captions/download",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "This method requires the user to have permission to edit the video.",
+            "corrected": "A página não fala em 'terceiros' explicitamente; a conclusão vem da exigência de permissão de edição."
+          },
+          {
+            "claim": "(5c) YouTube: 100 buscas por dia por padrão",
+            "url": "https://developers.google.com/youtube/v3/determine_quota_cost",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "a default quota allocation of 100 `search.list` calls"
+          },
+          {
+            "claim": "(6a) Termos da Meta proíbem coleta automatizada sem permissão",
+            "url": "https://www.facebook.com/terms",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "Você não pode acessar ou coletar dados dos nossos Produtos usando meios automatizados (sem nossa permissão prévia)"
+          },
+          {
+            "claim": "(6b) Termos do TikTok proíbem scripts automatizados",
+            "url": "https://www.tiktok.com/legal/page/global/terms-of-service/en",
+            "level": "oficial",
+            "verdict": "corrigido",
+            "quote": "use automated scripts to collect information from or otherwise interact with the Services;",
+            "corrected": "Vale para os Termos dos EUA (seção 5). Nos Termos de EEE/Reino Unido/Suíça a proibição é mais estreita (extração para fins comerciais). Os Termos aplicáveis ao Brasil não foram lidos (só li até o caractere 100000)."
+          },
+          {
+            "claim": "(6c) Research API do TikTok, no Brasil, só aceita estudos sobre segurança de jovens online",
+            "url": "https://developers.tiktok.com/products/research-api/",
+            "level": "oficial",
+            "verdict": "confirmado",
+            "quote": "Academic institutions or not-for-profit organizations based in Brazil and looking to study online youth safety."
+          },
+          {
+            "claim": "(7) Hemeroteca Digital Brasileira: sintaxe de busca (aspas, +, -, |, *) e prazos de domínio público segundo a BN",
+            "url": "https://bndigital.bn.gov.br/",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "corrected": "Não abri o tutorial da BN (limite de chamadas)."
+          },
+          {
+            "claim": "(8) Wikisource em português: 'validada' exige dois contribuidores diferentes",
+            "url": "https://pt.wikisource.org/wiki/Wikisource:Níveis_de_revisão",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "corrected": "A URL tentada deu 404; o título correto da página de ajuda não foi localizado."
+          },
+          {
+            "claim": "(9) IBGE 2024: tabela do bioma predominante por município, 963 interbiomas, fim estatístico",
+            "url": "https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/15842-biomas.html",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "corrected": "A página oficial respondeu 403 ao acesso automatizado."
+          },
+          {
+            "claim": "(10) BHL: API v3 exige chave; tem OAI-PMH e exportação mensal do OCR",
+            "url": "https://www.biodiversitylibrary.org/api3",
+            "level": "não conferido",
+            "verdict": "não verificável",
+            "corrected": "A página veio vazia para a ferramenta."
+          }
+        ],
+        "draft_review": [],
+        "additions": [],
+        "open_questions": [
+          "Termos de Serviço do Google: abrir policies.google.com/terms para o fato 1b.",
+          "OpenAlex: onde está documentado que from_created_date e from_updated_date são pagos?",
+          "Fatos 7 a 10 seguem sem reconferência; precisam de nova rodada (BN, Wikisource, IBGE, BHL), possivelmente com abertura manual por Vicente quando o site bloqueia acesso automatizado.",
+          "Termos do TikTok aplicáveis ao Brasil: qual versão regional vale?"
+        ],
+        "web_calls_used": 15
+      }
+    ],
+    "failed": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Lote A"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "fontes-oficiais",
+      "phaseIndex": 1,
+      "phaseTitle": "Lote A",
+      "agentId": "a67f46e098484d5d8",
+      "agentType": "Plan",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792102159651,
+      "queuedAt": 1792102159602,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Fontes oficiais, de patrimônio e de territórios como ambien…",
+      "promptPreview": "Você ajuda a planejar o projeto Cultura Líquida Brasileira (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (de 1900 em diante, com tempo elástico), com rastreabilidade total de cada informação.\n\nSOMENTE LEITURA: não crie nem edite arquivos; não rode comandos que mudem estado.\n\n18 RÍGIDO DE CUSTO: no máximo LIMITE chamadas de W…",
+      "promptFramed": true,
+      "lastProgressAt": 1792103150685,
+      "tokens": 44373,
+      "toolCalls": 25,
+      "durationMs": 991033,
+      "resultPreview": "{\"front\":\"Fontes oficiais, de patrimônio e de territórios como ambientes de busca (P74)\",\"summary\":\"Usei 17 chamadas web (limite 18) e 3 consultas diretas por curl ao Querido Diário. A API do Querido Diário funciona, mas é instável e ruidosa; o LexML pediu verificação anti-robô e não foi contornado. Não achei lei municipal de bebida como patrimônio. Achei um autógrafo (texto aprovado pela Assemble…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "admissao-pessoas",
+      "phaseIndex": 1,
+      "phaseTitle": "Lote A",
+      "agentId": "a18a3b39d40f1e51e",
+      "agentType": "Plan",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792102159651,
+      "queuedAt": 1792102159603,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Item 15: admissão de novos dados, pessoas e oralidades (ver…",
+      "promptPreview": "Você ajuda a planejar o projeto Cultura Líquida Brasileira (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (de 1900 em diante, com tempo elástico), com rastreabilidade total de cada informação.\n\nSOMENTE LEITURA: não crie nem edite arquivos; não rode comandos que mudem estado.\n\n15 RÍGIDO DE CUSTO: no máximo LIMITE chamadas de W…",
+      "promptFramed": true,
+      "lastProgressAt": 1792103067575,
+      "tokens": 47140,
+      "toolCalls": 23,
+      "durationMs": 906993,
+      "resultPreview": "{\"front\":\"Item 15: admissão de novos dados, pessoas e oralidades (verificação jurídica e revisão do rascunho)\",\"summary\":\"Consegui abrir na fonte oficial a Res. CNS 510/2016, a Res. CNS 304/2000 e a página de atos vigentes da FUNAI. Não abri nenhuma das três leis do Planalto: Código Civil, Lei 9.610 e LGPD deram erro de conexão em todas as tentativas, e ficam \\\"não conferidas\\\". Há um provável err…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "tiers-ferramentas",
+      "phaseIndex": 1,
+      "phaseTitle": "Lote A",
+      "agentId": "a91b17b8a59bb97b7",
+      "agentType": "Plan",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792103067587,
+      "queuedAt": 1792102159603,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Item 20 – Tiers com ferramentas de ação (educadores, comuni…",
+      "promptPreview": "Você ajuda a planejar o projeto Cultura Líquida Brasileira (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (de 1900 em diante, com tempo elástico), com rastreabilidade total de cada informação.\n\nSOMENTE LEITURA: não crie nem edite arquivos; não rode comandos que mudem estado.\n\n15 RÍGIDO DE CUSTO: no máximo LIMITE chamadas de W…",
+      "promptFramed": true,
+      "lastProgressAt": 1792103256981,
+      "tokens": 45118,
+      "toolCalls": 20,
+      "durationMs": 189393,
+      "resultPreview": "{\"front\":\"Item 20 – Tiers com ferramentas de ação (educadores, comunidades, pesquisadores, gestores, praticantes, comunicadores)\",\"summary\":\"Confirmei na fonte oficial só a estrutura dos códigos da BNCC (PDF do MEC aberto agora) e, por cópia secundária, o trecho da Res. CNE/CEB 5/2012 sobre conhecimentos tradicionais. O art. 26-A da LDB, a Res. 8/2012 e o manual do IPHAN seguem não conferidos na f…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "regiao-lugar",
+      "phaseIndex": 1,
+      "phaseTitle": "Lote A",
+      "agentId": "afd92a1c108a8aca5",
+      "agentType": "Plan",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792103150695,
+      "queuedAt": 1792102159604,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "17 – Lugar e organização do wiki por região",
+      "promptPreview": "Você ajuda a planejar o projeto Cultura Líquida Brasileira (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (de 1900 em diante, com tempo elástico), com rastreabilidade total de cada informação.\n\nSOMENTE LEITURA: não crie nem edite arquivos; não rode comandos que mudem estado.\n\n15 RÍGIDO DE CUSTO: no máximo LIMITE chamadas de W…",
+      "promptFramed": true,
+      "lastProgressAt": 1792103292751,
+      "tokens": 41340,
+      "toolCalls": 14,
+      "durationMs": 142055,
+      "resultPreview": "{\"front\":\"17 – Lugar e organização do wiki por região\",\"summary\":\"Das 12 chamadas web usadas, só o site do Quartz abriu na fonte oficial. Todas as páginas do IBGE falharam (403 ou erro de certificado), então os fatos do IBGE ficam como \\\"secundária\\\". O item 17 é coerente com as decisões vigentes, mas ambicioso para 1 a 3 h por semana. Proponho começar com poucos níveis (UF, município, \\\"lugar da …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "reconferencia-fatos",
+      "phaseIndex": 1,
+      "phaseTitle": "Lote A",
+      "agentId": "a7786e2f4b78efa5a",
+      "agentType": "Plan",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792103256992,
+      "queuedAt": 1792102159604,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Reconferência independente de 10 fatos de apoio (limite de …",
+      "promptPreview": "Você ajuda a planejar o projeto Cultura Líquida Brasileira (CLB), de Vicente: um sistema para encontrar, organizar e devolver o que se sabe sobre bebidas tradicionais brasileiras (de 1900 em diante, com tempo elástico), com rastreabilidade total de cada informação.\n\nSOMENTE LEITURA: não crie nem edite arquivos; não rode comandos que mudem estado.\n\n15 RÍGIDO DE CUSTO: no máximo LIMITE chamadas de W…",
+      "promptFramed": true,
+      "lastProgressAt": 1792103391388,
+      "tokens": 33889,
+      "toolCalls": 16,
+      "durationMs": 134395,
+      "resultPreview": "{\"front\":\"Reconferência independente de 10 fatos de apoio (limite de 15 chamadas web, todas usadas)\",\"summary\":\"Das 10 afirmações, 5 foram confirmadas ou corrigidas em página oficial aberta agora (1 parcial, 2, 3, 4 parcial, 5, 6 parcial). Os fatos 7, 8, 9 e 10 ficaram \\\"não verificável\\\": as páginas deram 404, 403 ou vieram vazias, e o limite de chamadas acabou. O fato 2 precisa de correção: /ale…"
+    }
+  ],
+  "totalTokens": 211860,
+  "totalToolCalls": 98
+}
