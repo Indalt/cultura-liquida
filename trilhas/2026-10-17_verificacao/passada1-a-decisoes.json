@@ -1,0 +1,19 @@
+{
+  "arquivo": "00_Fundacao_Cultura_Liquida.md", "commit": "888ce9f", "data": "2026-10-17",
+  "verificador": "auditor (Sonnet 5.5) + scripts/checar_fundacao.py", "olhar": "a-decisoes",
+  "achados": [
+    {"id":"A-001","tipo":"ausencia","linha":681,"estado":"confirmado",
+     "descricao":"D-025: frase 'biblioteca informativa com proposições, não uma réplica da legislação' só no §9 (linha 859); ausente do corpo (96, 681).",
+     "trecho":"Revisão de essencialidade [VIGENTE] (D-025): ... fica só o essencial para a biblioteca existir.",
+     "confirmacao":{"metodo":"grep","comando":"grep -n -i -E 'biblioteca informativa|réplica' 00_Fundacao_Cultura_Liquida.md | cut -c1-120","saida":"só a linha 859"}},
+    {"id":"A-002","tipo":"contradicao","linha":417,"estado":"confirmado",
+     "descricao":"'legado como ambiente' é [VIGENTE] (D-024) nas linhas 153 e 729 e [PROPOSTA] na linha 417; a essência da D-024 não diz 'ambiente'; o brief (linha 323) diz.",
+     "trecho":"- [PROPOSTA] O legado é um ambiente do Registro (Passo 3; D-024); por isso o Passo 3 não bloqueia o Passo 4.",
+     "confirmacao":{"metodo":"grep","comando":"grep -n -i -E 'mais um ambiente|legado é um ambiente' 00_Fundacao_Cultura_Liquida.md | cut -c1-170","saida":"153 [VIGENTE]; 417 [PROPOSTA]; 729 [VIGENTE]"}},
+    {"id":"A-003","tipo":"outro","linha":470,"estado":"confirmado",
+     "descricao":"Bullet 'Voz no trecho' sem marcador, atribui a D-018 a regra 'W se ancora na fala de quem pratica'; a essência da D-018 não diz isso; vem após 'Portas por tipo de evidência [PROPOSTA]' (linha 457).",
+     "trecho":"- **Voz no trecho:** ... W se ancora na fala de quem pratica; ... sem a fala de quem pratica, W fica como Falta (D-018).",
+     "confirmacao":{"metodo":"grep","comando":"grep -n -i 'quem pratica' trilhas/2026-10-15_pesquisa/clb-execucao-v0.2-brief.md; grep -n 'Portas por tipo de evidência' 00_Fundacao_Cultura_Liquida.md","saida":"brief: sem ocorrência; Fundação: linha 457 [PROPOSTA]"}}
+  ],
+  "resumo": {"mecanico":"0 achados; anexos idênticos; 0 dado pessoal","achados":3}
+}

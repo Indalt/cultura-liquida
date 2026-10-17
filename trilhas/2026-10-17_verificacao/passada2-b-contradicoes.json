@@ -1,0 +1,128 @@
+{
+ "arquivo": "00_Fundacao_Cultura_Liquida.md",
+ "commit": "888ce9f",
+ "data": "2026-10-17",
+ "verificador": "auditor (claude-sonnet-5-5, alto), passada 2 de 3",
+ "olhar": "b-contradicoes",
+ "achados": [
+  {
+   "id": "B-001",
+   "tipo": "contradicao",
+   "descricao": "Estado do Ambiente: no §5.2 é uma sequência única que termina em 'monitorando'; no §6 são dois eixos, e o monitoramento 'nunca se exaure'. Um ambiente não pode ser 'exaurido → monitorando' (sequência) e ter monitoramento que nunca se exaure (eixo próprio).",
+   "linha": 415,
+   "trecho": "L415: 'estado (proposto → mapeando → minerando → exaurido → monitorando)' × L590: 'dois eixos de estado: escavação (proposto → mapeando → minerando → exaurido, sempre por Recorte) e monitoramento, que nunca se exaure'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n \"proposto → mapeando\\|dois eixos de estado\" 00_Fundacao_Cultura_Liquida.md | cut -c1-230",
+    "saida": "415:- [PROPOSTA] Um arquivo por ambiente, com estado (proposto → mapeando → minerando → exaurido → monitorando). Um ambiente descoberto durante o trabalho entra como \"proposto\". \"Exaurido\" vale por ambiente × Consulta × \n590:- **Ambiente:** o lugar onde se busca (§5.2). Campos: id · nome · tipo (hemeroteca, periódico científico, repositório de teses, revista, jornal, blog, substack, rede social, documento oficial como RTID, RCID ou Diário O"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-002",
+   "tipo": "contradicao",
+   "descricao": "O §5 abre dizendo que nada se publica antes do Passo 6; o §5.1 (e o §1) dizem que o repositório é público e que o que entra no Git, inclusive a quarentena, já é publicação aberta. O §5.4 trata a diferença como Falta aberta, mas o texto de abertura do §5 e o Passo 6 (publicação) afirmam o contrário sem ressalva.",
+   "linha": 363,
+   "trecho": "L363: 'nada se publica antes do Passo 6' × L394: '[VIGENTE] o que entra no Git é publicação aberta, e isso inclui o que está em quarentena, com o seu selo'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o \"nada se publica antes do Passo 6\\|Público \\[VIGENTE\\]:\\*\\* o que entra no Git é publicação aberta, e isso inclui o que está em quarentena\" 00_Fundacao_Cultura_Liquida.md",
+    "saida": "363:nada se publica antes do Passo 6\n394:Público [VIGENTE]:** o que entra no Git é publicação aberta, e isso inclui o que está em quarentena"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-003",
+   "tipo": "contradicao",
+   "descricao": "Dependência entre passos: o §7 diz que cada passo só começa quando o anterior está pronto; o §5.2 diz que o Passo 3 não bloqueia o Passo 4. (O §7 também lista como 'já feito' partes do Passo 2 com o Passo 1 aberto.)",
+   "linha": 417,
+   "trecho": "L417: 'por isso o Passo 3 não bloqueia o Passo 4' × L660: 'Cada passo entrega algo verificável e só começa quando o anterior está pronto'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n \"não bloqueia o Passo 4\\|só começa quando o anterior\" 00_Fundacao_Cultura_Liquida.md | cut -c1-200",
+    "saida": "417:- [PROPOSTA] O legado é um ambiente do Registro (Passo 3; D-024); por isso o Passo 3 não bloqueia o Passo 4.\n660:Cada passo entrega algo verificável e só começa quando o anterior está pronto. As fases mudam só a ordem em que as partes de cada passo entram; o conceito fica inteiro."
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-004",
+   "tipo": "contradicao",
+   "descricao": "Fase do e-mail: o §5.4 diz que o e-mail dedicado abre no Passo 4 (já recebendo os Alertas, que o §5.3 põe no monitoramento da fase 1), com contribuições só na fase 2; o §7, Passo 4, põe o e-mail só na Fase 2 (caixa multicanal) e não o lista na Fase 1. A leitura como contradição é parcial (pode ser só o e-mail de Alertas na fase 1); o texto não diz isso no §7.",
+   "linha": 451,
+   "trecho": "L451: 'E-mail dedicado | aberto no Passo 4 (recebe também os Alertas do Google); contribuições só na fase 2' × L742: 'Fase 2: a caixa de entrada multicanal (formulário, e-mail, envio de documentos...)'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n \"E-mail dedicado\\|\\*\\*Fase 2:\\*\\* a caixa de entrada\\|Alertas chegam por e-mail\" 00_Fundacao_Cultura_Liquida.md | cut -c1-260",
+    "saida": "437:- **Fontes com regra própria** (conferidas em 15/10; níveis e URLs no Anexo C): o RSS de busca do Google Notícias e os feeds do Google Alertas saem, porque o robots.txt e os termos do Google vedam a leitura automática, e os Alertas cheg\n451:| E-mail dedicado | aberto no Passo 4 (recebe também os Alertas do Google); contribuições só na fase 2 | um script salva a mensagem e os anexos na caixa; onde fica a conta, Passo 4 |\n742:- **Fase 2:** a caixa de entrada multicanal (formulário, e-mail, envio de documentos pelo grupo \"colaboradores\") e a camada 2, a rotina do Claude na nuvem (§5.5). Onde vivem os dados pessoais dos canais de pessoas é decisão de Vicente (\n1677:| F-03 | Google: Notícias, Alertas e Acadêmico (**corrige o C.2 da v0.1**) | O robots.txt de news.google.com bloqueia tudo e não libera /rss; o de www.google.com bloqueia /alerts/, com exceções só em /alerts/manage, /alerts/remove e na\n1756:| F-03 | caminho exato dos feeds dos Alertas | não conferido | — | lote A; sem necessidade enquanto os Alertas chegam por e-mail |"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-005",
+   "tipo": "contradicao",
+   "descricao": "Estatuto da regra anti-robô: o princípio 9 (§2, cujo título é [VIGENTE]) diz sem marcador que a proteção 'nunca se contorna'; o §5.2 a marca [PROPOSTA, a confirmar por Vicente]. O mesmo item aparece como vigente e como proposta.",
+   "linha": 129,
+   "trecho": "L129 (princípio 9): 'Proteções anti-robô (bloqueio, captcha, verificação de navegador) nunca se contornam' × L419: 'Proteção contra robôs nunca é contornada [PROPOSTA, a confirmar por Vicente; os agentes já a seguem]'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o \"Proteções anti-robô (bloqueio, captcha, verificação de navegador) nunca se contornam\\|Proteção contra robôs nunca é contornada\\*\\* \\[PROPOSTA, a confirmar por Vicente\" 00_Fundacao_Cultura_Liquida.md",
+    "saida": "129:Proteções anti-robô (bloqueio, captcha, verificação de navegador) nunca se contornam\n419:Proteção contra robôs nunca é contornada** [PROPOSTA, a confirmar por Vicente"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-006",
+   "tipo": "contradicao",
+   "descricao": "Bola de neve: o §6 a exige para que um Recorte seja 'percorrido pela busca' (e assim 'exaurido'), mas o §7 (Fase 2) e o §5.3 (Fase 2) a põem só na fase 2, enquanto o Passo 5 (fase 1) manda escavar 'até exaurir'. Na fase 1, nenhum Recorte poderia atingir o estado definido no §6.",
+   "linha": 592,
+   "trecho": "L592 (§6, Recorte): 'sem resposta saturada, bola de neve fechada' × L674 (§7, Fase 2): 'mutirão, bola de neve, relatório do funil, Wikidata...' e §5.3 '**Fase 2:** bola de neve'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o \"sem resposta saturada, bola de neve fechada\\|mutirão, bola de neve\\|\\*\\*Fase 2:\\*\\* bola de neve\\|escavação por ambiente até exaurir\" 00_Fundacao_Cultura_Liquida.md",
+    "saida": "438:**Fase 2:** bola de neve\n592:sem resposta saturada, bola de neve fechada\n674:mutirão, bola de neve\n753:escavação por ambiente até exaurir"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-007",
+   "tipo": "outro",
+   "descricao": "Sumário × títulos reais: o Sumário traz '(textos conferidos)' em C.1 e '(com as correções)' em C.2; os títulos reais não têm esses complementos. Divergência de forma, sem efeito no conteúdo.",
+   "linha": 36,
+   "trecho": "L36: 'C.1 Leis e normas brasileiras (textos conferidos)' × L1640: '### C.1 Leis e normas brasileiras'; L37 'C.2 Ferramentas e métodos (com as correções)' × L1669 '### C.2 Ferramentas e métodos'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n \"C\\.1 Leis\\|C\\.2 Ferramentas\" 00_Fundacao_Cultura_Liquida.md | cut -c1-120",
+    "saida": "36:  - C.1 Leis e normas brasileiras (textos conferidos)\n37:  - C.2 Ferramentas e métodos (com as correções)\n1640:### C.1 Leis e normas brasileiras\n1669:### C.2 Ferramentas e métodos"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "B-008",
+   "tipo": "contradicao",
+   "descricao": "Camada Educação: o §5.7 a marca [ABERTO] (permanente ou também sob demanda); o Passo 6 e o Passo 9 a tratam como já decidida no wiki. Pode não ser contradição, porque o que está aberto é só o 'também sob demanda'; fica sem confirmação como conflito.",
+   "linha": 529,
+   "trecho": "L529: 'Camada Educação dentro de cada ficha (13/10) [ABERTO: parte permanente da ficha ou também sob demanda?]' × L783: 'Educação: já está no wiki (Passo 6)'",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o \"Camada Educação.\\{0,100\\}\\|Educação:\\*\\* já está.\\{0,30\\}\" 00_Fundacao_Cultura_Liquida.md",
+    "saida": "529:Camada Educação** dentro de cada ficha (13/10) [ABERTO: parte permanente da ficha ou também sob demanda?].\n783:Educação:** já está no wiki (Passo 6)."
+   },
+   "estado": "nao_confirmado"
+  }
+ ],
+ "resumo": {
+  "contradicao_confirmada": 6,
+  "outro_confirmado": 1,
+  "nao_confirmado": 1,
+  "checado_sem_contradicao": [
+   "300 mil (D-023) x 600 mil (execução): escopos diferentes, explicados no §11",
+   "1 a 3 h e 15 itens = 1,25 a 2,5 h: consistente em §0/§2/§4/§5.5/§7/§9/§10/§11",
+   "8 agentes e 14 habilidades: bate com .claude/",
+   "69 ambientes (Anexo E) e 69 bebidas (Feed Mestre): números distintos, sem conflito",
+   "remissões §10 pergunta 5, 6, 13, 17, 18, 19 e §8: batem",
+   "Passo 4/Passo 2/Actions (validador local no Passo 2, Actions no Passo 4): consistente",
+   "níveis de colaborador e 7 papéis §5.4 x §6: batem",
+   "5 eixos de status: §6 consistente"
+  ]
+ }
+}

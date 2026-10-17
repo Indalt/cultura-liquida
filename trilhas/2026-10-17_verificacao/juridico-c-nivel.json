@@ -1,0 +1,186 @@
+{
+ "arquivo": "00_Fundacao_Cultura_Liquida.md",
+ "commit": "888ce9f",
+ "data": "2026-10-17",
+ "verificador": "juridico",
+ "olhar": "c-nivel-e-termos",
+ "achados": [
+  {
+   "id": "J-001",
+   "tipo": "fato_sem_nivel",
+   "linha": 486,
+   "trecho": "(Marco Civil, Lei 12.965/2014, art. 19, e decisão do STF de 26/06/2025, Temas 987 e 533; secundária, a tese literal está por ler)",
+   "descricao": "Marco Civil (art. 19) e decisão do STF citados como secundária, sem URL no corpo e sem entrada no Anexo C (C.1/C.3). No indice.md (linhas 257 e 262) o art. 19 está não conferido e a notícia do STF, secundária; URLs lá: https://noticias.stf.jus.br/postsnoticias/stf-define-parametros-para-responsabilizacao-de-plataformas-por-conteudos-de-terceiros/ e https://www2.camara.leg.br/legin/fed/lei/2014/lei-12965-23-abril-2014-778630-norma-pl.html.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(12\\.965|Marco Civil|CRediT).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa (440-494, 645-830, 1624-1798)",
+    "saida": "486: (Marco Civil, Lei 12.965/2014, art. 19, e decisão do STF ... Temas 987 e 533; secundária ...). Nenhuma ocorrência na faixa 1624-1798."
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-002",
+   "tipo": "fato_sem_nivel",
+   "linha": 489,
+   "trecho": "O crédito usa 3 ou 4 papéis inspirados no CRediT, que tem 14 (oficial, conferido em 15/10).",
+   "descricao": "CRediT marcado oficial sem URL na linha e sem entrada no Anexo C. O indice.md (linha 266) tem https://credit.niso.org/ como oficial; a Fundação não a traz.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "mesmo grep do J-001 (padrão CRediT); sed -n 266p trilhas/2026-10-15_pesquisa/indice.md | grep -o -E \"https?://[^ |)]+\"",
+    "saida": "489: O crédito usa 3 ou 4 papéis inspirados no CRediT, que tem 14 (oficial, conferido em 15/10). indice.md 266: https://credit.niso.org/"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-003",
+   "tipo": "fato_sem_nivel",
+   "linha": 484,
+   "trecho": "Quem contribui nunca consente em nome de uma comunidade (art. 9º, §1º, a conferir).",
+   "descricao": "Lei 13.123, art. 9º: o §5.4 diz a conferir, mas o C.3 (linha 1711, L-06) marca os arts. 9º como oficial, 15/10. O C1 não cobriu o art. 9º. Incoerência de nível entre corpo e Anexo C.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(9º, §1º).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa; grep -c \"9º\" trilhas/2026-10-16_conferencias/lote-C1.json || true",
+    "saida": "484: ...art. 9º, §1º, a conferir...; linha 1711 do C.3: arts. 1º, 2º, 4º, 8º, 9º, 10 e 12 | oficial | 15/10; lote-C1.json: 0"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-004",
+   "tipo": "outro",
+   "linha": 484,
+   "trecho": "Quem contribui nunca consente em nome de uma comunidade (art. 9º, §1º, a conferir).",
+   "descricao": "Regra categórica ancorada no art. 9º, §1º; sem web nesta rodada, não se confirmou que o §1º diga isso. Pode ser inferência da Fundação, não texto de lei.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -c \"9º\" trilhas/2026-10-16_conferencias/lote-C1.json || true",
+    "saida": "0"
+   },
+   "estado": "nao_confirmado"
+  },
+  {
+   "id": "J-005",
+   "tipo": "fato_sem_nivel",
+   "linha": 484,
+   "trecho": "(art. 2º, XII, e art. 12, I; Decreto 8.772, art. 22; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm)",
+   "descricao": "Decreto 8.772, art. 22 marcado oficial com a URL da Lei 13.123, a única na linha. Falta a URL do decreto (https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm; C1 e C.3).",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(Decreto 8\\.772, art\\. 22).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa",
+    "saida": "484: ...Decreto 8.772, art. 22; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm..."
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-006",
+   "tipo": "outro",
+   "linha": 479,
+   "trecho": "cópia de pequenos trechos, em um só exemplar, para uso privado do copista e sem intuito de lucro (Lei 9.610, art. 46, II; oficial, ...); a LGPD não se aplica a pessoa natural com fins exclusivamente particulares e não econômicos (art. 4º, I; oficial, ...)",
+   "descricao": "O degrau 1 apresenta o art. 46, II e o art. 4º, I da LGPD como o que ainda vale, sem a ressalva do C.1 (linha 1656) de que um acervo público não cabe com folga no inciso I. As linhas 479 e 483 não a repetem; pode ser lido como cobertura do que já está no Git público (D-021).",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(folga|exclusivamente particulares).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa",
+    "saida": "479: ...fins exclusivamente particulares e não econômicos (art. 4º, I; oficial...; 1656: ...Um acervo público não cabe com folga no inciso I..."
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-007",
+   "tipo": "outro",
+   "linha": 464,
+   "trecho": "| Imagem ou foto | aberta | URL | sem licença, só o link |",
+   "descricao": "Porta aberta para imagem ou foto (só o link) e, na linha 463, para depoimento gravado, sem a condição da linha 481: o link só serve quando a fonte é legitimamente pública. Código Civil, art. 20, não conferido (C.3, L-18). O quadro é [PROPOSTA].",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(só o link|sem licença, só).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa",
+    "saida": "464: | Imagem ou foto | aberta | URL | sem licença, só o link |"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-008",
+   "tipo": "fato_sem_nivel",
+   "linha": 782,
+   "trecho": "CLB que envolvem substâncias controladas (ex.: o vinho de jurema e a DMT, na Lista F2 da Portaria SVS/MS 344/1998) pedem análise jurídica própria antes de se publicar o modo de fazer.",
+   "descricao": "O Passo 9 afirma sem nível e sem URL que a DMT está na Lista F2 da Portaria 344/1998. No C.3 (L-22, linha 1742) o nível é secundária (13/10), sem URL exata. A prudência está correta; falta o nível no corpo.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(Lista F2|344/1998).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa",
+    "saida": "782 (sem nível); 1665; 1742: | Portaria SVS/MS 344/1998 (Lista F2)... | secundária (13/10) | ambitojuridico.com.br (URL exata não registrada)"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-009",
+   "tipo": "fato_sem_nivel",
+   "linha": 808,
+   "trecho": "consentimento prévio informado, consulta ao CGen (o conselho que gere esse patrimônio) ou nenhum por ora;",
+   "descricao": "O §8 oferece consulta ao CGen como caminho, sem nível; os artigos da Res. CGen 47/2025 e uma eventual consulta voluntária estão não conferido (C.3, linha 1718, L-08). 'Nenhum por ora' é decisão de Vicente, não liberação do Jurídico.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(consulta ao CGen|consulta voluntária).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa",
+    "saida": "808: ...consulta ao CGen (o conselho que gere esse patrimônio) ou nenhum por ora...; 1718: | L-08 | Res. CGen 47/2025: artigos e uma eventual consulta voluntária | não conferido |"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-010",
+   "tipo": "fato_sem_nivel",
+   "linha": 1707,
+   "trecho": "| L-04 | Res. IPHAN 1/2006, art. 4º, VII (anuência dos detentores) | secundária | https://www.legisweb.com.br/legislacao/?id=103301 | 15/10 |",
+   "descricao": "O C.3 diz secundária, 15/10; o C1 (lote-C1.json, linha 60) registra a URL como 'apareceu na busca, não aberta', e o indice.md não tem a URL. O nível não está acima do permitido, mas a leitura do inciso VII não está comprovada em registro algum; o §7 (linha 780) a dá como fato segundo fonte secundária.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(103301|4º, VII).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa; grep -n 103301 trilhas/2026-10-15_pesquisa/indice.md || true; grep -n -o -E \".{0,100}(103301).{0,100}\" trilhas/2026-10-16_conferencias/lote-C1.json",
+    "saida": "780 e 1707 (secundária, 15/10); indice.md: nenhuma linha com 103301; lote-C1.json linha 60: ...legisweb.com.br/legislacao/?id=103301 (apareceu na busca, não aberta)"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-011",
+   "tipo": "fato_sem_nivel",
+   "linha": 1724,
+   "trecho": "| L-13 | LGPD, art. 4º, I e II | oficial | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm | C1 |",
+   "descricao": "O C1 deixou o tachado do art. 4º, II, b não conferido; a linha 1724 marca o art. 4º, I e II inteiro como oficial, e o C.1 (linha 1656) afirma sem ressalva que nos acadêmicos aplicam-se os arts. 7º e 11.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "sed -n 1724,1725p 00_Fundacao_Cultura_Liquida.md (curador, 17/10)",
+    "saida": "1724: L-13 LGPD, art. 4º, I e II | oficial; 1725: L-13 art. 4º, II, b (tachado) | não conferido. Sobreposição parcial: a 1725 ressalva a alínea b, mas a 1724 diz 'I e II' inteiros; e a 1656 afirma sem ressalva."
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-012",
+   "tipo": "fato_sem_nivel",
+   "linha": 1771,
+   "trecho": "| F-08 | cron, atrasos e desativação após 60 dias; 2.000 min/mês em privado | oficial (13/10) | docs.github.com (URL exata não registrada) | 13/10 |",
+   "descricao": "Oficial sem URL exata no C.3: F-08 (1771) e F-09 (1774) 'oficial (13/10)' com URL exata não registrada. L-11 usa só a página inicial do STF (1654, 1721, secundária) e L-22 não tem URL (1742).",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -o -E \".{0,90}(URL exata não registrada|noticias\\.stf).{0,110}\" 00_Fundacao_Cultura_Liquida.md | filtro de faixa",
+    "saida": "1654, 1665, 1682, 1683, 1721, 1742, 1771 (F-08 oficial (13/10)), 1774 (F-09 oficial (13/10))"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "J-013",
+   "tipo": "outro",
+   "linha": 760,
+   "trecho": "Precondição:** o caminho na Lei 13.123 resolvido para o que se publica (§8). Sem ele, o modo de fazer das CLB com planta nativa ou fermento fica retido como Falta.",
+   "descricao": "O Passo 6 retém o modo de fazer como Falta sem o porquê (norma) nem o caminho na própria linha; só aponta para o §8 (D-025 pede os dois junto da barreira). Baixa gravidade: é remissão.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -F \"o caminho na Lei 13.123 resolvido\" 00_Fundacao_Cultura_Liquida.md",
+    "saida": "curador, 17/10: 760:- **Precondição:** o caminho na Lei 13.123 resolvido para o que se publica (§8)..."
+   },
+   "estado": "confirmado"
+  }
+ ],
+ "resumo": {
+  "sem_web": true,
+  "sem_divergencia_com_C1": [
+   "§5.4 l.479, 481, 483, 484, 485, 488 batem com o C1 e o C.3",
+   "Anexo C: L-04, L-06, L-07, L-08, L-17 batem com o C1 nos itens oficial e não conferido",
+   "Nenhuma frase do §5.4, §7, §8 ou Anexo C diz pode publicar ou liberado"
+  ]
+ }
+}
