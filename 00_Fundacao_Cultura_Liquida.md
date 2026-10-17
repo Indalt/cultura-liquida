@@ -7,7 +7,7 @@
 **Quem escreveu esta versão [VIGENTE]:** antes da v0.2, os agentes do projeto passaram a ficar em `.claude/`, com suas habilidades e seu harness (o conjunto de instruções, exemplos e verificações que envolve cada agente); são operados só pelo Claude Code, escreveram esta versão com logs em `trilhas/logs/`, e o caso-piloto continua no Passo 1 (D-029).
 
 **O que mudou da v0.1 para a v0.2:**
-1. As decisões de 15 e 16/10 entram pela essência confirmada por Vicente (D-015 a D-029, §9).
+1. As decisões de 15 a 17/10 entram pela essência confirmada por Vicente (D-015 a D-030, §9); a D-030 pede que os logs e o que o projeto publica digam o seu alcance, o que de fato se conseguiu olhar e o que ficou de fora, como a ciência preconiza.
 2. Governança no §0: legenda das referências Pn, acordo 6 (exemplos não limitam), "[PROPOSTA] não é plano" e registro de comentários pela essência.
 3. Rastrear deixa de ser "RSS criados por nós" e passa ao modelo monitoramento × escavação (§1, §5).
 4. A casa do projeto é o repositório público `Indalt/cultura-liquida` (§1, §5.1).
@@ -33,8 +33,8 @@
 - Anexo A — Índice P1–P97 (verbatim)
 - Anexo B — Mensagem de 13/10/2026 (verbatim)
 - Anexo C — Referências verificadas
-  - C.1 Leis e normas brasileiras (textos conferidos)
-  - C.2 Ferramentas e métodos (com as correções)
+  - C.1 Leis e normas brasileiras
+  - C.2 Ferramentas e métodos
   - C.3 Nível de verificação de cada referência
 - Anexo D — Trilha da análise (resumo)
 - Anexo E — Ambientes candidatos
@@ -93,9 +93,9 @@
 
 ## 2. Princípios [VIGENTE]
 
-Os princípios valem "de início" e são proporcionais: depois das coletas e verificações da fase 1, há uma revisão de essencialidade (jurídico, colaboração, organização), sem desprezar nenhuma obrigação legal, e toda barreira jurídica traz o porquê e um caminho de liberação assistido; o grafo 4D fica fora dessa revisão (D-025). Onde aparece *Na prática* [PROPOSTA], o princípio está decidido e o desenho ainda não. O modelo de dados está no §6; a trilha da análise, no Anexo D.
+Os princípios valem "de início" e são proporcionais: depois das coletas e verificações da fase 1, há uma revisão de essencialidade (jurídico, colaboração, organização), sem desprezar nenhuma obrigação legal, e toda barreira jurídica traz o porquê e um caminho de liberação assistido, porque o projeto é uma biblioteca informativa com proposições, não uma réplica da legislação; o grafo 4D fica fora dessa revisão (D-025). Onde aparece *Na prática* [PROPOSTA], o princípio está decidido e o desenho ainda não. O modelo de dados está no §6; a trilha da análise, no Anexo D.
 
-1. **Transparência e rastreabilidade** (P90–P93, P97; 13/10). Cada informação mostra de onde veio: o link ou, se não houver, o caminho percorrido (P97). Em 13/10, Vicente levantou a hipótese ("talvez") de que a falta de transparência do legado venha da IA, que entrega sem mostrar como.
+1. **Transparência e rastreabilidade** (P90–P93, P97; 13/10). Cada informação mostra de onde veio: o link ou, se não houver, o caminho percorrido (P97). O que o projeto publica diz o seu alcance junto do que afirma: o que de fato se olhou e o que ficou de fora, nunca tudo o que se conhece (D-030). Em 13/10, Vicente levantou a hipótese ("talvez") de que a falta de transparência do legado venha da IA, que entrega sem mostrar como.
    - *Na prática* [PROPOSTA]: trilha completa (busca → ambiente → resultado → documento → trecho literal → afirmação → ficha); localizador em toda fonte (página, URL, link permanente); relatórios com números calculados, nunca narrados.
    - *Custódia do texto da fonte* [PROPOSTA]: o repositório é público (D-021) e o texto de terceiros não entra no Git. Por isso o trecho literal é conferido **no momento da extração**, lendo o texto da fonte ou a sua cópia no Wayback (o arquivo público de páginas da web; Anexo C). No Git ficam só o trecho, um pedaço antes e outro depois, o localizador, o hash do texto lido (uma impressão digital que muda se o texto mudar) e a data. Detalhe no §6.
 
@@ -126,7 +126,7 @@ Os princípios valem "de início" e são proporcionais: depois das coletas e ver
 
 8. **Descritores processuais, não genéricos** (P3). Buscar pelo que se descreve (modo de fazer, insumo, recipiente, tempo, quem ensinou), para não buscar só o que já se conhece.
 
-9. **Fontes reais e verificáveis para tudo** (P90–P92). Vale para a busca, para o processamento e para o próprio auditor. Todo fato traz URL e nível: "oficial" só se a página oficial abriu; senão, "secundária" ou "não conferido". Nada de memória apresentada como conferido. Um fato que não se consegue conferir não para o trabalho: fica marcado e o trabalho segue. Proteções anti-robô (bloqueio, captcha, verificação de navegador) nunca se contornam.
+9. **Fontes reais e verificáveis para tudo** (P90–P92). Vale para a busca, para o processamento e para o próprio auditor. Todo fato traz URL e nível: "oficial" só se a página oficial abriu; senão, "secundária" ou "não conferido". Nada de memória apresentada como conferido. Um fato que não se consegue conferir não para o trabalho: fica marcado e o trabalho segue. Proteções anti-robô (bloqueio, captcha, verificação de navegador) nunca se contornam [PROPOSTA, a confirmar por Vicente; os agentes já seguem essa regra, que está no `AGENTS.md`; §5.2].
    - *Trecho conferido por script* [PROPOSTA]: a pergunta "o trecho está no texto?" tem resposta exata e é respondida por script em Python, não por IA; uma IA conferindo outra repete o que falhou no legado (P62). A conferência roda a cada envio ao GitHub. Uma transcrição feita por IA fica marcada como tal, com o link da imagem da página. Abaixo do limiar de semelhança, o trecho vira Falta ("não verificável por máquina") e vai para a cota humana, a curadoria de Vicente, de 1 a 3 h por semana, que nunca é teto de coleta (D-016); a separação entre lote de máquina e cota humana é [PROPOSTA].
    - A conferência mede a fidelidade da **nossa** leitura (o trecho diz o que afirmamos que ele diz?), não a verdade da prática. Os eixos de status estão no §6; o script, no Passo 2.
 
@@ -150,7 +150,7 @@ Os princípios valem "de início" e são proporcionais: depois das coletas e ver
 
 ## 3. Legado: o que existe e o que a análise aprendeu
 
-**Regra [VIGENTE] (D-024):** do legado, só entra no acervo o que for verificável e condizente com as regras novas. O resto **não se apaga**: fica como está, no Drive e em `legado/`, só leitura, o que concilia com o princípio 10 (quarentena não descarta). O site não é aproveitado. O processamento é o Passo 3, que trata o legado como mais um ambiente (§1, §7): o que ele traz passa pelas mesmas conferências de qualquer fonte.
+**Regra [VIGENTE] (D-024):** do legado, só entra no acervo o que for verificável e condizente com as regras novas. O resto **não se apaga**: fica como está, no Drive e em `legado/`, só leitura, o que concilia com o princípio 10 (quarentena não descarta). O site não é aproveitado. O processamento é o Passo 3 (§7). [PROPOSTA] Tratar o legado como mais um ambiente do Registro (§5.2), para que o que ele traz passe pelas mesmas conferências de qualquer fonte; a D-024 decide a regra de entrada e não fala em ambiente.
 
 ### 3.1 Onde está
 
@@ -360,7 +360,7 @@ Cada linha guarda o conceito nas palavras de Vicente (ou em síntese fiel), o lu
 
 ## 5. Arquitetura proposta [PROPOSTA]
 
-Mantém a complexidade conceitual e simplifica a infraestrutura: nenhum servidor próprio. A casa é o repositório (§5.1); o que é repetitivo roda como código, sem IA; o tratamento com IA roda em sessão na fase 1; o wiki é gerado a partir dos arquivos. O Google só entra se for necessário para os canais de pessoas (D-021; decisão no Passo 4). **Nada desta seção é criado agora:** não há rotina na nuvem nem GitHub Actions antes do Passo 4, e nada se publica antes do Passo 6.
+Mantém a complexidade conceitual e simplifica a infraestrutura: nenhum servidor próprio. A casa é o repositório (§5.1); o que é repetitivo roda como código, sem IA; o tratamento com IA roda em sessão na fase 1; o wiki é gerado a partir dos arquivos. O Google só entra se for necessário para os canais de pessoas (D-021; decisão no Passo 4). **Nada desta seção é criado agora:** não há rotina na nuvem nem GitHub Actions antes do Passo 4, e o wiki e o kit só se publicam a partir do Passo 6. O repositório, porém, já é público (D-021): até onde o que está no Git já é publicação é a Falta F-0003 (§5.4, §8).
 
 ```
 AMBIENTES (Registro + novos)                   PESSOAS (fase 2)
@@ -412,9 +412,9 @@ Laço vivo: termos e variantes novos ──► booleanos novos ──► Consult
 
 - **Ambiente** é o lugar onde se busca (§1): um acervo, uma hemeroteca, um periódico, um repositório de teses, um site, um conjunto de documentos oficiais [ABERTO: confirmar o sentido de "local (ambiente)" com Vicente].
 - [VIGENTE] O mapeamento é persistente e cumulativo, em arquivo próprio (P88), com pegadas e vácuos (P89).
-- [PROPOSTA] Um arquivo por ambiente, com estado (proposto → mapeando → minerando → exaurido → monitorando). Um ambiente descoberto durante o trabalho entra como "proposto". "Exaurido" vale por ambiente × Consulta × período; uma variante nova reabre o ambiente, mas o gatilho só marca "a reabrir", e a reabertura entra na fila por prioridade (§5.5).
+- [PROPOSTA] Um arquivo por ambiente, com dois eixos de estado, como no §6: escavação (proposto → mapeando → minerando → exaurido, sempre por Recorte) e monitoramento, que nunca se exaure. Um ambiente descoberto durante o trabalho entra como "proposto". "Exaurido" vale por ambiente × Consulta × período; uma variante nova reabre o ambiente, mas o gatilho só marca "a reabrir", e a reabertura entra na fila por prioridade (§5.5).
 - [PROPOSTA] **Matriz de Pegadas e Vácuos** (P89): gerada do registro de execuções, com todos os critérios menos o tempo, para que, ao voltar ao mesmo local e período, se pegue o que ainda não foi visto. Esses são **vácuos de busca**; não se confundem com os **vácuos de conhecimento** da matriz X×Y (§5.7).
-- [PROPOSTA] O legado é um ambiente do Registro (Passo 3; D-024); por isso o Passo 3 não bloqueia o Passo 4.
+- **Legado:** a regra de entrada é [VIGENTE] (D-024); tratá-lo como um ambiente do Registro (Passo 3) é [PROPOSTA], e por isso o Passo 3 não bloqueia o Passo 4, a exceção à ordem dos passos (§7).
 - **Ficha de acesso** [PROPOSTA]: cada ambiente ganha uma ficha testada e datada, conferida em cada lugar de execução (navegador, script local, GitHub, rotina do Claude). Ela registra a via permitida, a sintaxe de busca, o texto disponível (OCR, PDF ou nenhum), o padrão de link permanente, os termos de uso, o robots.txt (o arquivo em que cada site diz o que robôs podem ler), os limites de uso, o acesso (aberto, assinado ou físico) e a licença. Nenhuma rotina usa senha institucional de ninguém.
 - **Proteção contra robôs nunca é contornada** [PROPOSTA, a confirmar por Vicente; os agentes já a seguem]. Em 15/10, 8 de 20 sites históricos recusaram o leitor automático (erro HTTP 403, "acesso negado"), e o SIAN pediu captcha (plano, item 13). O que é barrado vira escavação por pessoa, pedido de acesso à instituição ou a Falta "fonte inacessível".
 - O catálogo dos ambientes candidatos, com via, sintaxe, termos, uso (monitoramento ou escavação) e nível de verificação, está no Anexo E; os textos conferidos, no Anexo C.
@@ -448,7 +448,7 @@ Canais diferentes, um só registro e um só fluxo:
 | Monitoramento e escavação | fase 1 | §5.3; gravam em `entrada/` |
 | Link ou documento trazido por Vicente | fase 1 | registro com localizador, pelo mesmo fluxo |
 | Formulário público | fase 2 | as 8 perguntas curtas, 500 caracteres e links (P53), mais consentimento, licença de quem contribui e escolha de atribuição (nome, pseudônimo, anônimo ou coletivo); limite de envios |
-| E-mail dedicado | aberto no Passo 4 (recebe também os Alertas do Google); contribuições só na fase 2 | um script salva a mensagem e os anexos na caixa; onde fica a conta, Passo 4 |
+| E-mail dedicado | fase 1, a partir do Passo 4: só recebe os Alertas do Google (§5.3); fase 2: contribuições de pessoas | um script salva a mensagem e os anexos na caixa; onde fica a conta, Passo 4 |
 | Envio de documentos e pasta de leitura por tier | fase 2 | em lugar com acesso controlado, decidido no Passo 4 (o Google só se for necessário; as opções do Drive conferidas estão no Anexo C) |
 | WhatsApp e áudios | — | [ADIADO] (P48) |
 
@@ -460,14 +460,14 @@ Toda Entrada recebe ID, canal, data, origem, consentimento (quando há pessoa) e
 |---|---|---|---|
 | Escrito publicado, de arquivo ou oficial | aberta | página, URL | trecho conferido por script, depois por pessoa |
 | Oralidade registrada por pesquisa (fala publicada em tese ou etnografia) | aberta | página | a fala de quem pratica fica separada da análise do pesquisador, que aparece como mediação |
-| Depoimento gravado em acervo | aberta | `t=início,fim` em segundos (W3C Media Fragments) + transcrição | termos do acervo; o áudio nunca é republicado: entra o link com marca de tempo |
-| Imagem ou foto | aberta | URL | sem licença, só o link |
+| Depoimento gravado em acervo | aberta | `t=início,fim` em segundos (W3C Media Fragments) + transcrição | só quando a fonte é legitimamente pública; termos do acervo; o áudio nunca é republicado: entra o link com marca de tempo |
+| Imagem ou foto | aberta | URL | só quando a fonte é legitimamente pública; sem licença, só o link |
 | Objeto ou recipiente | aberta | catálogo do acervo | descrição; foto só com licença |
 | Relato de contribuinte | fase 2 | ID da Entrada | quarentena + régua da P14 |
 | Entrevista feita pelo projeto | fechada | — | é áudio: reabrir a P48 é decisão de Vicente, assim como o enquadramento (§8, §10) |
 | Observação de campo | fechada | — | idem; em terra indígena, só com a FUNAI e a comunidade, e o projeto não faz esse trâmite sozinho |
 
-- **Voz no trecho:** cada Evidência registra quem fala (o autor, uma pessoa citada em fala direta, uma instituição, um anúncio). W se ancora na fala de quem pratica; a leitura do repórter, do médico ou do folclorista é a perspectiva da fonte; sem a fala de quem pratica, W fica como Falta (D-018). Se uma etnografia que descreve a prática como comum basta é pergunta do §10.
+- **Voz no trecho** [PROPOSTA]: cada Evidência registra quem fala (o autor, uma pessoa citada em fala direta, uma instituição, um anúncio). W se ancora na fala de quem pratica; a leitura do repórter, do médico ou do folclorista é a perspectiva da fonte; sem a fala de quem pratica, W fica como Falta. O desenho parte da D-018 (o que não foi captado é Falta), mas ancorar W na fala de quem pratica é proposta, não texto da decisão. Se uma etnografia que descreve a prática como comum basta é pergunta do §10.
 - **Papéis de pessoa** [PROPOSTA], como etiquetas simples: contribuinte; detentor ou mestre; quem ensinou (a cadeia de transmissão, P53); quem fala no trecho; mediador (pesquisador ou entrevistador); comunidade (coletivo e sujeito de direitos); colaborador do projeto. Cada papel define o que se registra, o consentimento e a forma de atribuição; no Git ficam só o código opaco e o papel. Colaboradores começam em dois níveis, anônimo e identificado; "de confiança" e "guardião indicado pela comunidade" só existem quando houver pessoa ou comunidade concreta. A declaração de interesse (ex.: quem vende a bebida) é um campo registrado, sem julgar nem excluir (P18; D-019).
 - **Cuidados** [PROPOSTA]: o pedido de retirada deixa o registro "havia uma fala retirada", sem o conteúdo; de crianças e adolescentes, nunca imagem, voz nem nome; do YouTube, guarda-se o ID público do vídeo, nunca o canal nem o @; se a fila passar de uma semana de trabalho de curadoria, nenhuma porta nova se abre.
 - **Portão único** [PROPOSTA]: nada entra em `acervo/` direto, nem pessoa, nem IA, nem script que produz conteúdo; a máquina grava em `entrada/`. Quem produz propõe por *pull request* (pedido de inclusão revisável no GitHub), o validador confere e quem propõe não aprova; o que sustenta aviso, saúde ou política exige segunda leitura (princípio 4; na fase 1, como no §5.1). Na fase 2: quem não usa GitHub manda pelo formulário e um curador faz a proposta; reserva de trabalho com prazo; mutirão de escavação, que respeita os termos de cada fonte e não serve para contorná-los; divergência de leitura posta lado a lado, nunca julgamento da prática; crédito na ficha e no "como citar", do jeito que a pessoa escolheu.
@@ -476,17 +476,17 @@ Toda Entrada recebe ID, canal, data, origem, consentimento (quando há pessoa) e
 
 | Degrau | O que ainda vale | O que começa |
 |---|---|---|
-| 1. Só Vicente pesquisa | cópia de pequenos trechos, em um só exemplar, para uso privado do copista e sem intuito de lucro (Lei 9.610, art. 46, II; oficial, https://www.planalto.gov.br/ccivil_03/leis/l9610.htm); a LGPD não se aplica a pessoa natural com fins exclusivamente particulares e não econômicos (art. 4º, I; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) | trilha e Faltas, como sempre |
+| 1. Só Vicente pesquisa | cópia de pequenos trechos, em um só exemplar, para uso privado do copista e sem intuito de lucro (Lei 9.610, art. 46, II; oficial, https://www.planalto.gov.br/ccivil_03/leis/l9610.htm); a LGPD não se aplica a pessoa natural com fins exclusivamente particulares e não econômicos (art. 4º, I; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm). Ressalva (Anexo C, L-13): um acervo público não cabe com folga no inciso I, e o art. 46, II não cobre o Git público, que tem muitas cópias e não é uso privado (Falta F-0003, abaixo) | trilha e Faltas, como sempre |
 | 2. Outras pessoas enviam (fase 2) | — | licença de quem contribui, em texto curto e simples (arts. 49 e 50 da Lei 9.610, a conferir); o projeto vira **controlador**, quem decide sobre os dados (LGPD, art. 5º, VI): base legal, aviso de privacidade, canal com o titular, segurança e registro das operações (arts. 7º, 18, 37 e 46, a conferir); triagem jurídica leve antes da quarentena; dado sensível (saúde, religião, origem étnica, comunidade tradicional) vira Falta até haver base legal (art. 11, a conferir) |
 | 3. O projeto publica | citação curta com autor e origem (art. 46, III; conferido em 15/10) | autorização para o resto (art. 29, a conferir); canal de notificação e retirada; imagem e voz só com autorização de quem aparece e de quem gravou (Código Civil, art. 20, a conferir), e o link só serve quando a fonte é legitimamente pública; Lei 13.123, se o trabalho configurar "acesso" |
 
-- **Repositório público e degraus:** com a D-021, o que entra no Git já é publicação aberta, e a obra oral também é protegida (Lei 9.610, art. 7º, II; oficial, C1). Até onde o conteúdo do Git já está no degrau 3 é **Falta aberta**, a cargo do Jurídico, e pergunta para Vicente (§8). Até lá, valem as regras de custódia do §5.1 e do princípio 1.
-- **Lei 13.123:** o cadastro no SisGen é declaratório e pode ser feito por pessoa natural (art. 2º, XII, e art. 12, I; Decreto 8.772, art. 22; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm), e vem antes da divulgação de resultados (art. 12, §2º; oficial). O patrimônio genético inclui espécies microbianas (art. 2º, I; oficial); aplicar isso a fermentos é interpretação, não texto de lei, e na dúvida fica Falta. Quem contribui nunca consente em nome de uma comunidade (art. 9º, §1º, a conferir). O caminho para desfazer essas Faltas é decisão de Vicente (§8): não bloqueia o início da fase 1, bloqueia o que se publica.
+- **Repositório público e degraus:** com a D-021, o que entra no Git já é publicação aberta, e a obra oral também é protegida (Lei 9.610, art. 7º, II; oficial, C1). Até onde o conteúdo do Git já está no degrau 3 é a **Falta F-0003** (`trilhas/2026-10-17_verificacao/falta-F-0003.json`, criada pelo Jurídico em 17/10). O porquê: a exceção do degrau 1 (art. 46, II) cobre um só exemplar para uso privado, e um Git público tem muitas cópias; a citação (art. 46, III) só vale na medida justificada, com autor e origem. O caminho: o guia de licença de texto, imagem e áudio de terceiros (Lei 9.610), a preparar pelo Jurídico (Passo 1); a decisão de lugar e visibilidade do que fica no repositório é de Vicente (D-021; §8). Nada fica liberado por essa Falta. Até lá, valem as regras de custódia do §5.1 e do princípio 1.
+- **Lei 13.123:** o cadastro no SisGen é declaratório e pode ser feito por pessoa natural (art. 2º, XII, e art. 12, I; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm; Decreto 8.772, art. 22; oficial, https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm), e vem antes da divulgação de resultados (art. 12, §2º; oficial). O patrimônio genético inclui espécies microbianas (art. 2º, I; oficial); aplicar isso a fermentos é interpretação, não texto de lei, e na dúvida fica Falta. Que quem contribui não consente em nome de uma comunidade é leitura a conferir, não texto de lei: o art. 9º da Lei 13.123 não foi conferido (Anexo C, C.3; Passo 4 ou Jurídico). O caminho para desfazer essas Faltas é decisão de Vicente (§8): não bloqueia o início da fase 1, bloqueia o que se publica.
 - **Simplificação possível:** pela Resolução CD/ANPD 2/2022 (oficial, conferida em 15/10), uma pessoa natural pode ser agente de tratamento de pequeno porte, salvo tratamento de alto risco (art. 3º; o art. 4º está a conferir), com dispensa do encarregado se houver canal de contato (art. 11) e prazo em dobro para atender o titular (art. 14).
-- **Conteúdo de terceiros:** o projeto que publica contribuições é, provavelmente, provedor de aplicação (Marco Civil, Lei 12.965/2014, art. 19, e decisão do STF de 26/06/2025, Temas 987 e 533; secundária, a tese literal está por ler), e por isso precisa de canal de notificação e retirada com prazo de resposta.
+- **Conteúdo de terceiros:** o projeto que publica contribuições é, provavelmente, provedor de aplicação (Marco Civil, Lei 12.965/2014, art. 19, não conferido, https://www2.camara.leg.br/legin/fed/lei/2014/lei-12965-23-abril-2014-778630-norma-pl.html; decisão do STF de 26/06/2025, Temas 987 e 533, secundária, https://noticias.stf.jus.br/postsnoticias/stf-define-parametros-para-responsabilizacao-de-plataformas-por-conteudos-de-terceiros/, e a tese literal está por ler; Anexo C, L-25), e por isso precisa de canal de notificação e retirada com prazo de resposta.
 - **Triagem jurídica leve** [PROPOSTA]: perguntas fixas (há licença registrada? aparece pessoa identificável? há dado pessoal? há possível conhecimento tradicional?); cada dúvida vira Falta, com o porquê e um caminho de liberação assistido (D-025). O Jurídico cria Faltas e nunca autoriza (D-020).
 - **Enquadramento:** se o projeto se apresenta como pesquisa ou como documentação cultural independente decide se a Res. CNS 510/2016 o alcança (oficial; Anexo C). É Falta aberta, a decidir por Vicente (§8).
-- **Licenças** [PROPOSTA; decisão de Vicente]: em camadas: textos e fichas do projeto; dados estruturados; trechos de terceiros, que mantêm a regra da própria fonte; e a restrição comunitária, que vale acima de todas. CC BY 4.0 permite copiar, adaptar e usar comercialmente, com crédito; CC BY-NC-SA 4.0 só permite uso não comercial, com as derivadas na mesma licença, e "não comercial" é vago (oficial, conferido em 15/10). As TK Labels, etiquetas da Local Contexts, só podem ser aplicadas por conta de comunidade e complementam as licenças Creative Commons, como mecanismos extra-legais (oficial, https://localcontexts.org/support/frequently-asked-questions/). Os princípios CARE de governança de dados indígenas complementam os princípios FAIR (oficial, https://www.gida-global.org/careprinciples); o enunciado de cada princípio não foi conferido. O crédito usa 3 ou 4 papéis inspirados no CRediT, que tem 14 (oficial, conferido em 15/10).
+- **Licenças** [PROPOSTA; decisão de Vicente]: em camadas: textos e fichas do projeto; dados estruturados; trechos de terceiros, que mantêm a regra da própria fonte; e a restrição comunitária, que vale acima de todas. CC BY 4.0 permite copiar, adaptar e usar comercialmente, com crédito; CC BY-NC-SA 4.0 só permite uso não comercial, com as derivadas na mesma licença, e "não comercial" é vago (oficial, conferido em 15/10). As TK Labels, etiquetas da Local Contexts, só podem ser aplicadas por conta de comunidade e complementam as licenças Creative Commons, como mecanismos extra-legais (oficial, https://localcontexts.org/support/frequently-asked-questions/). Os princípios CARE de governança de dados indígenas complementam os princípios FAIR (oficial, https://www.gida-global.org/careprinciples); o enunciado de cada princípio não foi conferido. O crédito usa 3 ou 4 papéis inspirados no CRediT, que tem 14 (oficial, conferido em 15/10, https://credit.niso.org/; Anexo C, F-22).
 - **Quem responde [VIGENTE]:** Vicente, pessoa natural (D-026). Outras formas (associação, Ponto de Cultura, parceria com universidade) só se revêem se o projeto ganhar uma organização (§8).
 - [PROPOSTA] Uma consulta pontual de 1 a 2 h com profissional de propriedade intelectual ou de proteção de dados antes do primeiro contribuinte externo, para validar a licença, o aviso de privacidade e a forma de quem responde; se ela acontece é decisão de Vicente (§8).
 
@@ -589,7 +589,7 @@ Esta seção lista as entidades (os tipos de registro) do sistema: o que cada um
 **Busca**
 - **Ambiente:** o lugar onde se busca (§5.2). Campos: id · nome · tipo (hemeroteca, periódico científico, repositório de teses, revista, jornal, blog, substack, rede social, documento oficial como RTID, RCID ou Diário Oficial, acervo pessoal, outro) · via e protocolo · ficha de acesso (§5.2) · pegadas e vácuos · **dois eixos de estado:** escavação (proposto → mapeando → minerando → exaurido, sempre por Recorte) e monitoramento, que nunca se exaure · última visita. Liga-se a Consultas, Recortes e Entradas.
 - **Consulta:** uma busca nomeada, independente do ambiente. Campos: id · tipo (termo, mista ou só descritores) · Termos e variantes de origem · descritores processuais (P3) · tradução para a sintaxe de cada Ambiente · rendimento (as descobertas que produziu). Nasce dos Termos (princípio 2).
-- **Recorte:** a unidade do trabalho de busca, Ambiente × Consulta × período × lugar de publicação × modo (termo, descritores ou folheio). Campos do arquivo de estado: cursor · total informado · total visto · saturação · erros · próxima ação · reserva (código opaco e prazo) · teto de chamadas e de divisões da janela · estado: "percorrido pela busca" (todas as ocorrências informadas abertas e triadas, sem resposta saturada, bola de neve fechada) ou "lido por inteiro" (só com folheio). A fonte que não informa o total nunca é dada como exaurida e leva a Falta "total desconhecido"; teto estourado leva a Falta "busca interrompida por teto". Reabrem o Recorte: variante nova, título novo, OCR refeito, novidade no canal da fonte, esquema ou validador novo, Falta resolvida. A cobertura mede o que a busca vê, não o que existe.
+- **Recorte:** a unidade do trabalho de busca, Ambiente × Consulta × período × lugar de publicação × modo (termo, descritores ou folheio). Campos do arquivo de estado: cursor · total informado · total visto · saturação · erros · próxima ação · reserva (código opaco e prazo) · teto de chamadas e de divisões da janela · estado: "percorrido pela busca" (todas as ocorrências informadas abertas e triadas, sem resposta saturada e, quando houver bola de neve, que é da fase 2 (§5.3), com ela fechada; na fase 1, sem bola de neve, bastam as duas primeiras condições) ou "lido por inteiro" (só com folheio). A fonte que não informa o total nunca é dada como exaurida e leva a Falta "total desconhecido"; teto estourado leva a Falta "busca interrompida por teto". Reabrem o Recorte: variante nova, título novo, OCR refeito, novidade no canal da fonte, esquema ou validador novo, Falta resolvida. A cobertura mede o que a busca vê, não o que existe.
 - **Execução:** o registro de cada rodada de agente, script ou pessoa (a trilha, acordo 4). Campos: agente ou script · habilidade · versão do harness · modelo · data · Recortes e Consultas usados · resultados · o que foi aceito, descartado ou posto em quarentena, e por quê · saídas · consumo. Os logs seguem `esquemas/log.schema.json`. A **Matriz de Pegadas e Vácuos** (P89) é gerada das Execuções (§5.2).
 
 **Entrada e fonte**
@@ -657,7 +657,7 @@ A ordem segue as dependências do sistema:
 9. como age (campo de ação, sob demanda);
 10. como se mantém (governança).
 
-Cada passo entrega algo verificável e só começa quando o anterior está pronto. As fases mudam só a ordem em que as partes de cada passo entram; o conceito fica inteiro.
+Cada passo entrega algo verificável e só começa quando o anterior está pronto, com uma exceção: o Passo 3 (legado) não bloqueia o Passo 4 (§5.2). As fases mudam só a ordem em que as partes de cada passo entram; o conceito fica inteiro.
 
 **Passo corrente:** Passo 1. O único bloqueio é a escolha do caso-piloto (§8).
 
@@ -668,7 +668,7 @@ Cada passo entrega algo verificável e só começa quando o anterior está pront
 - [PROPOSTA] **Fontes:** o caso-piloto, com 2 ou 3 fontes reais.
 - [PROPOSTA] **Máquina:** o validador; o GitHub Actions só para o validador e as buscas do piloto, a partir do Passo 4 (§5.5).
 - [PROPOSTA] **Ferramenta:** o kit de fonte primária para educadores (§5.9). **Lugar:** UF, município, localidade e bioma derivado (§5.7). **Admissão:** as portas escritas no §5.4; o relato de contribuinte espera a fase 2.
-- [PROPOSTA] **Jurídico** com regras fixas por script (Passo 1). **Legado** como ambiente (Passo 3, D-024).
+- [PROPOSTA] **Jurídico** com regras fixas por script (Passo 1). **Legado** como ambiente (Passo 3; a regra de entrada é a D-024).
 - **Dados em 4D desde o início** [PROPOSTA]: cada elemento de prática nasce com X, Y, Z e W (§5.7).
 
 **Fase 2, depois de medir as horas reais [PROPOSTA]:** contribuições externas e os degraus 2 e 3 do §5.4; rotina do Claude na nuvem, depois de um teste (§5.5); mutirão, bola de neve, relatório do funil, Wikidata e fichas de acesso das demais fontes (§5.2, §5.3); mapa, território e região cultural (§5.7); outros grupos e ferramentas (§5.9); exportações para SKOS, TBX e PROV, com os campos já compatíveis desde a fase 1 (§6).
@@ -678,7 +678,7 @@ Cada passo entrega algo verificável e só começa quando o anterior está pront
 2. as horas reais de 4 semanas couberam em 1 a 3 h;
 3. as decisões do degrau 2 do §5.4 (licença, aviso de privacidade, canal com o titular) estão tomadas.
 
-**Revisão de essencialidade [VIGENTE] (D-025):** depois das coletas e verificações da fase 1, as regras jurídicas, de colaboração e de organização são revistas, e fica só o essencial para a biblioteca existir. Nenhuma obrigação legal é desprezada, e cada barreira traz o porquê e o caminho assistido. O grafo 4D fica fora dessa revisão.
+**Revisão de essencialidade [VIGENTE] (D-025):** depois das coletas e verificações da fase 1, as regras jurídicas, de colaboração e de organização são revistas, e fica só o essencial para a biblioteca existir: uma biblioteca informativa com proposições, não uma réplica da legislação. Nenhuma obrigação legal é desprezada, e cada barreira traz o porquê e o caminho assistido. O grafo 4D fica fora dessa revisão.
 
 ### Passo 0 — Fundação e uma proteção urgente
 - **Estado:** feito e testado, segundo Vicente. Se o compartilhamento do Drive foi de fato revisto não foi conferido nesta execução (§3.4).
@@ -726,7 +726,7 @@ Cultura Líquida/
 - **Pronto quando:** uma ficha e uma Proposição de exemplo passam no validador, um exemplo com erro é reprovado, e o teste de reconstituição passa.
 
 ### Passo 3 — Legado como ambiente, com verificação
-- **Regra [VIGENTE] (D-024):** o legado é tratado como mais um ambiente. Só entra no acervo o que for verificável e condizente com as regras novas; o resto não se apaga e fica no Drive e em `legado/`, só leitura; o site não é aproveitado.
+- **Regra [VIGENTE] (D-024):** só entra no acervo o que for verificável e condizente com as regras novas; o resto não se apaga e fica no Drive e em `legado/`, só leitura; o site não é aproveitado. Tratar o legado como mais um ambiente é [PROPOSTA] (§5.2).
 - **Antes de começar:** o legado já está em `legado/` (§3.5): o Drive exportou os Docs em .docx, sem as planilhas com dados pessoais, que ficam no Drive; a conversão para texto é feita por script na Etapa A.
 - **Etapa A, por script e sem IA:** inventariar 100% do legado e reconciliar 45 verbetes × 69 bebidas; testar todos os links (abrem? há cópia arquivada?); separar os termos e as fontes citadas.
 - **Etapa B, com IA** [PROPOSTA]: verificar se o texto é sustentado pela fonte numa amostra sorteada, com semente registrada, dentro da cota de juízo (§11). O restante recebe o selo `NAO_VERIFICADO` até haver orçamento.
@@ -739,7 +739,7 @@ Cultura Líquida/
 ### Passo 4 — Ambientes, monitoramento e caixa de entrada
 - **Precondições:** antes de abrir qualquer canal de pessoas, os guias do Jurídico (Passo 1) e o termo de consentimento (LGPD) com licença de quem contribui e aviso de privacidade, que são os deveres do degrau 2 (§5.4); a política de cópias arquivadas (Lei 9.610) também passa pelo Jurídico.
 - **Fase 1:** Registro de Ambientes (do legado e de P74 e P75), fichas de acesso das fontes do caso-piloto e o monitoramento delas (§5.2, §5.3), na camada 1 do §5.5 (GitHub Actions, scripts, sem IA) [PROPOSTA]. Os termos do GitHub Actions pedem uma leitura que é decisão de Vicente (§8).
-- **Fase 2:** a caixa de entrada multicanal (formulário, e-mail, envio de documentos pelo grupo "colaboradores") e a camada 2, a rotina do Claude na nuvem (§5.5). Onde vivem os dados pessoais dos canais de pessoas é decisão de Vicente (§8).
+- **Fase 2:** a caixa de entrada multicanal (formulário, e-mail para contribuições, envio de documentos pelo grupo "colaboradores"; na fase 1, o e-mail aberto neste passo só recebe os Alertas do Google, §5.4) e a camada 2, a rotina do Claude na nuvem (§5.5). Onde vivem os dados pessoais dos canais de pessoas é decisão de Vicente (§8).
 - **Primeiro valor visível** [PROPOSTA]: um boletim semanal do que entrou, escrito pelo Redator. É o "RSS" da ideia original (P1), antes mesmo do wiki.
 - **Pronto quando:** por 7 dias seguidos chega a Vicente o relatório calculado do dia, e o registro mostra entradas novas com data, canal e origem; e, num teste, uma falha provocada gera aviso.
 - **Honra:** P1, P15, P26, P53, P57, P73–P75, P88–P89.
@@ -757,7 +757,7 @@ Cultura Líquida/
 - **Honra:** P13, P14, P22, P84–P94, P97.
 
 ### Passo 6 — Acervo e wiki público
-- **Precondição:** o caminho na Lei 13.123 resolvido para o que se publica (§8). Sem ele, o modo de fazer das CLB com planta nativa ou fermento fica retido como Falta. A licença do acervo também é decidida antes (§8).
+- **Precondição:** o caminho na Lei 13.123 resolvido para o que se publica (§8). Sem ele, o modo de fazer das CLB com planta nativa ou fermento fica retido como Falta, porque a lei manda cadastrar antes da divulgação de resultados (art. 12, §2º; oficial, C1), se o trabalho configurar acesso, o que é interpretação; o caminho (cadastro no SisGen, consentimento prévio informado ou outro) é decisão de Vicente (§8). A licença do acervo também é decidida antes (§8).
 - **O que se faz:** fichas CLB; glossário clicável (links escritos pelo Arquivista); camada Educação em cada ficha; fontes; "como citar"; definição dos tiers e entradas por grupo; publicação automática pelo GitHub Actions.
 - **Pronto quando:** o validador reprova toda frase **factual** de ficha sem marcação de Proposição; o site só publica fichas aprovadas; e uma mudança no acervo aparece no site sem intervenção manual.
 - **Honra:** P9, P11, P46, P61, P65, P66.
@@ -777,9 +777,9 @@ Cultura Líquida/
 
 ### Passo 9 — Campo de ação, sob demanda
 - **Salvaguarda e política:** dentro da moldura legal brasileira (Anexo C).
-  - O registro de um bem imaterial no IPHAN segue o Decreto 3.551/2000 e a Resolução IPHAN 001/2006. A anuência dos detentores consta do art. 4º, VII, da resolução segundo fonte secundária (Anexo C); conferir no texto oficial antes de qualquer dossiê.
+  - O registro de um bem imaterial no IPHAN segue o Decreto 3.551/2000 e a Resolução IPHAN 001/2006. Que a anuência dos detentores conste do art. 4º, VII, da resolução não foi conferido: só apareceu num resumo de busca, de página não aberta (Anexo C, C.3); conferir no texto oficial antes de qualquer dossiê.
   - O pedido de registro volta como **guia assistido** do Jurídico (Passo 1), com revisão de profissional habilitado.
-  - CLB que envolvem substâncias controladas (ex.: o vinho de jurema e a DMT, na Lista F2 da Portaria SVS/MS 344/1998) pedem análise jurídica própria antes de se publicar o modo de fazer. A Resolução CONAD 1/2010 trata da ayahuasca, não da jurema.
+  - CLB que envolvem substâncias controladas (ex.: o vinho de jurema e a DMT, na Lista F2 da Portaria SVS/MS 344/1998; secundária (13/10), a conferir) pedem análise jurídica própria antes de se publicar o modo de fazer. A Resolução CONAD 1/2010 trata da ayahuasca, não da jurema.
 - **Educação:** já está no wiki (Passo 6).
 - **Pedagogia:** na fase 1, o kit de fonte primária (§5.9); depois, o planejador de aulas por CLB ou por conjunto de CLB (D-006), com conteúdo vindo das fichas verificadas [PROPOSTA: alinhar à LDB, art. 26-A, e à BNCC; Anexo C].
 - **Tecnologia comunitária:** quando uma CLB causar problemas a quem a realiza, um aviso pedindo mais pesquisa, sem apagamento nem discriminação. [PENDENTE] Cartilha de biossegurança quando o risco já estiver verificado (§10, pergunta 13).
@@ -805,8 +805,9 @@ A execução não para para aprovar o que já foi decidido (D-028): para só dia
 | Decisão | O que está em jogo | Quando |
 |---|---|---|
 | **Caso-piloto:** qual CLB e quais as 2 ou 3 primeiras fontes reais | **único bloqueio** do próximo passo; decide os primeiros adaptadores e pesa na Lei 13.123 | Passo 1 |
-| **Caminho na Lei 13.123:** cadastro no SisGen (o sistema federal de cadastro de acesso ao patrimônio genético e ao conhecimento tradicional associado), consentimento prévio informado, consulta ao CGen (o conselho que gere esse patrimônio) ou nenhum por ora; e como o projeto se apresenta, o que decide se a Res. CNS 510/2016 o alcança | **bloqueia publicar** (o kit e o wiki), não o início da fase 1 (§5.4) | antes do Passo 6 |
-| **Repositório público e degraus:** até onde o conteúdo do Git já está no degrau 3 do §5.4 (publicação) | Falta aberta; a cargo do Jurídico e de Vicente; até lá, a custódia do §5.1 e o princípio 1 | Passo 1 |
+| **Caminho na Lei 13.123:** cadastro no SisGen (o sistema federal de cadastro de acesso ao patrimônio genético e ao conhecimento tradicional associado), consentimento prévio informado, consulta ao CGen (o conselho que gere esse patrimônio; os artigos da Res. CGen 47/2025 e uma eventual consulta voluntária: não conferido) ou nenhum por ora; e como o projeto se apresenta, o que decide se a Res. CNS 510/2016 o alcança | **bloqueia publicar** (o kit e o wiki), não o início da fase 1 (§5.4) | antes do Passo 6 |
+| **Repositório público e degraus:** até onde o conteúdo do Git já está no degrau 3 do §5.4 (publicação) | **Falta F-0003** (§5.4): um Git público não é uso privado (Lei 9.610, art. 46, II, não cobre) e a citação só vale na medida justificada (art. 46, III); caminho: guia de licença de texto, imagem e áudio, a preparar pelo Jurídico; o lugar e a visibilidade do que fica no repositório são decisão de Vicente (D-021); nada está liberado; até lá, a custódia do §5.1 e o princípio 1 | Passo 1 |
+| Modo de expor a ferramenta a quem lê [ABERTO] | pensar a partir do conteúdo produzido (caso-piloto, fichas), já que o site antigo não é aproveitado (D-024); começa por compreender (§10, pergunta 22) | depois do caso-piloto |
 | Unidade da ficha [ABERTO] | termo ou CLB situada; até lá, ligação muitos para muitos (§6; §10, pergunta 6) | Passo 1 |
 | Escala de valências e critério de `PENDENTE_JULGAMENTO` | funil qualificado (P85–P87) | Passo 1 (provisório) e Passo 5 |
 | Tamanho do lote e da cota de juízo | os "15" nunca são teto de coleta (D-016); a separação é [PROPOSTA] (§5.5) | Passos 4 e 5 |
@@ -861,6 +862,7 @@ A execução não para para aprovar o que já foi decidido (D-028): para só dia
 | D-027 | 16/10/2026 | O planejamento rodou em Opus 5.5 com esforço máximo, ultracode e thinking. A execução roda em Opus 5.5 com esforço médio, com harness e sem ultracode, e os subagentes em Sonnet 5.5 alto (sugestão apoiada em medições). Depois, os modelos por tarefa são escolhidos por teste: a v0.2 não fixa modelo-alvo. Harness qualificado |
 | D-028 | 16/10/2026 | A execução não para para aprovar o que já foi decidido |
 | D-029 | 16/10/2026 | Antes da v0.2, os agentes, suas habilidades e seus harness ficam na pasta do projeto, e a v0.2 é escrita por eles, com logs. Só o Claude Code opera os agentes (pasta `.claude/`, sem espelho `.agents/`). O caso-piloto continua no Passo 1 |
+| D-030 | 17/10/2026 | Os logs registram o alcance da ferramenta: o que de fato se olhou e o que ficou de fora. A ferramenta (cada agente ou script e também o projeto inteiro, diante de quem lê o acervo) fala só do que se conseguiu olhar, nunca de tudo o que se conhece, como a ciência preconiza |
 
 **Como as entradas antigas se leem hoje:** o legado somente leitura da D-001 foi resolvido pela D-024; o "primeiro trabalho" da D-002 foi feito antes da v0.2 (D-029); os "RSS criados por nós" da D-010 se leem pelo modelo monitoramento × escavação (§1); a D-012 está cumprida em parte enquanto o tratamento com IA não estiver agendado [PROPOSTA] (§5.5). O diário de cada sessão fica em `trilhas/`, não aqui.
 
@@ -891,6 +893,7 @@ Perguntas servem para compreender, nunca para escolher entre opções (acordo 1)
 19. *(nova)* Que pergunta de pesquisa você gostaria de responder olhando o grafo 4D? A resposta decide se a primeira vista entra já na fase 1 ou fica para o Passo 7 (§5.7).
 20. *(nova)* No princípio 4, o que sustenta decisão (política, saúde, ensino) exige fonte forte, e não há peso por tipo de fonte. O que faz uma fonte ser forte para você nesses casos?
 21. *(nova)* A entrevista feita pelo projeto é áudio e esbarra na P48 (D-009). O que você espera de uma entrevista própria, e em que momento ela faria sentido?
+22. *(nova)* Pensando no que o caso-piloto e as primeiras fichas vão produzir, e sabendo que o site antigo não é aproveitado (D-024), como você imagina que quem lê encontra e percorre esse conteúdo? O que essa pessoa precisa ver da própria ferramenta (o que se olhou e o que ficou de fora, D-030) para entender o que lê?
 
 ---
 
@@ -1651,9 +1654,9 @@ Este anexo reúne as leis, normas, ferramentas e métodos que o corpo cita com "
 | L-08 | Base de referência de CTA | Resolução CGen 47, de 4/6/2025 (DOU de 27/8/2025, Seção 1, págs. 107–108): cria a base de dados de referência do CGen, o conselho que gere o patrimônio genético, sobre conhecimentos tradicionais associados | https://www.gov.br/mma/pt-br/assuntos/bioeconomia/patrimonio-genetico/conselho-de-gestao-do-patrimonio-genetico-cgen-1/normas-do-cgen/Resoluo_CGen_n_47_de_04_06_2025_DOU_27_08_2025.pdf |
 | L-09 | Consulta livre, prévia e informada | Convenção 169 da OIT: promulgada pelo Decreto 5.051/2004, hoje consolidada no Anexo LXXII do Decreto 10.088/2019 | https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10088.htm |
 | L-10 | Territórios quilombolas | Decreto 4.887/2003. O Relatório Técnico de Identificação e Delimitação (RTID), com relatório antropológico, é regulado pela IN INCRA 57/2009 (nenhuma revogação localizada; a IN 128/2022 trata de etapas posteriores) | https://www.legisweb.com.br/legislacao/?id=78048 |
-| L-11 | Terras indígenas | Decreto 1.775/1996: procedimento de demarcação, com resumo do relatório da FUNAI publicado no Diário Oficial. Em dezembro de 2025, o STF (ADIs 7582, 7583 e 7586; ADC 87) declarou inconstitucional o marco temporal da Lei 14.701/2023; acórdão publicado em março de 2026 | https://noticias.stf.jus.br |
+| L-11 | Terras indígenas | Decreto 1.775/1996: procedimento de demarcação, com resumo do relatório da FUNAI publicado no Diário Oficial. Em dezembro de 2025, o STF (ADIs 7582, 7583 e 7586; ADC 87) declarou inconstitucional o marco temporal da Lei 14.701/2023; acórdão publicado em março de 2026 | https://noticias.stf.jus.br (só a página inicial; URL exata a registrar) |
 | L-12 | Pesquisa em terra indígena | FUNAI, IN nº 01, de 29/11/1995: ingresso em Terras Indígenas para pesquisa científica; listada entre os atos vigentes | https://www.gov.br/funai/pt-br/centrais-de-conteudo/publicacoes/atos-normativos/atos-normativos-vigentes |
-| L-13 | Dados pessoais (LGPD) | Lei 13.709/2018. Não se aplica a pessoa natural com fins exclusivamente particulares e não econômicos (art. 4º, I), nem a fins exclusivamente jornalísticos e artísticos ou acadêmicos (art. 4º, II; nos acadêmicos aplicam-se os arts. 7º e 11). Um acervo público não cabe com folga no inciso I. Origem racial ou étnica é dado pessoal sensível (art. 5º, II); o consentimento deve ser específico e destacado (art. 11, I). Controlador é quem decide sobre os dados (art. 5º, VI) | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm |
+| L-13 | Dados pessoais (LGPD) | Lei 13.709/2018. Não se aplica a pessoa natural com fins exclusivamente particulares e não econômicos (art. 4º, I), nem a fins exclusivamente jornalísticos e artísticos ou acadêmicos (art. 4º, II; nos acadêmicos aplicam-se os arts. 7º e 11; o tachado da alínea b do inciso II não foi conferido, C.3). Um acervo público não cabe com folga no inciso I, e o art. 46, II, da Lei 9.610 não cobre o Git público (§5.4, Falta F-0003). Origem racial ou étnica é dado pessoal sensível (art. 5º, II); o consentimento deve ser específico e destacado (art. 11, I). Controlador é quem decide sobre os dados (art. 5º, VI) | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm |
 | L-14 | Agente de pequeno porte | Resolução CD/ANPD 2/2022: pessoa natural pode ser agente de tratamento de pequeno porte (art. 2º, I), salvo tratamento de alto risco (art. 3º), com dispensa do encarregado se houver canal de contato (art. 11) e prazo em dobro para atender o titular (art. 14) | https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022 |
 | L-15 | Ética em pesquisa em Ciências Humanas e Sociais | Resolução CNS 510/2016: alcança pesquisa com dados obtidos diretamente dos participantes, informações identificáveis ou riscos maiores que os da vida cotidiana (art. 1º; o parágrafo único diz o que fica fora do sistema dos comitês de ética, CEP/CONEP); a definição de pesquisa inclui valores culturais e saberes (art. 2º, XVI); em comunidades tradicionais, a autorização do líder ou do coletivo não dispensa o consentimento individual (art. 13). Se alcança a CLB depende de como o projeto se apresenta (§8) | https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/legislacao/resolucoes/2016/resolucao-no-510.pdf |
 | L-16 | Pesquisa com povos indígenas | Resolução CNS 304/2000: exige a concordância da comunidade, por organizações indígenas ou conselhos locais, além do consentimento individual (item III.2.4). Sem cláusula de revogação nas partes lidas; diz-se complementar à Res. 196/96, substituída pela 466/2012 | https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/atos-normativos/resolucoes/2000/resolucao-no-304.pdf |
@@ -1665,6 +1668,7 @@ Este anexo reúne as leis, normas, ferramentas e métodos que o corpo cita com "
 | L-22 | Substâncias controladas | DMT na Lista F2 (uso proscrito) da Portaria SVS/MS 344/1998; também é droga para fins da Lei 11.343/2006. A Resolução CONAD 1, de 25/1/2010, trata do uso religioso da ayahuasca, não da jurema; aplicá-la ao vinho de jurema exige análise própria | ambitojuridico.com.br (artigo sobre ayahuasca e a Portaria 344; URL exata não registrada em 13/10) |
 | L-23 | Ortografia (variantes de busca) | Lei 5.765/1971: altera a ortografia de 1943 (trema em certos hiatos átonos, circunflexo diferencial, acentos em advérbios em -mente). Acordo de 1990 promulgado pelo Decreto 6.583/2008, com transição estendida pelo Decreto 7.875/2012 até 31/12/2015 (a obrigatoriedade em 1/1/2016 é dedução). O Formulário Ortográfico de 1943 eliminou th, ph, rh, y e as consoantes dobradas, salvo rr e ss. Antes de 1943, a reforma portuguesa de 1911 não valeu automaticamente no Brasil, o Acordo de 1931 não foi posto em prática e o de 1945 não foi ratificado pelo Brasil | https://legis.senado.leg.br/norma/547641/publicacao/15828548 ; https://www2.camara.leg.br/legin/fed/decret/2012/decreto-7875-27-dezembro-2012-774846-norma-pe.html |
 | L-24 | Projetos de lei sobre bebidas como patrimônio | Autógrafo do PL 169/2023 de SC, que declara a Cachaça com Butiá Patrimônio Cultural Imaterial do estado (assinado em 4/7/2024; sanção e número da lei não achados). Há projetos semelhantes no CE (PL 543/2023), no TO (2023) e na PB (PL 1.296/2013), sem aprovação confirmada. Projeto e autógrafo entram como vestígio com estado e só viram "lei" com a publicação no diário oficial achada | https://portalelegis.alesc.sc.gov.br/documentos/Np0Ag ; https://www2.al.ce.gov.br/legislativo/legislacao5/leis2023/pl5432023.pdf |
+| L-25 | Conteúdo de terceiros (Marco Civil e STF) | Lei 12.965/2014 (Marco Civil da Internet), art. 19, citado no §5.4 para a responsabilidade de quem publica conteúdo de terceiros; o texto do artigo não foi conferido. Decisão do STF de 26/06/2025 (Temas 987 e 533) que define parâmetros dessa responsabilidade, conhecida só por notícia do próprio STF; a tese literal está por ler | https://www2.camara.leg.br/legin/fed/lei/2014/lei-12965-23-abril-2014-778630-norma-pl.html ; https://noticias.stf.jus.br/postsnoticias/stf-define-parametros-para-responsabilizacao-de-plataformas-por-conteudos-de-terceiros/ |
 
 ### C.2 Ferramentas e métodos
 
@@ -1693,6 +1697,7 @@ As correções da conferência de 15/10 (Google, OpenAlex, termos do GitHub Acti
 | F-19 | Flora e Funga do Brasil | Dados em Darwin Core Archive (um formato padrão de dados de biodiversidade), atualizados semanalmente, com uma coluna "origin" no pacote R florabr; os valores dessa coluna, o termo Darwin Core e a existência de API não foram vistos; o IPT do Jardim Botânico do Rio de Janeiro deu 403 | https://cran.csiro.au/web/packages/florabr/vignettes/getting_started.html ; https://ipt.jbrj.gov.br/jbrj/resource?r=lista_especies_flora_brasil |
 | F-20 | Geodados da FUNAI | Terras indígenas por WFS (um serviço padrão de mapas para baixar camadas), com shapefile, KML, CSV e XLSX, atualizados mensalmente. O rodapé do site declara CC BY-ND 3.0, que proíbe obra derivada: guarda-se só a referência, o trecho e o link, e as malhas só entram com a licença confirmada por escrito (§5.7) | https://www.gov.br/funai/pt-br/atuacao/terras-indigenas/geoprocessamento-e-mapas ; https://data.inpe.br/geonetwork/srv/api/records/9f2b8d5a-0a65-4441-b217-8b632c82ebd5 |
 | F-21 | Feeds a testar | Substack publica em `/feed` (publicações podem desativar; posts pagos vêm truncados). A testar com requisição direta antes de depender: OAI-PMH da BDTD e link permanente da Hemeroteca Digital (o padrão de link está no Anexo E) | bdtd.ibict.br ; hemerotecadigital.bn.gov.br |
+| F-22 | CRediT | Taxonomia de papéis de quem contribui para um trabalho, com 14 papéis; o projeto usa 3 ou 4 inspirados nela (§5.4) | https://credit.niso.org/ |
 
 ### C.3 Nível de verificação de cada referência
 
@@ -1704,11 +1709,12 @@ Uma linha por parte de item. "Onde" diz a rodada: 13/10 (v0.1), 15/10 (pesquisa;
 | L-02 | Decreto 5.753/2006, arts. 2 e 13 | oficial | https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/decreto/d5753.htm | 15/10 |
 | L-03 | Decreto 3.551/2000 | oficial | https://www.planalto.gov.br/ccivil_03/decreto/d3551.htm | 15/10 |
 | L-04 | Res. IPHAN 1/2006: existência, título, link e ausência de indicação de revogação na página do IPHAN | oficial | https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial/legislacoes-e-documentos-de-referencia/resolucao_001_de_3_de_agosto_de_2006-1.pdf/@@display-file/file | C1 |
-| L-04 | Res. IPHAN 1/2006, art. 4º, VII (anuência dos detentores) | secundária | https://www.legisweb.com.br/legislacao/?id=103301 | 15/10 |
+| L-04 | Res. IPHAN 1/2006, art. 4º, VII (anuência dos detentores) | não conferido no texto (só citada em resumo de busca; o C1 registra a URL como "apareceu na busca, não aberta") | https://www.legisweb.com.br/legislacao/?id=103301 | 15/10; C1; conferir pelo Jurídico antes de qualquer dossiê (Passo 9) |
 | L-04 | Res. IPHAN 1/2006: texto dos arts. 2º a 4º no PDF oficial e checagem no DOU | não conferido | (o PDF acima) | C1; conferir pelo Jurídico antes de qualquer dossiê (Passo 9, guias assistidos) |
 | L-04 | Portaria IPHAN 200/2016 (PNPI) | secundária (13/10) | gov.br/iphan (ata da 93ª reunião do Conselho Consultivo, 13/6/2019) | 13/10; reconferir no Passo 4 |
 | L-05 | Decreto 6.040/2007, art. 3º, I | oficial | https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6040.htm | 15/10 |
-| L-06 | Lei 13.123/2015, arts. 1º, 2º, 4º, 8º, 9º, 10 e 12 | oficial | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm | 15/10 |
+| L-06 | Lei 13.123/2015, arts. 1º, 2º, 4º, 8º, 10 e 12 | oficial | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm | 15/10 |
+| L-06 | Lei 13.123/2015, art. 9º (consentimento para o conhecimento tradicional associado; a leitura de que quem contribui não consente em nome de uma comunidade) | não conferido (o C1 não o leu) | (a mesma) | C1; Passo 4 ou Jurídico |
 | L-06 | art. 2º, I ("microbianas"), VIII e XII; art. 12, I e §2º | oficial | (a mesma) | C1 |
 | L-06 | aplicar "microbianas" a fermentos e microbiota | não conferido (é interpretação, não texto de lei) | — | C1; Falta do Jurídico, resolvida no caminho da Lei 13.123 (§8), antes do Passo 6 |
 | L-07 | Decreto 8.772/2016, arts. 12 e 13 | oficial | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8772.htm | 15/10 |
@@ -1718,10 +1724,10 @@ Uma linha por parte de item. "Onde" diz a rodada: 13/10 (v0.1), 15/10 (pesquisa;
 | L-08 | Res. CGen 47/2025: artigos e uma eventual consulta voluntária | não conferido | (a mesma) | C1; no guia do SisGen (Passo 1) |
 | L-09 | Convenção 169 da OIT e Decreto 10.088/2019 | secundária (13/10) | https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10088.htm | 13/10; reconferir no Passo 4 |
 | L-10 | Decreto 4.887/2003 e IN INCRA 57/2009 | secundária (13/10) | https://www.legisweb.com.br/legislacao/?id=78048 | 13/10; conferir no portal do INCRA no Passo 4 |
-| L-11 | Decreto 1.775/1996 e decisão do STF sobre o marco temporal | secundária (13/10) | https://noticias.stf.jus.br | 13/10 |
+| L-11 | Decreto 1.775/1996 e decisão do STF sobre o marco temporal | secundária (13/10) | https://noticias.stf.jus.br (só a página inicial; URL exata a registrar) | 13/10 |
 | L-11 | embargos ao acórdão do STF | não conferido | — | 13/10; Passo 4 |
 | L-12 | FUNAI, IN nº 01/1995, listada como vigente | oficial | https://www.gov.br/funai/pt-br/centrais-de-conteudo/publicacoes/atos-normativos/atos-normativos-vigentes | 15/10 |
-| L-13 | LGPD, art. 4º, I e II | oficial | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm | C1 |
+| L-13 | LGPD, art. 4º, I, e art. 4º, II, salvo o tachado da alínea b (linha abaixo) | oficial | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm | C1 |
 | L-13 | LGPD, art. 4º, II, b: tachado da redação anterior (MP 869) | não conferido (falta conferência visual) | (a mesma) | C1; Passo 4 |
 | L-13 | LGPD, arts. 5º, II, e 11, I | secundária (13/10) | (a mesma) | 13/10; Passo 4 |
 | L-13 | LGPD, arts. 5º, VI, 7º, 18, 37 e 46 (deveres do controlador) | não conferido | (a mesma) | §5.4; antes do degrau 2 (Passo 4) |
@@ -1739,7 +1745,7 @@ Uma linha por parte de item. "Onde" diz a rodada: 13/10 (v0.1), 15/10 (pesquisa;
 | L-20 | BNCC: ausência de base oficial aberta e o projeto bncc.dev | secundária | https://github.com/bncc-dev | 15/10 |
 | L-21 | Lei 8.918/1994 | secundária (13/10) | https://www.planalto.gov.br/ccivil_03/leis/l8918.htm | 13/10; Passo 4 |
 | L-21 | vigência do Decreto 6.871/2009 | não conferido | — | 13/10; no MAPA, Passo 4 |
-| L-22 | Portaria SVS/MS 344/1998 (Lista F2), Lei 11.343/2006 e Res. CONAD 1/2010 | secundária (13/10) | ambitojuridico.com.br (URL exata não registrada) | 13/10; texto oficial pelo Jurídico antes de publicar qualquer modo de fazer (Passo 6) |
+| L-22 | Portaria SVS/MS 344/1998 (Lista F2), Lei 11.343/2006 e Res. CONAD 1/2010 | secundária (13/10), a conferir | ambitojuridico.com.br (URL exata a registrar) | 13/10; texto oficial pelo Jurídico antes de publicar qualquer modo de fazer (Passo 6) |
 | L-23 | Lei 5.765/1971 | oficial | https://legis.senado.leg.br/norma/547641/publicacao/15828548 | 15/10 |
 | L-23 | Decretos 6.583/2008 e 7.875/2012 (a data de 1/1/2016 é dedução) | oficial | https://www2.camara.leg.br/legin/fed/decret/2012/decreto-7875-27-dezembro-2012-774846-norma-pe.html | 15/10 |
 | L-23 | Formulário Ortográfico de 1943 | secundária | https://www.correiobraziliense.com.br/cbradar/por-que-pharmacia-era-escrito-com-ph-historia/ | 15/10 |
@@ -1747,6 +1753,9 @@ Uma linha por parte de item. "Onde" diz a rodada: 13/10 (v0.1), 15/10 (pesquisa;
 | L-24 | autógrafo do PL 169/2023 de SC | oficial | https://portalelegis.alesc.sc.gov.br/documentos/Np0Ag | lote A |
 | L-24 | sanção e número da lei de SC | não conferido | — | lote A; Passo 4 |
 | L-24 | projetos do CE, do TO e da PB | secundária (só resumo de busca) | https://www2.al.ce.gov.br/legislativo/legislacao5/leis2023/pl5432023.pdf | lote A |
+| L-25 | Marco Civil (Lei 12.965/2014), art. 19 | não conferido | https://www2.camara.leg.br/legin/fed/lei/2014/lei-12965-23-abril-2014-778630-norma-pl.html | 15/10 (`indice.md`); pelo Jurídico, antes do degrau 3 (Passo 4) |
+| L-25 | decisão do STF de 26/06/2025 (Temas 987 e 533) | secundária (a tese literal está por ler) | https://noticias.stf.jus.br/postsnoticias/stf-define-parametros-para-responsabilizacao-de-plataformas-por-conteudos-de-terceiros/ | 15/10 (`indice.md`); pelo Jurídico, antes do degrau 3 (Passo 4) |
+| F-22 | CRediT: 14 papéis | oficial | https://credit.niso.org/ | 15/10 (`indice.md`); linha fora da ordem dos códigos, posta aqui junto das outras acrescentadas em 17/10 |
 | F-01 | Agent Skills e caminhos do Claude Code | oficial | https://agentskills.io/home ; https://code.claude.com/docs/en/skills ; https://code.claude.com/docs/en/sub-agents | 13/10 |
 | F-01 | caminhos do Antigravity (sem uso, D-029) | oficial | antigravity.google/docs/rules ; antigravity.google/docs/skills | 13/10 |
 | F-02 | rotinas do Claude Code: rede, modelo, consumo, limites, estado | oficial | https://code.claude.com/docs/en/routines | C2 |
@@ -1768,10 +1777,10 @@ Uma linha por parte de item. "Onde" diz a rodada: 13/10 (v0.1), 15/10 (pesquisa;
 | F-07 | Research API do TikTok no Brasil | oficial | https://developers.tiktok.com/products/research-api/ | 15/10; lote A |
 | F-07 | API e Termos do YouTube (100 buscas, 30 dias, legendas, robots.txt) | oficial | https://developers.google.com/youtube/terms/developer-policies ; https://developers.google.com/youtube/v3/determine_quota_cost ; https://developers.google.com/youtube/v3/docs/captions/download ; https://www.youtube.com/t/terms?hl=pt-BR&gl=BR | 15/10; lote A (corrige os 30 dias) |
 | F-08 | termos do GitHub Actions | oficial | https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features | 15/10; lote A |
-| F-08 | cron, atrasos e desativação após 60 dias; 2.000 min/mês em privado | oficial (13/10) | docs.github.com (URL exata não registrada) | 13/10 |
+| F-08 | cron, atrasos e desativação após 60 dias; 2.000 min/mês em privado | oficial (13/10), URL exata a registrar | docs.github.com (URL exata a registrar) | 13/10 |
 | F-08 | minutos grátis em repositório público | não conferido | — | Passo 4 |
 | F-08 | Flat Data, do GitHub Next | não conferido | — | Passo 4, se Vicente aceitar a leitura dos termos |
-| F-09 | Pages no plano Free exige repositório público | oficial (13/10) | docs.github.com (URL exata não registrada) | 13/10; a hospedagem é do Passo 6 |
+| F-09 | Pages no plano Free exige repositório público | oficial (13/10), URL exata a registrar | docs.github.com (URL exata a registrar) | 13/10; a hospedagem é do Passo 6 |
 | F-09 | proteção de ramo com revisão no plano gratuito só em repositório público | oficial | https://github.com/pricing | 15/10 |
 | F-10 | Save Page Now e Wayback: captura sob demanda | oficial (13/10) | https://help.archive.org/help/save-pages-in-the-wayback-machine/ | 13/10 |
 | F-10 | SPN2: autenticação, uso anônimo e limites | secundária | https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic | C2 (em 15/10, não conferido) |
