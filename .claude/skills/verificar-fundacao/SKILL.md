@@ -1,6 +1,6 @@
 ---
 name: verificar-fundacao
-description: Verifica a Fundação do projeto Cultura Líquida (00_Fundacao_Cultura_Liquida.md) de forma mecânica e independente, um olhar por passada (mecânico; decisões D-015 a D-029; contradições; nível dos fatos e termos explicados), e entrega achados confirmados por grep ou script no formato de esquemas/achado-verificacao.schema.json. Use depois de cada grupo de seções escrito pelo redator.
+description: Verifica a Fundação do projeto Cultura Líquida (00_Fundacao_Cultura_Liquida.md) de forma mecânica e independente, um olhar por passada (mecânico; decisões D-015 a D-030; contradições; nível dos fatos e termos explicados), e entrega achados confirmados por grep ou script no formato de esquemas/achado-verificacao.schema.json. Use depois de cada grupo de seções escrito pelo redator.
 ---
 
 # verificar-fundacao
@@ -20,10 +20,10 @@ Quem produz não confere. Achar o que se perdeu ou se contradiz na Fundação, c
 
 ## Passos (um olhar por passada)
 1. **Mecânico (sempre primeiro):**
-   - `python scripts/checar_fundacao.py --essencias .claude/skills/escrever-secao-fundacao/referencias/essencias.json --falas .claude/skills/escrever-secao-fundacao/referencias/falas.json --saida <relatorio.json>` (marcadores, "Versão 0.2", D-015 a D-029, legenda das P-refs, Anexos D e E, C.3, entidades do §6, termos-chave de cada essência, transcrição no lugar da essência);
+   - `python scripts/checar_fundacao.py --essencias .claude/skills/escrever-secao-fundacao/referencias/essencias.json --falas .claude/skills/escrever-secao-fundacao/referencias/falas.json --saida <relatorio.json>` (marcadores, "Versão 0.2", D-015 a D-030, legenda das P-refs, Anexos D e E, C.3, entidades do §6, termos-chave de cada essência, transcrição no lugar da essência);
    - `python scripts/comparar_anexos.py` (Anexos A e B idênticos ao commit `e868a98`);
    - `python scripts/procurar_dado_pessoal.py 00_Fundacao_Cultura_Liquida.md`.
-2. **(a) Decisões:** para cada D-015 a D-029, `grep -n "D-0nn"` e leia só a linha e as continuações; compare o **sentido** com a essência em `referencias/essencias.json` da habilidade `escrever-secao-fundacao`. Termo-chave presente não basta: o sentido não pode se inverter.
+2. **(a) Decisões:** para cada D-015 a D-030, `grep -n "D-0nn"` e leia só a linha e as continuações; compare o **sentido** com a essência em `referencias/essencias.json` da habilidade `escrever-secao-fundacao`. Termo-chave presente não basta: o sentido não pode se inverter.
 3. **(b) Contradições:** para cada afirmação forte do grupo, `grep -n` pelos termos dela no resto do arquivo; duas linhas que dizem o contrário viram achado com as duas linhas citadas.
 4. **(c) Nível e termos:** fato novo sem URL e nível; termo técnico sem explicação na primeira vez que aparece (`grep -n` pela primeira ocorrência).
 5. Para cada suspeita, rode o comando que a confirma e copie a saída. Sem confirmação → `nao_confirmado`.

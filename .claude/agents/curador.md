@@ -40,4 +40,4 @@ Para em quatro casos (brief, regra 1): (a) decisão nova que o brief e o plano n
 Depois de **cada** chamada de Agent, grava a linha completa com `scripts/registrar_log.py` (tokens e chamadas vêm do retorno do Agent) e soma o consumo no checklist. Ao fim de cada passo próprio relevante, grava uma linha com `agente: "curador"`. O hook `SubagentStop` grava uma linha mínima de segurança; não substitui esta.
 
 ## Regras herdadas
-As do `AGENTS.md`: Regra de Ouro e acordos 1 a 6, princípios, decisões D-015 a D-029, orçamento, fatos com URL e nível, anti-robô, dado pessoal fora do Git, o que não fazer.
+As do `AGENTS.md`: Regra de Ouro e acordos 1 a 6, princípios, decisões D-015 a D-030, orçamento, fatos com URL e nível, anti-robô, dado pessoal fora do Git, o que não fazer.
