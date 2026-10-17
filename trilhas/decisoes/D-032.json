@@ -1,0 +1,14 @@
+{
+  "id": "D-032",
+  "data": "2026-10-17",
+  "essencia": "O caso-piloto é realista, mas é teste: tudo o que foi desenvolvido é usado por completo, em cada conversa de trabalho e em cada rotina automática. As rotinas servem para encontrar CLB, todas, e não para trabalhar numa só; o piloto leva uma CLB de ponta a ponta. Piloto não é publicação: não se problematiza agora o que só vale para publicar.",
+  "diretriz": "O brief de execuções põe em uso, de ponta a ponta, os agentes, as habilidades, o harness, os esquemas, os scripts e os logs: as conversas de trabalho levam a cajuína do bruto à ficha; as rotinas automáticas rodam de verdade e procuram CLB em geral. O que só importa para publicar (Lei 13.123 para o que se publica, F-0003) fica para quando a publicação for decidida, sem bloquear o piloto.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-17",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seções 'Depois do fechamento (17/10/2026)' (comentário seguinte e resposta de 17/10)",
+  "palavras_conferidas": [
+    {"palavra": "cada programação automática", "sentido_confirmado": "as rotinas rodam de verdade e servem para encontrar CLB em geral, não só a do piloto"},
+    {"palavra": "tudo da ferramenta", "sentido_confirmado": "todo o desenvolvido é usado; piloto não é publicação, e o que só vale para publicar não se problematiza agora"}
+  ],
+  "marcador": "VIGENTE"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "D-031",
+  "data": "2026-10-17",
+  "essencia": "O caso-piloto do Passo 1 é a cajuína. O trabalho começa pelo caju, o insumo.",
+  "diretriz": "A CLB do caso-piloto é a cajuína, levada do bruto à ficha; o insumo caju é a porta de entrada das buscas do piloto. As outras CLB que aparecerem entram pelo fluxo normal das rotinas, que encontram CLB em geral (D-032), e não pelo piloto.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-17",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seção 'Depois do fechamento (17/10/2026): escolha do caso-piloto'",
+  "palavras_conferidas": [
+    {"palavra": "primeiro com o caju", "sentido_confirmado": "o caju é o insumo de partida; a CLB do piloto é a cajuína ('o piloto que você pediu foi indicado como piloto'); as outras bebidas de caju são achadas pelas rotinas, que procuram CLB em geral"}
+  ],
+  "marcador": "VIGENTE"
+}

@@ -56,6 +56,8 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 - **D-028:** a execução não para para aprovar o que já foi decidido.
 - **D-029:** os agentes, habilidades e harness ficam em `.claude/` antes da v0.2, que é escrita por eles, com logs; só o Claude Code os opera; o caso-piloto continua no Passo 1.
 - **D-030:** os logs registram o **alcance** da ferramenta: o que se olhou e o que ficou fora; cada agente e o projeto inteiro falam só do que se conseguiu olhar, nunca de tudo o que se conhece, como a ciência preconiza.
+- **D-031:** o caso-piloto é a cajuína; o trabalho começa pelo caju, o insumo.
+- **D-032:** o piloto é teste da ferramenta inteira: tudo o que foi desenvolvido é usado por completo em cada conversa de trabalho e em cada rotina; as rotinas encontram CLB em geral; piloto não é publicação.
 
 ## Passo corrente
 - **Feito:** Blocos 1, 2, 2.5, 3 e 4: a Fundação v0.2 está completa e verificada (auditor em três passadas e juridico; 35 achados corrigidos).
