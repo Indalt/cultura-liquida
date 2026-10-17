@@ -1,0 +1,181 @@
+{
+ "resumo": "O GitHub não impede o piloto nem as rotinas de busca (scripts Python sem IA) em repositório público: os minutos nos executores padrão são gratuitos, o job pode durar até 6 h e o cron aceita 5 min. O que existe é uma incerteza nos termos do Actions e uma restrição que já era do projeto. Os termos do Actions limitam as máquinas hospedadas a atividades ligadas à produção, ao teste, à implantação ou à publicação 'do projeto de software', e proíbem usá-las como parte de aplicação 'serverless'. Coleta agendada em fontes de terceiros pode ou não caber nessa leitura; só o GitHub poderia dizer. Dado de trabalho que não pode ser público (pessoas, consentimentos, conteúdo restrito) não cabe no repositório público por regra do projeto (Fundação §5.1), não por limite técnico do GitHub; esse lugar já é um item em aberto do Passo 4. O tratamento com IA roda na rotina do Claude Code (Anthropic), não no GitHub, então o GitHub não o impede. Das alternativas conferidas, a que mais se aproxima do 'potencial pretendido' sem exigir reescrita é uma máquina virtual pequena (Oracle Always Free) e a que exige menos manutenção é o armazenamento de objetos da Cloudflare (R2) com cron. Nenhuma precisa existir antes do Passo 4: no piloto, os mesmos scripts podem rodar à mão ou no Actions.",
+ "github": [
+  {
+   "afirmacao": "Actions é gratuito em repositório público com executores padrão (um 'runner' é a máquina que executa o fluxo). O texto não diz 'ilimitado'. Em repositório privado, o plano Free inclui 2.000 min/mês e o Pro 3.000. Isso fecha a pendência de 'minutos grátis em repositório público' da Fundação §5.5.",
+   "url": "https://docs.github.com/en/billing/managing-billing-for-your-products/about-billing-for-github-actions",
+   "citacao": "GitHub Actions usage is free for self-hosted runners and for public repositories that use standard GitHub-hosted runners.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Armazenamento: artefatos 500 MB (Free) ou 1 GB (Pro), compartilhados com o GitHub Packages; cache de 10 GB por repositório.",
+   "url": "https://docs.github.com/en/billing/managing-billing-for-your-products/about-billing-for-github-actions",
+   "citacao": "Actions cache storage is a separate allowance of 10 GB per repository.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Cron ('schedule'): intervalo mínimo de 5 min, atraso possível sob carga, UTC por padrão. Em repositório público, os agendamentos são desativados após 60 dias sem atividade. Isso confere o F-08 do Anexo C, antes 'não conferido', e a URL agora está registrada.",
+   "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "citacao": "scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. / The shortest interval you can run scheduled workflows is once every 5 minutes.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "O texto conferido não diz se commits feitos pelo próprio fluxo contam como 'atividade'. Isso fica não conferido e importa se a rotina for a única que mexe no repositório.",
+   "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "citacao": "(a página não define 'repository activity' no trecho lido)",
+   "nivel": "não conferido"
+  },
+  {
+   "afirmacao": "Limites de execução: job de até 6 h em executor hospedado; execução de fluxo de até 35 dias; 20 jobs simultâneos no plano Free; matriz de até 256 jobs; API com GITHUB_TOKEN a 1.000 requisições/h por repositório.",
+   "url": "https://docs.github.com/en/actions/reference/limits",
+   "citacao": "Each job in a workflow can run for up to 6 hours of execution time.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Artefatos e logs ficam 90 dias por padrão, e o prazo pode ser mudado. O intervalo permitido não apareceu na página lida.",
+   "url": "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/remove-workflow-artifacts",
+   "citacao": "By default, GitHub stores build logs and artifacts for 90 days.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Termos do Actions, a questão central da D-033. As máquinas hospedadas só podem ser usadas em atividade ligada ao projeto de software do repositório, e o Actions não deve servir de CDN nem 'de aplicação serverless' (serverless é rodar funções sob demanda, sem servidor próprio). A leitura que a Fundação §5.5 propõe, 'a coleta produz o conteúdo que o repositório publica', é interpretação, não texto do GitHub. As citações vieram por uma ferramenta que resume a página, então vale reler o texto integral no Passo 4.",
+   "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "citacao": "any other activity unrelated to the production, testing, deployment, or publication of the software project / don't use Actions as a content delivery network or as part of a serverless application.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Limites do repositório: aviso a partir de 50 MiB por arquivo, bloqueio acima de 100 MiB; recomendação de repositório com menos de 1 GB, e menos de 5 GB 'fortemente recomendado'. Git LFS (armazenamento de arquivos grandes) é recomendado para binários, mas a franquia gratuita não apareceu: não conferida.",
+   "url": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+   "citacao": "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended. / GitHub blocks files larger than 100 MiB.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "A página 'repository-limits' trouxe um resumo confuso ('recomendado 1MB, aplicado em 100 MB') e tamanho em disco de 10 GB do .git. Por isso os números de arquivo e de repositório acima vêm da outra página. O limite de push de 2 GB vem só daqui.",
+   "url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits",
+   "citacao": "Push size: This limit is enforced at 2GB.",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "GitHub Pages (só importa na publicação, Passo 6, fora do piloto): site publicado até 1 GB; limite brando de 100 GB/mês de banda; 10 builds/h (não vale para fluxos próprios); implantação expira em 10 min; não serve para hospedar negócio online.",
+   "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+   "citacao": "Published GitHub Pages sites may be no larger than 1 GB.",
+   "nivel": "oficial"
+  }
+ ],
+ "avaliacao_o_que_o_github_impede": "NÃO IMPEDE (conferido em documentação oficial): (1) rotinas de busca em Python sem IA em repositório público, gratuitas nos executores padrão, com job de até 6 h, cron a cada 5 min no mínimo e 20 jobs simultâneos; (2) guardar textos, fichas, Evidências e logs em Git, com arquivo abaixo de 50 MiB e repositório abaixo de 1 GB, o que é folgado para o que a Fundação põe no Git; (3) o piloto: pode rodar à mão, na sessão, ou no Actions, sem nenhum limite conferido que o atrapalhe; (4) o tratamento com IA, porque ele não roda no GitHub (a rotina do Claude Code abre proposta em ramificação 'claude/'); (5) a Fundação §5.5 já pede 'cron em UTC', 'pode atrasar' e '60 dias': agora são fatos oficiais, e a mitigação (as rotinas fazem commit com frequência) não foi confirmada, porque a página não diz o que conta como atividade. IMPEDE OU PÕE EM RISCO: (a) incerteza dos termos do Actions: coleta agendada em fontes de terceiros pode ser lida como 'atividade alheia ao projeto de software' e, em tese, como 'aplicação serverless'. Isso não impede nada hoje, mas é o motivo concreto para a D-033, e a decisão que a Fundação §5.5 reserva a Vicente (aceitar ou não a leitura do Flat Data) continua valendo; (b) dado de trabalho que não pode ser público: o GitHub gratuito não resolve, porque repositório privado tem 2.000 min/mês e, pela Fundação §5.1, perde a exigência de revisão antes de juntar proposta. Esse lugar já é item do Passo 4; não é problema novo; (c) volume: se um dia entrarem arquivos grandes (PDFs, imagens, dumps), o Git não é o lugar, e o LFS não teve franquia conferida; (d) publicar o wiki: Pages tem 1 GB e limite brando de banda, mas isso é Passo 6 e, pela D-032, não se problematiza agora. EM RESUMO: o GitHub funciona como repositório e como agendador leve dos scripts. Para o potencial maior (buscas pesadas, estado que não pode ser público, guarda de dados de trabalho) a solução complementar é uma segunda casa em nuvem, com o GitHub como espelho do que é público. Isso pode ser decidido no Passo 4, não antes. É insumo para reavaliar o planejamento, não obstáculo ao piloto.",
+ "opcoes": [
+  {
+   "nome": "Cloudflare: Workers com cron + armazenamento de objetos R2",
+   "para_que": "Rodar tarefas agendadas leves (consultas a APIs, checagens) e guardar dados de trabalho fora do Git (R2 é um 'balde' de arquivos compatível com S3; 'egress' é a cobrança por tirar dados de lá).",
+   "fatos": [
+    {
+     "afirmacao": "R2 gratuito: 10 GB-mês, 1 milhão de operações de escrita/lista (classe A) e 10 milhões de leitura (classe B) por mês; saída de dados sem cobrança; além da franquia, US$ 0,015 por GB-mês.",
+     "url": "https://developers.cloudflare.com/r2/pricing/",
+     "citacao": "10 GB-month / month; Class A 1 million requests / month; Class B 10 million requests / month; $0.015 / GB-month",
+     "nivel": "oficial"
+    },
+    {
+     "afirmacao": "Plano gratuito: 5 gatilhos de cron por conta, apenas 10 ms de CPU por execução (tempo de cálculo, sem contar espera de rede), 50 subrequisições por execução, 100 mil requisições/dia. Pago: 30 s de CPU (cron abaixo de 1 h) ou 15 min (1 h ou mais); tempo total máximo de 15 min por execução agendada. Os 10 ms gratuitos servem para chamar API e gravar; não servem para tratar PDFs ou texto grande.",
+     "url": "https://developers.cloudflare.com/workers/platform/limits/",
+     "citacao": "Number of Cron Triggers per account: 5 (Free), 250 (Paid); CPU time Cron Triggers: Free 10 ms",
+     "nivel": "oficial"
+    },
+    {
+     "afirmacao": "Python em Workers exige a flag 'python_workers'. A página lida não diz se é beta, nem se 'requests' ou 'pandas' funcionam. Os scripts atuais do projeto são Python comum, e rodar em Workers pode exigir adaptação: não conferido.",
+     "url": "https://developers.cloudflare.com/workers/languages/python/",
+     "citacao": "You must add the `python_workers` compatibility flag to your Worker.",
+     "nivel": "oficial"
+    }
+   ],
+   "custo_e_limite_gratuito": "Gratuito: R2 até 10 GB e 5 crons com 10 ms de CPU. Plano pago de Workers: preço não conferido nesta rodada. Exigência de cartão para abrir R2: não conferida.",
+   "conta_e_manutencao": "Conta Cloudflare (conta pessoal de Vicente); sem servidor para atualizar nem corrigir. Manutenção baixa; esforço maior de adaptação dos scripts.",
+   "encaixe_no_plano": "Boa para a custódia de dados que não vão ao Git (tabela de códigos e consentimentos, conteúdo restrito), pois 'chaves e lugar controlado' é o que a Fundação §5.1 deixa para o Passo 4. Para cron, o limite gratuito de CPU é apertado; o GitHub continua como repositório e o Actions pode chamar o R2 pela API compatível com S3 (não conferido nesta rodada)."
+  },
+  {
+   "nome": "Oracle Cloud Always Free: máquina virtual pequena + object storage",
+   "para_que": "Uma máquina Linux sempre ligada, com cron do sistema e Python normal, para rodar buscas mais pesadas e guardar estado e dados de trabalho em disco. É o que mais se parece com 'minha própria máquina na nuvem'.",
+   "fatos": [
+    {
+     "afirmacao": "Até 2 VMs AMD pequenas (VM.Standard.E2.1.Micro) e, em Ampere A1, o equivalente a 2 OCPUs e 12 GB de memória por tenancy Always Free; 200 GB de Block Volume; 20 GB de Object Storage; 10 TB/mês de saída de dados.",
+     "url": "https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm",
+     "citacao": "All tenancies receive a total of 200 GB of Block Volume storage; ... 2 OCPUs and 12 GB of memory; 10 TB per month of outbound data.",
+     "nivel": "oficial"
+    },
+    {
+     "afirmacao": "Instância ociosa pode ser recuperada pela Oracle: em 7 dias, CPU no percentil 95 abaixo de 20%, rede abaixo de 20% e (só A1) memória abaixo de 20%. Uma máquina que só roda cron curto pode cair nesse critério; o risco precisa ser testado.",
+     "url": "https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm",
+     "citacao": "Idle Always Free compute instances may be reclaimed by Oracle.",
+     "nivel": "oficial"
+    },
+    {
+     "afirmacao": "A página comercial oracle.com/cloud/free devolveu 403 (proteção contra robô, não contornada). Cadastro, exigência de cartão e disponibilidade de capacidade ficam não conferidos.",
+     "url": "https://www.oracle.com/cloud/free/",
+     "citacao": "HTTP 403 Forbidden",
+     "nivel": "não conferido"
+    }
+   ],
+   "custo_e_limite_gratuito": "Sem custo dentro dos limites acima (documentação oficial); sem preço de excedente conferido.",
+   "conta_e_manutencao": "Conta Oracle Cloud (pessoal); maior manutenção das opções: atualizar o sistema, firewall, chaves SSH, backup, monitorar o risco de recuperação por ociosidade. É a única das opções com poder de máquina completa e sem cobrança por uso conferida.",
+   "encaixe_no_plano": "Pode ser o 'lugar de acesso controlado' do §5.1 e o agendador pesado. Híbrido possível: o GitHub continua repositório e o fluxo do Actions pode rodar na própria VM como executor próprio (self-hosted: gratuito segundo a página de cobrança do Actions; riscos de segurança em repositório público não conferidos). Cuidado: dado pessoal em máquina própria exige os cuidados da LGPD, no escopo do Jurídico."
+  },
+  {
+   "nome": "Render: Cron Jobs (tarefas agendadas em contêiner)",
+   "para_que": "Rodar um comando Linux (por exemplo, um script Python) em horário marcado, sem manter servidor.",
+   "fatos": [
+    {
+     "afirmacao": "Cobrança por segundo de tempo ativo, com mínimo de US$ 1 por mês por tarefa agendada; execução interrompida após 12 h; aceita qualquer comando Linux, script bash ou imagem Docker de um registro externo. A página lida não menciona nível gratuito.",
+     "url": "https://render.com/docs/cronjobs",
+     "citacao": "There is a minimum monthly charge of $1 per cron job service. / Render stops an active run after 12 hours.",
+     "nivel": "oficial"
+    }
+   ],
+   "custo_e_limite_gratuito": "Sem nível gratuito mencionado; mínimo de US$ 1/mês por tarefa, mais o tempo ativo. Preço por hora de máquina e custo de disco persistente: não conferidos.",
+   "conta_e_manutencao": "Conta Render; manutenção baixa (sem servidor para atualizar); o contêiner é efêmero, então o estado precisa ir para outro lugar (R2, S3 ou o próprio Git). Ligação direta com repositório do GitHub: não conferida na página lida.",
+   "encaixe_no_plano": "Serve como agendador no lugar do Actions se os termos do Actions virarem obstáculo; custo previsível e pequeno para umas poucas rotinas. Não resolve sozinho a guarda de dados."
+  },
+  {
+   "nome": "AWS: Lambda + EventBridge Scheduler + S3",
+   "para_que": "Funções agendadas (Lambda) disparadas por um agendador (EventBridge) gravando em armazenamento de objetos (S3). É a combinação clássica de 'funções com cron + objetos'.",
+   "fatos": [
+    {
+     "afirmacao": "Conta nova no plano gratuito: US$ 100 em créditos na abertura (mais até US$ 100 por tarefas de exploração); a conta fecha sozinha em 6 meses ou quando os créditos acabam; no plano gratuito só serviços selecionados. Cotas 'sempre gratuitas' de Lambda, S3 e EventBridge não aparecem nessa página: não conferidas.",
+     "url": "https://aws.amazon.com/free/",
+     "citacao": "When you create a new AWS Free Tier account, you get $100 in credits immediately. / The account closes on its own 6 months after you open it or when your credits run out",
+     "nivel": "oficial"
+    }
+   ],
+   "custo_e_limite_gratuito": "Créditos por 6 meses; depois, plano pago, com cobrança por uso. Cotas permanentes não conferidas.",
+   "conta_e_manutencao": "Conta AWS com cartão para o plano pago; manutenção média (permissões, empacotar dependências). Python é nativo em Lambda (não conferido nesta rodada).",
+   "encaixe_no_plano": "Encaixa na ideia 'funções + objetos', mas a conta temporária de 6 meses e as cotas não conferidas a tornam a menos adequada a um projeto que precisa durar; fica como alternativa de referência."
+  }
+ ],
+ "alcance": {
+  "olhado": [
+   "Documentação oficial do GitHub: faturamento e minutos do Actions, gatilho 'schedule', limites de execução, retenção de artefatos, termos adicionais (Actions), limites de arquivo e repositório, limites do Pages.",
+   "Cloudflare: preço do R2, limites de Workers (cron e CPU), página de Python em Workers.",
+   "Oracle: documentação de recursos Always Free (docs.oracle.com).",
+   "Render: página de Cron Jobs.",
+   "AWS: página geral do nível gratuito.",
+   "Lote C2 (C2.4 rotinas, C2.5 Save Page Now) e Fundação §5.1 e §5.5, para não repetir o que já estava conferido; as rotinas do Claude Code não foram reabertas."
+  ],
+  "fora": [
+   "Texto integral dos termos do Actions e do Anexo C da Fundação (as citações vieram por ferramenta que resume a página; reler no Passo 4).",
+   "Franquia gratuita de Git LFS, que o GitHub trata em outra página.",
+   "Se commits feitos pelo próprio fluxo contam como 'atividade' contra a desativação em 60 dias.",
+   "Riscos e regras de executor próprio (self-hosted) em repositório público.",
+   "oracle.com/cloud/free (403, não contornado), exigência de cartão e capacidade da Oracle.",
+   "Preço do plano pago de Workers; suporte real a Python 'requests' e 'pandas' em Workers; se o R2 exige cartão.",
+   "Cotas permanentes de Lambda, S3 e EventBridge; Python nativo em Lambda.",
+   "Hetzner e outras máquinas virtuais pagas, Fly.io, Google Cloud (D-021: só se necessário), Backblaze B2: não abertos por causa do teto de 20 chamadas.",
+   "Preços em reais, tributos e câmbio.",
+   "Nada foi gravado no repositório; o Passo 1 não foi executado."
+  ]
+ },
+ "erros": [
+  "oracle.com/cloud/free devolveu HTTP 403 (proteção contra robô); não foi contornado. Os dados da Oracle vieram da documentação em docs.oracle.com, que abriu.",
+  "A página repository-limits do GitHub trouxe um resumo contraditório ('recomendado 1MB, aplicado em 100 MB'); usei a página about-large-files para tamanho de arquivo e de repositório. Só o limite de push (2 GB) e o tamanho em disco (10 GB) ficam dessa página.",
+  "A página aws.amazon.com/free não traz as cotas permanentes de Lambda, S3 e EventBridge; ficaram não conferidas.",
+  "A página de Python do Cloudflare não respondeu às perguntas sobre status beta e pacotes; ficou não conferido.",
+  "As citações vieram por WebFetch, que resume a página com um modelo pequeno; as aspas devem ser reconferidas na página inteira antes de entrar na Fundação, sobretudo a dos termos do Actions."
+ ]
+}

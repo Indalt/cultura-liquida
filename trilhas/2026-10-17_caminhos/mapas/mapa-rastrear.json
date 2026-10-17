@@ -1,0 +1,346 @@
+{
+ "area": "RASTREAR: ambientes, fichas de acesso, Consultas, Recortes, pegadas e as rotinas de monitoramento e escavação",
+ "resumo": "Nesta área o desenho está pronto e o código quase não existe. A Fundação descreve o rastrear por completo (§1, §5.2, §5.3, §5.5 e §6: Ambiente, Consulta, Recorte, Execução, Entrada), mas quase tudo como [PROPOSTA]. O harness do rastreador existe: o agente e duas habilidades (ficha-de-acesso e consulta, versão 0.1.0), com 4 exemplos reais de 15/10. Há também o catálogo de 69 ambientes candidatos (Anexo E), gerado por script. Faltam, porém, todas as peças que fazem uma rotina rodar sozinha. Não há contrato (JSON Schema) de Ambiente, Consulta, Recorte, Execução nem Entrada. Não há adaptador de fonte, script de consulta, arquivo de estado de Recorte, deduplicação, gerador de feed, cópia no Wayback, Matriz de Pegadas, agendamento (.github/ não existe) nem as pastas ambientes/ e entrada/. Os 4 casos da rodada B do rastreador continuam PENDENTE, à espera desses contratos. Pela contagem por texto do Anexo E, 34 dos 69 ambientes têm alguma via por programa: API (interface para programas) em 19, OAI-PMH (protocolo de colheita de metadados) em 8, feed em 22. Doze mencionam recusa do leitor (403), um pede captcha (o SIAN) e 29 têm via por programa sem 403 nem captcha. Nenhuma linha cita 'caju'. Para (a), rotinas que encontrem CLB em vários ambientes, faltam os contratos, os adaptadores por protocolo, a deduplicação e o agendamento. O agendamento depende do Passo 4, da leitura dos termos do GitHub Actions (decisão de Vicente, §8) e, se o GitHub não servir, da D-033, que a Fundação ainda não traz. Para (b), a cajuína a partir do caju de ponta a ponta, faltam os mesmos contratos, as fichas testadas das fontes do piloto, as Consultas do caju (que nascem dos Termos, cujo contrato abre o Passo 1) e o modo assistido para as fontes que barram robôs. Há quatro pontos que são insumo para reavaliar o planejamento, não perguntas. (1) A D-032 manda as rotinas buscarem todas as CLB, mas o texto da fase 1 e do Passo 4 limita o monitoramento às fontes do piloto. (2) Testar a ferramenta inteira pede um adaptador de cada protocolo, mais do que as '2 ou 3 fontes' [PROPOSTA]. (3) A D-033 precisa entrar na Fundação para que outra nuvem seja plano. (4) O harness da consulta contradiz a Fundação em dois pontos: põe a bola de neve na fase 1 (a Fundação a deixa para a fase 2) e fala em 'novidades por data' (a Fundação diz 'novidade é um ID ainda não visto, nunca uma data').",
+ "pronto": [
+  {
+   "item": "Desenho do rastrear na Fundação: ambiente, monitoramento × escavação, Consulta com tipo (termo, mista, só descritores), exaustão por ambiente × Consulta × período",
+   "onde": "00_Fundacao_Cultura_Liquida.md §1, linhas 78-83; §5.2, 411-422; §5.3, 422-440",
+   "nota": "Quase tudo [PROPOSTA]. Pela regra de trabalho, a execução usa o valor provisório e segue. Uma ressalva: o sentido de 'ambiente' está [ABERTO] na linha 413."
+  },
+  {
+   "item": "Campos das entidades Ambiente, Consulta, Recorte, Execução e Entrada",
+   "onde": "Fundação §6, linhas ~590-596 (grep nas linhas 580-644, itens 11 a 17)",
+   "nota": "Os campos estão definidos no texto e servem de especificação direta para os esquemas. O Recorte tem dois estados ('percorrido pela busca' e 'lido por inteiro') e gatilhos de reabertura."
+  },
+  {
+   "item": "Regras de busca: resposta saturada divide a janela; variantes por família de grafia e OCR; país e idioma só anotam; uma Entrada por item; novidade é um ID não visto, nunca uma data; fontes com regra própria (Google, Meta, TikTok, YouTube, Google Acadêmico, OpenAlex)",
+   "onde": "Fundação §5.3, linhas 427-438",
+   "nota": "Prontas como regra. Nenhuma está implementada em script."
+  },
+  {
+   "item": "Agente rastreador (harness 0.1.0): papel, anti-robô, ritmo de 1 requisição por segundo, sem Edit nem Write, critério de parada, bloco LOG com alcance",
+   "onde": ".claude/agents/rastreador.md",
+   "nota": "Modelo Sonnet 5.5 alto, teto de 25 turnos. O teste contra o Haiku só vem depois de o harness passar nos validadores (Passo 1, linha 698)."
+  },
+  {
+   "item": "Habilidade ficha-de-acesso 0.1.0, com 3 exemplos reais de 15/10: Hemeroteca com 403, API da BDTD funcionando, Querido Diário instável",
+   "onde": ".claude/skills/ficha-de-acesso/SKILL.md e exemplos/",
+   "nota": "Passos, critérios de aceitação e teto de 6 chamadas por ambiente. O esquema está declarado pendente."
+  },
+  {
+   "item": "Habilidade consulta 0.1.0, com 1 exemplo real ('cauim' em OpenAlex 54, BDTD 10, Oasisbr 30, Crossref 12, mais bola de neve)",
+   "onde": ".claude/skills/consulta/SKILL.md e exemplos/cauim-totais.json",
+   "nota": "O exemplo registra total_visto = null, exatamente o estado 'não exaurido' que a habilidade deve produzir."
+  },
+  {
+   "item": "Catálogo de 69 ambientes candidatos, gerado por script e reprodutível",
+   "onde": "Fundação Anexo E, linhas 1838-1912; scripts/gerar_anexo_e.py",
+   "nota": "Contagem por texto: uso escavação 29, ambos 22, monitoramento 11, referência 7. Nível: oficial 58, secundária 8, não conferido 3. É semente do Registro de Ambientes, não lista fechada (D-017)."
+  },
+  {
+   "item": "Log de execução de agente, validado e sem dado pessoal, mais a rede de segurança do hook",
+   "onde": "esquemas/log.schema.json (com alcance); scripts/registrar_log.py; scripts/hook_subagent_stop.py; .claude/settings.json (SubagentStop)",
+   "nota": "Cobre a Execução de agentes. Para scripts e rotinas, ver o item parcial."
+  },
+  {
+   "item": "Conta de orçamento antes de cada lote (D-023)",
+   "onde": "scripts/orcamento.py",
+   "nota": "Serve para os lotes do rastreador. Rotinas sem IA não gastam tokens."
+  },
+  {
+   "item": "Contrato de Falta com o tipo 'fonte_inacessivel' e o tipo 'outro', onde cabem 'total desconhecido' e 'busca interrompida por teto'",
+   "onde": "esquemas/falta.schema.json, linha 10",
+   "nota": "As Faltas que o rastrear gera já têm onde ser gravadas e validadas."
+  },
+  {
+   "item": "Validador genérico e executor de casos de teste",
+   "onde": "scripts/validar.py; scripts/rodar_testes.py",
+   "nota": "Recebem os novos esquemas e casos sem mudança de código."
+  }
+ ],
+ "parcial": [
+  {
+   "item": "Execução (registro de cada rodada de agente, script ou pessoa)",
+   "onde": "esquemas/log.schema.json; Fundação §6, item Execução",
+   "nota": "Falta: os campos 'Recortes e Consultas usados' do §6 (o esquema não tem propriedade de recorte, consulta nem ambiente). Além disso, fonte_do_registro só aceita 'curador' ou 'hook-SubagentStop' (linha 48), e uma rotina por script não teria como se registrar sem mudar o esquema."
+  },
+  {
+   "item": "Exemplos da ficha-de-acesso",
+   "onde": ".claude/skills/ficha-de-acesso/exemplos/*.json",
+   "nota": "Falta: os próprios exemplos falham no critério 'todo campo preenchido ou marcado não conferido'. bdtd-api.json não tem 'robots'. hemeroteca-403.json não tem 'robots' nem 'cobertura'. Só querido-diario-instavel.json tem os dois. É preciso corrigir os exemplos antes de virarem casos 'passa'."
+  },
+  {
+   "item": "Casos de teste da rodada B do rastreador (4: Hemeroteca 403, BDTD, Querido Diário, cauim)",
+   "onde": "testes/relatorio-rodada-A.md, linhas 19-23, 48-54 e 119; casos.json das duas habilidades",
+   "nota": "Falta: o esquema de Ambiente e o de Consulta e Recorte. Hoje são 'pendente' e não contam como teste. Falta também ao menos um caso 'reprova' por habilidade (ex.: total_visto maior que total_informado sem explicação; ficha com 403 e decisão 'aceito')."
+  },
+  {
+   "item": "Harness da consulta coerente com a Fundação",
+   "onde": ".claude/skills/consulta/SKILL.md, passo 5 e 'Quando usar'",
+   "nota": "Falta: o passo 5 manda fazer bola de neve pelo OpenAlex, que a Fundação deixa para a fase 2 (§5.3, linha 439; §6, Recorte: 'na fase 1, sem bola de neve'). 'Monitoramento (novidades por data)' contradiz 'novidade é um ID ainda não visto, nunca uma data' (§5.3, linha 427). A entrada da ficha-de-acesso aponta para indice.md, seção 1, e não para o Anexo E nem para ambientes/."
+  },
+  {
+   "item": "Registro de Ambientes",
+   "onde": "Fundação §5.2 (um arquivo por ambiente, [PROPOSTA]); Passo 2, estrutura, '[PROPOSTA] ambientes/'; Passo 4",
+   "nota": "Existe só como tabela no Anexo E. Falta a pasta ambientes/ (não existe), um arquivo por ambiente com os dois eixos de estado, a ficha testada e datada e a última visita."
+  },
+  {
+   "item": "Camadas de execução e cadência",
+   "onde": "Fundação §5.5, linhas 495-513",
+   "nota": "Desenho pronto: camada 1, GitHub Actions com scripts e sem IA; camada 2, rotina do Claude na fase 2. Falta: a decisão de Vicente sobre a leitura dos termos do Actions (§8), a conferência da desativação após 60 dias e dos minutos grátis em repositório público (não conferidos, F-08) e a D-033 (outra nuvem) no texto. A própria Fundação diz que a D-012 está 'cumprida em parte'."
+  },
+  {
+   "item": "Monitoramento de todas as CLB (D-032)",
+   "onde": "Fundação §7, fase 1 (linha 669: 'Fontes: o caso-piloto, com 2 ou 3 fontes reais'); Passo 4 (linha 741: monitoramento 'delas')",
+   "nota": "O tipo de Consulta 'só descritores' já existe e é o que acha CLB ainda sem nome (§1, P3, P5). Mas o texto da fase 1 e do Passo 4 restringe o monitoramento às fontes do piloto. A D-032 [VIGENTE] amplia esse alcance e o texto precisa acompanhar (insumo para reavaliar)."
+  }
+ ],
+ "ausente": [
+  {
+   "item": "Contratos (JSON Schema) de Ambiente (com a ficha de acesso), Consulta, Recorte (arquivo de estado) e Entrada",
+   "onde": "Fundação §6 (campos); Passo 1, linha 693 ('os contratos de dados do §6 como arquivos em esquemas/'); SKILL.md das duas habilidades ('o contrato é entrega do Passo 1')",
+   "nota": "Sem eles não há validador, os casos da rodada B não saem de PENDENTE e nenhuma rotina tem estado verificável. O Passo 1 começa pelo Termo, pela Proposição, pela Evidência, pela Fonte e pela Falta, e estes vêm a seguir."
+  },
+  {
+   "item": "Adaptadores por protocolo: VuFind, OAI-PMH, API com cursor, dados abertos (CKAN) e modo assistido",
+   "onde": "Fundação §5.3, linha 430; Passo 1, linha 691 ('as fontes escolhidas decidem quais adaptadores nascem primeiro')",
+   "nota": "É o código que conversa com cada tipo de fonte. Sem ele, a consulta só roda à mão pelo agente, com curl. Não existe nenhum em scripts/."
+  },
+  {
+   "item": "Script de consulta e de estado do Recorte: cursor, total informado e visto, saturação com divisão da janela, teto com Falta, reserva",
+   "onde": "Fundação §5.3, linhas 425 e 432; §6, Recorte",
+   "nota": "O rastreador não tem Write. Numa rotina, quem grava o estado é o script. Na sessão, o curador grava o que o agente devolve."
+  },
+  {
+   "item": "Deduplicação e gravação de Entradas em entrada/ (uma por item, com rendimento por Consulta)",
+   "onde": "Fundação §5.3, linha 435; §5.4, tabela de canais ('gravam em entrada/') e portão único; §6, Entrada; §5.5, camada 1 ('deduplicação')",
+   "nota": "Sem isso, várias Consultas contam o mesmo item várias vezes e as rotinas inflam a fila. A pasta entrada/ não existe."
+  },
+  {
+   "item": "Gerador do feed de novidades (por ID não visto, script próprio, respeitando o robots.txt)",
+   "onde": "Fundação §5.3, linha 427 (monitoramento)",
+   "nota": "É o 'RSS criado por nós' que substitui o da v0.1. Também alimenta o boletim semanal do Passo 4."
+  },
+  {
+   "item": "Matriz de Pegadas e Vácuos, gerada das Execuções",
+   "onde": "Fundação §5.2, linha 416; §6, Execução (P89)",
+   "nota": "É o que permite voltar ao mesmo local e período e pegar só o que não foi visto."
+  },
+  {
+   "item": "Registro da busca manual (modo assistido) para as fontes que barram robôs",
+   "onde": "Fundação §5.3, linha 429 (escavação 'por pessoa, em modo assistido que registra a busca manual'); §5.2, linha 421",
+   "nota": "Na fase 1, a pessoa é Vicente. Há fontes centrais para jornais desde 1900 que só abrem assim: a Hemeroteca Digital (403) e o SIAN (captcha)."
+  },
+  {
+   "item": "Cópia no Wayback (Save Page Now 2), checagem de links e relatório calculado do dia",
+   "onde": "Fundação §5.5, camada 1 e linhas sobre o Wayback; Passo 4, 'Pronto quando'",
+   "nota": "O 'pronto' do Passo 4 exige o relatório por 7 dias seguidos e um aviso quando uma falha é provocada. A política de cópias arquivadas passa pelo Jurídico (precondição do Passo 4, linha 740)."
+  },
+  {
+   "item": "Agendamento: workflow do GitHub Actions (.github/workflows) ou outra nuvem (D-033)",
+   "onde": "Fundação §5.5, camada 1; Passo 4, linha 741; AGENTS.md ('não criar rotinas nem Actions antes do Passo 4')",
+   "nota": ".github/ não existe. A outra nuvem da D-033 não está na Fundação e muda o plano: só vira plano com a D-033 registrada e uma nova versão."
+  },
+  {
+   "item": "Arquivo de tradução das Consultas para a sintaxe de cada ambiente",
+   "onde": "Fundação §5.3, linha 424 ('Um arquivo traduz cada Consulta para a sintaxe de cada ambiente')",
+   "nota": "Não existe, e a estrutura do Passo 2 não lhe dá lugar. O local tem de ser fixado no brief do Passo 1."
+  },
+  {
+   "item": "Consultas do caju e da cajuína (termo, mista, só descritores, com variantes por família)",
+   "onde": "Fundação §6, Consulta ('Nasce dos Termos'); §5.3, regras de variantes; D-031",
+   "nota": "Dependem do contrato do Termo e da habilidade registrar-termo (harness pendente do caso-piloto). Nenhuma linha do Anexo E cita 'caju' (grep: 0)."
+  }
+ ],
+ "tarefas_para_usar": [
+  {
+   "tarefa": "Escrever os esquemas de Ambiente (com a ficha de acesso), Consulta, Recorte (estado) e Entrada em esquemas/, com os campos do §6, e acrescentar ao log.schema os campos 'recortes' e 'consultas' e um valor de fonte_do_registro para script ou rotina",
+   "quem": "curador (sessão principal), com segunda leitura do auditor (verificar-fundacao, olhar mecânico)",
+   "dentro_do_plano": true,
+   "ref": "Fundação §6 (linhas ~590-596); Passo 1, linha 693",
+   "depende_de": "Contrato do Termo (o primeiro do Passo 1), porque a Consulta nasce dos Termos",
+   "entrega_verificavel": "5 arquivos .schema.json. 'scripts/validar.py ambiente <exemplo>' passa nos exemplos reais corrigidos e reprova num exemplo com erro."
+  },
+  {
+   "tarefa": "Corrigir o harness: consulta 0.1.1 (bola de neve como fase 2; monitoramento por ID não visto, não por data); ficha-de-acesso 0.1.1 (entrada no Anexo E ou em ambientes/; 'robots' e 'cobertura' nos exemplos, marcados 'não conferido' onde não houver dado)",
+   "quem": "curador; auditor confere contra o §5.3 e o §6",
+   "dentro_do_plano": true,
+   "ref": "consulta/SKILL.md, passo 5; Fundação §5.3, linhas 427 e 439; §6, Recorte",
+   "depende_de": "nada",
+   "entrega_verificavel": "diff dos SKILL.md com o histórico 0.1.1. grep -n 'bola de neve' mostra só a marca de fase 2. Os 3 exemplos de ficha têm os campos 'robots' e 'cobertura'."
+  },
+  {
+   "tarefa": "Converter os 4 casos 'pendente' da rodada B em casos 'passa' com esquema e criar ao menos 1 caso 'reprova' por habilidade",
+   "quem": "curador; scripts/rodar_testes.py",
+   "dentro_do_plano": true,
+   "ref": "testes/relatorio-rodada-A.md, linha 119; Passo 1, linha 698 (testes de modelos só sobre pares reais)",
+   "depende_de": "os esquemas de Ambiente, Consulta e Recorte",
+   "entrega_verificavel": "testes/relatorio-rodada-B.md com os casos do rastreador em OK e nenhum PENDENTE nessas duas habilidades"
+  },
+  {
+   "tarefa": "Semear o Registro de Ambientes: ambientes/ com um arquivo por ambiente do Anexo E (69), em estado 'proposto', gerado por script a partir dos mesmos JSON do gerar_anexo_e.py",
+   "quem": "script novo (ex.: scripts/semear_ambientes.py), escrito pelo curador",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.2, linha 415 ([PROPOSTA], um arquivo por ambiente); Passo 2, estrutura; Passo 4, linha 741",
+   "depende_de": "esquema de Ambiente",
+   "entrega_verificavel": "69 arquivos em ambientes/ que passam em validar.py ambiente; contagem igual à do Anexo E"
+  },
+  {
+   "tarefa": "Fixar as fontes do caso-piloto cobrindo cada protocolo que a ferramenta precisa testar (VuFind, OAI-PMH, API com cursor e modo assistido), a partir dos 29 ambientes do Anexo E com via por programa sem 403, mais uma fonte de via humana",
+   "quem": "rastreador propõe a lista com a razão de cada protocolo; Vicente fixa (é a escolha que o §8 lhe atribui)",
+   "dentro_do_plano": false,
+   "ref": "Passo 1, linha 691 ('2 ou 3 fontes', '[as fontes] decidem os adaptadores'); fase 1, linha 669 [PROPOSTA]; D-032",
+   "depende_de": "D-031 (cajuína a partir do caju)",
+   "entrega_verificavel": "Lista no brief do Passo 1 com o protocolo e o ambiente de cada fonte. É insumo para reavaliar: a D-032 (testar tudo) pede mais protocolos que '2 ou 3 fontes', e conciliar isso exige decisão registrada."
+  },
+  {
+   "tarefa": "Fazer as fichas de acesso testadas e datadas das fontes do piloto, conferidas em cada lugar de execução (sessão local e, depois, a rotina)",
+   "quem": "rastreador com a habilidade ficha-de-acesso (até 6 chamadas por ambiente, um agente por vez, com log)",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.2, linha 419; Passo 4, linha 741",
+   "depende_de": "esquema de Ambiente; harness 0.1.1; fontes fixadas",
+   "entrega_verificavel": "arquivos em ambientes/ com teste (data, pedido, resposta literal) que passam no validador; log em trilhas/logs/"
+  },
+  {
+   "tarefa": "Registrar as Consultas do caju (termo, mista e só descritores, com variantes por família de grafia e OCR) e traduzi-las para a sintaxe de cada fonte do piloto",
+   "quem": "arquivista (registrar-termo) para os Termos; rastreador (consulta) para a tradução",
+   "dentro_do_plano": true,
+   "ref": "Fundação §6, Consulta e Termo; §5.3, linhas 424 e 433; D-031",
+   "depende_de": "contrato do Termo e harness do registrar-termo (pendente do caso-piloto); local do arquivo de tradução fixado no brief",
+   "entrega_verificavel": "Consultas validadas pelo esquema, cada uma com tipo, Termos de origem, descritores e a tradução por ambiente"
+  },
+  {
+   "tarefa": "Escrever os adaptadores dos protocolos que as fontes do piloto pedem, com robots.txt respeitado, robô identificado, 1 requisição por segundo, divisão da janela saturada, cursor gravado a cada página e Falta ao estourar o teto",
+   "quem": "curador (código); auditor (segunda leitura)",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.3, linhas 430 e 432; §6, Recorte",
+   "depende_de": "esquemas de Recorte e Entrada; fichas de acesso",
+   "entrega_verificavel": "Para cada adaptador: teste com uma resposta gravada (fixture) e uma rodada real com Recorte em estado válido, total informado e visto e log de Execução"
+  },
+  {
+   "tarefa": "Fazer o script de deduplicação e gravação em entrada/ (uma Entrada por item, normalizando por DOI, handle ou ID da fonte, com o rendimento de cada Consulta)",
+   "quem": "curador (código)",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.3, linha 435; §5.4 (portão único); §6, Entrada",
+   "depende_de": "esquema de Entrada; ao menos dois adaptadores",
+   "entrega_verificavel": "Um item achado por duas Consultas gera uma só Entrada, com as duas na origem (caso de teste 'passa'). Uma duplicata forçada é reprovada."
+  },
+  {
+   "tarefa": "Fazer o registro do modo assistido para a busca manual de Vicente nas fontes de via humana (ex.: Hemeroteca)",
+   "quem": "curador prepara o modelo; Vicente faz a busca",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.3, linha 429; §5.2, linha 421",
+   "depende_de": "esquema de Recorte (modo termo, descritores ou folheio)",
+   "entrega_verificavel": "Um Recorte assistido real com link permanente por página e Execução registrada com 'pessoa' como executor"
+  },
+  {
+   "tarefa": "Gerar a Matriz de Pegadas e Vácuos a partir das Execuções",
+   "quem": "script novo",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.2, linha 416; §6, Execução (P89)",
+   "depende_de": "log com os campos de Recortes e Consultas",
+   "entrega_verificavel": "Arquivo gerado que, numa segunda rodada no mesmo ambiente e período, lista só o que ainda não foi visto"
+  },
+  {
+   "tarefa": "Fazer o gerador do feed de novidades e o relatório calculado do dia, para que o monitoramento rode sem IA",
+   "quem": "script novo",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.3, linha 427; §5.5, camada 1; Passo 4, 'Pronto quando'",
+   "depende_de": "adaptadores; deduplicação",
+   "entrega_verificavel": "Feed com só IDs não vistos; relatório do dia com números calculados"
+  },
+  {
+   "tarefa": "Abrir o monitoramento de todas as CLB: Consultas só por descritores e Consultas mistas rodando em todos os ambientes com via por programa, não só nos do piloto",
+   "quem": "curador (Consultas e configuração); rastreador (fichas); scripts",
+   "dentro_do_plano": false,
+   "ref": "D-032 [VIGENTE]; Fundação §1, linha 83 (só descritores); fase 1, linha 669, e Passo 4, linha 741, que hoje limitam às fontes do piloto",
+   "depende_de": "adaptadores e deduplicação provados no piloto; registro da essência da D-032 no texto do §7 (nova versão)",
+   "entrega_verificavel": "Fundação com o §7 atualizado. Registro de Ambientes com as fichas em uso. Entradas novas de mais de uma CLB, com Consulta de origem."
+  },
+  {
+   "tarefa": "Pôr a camada 1 em agendamento (GitHub Actions, por cron em UTC) para as buscas e o validador",
+   "quem": "curador (workflow); Vicente (leitura dos termos do Actions, §8)",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.5, camada 1 e termos do Actions; Passo 4, linhas 739-746; AGENTS.md (nada de Actions antes do Passo 4)",
+   "depende_de": "Passo 4 aberto; conferência da desativação após 60 dias e dos minutos grátis em repositório público (F-08)",
+   "entrega_verificavel": "7 dias seguidos de relatório do dia; uma falha provocada gera aviso por e-mail ('Pronto quando' do Passo 4)"
+  },
+  {
+   "tarefa": "Se o GitHub impedir o agendamento ou o volume pretendido, levar rotinas, buscas e tratamento com IA para outra nuvem, com o GitHub como repositório",
+   "quem": "curador registra a D-033 (registrar-decisao); Vicente confirma a essência; o redator atualiza o §5.5",
+   "dentro_do_plano": false,
+   "ref": "D-033 (essência a registrar); Fundação §1, linha 90 ('usar a nuvem... fica a considerar'); §5.5, critérios 'sem Google e sem depender do computador ligado'",
+   "depende_de": "o resultado da tarefa do Actions (leitura dos termos, limites medidos)",
+   "entrega_verificavel": "D-033 no Registro de Decisões e nova versão da Fundação nomeando a solução e os critérios. Nenhum fornecedor é escolhido antes disso."
+  },
+  {
+   "tarefa": "Testar o rastreador em modelo menor (Haiku 5.5) só depois de as duas habilidades passarem nos validadores com pares reais",
+   "quem": "curador (testes de modelos)",
+   "dentro_do_plano": true,
+   "ref": "Passo 1, linha 698; D-027; comentário de Vicente de 17/10 (sem harness pronto, nada de modelo menor)",
+   "depende_de": "rodada B do rastreador toda em OK",
+   "entrega_verificavel": "Relatório de teste com os mesmos casos nos dois modelos e o consumo medido"
+  }
+ ],
+ "riscos": [
+  "Fontes de jornal desde 1900 dependem de pessoa. A Hemeroteca Digital (403) e o SIAN (captcha) não se leem por programa e não se contornam. A escavação de imprensa histórica cabe nas 1 a 3 horas semanais de Vicente (D-016) e anda devagar.",
+  "As 12 menções a 403 no Anexo E não são todas bloqueios totais. BHL, Gallica (SRU) e SciELO (busca) recusaram uma via, mas têm outra (API, OAI-PMH). A contagem foi feita por texto e regex. É indício, não ficha testada.",
+  "Volume contra curadoria: monitorar todas as CLB em dezenas de ambientes enche entrada/ muito acima da cota de juízo de 15 itens por semana (§5.5). O §5.4 já diz que, se a fila passar de uma semana de curadoria, nenhuma porta nova se abre, e isso limita a ampliação da D-032. As rotinas sem IA não gastam tokens; o gargalo é humano.",
+  "Ruído e totais pouco confiáveis: a BDTD trouxe itens sem relação para 'cauim'. O Querido Diário capa o total em 10.000 e falhou em 2 de 5 chamadas. O RSS da BDTD só traz o ano. 'caju' é termo agrícola amplo, e as Consultas mistas e os Recortes por período e lugar são necessários para não saturar.",
+  "Agendamento incerto: os termos do GitHub Actions pedem uma leitura que é decisão de Vicente. A desativação dos agendamentos após 60 dias sem atividade e os minutos grátis em repositório público não estão conferidos (F-08). A alternativa em nuvem (D-033) ainda não está na Fundação.",
+  "Ninguém do elenco escreve código: não há agente para isso, e os adaptadores e scripts caem no curador (Opus, médio), o que pesa no orçamento da janela.",
+  "O rastreador não grava arquivos. Em sessão, o estado do Recorte depende de o curador gravá-lo. Se esquecer, perde-se o cursor e o trabalho é refeito.",
+  "Repositório público: Entradas com link e metadados vão a público no Git. O agente já se limita a metadados, link, trecho curto e hash, e a D-032 diz que piloto não é publicação. Mas a F-0003 continua aberta e não fica liberada por isso.",
+  "A Consulta 'nasce dos Termos', e o registrar-termo está com o harness pendente. Sem a semente do legado (Passo 3) nem o Wikidata (fase 2), as Consultas gerais de CLB na fase 1 partem dos descritores processuais e dos Termos do piloto, uma base estreita no começo.",
+  "Os limites das rotinas do Claude e do Save Page Now 2 vêm de páginas que podem mudar. Não foram reabertos nesta rodada (sem web)."
+ ],
+ "alcance": {
+  "olhado": [
+   "00_Fundacao_Cultura_Liquida.md: linhas 70-93 (§1); 411-513 (§5.2 a §5.5); grep -n de ambiente|consulta|recorte|execu|entrada nas linhas 580-644 (§6); 664-682 (fase 1, fase 2 e gatilho); 704-746 (Passos 2, 3 e 4); grep nas linhas 689-703 (Passo 1) por contrato, fonte e script; 1838-1846 e contagem por script nas linhas 1838-1912 (Anexo E: 69 linhas; via por programa, 403, captcha, 'caju')",
+   ".claude/agents/rastreador.md (inteiro)",
+   ".claude/skills/ficha-de-acesso/: SKILL.md e os 4 arquivos de exemplos/ (inteiros)",
+   ".claude/skills/consulta/: SKILL.md e os 2 arquivos de exemplos/ (inteiros)",
+   "scripts/: ls e as 25 primeiras linhas de cada .py (11 arquivos)",
+   "esquemas/: ls (6 contratos); grep em falta.schema.json (tipos) e log.schema.json (campos, enums)",
+   "testes/relatorio-rodada-A.md: grep de pendente, rastreador, ficha-de-acesso e consulta",
+   ".claude/settings.json (inteiro)",
+   "Existência das pastas ambientes/, entrada/, acervo/, grafo/ e .github/ (nenhuma existe)"
+  ],
+  "fora": [
+   "Web: nenhuma página aberta (teto da tarefa). Os fatos externos ficam como a Fundação os registra.",
+   "trilhas/2026-10-15_pesquisa/indice.md e os JSON da pesquisa: fora da lista de leitura, embora a ficha-de-acesso os aponte como entrada.",
+   "Checklist trilhas/2026-10-16_execucao-v0.2.md: fora da lista.",
+   "Passo 1 inteiro (só um grep), §8 e §10: fora da lista; a escolha das fontes pelo §8 vem só da linha 691.",
+   "Corpo dos scripts além da docstring; conteúdo completo dos esquemas além do grep.",
+   "legado/: proibido.",
+   "Anexo C (níveis e URLs das fontes com regra própria): fora da lista.",
+   "Linhas individuais do Anexo E além das que o grep mostrou: as contagens são heurísticas, por texto, e não fichas."
+  ]
+ },
+ "fatos": [
+  {
+   "afirmacao": "As rotinas do Claude Code na nuvem têm intervalo mínimo de 1 hora, até 100 execuções agendadas por hora por conta e 30 por hora por rotina, e gastam a cota da assinatura",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "não conferido",
+   "citacao": "A Fundação §5.5 registra como oficial. Nesta rodada não houve web e a página não foi reaberta."
+  },
+  {
+   "afirmacao": "Em repositório público, os agendamentos do GitHub Actions são desativados após 60 dias sem atividade",
+   "url": "não registrada na Fundação (Anexo C, F-08)",
+   "nivel": "não conferido",
+   "citacao": "Fundação §5.5: 'não conferido: aberta em 13/10, URL não registrada; reconferir no Passo 4'"
+  },
+  {
+   "afirmacao": "O Save Page Now 2 aceita 7 capturas por minuto com chave e 3 sem chave, e até 30 mil por dia com chave e 200 sem chave",
+   "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/mobilebasic",
+   "nivel": "secundária",
+   "citacao": "Fundação §5.5: documentação de comunidade; 'A página oficial não foi conferida'"
+  },
+  {
+   "afirmacao": "A API do VuFind da BDTD funcionou sem cadastro em 15/10/2026, com 1.156.392 registros",
+   "url": "https://bdtd.ibict.br/vufind/api/v1/search",
+   "nivel": "não conferido",
+   "citacao": "Exemplo bdtd-api.json (nível 'oficial' na pesquisa de 15/10). Não foi reaberta nesta rodada."
+  }
+ ]
+}

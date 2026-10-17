@@ -1,0 +1,417 @@
+{
+ "area": "devolver, jurídico, harness e operação",
+ "resumo": "Aonde se quer chegar nesta área: que cada parte da ferramenta trabalhe sobre a cajuína, deixe log e fique medida (D-032). Ninguém publica nada (piloto não é publicação). O Jurídico de precaução e o harness já existem para o que foi usado na escrita da v0.2. Harness aqui quer dizer o conjunto de regras, exemplos, validadores e scripts que prendem cada agente ao plano.\n\nRodei `scripts/rodar_testes.py` em 17/10, sem gravar nada: OK 27, FALHA 0, PENDENTE 9. Os 7 conjuntos de casos da rodada A passam, e os casos com erro reprovam como esperado. Os 9 pendentes são todos da rodada B e dependem de duas coisas do Passo 1: os pares reais da cajuína e os contratos de dados do §6. Hoje só há 6 esquemas: log, conferência, Falta, guia, achado e decisão.\n\nNa parte de devolver e agir, quase tudo está no papel e falta a peça executável:\n- **Triagem jurídica:** as 8 perguntas fixas existem, mas só como roteiro do agente. As \"regras fixas por script\" que o Passo 1 pede (linha 695) não existem: nenhum script de `scripts/` trata de triagem.\n- **Guias de liberação:** dos 4 guias da ordem prevista, só há o do SisGen, como exemplo e com as telas não conferidas. O guia de licença pela Lei 9.610, que é o caminho da F-0003, está \"a preparar\".\n- **Campo de ação e kit de fonte primária:** só papel e passos, sem exemplos.\n- **Camada Educação:** não tem habilidade própria.\n- **Ilustração técnica:** não tem dono nem habilidade.\n- **Wiki:** o gerador ainda é [PENDENTE] (Quartz, linha 818). Por isso o wiki gerado só na máquina, que a D-032 permite, ainda não tem script.\n\nNa operação:\n- **Logs:** já têm o campo `alcance`, mas ele é opcional para todos, não só para a linha do hook.\n- **Orçamento:** o `orcamento.py` funciona, mas os custos medidos (77 a 146 mil tokens por agente) contra o teto de 300 mil por semana (D-023) dão 2 a 3 agentes por semana.\n- **Hook SubagentStop** (o gatilho que grava uma linha de log quando um subagente termina): chama o Python por um caminho do Windows. Numa rotina na nuvem ele não grava nada.\n- **Lista Agent do curador:** só permite chamar redator, auditor, juridico e rastreador. Avaliador, arquivista e campo-de-acao não podem ser chamados pelo curador como está.\n\n**\"Harness pronto\"**, para enfim testar modelos menores (§7, linha 701), quer dizer:\n- o `rodar_testes.py` com PENDENTE 0;\n- cada habilidade usada no piloto com pelo menos um par real que passa e um caso real que reprova;\n- os contratos Termo, Proposição, Evidência, Fonte, Ambiente e Consulta validados;\n- as regras fixas do Jurídico reprovando os casos de teste;\n- o custo de cada habilidade no log, a versão do harness subida e a aprovação de Vicente.\n\nSó depois disso roda o banco de provas: as mesmas entradas em cada modelo candidato, e fica o mais barato que passar.\n\n**Pontos que são insumo para reavaliar o planejamento, não perguntas:**\n- **(a) Teto do piloto.** O orçamento do piloto (300 mil por semana em operação ou 600 mil por janela) não está escrito.\n- **(b) F-0003 contra a regra do campo-de-acao.** A F-0003 cobre o repositório inteiro, e o campo-de-acao \"não usa conteúdo com Falta jurídica aberta\". Lida ao pé da letra, a regra trava o kit no piloto.\n- **(c) Outra nuvem.** A D-033 ainda precisa entrar no Registro e numa versão nova da Fundação, porque o §5.5 só prevê o GitHub Actions e a rotina do Claude.\n- **(d) Fatos da cajuína não conferidos.** O que a triagem vai acionar depende deles (registro no IPHAN, caju nativo, se há fermentação), e todos estão \"não conferido\" nesta rodada sem web.",
+ "pronto": [
+  {
+   "item": "Agente juridico (harness 0.1.0, Sonnet 5.5 alto, sem Edit/Write, devolve JSON ao curador, nunca autoriza nem protocola)",
+   "onde": ".claude/agents/juridico.md, linhas 14-46",
+   "nota": "Critério de parada e lista exata dos campos do LOG, com alcance"
+  },
+  {
+   "item": "Habilidade triagem-juridica, rodada A: 8 perguntas fixas em ordem, toda dúvida vira Falta, com norma e caminho de liberação",
+   "onde": ".claude/skills/triagem-juridica/SKILL.md, linhas 21-36 e 57-63",
+   "nota": "4 casos: 2 passam e 2 reprovam como esperado (Falta sem caminho; Falta completada)"
+  },
+  {
+   "item": "Habilidade guia-de-liberacao, rodada A, com validador",
+   "onde": ".claude/skills/guia-de-liberacao/SKILL.md, linhas 37-53; esquemas/guia-liberacao.schema.json",
+   "nota": "Exemplo do SisGen passa; tela 'oficial' sem URL e guia sem limites reprovam"
+  },
+  {
+   "item": "Habilidade conferir-fato com pares reais (C1 e C2)",
+   "onde": ".claude/skills/conferir-fato/SKILL.md, linhas 42-57",
+   "nota": "Custo medido: 81.852 e 77.351 tokens, 19 chamadas cada"
+  },
+  {
+   "item": "Falta F-0003 (repositório público × degrau 3), com as 8 perguntas respondidas e 4 caminhos que destravariam, sem decidir por Vicente",
+   "onde": "trilhas/2026-10-17_verificacao/falta-F-0003.json",
+   "nota": "Caminho G-licenca-texto-imagem-audio-lei-9610: 'a preparar', estado 'não iniciado'"
+  },
+  {
+   "item": "Esquemas de log, conferência, Falta, guia de liberação, achado e decisão",
+   "onde": "esquemas/ (6 arquivos)",
+   "nota": "O de Falta proíbe 'valor' e 'valor_inferido' e exige norma e caminho quando a Falta é jurídica"
+  },
+  {
+   "item": "Scripts de operação: registrar_log (valida no esquema e recusa dado pessoal), orcamento (regra da folga de 2×), procurar_dado_pessoal, validar, rodar_testes, checar_fundacao, comparar_anexos, hook_subagent_stop",
+   "onde": "scripts/*.py (docstrings)"
+  },
+  {
+   "item": "Bateria de testes rodando: OK 27 · FALHA 0 · PENDENTE 9",
+   "onde": "scripts/rodar_testes.py, rodado nesta rodada em 17/10, sem --relatorio",
+   "nota": "Igual ao registrado no checklist, linhas 76, 135 e 178"
+  },
+  {
+   "item": "Hook SubagentStop configurado e testado: linha mínima de segurança, nunca bloqueia, tokens null",
+   "onde": ".claude/settings.json; scripts/hook_subagent_stop.py; checklist, linha 75"
+  },
+  {
+   "item": "Habilidades do curador, redator e auditor da rodada A (executar-brief, registrar-decisao, escrever-secao-fundacao, verificar-fundacao) com exemplos reais e casos que reprovam",
+   "onde": ".claude/skills/*/SKILL.md, seções 'Exemplos e validador'"
+  },
+  {
+   "item": "Campo 'alcance' (olhado, fora) no esquema de log e na lista de campos do LOG dos 7 subagentes e da executar-brief (D-030)",
+   "onde": "esquemas/log.schema.json, linhas 36-40; checklist, linha 135"
+  },
+  {
+   "item": "Medições reais de custo por agente",
+   "onde": "Fundação §11, linhas 908-921; checklist, linhas 150-187",
+   "nota": "Sonnet 5.5 alto: 46 a 146 mil; Opus 5.5 médio (redator): 50 a 141 mil; Blocos 3 e 4: 1.227.342 tokens"
+  }
+ ],
+ "parcial": [
+  {
+   "item": "Regras fixas do Jurídico",
+   "onde": "Fundação, linha 695 (Passo 1) e 701 ('as regras fixas do Jurídico reprovam os casos de teste')",
+   "nota": "Existem só como perguntas para o agente (triagem-juridica, linhas 21-29). Nenhum script de scripts/ trata de triagem (grep vazio). Falta o script para os casos óbvios (licença, pessoa identificável, dado pessoal, possível conhecimento tradicional, substância controlada) e seus casos de teste"
+  },
+  {
+   "item": "Guias de liberação assistidos",
+   "onde": "Fundação, linha 695: ordem SisGen e consentimento prévio informado; licença pela Lei 9.610; LGPD; IPHAN",
+   "nota": "Só existe o guia do SisGen, como exemplo, com as telas não conferidas. O caminho da F-0003 (licença pela Lei 9.610), o da LGPD e o do IPHAN não existem. Não conferidos: arts. 29, 49 e 50 da Lei 9.610; art. 9º da Lei 13.123; art. 4º, VII, da Res. IPHAN 001/2006"
+  },
+  {
+   "item": "Agente campo-de-acao e habilidade kit-fonte-primaria (rodada B)",
+   "onde": ".claude/agents/campo-de-acao.md; .claude/skills/kit-fonte-primaria/SKILL.md, linhas 8, 17, 30 e 42",
+   "nota": "Papel e passos escritos; entradas e saídas [PROPOSTA]; custo 'a medir'; exemplos 'pendente: caso-piloto'. O modelo ainda é marcador, embora D-027 e o comentário de Vicente já deem Sonnet 5.5 alto"
+  },
+  {
+   "item": "Delegação aos agentes da rodada B",
+   "onde": ".claude/agents/curador.md, frontmatter 'tools: ... Agent(redator, auditor, juridico, rastreador)'",
+   "nota": "Avaliador, arquivista e campo-de-acao ficam fora da lista. Para usar tudo no piloto (D-032), a lista precisa crescer. Pelo checklist (linha 75), um agente mudado no meio da sessão só carrega numa sessão nova"
+  },
+  {
+   "item": "Validadores da rodada B",
+   "onde": "testes/relatorio-rodada-A.md, linhas 19-23, 42-60, 70-94 e 119",
+   "nota": "ficha-de-acesso e consulta têm exemplos reais, mas esperam os contratos de Ambiente e Consulta. extrair-evidencia, registrar-termo, montar-ficha, gerar-grafo e kit-fonte-primaria esperam os pares da cajuína. Os contratos Termo, Proposição, Evidência e Fonte não existem em esquemas/ (Passo 1, linha 693)"
+  },
+  {
+   "item": "Relatório de testes gravado",
+   "onde": "testes/relatorio-rodada-A.md, linha 109",
+   "nota": "Ainda fala em '37 ausências'. O rodar_testes.py atual diz 38 (com a D-030): o relatório gravado está desatualizado"
+  },
+  {
+   "item": "Campo alcance obrigatório (D-030)",
+   "onde": "esquemas/log.schema.json, linhas 36-51",
+   "nota": "É opcional para todos. O if/else que já separa a linha do hook poderia exigir alcance nas outras, e falta um caso de teste que reprove log sem alcance"
+  },
+  {
+   "item": "Orçamento da operação",
+   "onde": "scripts/orcamento.py; Fundação, linhas 904, 911 e 923; §5.5, linha 511",
+   "nota": "O script faz a conta com qualquer teto, mas não há registro semanal dos 300 mil (D-023). O consumo da sessão principal e o uso das rotinas não são medidos (§11, linha 923). Ler claude.ai/settings/usage é [PROPOSTA] e só Vicente pode"
+  },
+  {
+   "item": "Hook SubagentStop fora do Windows",
+   "onde": ".claude/settings.json (comando com C:/Users/alqui/AppData/Local/Programs/Python/Python312/python.exe)",
+   "nota": "Funciona na máquina de Vicente. Numa rotina na nuvem (Linux) o executável não existe, e a linha de segurança some sem aviso. A soma de tokens pelo transcript supera muito o número do Agent (254.918 × 46.051, checklist, linha 75)"
+  },
+  {
+   "item": "Ritual de cada sessão ou rotina",
+   "onde": "Fundação §5.5, linha 512 [PROPOSTA]; .claude/skills/executar-brief",
+   "nota": "A executar-brief cobre retomada, conta, log, checklist, commit, push e relatório de uma tela. Não existe o script do 'relatório calculado das frentes' ou 'do dia' (linhas 505, 512 e 745)"
+  },
+  {
+   "item": "Wiki gerado na máquina (piloto não é publicação, D-032)",
+   "onde": "Fundação §5.7, linhas 518-531; Passo 6, linhas 759-764; §8, linha 818",
+   "nota": "O desenho está pronto (glossário clicável, ficha com prova, Educação, ilustração, 'como citar'). O gerador é recomendação [PENDENTE] (Quartz) e não há script nem saída"
+  },
+  {
+   "item": "Log desta rodada de workflow",
+   "onde": "trilhas/logs/2026-10-17_workflow-subagent.jsonl (não rastreado, git status)",
+   "nota": "O hook gravou a linha mínima. O curador ainda decide como registrar a linha completa"
+  }
+ ],
+ "ausente": [
+  {
+   "item": "Script de regras fixas da triagem jurídica, com casos que reprovam",
+   "onde": "Fundação §7, Passo 1, linhas 695 e 701",
+   "nota": "É condição de 'Passo 1 pronto' e 'para não depender só da percepção do agente'"
+  },
+  {
+   "item": "Guia G-licenca-texto-imagem-audio-lei-9610",
+   "onde": "F-0003 (caminho_de_liberacao); Fundação, linhas 483 e 695",
+   "nota": "É o caminho da única Falta jurídica real aberta e toca tudo o que o piloto gravar com trecho de terceiros no Git público"
+  },
+  {
+   "item": "Guias da LGPD (termo de consentimento e atendimento ao titular) e do pedido de registro no IPHAN",
+   "onde": "Fundação, linhas 695, 740 e 781",
+   "nota": "O da LGPD é precondição do Passo 4 para canais de pessoas. O do IPHAN volta no Passo 9"
+  },
+  {
+   "item": "Contratos de dados Termo, Proposição, Evidência, Fonte, Ambiente e Consulta (JSON Schema)",
+   "onde": "Fundação, linha 693; §6 (580-644)",
+   "nota": "Sem eles, os validadores da rodada B não existem e o harness não fica pronto"
+  },
+  {
+   "item": "Habilidade para a camada Educação da ficha",
+   "onde": "Fundação, linhas 529 e 761; .claude/agents/redator.md (descrição: 'depois, a camada Educação das fichas')",
+   "nota": "O redator tem o papel, mas só a habilidade da Fundação. A pergunta 14 do §10 (linha 888: parte permanente ou também sob demanda) segue [ABERTO], mas o Passo 6 já põe a Educação 'em cada ficha'"
+  },
+  {
+   "item": "Dono e habilidade da ilustração técnica",
+   "onde": "Fundação §5.8, linhas 553-557; Passo 8, linhas 775-776",
+   "nota": "O método é [PROPOSTA]: desenho gerado dos dados da ficha, com legenda de origem e status. Nenhum agente ou habilidade dos 8 e 14 o cobre"
+  },
+  {
+   "item": "Script gerador do wiki na máquina e validador da ficha ('reprova toda frase factual sem marcação de Proposição')",
+   "onde": "Fundação, linhas 762 e 818",
+   "nota": "É o critério do Passo 6, aplicável ao piloto sem publicar"
+  },
+  {
+   "item": "Banco de provas de modelos: cada habilidade rodada nos pares reais em cada modelo candidato, com validação e custo no log",
+   "onde": "Fundação, linha 698 [PROPOSTA]",
+   "nota": "O rodar_testes.py só valida saídas já gravadas e não executa agentes. Falta também o modo de escolher o modelo por execução (não conferido)"
+  },
+  {
+   "item": "Script do relatório calculado do dia ou das frentes",
+   "onde": "Fundação, linhas 505, 512 e 745",
+   "nota": "Abre cada sessão e cada rotina. É a entrega de 'pronto' do Passo 4"
+  },
+  {
+   "item": "Contagem semanal de consumo (300 mil por semana) e medida da sessão principal",
+   "onde": "Fundação, linhas 904, 911 e 923; §5.5, linha 511",
+   "nota": "Sem ela, a regra 'medir e parar antes de acabar' não vale na operação"
+  }
+ ],
+ "tarefas_para_usar": [
+  {
+   "tarefa": "Registrar a D-033 (o GitHub fica como repositório; outra nuvem se ele impedir rotinas, buscas e tratamento com IA) e o modo de trabalhar ('onde há [PROPOSTA], usa-se o valor e segue'), com nota para a próxima versão da Fundação (§5.5 só prevê Actions e rotina do Claude)",
+   "quem": "curador, com a habilidade registrar-decisao; Vicente confirma a essência",
+   "dentro_do_plano": true,
+   "ref": "Acordo 5 (§0); §5.5, linhas 501-508; §9",
+   "entrega_verificavel": "trilhas/decisoes/D-033.json que passa em scripts/validar.py decisao; checar_fundacao.py atualizado para D-033 na próxima versão",
+   "depende_de": "confirmação de Vicente"
+  },
+  {
+   "tarefa": "Pôr avaliador, arquivista e campo-de-acao na lista Agent do curador e trocar o 'modelo a definir' por Sonnet 5.5 alto (D-027 e comentário de Vicente: sem harness pronto, nada de modelo menor)",
+   "quem": "curador (edição do frontmatter); conferido numa sessão nova",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 690 e 697; .claude/agents/curador.md; checklist, linha 75",
+   "entrega_verificavel": "Numa sessão nova, a ferramenta Agent lista os 3 tipos; os frontmatters dizem claude-sonnet-5-5 / high",
+   "depende_de": "abrir sessão nova depois da edição"
+  },
+  {
+   "tarefa": "Escrever os contratos Termo, Proposição, Evidência e Fonte (depois Ambiente e Consulta) como JSON Schema e ligar os casos já reais de ficha-de-acesso e consulta",
+   "quem": "curador escreve; auditor confere (quem produz não confere)",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linha 693; §6 (580-644); testes/relatorio-rodada-A.md, linhas 19-23 e 48-54",
+   "entrega_verificavel": "esquemas/*.schema.json novos; scripts/validar.py aceita cada um; os casos de ficha-de-acesso e consulta saem de PENDENTE",
+   "depende_de": "nada além do §6"
+  },
+  {
+   "tarefa": "Escrever o script das regras fixas da triagem: licença ausente; pessoa identificável e dado pessoal (reaproveitando procurar_dado_pessoal); possível conhecimento tradicional; substância controlada; criança ou adolescente. Saída: Faltas válidas no falta.schema, mais casos que passam e que reprovam em triagem-juridica/exemplos/casos.json",
+   "quem": "curador escreve o script; juridico dá as normas com nível; auditor confere",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 695 e 701; .claude/skills/triagem-juridica/SKILL.md, linhas 21-29",
+   "entrega_verificavel": "scripts/triagem_fixa.py (nome provisório); rodar_testes.py mostra os casos de reprova OK",
+   "depende_de": "listas de palavras tiradas das fontes (princípio 7) e lista de substâncias com nível (Portaria 344 está 'secundária' até conferir)"
+  },
+  {
+   "tarefa": "Preparar o guia G-licenca-texto-imagem-audio-lei-9610 (caminho da F-0003), conferindo os arts. 29, 49 e 50 só pelo artigo no planalto.gov.br",
+   "quem": "juridico, com a habilidade guia-de-liberacao (até 10 chamadas web); curador valida e grava",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 483 e 695; F-0003",
+   "entrega_verificavel": "guia JSON que passa em scripts/validar.py guia-liberacao; F-0003 com caminho 'em andamento'",
+   "depende_de": "orçamento da semana (cerca de 20 a 50 mil tokens, SKILL.md, linha 38)"
+  },
+  {
+   "tarefa": "Completar o guia do SisGen e do consentimento prévio informado (telas e art. 9º da Lei 13.123) e escrever os guias da LGPD e do pedido de registro no IPHAN (Res. IPHAN 001/2006, art. 4º, VII), um por chamada",
+   "quem": "juridico + guia-de-liberacao; curador grava",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 484, 695, 740 e 780-781",
+   "entrega_verificavel": "3 guias válidos, cada passo com nível; nenhum marcado como publicado (linha 695: só depois de conferir o portal)",
+   "depende_de": "guia da Lei 9.610 primeiro; anti-robô nunca contornado"
+  },
+  {
+   "tarefa": "Aplicar a triagem jurídica (script + agente) a cada item do piloto: cada fonte, cada Evidência com trecho, a ficha da cajuína. Faltas gravadas, mesmo sem publicar (D-032: usar tudo)",
+   "quem": "juridico + triagem-juridica + script de regras fixas; curador grava as Faltas e os logs",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 484 e 487; D-032",
+   "entrega_verificavel": "Faltas válidas por item e logs com alcance; custo por item medido (estimativa de 10 a 30 mil)",
+   "depende_de": "script de regras fixas; as 2 ou 3 fontes do piloto"
+  },
+  {
+   "tarefa": "Durante o piloto, gravar no Git público os trechos de terceiros pelas regras de custódia do §5.1 e do princípio 1, como a Fundação manda 'até lá'. A escolha entre os caminhos (a) a (d) da F-0003 fica como insumo para Vicente, sem bloquear o piloto",
+   "quem": "curador",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linha 483 ('Até lá, valem as regras de custódia do §5.1'); F-0003, nota",
+   "entrega_verificavel": "Evidências com localizador e trecho conforme o §5.1; procurar_dado_pessoal.py --git dá 0",
+   "depende_de": "leitura do §5.1 (fora do alcance desta rodada)"
+  },
+  {
+   "tarefa": "Escrever a camada Educação da ficha da cajuína: fontes, 'como citar', habilidades da BNCC 'sugeridas' tiradas da tabela estática do PDF do MEC com a página, e Falta 'a comunidade foi ouvida?' se o material visar escolas indígenas ou quilombolas",
+   "quem": "redator; auditor confere",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 529, 576, 761 e 783",
+   "entrega_verificavel": "Seção Educação na ficha, cada frase ligada a Proposição; Faltas à vista",
+   "depende_de": "ficha montada (montar-ficha); tabela da BNCC"
+  },
+  {
+   "tarefa": "Criar a habilidade da camada Educação para o redator (harness com exemplo real da cajuína e caso que reprova). Muda o inventário de 14 habilidades: precisa de decisão registrada",
+   "quem": "curador propõe; Vicente decide; depois o redator",
+   "dentro_do_plano": false,
+   "ref": "Fundação, linha 690 (8 agentes e 14 habilidades); §10, pergunta 14 (linha 888)",
+   "entrega_verificavel": ".claude/skills/<nome>/SKILL.md com casos.json sem PENDENTE",
+   "depende_de": "decisão D-nnn que sustente a habilidade nova"
+  },
+  {
+   "tarefa": "Gerar o wiki da cajuína na máquina, sem publicar: Quartz como valor provisório (recomendação [PENDENTE]); saída de build fora do Git; validador que reprova frase factual sem Proposição",
+   "quem": "curador (script); arquivista (links do glossário); auditor (validador)",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.7, linhas 520-531; Passo 6, linhas 761-762; §8, linha 818; D-032",
+   "entrega_verificavel": "Páginas geradas que abrem na máquina; o validador reprova uma frase de teste sem Proposição",
+   "depende_de": "ficha da cajuína; conferir se o Quartz roda só na máquina (não conferido)"
+  },
+  {
+   "tarefa": "Ilustração técnica da cajuína gerada das etapas da ficha, com legenda de origem e status. Hoje não tem dono: precisa de decisão sobre quem faz (agente ou script)",
+   "quem": "a definir por Vicente (curador propõe)",
+   "dentro_do_plano": false,
+   "ref": "Fundação §5.8, linhas 553-557; Passo 8, linhas 775-776",
+   "entrega_verificavel": "Imagem com legenda conferida contra a ficha (critério do Passo 8)",
+   "depende_de": "ficha com etapas; decisão de dono"
+  },
+  {
+   "tarefa": "Vicente faz um pedido real ao campo de ação (sugestão do plano: kit de fonte primária para educadores, com a cajuína) e dá os critérios de aceitação. O campo-de-acao produz, e o resultado vira o par real da kit-fonte-primaria",
+   "quem": "Vicente (pedido); campo-de-acao + kit-fonte-primaria; curador grava",
+   "dentro_do_plano": true,
+   "ref": "Fundação §5.9, linha 576; Passo 9, linhas 784 e 788; kit-fonte-primaria/exemplos/LEIA-ME.md",
+   "entrega_verificavel": "Rascunho com fontes revisado por Vicente; casos.json do kit sem PENDENTE",
+   "depende_de": "lista Agent do curador ampliada; ficha verificada; leitura da regra de Falta aberta (próxima tarefa)"
+  },
+  {
+   "tarefa": "Registrar como insumo, com leitura confirmada por Vicente, o alcance da regra do campo-de-acao 'não usa conteúdo com Falta jurídica aberta' diante da F-0003, que cobre todo o repositório: Falta do item ou Falta geral",
+   "quem": "curador + registrar-decisao; Vicente",
+   "dentro_do_plano": false,
+   "ref": ".claude/agents/campo-de-acao.md, 'O que não faz'; F-0003 (onde_aparece: entrada/, acervo/, trilhas/)",
+   "entrega_verificavel": "Decisão registrada ou nota no checklist que diga a leitura",
+   "depende_de": "Vicente"
+  },
+  {
+   "tarefa": "Exigir 'alcance' em toda linha de log que não seja do hook (no if/else do esquema) e criar caso que reprova log sem alcance",
+   "quem": "curador; auditor confere",
+   "dentro_do_plano": true,
+   "ref": "D-030; esquemas/log.schema.json, linhas 36-51",
+   "entrega_verificavel": "rodar_testes.py com o novo caso 'reprova OK'; logs antigos continuam válidos (com regra de data ou de versão)",
+   "depende_de": "nada"
+  },
+  {
+   "tarefa": "Fixar na executar-brief três aprendizados medidos: (1) o teto de chamadas vai no pedido contado como o harness conta, com margem, porque os agentes contaram menos (18 × 19; 14 × 18, 24 e 20; 13 × 21), e o número oficial é o do retorno do Agent; (2) o log se grava por arquivo escrito com a ferramenta Write e scripts/registrar_log.py <arquivo>, sem heredoc; (3) o ritual do §5.5 ([PROPOSTA], usado como valor): git pull, relatório, commit por lote, push, revisão de uma tela",
+   "quem": "curador; auditor confere",
+   "dentro_do_plano": true,
+   "ref": "Checklist, linhas 19, 20, 103, 104, 105 e 141; §5.5, linha 512; Fundação, linha 699",
+   "entrega_verificavel": "SKILL.md da executar-brief com versão do harness nova e Histórico; caso de teste do log por arquivo",
+   "depende_de": "nada"
+  },
+  {
+   "tarefa": "Abrir a conta semanal do piloto no checklist: orcamento.py com --teto 300000 e os lotes da semana; Vicente anota o uso da conta (claude.ai/settings/usage) antes e depois de cada sessão, para medir a sessão principal",
+   "quem": "curador (orcamento.py e checklist); Vicente (leitura do uso)",
+   "dentro_do_plano": true,
+   "ref": "D-023; Fundação, linhas 904, 911 e 923",
+   "entrega_verificavel": "Tabela semanal no checklist com tokens por agente e uso antes e depois",
+   "depende_de": "definição do teto que vale para o piloto (insumo: 300 mil por semana ou 600 mil por janela)"
+  },
+  {
+   "tarefa": "Tornar portável o comando do hook SubagentStop (hoje com caminho Windows do Python) e testá-lo na rotina pequena de teste prevista",
+   "quem": "curador",
+   "dentro_do_plano": true,
+   "ref": ".claude/settings.json; Fundação §5.5, linha 506 (teste com uma única rotina pequena num repositório de teste)",
+   "entrega_verificavel": "Linha mínima gravada em trilhas/logs/ tanto na máquina de Vicente quanto na rotina de teste",
+   "depende_de": "Passo 4 / fase 2 (AGENTS.md: sem rotinas antes do Passo 4)"
+  },
+  {
+   "tarefa": "Escrever o script do relatório calculado do dia (frentes, entradas novas, Faltas, consumo) que abre cada sessão e cada rotina",
+   "quem": "curador",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 505, 512 e 745",
+   "entrega_verificavel": "Relatório gerado por script; no Passo 4, 7 dias seguidos chegando a Vicente",
+   "depende_de": "contratos de dados; entrada/ existente"
+  },
+  {
+   "tarefa": "Conferir no Passo 4 os termos e minutos do GitHub Actions para repositório público e a desativação de agendamentos por inatividade, para aplicar a D-033 se o GitHub impedir",
+   "quem": "auditor + conferir-fato (teto de 15 a 20 chamadas); Vicente decide a leitura dos termos",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 505 e 508; §8",
+   "entrega_verificavel": "Conferência válida no esquema, com nível por item",
+   "depende_de": "D-033 registrada; Passo 4"
+  },
+  {
+   "tarefa": "Montar o banco de provas de modelos: rodar cada habilidade nos pares reais em cada modelo candidato, validar as saídas e gravar custo e modelo no log. Ficar com o mais barato que passa; se falhar, reforçar o harness antes de subir de modelo",
+   "quem": "curador (script e execução); auditor (validação)",
+   "dentro_do_plano": true,
+   "ref": "Fundação, linhas 698 e 701; D-027",
+   "entrega_verificavel": "Tabela por habilidade × modelo com passa/reprova e tokens; versão do harness subida (0.2.0) e Histórico",
+   "depende_de": "'harness pronto': rodar_testes.py com PENDENTE 0, cada habilidade com par real que passa e caso real que reprova; modo de escolher o modelo por execução (não conferido)"
+  },
+  {
+   "tarefa": "Regenerar o relatório de testes (rodada A + B) e registrar a linha completa desta rodada de workflow, hoje só no arquivo não rastreado do hook",
+   "quem": "curador (rodar_testes.py --relatorio; registrar_log.py; procurar_dado_pessoal.py --git antes do commit)",
+   "dentro_do_plano": true,
+   "ref": "testes/relatorio-rodada-A.md, linha 109 ('37', hoje 38); trilhas/logs/2026-10-17_workflow-subagent.jsonl",
+   "entrega_verificavel": "Relatório coerente com a saída atual; log completo validado; commit e push",
+   "depende_de": "nada"
+  }
+ ],
+ "riscos": [
+  "Orçamento: os custos medidos (77 a 146 mil tokens por agente Sonnet ou Opus) contra os 300 mil por semana da D-023 dão 2 a 3 agentes por semana. Uma passada completa de uma fonte (rastreador, avaliador, arquivista, jurídico, auditor, redator) pode levar 2 a 3 semanas. A Fundação não diz se o piloto conta nos 300 mil por semana ou nos 600 mil por janela da escrita da v0.2 (§11, linha 906): é insumo para reavaliar.",
+  "F-0003 abrange entrada/, acervo/ e trilhas/ inteiros. Lida ao pé da letra, a regra do campo-de-acao ('não usa conteúdo com Falta jurídica aberta') trava o kit de fonte primária no piloto.",
+  "Circularidade no harness da rodada B: os contratos, os pares reais e os casos que reprovam nascem no mesmo piloto e na mesma sessão. Sem o auditor conferindo, 'quem produz não confere' se rompe e os validadores passam por construção.",
+  "O hook SubagentStop chama o Python por caminho do Windows. Numa rotina na nuvem a linha de segurança some sem aviso. A soma de tokens pelo transcript supera muito o número oficial (254.918 × 46.051).",
+  "Agentes contam menos chamadas que o harness (18 × 19; 13 × 21; 14 × 24). Um teto declarado só ao agente não segura o custo; vale o maxTurns e o retorno do Agent.",
+  "Gravação de log por heredoc no Bash falhou em rodadas anteriores, segundo o texto desta tarefa. Não achei registro disso no checklist (grep de 'heredoc' vazio): é aprendizado a documentar.",
+  "Agentes editados no meio de uma sessão só carregam numa sessão nova (checklist, linha 75). A ampliação da lista Agent do curador exige abrir outra conversa antes do piloto.",
+  "Modelo: esta rodada roda em esforço máximo com ultracode por escolha de Vicente. A execução do Passo 1 tem de voltar a Opus 5.5 médio, sem ultracode (linha 697), e o CLAUDE.md manda avisar e parar se o modelo for outro.",
+  "D-033 sem provedor definido e AGENTS.md proibindo rotinas e Actions antes do Passo 4. 'Cada rotina automática usa tudo' (D-032) só tem efeito do Passo 4 em diante; no Passo 1 as mesmas etapas rodam à mão, na sessão.",
+  "Fatos da cajuína que guiam a triagem (registro no IPHAN, caju nativo, presença ou ausência de fermentação) estão 'não conferido' nesta rodada sem web. A pergunta 2 da triagem (Lei 13.123) e a precondição do Passo 6 dependem deles.",
+  "Os guias de liberação não podem ser tratados como prontos para circular: só depois de conferir formulários e prazos no portal oficial (linha 695). No piloto são rascunhos.",
+  "O relatório de testes gravado está desatualizado (37 × 38). Quem o lê sem rodar o script vê um estado antigo."
+ ],
+ "fatos": [
+  {
+   "afirmacao": "A produção tradicional da cajuína no Piauí tem registro como patrimônio cultural imaterial no IPHAN.",
+   "url": "https://www.gov.br/iphan/pt-br (não aberta nesta rodada, sem web)",
+   "nivel": "não conferido"
+  },
+  {
+   "afirmacao": "O caju (Anacardium occidentale) é planta nativa do Brasil, o que levaria a pergunta 2 da triagem (Lei 13.123) e a precondição do Passo 6 ao piloto.",
+   "url": "sem URL (memória; nenhuma página aberta nesta rodada)",
+   "nivel": "não conferido"
+  },
+  {
+   "afirmacao": "Uma rotina do Claude Code na nuvem carrega do repositório os .claude/agents, as skills e os hooks, e o Python fica disponível nela por um caminho diferente do Windows.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "não conferido"
+  },
+  {
+   "afirmacao": "A ferramenta Agent permite escolher o modelo por chamada, o que serviria ao banco de provas de modelos sem duplicar arquivos de agente.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "não conferido"
+  },
+  {
+   "afirmacao": "O Quartz gera o site e o serve só na máquina, sem publicar.",
+   "url": "https://quartz.jzhao.xyz/",
+   "nivel": "não conferido"
+  }
+ ],
+ "alcance": {
+  "olhado": [
+   "Fundação, por faixas: 440-494 (§5.4), 495-517 (§5.5, ritual e camadas), 518-531 (§5.7), 553-579 (§5.8 e §5.9), 689-703 (Passo 1), 739-746 (Passo 4), 759-764 (Passo 6), 775-800 (Passos 8, 9 e 10), 900-932 (§11); grep -n de 'wiki' e 'Educação'",
+   "Agentes juridico, campo-de-acao e curador (linhas 8-46); redator e auditor (frontmatter, 'O que não faz', 'Critério de parada', LOG); cabeçalhos dos 5",
+   "SKILL.md de triagem-juridica (17-37 e seções de teto e exemplos), guia-de-liberacao, kit-fonte-primaria, conferir-fato, verificar-fundacao, executar-brief, registrar-decisao e escrever-secao-fundacao (rodada, 'Teto e custo', 'Exemplos e validador'); ls das pastas exemplos/",
+   "Docstrings dos 11 scripts de scripts/; ls de esquemas/ (6 arquivos); grep de required, alcance e tokens em log.schema.json e das chaves de falta.schema.json",
+   "testes/relatorio-rodada-A.md (grep dos cabeçalhos e resultados, linhas 1-120); execução de scripts/rodar_testes.py sem gravar: OK 27 · FALHA 0 · PENDENTE 9",
+   "trilhas/2026-10-17_verificacao/falta-F-0003.json inteiro (curto); .claude/settings.json inteiro (curto)",
+   "Checklist: grep -n de harness, contou, erros, Consumo e tokens; recortes das linhas 75 e 150-187; grep de heredoc, aspas e falha (vazio)",
+   "grep em scripts/ por 'triagem' e 'regras fixas' (vazio); ls de trilhas/decisoes (D-030 a D-032)",
+   "19 chamadas de ferramenta, sem web, nada gravado"
+  ],
+  "fora": [
+   "§5.1 (regras de custódia citadas na linha 483): não li; a tarefa de custódia depende dele",
+   "§6 (contratos de dados) além dos greps: o detalhe dos campos de Termo, Proposição, Evidência e Fonte ficou fora",
+   "§8 e §10, salvo linhas soltas no grep (808, 818, 875-888)",
+   "Agentes rastreador, avaliador e arquivista, e as SKILL.md de consulta, ficha-de-acesso, extrair-evidencia, registrar-termo, montar-ficha e gerar-grafo (outra área ou fora da lista)",
+   "Corpo dos scripts (só docstrings), inclusive hook_subagent_stop.py; conteúdo de guia-sisgen.json e dos casos.json",
+   "Arquivos D-031.json e D-032.json (só listados); diário e pesquisa; legado/ (proibido)",
+   "Nenhuma página web: todos os fatos externos ficaram 'não conferido'"
+  ]
+ }
+}

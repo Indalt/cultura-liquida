@@ -1,0 +1,291 @@
+{
+ "area": "ORGANIZAR: da Entrada à ficha e ao grafo 4D (triagem por valências, quarentena, Trecho e Evidência localizados por script, Proposição, Termo, CLB situada, Elemento de prática X/Y/Z/W, Compreensão local, Falta, ficha, wiki local, grafo com μ e λ por linhagens)",
+ "resumo": "O desenho está todo escrito. A ferramenta que o executa ainda não existe. O §6 (linhas 580-641) define todas as entidades do movimento organizar, os cinco eixos de status e a troca dos selos. Os agentes avaliador e arquivista e as quatro habilidades da rodada B têm papel, passos, limites e campos de log (harness 0.1.0). O apoio genérico também está pronto: os esquemas de log e de Falta, validar.py, rodar_testes.py (aceita casos por esquema e por comando), registrar_log.py e procurar_dado_pessoal.py.\n\nAusente:\n- os contratos do §6 em JSON Schema, exceto a Falta. Dos 6 esquemas, nenhum é Termo, Fonte, Entrada, Trecho, Evidência, Proposição, CLB situada, Elemento, Insumo, Processo, Compreensão local, Transformação, Aresta ou Lugar;\n- todos os scripts do movimento: localizar o trecho e medir a semelhança, calcular μ, λ, Dc e Dct por linhagem, gerar os booleanos e o glossário a partir do Termo, montar ou validar a ficha, gerar o grafo e as vistas, sortear a amostra;\n- as pastas entrada/, acervo/ e grafo/;\n- os pares reais. Os 4 casos.json têm um único caso \"pendente\" cada, mas já dizem qual caso deve reprovar.\n\nTrês valores que o plano deixa provisórios ([PROPOSTA]) ainda não têm número nem regra:\n1. o limiar de semelhança, que não aparece em linha nenhuma;\n2. a fórmula que leva das contagens de linhagens a μ e λ, e os limites que separam os estados do Para-analisador (Anexo C, F-12 secundária; fonte primária de Eτ não conferida);\n3. a escala de valências, que o §7, linha 696, manda fixar de forma provisória no Passo 1.\nPelo modo de trabalhar, a execução fixa esses valores como [PROPOSTA] e segue. Não são perguntas.\n\nInsumo para reavaliar o planejamento (sequência): a linha 660 diz que cada passo só começa quando o anterior está pronto. Mas o \"pronto quando\" do Passo 1 (linha 701) exige que cada habilidade usada passe nos validadores com pares reais. E o plano põe o script de localização e o validador mecânico no Passo 2 (linhas 131 e 707; avaliador.md, linha 23) e o cálculo de μ e λ no Passo 7 (linha 602). Com a D-032 (usar tudo no piloto), esses scripts precisam nascer dentro do Passo 1. Convém registrar isso.\n\nCustódia no piloto, sem tratar o piloto como publicação (D-032): na extração, o script lê o texto da fonte, ou da sua cópia no Wayback, só em memória ou numa pasta temporária fora do repositório. Depois:\n1. normaliza o texto por uma regra fixa e versionada;\n2. calcula o hash SHA-256 (a impressão digital do texto);\n3. procura o trecho exato e, se não achar, mede a semelhança (difflib, da biblioteca padrão do Python);\n4. grava em acervo/ só o seletor W3C (o trecho, um pedaço antes e um depois), o localizador, o hash, a data, a origem do texto lido, o grau de semelhança e o eixo 2.\nPara conferir de novo antes de cada commit, relê-se a mesma captura datada do Wayback, que não muda, e compara-se o hash. Fonte sem cópia, bloqueada ou não legível por máquina vira Falta (fonte inacessível ou trecho não verificável). Nada do texto integral entra no Git, como manda o mapa de custódia (linhas 403-408).\n\nNada disso precisa da nuvem agora: na fase 1, o tratamento com IA roda na sessão (linha 363). A D-033 (outra nuvem, se o GitHub não bastar) não muda esta área. A ficha pode ser um .md em acervo/, com links escritos pelo arquivista: é a primeira versão do §5.7 (linha 522) e se lê na pasta. Gerar o site com o Quartz é do Passo 6 e está [PENDENTE]. Os dados 4D e μ e λ entram já no piloto (linha 547; gerar-grafo: \"em testes, no caso-piloto\"). A vista navegável depende da pergunta 19, e as tabelas X×Y e Z já estão previstas como primeira forma (linha 768).",
+ "pronto": [
+  {
+   "item": "Desenho das entidades do organizar (Entrada, Fonte com deriva_de, perspectiva e Correção; Trecho; Evidência; Proposição; CLB situada com os 4 critérios; Elemento de prática; Insumo; Processo; Compreensão local; Transformação; Aresta; Termo; Lugar; Falta), com os campos mínimos",
+   "onde": "00_Fundacao_Cultura_Liquida.md §6, linhas 595-618",
+   "nota": "[PROPOSTA]: o contrato em JSON Schema sai no Passo 1 (linha 582). É o insumo direto para escrever os esquemas."
+  },
+  {
+   "item": "Eixos de status (5) e a tabela de selos atuais × eixos",
+   "onde": "§6, linhas 620-641",
+   "nota": "Os valores dos eixos 1 a 4 estão dados; o eixo 5 (ficha) fica para o Passo 1 (linha 628)."
+  },
+  {
+   "item": "Regras de custódia do trecho (só o trecho, o pedaço antes e o depois, o localizador, o hash e a data no Git) e o mapa de custódia",
+   "onde": "§2, princípio 1, linha 100; §5.1, linhas 400-408; §6 Trecho, linha 598",
+   "nota": "Basta para o piloto: o texto integral nunca entra no Git, e a reconferência pode reler a captura datada do Wayback."
+  },
+  {
+   "item": "Definições de μ, λ, linhagem por deriva_de, sem peso por tipo de fonte, Dc = μ − λ, Dct = μ + λ − 1 e os estados extremos",
+   "onde": "§2, princípio 3, linhas 116-117; Anexo C, F-12 (linha 1690)",
+   "nota": "O conceito está escrito. A fórmula das contagens até [0,1] não está (ver 'ausente')."
+  },
+  {
+   "item": "Agentes avaliador e arquivista: papel, o que não fazem, parada, os campos exatos do bloco LOG e as habilidades ligadas",
+   "onde": "C:/Antigravity/Cultura Líquida/.claude/agents/avaliador.md; C:/Antigravity/Cultura Líquida/.claude/agents/arquivista.md",
+   "nota": "Harness 0.1.0. O modelo do frontmatter (Sonnet 5.5, alto) coincide com a D-027 para subagentes. Nenhum dos dois tem Write: devolvem tudo ao curador, que grava."
+  },
+  {
+   "item": "Falta: esquema com tipos (compreensão local não captada, impedimento jurídico, fonte inacessível, trecho não verificável, outro), sem campo de valor",
+   "onde": "C:/Antigravity/Cultura Líquida/esquemas/falta.schema.json (obrigatórios: id, tipo, o_que_falta, por_que, onde_aparece, criada_por, data)",
+   "nota": "Já serve para o piloto: o trecho abaixo do limiar, a W não captada e o critério de prática cultural não atestado viram Falta."
+  },
+  {
+   "item": "Infraestrutura de teste e de log",
+   "onde": "C:/Antigravity/Cultura Líquida/scripts/rodar_testes.py, validar.py, _comum.py, registrar_log.py, procurar_dado_pessoal.py, orcamento.py; esquemas/log.schema.json",
+   "nota": "rodar_testes.py aceita casos 'esquema' e casos 'comando' (código 0 = passa) e conta 'reprova esperado' como OK. É o encaixe natural dos validadores da rodada B. Na rodada A: OK 27, FALHA 0, PENDENTE 9."
+  },
+  {
+   "item": "Triagem jurídica de precaução sobre a ficha (habilidade triagem-juridica, agente juridico, esquema guia-liberacao)",
+   "onde": ".claude/skills/triagem-juridica; esquemas/guia-liberacao.schema.json",
+   "nota": "Cria Faltas e não bloqueia o piloto (D-032: Lei 13.123 e F-0003 só pesam para publicar)."
+  }
+ ],
+ "parcial": [
+  {
+   "item": "Habilidade extrair-evidencia",
+   "onde": ".claude/skills/extrair-evidencia/SKILL.md; exemplos/casos.json",
+   "nota": "Passos e saída escritos (seletor W3C, voz, hash, eixo 2, quarentena). Faltam: o script de localização que o passo 3 chama; os contratos de Entrada, Fonte, Trecho, Evidência e Proposição; a escala provisória de valências; os pares reais; o validador. O casos.json tem um caso 'pendente'; o caso que deve reprovar já está dito: trecho não localizado marcado como localizado."
+  },
+  {
+   "item": "Habilidade registrar-termo",
+   "onde": ".claude/skills/registrar-termo/SKILL.md; exemplos/casos.json",
+   "nota": "O modelo (conceito, designações, variantes, abonações; candidato que vira atestado) está escrito. Faltam: o esquema do Termo; o script dos booleanos, do glossário e dos links (passo 4); a conferência de TBX e SKOS (linha 103: 'a conferir no Passo 1'); os pares reais (caju, cajuína e as variantes que as fontes trouxerem); o validador. O caso que deve reprovar está dito: forma de OCR registrada como variante."
+  },
+  {
+   "item": "Habilidade montar-ficha",
+   "onde": ".claude/skills/montar-ficha/SKILL.md; exemplos/casos.json",
+   "nota": "Seções e ordem escritas (W antes da tradução; tensões lado a lado). Faltam: o formato da marcação frase → Proposição ('definida no Passo 1', linha 605); os valores do eixo 5 (linha 628); o esquema da CLB situada; o script que reprova a frase factual sem marcação (Passo 6, linha 762, e validador do Passo 2, linha 707); os pares reais."
+  },
+  {
+   "item": "Habilidade gerar-grafo",
+   "onde": ".claude/skills/gerar-grafo/SKILL.md; exemplos/casos.json",
+   "nota": "Passos escritos (agrupar por linhagem, μ e λ por script, Dc, Dct, estado, W em Falta como paracompleto). Faltam: a regra que leva as contagens a μ e λ; os limites entre os estados intermediários; o script; os esquemas de Elemento, Aresta, Compreensão local e Transformação; os pares reais. O caso que deve reprovar está dito: duas fontes da mesma linhagem contadas como duas."
+  },
+  {
+   "item": "Lugar (UF, município com geocódigo IBGE, localidade literal, bioma derivado)",
+   "onde": "§5.7, linhas 536-543; §6, linha 614",
+   "nota": "Campos e regras escritos. Falta a cópia local da tabela do IBGE (linha 543). O nível da tabela de biomas de 2024 está dividido: oficial numa frente, não conferido noutra (F-23)."
+  },
+  {
+   "item": "Quarentena e triagem por valências",
+   "onde": "§2, princípio 10, linha 133; §5, diagrama, linha 372; §7, linha 696; §8, linha 812",
+   "nota": "A regra está decidida (não descarta, PENDENTE_JULGAMENTO, ajustar um critério não zera os outros). Faltam a escala e os critérios, que o Passo 1 fixa de forma provisória como [PROPOSTA]."
+  },
+  {
+   "item": "Grafo 4D na fase 1",
+   "onde": "§5.7, linhas 545-551; §7 Passo 7, linhas 765-772; §10, pergunta 19",
+   "nota": "Os dados nascem em 4D desde a fase 1 e as vistas começam por páginas e tabelas. A vista navegável no piloto depende da pergunta 19: é insumo para reavaliar, não bloqueio. A matriz X×Y com 'não observada' é critério de 'pronto' do Passo 7."
+  },
+  {
+   "item": "Wiki",
+   "onde": "§5.7, linhas 520-534; §7 Passo 6, linhas 759-763; §8, linha 818",
+   "nota": "A primeira versão prevista (fichas com links escritos pelo arquivista) cabe no piloto como .md em acervo/. O gerador do site (Quartz) está [PENDENTE] e pertence ao Passo 6."
+  }
+ ],
+ "ausente": [
+  {
+   "item": "Esquemas JSON de Fonte, Entrada, Trecho, Evidência, Proposição e Termo",
+   "onde": "§7 Passo 1, linha 693 ('a começar pelo Termo, Proposição, Evidência, Fonte e Falta'); §6, linhas 595-613",
+   "nota": "Sem eles nenhuma habilidade da rodada B tem validador por esquema. Entrega obrigatória do Passo 1. O esquema de Fonte precisa do deriva_de, de que depende a contagem por linhagem."
+  },
+  {
+   "item": "Esquemas JSON de CLB situada, Elemento de prática, Insumo, Processo, Compreensão local, Transformação, Aresta e Lugar",
+   "onde": "§6, linhas 604-614",
+   "nota": "Sem eles não se montam a ficha nem o grafo do piloto. O plano os pede como contrato no Passo 1 (linha 582: '§6 vira contrato dos agentes no Passo 1')."
+  },
+  {
+   "item": "Prefixos de ID para cada tipo",
+   "onde": "§6, linha 585",
+   "nota": "Só F- (Falta) e P- (pessoa) aparecem. A Proposição não pode usar P-, que já é a pessoa (e 'Pn' já são os pedidos). Os prefixos se fixam como [PROPOSTA] nos esquemas."
+  },
+  {
+   "item": "Script de localização do trecho com grau de semelhança, hash e seletor (prefixo e sufixo)",
+   "onde": "§2, princípio 9, linhas 130-131 ('o script, no Passo 2'); §6, linha 598; eixo 2, linha 625; avaliador.md, linha 23",
+   "nota": "A conferência do trecho é por script e nunca por IA (P62). O passo 3 de extrair-evidencia não roda sem ele. Hoje não existe em scripts/ (11 arquivos, nenhum com essa função)."
+  },
+  {
+   "item": "Valor do limiar de semelhança e regra de normalização do texto antes do hash",
+   "onde": "Nenhuma linha da Fundação dá o número (grep 'limiar' acha só as linhas 130 e 598)",
+   "nota": "Sem eles não há corte entre 'localizado' e 'não verificável por máquina'. É [PROPOSTA]: fixa-se um valor provisório no script versionado, medido no piloto."
+  },
+  {
+   "item": "Script de μ, λ, Dc, Dct e estado, com as linhagens fechadas por deriva_de",
+   "onde": "§2, linhas 116-117; §6, linhas 602 e 610 (μ e λ 'calculados por script… Passo 7'); gerar-grafo, passos 1-3",
+   "nota": "μ e λ nunca são estimados por IA. Não existe script. Também não estão definidas a regra das contagens até [0,1] nem os limites dos estados intermediários ('tipicamente 12'): o Anexo C dá só uma fonte secundária (F-12), e a primária de Eτ está 'não conferido'."
+  },
+  {
+   "item": "Validador mecânico do acervo: esquemas, integridade das ligações, Falta sem valor, Termo atestado só com abonação localizada, W só com a voz de quem pratica, frase factual da ficha com marcação",
+   "onde": "§7 Passo 2, linha 707 ('rodado antes de cada commit'); Passo 6, linha 762; §5.4, linha 470",
+   "nota": "É o 'validador' dos pares reais. Não há gancho de pre-commit em .git/hooks (só os exemplos padrão)."
+  },
+  {
+   "item": "Script que gera, a partir do Termo, os booleanos, os links do wiki e o glossário",
+   "onde": "§2, princípio 2, linha 105; registrar-termo, passo 4",
+   "nota": "Fecha o laço vivo (termo novo → booleano novo → consulta nova; linha 386), que liga o organizar ao rastrear."
+  },
+  {
+   "item": "Script que gera as vistas do grafo como tabelas (matriz X×Y com 'não observada', linha do tempo Z, filtros W)",
+   "onde": "§5.7, linhas 547-549; Passo 7, linhas 768 e 772",
+   "nota": "Sem ele os dados 4D do piloto não têm leitura conferível."
+  },
+  {
+   "item": "Script que sorteia a amostra para a segunda leitura",
+   "onde": "D-026; §7 Passo 5, linha 752",
+   "nota": "A segunda leitura é validador + verificador de outro harness + amostra sorteada. Não li o §11 (fora do recorte)."
+  },
+  {
+   "item": "Pastas entrada/, acervo/ e grafo/",
+   "onde": "§7 Passo 2, estrutura, linha 722 ([PROPOSTA], nascem no passo em que entram)",
+   "nota": "É onde ficam as Entradas, os registros e as fichas do piloto."
+  },
+  {
+   "item": "Cópia local da tabela de municípios do IBGE (geocódigo e bioma)",
+   "onde": "§5.7, linhas 538 e 543",
+   "nota": "Sem ela o Lugar não deriva o bioma nem liga o topônimo ao município."
+  },
+  {
+   "item": "Pares reais das 4 habilidades da rodada B",
+   "onde": "§7 Passo 1, linha 694; os 4 exemplos/LEIA-ME.md",
+   "nota": "Dependem das 2 ou 3 primeiras fontes reais da cajuína (movimento rastrear) e de passarem pela extração."
+  }
+ ],
+ "tarefas_para_usar": [
+  {
+   "tarefa": "Fixar os valores provisórios do organizar como [PROPOSTA], num só registro com a decisão que os sustenta: escala de valências e critério de PENDENTE_JULGAMENTO; limiar de semelhança e regra de normalização antes do hash; regra das contagens de linhagens até μ e λ e limites dos estados; formato da marcação frase → Proposição; valores do eixo 5; prefixos de ID. A unidade da ficha segue muitos para muitos (M:N).",
+   "quem": "curador propõe, com a habilidade registrar-decisao; Vicente confirma a essência sem parar a execução (D-028)",
+   "dentro_do_plano": true,
+   "ref": "§7, linha 696; §8, linha 812; §6, linhas 585, 605, 628; §2, linhas 116-117 e 130",
+   "depende_de": "nada",
+   "entrega_verificavel": "arquivo em trilhas/decisoes/ que passa em scripts/validar.py decisao; cada valor marcado [PROPOSTA] e citado nos esquemas e scripts que o usam"
+  },
+  {
+   "tarefa": "Registrar a sequência: o script de localização, o validador mecânico e o cálculo de μ e λ nascem dentro do Passo 1, porque a D-032 e o 'pronto quando' do Passo 1 exigem as habilidades em uso com validador. O Passo 2 fica com o README, o teste de reconstituição e o pre-commit.",
+   "quem": "curador (registrar-decisao); Vicente confirma",
+   "dentro_do_plano": false,
+   "ref": "§7, linha 660 × linhas 131, 602, 701, 707; D-032",
+   "depende_de": "nada",
+   "entrega_verificavel": "decisão registrada que diz 'muda a sequência', sem mudar o conteúdo dos passos; nota para a próxima versão da Fundação"
+  },
+  {
+   "tarefa": "Escrever os esquemas JSON do organizar a partir do §6: Fonte (deriva_de, perspectiva, Correção), Entrada (valências, eixo 1), Trecho (exato, prefixo, sufixo, localizador, hash, data, origem do texto lido, semelhança, eixo 2), Evidência (sentido, voz, 3 Lugares, critério, eixo 3), Proposição (CLB situada × atributo × valor × período com dupla marcação, μ, λ, eixo 4), Termo (variantes separadas das formas de busca; candidato ou atestado), CLB situada (4 critérios, cada um com Evidência ou Falta; eixo 5), Elemento de prática (X, Y, Z, W ou Falta), Insumo, Processo, Compreensão local, Transformação, Aresta, Lugar. Também os campos de proteção e de origem comuns a todos.",
+   "quem": "curador (sessão principal, como os esquemas do Bloco 2); o auditor confere campo a campo contra o §6",
+   "dentro_do_plano": true,
+   "ref": "§6, linhas 584-618; §7 Passo 1, linha 693",
+   "depende_de": "a tarefa dos valores provisórios (prefixos, valências, eixo 5)",
+   "entrega_verificavel": "arquivos em esquemas/, cada um com 1 exemplo que passa e 1 que reprova em scripts/validar.py; restringir ao subconjunto que o validador mínimo de _comum.py cobre, ou exigir o .venv"
+  },
+  {
+   "tarefa": "Escrever scripts/localizar_trecho.py. Lê o texto da fonte ou da captura do Wayback em memória ou numa pasta temporária fora do repositório; normaliza; calcula SHA-256; acha o trecho exato ou mede a semelhança (difflib); devolve prefixo, sufixo, posição e grau. Abaixo do limiar, emite uma Falta 'trecho_nao_verificavel'. Nunca grava texto integral no repositório. Tem modo de reconferência: relê a mesma captura e compara o hash.",
+   "quem": "curador escreve; auditor testa (verificador de harness diferente, D-026)",
+   "dentro_do_plano": true,
+   "ref": "§2, princípio 1, linha 100; princípio 9, linhas 130-131; §6, linha 598; eixo 2, linha 625",
+   "depende_de": "esquema do Trecho; limiar provisório",
+   "entrega_verificavel": "casos 'comando' em extrair-evidencia/exemplos/casos.json: trecho real localizado (código 0) e trecho alterado marcado como localizado (reprova); procurar_dado_pessoal.py sem achados na saída"
+  },
+  {
+   "tarefa": "Escrever scripts/validar_acervo.py. Valida cada registro de acervo/ contra o esquema e confere as ligações: Evidência → Trecho → Fonte; Proposição com Evidências; Falta sem valor; Termo atestado só com abonação localizada; W ancorada só com a voz de quem pratica; frase factual da ficha com marcação de Proposição. Instalar como pre-commit local.",
+   "quem": "curador escreve; auditor testa",
+   "dentro_do_plano": true,
+   "ref": "§7 Passo 2, linha 707; Passo 6, linha 762; §5.4, linha 470; §6, linha 618",
+   "depende_de": "os esquemas do organizar",
+   "entrega_verificavel": "rodar_testes.py com casos 'passa' e 'reprova' para cada regra; gancho em .git/hooks/pre-commit que roda o validador antes do commit"
+  },
+  {
+   "tarefa": "Escrever scripts/calcular_mu_lambda.py, que também gera o grafo. Fecha as linhagens pelos componentes de deriva_de; conta as linhagens a favor e as divergentes; aplica a regra provisória; calcula Dc, Dct e o estado; põe W não captada como paracompleto; gera grafo/ (nós e arestas em JSON) e as tabelas X×Y ('não observada') e Z.",
+   "quem": "curador escreve; arquivista usa (gerar-grafo); auditor testa",
+   "dentro_do_plano": true,
+   "ref": "§2, linhas 116-117; §5.7, linhas 547-549; §6, linhas 602, 606-610; Passo 7, linhas 767-772; Anexo C, F-12",
+   "depende_de": "esquemas de Fonte, Evidência, Proposição, Elemento e Aresta; regra provisória de μ e λ",
+   "entrega_verificavel": "caso 'comando' que reprova a cópia real com duas fontes da mesma linhagem contadas como duas; caso real que passa, com μ, λ, Dc e Dct iguais ao recálculo"
+  },
+  {
+   "tarefa": "Escrever scripts/gerar_termo.py: do registro de Termo, gera os booleanos (variantes + formas de busca + descritores), o glossário e os links do wiki. Conferir TBX (ISO 30042) e SKOS antes de prometer a exportação.",
+   "quem": "curador escreve; arquivista usa (registrar-termo); auditor confere TBX e SKOS (conferir-fato, com URL e nível)",
+   "dentro_do_plano": true,
+   "ref": "§2, princípio 2, linhas 103-105; registrar-termo, passo 4",
+   "depende_de": "esquema do Termo",
+   "entrega_verificavel": "booleano gerado do Termo real 'cajuína' e reproduzível; caso que reprova uma forma de OCR registrada como variante; lote de conferência TBX/SKOS no formato conferencia.schema.json"
+  },
+  {
+   "tarefa": "Trazer para o repositório a tabela do IBGE de municípios (geocódigo e bioma), com fonte, edição e data.",
+   "quem": "rastreador (ficha-de-acesso) e auditor (conferir-fato, para o nível)",
+   "dentro_do_plano": true,
+   "ref": "§5.7, linhas 538 e 543; §6, linha 614",
+   "depende_de": "nada",
+   "entrega_verificavel": "arquivo de dados público com a origem registrada; nível conferido de novo (hoje dividido, F-23)"
+  },
+  {
+   "tarefa": "Primeira rodada real do organizar com as fontes da cajuína: o avaliador faz a triagem, a quarentena e as Evidências (extrair-evidencia), com o script de localização; o curador grava em entrada/ e acervo/ e o log com registrar_log.py; o auditor relê uma amostra sorteada.",
+   "quem": "avaliador (Sonnet 5.5, alto, D-027); curador; auditor",
+   "dentro_do_plano": true,
+   "ref": "§7 Passo 1, linhas 691-701; Passo 5, linhas 749-756; D-026; D-032",
+   "depende_de": "as 2 ou 3 fontes reais com captura no Wayback (movimento rastrear); esquemas; localizar_trecho.py; escala de valências",
+   "entrega_verificavel": "Entradas com eixo 1 preenchido; Trechos com hash e eixo 2; Evidências com voz; Faltas para W ou critério não captado; log com alcance e tokens medidos; validar_acervo.py passa"
+  },
+  {
+   "tarefa": "Termos, ficha e grafo da cajuína. O arquivista registra os Termos do caju e da cajuína (e as variantes que as fontes trouxerem), monta a ficha da CLB situada como .md em acervo/ (W antes da tradução; frases marcadas; Faltas à vista) e gera o grafo e as tabelas. O jurídico faz a triagem de precaução da ficha e cria Faltas, sem bloquear.",
+   "quem": "arquivista (registrar-termo, montar-ficha, gerar-grafo); juridico (triagem-juridica); curador grava",
+   "dentro_do_plano": true,
+   "ref": "§5.7, linha 522; §6, linhas 605-613; gerar-grafo ('em testes, no caso-piloto'); D-032",
+   "depende_de": "a rodada de Evidências; gerar_termo.py; calcular_mu_lambda.py",
+   "entrega_verificavel": "ficha que validar_acervo.py aceita; grafo/ gerado por script; Faltas no formato falta.schema.json; logs gravados"
+  },
+  {
+   "tarefa": "Transformar as saídas reais em pares de exemplo. Cada habilidade recebe: o caso real que passa; o caso que reprova, feito como cópia do real com o erro injetado (o mesmo padrão da rodada A, 'cópia do C1.1 real sem o campo url'); e os casos ditos nos LEIA-ME. Atualizar os casos.json, rodar rodar_testes.py --rodada B e subir o harness a 0.2.0, tirando 'pendente'.",
+   "quem": "curador; auditor confere",
+   "dentro_do_plano": true,
+   "ref": "§7 Passo 1, linhas 694 e 701; os 4 exemplos/LEIA-ME.md",
+   "depende_de": "as duas rodadas reais acima",
+   "entrega_verificavel": "testes/relatorio-rodada-B.md com 0 FALHA e 0 PENDENTE nas 4 habilidades; custo medido por habilidade nos logs"
+  },
+  {
+   "tarefa": "Testes de modelos: só depois do relatório da rodada B sem falhas, rodar cada habilidade nos modelos candidatos sobre os mesmos pares. Fica o mais barato que passar.",
+   "quem": "curador",
+   "dentro_do_plano": true,
+   "ref": "§7 Passo 1, linha 698; D-027",
+   "depende_de": "relatório da rodada B sem falhas",
+   "entrega_verificavel": "tabela de modelo × aprovação × tokens por habilidade, calculada dos logs"
+  }
+ ],
+ "riscos": [
+  "Sequência: a linha 660 diz que cada passo só começa quando o anterior está pronto. Mas o script de localização e o validador estão no Passo 2 (linhas 131 e 707) e μ e λ no Passo 7 (linha 602), enquanto o Passo 1 só fica pronto com as habilidades passando nos validadores (linha 701). Sem registrar a antecipação, o Passo 1 não fecha. É insumo para reavaliar o planejamento, não bloqueio.",
+  "μ e λ: a Fundação não diz como as contagens de linhagens viram números entre 0 e 1, nem onde ficam os limites dos estados intermediários. A fonte de Eτ no Anexo C é secundária (F-12), e a primária está 'não conferido'. A regra provisória pode ser lida como definitiva se não ficar marcada [PROPOSTA] no script e na decisão.",
+  "Limiar de semelhança e normalização: nenhum valor no plano. O hash depende da regra de normalização: mudar a regra depois quebra a reconferência dos trechos já gravados, por isso a regra precisa de versão.",
+  "Custódia: a reconferência depende de haver captura no Wayback ou de a fonte continuar no ar. Fonte sem captura, bloqueada (anti-robô nunca se contorna) ou em imagem sem OCR confiável vira Falta 'fonte inacessível' ou 'trecho não verificável', ou transcrição por IA marcada com o link da imagem. Com 2 ou 3 fontes, isso pode cobrir boa parte do piloto.",
+  "Conteúdo do piloto: 2 ou 3 fontes podem não trazer documentação divergente nem a fala de quem pratica. Aí λ fica 0, não há aresta de tensão real e W fica Falta (paracompleto). Isso é o comportamento correto, não falha. Mas o caso 'inconsistente' do Passo 7 (linha 772) pode não ter par real, e não se inventa.",
+  "Prefixo de ID: P- já é a pessoa (linha 585) e 'Pn' são os pedidos de Vicente. A Proposição precisa de outro prefixo, ou as ligações ficam ambíguas.",
+  "Git público (D-021, §5.1, linha 394): o que vai para acervo/ (o trecho curto e o contexto) é aberto. A D-032 diz que isso não se problematiza agora, e a F-0003 fica como Falta sem bloquear. Registro só como insumo para quando a publicação for decidida.",
+  "Orçamento (D-023, 300 mil tokens por semana): o AGENTS.md dá cerca de 60 mil por agente Sonnet com teto. Avaliador, arquivista em 3 habilidades, auditor e jurídico passam, por estimativa (não medida), de 300 mil. É preciso planejar os lotes em mais de uma semana, com retomada.",
+  "O avaliador e o arquivista não têm Write: tudo o que produzem é gravado pelo curador. Isso custa tokens da sessão principal e deve ser medido.",
+  "O validador mínimo de _comum.py cobre só um subconjunto do JSON Schema. Esquemas novos com $ref ou if/then podem passar num validador e reprovar no outro, se não se exigir o .venv com jsonschema.",
+  "A unidade da ficha (termo ou CLB situada) continua aberta. A ligação muitos para muitos (M:N) provisória pode exigir refazer a ficha quando for decidida."
+ ],
+ "alcance": {
+  "olhado": [
+   "00_Fundacao_Cultura_Liquida.md, linhas 94-150 (§2 inteiro, com os princípios 1, 2, 3, 9 e 10)",
+   "Fundação, linhas 514-644 (§5.6, §5.7, §5.8, §5.9 e §6 inteiro)",
+   "Fundação, linhas 689-703 (Passo 1), 704-727 (Passo 2) e 747-774 (Passos 5, 6 e 7)",
+   "Fundação, linhas 363-389 (diagrama do §5), 391-410 (§5.1 e mapa de custódia), 645-688 por grep (ordem dos passos, linha 660)",
+   "Fundação, por grep: 'limiar|semelhança', 'valência', 'unidade da ficha', 'μ', 'Quartz|Wayback', 'FH-5|fala de quem pratica'; Anexo C.3 (linhas 1703-1811) por grep; §10 e §8 por grep",
+   "C:/Antigravity/Cultura Líquida/.claude/agents/avaliador.md e arquivista.md, inteiros",
+   "C:/Antigravity/Cultura Líquida/.claude/skills/{extrair-evidencia,registrar-termo,montar-ficha,gerar-grafo}/SKILL.md, exemplos/LEIA-ME.md e exemplos/casos.json, inteiros",
+   "esquemas/: ls, e title, required e nomes das propriedades dos 6 esquemas; em falta.schema.json, id, tipo, onde_aparece e criada_por",
+   "scripts/: docstrings e nomes de funções dos 11 arquivos .py; requirements.txt; .gitignore; .git/hooks (sem ganchos ativos); hooks de .claude/settings.json por grep",
+   "trilhas/decisoes/D-032.json por grep ('publica'); checklist trilhas/2026-10-16_execucao-v0.2.md por grep; testes/relatorio-rodada-A.md, primeiras 40 linhas"
+  ],
+  "fora": [
+   "§5.4 (portão e portas de evidência) inteiro: só as linhas 462 e 470 por grep; o que ele diz da triagem jurídica leve na Entrada não foi lido",
+   "§11 (cota de Vicente e amostra sorteada): fora do recorte pedido",
+   "§8 e §10 inteiros: só por grep",
+   "Anexo C inteiro: só o grep no C.3 e a linha 1690; a fonte de Eτ não foi aberta (sem web)",
+   "Corpo dos scripts: só docstrings e nomes de funções; não se testou se _comum.py aceita $ref",
+   "trilhas/2026-10-17_verificacao/falta-F-0003.json: não aberto",
+   "Os movimentos rastrear e devolver, as habilidades de rodada A e os agentes fora do organizar",
+   "Web: nenhuma consulta. Nenhum fato externo novo foi afirmado, por isso não há lista de fatos com URL",
+   "legado/: não lido, por regra"
+  ]
+ }
+}

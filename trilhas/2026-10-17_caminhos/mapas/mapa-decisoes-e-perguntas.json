@@ -1,0 +1,378 @@
+{
+ "resumo": "Fiz a separação no texto da Fundação (commit 118f65c), à luz das D-015 a D-033 e do modo de trabalhar de 17/10. O que resta aberto é pouco. A maior parte já tem resposta: no plano, numa decisão ou num valor provisório [PROPOSTA]. Também entram aí perguntas de rumo, que o piloto alimenta sem que nenhuma o trave, e coisas que só contam para publicar ou para a fase 2.\n\n**Só dois pontos travam de fato o caminho até a ferramenta em uso:**\n\n1. **As 2 ou 3 primeiras fontes (ambientes) do piloto.** O §7 diz que a escolha é de Vicente. Um padrão possível: o rastreador propõe essas fontes pelas fichas de acesso, e Vicente as aprova junto com o brief, sem pergunta à parte.\n2. **Onde fica o material do piloto enquanto ele não é publicação.** Aqui há um conflito real entre decisões vigentes. A D-021 e o §5.1 (linha 394) dizem que \"o que entra no Git é publicação aberta\". O mapa de custódia põe `entrada/` e `acervo/` no Git (linha 404). E a D-032 diz que piloto não é publicação. A trava cai no primeiro commit de material coletado, não no início do piloto. Um padrão possível dentro do D-021 e do D-033: um repositório privado na conta Indalt para `entrada/` e `acervo/` durante o piloto. O público continua com a Fundação, as trilhas, os logs, os esquemas, os scripts e as habilidades.\n\n**Mais três pontos travam só a etapa em que entram, e cada um tem padrão:**\n- **A leitura dos termos do GitHub Actions** (o serviço de máquinas agendadas do GitHub). A D-033 já troca a saída de reserva: se o GitHub barrar, a rotina vai para outra nuvem, não para \"rodar em sessão\".\n- **O teto das rotinas.** O §8 o punha na fase 2 e agora ele vem para o piloto. Padrão: dentro dos 300 mil tokens por semana da D-023.\n- **Onde ficam as chaves de acesso e a conta de e-mail dos Alertas do Google.** Só importa se a fonte ou o canal escolhido precisar.\n\nTudo isso pode ser resolvido num único ato, a aprovação do roteiro.\n\n**Mudanças de plano que as D-031 a D-033 trazem:**\n- **Ordem dos passos.** O piloto atravessa os Passos 1, 2, 4, 5 e a parte de fichas do 6 num só ciclo, sem publicar.\n- **Camada 1** (scripts sem IA). Liga já no piloto e procura CLB em geral, não só a cajuína.\n- **Camada 2** (a rotina do Claude Code na nuvem). Sai da fase 2: o teste e o uso entram no piloto, depois que cada habilidade passar nos validadores com pares reais.\n- **Saída de reserva.** Onde estava \"rodar em sessão\", passa a valer a outra nuvem com o GitHub como repositório (D-033).\n- **§8.** Lei 13.123, Falta F-0003 e licença vão para um bloco \"só para publicar\".\n- **§8 e §10 se reorganizam.** De um lado, o que trava. Do outro, os insumos para reavaliar o plano, cada um dizendo aonde quer chegar.\n\nNada foi gravado, e nada foi buscado na web.",
+ "itens": [
+  {
+   "origem": "§8 linha 807 (caso-piloto: qual CLB); §7 linha 691",
+   "texto_curto": "Qual CLB é o caso-piloto",
+   "classe": "resolvido",
+   "motivo": "A D-031 [VIGENTE] responde: a cajuína, começando pelo caju, que é o insumo. As outras bebidas de caju entram pelas rotinas, que procuram CLB em geral, e não pelo piloto (diretriz da D-031).",
+   "o_que_a_execucao_faz": "Começa as buscas do piloto pelo caju (termo, variantes e descritores processuais) e leva a cajuína do bruto à ficha. Na próxima versão, o §8 e o §7 trocam 'único bloqueio' pela D-031."
+  },
+  {
+   "origem": "§8 linha 807 (as 2 ou 3 primeiras fontes reais); §7 linhas 668 e 691",
+   "texto_curto": "As 2 ou 3 primeiras fontes do piloto",
+   "classe": "decisao_de_vicente_que_bloqueia",
+   "motivo": "O §7 (linha 691) diz que a escolha é de Vicente e que as fontes decidem quais adaptadores nascem primeiro. Sem elas, o Passo 1 não tem por onde entrar. O número '2 ou 3' é [PROPOSTA] (linha 668).",
+   "o_que_a_execucao_faz": "Trava o início da coleta do Passo 1. Um padrão possível: o rastreador monta as fichas de acesso (habilidade ficha-de-acesso, §5.2) dos ambientes candidatos já registrados na pesquisa, preferindo ambientes abertos, sem proteção anti-robô, com texto pesquisável e cobertura desde 1900. Ele propõe 2 ou 3 onde caju ou cajuína aparecem, e Vicente aprova a lista dentro do brief. Os candidatos ilustram e não limitam, e nenhum acesso foi conferido nesta rodada."
+  },
+  {
+   "origem": "§5.1 linhas 394 e 404 (o Git público é publicação; entrada/ e acervo/ no Git) diante da D-032 (piloto não é publicação); §8 linha 809",
+   "texto_curto": "Onde vive o material do piloto, se o Git público já é publicação",
+   "classe": "decisao_de_vicente_que_bloqueia",
+   "motivo": "Conflito entre decisões vigentes, e não problema inventado. A D-021 e o §5.1 dizem que tudo o que entra no Git, inclusive a quarentena, é publicação aberta. O mapa de custódia [PROPOSTA] põe as entradas brutas, as Evidências com trecho e as fichas no Git. A D-032 diz que piloto não é publicação. Commitar a ficha e os trechos da cajuína no repositório público seria publicar, justamente o que a D-032 manda não problematizar agora.",
+   "o_que_a_execucao_faz": "Trava o primeiro commit e push de material coletado (o ritual do §5.5, linha 512), não o resto do piloto. Um padrão possível dentro da D-021 (fechar o repositório como passo futuro) e da D-033 (o GitHub fica como repositório): durante o piloto, `entrada/` e `acervo/` vivem num repositório privado da conta Indalt, e o repositório público continua com a Fundação, as trilhas, os logs, os esquemas, os scripts e as habilidades. Publicar passa a ser levar ao público, decidido com Lei 13.123, F-0003 e licença. Custos já registrados na Fundação: no plano gratuito, a revisão obrigatória só existe em repositório público (linha 396, oficial, Anexo C); o Actions em repositório privado tem 2.000 minutos por mês (linha 505, Anexo C)."
+  },
+  {
+   "origem": "§5.5 linha 508; §7 linha 741; §8 linha 814 (leitura dos termos do GitHub Actions)",
+   "texto_curto": "Aceitar a leitura dos termos do GitHub Actions",
+   "classe": "decisao_de_vicente_que_bloqueia",
+   "motivo": "A Fundação diz que Vicente decide se aceita a leitura proposta: a coleta produz o conteúdo do próprio repositório, como no Flat Data. A D-033 muda a saída de reserva: se o GitHub impedir, a execução vai para outra nuvem, e não para a máquina de Vicente. A aceitação da leitura continua sendo dele.",
+   "o_que_a_execucao_faz": "Trava só o ligar da camada 1 no Actions. Padrão possível: aceitar a leitura para os scripts sem IA. Se os termos, os limites ou a desativação de agendamentos barrarem (60 dias sem atividade em repositório público, não conferido, F-08), a camada passa à rotina do Claude Code na nuvem, que já está no plano (camada 2). Um serviço de nuvem fora do plano pede decisão que o nomeie. Os termos são reconferidos na hora de ligar."
+  },
+  {
+   "origem": "§8 linha 823 (teto das rotinas na nuvem, fase 2); §5.5 linha 511; §10 pergunta 16 (linha 890)",
+   "texto_curto": "Teto das rotinas na nuvem",
+   "classe": "decisao_de_vicente_que_bloqueia",
+   "motivo": "A D-032 faz as rotinas rodarem de verdade já no piloto, então o teto que o §8 punha na fase 2 passa a ser necessário agora. O §5.5 diz que o teto das rotinas é de Vicente.",
+   "o_que_a_execucao_faz": "Trava só a primeira rotina com IA. Padrão possível: as rotinas cabem dentro dos 300 mil tokens por semana em agentes da D-023. O uso é lido em claude.ai/settings/usage antes e depois de cada rodada, como diz o §5.5, e ao atingir o teto tudo para com o estado salvo. A pergunta 16 (como distribuir o consumo) vira insumo, medido no piloto."
+  },
+  {
+   "origem": "§5.1 linha 409 (chaves de acesso a serviços: 'onde, a decidir')",
+   "texto_curto": "Onde ficam as chaves de acesso",
+   "classe": "decisao_de_vicente_que_bloqueia",
+   "motivo": "Com as rotinas rodando fora da máquina de Vicente (D-032, D-033), uma fonte que exija chave precisa de um lugar fora da pasta versionada. A Fundação deixa isso a decidir.",
+   "o_que_a_execucao_faz": "Trava só se uma das fontes ou rotinas escolhidas exigir chave. Padrão possível: a chave fica no cofre de segredos do serviço que roda a rotina, nunca na pasta nem no Git. Os recursos desse cofre não foram conferidos nesta rodada."
+  },
+  {
+   "origem": "§5.4 linha 451 (e-mail dedicado: 'onde fica a conta, Passo 4'); §7 linha 742",
+   "texto_curto": "Conta do e-mail que recebe os Alertas do Google",
+   "classe": "decisao_de_vicente_que_bloqueia",
+   "motivo": "Na fase 1, o e-mail só recebe os Alertas do Google, um dos canais de monitoramento das rotinas que encontram CLB em geral. Abrir a conta depende de Vicente.",
+   "o_que_a_execucao_faz": "Trava só o canal dos Alertas. Os ambientes com ficha de acesso seguem sem ele. Padrão possível: uma caixa dedicada que Vicente já controle, lida por script, sem dado pessoal de terceiros no Git."
+  },
+  {
+   "origem": "§8 linha 808; §5.4 linha 484; §7 Passo 6 linha 760 (caminho na Lei 13.123)",
+   "texto_curto": "Caminho na Lei 13.123 (SisGen, consentimento prévio informado, CGen)",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "A Fundação já diz que não bloqueia o início da fase 1, só o que se publica (linha 484). A D-032 manda não problematizá-lo agora.",
+   "o_que_a_execucao_faz": "O juridico registra Faltas onde couber (modo de fazer com planta nativa ou fermento), sem travar o piloto. O caminho volta quando a publicação for decidida, antes do Passo 6, com o guia de liberação já preparado no Passo 1."
+  },
+  {
+   "origem": "§8 linha 809; §5.4 (Falta F-0003)",
+   "texto_curto": "F-0003: até onde o Git público já é publicação",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "A diretriz da D-032 põe a F-0003 entre o que só importa para publicar. O efeito prático dela no piloto é o item 'onde vive o material do piloto', tratado à parte.",
+   "o_que_a_execucao_faz": "Mantém a Falta aberta, com o guia de licença de texto, imagem e áudio preparado pelo juridico no Passo 1. O 'quando' do §8 passa de 'Passo 1' a 'quando a publicação for decidida'."
+  },
+  {
+   "origem": "§8 linha 817; §5.4 linha 489 ([PROPOSTA; decisão de Vicente])",
+   "texto_curto": "Licença do acervo",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "Só rege o uso do que se publica. O §8 já a põe antes do Passo 6.",
+   "o_que_a_execucao_faz": "Nada no piloto além de guardar a regra de cada fonte de terceiros nos metadados. Volta antes do Passo 6."
+  },
+  {
+   "origem": "§5.4 linha 491 (consulta jurídica pontual)",
+   "texto_curto": "Consulta com profissional antes do primeiro contribuinte externo",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "É antes do primeiro contribuinte externo, e a fase 1 não recebe contribuições (D-026, §7 linha 667).",
+   "o_que_a_execucao_faz": "Nada. Volta com o gatilho da fase 2."
+  },
+  {
+   "origem": "§8 linha 815; §7 linha 742; §5.1 linha 406",
+   "texto_curto": "Onde vivem os dados pessoais dos canais de pessoas",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "Os canais de pessoas são da fase 2. Na fase 1 não há contribuinte (D-026).",
+   "o_que_a_execucao_faz": "Nada. Volta com o gatilho da fase 2 (§7, linha 679, condição 3)."
+  },
+  {
+   "origem": "§8 linha 816; §4 linhas 297 e 467; §10 pergunta 21 (linha 895)",
+   "texto_curto": "P48 para entrevistas feitas pelo projeto",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "O §8 a põe na fase 2. A porta está fechada e o depoimento já gravado em acervo entra por link com marca de tempo [PROPOSTA].",
+   "o_que_a_execucao_faz": "No piloto, usa só depoimento já gravado, por link com marca de tempo, sem republicar o áudio. Volta na fase 2."
+  },
+  {
+   "origem": "§8 linha 819; §5.9 linha 562; §4 linha 328; §10 pergunta 5 (linha 879)",
+   "texto_curto": "Grupos (tiers), entradas cumulativas, cadastro prévio, 'tier mais caro'",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "Os tiers organizam o que cada grupo vê primeiro no site, e isso é do Passo 6.",
+   "o_que_a_execucao_faz": "Nada no piloto. Volta no Passo 6, com as fichas do piloto como material para pensar as entradas."
+  },
+  {
+   "origem": "§8 linha 824",
+   "texto_curto": "Forma jurídica do projeto",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "Hoje Vicente é o responsável como pessoa natural (D-026). O §8 diz que só volta se o projeto ganhar uma organização.",
+   "o_que_a_execucao_faz": "Nada. Volta se houver organização."
+  },
+  {
+   "origem": "§8 linha 820; §7 Passo 5 linha 749",
+   "texto_curto": "Régua de 4 filtros (P14)",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "O Passo 5 diz que a régua vale para contribuições de pessoas (fase 2). Recuperá-la no legado é tarefa do Passo 3, não pergunta.",
+   "o_que_a_execucao_faz": "No piloto, triagem só por valências. A régua é recuperada no Passo 3 e entra na fase 2."
+  },
+  {
+   "origem": "§8 linha 812; §7 Passo 1 linha 696",
+   "texto_curto": "Escala de valências e critério de PENDENTE_JULGAMENTO",
+   "classe": "valor_provisorio",
+   "motivo": "O Passo 1 autoriza: 'sem resposta, a sessão usa valores provisórios, marcados [PROPOSTA]'. O §8 já diz 'Passo 1 (provisório) e Passo 5'.",
+   "o_que_a_execucao_faz": "Define no contrato do Passo 1 uma escala provisória [PROPOSTA] com os critérios do funil (P85–P87). Ajustar um critério não zera os outros, e a quarentena não descarta. Calibra no Passo 5 com o que o piloto mediu."
+  },
+  {
+   "origem": "§8 linha 811; §10 pergunta 6 (linha 880)",
+   "texto_curto": "Unidade da ficha: termo ou CLB situada",
+   "classe": "valor_provisorio",
+   "motivo": "O §8 dá o valor de espera: 'até lá, ligação muitos para muitos'. A linha 628 já liga 'ficha' a 'CLB situada'. O Passo 1 autoriza o valor provisório (linha 696).",
+   "o_que_a_execucao_faz": "Usa a ficha como CLB situada (a cajuína de um lugar e de um tempo) e o Termo como entrada própria, com ligação muitos para muitos. A pergunta 6 fica como insumo, alimentada pelo que o piloto mostrar."
+  },
+  {
+   "origem": "§6 linha 628 (estado editorial da ficha: 'valores a definir no Passo 1')",
+   "texto_curto": "Valores do estado editorial da ficha",
+   "classe": "valor_provisorio",
+   "motivo": "A Fundação entrega a definição ao Passo 1, junto com os contratos de dados.",
+   "o_que_a_execucao_faz": "Define os valores no esquema da ficha do Passo 1, marcados [PROPOSTA]. O valor 'publicada' existe, mas nenhuma ficha do piloto o recebe (D-032)."
+  },
+  {
+   "origem": "§8 linha 813; §11 linha 902; §4 linhas 243 e 246; §10 pergunta 12 (linha 886)",
+   "texto_curto": "Tamanho do lote e cota de juízo",
+   "classe": "valor_provisorio",
+   "motivo": "A D-016 [VIGENTE] diz que os '15' nunca são teto de coleta. A cota de até 15 itens por semana, na ordem fixada, é [PROPOSTA] (§11).",
+   "o_que_a_execucao_faz": "Coleta sem teto. A cota de juízo é de até 15 itens por semana, nesta ordem: o que sustenta aviso, saúde ou política; contribuições (nenhuma na fase 1); amostra sorteada com semente registrada. O lote de máquina é medido no piloto. A pergunta 12 fica como insumo para os Passos 4 e 5."
+  },
+  {
+   "origem": "§8 linha 826; §5.4 [PROPOSTA]; §10 pergunta 18 (linha 892)",
+   "texto_curto": "W e etnografia: o que ancora a compreensão local",
+   "classe": "valor_provisorio",
+   "motivo": "Há valor [PROPOSTA]: W se ancora na fala de quem pratica. A D-018 diz que o não captado é Falta, dita e nunca completada.",
+   "o_que_a_execucao_faz": "No piloto, W só nasce de fala de quem pratica. A etnografia que diz 'comum na região' entra como Evidência, com a voz da autora ou do autor. Onde não há fala, fica Falta. A pergunta 18 fica como insumo: aonde quer chegar é saber quando a etnografia basta para W."
+  },
+  {
+   "origem": "§5.6 linha 520; §8 linha 818 (Quartz [PENDENTE]; componente da vista 4D)",
+   "texto_curto": "Gerador do wiki e componente da vista 4D",
+   "classe": "valor_provisorio",
+   "motivo": "A Fundação traz uma recomendação escrita (Quartz, só com recursos nativos). Hospedar e publicar ficam para o Passo 6 (linha 520). A vista 4D pede componente próprio e é do Passo 7. A D-032 pede usar o que foi desenvolvido, e o componente ainda não foi.",
+   "o_que_a_execucao_faz": "Se o piloto chegar ao wiki, gera o site localmente com a recomendação (Quartz), sem hospedar nem publicar. O grafo 4D roda como dados e cálculo por script (habilidade gerar-grafo), sem a vista. A escolha final do gerador volta no Passo 6, e a da vista no Passo 7."
+  },
+  {
+   "origem": "§8 linha 821",
+   "texto_curto": "Modo de produzir a ilustração",
+   "classe": "resolvido",
+   "motivo": "A própria linha traz o modo: desenho técnico de baixa resolução, a partir das etapas da ficha. Só a execução fica para o Passo 8.",
+   "o_que_a_execucao_faz": "Nada no piloto. Usa esse modo no Passo 8."
+  },
+  {
+   "origem": "§4 linhas 227 e 351 (orçamento do sistema [ABERTO]); §11 linha 904",
+   "texto_curto": "Orçamento do sistema",
+   "classe": "resolvido",
+   "motivo": "A D-023 responde (300 mil tokens por semana em agentes na fase 1, provisório), e o §8 (linha 828) já o lista entre as resolvidas. Os marcadores [ABERTO] das linhas 227 e 351 ficaram defasados.",
+   "o_que_a_execucao_faz": "Aplica a D-023 no piloto, que é operação da fase 1. Corrige os dois marcadores na próxima versão (acordo 5)."
+  },
+  {
+   "origem": "CLAUDE.md e AGENTS.md (modelos de avaliador, arquivista e campo-de-acao 'a definir no Passo 1'); §7 linha 698 (hipótese Haiku 5.5 para rotinas)",
+   "texto_curto": "Modelos dos agentes e das rotinas",
+   "classe": "resolvido",
+   "motivo": "A D-027 [VIGENTE] e o comentário de Vicente de 17/10 respondem. Sessão principal em Opus 5.5 médio, subagentes em Sonnet 5.5 alto. Modelos menores só são testados depois que o harness (o conjunto de instruções, exemplos e validadores de cada habilidade) passa nos validadores com pares reais.",
+   "o_que_a_execucao_faz": "Chama avaliador, arquivista e campo-de-acao em Sonnet 5.5 alto no piloto, e as rotinas começam no mesmo modelo. O teste do Haiku 5.5 e de outros fica para depois que cada habilidade passar com pares reais. O mais barato que passar fica."
+  },
+  {
+   "origem": "§7 linha 670 (kit de fonte primária na fase 1); habilidade kit-fonte-primaria ('só com pedido de Vicente e depois do caso-piloto'); princípio 15",
+   "texto_curto": "Usar o kit de fonte primária no piloto",
+   "classe": "resolvido",
+   "motivo": "A D-032 manda usar no piloto todas as habilidades desenvolvidas, e o §7 já põe o kit na fase 1. O princípio 15 (sob demanda, nunca automático) continua valendo: a demanda é o brief aprovado por Vicente, e o kit não é publicado.",
+   "o_que_a_execucao_faz": "Produz o kit como teste, no fim do ciclo do piloto, sobre a ficha da cajuína, sem publicar. A descrição da habilidade muda (ver mudanças de plano)."
+  },
+  {
+   "origem": "§2 princípio 12, linha 138; §4 linhas 256 e 344; §7 linha 785; §8 linha 822; §9 linha 842; §10 pergunta 13 (linha 887)",
+   "texto_curto": "Papel da cartilha de biossegurança",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "Não trava o piloto. Enquanto o risco não foi verificado, ele aparece como Falta, dita e não completada, e isso já está escrito. A leitura [PENDENTE] precisa da compreensão de Vicente.",
+   "o_que_a_execucao_faz": "Se o piloto achar risco, registra aviso e Falta, sem apagar nem discriminar. Aonde quer chegar: saber em que ponto um aviso vira cartilha. Volta no Passo 9, com o caso real do piloto, se houver."
+  },
+  {
+   "origem": "§8 linha 810; §10 pergunta 22 (linha 896); §10 pergunta 1 (linha 875)",
+   "texto_curto": "Modo de expor a ferramenta a quem lê",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "O próprio §8 diz 'depois do caso-piloto' e 'começa por compreender'. Piloto não é publicação (D-032).",
+   "o_que_a_execucao_faz": "O piloto produz o material que a pergunta pede: fichas, logs com alcance (D-030: o que se olhou e o que ficou de fora) e o wiki gerado localmente. Aonde quer chegar: como quem lê encontra, percorre e entende os limites do que lê. Volta antes do Passo 6."
+  },
+  {
+   "origem": "§8 linha 826; §10 pergunta 19 (linha 893); §7 linha 672",
+   "texto_curto": "Pergunta de pesquisa do grafo 4D",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "Não trava. Os dados em 4D nascem desde o início [PROPOSTA] e o grafo roda por script.",
+   "o_que_a_execucao_faz": "Gera o grafo da cajuína (X, Y, Z, W, μ e λ por linhagens). Aonde quer chegar: que pergunta o grafo deve responder, o que decide a primeira vista e o Passo 7. O piloto mostra o que o grafo já consegue dizer."
+  },
+  {
+   "origem": "§8 linha 826; §10 pergunta 17 (linha 891)",
+   "texto_curto": "Critério de revisionismo",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "A D-019 já dá a conduta: não julgamos, a fonte contrária só documenta, e a prática que atende aos critérios pode ignorar revisionismo. Falta só quem reconhece e por que critério.",
+   "o_que_a_execucao_faz": "Documenta a fonte contrária como tal, sem decidir que é revisionismo. Aonde quer chegar: um critério para reconhecer revisionismo sem julgar a prática, alimentado pelos casos que o piloto achar."
+  },
+  {
+   "origem": "§10 pergunta 20 (linha 894); princípio 4",
+   "texto_curto": "O que faz uma fonte ser forte",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "Só pesa no que sustenta decisão (política, saúde, ensino), e o piloto não produz decisão. O princípio 4 já dá a regra.",
+   "o_que_a_execucao_faz": "Marca os itens que sustentariam decisão e, sem fonte forte, deixa Falta. Aonde quer chegar: uma régua de força de fonte para os avisos e para a camada de ação."
+  },
+  {
+   "origem": "§10 perguntas 2, 3 e 8 (linhas 876, 877, 882)",
+   "texto_curto": "O item 'é exatamente isso', o que é ambiente, a relação com as comunidades",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "São perguntas para compreender. O plano já dá as definições de trabalho: ambiente e ficha de acesso no §5.2, e as Faltas no lugar do que não se capta.",
+   "o_que_a_execucao_faz": "Segue com as definições do §5.2. O relatório do piloto mostra a Vicente itens reais e ambientes reais. Aonde quer chegar: calibrar o monitoramento (pergunta 2), o Registro de Ambientes (pergunta 3) e a relação com as comunidades antes de publicar ou contatar (pergunta 8)."
+  },
+  {
+   "origem": "§10 perguntas 10 e 14 (linhas 884, 888)",
+   "texto_curto": "Ferramentas sem IA; Educação em relação ao campo de ação",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "Não travam. O princípio 11 e a regra de prudência 1 (o repetitivo vira script) já orientam. A camada Educação é do Passo 6.",
+   "o_que_a_execucao_faz": "O teste de reconstituição do Passo 2 e o kit gerado no piloto servem de material. Aonde quer chegar: o que Vicente mantém sozinho e como a Educação conversa com o campo de ação."
+  },
+  {
+   "origem": "§3 linha 163; §10 perguntas 7 e 11 (linhas 881, 885)",
+   "texto_curto": "Documentos da raiz do Drive e links do legado",
+   "classe": "insumo_para_reavaliar_o_plano",
+   "motivo": "São do legado, que não se abre antes do Passo 3. O Passo 3 não bloqueia o Passo 4 (§5.2), então não travam o piloto.",
+   "o_que_a_execucao_faz": "Nada no piloto. Aonde quer chegar: saber se esse acervo entra como ambiente no Passo 3 e quais links importam a Vicente."
+  },
+  {
+   "origem": "§10 pergunta 4 (linha 878)",
+   "texto_curto": "O que 'fidedigno e seguro' garante para quem envia documentação",
+   "classe": "so_publicacao_ou_fase_2",
+   "motivo": "Quem envia documentação só existe na fase 2. Para o acervo, o princípio 16 e a custódia do §5.1 já valem.",
+   "o_que_a_execucao_faz": "Nada no piloto. Volta com os canais de pessoas, na fase 2."
+  },
+  {
+   "origem": "§10 perguntas 9 e 15 (linhas 883, 889)",
+   "texto_curto": "Horas de curadoria; quem opera os agentes",
+   "classe": "resolvido",
+   "motivo": "Já marcadas como respondidas: D-016 (1 a 3 h por semana) e D-029 (só o Claude Code).",
+   "o_que_a_execucao_faz": "Aplica as duas. O piloto mede as horas reais das 4 semanas do gatilho."
+  }
+ ],
+ "mudancas_de_plano": [
+  {
+   "o_que_muda": "A ordem dos passos durante o piloto",
+   "texto_atual_e_linha": "§7 linha 660: 'Cada passo entrega algo verificável e só começa quando o anterior está pronto, com uma exceção: o Passo 3 (legado) não bloqueia o Passo 4 (§5.2).'",
+   "para": "O caso-piloto atravessa num só ciclo, com a cajuína, o Passo 1 (contratos, harness, juridico), o que falta do Passo 2 (validador, README, reconstituição), a camada 1 do Passo 4, o Passo 5 e a parte de fichas do Passo 6, sem publicar. Cada passo mantém o seu 'pronto quando', verificado no fim do ciclo. A exceção do Passo 3 continua.",
+   "decisao_que_sustenta": "D-032 (o piloto usa tudo, de ponta a ponta; piloto não é publicação)"
+  },
+  {
+   "o_que_muda": "Para que servem as rotinas na fase 1 e quando nascem",
+   "texto_atual_e_linha": "§7 linha 669: '[PROPOSTA] Máquina: o validador; o GitHub Actions só para o validador e as buscas do piloto, a partir do Passo 4 (§5.5).'",
+   "para": "As rotinas rodam de verdade já no piloto e procuram CLB em geral nos ambientes com ficha de acesso (consultas por termo, variantes e só por descritores), não só a cajuína. O validador roda a cada envio.",
+   "decisao_que_sustenta": "D-032 e diretriz da D-031 (as outras CLB entram pelo fluxo normal das rotinas)"
+  },
+  {
+   "o_que_muda": "A rotina do Claude na nuvem sai da fase 2",
+   "texto_atual_e_linha": "§7 linha 674: 'Fase 2, depois de medir as horas reais [PROPOSTA]: ... rotina do Claude na nuvem, depois de um teste (§5.5); ...'; §5.5 linha 506, coluna de quando: 'fase 2, depois de um teste com uma única rotina pequena num repositório de teste'",
+   "para": "O teste com uma única rotina pequena num repositório de teste é feito no piloto. Passando, a rotina faz o tratamento com IA com as habilidades e o harness de cada uma, depois que a habilidade passar nos validadores com pares reais em sessão (Passo 1, 'pronto quando'). A rotina sempre abre proposta numa ramificação `claude/` e nunca grava na versão principal.",
+   "decisao_que_sustenta": "D-032 ('cada rotina automática'), D-033 e D-027 (sem harness qualificado, nada de modelo menor)"
+  },
+  {
+   "o_que_muda": "Tratamento com IA por rotina já na fase 1",
+   "texto_atual_e_linha": "§1 linha 84: 'O tratamento com IA roda em sessão na fase 1 e, se aprovado, por rotina na fase 2 (§7).'; §5.5 linha 499: 'tratamento com IA, em sessão na fase 1 e por rotina na fase 2'; §5 linha 363: 'o tratamento com IA roda em sessão na fase 1'",
+   "para": "Na fase 1, o tratamento com IA roda em sessão e por rotina, esta depois do teste e dentro do teto das rotinas.",
+   "decisao_que_sustenta": "D-032"
+  },
+  {
+   "o_que_muda": "A proibição de criar rotinas e Actions antes do Passo 4",
+   "texto_atual_e_linha": "§5 linha 363: 'Nada desta seção é criado agora: não há rotina na nuvem nem GitHub Actions antes do Passo 4'; AGENTS.md linha 106: 'Não criar rotinas na nuvem nem GitHub Actions antes do Passo 4.'",
+   "para": "As rotinas e o Actions são criados no piloto. A camada 1 liga quando as fichas de acesso das fontes do piloto existirem. A camada 2 liga por habilidade, depois do teste e dos validadores. A publicação do wiki e do kit continua a partir do Passo 6.",
+   "decisao_que_sustenta": "D-032"
+  },
+  {
+   "o_que_muda": "A saída de reserva quando o GitHub não serve",
+   "texto_atual_e_linha": "§5.5 linha 508: 'Vicente decide se aceita essa leitura; se não, as buscas do piloto rodam em sessão, na máquina de Vicente.'; §8 linha 814: 'se a leitura não for aceita, as buscas do piloto rodam em sessão'",
+   "para": "Se o GitHub impedir (termos, limites ou agendamento desativado), as rotinas rodam em outra solução em nuvem, e o GitHub fica como repositório. A candidata já no plano é a camada 2 (rotina do Claude Code na nuvem, que roda também os scripts). Um serviço de nuvem fora do plano exige decisão que o nomeie.",
+   "decisao_que_sustenta": "D-033 (essência a registrar com a aprovação do roteiro) e D-021 ('considerar a nuvem para buscas e tratamentos com IA')"
+  },
+  {
+   "o_que_muda": "O papel do GitHub na casa do projeto",
+   "texto_atual_e_linha": "§5.1 linha 393: 'Repositório [VIGENTE] (D-021): Indalt/cultura-liquida, no GitHub ... sincronizado com esta pasta e com commits de Vicente.'",
+   "para": "Acrescentar: o GitHub é o repositório (histórico, versões, custódia). A execução das rotinas, das buscas e do tratamento com IA pode viver em outra nuvem quando o GitHub não comportar o potencial da ferramenta.",
+   "decisao_que_sustenta": "D-033"
+  },
+  {
+   "o_que_muda": "Onde vive o material do piloto antes de publicar",
+   "texto_atual_e_linha": "§5.1 linha 394: 'o que entra no Git é publicação aberta, e isso inclui o que está em quarentena'; linha 404: entradas brutas e acervo 'esta pasta e o repositório | sim'",
+   "para": "Durante o piloto, e até a publicação ser decidida, `entrada/` e `acervo/` ficam num lugar que não é publicação, por exemplo um repositório privado na conta Indalt. O repositório público continua com a Fundação, as trilhas, os logs, os esquemas, os scripts e as habilidades. Publicar passa a ser levar do privado ao público, com Lei 13.123, F-0003 e licença resolvidas. Este padrão é um caminho possível e pede decisão.",
+   "decisao_que_sustenta": "D-032 (piloto não é publicação), diante da D-021, que só seria ajustada por decisão nova de Vicente (ela já prevê fechar o repositório como passo futuro); D-033 (o GitHub como repositório)"
+  },
+  {
+   "o_que_muda": "Cumprimento da cadência D-012",
+   "texto_atual_e_linha": "§5.5 linha 497: '[PROPOSTA] Enquanto o tratamento com IA não estiver agendado, a D-012 está cumprida em parte.'; §9 linha 36 (mesma leitura)",
+   "para": "A D-012 passa a cumprida quando a rotina do piloto rodar o tratamento agendado.",
+   "decisao_que_sustenta": "D-032"
+  },
+  {
+   "o_que_muda": "Quais buscas a camada 1 faz e quando",
+   "texto_atual_e_linha": "§5.5 linha 505, coluna de quando: 'a partir do Passo 4: o validador e as buscas das 2 ou 3 fontes do caso-piloto'",
+   "para": "No piloto: o validador a cada envio e as buscas de CLB em geral nos ambientes com ficha de acesso, começando pelas 2 ou 3 fontes aprovadas.",
+   "decisao_que_sustenta": "D-032 e D-031"
+  },
+  {
+   "o_que_muda": "O caso-piloto deixa de ser o 'único bloqueio'",
+   "texto_atual_e_linha": "§7 linha 691: 'A escolha é de Vicente e é o único bloqueio (§8).'; §8 linha 807: 'único bloqueio do próximo passo'",
+   "para": "A CLB está decidida (cajuína, a partir do caju). Fica a lista das 2 ou 3 fontes, aprovada com o brief, e o lugar do material do piloto.",
+   "decisao_que_sustenta": "D-031"
+  },
+  {
+   "o_que_muda": "O §8 separa o que só vale para publicar",
+   "texto_atual_e_linha": "§8 linhas 808, 809 e 817 (Lei 13.123, 'antes do Passo 6'; F-0003, 'Passo 1'; licença, 'antes do Passo 6')",
+   "para": "Um bloco 'Só para publicar', com o 'quando' igual a 'quando a publicação for decidida (antes do Passo 6)'. A F-0003 deixa de constar como do Passo 1.",
+   "decisao_que_sustenta": "D-032"
+  },
+  {
+   "o_que_muda": "O teto das rotinas vem para o piloto",
+   "texto_atual_e_linha": "§8 linha 823: 'Teto das rotinas na nuvem | dentro da guarda de orçamento (D-023) | fase 2'",
+   "para": "Passa a 'Passo 1 (piloto)', com o padrão de caber nos 300 mil tokens por semana da D-023, medido antes e depois de cada rodada.",
+   "decisao_que_sustenta": "D-032 e D-023"
+  },
+  {
+   "o_que_muda": "A forma do §8 e do §10: o que trava e o que é insumo",
+   "texto_atual_e_linha": "§8 linha 801: '## 8. Decisões pendentes'; §10 linhas 871 e 873: '## 10. Perguntas abertas para compreender' e 'Perguntas servem para compreender...'",
+   "para": "O §8 lista só o que trava um passo, cada item com um padrão possível. O resto vai para o §10, renomeado 'Insumos para reavaliar o plano'. Cada pergunta diz aonde quer chegar e o que o piloto traz para ela, e nenhuma bloqueia a execução.",
+   "decisao_que_sustenta": "Comentário de Vicente de 17/10 sobre o modo de trabalhar (essência ainda sem número de decisão; a registrar com a aprovação do roteiro) e D-028"
+  },
+  {
+   "o_que_muda": "Quando o kit de fonte primária é usado",
+   "texto_atual_e_linha": "Descrição da habilidade kit-fonte-primaria: 'Harness pendente; só com pedido de Vicente e depois do caso-piloto.'",
+   "para": "Usado como teste no fim do ciclo do piloto, sem publicar. Depois, sob demanda (princípio 15).",
+   "decisao_que_sustenta": "D-032"
+  },
+  {
+   "o_que_muda": "O 'passo corrente' e as regras do AGENTS.md",
+   "texto_atual_e_linha": "AGENTS.md, 'Passo corrente' ('Próximo: Blocos 3 e 4 do brief...'), e a seção de decisões vigentes, que vai até a D-032",
+   "para": "O próximo passo é o caso-piloto como teste da ferramenta inteira (cajuína). Entram a D-033 e a regra das rotinas no piloto.",
+   "decisao_que_sustenta": "D-031, D-032 e D-033"
+  }
+ ],
+ "alcance": {
+  "olhado": [
+   "00_Fundacao_Cultura_Liquida.md, linhas 664 a 682 (§7: fase 1, fase 2 e gatilho)",
+   "00_Fundacao_Cultura_Liquida.md, linhas 801 a 831 (§8 inteiro)",
+   "00_Fundacao_Cultura_Liquida.md, linhas 871 a 932 (§10 e §11 inteiros)",
+   "§9 (832 a 870): só as linhas das D-015 a D-030, por grep, mais a linha 36 da tabela e a D-007 (linha 842)",
+   "grep de '[PENDENTE]', '[ABERTO]', 'Vicente decide', 'decisão de Vicente' e 'a definir' nas linhas 1 a 932 e 1627 a 1912 (as faixas dos Anexos C, D e E não deram resultado), com as linhas 484 e 489 lidas por inteiro",
+   "Para citar o texto atual das mudanças de plano, um grep de rotinas, nuvem e Actions nas linhas 1 a 932, e as faixas 363, 391 a 410 (§5.1 e mapa de custódia), 505 a 511 (§5.5), 689 a 703 (Passo 1), 704 a 712 (Passo 2) e 739 a 764 (Passos 4 a 6); grep de valências nas linhas 1 a 932",
+   "trilhas/decisoes/D-031.json e D-032.json; trilhas/2026-10-16_execucao-v0.2.md, linhas 195 a 215; grep de D-031 a D-033 nos .md e .json do repositório",
+   "AGENTS.md (grep de Actions, nuvem e Passo 4), .gitignore, e as listagens de esquemas/ e scripts/"
+  ],
+  "fora": [
+   "Anexos A e B (verbatim), não lidos",
+   "Anexo C lido só por grep, sem resultado; as condições do Actions e das rotinas citadas aqui vêm do texto do §5.5, com o nível que a Fundação dá",
+   "§5.2, §5.3, §5.4 (fora das linhas 451, 467, 484, 489 e 491), §5.6 a §5.9 (fora das linhas 520 e 562), §6 (fora da linha 628) e os Passos 0, 3 e 7 a 10, não lidos por inteiro",
+   "As linhas do §9 anteriores à D-015 (fora a D-007 e a D-012, vistas por grep)",
+   "trilhas/2026-10-15_pesquisa/ (índice e ambientes candidatos), não lidos: os candidatos a fonte do piloto não foram levantados",
+   "Rascunho em trilhas/2026-10-17_caminhos/, não lido",
+   "Web: nada conferido. Termos e limites do GitHub Actions, cofre de segredos, rotinas do Claude, natureza da cajuína e status do caju na Lei 13.123 estão não conferidos nesta rodada",
+   "legado/, não aberto",
+   "Nada foi gravado e nenhum commit foi feito"
+  ]
+ }
+}
