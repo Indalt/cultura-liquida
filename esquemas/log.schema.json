@@ -33,6 +33,16 @@
     "chamadas": {"type": ["integer", "null"], "minimum": 0},
     "duracao_s": {"type": ["number", "null"], "minimum": 0},
     "erros": {"type": "array", "items": {"type": "string"}},
+    "alcance": {
+      "type": "object",
+      "description": "O alcance da ferramenta nesta execução: o log fala só do que se conseguiu olhar, não de tudo o que se conhece sobre o assunto. 'olhado' = o que de fato se olhou (ambientes, consultas, arquivos e faixas de linhas, páginas abertas, total informado x total visto); 'fora' = o que ficou de fora ou não abriu, e por quê. Opcional; a linha do hook não o traz.",
+      "additionalProperties": false,
+      "required": ["olhado"],
+      "properties": {
+        "olhado": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "fora": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
     "sessao": {"type": "string"},
     "agente_id": {"type": "string"},
     "fonte_do_registro": {"enum": ["curador", "hook-SubagentStop"]}

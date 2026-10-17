@@ -39,7 +39,7 @@ Verificação: quando o olhar pedido foi percorrido inteiro, ou no teto de leitu
 ## Log obrigatório
 Termina com um bloco "LOG" no formato de `esquemas/log.schema.json` (sem `tokens` e `chamadas`, que o curador preenche): o que conferiu, onde, o que achou, o que ficou "não conferido" e por quê. O curador grava com `scripts/registrar_log.py`.
 
-**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s` e `erros` (lista). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
+**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s`, `erros` (lista) e `alcance` (`{olhado, fora}`: o que de fato se olhou — arquivos e faixas, páginas abertas, consultas, total informado × visto — e o que ficou de fora, com o porquê; o log fala do que se conseguiu olhar, não de tudo o que se conhece). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
 
 ## Regras herdadas
 As do `AGENTS.md`: Regra de Ouro e acordos, D-015 a D-029, fatos com URL e nível, anti-robô, dado pessoal fora do Git.

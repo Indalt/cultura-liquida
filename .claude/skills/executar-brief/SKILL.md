@@ -49,7 +49,7 @@ Fim dos blocos autorizados, ou um dos quatro casos de parada. Sempre com o estad
 Não lança agentes em paralelo, não usa Workflow sem pedido, não reabre decisão, não executa bloco não autorizado, não confere o próprio trabalho como verificação final.
 
 ## Campos do log
-`agente: "curador"`, `habilidade: "executar-brief"`, `entrada_ref` (brief e bloco), `acoes` (passos), `resultados` (commits), `decisoes` (o que foi feito, pulado ou deixado "não conferido", com motivo), `tokens` e `chamadas` dos agentes da janela, `erros`.
+`agente: "curador"`, `habilidade: "executar-brief"`, `entrada_ref` (brief e bloco), `acoes` (passos), `resultados` (commits), `decisoes` (o que foi feito, pulado ou deixado "não conferido", com motivo), `tokens` e `chamadas` dos agentes da janela, `erros`, `alcance` (o que se olhou e o que ficou fora).
 
 ## Exemplos e validador
 - **Conta real da janela 1** (antes do C2): consumido 81.852, maior lote 81.852, estimativa 60.000 → folga 518.148 ≥ 163.704 → **pode** (`scripts/orcamento.py`, passa).

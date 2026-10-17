@@ -80,6 +80,7 @@ Os modelos são provisórios até os testes do Passo 1. Avaliador, arquivista e 
 - Todo agente tem teto: pesquisa web, 15 a 20 chamadas; leitura só por `grep -n` e faixas de linhas.
 - Para planejar: cerca de 60 mil tokens por agente Sonnet com teto (medidos: 34 a 82 mil).
 - Todo agente grava log (`scripts/registrar_log.py`); o curador soma os tokens no checklist.
+- O log registra o **alcance da ferramenta** (campo `alcance`: o que se olhou e o que ficou fora): fala só do que se conseguiu olhar, não de tudo o que se conhece. [essência a confirmar por Vicente, 17/10]
 
 ## Fatos e fontes
 - Todo fato novo traz **URL e nível**: "oficial" só se a página oficial abriu; senão "secundária" ou "não conferido". Nada de memória apresentada como conferido.

@@ -36,7 +36,7 @@ Artefato pronto com os critérios de aceitação do pedido, ou lacuna devolvida 
 ## Log obrigatório
 Bloco "LOG" no formato de `esquemas/log.schema.json`. O curador grava com `scripts/registrar_log.py`.
 
-**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s` e `erros` (lista). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
+**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s`, `erros` (lista) e `alcance` (`{olhado, fora}`: o que de fato se olhou — arquivos e faixas, páginas abertas, consultas, total informado × visto — e o que ficou de fora, com o porquê; o log fala do que se conseguiu olhar, não de tudo o que se conhece). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
 
 ## Regras herdadas
 As do `AGENTS.md`, em especial os princípios 12, 14 e 15 e a D-020.
