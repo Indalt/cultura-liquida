@@ -55,6 +55,7 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 - **D-027:** execução em Opus 5.5 médio com harness; subagentes em Sonnet 5.5 alto (sugestão medida); depois, modelos por tarefa escolhidos **por teste**.
 - **D-028:** a execução não para para aprovar o que já foi decidido.
 - **D-029:** os agentes, habilidades e harness ficam em `.claude/` antes da v0.2, que é escrita por eles, com logs; só o Claude Code os opera; o caso-piloto continua no Passo 1.
+- **D-030:** os logs registram o **alcance** da ferramenta: o que se olhou e o que ficou fora; cada agente e o projeto inteiro falam só do que se conseguiu olhar, nunca de tudo o que se conhece, como a ciência preconiza.
 
 ## Passo corrente
 - **Feito:** Blocos 1 e 2 (repositório, conferências C1 e C2) e Bloco 2.5 (agentes, habilidades, harness).
@@ -80,7 +81,7 @@ Os modelos são provisórios até os testes do Passo 1. Avaliador, arquivista e 
 - Todo agente tem teto: pesquisa web, 15 a 20 chamadas; leitura só por `grep -n` e faixas de linhas.
 - Para planejar: cerca de 60 mil tokens por agente Sonnet com teto (medidos: 34 a 82 mil).
 - Todo agente grava log (`scripts/registrar_log.py`); o curador soma os tokens no checklist.
-- O log registra o **alcance da ferramenta** (campo `alcance`: o que se olhou e o que ficou fora): fala só do que se conseguiu olhar, não de tudo o que se conhece. [essência a confirmar por Vicente, 17/10]
+- O log registra o **alcance da ferramenta** (campo `alcance`: o que se olhou e o que ficou fora): fala só do que se conseguiu olhar, não de tudo o que se conhece. (D-030)
 
 ## Fatos e fontes
 - Todo fato novo traz **URL e nível**: "oficial" só se a página oficial abriu; senão "secundária" ou "não conferido". Nada de memória apresentada como conferido.

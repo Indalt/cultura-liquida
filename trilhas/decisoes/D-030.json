@@ -1,0 +1,14 @@
+{
+  "id": "D-030",
+  "data": "2026-10-17",
+  "essencia": "Os logs registram o alcance da ferramenta: o que de fato se olhou e o que ficou de fora. A ferramenta — cada agente ou script e também o projeto inteiro, diante de quem lê o acervo — fala só do que se conseguiu olhar, nunca de tudo o que se conhece, como a ciência preconiza.",
+  "diretriz": "Todo log traz o campo alcance (olhado, fora). O que o projeto publica diz o seu alcance junto do que afirma (o que foi olhado, onde, até quando, e o que ficou de fora), sem apresentar o recorte como o todo.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-17",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seções 'Janela 4' (comentário de 17/10) e 'Janela 5' (confirmação)",
+  "palavras_conferidas": [
+    {"palavra": "a ferramenta", "sentido_confirmado": "cada agente, habilidade ou script que produz um resultado e também o projeto inteiro, falando para quem lê o acervo"},
+    {"palavra": "como a ciência preconiza", "sentido_confirmado": "o resultado vale para o que foi examinado e diz os seus limites"}
+  ],
+  "marcador": "VIGENTE"
+}

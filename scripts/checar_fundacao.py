@@ -3,7 +3,7 @@
 Confere, por busca exata:
   1. marcadores de status ([VIGENTE], [PROPOSTA], [PENDENTE], [ABERTO], [ADIADO]);
   2. "Versão 0.2", "Anexo D", "Anexo E", "C.3" e a legenda das P-refs ("buscar `#### Pn`");
-  3. cada decisão D-015 a D-029;
+  3. cada decisão D-015 a D-030;
   4. cada entidade do §6 (lista do plano, Implementação, passo 4, mais Recorte, Lugar e papéis);
   5. opcional (--essencias): para cada D-nnn, a linha que a registra contém os termos-chave da
      essência confirmada; e não contém transcrição literal da fala original (--falas).
@@ -38,7 +38,7 @@ EXIGIDOS = {
     "legenda-pref": "#### Pn",
     "falta": "Falta",
 }
-DECISOES = [f"D-{n:03d}" for n in range(15, 30)]
+DECISOES = [f"D-{n:03d}" for n in range(15, 31)]
 ENTIDADES_6 = [
     "Ambiente", "Consulta", "Execução", "Entrada", "Fonte", "Trecho", "Evidência", "Proposição",
     "Termo", "CLB situada", "Elemento de prática", "Compreensão local", "Transformação", "Falta",

@@ -49,7 +49,7 @@ Não corrige, não reescreve, não vota, não confere fato na web, não aceita a
 `agente: "auditor"`, `habilidade: "verificar-fundacao"`, `entrada_ref` (arquivo e commit), `acoes` (comandos rodados), `resultados` (número de achados por tipo), `decisoes` (achado confirmado = `aceito`; não confirmado = `descartado`, com o motivo), `erros`.
 
 ## Exemplos e validador
-- **v0.1 → as ausências conhecidas:** `checar_fundacao.py --commit e868a98` (a v0.1 gravada no Git, para o teste não mudar quando a v0.2 sair) dá 37 achados (D-015 a D-029, "Versão 0.2", Anexos D e E, C.3, legenda das P-refs e 17 entidades do §6). Reprova como esperado.
+- **v0.1 → as ausências conhecidas:** `checar_fundacao.py --commit e868a98` (a v0.1 gravada no Git, para o teste não mudar quando a v0.2 sair) dá 38 achados (D-015 a D-030; eram 37 antes da D-030, "Versão 0.2", Anexos D e E, C.3, legenda das P-refs e 17 entidades do §6). Reprova como esperado.
 - **Divergência real de 16/10:** a D-018 tinha perdido "traduzível" ([exemplos/d018-sem-traduzivel.md](exemplos/d018-sem-traduzivel.md)). Reprova; a versão certa ([exemplos/d018-correta.md](exemplos/d018-correta.md)) passa.
 - **Anexos intactos:** `comparar_anexos.py` na cópia atual. Passa.
 - **Relatório com achado sem linha** ([exemplos/erro-achado-sem-linha.json](exemplos/erro-achado-sem-linha.json)). Reprova; o relatório de exemplo ([exemplos/relatorio-exemplo.json](exemplos/relatorio-exemplo.json)) passa.
