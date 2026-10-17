@@ -1,0 +1,244 @@
+{
+  "arquivo": "00_Fundacao_Cultura_Liquida.md",
+  "commit": "9212e8a",
+  "data": "2026-10-17",
+  "verificador": "auditor (verificar-fundacao 0.1.0, passada 3 de 3)",
+  "olhar": "c-nivel-e-termos",
+  "achados": [
+    {
+      "id": "C-001",
+      "tipo": "contradicao",
+      "descricao": "Resíduo já conhecido, confirmado: o C.1 (L-04) ainda atribui o art. 4º, VII da Res. IPHAN 1/2006 a fonte secundária; o C.3 (linha 1712) diz não conferido no texto (só citada em resumo de busca) e o §7 (linha 780) diz não foi conferido.",
+      "linha": 1650,
+      "trecho": "A anuência dos detentores consta do art. 4º, VII, segundo fonte secundária.",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n \"4º, VII\" 00_Fundacao_Cultura_Liquida.md | cut -c1-360",
+        "saida": "1650: ...consta do art. 4º, VII, segundo fonte secundária | 1712: não conferido no texto | 780: não foi conferido"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-002",
+      "tipo": "fato_sem_nivel",
+      "descricao": "Fato externo com nível oficial, sem URL e sem item no Anexo C: tabela do IBGE de 2024 (bioma predominante por município) e o número 963 municípios em mais de um bioma. Busca por IBGE ou bioma depois da linha 1627 só acha o Anexo D (1832) e o Anexo E (1859, outra obra); nada em C.1, C.2 ou C.3.",
+      "linha": 538,
+      "trecho": "bioma derivado da tabela do IBGE de 2024 (oficial, com uma só conferência; 963 municípios estão em mais de um bioma",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "awk \"NR>1627 && /(IBGE|bioma)/\" 00_Fundacao_Cultura_Liquida.md",
+        "saida": "1832 (Anexo D, bioma como filtro) ; 1859 (Anexo E, Enciclopédia dos Municípios); nenhuma linha em C.1/C.2/C.3"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-003",
+      "tipo": "fato_sem_nivel",
+      "descricao": "Oficial sem URL exata no C.3: F-08 (cron, 60 dias, 2.000 min/mês) e F-09 (Pages no plano Free) dizem oficial (13/10), URL exata a registrar, só docs.github.com. A regra exige URL http(s) para oficial; o corpo usa F-08 como oficial (linha 505). O curador decide: registrar a URL ou rebaixar a secundária.",
+      "linha": 1780,
+      "trecho": "| F-08 | cron, atrasos e desativação após 60 dias; 2.000 min/mês em privado | oficial (13/10), URL exata a registrar | docs.github.com (URL exata a registrar) |",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n \"URL exata a registrar\" 00_Fundacao_Cultura_Liquida.md | cut -c1-200",
+        "saida": "1780 (F-08) e 1783 (F-09) oficial sem URL; 1727 e 1748 têm a mesma marca, mas secundária (permitido)"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-004",
+      "tipo": "fato_sem_nivel",
+      "descricao": "Duas citações oficial, C1 no corpo, sem URL na linha e remetendo à conferência C1, não ao Anexo C (483: Lei 9.610, art. 7º, II; 760: Lei 13.123, art. 12, §2º). Os itens existem no C.3 (1740 e 1718), então pode ser só forma de remissão.",
+      "linha": 483,
+      "trecho": "(Lei 9.610, art. 7º, II; oficial, C1)",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -o -E \".{0,80}oficial, C1.{0,40}\" 00_Fundacao_Cultura_Liquida.md",
+        "saida": "483 e 760"
+      },
+      "estado": "nao_confirmado"
+    },
+    {
+      "id": "C-005",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "SisGen aparece pela primeira vez no §5.4 sem explicação; a explicação só vem no §8 (808) e no C.1 (1653), depois.",
+      "linha": 484,
+      "trecho": "o cadastro no SisGen é declaratório e pode ser feito por pessoa natural",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 \"SisGen\" 00_Fundacao_Cultura_Liquida.md | cut -c1-120",
+        "saida": "484 (primeira ocorrência); explicação só em 808 e 1653"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-006",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "LGPD aparece pela primeira vez no §5.1 sem nome por extenso nem explicação; Lei Geral não ocorre no arquivo.",
+      "linha": 395,
+      "trecho": "porque o Git não apaga de verdade o que já registrou (LGPD)",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 \"LGPD\" 00_Fundacao_Cultura_Liquida.md | cut -c1-90 ; grep -c \"Lei Geral\" 00_Fundacao_Cultura_Liquida.md",
+        "saida": "395 ; Lei Geral = 0 ocorrências"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-007",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "RSS aparece no §0 (leitura padrão) sem explicação; feed só é descrito no §5.3 (linha 428).",
+      "linha": 12,
+      "trecho": "Rastrear deixa de ser \"RSS criados por nós\" e passa ao modelo monitoramento × escavação",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 -E \"\bRSS\b\" 00_Fundacao_Cultura_Liquida.md | cut -c1-120",
+        "saida": "12: 3. Rastrear deixa de ser RSS criados por nós"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-008",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "PROV (W3C PROV, proveniência) aparece pela primeira vez no §7 sem explicação (SKOS e TBX são explicados na linha 103).",
+      "linha": 674,
+      "trecho": "exportações para SKOS, TBX e PROV, com os campos já compatíveis desde a fase 1 (§6)",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 -E \"\bPROV\" 00_Fundacao_Cultura_Liquida.md | cut -c1-60",
+        "saida": "674 (primeira ocorrência no arquivo)"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-009",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "Ficha de acesso aparece pela primeira vez na linha 404 e dá título ao §5.2, mas nenhuma linha do corpo diz o que é (ocorrências: 404, 411, 438, 741).",
+      "linha": 404,
+      "trecho": "Registro de Ambientes, fichas de acesso",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -E \"fichas? de acesso\" 00_Fundacao_Cultura_Liquida.md | head -5 | cut -c1-100",
+        "saida": "404, 411, 438, 741 no corpo; nenhuma define o termo"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-010",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "Valências (princípio 10, §2) aparece sem dizer o que são; a linha 308 só repete o pedido P85-P86 e a 372 usa triagem por valências. O princípio explica a quarentena, não o termo valência.",
+      "linha": 133,
+      "trecho": "10. **Quarentena não descarta; valências equilibradas** (P85–P87).",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -i \"valência\" 00_Fundacao_Cultura_Liquida.md | head -4 | cut -c1-120",
+        "saida": "133, 308, 372 (nenhuma define)"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-011",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "Git e commit aparecem pela primeira vez no §1 sem explicação; GitHub Actions (363) também sem explicação curta ali.",
+      "linha": 88,
+      "trecho": "sincronizado com esta pasta e com commits de Vicente (D-021). O repositório é **público**: o que entra no Git é publicação aberta",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 \"commit\" 00_Fundacao_Cultura_Liquida.md | cut -c1-80",
+        "saida": "88 (primeira ocorrência de commit e Git)"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-012",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "Recorte é usado no §5.2 (415), sempre por Recorte, antes da definição na linha 427 (§5.3), com só a remissão como no §6. Gravidade baixa.",
+      "linha": 415,
+      "trecho": "escavação (proposto → mapeando → minerando → exaurido, sempre por Recorte)",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 \"Recorte\" 00_Fundacao_Cultura_Liquida.md | cut -c1-60",
+        "saida": "415 (primeira) ; 427 (definição)"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-013",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "cron e UTC aparecem no §5.5 sem explicação.",
+      "linha": 505,
+      "trecho": "GitHub Actions** (agendamento por cron e a cada envio)",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 -E \"\bcron\b\" 00_Fundacao_Cultura_Liquida.md | cut -c1-60",
+        "saida": "505"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-014",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "Termos de baixa prioridade sem explicação na primeira ocorrência: Wikidata (438), FAIR (489), kit (363), token (227), DOI (597), VuFind e CKAN (430). Cada um por grep -n -m1; nenhum traz explicação na linha.",
+      "linha": 438,
+      "trecho": "Wikidata como semente de termos candidatos, nunca de abonações",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "for x in Wikidata FAIR kit token DOI VuFind; do grep -n -m1 -w \"$x\" 00_Fundacao_Cultura_Liquida.md; done",
+        "saida": "438, 489, 363, 227, 597, 430"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "C-015",
+      "tipo": "termo_sem_explicacao",
+      "descricao": "Degrau aparece pela primeira vez na linha 442 (deveres do degrau 2 (abaixo)): há remissão, não explicação; a tabela dos degraus vem em 475-481. Pode ser aceito como remissão.",
+      "linha": 442,
+      "trecho": "só abre quando os deveres do degrau 2 (abaixo) existirem",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n -m1 \"degrau\" 00_Fundacao_Cultura_Liquida.md | cut -c1-80",
+        "saida": "442"
+      },
+      "estado": "nao_confirmado"
+    }
+  ],
+  "resumo": {
+    "mecanico": "checar_fundacao.py 0 achados; comparar_anexos.py IDENTICO (e868a98); procurar_dado_pessoal.py 0 ocorrencias",
+    "correcoes_verificadas": {
+      "A-001": "ok (681 e 860)",
+      "A-002": "ok (153 e 417: PROPOSTA)",
+      "A-003": "ok (470: [PROPOSTA])",
+      "B-001": "ok (415: dois eixos)",
+      "B-002": "ok (363: repositório já é público)",
+      "B-003": "ok (417 e 660: exceção declarada)",
+      "B-004": "ok (451 e 742)",
+      "B-005": "ok (129 e 419: PROPOSTA a confirmar)",
+      "B-006": "ok (592: fase 1 sem bola de neve)",
+      "B-007": "ok (36)",
+      "B-008": "nao confirmado antes; 529 segue ABERTO só quanto a também sob demanda; 761 e 783 coerentes",
+      "J-001": "ok (486)",
+      "J-002": "ok (489 e F-22)",
+      "J-003": "ok (484 e 1717)",
+      "J-004": "ok (484: leitura a conferir)",
+      "J-005": "ok (484: URL do decreto)",
+      "J-006": "ok (479 e 483)",
+      "J-007": "ok (463 e 464)",
+      "J-008": "ok (782)",
+      "J-009": "ok (808)",
+      "J-010": "parcial: C.3 1712 ok; C.1 1650 mantém secundária (C-001)",
+      "J-011": "ok (1659 e 1730-1731)",
+      "J-012": "parcial: URL exata a registrar mas ainda oficial (C-003)",
+      "J-013": "ok (760)"
+    },
+    "d030": "conforme: linhas 10, 98, 865 e 896 dizem que logs e o que o projeto publica registram o alcance (o que se olhou e o que ficou de fora), nunca tudo o que se conhece; sentido igual a essencias.json",
+    "contagem_por_tipo": {
+      "contradicao": 1,
+      "fato_sem_nivel": 3,
+      "termo_sem_explicacao": 11
+    },
+    "nao_confirmados": [
+      "C-004",
+      "C-015"
+    ],
+    "termos_ok": "harness 7, hash 100, OCR 104, SKOS e TBX 103, Darwin Core 1697, Web Annotation 598, mu/lambda/Dc/Dct 116-117, paraconsistente 85, abonação 103, linhagem 116, folheio 427, bola de neve 438, Wayback 100, quarentena 133, CARE e TK Labels 489, API 81, tier 143; EDTF, CSL-JSON, ORCID, Zotero, SHA, SDK, MCP não ocorrem"
+  }
+}

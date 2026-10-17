@@ -1,6 +1,6 @@
 # AGENTS.md — regras do projeto Cultura Líquida
 
-Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_Fundacao_Cultura_Liquida.md` (hoje v0.1; a v0.2 está em escrita). Na dúvida, vale a Fundação; enquanto a v0.2 não sair, vale o brief em `trilhas/2026-10-15_pesquisa/clb-execucao-v0.2-brief.md`.
+Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_Fundacao_Cultura_Liquida.md` (v0.2, 16–17/10/2026). Na dúvida, vale a Fundação.
 
 ## O projeto em 5 linhas
 - **Cultura Líquida Brasileira (CLB):** uma bebida e tudo o que a faz existir (insumos, modos de fazer, recipientes, tempos, lugares, pessoas, transmissão). Nativos primeiro, aculturados incluídos.
@@ -58,8 +58,8 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 - **D-030:** os logs registram o **alcance** da ferramenta: o que se olhou e o que ficou fora; cada agente e o projeto inteiro falam só do que se conseguiu olhar, nunca de tudo o que se conhece, como a ciência preconiza.
 
 ## Passo corrente
-- **Feito:** Blocos 1 e 2 (repositório, conferências C1 e C2) e Bloco 2.5 (agentes, habilidades, harness).
-- **Em curso:** Bloco 3 (v0.2): texto completo (grupos 1 a 6); verificação feita (auditor, passadas 1 e 2; juridico); faltam as correções dos 22 achados confirmados, a passada 3 opcional e o Bloco 4 (lista no fim do checklist). Depois, Passo 1 da Fundação (caso-piloto, testes de modelos).
+- **Feito:** Blocos 1, 2, 2.5, 3 e 4: a Fundação v0.2 está completa e verificada (auditor em três passadas e juridico; 35 achados corrigidos).
+- **Próximo:** Passo 1 da Fundação (caso-piloto, harness qualificado, logs, testes de modelos). O caso-piloto é o único bloqueio (§8).
 - **Estado do trabalho:** `trilhas/2026-10-16_execucao-v0.2.md` (checklist). Leia-o antes de qualquer passo.
 
 ## Agentes e habilidades (`.claude/agents/`, `.claude/skills/`)
