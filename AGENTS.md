@@ -1,6 +1,6 @@
 # AGENTS.md — regras do projeto Cultura Líquida
 
-Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_Fundacao_Cultura_Liquida.md` (v0.2, 16–17/10/2026). Na dúvida, vale a Fundação. Exceção até a v0.2.1 (D-034): nas linhas da seção 6A do brief de execuções (`trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md`), valem o roteiro e o brief.
+Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_Fundacao_Cultura_Liquida.md` (v0.2, 16–17/10/2026). Na dúvida, vale a Fundação. Exceção até a próxima versão da Fundação (D-034, D-035): nas linhas da seção 6A do brief de execuções (`trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md`), valem o roteiro e o brief.
 
 ## O projeto em 5 linhas
 - **Cultura Líquida Brasileira (CLB):** uma bebida e tudo o que a faz existir (insumos, modos de fazer, recipientes, tempos, lugares, pessoas, transmissão). Nativos primeiro, aculturados incluídos.
@@ -59,11 +59,12 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 - **D-031:** o caso-piloto é a cajuína; o trabalho começa pelo caju, o insumo.
 - **D-032:** o piloto é teste da ferramenta inteira: tudo o que foi desenvolvido é usado por completo em cada conversa de trabalho e em cada rotina; as rotinas encontram CLB em geral; piloto não é publicação.
 - **D-033:** o GitHub fica como repositório; se ele impedir abrigar a ferramenta com o potencial pretendido (rotinas, buscas, tratamento com IA), usa-se outra solução em nuvem, com o fornecedor nomeado por decisão.
-- **D-034:** modo de trabalhar: não se pergunta o que o plano responde; o que restar diz aonde se quer chegar e é insumo para reavaliar o plano; onde a Fundação permite valor provisório ([PROPOSTA]), a execução usa o valor e segue; o roteiro e o brief de execuções valem sobre a Fundação só nas linhas da seção 6A do brief, até a v0.2.1.
+- **D-034:** modo de trabalhar: não se pergunta o que o plano responde; o que restar diz aonde se quer chegar e é insumo para reavaliar o plano; onde a Fundação permite valor provisório ([PROPOSTA]), a execução usa o valor e segue; o roteiro e o brief de execuções valem sobre a Fundação só nas linhas da seção 6A do brief, até a próxima versão da Fundação (prazo ajustado pela D-035).
+- **D-035:** finalizar a v0.2 é construir e testar no piloto a ferramenta que ela descreve (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda); durante a execução não se escreve versão nova da Fundação, que é da sessão de planejamento de melhorias; o que surgir se anota em `trilhas/insumos-planejamento.md`, sem explorar; uma tarefa por vez (um bloco do brief), terminada antes da próxima.
 
 ## Passo corrente
-- **Feito:** Fundação v0.2 completa e verificada. Roteiro `trilhas/2026-10-17_caminhos/caminhos.md` e brief de execuções `brief-execucoes-v0.1.md` aprovados por Vicente em 17/10/2026 (caso-piloto cajuína como teste da ferramenta inteira). Bloco 0 em curso: D-033 e D-034 registradas.
-- **Próximo:** fim do bloco 0 (v0.2.1 pelo redator e verificação pelo auditor), depois o bloco 1 do brief.
+- **Feito:** Fundação v0.2 completa e verificada. Roteiro `trilhas/2026-10-17_caminhos/caminhos.md` e brief de execuções `brief-execucoes-v0.1.md` aprovados por Vicente em 17/10/2026 (caso-piloto cajuína como teste da ferramenta inteira). Bloco 0 feito: D-033, D-034 e D-035 registradas; sem v0.2.1 (D-035).
+- **Próximo:** bloco 1 do brief (harness e operação), quando Vicente autorizar. Insumos para a sessão de planejamento: `trilhas/insumos-planejamento.md`.
 - **Estado do trabalho:** `trilhas/2026-10-17_execucao-piloto.md` (checklist do piloto). Leia-o antes de qualquer passo. O histórico da v0.2 está em `trilhas/2026-10-16_execucao-v0.2.md`.
 
 ## Agentes e habilidades (`.claude/agents/`, `.claude/skills/`)

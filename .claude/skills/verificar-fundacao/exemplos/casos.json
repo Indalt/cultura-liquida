@@ -2,10 +2,10 @@
   "habilidade": "verificar-fundacao",
   "rodada": "A",
   "casos": [
-    {"nome": "v0.1: as 42 ausências conhecidas (37 até a D-029 + D-030 a D-034)", "espera": "reprova",
+    {"nome": "v0.1: as 38 ausências conhecidas (37 até a D-029 + D-030)", "espera": "reprova",
      "comando": ["scripts/checar_fundacao.py", "00_Fundacao_Cultura_Liquida.md", "--commit", "e868a98"],
-     "saida_contem": "\"achados\": 42",
-     "criterio": "a v0.1 não tem D-015 a D-034, 'Versão 0.2', Anexos D e E, C.3, legenda das P-refs e 17 entidades do §6"},
+     "saida_contem": "\"achados\": 38",
+     "criterio": "a v0.1 não tem D-015 a D-030, 'Versão 0.2', Anexos D e E, C.3, legenda das P-refs e 17 entidades do §6"},
     {"nome": "divergência real de 16/10: D-018 sem 'traduzível'", "espera": "reprova",
      "comando": ["scripts/checar_fundacao.py", ".claude/skills/verificar-fundacao/exemplos/d018-sem-traduzivel.md", "--so-essencias",
                  "--essencias", ".claude/skills/escrever-secao-fundacao/referencias/essencias.json"],

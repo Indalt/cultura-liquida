@@ -5,6 +5,12 @@
 **Base:** a Fundação v0.2 (`00_Fundacao_Cultura_Liquida.md`, 1.912 linhas, commit 118f65c; "l." é a linha dela); o roteiro, cujas etapas 0 a 14 viram aqui os blocos 0 a 14; os seis mapas em `trilhas/2026-10-17_caminhos/mapas/`; o checklist `trilhas/2026-10-16_execucao-v0.2.md`. Não há fato novo: os fatos externos vêm dos mapas e do roteiro, com o nível que lá têm.
 **Precedência:** vale a Fundação (`AGENTS.md`: "Na dúvida, vale a Fundação"; acordo 5). As linhas da seção 6A sustentadas só pela D-031 e pela D-032, já registradas, valem como este brief diz até a v0.2.1 (bloco 0) acertar o texto; as que dependem da D-033 ou da D-034 ficam pendentes até o registro no bloco 0. Pôr o roteiro e este brief à frente do texto da Fundação, nessas linhas e só até a v0.2.1, muda o plano: o bloco 0 registra essa precedência (na D-034 ou em decisão própria, com a aprovação de Vicente) e ajusta a l. 3 da `AGENTS.md`. As leituras da seção 6B ficam como [PROPOSTA] sob a Fundação.
 
+**Ajustes da D-035 (18/10/2026), que valem sobre o resto deste brief:**
+- **Uma tarefa por vez:** tarefa é um bloco, começado e terminado antes do próximo; a pausa por orçamento, com o estado salvo, retoma o mesmo bloco. Medir horas e consumo é registro que acompanha os blocos desde o 6, não tarefa. A 10a entra na sua vez, depois do bloco 9; depois de ligada, a rotina rodar sozinha é operação.
+- **Sem versão nova da Fundação durante a execução:** não há v0.2.1 (bloco 0) nem v0.3 (bloco 14). Onde este brief diz "texto na v0.2.1" ou "vai para a v0.3", leia-se: vale pela decisão registrada, e o texto fica para a próxima versão, feita na sessão de planejamento de melhorias. A precedência da seção 6A vale até essa versão.
+- **O que surgir das análises não se explora:** anota-se em `trilhas/insumos-planejamento.md` (data, origem, aonde se quer chegar, por apontamento).
+- **O que o piloto precisa mostrar funcionando:** coletar; receber pelas formas da fase 1 do §5.4 (coleta por programa, busca assistida, link ou documento trazido por Vicente, e-mail dos Alertas quando a conta existir; nenhum canal de outras pessoas); organizar no wiki conforme as diretrizes; gerar os grafos 4D; criar propostas, que é o campo de ação sob demanda (bloco 11).
+
 ---
 
 ## 0. Autorização, modelos e regras
@@ -125,7 +131,7 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
 
 | Bloco | O quê | Passo da Fundação | Agentes | Parada prevista |
 |---|---|---|---|---|
-| 0 | plano em dia: log da rodada, D-033, D-034, v0.2.1 | — | redator, auditor | (a) aprovar o brief |
+| 0 | plano em dia: log da rodada, D-033, D-034, D-035 (sem v0.2.1) | — | — | (a) aprovar o brief |
 | 1 | harness e operação | 1 | auditor | — |
 | 2 | contratos do §6 e valores provisórios | 1 | auditor | — |
 | 3 | scripts do núcleo | 1 (antecipa partes do 2 e do 7) | auditor, juridico | — |
@@ -139,9 +145,9 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
 | 11 | kit de fonte primária | fase 1 (l. 670) e 9 | campo-de-acao | (a) pedido do kit |
 | 12 | testes de modelos | 1 | agentes do piloto, auditor | — |
 | 13 | horas e consumo, desde o bloco 6 | gatilho da fase 2 | — | — |
-| 14 | Fundação v0.3 | — | redator, auditor | (a) aprovar a v0.3 |
+| 14 | relatório do piloto para a sessão de planejamento (sem v0.3; D-035) | — | redator, auditor | — |
 
-**Ordem.** Um bloco por vez, de 0 a 14. A 10a, sem IA, pode correr junto com os blocos 7 a 9, e a medição do bloco 13 corre desde o 6. **Conversa 1:** itens 1 a 3 e 7 do bloco 0, depois o bloco 1 e, se a conta da semana deixar, os itens 4 a 6 do bloco 0 (a v0.2.1). **Conversa 2, nova**, porque agente editado só carrega em sessão nova (checklist, l. 75): abre o bloco 2. Daí em diante, quantas conversas a conta pedir. As chamadas previstas em cada bloco são estimativas; o que vale é a medida.
+**Ordem.** Um bloco por vez, de 0 a 14, cada um terminado antes do próximo (D-035). A 10a entra na sua vez, depois do bloco 9; a medição do bloco 13 é registro que acompanha os blocos desde o 6. **Conversa 1:** itens 1 a 3 e 7 do bloco 0, depois o bloco 1 e, se a conta da semana deixar, os itens 4 a 6 do bloco 0 (a v0.2.1). **Conversa 2, nova**, porque agente editado só carrega em sessão nova (checklist, l. 75): abre o bloco 2. Daí em diante, quantas conversas a conta pedir. As chamadas previstas em cada bloco são estimativas; o que vale é a medida.
 
 ### Bloco 0 — Plano em dia · *muda o plano: é o bloco que registra a D-033 e a D-034* · roteiro, etapa 0
 - **Entrada:** a aprovação deste brief e do roteiro na primeira mensagem de Vicente; o checklist, l. 200-212; o mapa `mapa-decisoes-e-perguntas.json` (`mudancas_de_plano`).
@@ -149,7 +155,7 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
   1. o log completo da rodada de planejamento de 17/10, com `registrar_log.py`, a partir dos três `.jsonl` não rastreados e dos números do checklist (l. 212). O que não estiver registrado entra como "não informado";
   2. `trilhas/decisoes/D-033.json` e `D-034.json`, com registrar-decisao;
   3. o checklist do piloto, `trilhas/AAAA-MM-DD_execucao-piloto.md`: estado por bloco e lote, tabela semanal de consumo e horas;
-  4. a Fundação v0.2.1, só com as consequências das D-031 a D-034 (seção 6, parte A);
+  4. ~~a Fundação v0.2.1~~: retirado pela D-035; a seção 6A e o pedido ao redator vão a `trilhas/insumos-planejamento.md`;
   5. `AGENTS.md` e `CLAUDE.md` em dia: passo corrente, checklist novo, decisões até a D-034, modelos da rodada B, rotinas no piloto, e "[PROPOSTA] não é plano" lido com a D-034;
   6. `scripts/checar_fundacao.py` reconhecendo as D-031 a D-034;
   7. commit do roteiro e deste brief, aprovados.
@@ -248,6 +254,7 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
   - `recorte.py`: grava o estado de cada Recorte a cada página (cursor, o marcador de onde a coleta parou; total informado e visto; saturação; erros; próxima ação; reserva). Divide a janela saturada e registra a Falta "busca interrompida por teto" (l. 427, 432);
   - `deduplicar.py`: uma Entrada por item em `entrada/`, por DOI, handle ou ID da fonte, com os Recortes de origem e o rendimento de cada Consulta (l. 435). A Entrada não guarda autoria (l. 596);
   - o registro do modo assistido: o modelo de Recorte para a busca manual de Vicente, com link permanente por página e "pessoa" como executor (l. 429);
+  - a entrada por link ou documento trazido por Vicente (§5.4, canal da fase 1, l. 449): registro com localizador, pelo mesmo fluxo, em `entrada/`, com canal, data, origem e "pessoa" como executor; caso que passa e caso que reprova (D-035);
   - `wayback.py`: captura pelo Save Page Now 2, em ritmo baixo (l. 509; os limites vêm de documentação de comunidade, nível secundária). Não captura página de ambiente cuja ficha registra 403, captcha ou verificação de navegador: a Entrada fica com o link permanente da página e, se preciso, a Falta "fonte inacessível" (l. 419), e o juridico registra a dúvida;
   - `fila_curadoria.py` (nome provisório; l. 512, 902): monta a tela de cada lote (o que entrou, o que ficou em quarentena, as Faltas novas) e a fila semanal de até 15 itens na ordem da l. 902. O veredito de Vicente vira Execução com executor "pessoa" e muda o eixo de status do item (por exemplo, a saída de `PENDENTE_JULGAMENTO`); caso que passa e caso que reprova em `rodar_testes.py`; o tempo gasto entra no bloco 13;
   - em todos os scripts deste bloco e do bloco 10, o alcance calculado vai ao log (D-030): Recortes previstos e rodados, páginas vistas e total informado, ambientes com erro;
@@ -264,7 +271,8 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
   - os Recortes nas fontes do piloto, primeiro o insumo e depois a bebida (D-031);
   - as Entradas em `entrada/`, com captura no Wayback;
   - as Execuções nos logs, com Recortes e Consultas (l. 593), e a primeira Matriz de Pegadas;
-  - um Recorte assistido real, feito por Vicente na Hemeroteca.
+  - um Recorte assistido real, feito por Vicente na Hemeroteca;
+  - ao menos uma Entrada real por link ou documento trazido por Vicente, pelo mesmo fluxo (D-035).
 - **Agentes:** os scripts do bloco 5 coletam, rodados pelo curador na conversa. O rastreador, com consulta, confere os totais e a saturação de cada Recorte e propõe a divisão da janela (Sonnet 5.5 alto; teto de 15 por lote). O curador grava. Previstas: 1 a 2 chamadas.
 - **Pronto quando:** todo Recorte tem estado válido; o que não se exauriu é Falta com o motivo ("total desconhecido", "busca interrompida por teto"); uma segunda rodada no mesmo Recorte só traz o não visto.
 - **Sem parada.** A busca assistida cabe nas horas de Vicente (D-016). Se não couber na semana, o Recorte fica com "próxima ação: busca assistida", e os blocos 7 e 8 seguem com as outras fontes. A medição do bloco 13 começa aqui.
@@ -301,10 +309,10 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
 - **Agentes:** auditor confere pares e casos (Sonnet 5.5 alto; teto de 15). Contratos, pares e casos nascem no mesmo piloto; sem segunda leitura, os validadores passariam por construção. Previstas: 1 a 2 chamadas.
 - **Validador:** `rodar_testes.py --rodada B --relatorio testes/relatorio-rodada-B.md`.
 - **Pronto quando** (harness pronto, l. 701): FALHA 0 e PENDENTE 0 nas habilidades dos blocos 4 a 8 (a do kit sai no bloco 11); cada uma com par real que passa e caso real que reprova; as regras fixas do Jurídico reprovam os casos de teste; o custo de cada habilidade está nos logs; a reconstituição passa (l. 726); Vicente aprova.
-- **Parada (a), só para os blocos 10b e 12:** Vicente aprova o harness pronto pela revisão de uma tela do relatório da rodada B (l. 701). Padrão: aprovar se os números baterem com o critério. Enquanto isso, 10a, 11 e 13 seguem.
+- **Parada (a), só para os blocos 10b e 12:** Vicente aprova o harness pronto pela revisão de uma tela do relatório da rodada B (l. 701). Padrão: aprovar se os números baterem com o critério. Enquanto a aprovação não vem, a 10a segue na sua vez; a 10b e o bloco 12 esperam.
 
 ### Bloco 10 — Rotinas de verdade · *muda o plano: rotinas antes do Passo 4 e para CLB em geral (l. 363, 438, 669, 674, 741) sustentam-se na D-032, e a saída de reserva na D-033; texto na v0.2.1* · etapa 10
-- **10a, camada 1, sem IA** (pode correr junto com os blocos 7 a 9):
+- **10a, camada 1, sem IA** (na sua vez, depois do bloco 9; D-035):
   - `.github/workflows/` com o validador a cada envio e, por cron, as buscas, a deduplicação, a captura no Wayback, a checagem de links (`scripts/verificar_links.py`) e o feed de novidades por ID não visto (`scripts/feed.py`, gravado em `entrada/`, l. 428);
   - o relatório do dia, gravado em `trilhas/relatorios/` [PROPOSTA]; uma falha avisa por e-mail nativo (l. 505);
   - a ordem: primeiro as fontes do piloto. Depois, ambiente por ambiente, Consultas só por descritores e mistas de CLB em geral, começando pelos que responderam por API em 17/10: Oasisbr (https://oasisbr.ibict.br/, VuFind; oficial; a página inicial pediu verificação de navegador em 15/10, e a via é a API) e OpenAlex (https://openalex.org/; oficial; sem chave, com cota diária compartilhada). Depois, os 29 ambientes do Anexo E com via por programa e sem 403 nem captcha (contagem por texto, a confirmar em ficha). Cada ambiente novo entra com ficha testada e uma linha de configuração (l. 430); com a fila acima de uma semana de curadoria, nenhuma porta nova se abre (l. 472; fila e semana no registro de valores);
@@ -355,7 +363,8 @@ Fatos da tabela (nível oficial, páginas abertas em 17/10; roteiro, seção 4):
 - **Pronto quando:** 4 semanas seguidas medidas, a condição 2 do gatilho da fase 2 (l. 678).
 - **Sem parada.** A sessão registra os números que Vicente der; sem eles, "não informado", nunca estimado (P96). A condição 3 do gatilho (as decisões do degrau 2 do §5.4) é de Vicente e não trava o piloto.
 
-### Bloco 14 — Fundação v0.3 · *dentro do plano (acordo 5)* · etapa 14
+### Bloco 14 — Relatório do piloto para a sessão de planejamento · *ajustado pela D-035: a v0.3 não se escreve na execução* · etapa 14
+- **D-035:** este bloco não escreve a v0.3. Faz só o relatório do piloto (abaixo, "Antes da v0.3") e completa `trilhas/insumos-planejamento.md`; a v0.3 é da sessão de planejamento de melhorias. As linhas seguintes valem como roteiro para essa sessão.
 - **Faz e grava:** a v0.3, com o que o piloto mostrou. Entram os custos e os modelos por habilidade; as horas reais; os valores provisórios calibrados (valências no Passo 5, limiar, μ e λ, lote de máquina); as respostas aos insumos da seção 6; o lugar das rotinas (D-033); as decisões novas no §9.
 - **Agentes:** redator com escrever-secao-fundacao (Opus 5.5 médio); auditor com verificar-fundacao (Sonnet 5.5 alto); curador com registrar-decisao. Previstas: 2 a 4 chamadas.
 - **Antes da v0.3** (até 2 chamadas a mais): o relatório do piloto, calculado dos logs (itens, ambientes, fichas, grafo, custos e horas), escrito pelo redator e conferido pelo auditor, que também confere com conferir-fato cada habilidade da BNCC citada na Educação do bloco 8, com página e URL do PDF do MEC. É ele que dá às perguntas do §10 os números reais (seção 6C, insumo 11).
