@@ -1,6 +1,6 @@
 # Caminhos para usar a ferramenta
 
-**Data:** 17/10/2026 · **Autoria:** agentes do projeto, na rodada de planejamento com ultracode pedida por Vicente (workflow `wf_b6288315-eba`) · **Estado:** [PROPOSTA] até a aprovação de Vicente.
+**Data:** 17/10/2026 · **Autoria:** agentes do projeto, na rodada de planejamento com ultracode pedida por Vicente (workflow `wf_b6288315-eba`) · **Estado:** aprovado por Vicente em 17/10/2026, com os padrões das paradas (D-033 e D-034 registradas no bloco 0; checklist `trilhas/2026-10-17_execucao-piloto.md`).
 
 Este roteiro não executa o Passo 1: nada foi coletado, nenhuma ficha foi criada e a Fundação não mudou. Base: a Fundação v0.2 (`00_Fundacao_Cultura_Liquida.md`, commit 118f65c; "l." é a linha dela), o checklist `trilhas/2026-10-16_execucao-v0.2.md` e sete mapas desta rodada (seis em `trilhas/2026-10-17_caminhos/mapas/`; o da hospedagem do Claude Code veio direto ao roteiro). Fatos externos: só os dos mapas, com o nível que lá têm.
 

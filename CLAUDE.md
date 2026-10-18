@@ -12,10 +12,10 @@ Só o Claude Code opera os agentes deste projeto (D-029): pasta `.claude/`, sem 
 - **Git Bash e `gh api`:** caminhos de API sem a barra inicial (`repos/...`).
 - Não usar `sleep` em primeiro plano.
 
-## Modelos por agente (iniciais, provisórios até os testes do Passo 1; D-027)
+## Modelos por agente (provisórios até os testes do bloco 12 do brief de execuções; D-027)
 - **Sessão principal (curador):** `claude-opus-5-5`, esforço médio, sem ultracode. Se o ID do modelo for outro, avisar e parar.
 - **redator:** Opus 5.5, médio. **auditor, juridico, rastreador:** Sonnet 5.5, alto.
-- **avaliador, arquivista, campo-de-acao:** a definir no Passo 1 (o arquivo traz Sonnet 5.5 como marcador; não chamar antes do caso-piloto).
+- **avaliador, arquivista, campo-de-acao:** Sonnet 5.5, alto (brief de execuções, seção 0); o frontmatter é acertado no bloco 1, e agente editado só carrega numa conversa nova. Modelos menores só no bloco 12.
 - Subagentes **um por vez**, com teto de chamadas declarado no pedido. Sem Workflow sem pedido explícito.
 - **Depois de cada Agent:** o curador grava o log completo com `scripts/registrar_log.py` (tokens e chamadas vêm do retorno do Agent) e soma o consumo no checklist. O hook `SubagentStop` grava só uma linha mínima de segurança.
 

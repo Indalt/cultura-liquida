@@ -1,0 +1,14 @@
+{
+  "id": "D-033",
+  "data": "2026-10-17",
+  "essencia": "O GitHub fica como repositório. Se ele impedir abrigar a ferramenta com o potencial pretendido (rotinas, buscas, tratamento com IA), usa-se outra solução em nuvem para isso.",
+  "diretriz": "O GitHub (Indalt/cultura-liquida) guarda histórico, versões e o que a custódia do §5.1 põe no Git. A execução das rotinas, das buscas e do tratamento com IA fica no GitHub enquanto ele comportar; sai para outra nuvem quando Vicente não aceitar a leitura dos termos do Actions, o GitHub disser que a coleta está fora deles, a desativação de 60 dias não se evitar ou o volume passar dos limites (tarefa acima de 6 h, repositório acima de 1 GB). Essa saída substitui o 'rodar em sessão' da v0.2 (l. 508, 814). O fornecedor é nomeado por decisão própria; nenhum é escolhido antes, e até lá os scripts rodam à mão nas conversas de trabalho.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-17",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seção 'Depois do fechamento (17/10/2026)', resposta de Vicente ('se o github nos impede...'); essência na mesma seção ('Essência a registrar com a aprovação do roteiro'); confirmada pela aprovação do roteiro e do brief de execuções em 17/10/2026 (trilhas/2026-10-17_execucao-piloto.md, abertura)",
+  "palavras_conferidas": [
+    {"palavra": "nos impede de abrigar a ferramenta com o nosso potencial", "sentido_confirmado": "quando o GitHub não comporta as rotinas, as buscas ou o tratamento com IA (termos, limites, desativação do agendamento); as condições ficam no roteiro, seção 4, e no bloco 10 do brief"},
+    {"palavra": "deixar o github como repositório", "sentido_confirmado": "o GitHub continua guardando histórico, versões e custódia; só a execução muda de lugar"}
+  ],
+  "marcador": "VIGENTE"
+}

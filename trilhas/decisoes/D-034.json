@@ -1,0 +1,15 @@
+{
+  "id": "D-034",
+  "data": "2026-10-17",
+  "essencia": "Modo de trabalhar: depois do plano executado, não se pergunta o que o plano responde; o que restar diz aonde se quer chegar e é insumo para reavaliar o plano. Onde a Fundação permite valor provisório ([PROPOSTA]), a execução usa o valor e segue.",
+  "diretriz": "(1) Na execução, nada de perguntas que a Fundação, o roteiro ou o brief vigente já respondem; o que ficar sem resposta vai à trilha como insumo para reavaliar o plano, dizendo aonde se quer chegar (brief de execuções, seção 6C; §10 da Fundação). (2) Onde a Fundação marca valor provisório, a execução usa esse valor e segue, registrando-o; o alcance é o dos valores da l. 696 da v0.2, dos [PROPOSTA] dos §5 e §6 que o brief de execuções usa e das leituras da seção 6B do brief; calibram-se na v0.3. Fora desse alcance, [PROPOSTA] continua não sendo plano. (3) Precedência: o roteiro (trilhas/2026-10-17_caminhos/caminhos.md) e o brief de execuções valem sobre o texto da Fundação só nas linhas da seção 6A do brief e só até a v0.2.1; no resto, vale a Fundação.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-17",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seção 'Depois do fechamento (17/10/2026)': resposta de Vicente ('estas perguntas nao deveriam mais existir...'; 'se são pontos importantes que geram insumos para reavaliar o planejamento, ok. deixar isso claro') e essência anotada em 'Modo de trabalhar (memória)'. As partes (2) e (3) foram propostas pelos agentes na rodada de planejamento de 17/10 (caminhos.md, seção 7, item 1; brief, seção 2) e entram pela aprovação de Vicente ao roteiro e ao brief com os padrões, em 17/10/2026 (trilhas/2026-10-17_execucao-piloto.md, abertura).",
+  "palavras_conferidas": [
+    {"palavra": "estas perguntas nao deveriam mais existir", "sentido_confirmado": "não perguntar o que o plano já responde; não proíbe a pergunta sobre comentário novo, que segue a habilidade registrar-decisao"},
+    {"palavra": "insumos para reavaliar o planejamento", "sentido_confirmado": "o que restar vai à trilha e à v0.3 dizendo aonde se quer chegar, sem travar a execução"},
+    {"palavra": "valor provisório ([PROPOSTA])", "sentido_confirmado": "só os valores e leituras no alcance da diretriz (2); o resto do [PROPOSTA] segue sem valer como plano"}
+  ],
+  "marcador": "VIGENTE"
+}
