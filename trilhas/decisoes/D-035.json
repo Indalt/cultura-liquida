@@ -5,12 +5,24 @@
   "diretriz": "(1) Tarefa = um bloco do brief de execuções, começado e terminado antes do próximo; a pausa por orçamento, com o estado salvo, retoma o mesmo bloco. Medir horas e consumo é registro que acompanha todos os blocos desde o bloco 6, não tarefa. A rotina sem IA (10a) é tarefa e entra na sua vez, depois do bloco 9; depois de ligada, rodar sozinha é operação. (2) Receber de diferentes formas = as formas da fase 1 do §5.4 da v0.2: coleta por programa (monitoramento e escavação, inclusive as rotinas), a busca assistida de Vicente, o link ou documento trazido por Vicente pelo mesmo fluxo (precisa funcionar no piloto) e o e-mail dos Alertas do Google quando Vicente criar a conta; nenhum canal de outras pessoas (fase 2). (3) Criar propostas = o campo de ação sob demanda (Passo 9): a partir de um pedido de Vicente, um rascunho com fontes, como o kit para educadores; as Proposições do §6 são parte de organizar, e o pull request é só o mecanismo de revisão. (4) Sem v0.2.1 no bloco 0 e sem v0.3 no bloco 14: o que iria a elas, e tudo o que surgir das análises, vai a trilhas/insumos-planejamento.md, cada entrada com data, origem e aonde se quer chegar, por apontamento. (5) A precedência do roteiro e do brief sobre a Fundação, nas linhas da seção 6A do brief, vale até a próxima versão da Fundação, feita na sessão de planejamento; as D-031 a D-035 valem pelos registros em trilhas/decisoes/, e scripts/checar_fundacao.py só volta a cobrá-las no texto quando essa versão sair.",
   "confirmada_por_vicente": true,
   "data_confirmacao": "2026-10-18",
-  "fala_original_ref": "trilhas/2026-10-17_execucao-piloto.md, seção 'Comentário de Vicente em 18/10 (D-035)': comentário e resposta às palavras conferidas",
+  "fala_original_ref": "trilhas/2026-10-16_execucao-v0.2.md, seção '18/10/2026: o fio condutor' (fala original, commit b8394ea); trilhas/2026-10-17_execucao-piloto.md, seção 'Comentário de Vicente em 18/10 (D-035)' (a essência como Vicente a formulou e a resposta às palavras conferidas)",
   "palavras_conferidas": [
-    {"palavra": "uma tarefa", "sentido_confirmado": "um bloco do brief; a pausa por orçamento retoma o mesmo bloco; medir não é tarefa; a 10a é tarefa, depois do bloco 9"},
-    {"palavra": "recebê-los de diferentes formas", "sentido_confirmado": "as formas da fase 1 do §5.4: coleta por programa, busca assistida, link ou documento trazido por Vicente, e-mail dos Alertas; nenhum canal de outras pessoas"},
-    {"palavra": "criar propostas", "sentido_confirmado": "o campo de ação sob demanda (Passo 9), rascunho com fontes a partir de pedido de Vicente"},
-    {"palavra": "anota-se para essa sessão", "sentido_confirmado": "trilhas/insumos-planejamento.md, com data, origem e aonde se quer chegar, por apontamento"}
+    {
+      "palavra": "uma tarefa",
+      "sentido_confirmado": "um bloco do brief; a pausa por orçamento retoma o mesmo bloco; medir não é tarefa; a 10a é tarefa, depois do bloco 9"
+    },
+    {
+      "palavra": "recebê-los de diferentes formas",
+      "sentido_confirmado": "as formas da fase 1 do §5.4: coleta por programa, busca assistida, link ou documento trazido por Vicente, e-mail dos Alertas; nenhum canal de outras pessoas"
+    },
+    {
+      "palavra": "criar propostas",
+      "sentido_confirmado": "o campo de ação sob demanda (Passo 9), rascunho com fontes a partir de pedido de Vicente"
+    },
+    {
+      "palavra": "anota-se para essa sessão",
+      "sentido_confirmado": "trilhas/insumos-planejamento.md, com data, origem e aonde se quer chegar, por apontamento"
+    }
   ],
   "substitui": "D-034, parte 3, no prazo: 'até a v0.2.1' passa a 'até a próxima versão da Fundação, feita na sessão de planejamento de melhorias'",
   "marcador": "VIGENTE"
