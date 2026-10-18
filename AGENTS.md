@@ -61,7 +61,7 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 
 ## Passo corrente
 - **Feito:** Blocos 1, 2, 2.5, 3 e 4: a Fundação v0.2 está completa e verificada (auditor em três passadas e juridico; 35 achados corrigidos).
-- **Próximo:** Passo 1 da Fundação (caso-piloto, harness qualificado, logs, testes de modelos). O caso-piloto é o único bloqueio (§8).
+- **Próximo:** aprovação de Vicente ao roteiro `trilhas/2026-10-17_caminhos/caminhos.md` e ao brief de execuções `brief-execucoes-v0.1.md` (caso-piloto cajuína como teste da ferramenta inteira); depois, bloco 0 numa conversa nova.
 - **Estado do trabalho:** `trilhas/2026-10-16_execucao-v0.2.md` (checklist). Leia-o antes de qualquer passo.
 
 ## Agentes e habilidades (`.claude/agents/`, `.claude/skills/`)

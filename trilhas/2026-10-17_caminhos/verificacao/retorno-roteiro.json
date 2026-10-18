@@ -1,0 +1,48 @@
+{
+ "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+ "linhas": 221,
+ "resumo": "Escrevi o roteiro em C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md. Ele tem 221 linhas (contadas com wc -l), segue as 8 seções pedidas e termina com uma trilha do que foi lido e do que ficou de fora. O cabeçalho traz a data 17/10/2026, a autoria (agentes do projeto, rodada com ultracode pedida por Vicente) e o estado [PROPOSTA]. A busca de dado pessoal no arquivo deu 0. Não abri a web, não fiz commit, não mudei a Fundação e não executei o Passo 1.\n\nO que o roteiro diz:\n- **Caminho:** um só ciclo leva a cajuína do caju à ficha e põe em uso cada parte da ferramenta. São 15 etapas (0 a 14). Cada uma traz entrega verificável, quem faz e com que modelo, critério de pronto, custo a medir e a marca \"dentro do plano\" ou \"muda o plano\".\n- **Etapa 0:** registra a D-033 e a D-034 (o modo de trabalhar). Faz também uma Fundação v0.2.1 só com as consequências das D-031 a D-034, porque o acordo 5 exige nova versão para mudar o plano.\n- **Da etapa 1 à 9:** acerto do harness; contratos do §6; scripts do núcleo; fichas de acesso e Consultas do caju; adaptadores; primeira coleta; Evidências com triagem jurídica; Termos, ficha e grafo; e, na etapa 9, os pares reais e os validadores da rodada B (o \"harness pronto\").\n- **Da etapa 10 à 14:** rotinas de verdade (camada 1 no GitHub Actions; camada 2 depois de uma rotina de teste); kit sob pedido; testes de modelos só depois do harness pronto; medição de horas e consumo; Fundação v0.3 ao fim.\n- **Onde a ferramenta mora:** o GitHub fica como repositório e roda as rotinas sem IA. O tratamento com IA fica nas conversas e, depois, na rotina do Claude Code. A seção diz quando a D-033 manda mudar de nuvem e lista as candidatas, com os fatos conferidos (URL e nível).\n- **Fora do Git, pela custódia:** o texto integral das fontes, dados pessoais de terceiros, chaves, `legado/` e a saída do wiki gerado na máquina. O resto entra no Git pela custódia \"até lá\" (linha 483 da Fundação).\n- **Seções 5 a 8:** o que o plano já responde e os valores provisórios que a execução usa sem perguntar; 8 insumos para reavaliar, cada um com aonde se quer chegar e por que não trava; 5 decisões de Vicente com padrão proposto, mais as que podem esperar; e o próximo passo (nova conversa em Opus 5.5 médio, o que ela faz primeiro e o que o brief de execuções deve conter).\n\nAjustes que fiz ao juntar os mapas:\n- Os mapas divergiam sobre o lugar do material do piloto. O de decisões dizia que trava; o de devolver dizia que segue a custódia. Adotei a linha 483 (\"até lá, valem as regras de custódia\"), como o pedido orienta. O repositório privado foi para a seção 6 como insumo.\n- Usei os níveis mais recentes dos fatos: o registro da cajuína no IPHAN como oficial (página do BCR aberta em 17/10), e os 60 dias de desativação e o Actions gratuito em repositório público como oficiais.\n- Corrigi números de linha dos mapas que estavam errados por uma ou duas linhas: 84, 426, 428 e 438 da Fundação.",
+ "alcance": {
+  "olhado": [
+   "Os sete mapas do pedido (rastrear, organizar, devolver-juridico-harness, decisoes-e-perguntas, cajuina-fontes, nuvem-github, claude-code-hospedagem)",
+   "00_Fundacao_Cultura_Liquida.md: linhas 476-513, 660-703 e 801-831 inteiras; linhas soltas e grep -n em 84, 100, 103, 116, 130-131, 363, 394-409, 416-438, 472, 522-547, 553, 585-628, 704-726, 741-744, 761-788, 880-923; Anexo C F-12, F-13 e F-23 por grep",
+   "trilhas/2026-10-16_execucao-v0.2.md: linhas 75 e 188-212",
+   "Listas de scripts/, esquemas/, .claude/agents/, .claude/skills/, testes/, trilhas/decisoes/, trilhas/logs/ e trilhas/2026-10-17_caminhos/mapas/; git status e git log",
+   "scripts/procurar_dado_pessoal.py sobre o roteiro (0 ocorrências) e wc -l (221)"
+  ],
+  "fora": [
+   "Web: nenhuma página aberta; os fatos e níveis são só os dos mapas",
+   "legado/ (regra do projeto); Anexos A e B",
+   "Corpo dos scripts, dos esquemas e das SKILL.md (só nomes e o que os mapas registram)",
+   "Arquivos JSON dos mapas em mapas/ (usei o conteúdo entregue no pedido, que é o mesmo)",
+   "A página salva dos ambientes de nuvem do Claude Code (pendência do mapa de hospedagem sobre o CLAUDE.md na rotina)",
+   "§5.2, §5.3, §6 e Passos 3 e 5 a 10 inteiros: só as linhas citadas",
+   "Nenhum commit, nenhuma mudança na Fundação, nenhum Passo 1 executado; o brief de execuções fica com outro agente"
+  ]
+ },
+ "decisoes_de_vicente": [
+  "Aprovar o roteiro: confirma a essência da D-033 (GitHub como repositório; outra nuvem se ele impedir rotinas, buscas e tratamento com IA). Padrão proposto: a mesma aprovação registra o modo de trabalhar como D-034. Destrava a etapa 0.",
+  "As primeiras fontes do piloto (Fundação l. 691, 807). Destrava as etapas 4 a 6. Padrão proposto: BCR do IPHAN (dossiê de 2009 e parecer de 2014), Infoteca-e da Embrapa (Documentos 123) e BDTD (API VuFind; tese da USCS), mais a Hemeroteca por busca assistida nas horas de Vicente.",
+  "Leitura dos termos do GitHub Actions (l. 508, 814). Destrava a etapa 10a. Padrão proposto: aceitar a leitura do Flat Data para os scripts sem IA, relendo o texto inteiro dos termos ao ligar; se não for aceita, vale a D-033.",
+  "Pedido do kit de fonte primária (princípio 15; l. 576, 788). Destrava a etapa 11. Padrão proposto: o kit para educadores com a cajuína, escrito no brief com os critérios de aceitação que Vicente der.",
+  "Chaves de acesso (l. 409, 509). Destrava a captura no Wayback com chave e as fontes que pedem chave. Padrão proposto: na máquina, fora da pasta versionada; na rotina, o cofre de segredos do serviço que a roda. Criar contas e chaves é de Vicente.",
+  "Podem esperar, sem travar o piloto: a caixa de e-mail dos Alertas do Google (l. 451); o lugar e a visibilidade do que fica no repositório (l. 483, 809); as decisões do degrau 2 do §5.4 (licença, aviso de privacidade, canal com o titular), que abrem a fase 2."
+ ],
+ "insumos_para_reavaliar": [
+  "Ritmo do piloto: 40 a 60 chamadas de agente estimadas (2,4 a 3,6 milhões de tokens, 8 a 12 semanas no teto de 300 mil por semana da D-023), sem contar a conversa principal. Não trava: mede-se e para-se com o estado salvo.",
+  "Rotinas para todas as CLB contra 1 a 3 h de curadoria: a linha 472 já regula a abertura de portas; o piloto traz Entradas por semana e as horas reais.",
+  "Rotina com o harness inteiro e a principal protegida: o CLAUDE.md na rotina não está confirmado, e uma regra que a conta conectada contorna não barra o envio (o dono grava direto, l. 396). Não trava: a camada 2 só liga depois da rotina de teste.",
+  "Material do piloto fora do Git público: o repositório privado levantado pelo mapa de decisões custa a revisão obrigatória (l. 396) e limita os minutos do Actions. Não trava: vale a linha 483 até lá.",
+  "Bola de neve no piloto: a D-032 manda usar tudo; a Fundação a põe na fase 2 (l. 438). A consulta 0.1.1 segue a Fundação.",
+  "Educação e ilustração sem habilidade própria: muda o inventário de 14 habilidades (l. 690). O redator escreve a Educação com o papel que já tem.",
+  "Divergência e fala de quem pratica: sem elas, λ fica 0 e W fica Falta; não se inventa par para o estado inconsistente (l. 772).",
+  "Perguntas do §10 (1 a 3, 6 a 8, 10 a 14, 16 a 20 e 22) passam a dizer aonde querem chegar, alimentadas pelo piloto."
+ ],
+ "mudancas_de_plano": [
+  "Etapa 0: D-033 e D-034 no Registro e Fundação v0.2.1 com as consequências das D-031 a D-034 (ordem dos passos, rotinas no piloto, IA por rotina na fase 1, saída de reserva pela D-033, fim do único bloqueio, teto das rotinas no piloto, §8 e §10 reorganizados, fatos conferidos em 17/10 no §5.5 e no Anexo C).",
+  "Etapa 3: localização do trecho, validador do acervo e cálculo de μ e λ nascem no Passo 1, e não nos Passos 2 e 7. Sustentada pela D-032.",
+  "Etapa 8: a camada Educação e o wiki gerado na máquina antecipam o Passo 6, sem publicar. Sustentada pela D-032.",
+  "Etapa 10: rotinas e Actions antes do Passo 4, buscando CLB em geral, sustentadas pela D-032; a saída de reserva passa a ser outra nuvem (D-033), e não mais rodar em sessão.",
+  "Na seção 4, as vias de IA fora da rotina do Claude (claude -p no Actions ou em máquina própria, Managed Agents, lote da API) mudam o plano e só entram com decisão; o lugar do material do piloto num repositório privado também pediria decisão que ajuste a D-021."
+ ]
+}

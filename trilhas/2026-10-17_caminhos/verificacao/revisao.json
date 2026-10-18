@@ -1,0 +1,259 @@
+{
+ "resumo": "Corrigi 36 dos 37 achados nos dois rascunhos, com 22 edições (ferramenta Edit). Só o CO-G27 ficou sem correção, por causa do teto de 30 chamadas. Mudanças principais:\n- **Precedência:** passa a valer a Fundação. As linhas da seção 6A apoiadas só na D-031 e na D-032 já valem; as que dependem da D-033 ou da D-034 ficam pendentes até o bloco 0. A precedência do brief virou linha da seção 6A, como mudança do plano.\n- **D-033 e D-034:** marcadas como não registradas. Na D-034, a fala de Vicente ficou separada da cláusula sobre [PROPOSTA], com o alcance proposto.\n- **Kit (bloco e etapa 11):** passou a \"muda o plano\" (D-032, D-020). A exceção à regra do campo-de-acao só vale se a v0.2.1 a trouxer.\n- **Seção 6B:** cada leitura agora diz a decisão que a sustentaria, e tudo fica [PROPOSTA] sob a Fundação até o registro.\n- **Acréscimos ao brief:** valores provisórios novos (número dos IDs, fila e semana, amostra, medida das rotinas, parada da conversa principal); contrato Pessoa e papéis; Parada (c) para o lugar da tabela código → nome; pasta temporária do texto; `ambientes/rotinas.json`.\n- **Bloco 5:** captura no Wayback sem ambiente barrado, `fila_curadoria.py` e alcance calculado no log.\n- **Bloco 10a:** Consultas gerais, adaptadores novos (muda o plano, l. 430), teste no runner, agenda, filtro de dado pessoal, entrega do relatório e ramificação única. O \"pronto quando\" do bloco 10 também mudou.\n- **Bloco 14 e depois:** relatório do piloto antes da v0.3 e uma seção \"Operação\" depois do bloco 14.\n- **Fatos:** F-08 fechada só em duas das quatro linhas; \"(8 no título)\" retirado.\n- **Roteiro:** conflito do Haiku registrado como Parada (d), com reconferência em Sonnet; contas de chamadas alinhadas ao brief.\n\n**O que ainda está incoerente:**\n- A tabela da seção 4 do brief não mostra a Parada (c) nova no bloco 7.\n- As linhas 68 e 74 do roteiro mantêm os números antigos de chamadas. Uma nota na linha 36 diz que valem os do brief.\n- A regra para abrir CLB situada nova a partir de Entrada de rotina não foi achada no §5.4 por grep. Ficou como \"muda o plano\", decisão de Vicente com padrão.",
+ "corrigidos": [
+  {
+   "id": "AU-A01",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 13,
+   "o_que_mudou": "l. 13: as essências da seção 2 estão confirmadas, menos D-033 e D-034, que só valem depois do registro no bloco 0. O que se apoia nelas (a regra das perguntas e a seção 5) espera o registro. l. 93: a D-033 virou 'Essência a registrar'. l. 94: a D-034 virou 'Proposta, não registrada'. Roteiro l. 195: 'Até o registro, a D-033 e a D-034 não valem'."
+  },
+  {
+   "id": "AU-A02",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 6,
+   "o_que_mudou": "l. 6: vale a Fundação. As linhas da 6A apoiadas só na D-031 e na D-032 valem até a v0.2.1, e as da D-033 e da D-034 ficam pendentes. l. 385-387: o título da seção 6 perdeu '(vale o brief)', e a 6A diz o mesmo."
+  },
+  {
+   "id": "CO-G19",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 6,
+   "o_que_mudou": "l. 6: pôr o brief à frente da Fundação muda o plano. O bloco 0 registra essa precedência (D-034 ou decisão própria) e ajusta a l. 3 da AGENTS.md. A 6B fica [PROPOSTA] sob a Fundação. Linha nova na tabela 6A (l. 391), marcada pendente. Roteiro l. 195 traz o mesmo."
+  },
+  {
+   "id": "CO-G18",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 94,
+   "o_que_mudou": "Linha da D-034 (e roteiro l. 195): a fala de Vicente (checklist l. 207, essência l. 210) ficou separada da cláusula proposta. A cláusula ficou como 'onde a Fundação permite valor provisório ([PROPOSTA]), a execução usa o valor e segue', com alcance (l. 696, [PROPOSTA] dos §5 e §6 usados, leituras da 6B). O bloco 0 guarda na trilha a fala que a origina, e tudo depende da aprovação."
+  },
+  {
+   "id": "AU-B01",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 164,
+   "o_que_mudou": "Roteiro l. 164 e brief l. 334: ler a regra do campo-de-acao (campo-de-acao.md l. 30) como regra do que se publica muda o plano (D-032, D-020) e só vale se a v0.2.1 a trouxer; senão, a regra vale como está. Cabeçalhos do bloco 11 (brief l. 331) e da etapa 11 (roteiro l. 107) passaram a 'muda o plano'. Linha nova na tabela 6A."
+  },
+  {
+   "id": "AU-D03",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 331,
+   "o_que_mudou": "Cabeçalho do bloco 11 (e da etapa 11 no roteiro, l. 107) agora diz 'muda o plano', igual à linha do kit na tabela 6A."
+  },
+  {
+   "id": "AU-B02",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 409,
+   "o_que_mudou": "6B (l. 409): cada leitura agora diz 'muda o plano' e a decisão que a sustentaria: D-034 para o registro; D-032 para layout, pasta temporária, tradução, configuração, relatório e canal, e boletim; D-021 para a Fonte sem nome; D-023 para semana, medida, parada e créditos; D-033 para a ramificação. Vale só depois do bloco 0. Cabeçalho do bloco 2 (l. 174) ajustado. Roteiro l. 38: a etapa 2 está dentro do plano nos contratos, e o registro único muda o plano."
+  },
+  {
+   "id": "AU-B03",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 38,
+   "o_que_mudou": "Nota única depois da Sequência, em vez de repetir em cada cabeçalho: as etapas 3 a 8 e 10 adiantam Passos antes de o Passo 1 estar pronto, contra a l. 660. 'Dentro do plano' vale para o conteúdo, e a sequência muda pela D-032 (brief 6A)."
+  },
+  {
+   "id": "AU-C01",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 221,
+   "o_que_mudou": "O mapa feito em Haiku 5.5 ficou registrado como conflito com a D-027 (Parada d, sem reabrir a decisão). Os fatos da seção 4 que vêm desse mapa se reconferem com conferir-fato em Sonnet 5.5 alto na etapa 10. O brief (l. 324) dá essa reconferência ao auditor do bloco 10."
+  },
+  {
+   "id": "AU-C04",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 143,
+   "o_que_mudou": "'fecha a F-08' virou 'fecha duas das quatro linhas da F-08 (l. 1781 e 1782)'. O Flat Data (l. 1783), base do padrão da seção 7 item 3, segue não conferido. A linha do F-08 na tabela 6A do brief foi corrigida do mesmo modo."
+  },
+  {
+   "id": "AU-C06",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 202,
+   "o_que_mudou": "'(8 no título)' retirado no roteiro (l. 202) e no brief (l. 242), porque não tem citação no mapa."
+  },
+  {
+   "id": "AU-D01",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 36,
+   "o_que_mudou": "Roteiro l. 36: nota de que valem os números do brief onde divergirem (etapa 4: 3 a 4; etapa 5: 2; etapa 14: até 2 a mais). Soma refeita: cerca de 43 a 63, perto das 40 a 60 da seção 6. Etapa 10 (l. 105) mudou de 3 a 5 para 4 a 6, igual ao brief."
+  },
+  {
+   "id": "AU-D02",
+   "arquivo": "C:/Antigravity/Cultura Língquida/trilhas/2026-10-17_caminhos/caminhos.md",
+   "linha": 38,
+   "o_que_mudou": "Nota da l. 38: a etapa 0 entrega também o checklist do piloto `trilhas/AAAA-MM-DD_execucao-piloto.md`, que a retomada passa a ler."
+  },
+  {
+   "id": "CO-G01",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 311,
+   "o_que_mudou": "Bloco 10a, item 'Consultas gerais' (dentro do plano: princípios 2 e 7; D-032): o gerar_termo.py tira descritores processuais de X, Y e dos Termos atestados do piloto. O curador grava as Consultas validadas, e o rastreador as testa em cada ambiente. Semear com Wikidata ou legado antes da fase 2 muda o plano (l. 438)."
+  },
+  {
+   "id": "CO-G02",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 311,
+   "o_que_mudou": "Bloco 10a, item 'adaptadores novos' (muda o plano, l. 430; D-032): um lote por protocolo (API com cursor a começar pelo OpenAlex, leitor de feed, SRU, CKAN), cada um com resposta gravada, caso que reprova e rodada real curta. Linha nova na tabela 6A com a l. 430."
+  },
+  {
+   "id": "CO-G03",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 205,
+   "o_que_mudou": "Contrato 'Pessoa e papéis' (dentro do plano, l. 405, 615): código opaco e papéis, sem nome. O validar_acervo.py confere a W pelo papel e reprova registro com nome. Pessoa entra no layout de acervo/ (l. 201)."
+  },
+  {
+   "id": "CO-G04",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 252,
+   "o_que_mudou": "Bloco 5: fila_curadoria.py (nome provisório; l. 512, 902). Monta a tela do lote e a fila semanal de até 15 itens. O veredito de Vicente vira Execução 'pessoa' e muda o eixo de status. Tem casos que passam e que reprovam, e o tempo gasto entra no bloco 13."
+  },
+  {
+   "id": "CO-G05",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 365,
+   "o_que_mudou": "Seção nova 'Depois do bloco 14 — Operação', com cadência (l. 512), orçamento (D-023) e a regra de CLB nova. Essa regra não foi achada no §5.4 por grep, então ficou como 'muda o plano', decisão de Vicente com padrão proposto: uma CLB por vez, com os 4 critérios da D-022 e a fila abaixo de uma semana."
+  },
+  {
+   "id": "CO-G06",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 206,
+   "o_que_mudou": "Parada (c) antes do bloco 7 para o lugar da tabela código → nome (l. 406; muda a ordem, D-032). Padrão: pasta na máquina de Vicente, fora da pasta versionada. Rotinas não criam código de pessoa, e a reconstituição não espera a tabela no repositório. Linha nova na tabela 6A."
+  },
+  {
+   "id": "CO-G07",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 204,
+   "o_que_mudou": "Layout: pasta temporária fora da pasta versionada (l. 100, 407). O localizar_trecho.py baixa ali a fonte ou a captura e extrai o texto do PDF. O avaliador recebe o caminho e lê por grep -n. A pasta se apaga ao fim do lote e, na busca assistida, recebe o que Vicente salvar. Também listada na 6B."
+  },
+  {
+   "id": "CO-G08",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 311,
+   "o_que_mudou": "Bloco 10a: teste datado de cada ficha no runner do Actions antes de ligar o ambiente e, na 10b, na rotina de teste. Se barrar, vira modo assistido ou a Falta 'fonte inacessível' (l. 418-419)."
+  },
+  {
+   "id": "CO-G09",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 311,
+   "o_que_mudou": "Bloco 10a, item 'estado contínuo': uma ramificação de trabalho única e permanente [PROPOSTA] guarda o estado da coleta. Caso de teste com duas execuções seguidas. Permissões do token: não conferido. Listada na 6B (D-033)."
+  },
+  {
+   "id": "CO-G10",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 185,
+   "o_que_mudou": "Registro de valores: a medida das rotinas na conta da D-023 é a leitura semanal da conta, atribuída às rotinas, com teto em número de execuções fixado na rotina de teste. Bloco 1 (l. 166): tokens e chamadas null com motivo para script e rotina."
+  },
+  {
+   "id": "CO-G11",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 325,
+   "o_que_mudou": "'Pronto quando' do bloco 10 (e roteiro l. 104): cada execução da rotina roda a segunda leitura da D-026 (validador, auditor pela ferramenta Agent, semente da amostra). Se a rotina carrega .claude/agents/ é não conferido."
+  },
+  {
+   "id": "CO-G12",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 311,
+   "o_que_mudou": "Bloco 10a, item 'dado pessoal': o workflow roda procurar_dado_pessoal.py antes de cada commit e falha se achar algo, e o adaptador descarta nomes. Tem caso de teste com nome na resposta gravada."
+  },
+  {
+   "id": "CO-G13",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 325,
+   "o_que_mudou": "Bloco 10a, item 'entrega do relatório': o relatório chega a Vicente por canal de notificação do próprio GitHub [PROPOSTA], com o recurso não conferido. 'Pronto quando' (brief l. 325, roteiro l. 104): 'relatório do dia que chegou a Vicente'."
+  },
+  {
+   "id": "CO-G14",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 203,
+   "o_que_mudou": "Layout com ambientes/rotinas.json. Bloco 10a, item 'configuração e agenda': agendar.py (nome provisório) decide o Recorte do dia dentro da D-012 e da fila, com teste. Na 10b, um arquivo versionado por rotina."
+  },
+  {
+   "id": "CO-G15",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 185,
+   "o_que_mudou": "Registro: o número dos IDs nunca se repete, mesmo com três gravadores. Padrão: derivado do identificador da fonte ou numa faixa por gravador. O validar_acervo.py reprova colisão."
+  },
+  {
+   "id": "CO-G16",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 166,
+   "o_que_mudou": "Bloco 1: o log ganha `id` da Execução com prefixo próprio. Os registros do bloco 2 o guardam na origem, e o validar_acervo.py confere (l. 587, 593)."
+  },
+  {
+   "id": "CO-G17",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 186,
+   "o_que_mudou": "Registro: fila = itens à espera de juízo humano; uma semana = a cota de até 15 itens (l. 902), salvo outro valor de Vicente. O relatorio_dia.py calcula, e as rotinas não abrem ambiente acima dela."
+  },
+  {
+   "id": "CO-G20",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 250,
+   "o_que_mudou": "wayback.py não captura página de ambiente com 403, captcha ou verificação de navegador na ficha. A Entrada fica com o link permanente e, se preciso, com a Falta (l. 419), e o juridico registra a dúvida."
+  },
+  {
+   "id": "CO-G21",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 189,
+   "o_que_mudou": "Registro: parada da conversa principal (D-023). Vicente lê o uso ao abrir e ao fim de cada bloco, e a sessão para no limite que ele indicar, com o estado salvo. Somar pelo registro da sessão: não conferido."
+  },
+  {
+   "id": "CO-G22",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 187,
+   "o_que_mudou": "Registro: tamanho da amostra (D-026). Padrão: o que sobra da cota semanal depois das duas primeiras prioridades da l. 902, igual na releitura do auditor. Calibra-se no Passo 5."
+  },
+  {
+   "id": "CO-G23",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 253,
+   "o_que_mudou": "Bloco 5: os scripts dos blocos 5 e 10 gravam no log o alcance calculado. Bloco 1 (l. 166): campos de agente dispensados para script e rotina, e caso que reprova log de script sem alcance."
+  },
+  {
+   "id": "CO-G24",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 325,
+   "o_que_mudou": "'Entradas de mais de uma CLB' virou 'Entradas vindas de Consultas que não citam Termos de caju nem de cajuína', no brief l. 325 e no roteiro l. 104."
+  },
+  {
+   "id": "CO-G25",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 361,
+   "o_que_mudou": "Bloco 14, item 'Antes da v0.3': relatório do piloto calculado dos logs, escrito pelo redator e conferido pelo auditor (até 2 chamadas a mais). Entra no 'pronto quando'."
+  },
+  {
+   "id": "CO-G26",
+   "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+   "linha": 325,
+   "o_que_mudou": "Bloco 10: o boletim passa por procurar_dado_pessoal.py e pela amostra do auditor. Bloco 14 (l. 361): o auditor confere com conferir-fato cada habilidade da BNCC da Educação, com página e URL. Parcial: o 'pronto quando' do bloco 8 não foi mexido."
+  }
+ ],
+ "nao_corrigidos": [
+  {
+   "id": "CO-G27",
+   "motivo": "Teto de 30 chamadas: pôr a linha 'Entrada' em 11 blocos pediria 11 edições. A regra geral da seção 3a, item 2 (brief l. 100), já manda cada pedido trazer a entrada (arquivos e faixas). Fica para a próxima revisão: acrescentar a linha 'Entrada' em cada bloco ou ajustar a promessa do roteiro (l. 216)."
+  }
+ ],
+ "perguntas_que_sobraram": [
+  "Pergunta com '?': nenhuma. O grep -n '?' só achou interrogações dentro de URLs (brief l. 241-242; roteiro l. 201-202).",
+  "Decisão de Vicente com padrão: aprovar o roteiro e o brief e registrar a D-033 e a D-034, com a precedência limitada à 6A até a v0.2.1. Padrão no roteiro, seção 7, item 1.",
+  "Decisão de Vicente com padrão: lugar da tabela código → nome antes do bloco 7, Parada (c), brief l. 206. Padrão: pasta na máquina dele, fora da pasta versionada.",
+  "Decisão de Vicente com padrão: regra para abrir CLB situada nova a partir de Entrada de rotina, não achada no §5.4 (muda o plano; brief, Operação, l. 365). Padrão: o curador abre uma por vez, com os 4 critérios da D-022 e a fila abaixo de uma semana.",
+  "Decisão de Vicente com padrão: valores da fila e da semana (l. 472), da amostra e do limite da conversa principal no registro de valores. Padrões: 15 itens, o que sobra da cota da l. 902, e salvar o estado a cada bloco.",
+  "Insumo para reavaliar o plano: o canal do GitHub que leva o relatório a Vicente e as permissões do token do workflow. Ambos não conferidos e marcados [PROPOSTA] na 6B; a v0.3 confirma."
+ ],
+ "checagens": "- **Interrogações:** grep -n '?' nos dois arquivos achou só interrogações dentro de URLs (brief l. 241-242; roteiro l. 201-202).\n- **Dado pessoal:** procurar_dado_pessoal.py, rodado com PYTHONUTF8=1 e o Python real, deu '0 ocorrência(s)' no brief e no roteiro (rc=0 nos dois).\n- **Linhas (wc -l):** brief-execucoes-v0.1.md com 426, caminhos.md com 221.\n- **Edições:** todas as 22 deram certo na primeira tentativa, e um grep -n final conferiu as linhas de cada uma.\n- **Chamadas:** 29 de 30, contando o StructuredOutput.",
+ "alcance": {
+  "olhado": [
+   "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/caminhos.md (inteiro, l. 1-221)",
+   "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md (inteiro, em duas faixas: l. 1-200 e 200-399, antes das edições)",
+   "Fundação: l. 406, 430, 472, 512, 696, 902 e grep -n em l. 440-494 (§5.4: portas por tipo de evidência)",
+   "Checklist trilhas/2026-10-16_execucao-v0.2.md, l. 205-212 (cada linha cortada em 700 caracteres)"
+  ],
+  "fora": [
+   "Web (nenhum fato novo)",
+   "legado/",
+   "Anexos A e B",
+   "mapas/*.json (níveis e citações vindos dos achados)",
+   ".claude/agents/campo-de-acao.md e esquemas/log.schema.json (vindos dos comandos dos achados)",
+   "Checklist l. 207 depois dos 700 caracteres (onde poderia estar a origem da cláusula da D-034)",
+   "Tabela da seção 4 do brief (não ganhou a Parada (c) nova) e roteiro l. 68 e 74 (números antigos, cobertos pela nota da l. 36)"
+  ]
+ }
+}

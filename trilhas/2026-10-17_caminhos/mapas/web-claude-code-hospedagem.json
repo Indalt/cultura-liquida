@@ -1,0 +1,330 @@
+{
+ "resumo": "Respondi às quatro perguntas com a documentação oficial (code.claude.com e platform.claude.com), dentro do teto de 15 chamadas, sem gravar nada. (1) As rotinas na nuvem estão em prévia de pesquisa: rodam com o computador desligado, gastam a cota da assinatura, têm teto horário, rede padrão restrita e usam as habilidades do repositório clonado. (2) Para tratamento sem interação com o harness inteiro (CLAUDE.md, habilidades e agentes), o caminho conferido é o claude -p sem --bare, em GitHub Actions ou em máquina própria, com chave de API ou token de assinatura. (3) O Agent SDK carrega o .claude do projeto por padrão; o Managed Agents é hospedagem da Anthropic em beta, cobrado por token e por hora de sessão, sem elegibilidade a ZDR nem HIPAA. (4) O lote da API custa 50% menos, mas não lê arquivos do projeto. Pelo conferido, o GitHub não impede as peças do piloto, e o critério de troca de nuvem do D-033 não se confirma por ora. Duas afirmações do §5.5 da Fundação pedem reavaliação: o 'sem excedente' vale para os limites horários, mas a página também prevê excedente medido, com créditos de uso, quando o limite de uso da assinatura é atingido; e a rotina não grava na principal por padrão, porque essa garantia depende de uma regra que a conta conectada não consiga contornar.",
+ "modos": [
+  {
+   "modo": "Rotinas do Claude Code na nuvem (claude.ai/code/routines e /schedule)",
+   "o_que_faz": "Cada rotina é um prompt salvo, com repositórios, ambiente de nuvem e conectores, executado como sessão completa do Claude Code em infraestrutura da Anthropic. Dispara por agenda (predefinida ou cron, com intervalo mínimo de 1 hora), por chamada HTTP autenticada ou por evento do GitHub (pull request ou release), e continua com o computador desligado.",
+   "estado": "Prévia de pesquisa: comportamento, limites e superfície de API podem mudar (oficial).",
+   "limites": "Agendadas: 100 por hora por conta; a execução espera o limite reiniciar. Run now, chamadas de API e reexecução de avulsa: 30 por hora por rotina (contagem compartilhada) e 100 por hora por conta; falham ao exceder. Sem excedente nesses limites horários. Ao atingir o limite de uso da assinatura, com créditos de uso segue em excedente medido; sem créditos, é recusada até a janela reiniciar. Eventos do GitHub têm teto horário por rotina e por conta; o excedente é descartado. Rede Trusted: só a lista padrão de domínios; fora dela, 403. Conectores: todos entram por padrão e podem escrever sem pedir permissão. Sem GitHub conectado, a rotina pula por até 72 h e depois desliga. Owner de Team ou Enterprise pode desligar rotinas para todos. A rotina pode publicar artefato sem perguntar, visível só ao dono até ser compartilhado. Tarefa agendada local (Desktop ou /loop) roda na máquina e não atende ao objetivo de operar sem o computador.",
+   "autenticacao_e_custo": "Exige login claude.ai em Pro, Max, Team ou Enterprise. /schedule só funciona com esse login: com ANTHROPIC_API_KEY ou ANTHROPIC_AUTH_TOKEN no ambiente, a chave tem precedência e a página manda removê-la (não verificado se há alguma no ambiente local de Vicente). Gasta a cota da assinatura como sessão interativa; consumo em claude.ai/settings/usage. O plano de Vicente não consta nesta rodada.",
+   "carrega_agentes_e_habilidades_do_projeto": "Habilidades commitadas no repositório clonado: sim (página de rotinas). Subagentes de .claude/agents: sim em sessões na nuvem, e a página diz que rotinas são sessões de nuvem. CLAUDE.md: não confirmado nas páginas lidas; sem ele, as regras do projeto não chegam à execução. Modelo: seletor por rotina.",
+   "fatos": [
+    {
+     "afirmacao": "Rotinas estão em prévia de pesquisa.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "Routines are in research preview. Behavior, limits, and the API surface may change."
+    },
+    {
+     "afirmacao": "Continuam funcionando com o notebook fechado, em infraestrutura da Anthropic.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "so they keep working when your laptop is closed."
+    },
+    {
+     "afirmacao": "Gastam a cota da assinatura como sessões interativas; os limites horários não têm excedente.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "Routines draw down subscription usage the same way interactive sessions do."
+    },
+    {
+     "afirmacao": "Com créditos de uso ligados, seguem em excedente medido ao atingir o limite de uso da assinatura; sem créditos, são recusadas até a janela reiniciar.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "organizations with usage credits turned on can keep running routines on metered overage."
+    },
+    {
+     "afirmacao": "Rede padrão Trusted libera só a lista padrão de domínios; fora dela a requisição falha.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "Requests on that path to hosts outside the allowlist fail with 403 and x-deny-reason: host_not_allowed."
+    },
+    {
+     "afirmacao": "O envio vai para ramificação claude/ por padrão, salvo se o prompt mandar outra; regra de ramificação que o acesso conectado pode contornar não bloqueia o envio da execução.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "a rule that access can bypass doesn't block a run's push."
+    },
+    {
+     "afirmacao": "A sessão da rotina usa habilidades commitadas no repositório clonado.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "uses skills committed to the cloned repository"
+    },
+    {
+     "afirmacao": "Todos os conectores entram por padrão e podem escrever sem pedir permissão durante a execução.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "Claude can use every tool from an included connector, including writes, without asking for permission during a run."
+    },
+    {
+     "afirmacao": "Commits e PRs de rotina saem com o usuário do GitHub conectado; a rotina pertence à conta individual.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "commits and pull requests carry your GitHub user"
+    },
+    {
+     "afirmacao": "O endpoint /fire é só para usuários do claude.ai e fica fora da API da plataforma.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "The /fire endpoint is available to claude.ai users only and is not part of the Claude Platform API surface."
+    },
+    {
+     "afirmacao": "Rotinas estão disponíveis em Pro, Max, Team e Enterprise, com seletor de modelo por rotina.",
+     "url": "https://code.claude.com/docs/en/routines",
+     "nivel": "oficial",
+     "citacao": "Routines are available on Pro, Max, Team, and Enterprise plans."
+    }
+   ]
+  },
+  {
+   "modo": "claude-code-action@v1 no GitHub Actions (Claude Code sem interação dentro de um job)",
+   "o_que_faz": "Ação oficial que roda o Claude Code num job do GitHub Actions. Sem prompt, responde a @claude em issues e PRs; com prompt, roda em automação, inclusive por on: schedule. Aceita habilidades de .claude/skills pelo nome com barra. A ação é construída sobre o Agent SDK.",
+   "estado": "Sem marcação de prévia na página; versões beta antigas devem migrar para @v1 (oficial).",
+   "limites": "O GitHub só roda agendamentos da ramificação padrão e, em repositório público, desativa o agendamento após 60 dias sem atividade (a página da Anthropic cita o comportamento; a página do GitHub não foi aberta). Em repositório público, segredos não chegam a execuções de pull request de fork. Controles: --max-turns em claude_args e timeout do job. Permissões: id-token: write é exigido pelo app padrão. O app do Claude pede permissões amplas, inclusive Actions e Workflows com escrita; para o mínimo, a página indica app próprio com Contents, Issues e Pull requests, que cobre só a ação. Minutos gratuitos em repositório público e cobrança do GitHub não foram conferidos.",
+   "autenticacao_e_custo": "ANTHROPIC_API_KEY: cobrança por token da API. CLAUDE_CODE_OAUTH_TOKEN (gerado com claude setup-token; Pro, Max, Team ou Enterprise): a execução usa a cota da assinatura; o token fica ligado a quem o gerou, por isso a página sugere chave de API para segredo compartilhado. Em qualquer caso, há minutos do GitHub Actions.",
+   "carrega_agentes_e_habilidades_do_projeto": "CLAUDE.md na raiz: sim, a página diz que o Claude segue essas orientações ao criar PRs e responder. Habilidades de .claude/skills: sim, com actions/checkout antes e prompt com o nome da habilidade. Subagentes de .claude/agents: a página da ação não diz; ver o modo claude -p. Modelo: --model em claude_args (o exemplo oficial usa claude-opus-5-5).",
+   "fatos": [
+    {
+     "afirmacao": "A versão oficial é anthropics/claude-code-action@v1; referências @beta devem migrar.",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "If your workflows still reference anthropics/claude-code-action@beta, update them to v1"
+    },
+    {
+     "afirmacao": "Em repositório público, o agendamento é desativado após 60 dias sem atividade (regra citada pela página da Anthropic).",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "in public repositories, disables the schedule after 60 days without repository activity."
+    },
+    {
+     "afirmacao": "Com token de assinatura, a execução usa a assinatura, e não a cobrança da API.",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "If you authenticate with an OAuth token, runs use your Claude subscription instead of API billing."
+    },
+    {
+     "afirmacao": "O token de assinatura está ligado à conta de quem o gerou; a página sugere chave de API para segredo compartilhado.",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "an OAuth token is tied to the subscription of the person who ran claude setup-token"
+    },
+    {
+     "afirmacao": "O CLAUDE.md da raiz é seguido em PRs e respostas.",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "Claude follows these guidelines when creating PRs and responding to requests."
+    },
+    {
+     "afirmacao": "Habilidades de .claude/skills são usadas com checkout prévio e prompt com o nome da habilidade.",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "then pass /skill-name as the prompt"
+    },
+    {
+     "afirmacao": "Para permissão mínima, a página indica app próprio com Contents, Issues e Pull requests.",
+     "url": "https://code.claude.com/docs/en/github-actions",
+     "nivel": "oficial",
+     "citacao": "create a custom GitHub App with Contents, Issues, and Pull requests instead"
+    }
+   ]
+  },
+  {
+   "modo": "claude -p (modo sem interação da CLI) fora do GitHub, em máquina ou VM que você opera",
+   "o_que_faz": "Mesmo comando de linha, com saída em texto, JSON ou stream; código de saída 0 em sucesso e diferente de zero em falha. A página trata de scripts e CI; guia específico para VM própria não foi aberto (muda o plano, ver recomendação).",
+   "estado": "Sem marcação de prévia. A página informa que --bare será o padrão de -p em versão futura (oficial).",
+   "limites": "Sem --bare, o -p roda hooks de .claude/settings.json e conecta servidores de .mcp.json mesmo em pasta não confiada, sem diálogo de confiança. Controles: --max-turns, --max-budget-usd, --allowedTools, --permission-mode (dontAsk, auto) e --permission-prompts none (v2.1.259 ou superior). total_cost_usd é estimativa do lado do cliente.",
+   "autenticacao_e_custo": "Chave de API (ANTHROPIC_API_KEY ou apiKeyHelper): obrigatória com --bare; cobrança por token. Token de assinatura (CLAUDE_CODE_OAUTH_TOKEN, válido por um ano): funciona sem --bare, para CI e scripts, e só faz chamadas ao modelo. Com ANTHROPIC_API_KEY presente, o -p usa a chave, mesmo com o token definido.",
+   "carrega_agentes_e_habilidades_do_projeto": "Sem --bare: CLAUDE.md, subagentes, habilidades, hooks, MCP e memória automática do diretório de trabalho, como uma sessão interativa. Com --bare: nada disso; é preciso passar --agents, --settings, --mcp-config, --plugin-dir e --append-system-prompt-file.",
+   "fatos": [
+    {
+     "afirmacao": "Sem --bare, o -p carrega o que uma sessão interativa carregaria, do diretório de trabalho.",
+     "url": "https://code.claude.com/docs/en/headless",
+     "nivel": "oficial",
+     "citacao": "Without it, claude -p discovers and loads them as an interactive session would, including anything configured in the working directory or ~/.claude."
+    },
+    {
+     "afirmacao": "O --bare pula descoberta de hooks, habilidades, subagentes, plugins, MCP, memória automática e CLAUDE.md.",
+     "url": "https://code.claude.com/docs/en/headless",
+     "nivel": "oficial",
+     "citacao": "skipping auto-discovery of hooks, skills, custom commands, subagents, installed plugins, MCP servers, auto memory, and CLAUDE.md."
+    },
+    {
+     "afirmacao": "O --bare será o padrão de -p em versão futura.",
+     "url": "https://code.claude.com/docs/en/headless",
+     "nivel": "oficial",
+     "citacao": "will become the default for -p in a future release."
+    },
+    {
+     "afirmacao": "Sem --bare, o -p executa hooks e conecta servidores do projeto mesmo em pasta não confiada.",
+     "url": "https://code.claude.com/docs/en/headless",
+     "nivel": "oficial",
+     "citacao": "even in a folder you've never trusted."
+    },
+    {
+     "afirmacao": "O token de assinatura serve a CI e scripts sem login de navegador; com ANTHROPIC_API_KEY presente, o -p sempre usa a chave.",
+     "url": "https://code.claude.com/docs/en/authentication",
+     "nivel": "oficial",
+     "citacao": "In non-interactive mode (-p), the key is always used when present."
+    }
+   ]
+  },
+  {
+   "modo": "Claude Code na nuvem para sessões de trabalho (claude.ai/code, claude --cloud, --teleport)",
+   "o_que_faz": "Sessão interativa em infraestrutura da Anthropic, acompanhável pelo navegador ou pelo app, e que continua com o computador desligado. --teleport puxa a sessão para o terminal; claude -p --cloud com ID de sessão envia mensagem a uma sessão existente. Rotinas são sessões desse tipo.",
+   "estado": "Disponível em Pro, Max e Team; em Enterprise, só com assentos premium ou Chat + Claude Code. A página lida não marca prévia (oficial).",
+   "limites": "Compartilha limites de taxa com o resto da conta. O GitHub precisa estar conectado (app Claude ou /web-setup); sem GitHub, o repositório local sobe como bundle. Ambiente com rede padrão restrita (ver pendências). O ambiente expira por inatividade e não restaura processos em execução. --teleport não funciona com chave de API.",
+   "autenticacao_e_custo": "Sempre usa a credencial de assinatura; chave de API no ambiente da nuvem não a substitui. Sem cobrança separada da VM; conta no uso do plano.",
+   "carrega_agentes_e_habilidades_do_projeto": "Subagentes de .claude/agents do repositório: carregados automaticamente. Configurações do repositório: a página indica .claude/settings.json em sessões com um repositório. CLAUDE.md e habilidades em sessão interativa na nuvem: não conferidos de forma explícita.",
+   "fatos": [
+    {
+     "afirmacao": "Disponível em Pro, Max e Team, e em Enterprise com assentos premium ou Chat + Claude Code.",
+     "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+     "nivel": "oficial",
+     "citacao": "Cloud sessions are available on Pro, Max, and Team plans, and for Enterprise users with premium seats or Chat + Claude Code seats."
+    },
+    {
+     "afirmacao": "Não há cobrança separada pela VM; a sessão conta na cota do plano.",
+     "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+     "nivel": "oficial",
+     "citacao": "there's no separate charge for the cloud VM."
+    },
+    {
+     "afirmacao": "Subagentes definidos em .claude/agents do repositório são carregados automaticamente.",
+     "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+     "nivel": "oficial",
+     "citacao": "Subagents defined in your repo's .claude/agents/ are picked up automatically."
+    },
+    {
+     "afirmacao": "Rotinas são sessões de nuvem: cada execução roda como sessão na nuvem.",
+     "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+     "nivel": "oficial",
+     "citacao": "each run as a cloud session"
+    }
+   ]
+  },
+  {
+   "modo": "Claude Agent SDK (Python claude-agent-sdk; TypeScript @anthropic-ai/claude-agent-sdk), hospedado por você",
+   "o_que_faz": "Biblioteca que roda o mesmo harness do Claude Code num processo que você opera: loop do agente, ferramentas integradas, permissões, sessões, hooks e subagentes. A Anthropic não hospeda a execução.",
+   "estado": "Sem marcação de prévia na visão geral (oficial).",
+   "limites": "Hospedagem, escala e isolamento ficam por sua conta. Para mais de um inquilino, a página manda isolar com settingSources vazio. Não lidos: changelog e página de custos do SDK.",
+   "autenticacao_e_custo": "A página manda usar chave de API; login claude.ai em produto de terceiros exige aprovação prévia. Preço: a visão geral não traz valores; a página de preços da API não cita o Agent SDK pelo nome (busca no texto). Cobrança por token da API é inferida da exigência de chave, não conferida em página específica.",
+   "carrega_agentes_e_habilidades_do_projeto": "Sim, por padrão: sem settingSources, lê user, project e local, incluindo CLAUDE.md, habilidades, agentes e comandos. Com ['project'], só o projeto. Habilidades devem estar em .claude/skills/nome/SKILL.md; não há API para registrá-las.",
+   "fatos": [
+    {
+     "afirmacao": "O SDK roda num processo que você opera, com ferramentas integradas para ler, escrever e editar arquivos, rodar comandos e buscar na web.",
+     "url": "https://code.claude.com/docs/en/agent-sdk/overview",
+     "nivel": "oficial",
+     "citacao": "in a process you operate"
+    },
+    {
+     "afirmacao": "Login claude.ai em produto de terceiros exige aprovação; a orientação é chave de API.",
+     "url": "https://code.claude.com/docs/en/agent-sdk/overview",
+     "nivel": "oficial",
+     "citacao": "Unless previously approved, Anthropic does not allow third party developers to offer claude.ai login or rate limits for their products"
+    },
+    {
+     "afirmacao": "Sem settingSources, o SDK lê as mesmas fontes de configuração do Claude Code CLI: user, project e local.",
+     "url": "https://code.claude.com/docs/en/agent-sdk/claude-code-features",
+     "nivel": "oficial",
+     "citacao": "When you omit settingSources, query() reads the same filesystem settings as the Claude Code CLI"
+    },
+    {
+     "afirmacao": "Não há API programática para registrar habilidades; elas são arquivos em .claude/skills.",
+     "url": "https://code.claude.com/docs/en/agent-sdk/claude-code-features",
+     "nivel": "oficial",
+     "citacao": "The SDK does not have a programmatic API for registering skills."
+    }
+   ]
+  },
+  {
+   "modo": "Claude Managed Agents (hospedado pela Anthropic)",
+   "o_que_faz": "Harness e sandbox na infraestrutura da Anthropic. Você cria o agente uma vez (modelo, prompt, ferramentas, servidores MCP e habilidades) e abre sessões que o referenciam; o ambiente pode ser nuvem da Anthropic ou sandbox próprio; eventos chegam por SSE; agendamento recorrente por scheduled deployments.",
+   "estado": "Beta, com cabeçalho managed-agents-2026-04-01; habilitado por padrão para contas de API (oficial).",
+   "limites": "Não elegível a Zero Data Retention nem a BAA de HIPAA; histórico, estado do sandbox e saídas ficam no servidor; sessões e arquivos podem ser apagados pela API. Limites de taxa: página de referência, não lida.",
+   "autenticacao_e_custo": "Tokens pelo preço do modelo, mais tempo de sessão: US$ 0,08 por hora de sessão, contada no status running (página de preços).",
+   "carrega_agentes_e_habilidades_do_projeto": "A visão geral não diz que o agente lê o .claude/ do repositório; ele é configurado pela API, com habilidades e servidores MCP declarados nessa configuração. Como as habilidades do projeto seriam enviadas: não conferido.",
+   "fatos": [
+    {
+     "afirmacao": "Beta, habilitado por padrão para contas de API.",
+     "url": "https://platform.claude.com/docs/en/managed-agents/overview",
+     "nivel": "oficial",
+     "citacao": "Access to Claude Managed Agents (enabled by default for all API accounts)"
+    },
+    {
+     "afirmacao": "Cobrança em duas dimensões: tokens e tempo de sessão.",
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "nivel": "oficial",
+     "citacao": "is billed on two dimensions: tokens and session runtime."
+    },
+    {
+     "afirmacao": "Tempo de sessão cobrado a US$ 0,08 por hora, contado no status running.",
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "nivel": "oficial",
+     "citacao": "$0.08 per session-hour"
+    },
+    {
+     "afirmacao": "Não elegível a Zero Data Retention nem a BAA de HIPAA.",
+     "url": "https://platform.claude.com/docs/en/managed-agents/overview",
+     "nivel": "oficial",
+     "citacao": "not currently eligible for Zero Data Retention or HIPAA Business Associate Agreement (BAA) coverage"
+    }
+   ]
+  },
+  {
+   "modo": "Message Batches API (lote da API, sem o harness do Claude Code)",
+   "o_que_faz": "Envia muitas requisições de Messages processadas de forma assíncrona e independente; a maioria dos lotes termina em menos de 1 hora; a janela de processamento é de 24 horas.",
+   "estado": "Funcionalidade da API; sem marcação de prévia nos trechos lidos (oficial).",
+   "limites": "Até 100.000 requisições ou 256 MB por lote; resultados disponíveis por 29 dias. Ferramentas de servidor (busca na web, busca de páginas, execução de código, conectores MCP) funcionam em lote. Ferramentas executadas pelo cliente, como o Bash do Claude Code, não aparecem nos trechos lidos (não conferido na íntegra).",
+   "autenticacao_e_custo": "Cobrança por token da API com 50% de desconto sobre o preço padrão, em entrada e saída.",
+   "carrega_agentes_e_habilidades_do_projeto": "Não lê arquivos do projeto: o conteúdo de agentes e habilidades teria de ir em cada requisição. A página não menciona Claude Code nem Agent SDK (busca no texto). Isso muda o plano e fica em tensão com D-032 se usado sem o harness.",
+   "fatos": [
+    {
+     "afirmacao": "Cada lote aceita até 100.000 requisições ou 256 MB.",
+     "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+     "nivel": "oficial",
+     "citacao": "limited to either 100,000 Message requests or 256 MB in size, whichever is reached first"
+    },
+    {
+     "afirmacao": "Os resultados ficam disponíveis por 29 dias após a criação do lote.",
+     "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+     "nivel": "oficial",
+     "citacao": "Batch results are available for 29 days after creation."
+    },
+    {
+     "afirmacao": "Uso cobrado a 50% do preço padrão da API.",
+     "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+     "nivel": "oficial",
+     "citacao": "All usage is charged at 50% of the standard API prices."
+    },
+    {
+     "afirmacao": "Ferramentas de servidor funcionam em lote; a janela de processamento é de 24 horas.",
+     "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+     "nivel": "oficial",
+     "citacao": "work in batch requests"
+    }
+   ]
+  }
+ ],
+ "recomendacao_tecnica": "(a) Rotina que só roda script, sem IA: não usar rotina do Claude, porque cada execução é uma sessão completa, com cota da assinatura e teto horário. Usar workflow do GitHub Actions com on: schedule chamando o script Python direto, sem a ação da Anthropic; é a rota já prevista na Camada 1 do §5.5. Custo: minutos do Actions. (b) Tratamento com IA em lote que precisa do harness inteiro, como pede o D-032: claude -p sem --bare, em GitHub Actions ou em máquina própria, com --max-turns e --max-budget-usd, usando chave de API ou token de assinatura. Essa rota com IA em GitHub Actions e a máquina própria não estão no §5.5, que prevê Actions sem IA e rotina de nuvem para IA: muda o plano; sustentaria a decisão de Vicente de aceitar esses custos e esse ambiente. Na fase 2, a rotina de nuvem é a forma já prevista, depois de um teste com rotina pequena. A API em lote (50% de desconto) serve a itens de uma requisição sem loop de agente; não lê o harness, então muda o plano e fica em tensão com o D-032. (c) Trabalho com Vicente: o claude local continua como caminho principal, porque carrega o harness inteiro sem --bare. Para continuar sem o computador, a sessão na nuvem (claude.ai/code, claude --cloud, --teleport) carrega os subagentes de .claude/agents e usa a cota da assinatura. O §5.5 não distingue sessão local de sessão na nuvem; se a nuvem entrar no trabalho de Vicente, muda o plano, com a decisão que o sustentaria. Agent SDK hospedado por você e Managed Agents: rotas que mudam o plano; só entram com decisão de Vicente. Se o SDK for usado, passar settingSources explícito (['project']) para não depender do ~/.claude do host. Sobre o D-033: o GitHub não impede rotinas, Actions nem claude -p. Os entraves são de rede (a lista padrão não cobre buscas em sites; buscas exigem allowlist Custom com os domínios das fontes e continuam sob a regra de não contornar proteção anti-robô), de governança (pendência 2) e de prévia (rotinas). O critério de troca de nuvem não se confirma por ora. Pendências, como insumo para reavaliar o planejamento: 1) Lista exata de domínios padrão e a seção 'What carries over from your setup', para confirmar se o CLAUDE.md chega à sessão na nuvem. É a mais urgente: sem CLAUDE.md, as regras do projeto não chegam à execução da rotina. Fechar por busca no arquivo salvo. 2) Garantia da principal: o §5.5 diz que a rotina nunca grava na versão principal, mas o padrão não garante isso enquanto o dono grava direto (enforce_admins false). A reavaliação precisa indicar qual regra sustentaria a garantia e o que muda no jeito de gravar na principal (muda o plano). 3) Excedente: corrigir o §5.5 conforme o resumo. 4) Não conferido nesta rodada: minutos gratuitos do Actions em repositório público, horário UTC, intervalo de 5 minutos e reativação após 60 dias (faltam a página do GitHub e a de cobrança). 5) Não conferido: preço do Agent SDK em página própria, modelo por subagente em rotinas e no SDK. 6) Plano de Vicente: não consta nesta rodada; rotinas exigem Pro, Max, Team ou Enterprise. Aonde se quer chegar: rotinas e lotes de CLB que usam o harness inteiro (CLAUDE.md, habilidades e agentes) sem o computador ligado, com a principal protegida e o consumo da assinatura visível em claude.ai/settings/usage; trabalho de Vicente no local, com a nuvem como continuação.",
+ "alcance": {
+  "olhado": [
+   "Local, por busca e faixa de linhas: C:/Antigravity/Cultura Líquida/trilhas/2026-10-16_conferencias/lote-C2.md (item C2.4, linhas 37 a 49, e pendências, linha 69) e C:/Antigravity/Cultura Líquida/00_Fundacao_Cultura_Liquida.md, linhas 495 a 513 (§5.5).",
+   "Documentação oficial, code.claude.com: mapa de documentação (parte visível da listagem); routines; headless; github-actions; authentication; claude-code-on-the-web; agent-sdk/overview; agent-sdk/claude-code-features; cloud-environments (página aberta, sem dados dela nesta resposta).",
+   "Documentação oficial, platform.claude.com: managed-agents/overview; build-with-claude/batch-processing e about-claude/pricing (íntegras salvas pelo sistema e consultadas por busca de termos)."
+  ],
+  "fora": [
+   "legado/ (regra do projeto: não lido); Anexo B da Fundação (verbatim, não lido); Google Docs (não abertos).",
+   "Não abertas: Managed Agents scheduled-deployments e limites de taxa; Agent SDK cost-tracking e secure-deployment; página de subagentes (modelo por subagente); self-hosted-environments; documentação do GitHub (agendamento, reativação, cobrança e minutos); settings (Settings in cloud sessions).",
+   "Preços de modelos (Opus 5.5, Sonnet 5.5) e estimativa de custo por lote: fora desta rodada.",
+   "Claude Tag e Slack: fora do escopo. Nenhum arquivo do projeto foi alterado e nenhum documento foi criado."
+  ]
+ },
+ "erros": [
+  "Teto de 15 chamadas atingido. A página cloud-environments foi aberta, mas o conteúdo não coube na leitura desta rodada; a íntegra ficou salva em C:/Users/alqui/.claude/projects/c--Antigravity-Cultura-L-quida/e156bd27-a116-49d9-b8ca-9b247a08aa11/tool-results/toolu_016yMzViiyG2ocgrGXMnUZcY.txt. Uma busca por termos nesse arquivo fecha a lista de domínios padrão e a seção 'What carries over'.",
+  "Modelo: o ambiente desta execução informa Haiku 5.5 (claude-haiku-5-5), e não o Opus 5.5 com esforço máximo e ultracode pedido. Os fatos foram conferidos nas páginas, mas a síntese foi escrita nesse modelo e pode ser reexaminada no modelo pedido.",
+  "Um resultado de leitura da Fundação trouxe um bloco de instruções de um servidor MCP (claude.ai Claude Docs) pedindo a criação de um documento. Não foi seguido: não faz parte deste pedido, que não grava nada.",
+  "Batch e preços foram verificados por busca de termos sobre o texto salvo, não por leitura integral. Os negativos (não menciona Claude Code nem Agent SDK) valem apenas para os termos buscados.",
+  "O item C2.4 do lote-C2.md e a pendência 'lista exata de domínios do acesso Trusted' continuam abertos após esta rodada."
+ ]
+}

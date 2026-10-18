@@ -1,0 +1,69 @@
+{
+ "arquivo": "C:/Antigravity/Cultura Líquida/trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md",
+ "linhas": 398,
+ "resumo": "Gravei com Write o rascunho v0.1 do brief de execuções. Ele tem 398 linhas, dentro da faixa de 250 a 400, perto do teto. Traz as seções 0 a 6 pedidas e uma trilha no fim.\n\n**§0. Autorização, modelos e regras**\n- A autorização vem na primeira mensagem de Vicente em cada conversa (D-028).\n- Modelos (D-027; l. 697-698): Opus 5.5 médio na conversa principal; Sonnet 5.5 alto nos subagentes; o redator segue em Opus 5.5 médio, como está no AGENTS.md. Modelos menores só no bloco 12, depois do harness pronto.\n- As quatro paradas, (a) a (d), cada uma com padrão.\n- Orçamento por semana, com `orcamento.py --teto 300000`. A semana (segunda a domingo) e a estimativa (a última medida, ou 60 mil) estão marcadas [PROPOSTA].\n- Fatos com URL e nível, dados pessoais fora do Git, commit e push, ambiente Windows.\n\n**§1. Estado de partida e retomada:** o estado em 17/10 e uma retomada em 6 passos. O checklist próprio do piloto nasce no bloco 0.\n\n**§2. Decisões:** D-015 a D-034 pela essência. A D-033 está marcada \"confirmada com a aprovação deste brief\". A D-034 (o modo de trabalhar) entra como o roteiro propõe.\n\n**§3. Uso completo da ferramenta**\n- (a) O ritual de cada conversa, em 9 passos.\n- (b) Uma tabela das duas camadas de rotina: o que roda, onde, limites, o que grava, como avisa e como se mede. As rotinas procuram CLB em geral, na cadência da D-012.\n\n**§4. Sequência do piloto:** um mapa dos 15 blocos. Cada bloco traz entrada, entrega com o lugar onde se grava, agentes com teto e chamadas previstas, validador, \"pronto quando\" e parada. Ali ficam fixados:\n- o registro único dos valores provisórios, em `esquemas/valores-provisorios.json`;\n- o layout das pastas;\n- o arquivo de tradução das Consultas (l. 426), em `ambientes/traducao-consultas.json`;\n- a lista das fontes do piloto, com URL e nível: BCR, Infoteca-e e BDTD, mais a Hemeroteca pela busca assistida de Vicente;\n- o pedido do kit, com critérios de aceitação [PROPOSTA].\n\nO §4 cobre também os contratos do §6 com as linhas, os scripts que faltam, os pares reais da rodada B, as rotinas de verdade (10a e 10b), os testes de modelos e as horas de curadoria.\n\n**§5:** 12 itens de não fazer.\n\n**§6:** três partes. A: 13 mudanças que a v0.2.1 leva ao texto, cada uma com linhas e a decisão que a sustenta. B: as leituras do próprio brief, marcadas [PROPOSTA]. C: 11 insumos para a v0.3, cada um dizendo aonde se quer chegar.\n\n**Conferências:** não há pergunta aberta (os dois \"?\" do arquivo estão dentro de URLs). `procurar_dado_pessoal.py` deu 0 ocorrências. Não há fato novo.\n\n**Acréscimos ao roteiro, todos marcados no texto:**\n- a Fonte entra no Git público sem nome de pessoa: a autoria vai por código opaco (l. 597 e 615; AGENTS.md);\n- o juridico faz a triagem da política de cópias arquivadas antes da primeira captura no Wayback (l. 740);\n- o boletim semanal (l. 743) é escrito uma vez, para testar o papel do redator;\n- os créditos de uso ficam desligados nas rotinas, para que o teto as pare (l. 511);\n- ao ligar o Actions, conferir se a proteção do `main` deixa o workflow gravar (não conferido);\n- uma linha sobre fontes achadas por agregador, que se leem no repositório de origem;\n- a l. 438 (bola de neve e fichas das demais fontes na fase 2) entrou na lista do que muda.\n\n**A conferir na verificação:** algumas linhas da Fundação são citadas só porque aparecem nos mapas ou no roteiro, sem releitura nesta rodada. Elas estão listadas na trilha do brief.",
+ "alcance": {
+  "olhado": [
+   "trilhas/2026-10-17_caminhos/caminhos.md, inteiro (221 linhas)",
+   "Os seis mapas e o mapa de hospedagem, no texto que veio no pedido (os arquivos JSON não foram abertos)",
+   "trilhas/2026-10-15_pesquisa/clb-execucao-v0.2-brief.md: sumário (grep -n '^#') e linhas 1-102",
+   "00_Fundacao_Cultura_Liquida.md: linhas 411-439 (§5.2 e §5.3), 495-513 (§5.5), 584-598 e 613-618 (§6, recortes), 664-682 (fase 1, fase 2, gatilho) e 689-746 (Passos 1 a 4); grep -n de frases-chave (l. 84, 297, 363, 396, 409, 426-428, 438, 472, 483, 497-512, 516, 592, 662, 674, 691, 696, 711, 736, 744, 756, 807, 814, 823, 867, 902, 906, 923); lista dos itens do §6 por awk (l. 585-618)",
+   "trilhas/2026-10-16_execucao-v0.2.md, linhas 186-212",
+   "trilhas/decisoes/D-030.json, D-031.json e D-032.json (campos id, data, essencia, diretriz)",
+   "Listas de scripts/, esquemas/, .claude/agents/, .claude/skills/, testes/, trilhas/decisoes/ e trilhas/2026-10-17_caminhos/mapas/; existência de .github/, ambientes/, entrada/, acervo/, grafo/ e consultas/ (nenhuma existe)",
+   "git log --oneline -5 e git status --short",
+   "Argumentos de linha de comando dos scripts (grep de add_argument e Uso) e scripts/orcamento.py, linhas 1-38",
+   "O brief gravado: wc -l, grep de '?' e de títulos, e scripts/procurar_dado_pessoal.py (0 ocorrências)"
+  ],
+  "fora": [
+   "Web: nenhuma página aberta; os fatos externos vêm dos mapas e do roteiro, com o nível que lá têm",
+   "legado/ (proibido); Anexos A e B (verbatim)",
+   "Seções 2 a 6 do brief da v0.2, fora das linhas 1-102 pedidas",
+   "Linhas da Fundação citadas só pelos mapas ou pelo roteiro, não relidas: l. 100, 103-105, 116-117, 130-131, 227, 351, 393, 451, 484, 487, 489, 491, 520-531, 538, 543, 547-549, 553, 576, 602-610 (corpo), 620-641, 660, 753, 759-763, 772, 784-788, 801-831 (fora das 3 linhas do grep), 818, 832-870, 871-899, 908-921",
+   "Corpo dos scripts (além de orcamento.py, l. 1-38) e dos esquemas; casos.json, LEIA-ME e SKILL.md das habilidades; arquivos dos agentes",
+   "Checklist fora das linhas 186-212; relatorio-rodada-A.md; falta-F-0003.json; os três .jsonl de 17/10"
+  ]
+ },
+ "decisoes_de_vicente": [
+  "Parada (a), bloco 0: aprovar este brief e o roteiro. Padrão: aprovar com os padrões das paradas. A aprovação confirma a D-033 e registra a D-034 (modo de trabalhar). Sem ela, só se grava o log da rodada.",
+  "Parada (a), bloco 4: fixar as fontes do piloto (l. 691, 807). Padrão: três protocolos diferentes, BCR do IPHAN (páginas abertas), Infoteca-e da Embrapa (Documentos 123; OAI-PMH a confirmar) e BDTD (API VuFind), mais a Hemeroteca pela busca assistida de Vicente. A aprovação do brief com a lista vale como a escolha.",
+  "Parada (c), bloco 5: chave da conta do Internet Archive (l. 409, 509). Padrão: capturar sem chave, no ritmo anônimo. Se houver chave, ela fica fora da pasta versionada e, numa rotina, no cofre de segredos do serviço. Nenhuma fonte do piloto pede chave.",
+  "Parada (a), bloco 9, só para os blocos 10b e 12: aprovar o harness pronto (l. 701) pela revisão de uma tela do relatório da rodada B. Padrão: aprovar se os números baterem com o critério. Os blocos 10a, 11 e 13 seguem enquanto isso.",
+  "Parada (a), bloco 10a: aceitar ou não a leitura dos termos do GitHub Actions (l. 508, 814). Padrão: aceitar a leitura do Flat Data para os scripts sem IA, relendo o texto inteiro ao ligar.",
+  "Parada (a), bloco 10, se a D-033 valer (leitura não aceita, coleta fora dos termos, desativação de 60 dias inevitável ou volume acima dos limites): nomear o fornecedor de nuvem. Padrão: nenhum antes da decisão; os scripts rodam à mão nas conversas. As candidatas estão no roteiro, seção 4.",
+  "Parada (c), bloco 10b: plano da conta com rotinas, GitHub conectado, rotina de teste e créditos de uso. Padrão: um repositório de teste na conta Indalt, só com o harness e um lote pequeno sem dado pessoal, e créditos de uso desligados, para que o teto pare a rotina (l. 511).",
+  "Parada (a), bloco 11: o pedido do kit e os critérios de aceitação (princípio 15; l. 576, 788). Padrão: kit de fonte primária para educadores, com a cajuína, e seis critérios [PROPOSTA]: frases ligadas a Proposições; só fontes do acervo, com link e nível; sem dado pessoal; alcance dito; Faltas à vista; rascunho sem publicar.",
+  "Parada (a), bloco 14: aprovar a v0.3 (acordo 5). Sem a aprovação, valem a v0.2.1 e o brief.",
+  "Sem parada: as horas de curadoria e o uso da conta (claude.ai/settings/usage) só Vicente informa; sem os números, registra-se 'não informado', nunca uma estimativa.",
+  "Sem parada: podem esperar a caixa de e-mail dos Alertas do Google (l. 451), o lugar e a visibilidade do material do piloto (até lá, a custódia da l. 483) e as decisões do degrau 2 do §5.4, que são a condição 3 do gatilho da fase 2."
+ ],
+ "insumos_para_reavaliar": [
+  "Ritmo: levar o ciclo inteiro a um prazo que Vicente aceite. São de 40 a 60 chamadas de agente; com a folga de 2× o maior lote (D-023) e os custos medidos de 46 a 146 mil tokens, cabem 2 a 3 agentes por semana, ou seja, 8 a 12 semanas ou mais. É estimativa, e o piloto mede.",
+  "Rotinas para todas as CLB com 1 a 3 h de curadoria: abrir as rotinas sem que a fila passe de uma semana de curadoria (l. 472).",
+  "Rotina com o harness inteiro e a principal protegida: a rotina deve carregar o CLAUDE.md, alcançar os domínios das fontes e nunca gravar na principal por regra, e não só por instrução. Hoje os commits saem com o usuário conectado, que é o dono (l. 396).",
+  "Material do piloto fora do Git público: um repositório privado para entrada/ e acervo/, com custos já registrados (revisão obrigatória só existe em repositório público; Actions privado com 2.000 min/mês). Ajustar a D-021 é de Vicente.",
+  "Bola de neve: usar todo o desenvolvido (D-032) sem contrariar a fase 2 (l. 438, 674).",
+  "Educação e ilustração: a Educação com harness próprio, o que muda o inventário de 14 habilidades (l. 690), e um dono para a ilustração (§5.8).",
+  "Divergência e fala de quem pratica: buscar pares reais para o estado 'inconsistente' (l. 772) e para a W ancorada, sem inventar par.",
+  "Lugar das rotinas (D-033): GitHub como repositório e a execução onde couber o potencial. Candidatas: Oracle, Cloudflare, Render, AWS; para IA fora da rotina, claude -p, Managed Agents e o lote da API.",
+  "Autoria nas fontes: dar a referência completa (l. 597) sem expor pessoa que não consentiu.",
+  "Calibrações: valências (Passo 5), limiar e normalização, regra de μ e λ, lote de máquina, modelos e custos por habilidade, horas reais e cadência do boletim.",
+  "Perguntas do §10 e sentido de 'ambiente' (l. 413): cada uma passa a dizer aonde quer chegar, alimentada pelo relatório do piloto."
+ ],
+ "mudancas_de_plano": [
+  "Ordem dos passos (l. 660): um ciclo do piloto atravessa os Passos 1, 2, 4 (camada 1), 5 e a parte de fichas do 6, sem publicar. Localização do trecho, validador e μ e λ nascem no Passo 1 (l. 130-131, 602, 707). Sustenta: D-032.",
+  "Rotinas e Actions já no piloto, procurando CLB em geral; as fichas de acesso das demais fontes saem da fase 2 (l. 363, 438, 505, 669, 674, 741; AGENTS.md). Sustentam: D-031 e D-032.",
+  "Tratamento com IA também por rotina na fase 1, depois do teste e da aprovação de cada habilidade (l. 84, 363, 499, 506, 674). Sustentam: D-032 e D-027.",
+  "Saída de reserva: outra nuvem, com o GitHub como repositório, em vez de 'rodar em sessão' (l. 393, 508, 814). Sustenta: D-033.",
+  "Fim do 'único bloqueio' (l. 662, 691, 807). Sustenta: D-031.",
+  "Teto das rotinas no piloto, dentro da D-023 (l. 511, 823). Sustentam: D-032 e D-023.",
+  "A D-012 se cumpre quando a rotina do piloto rodar o tratamento agendado (l. 497). Sustenta: D-032.",
+  "O §8 fica só com o que trava, cada item com padrão, e ganha um bloco 'só para publicar'; o §10 vira 'insumos para reavaliar o plano' (l. 801-831, 871-899). Sustentam: D-034 e D-032.",
+  "Kit usado como teste no fim do piloto, sem publicar (l. 670; descrição da kit-fonte-primaria). Sustenta: D-032.",
+  "Educação e wiki local antes do Passo 6, sem publicar (l. 520-531, 759-763). Sustenta: D-032.",
+  "Fatos de 17/10 no §5.5 e no Anexo C: Actions gratuito em repositório público; agendamento de 5 min, em UTC, com desativação após 60 dias (fecha o item F-08); tarefa de até 6 h; texto dos termos; rotinas com excedente medido, que corrige o 'sem excedente' da l. 506.",
+  "[ABERTO] do orçamento defasados nas l. 227 e 351. Sustenta: D-023.",
+  "§9 com as D-031 a D-034. AGENTS.md: '[PROPOSTA] não é plano' lido com a D-034 e rotinas no piloto. CLAUDE.md: modelos da rodada B.",
+  "Leituras do brief que a Fundação não fixa, todas [PROPOSTA] para a v0.3 confirmar: registro único de valores provisórios; layout das pastas e arquivo de tradução das Consultas (l. 426 e 591); Fonte sem nome de pessoa no Git público; semana e estimativa do orçamento; relatório do dia em trilhas/relatorios/; créditos de uso desligados; boletim escrito uma vez."
+ ]
+}

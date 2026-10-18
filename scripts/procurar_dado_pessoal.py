@@ -33,6 +33,10 @@ PERMITIDOS = {
     "@caminho", "@path",
     # a própria palavra usada nas regras ("@perfil"):
     "@perfil",
+    # notação técnica citada da documentação oficial do Claude Code (mapa de hospedagem, 17/10):
+    # versão de uma ação do GitHub ("@v1", "@beta"), menção ao bot da ação ("@claude")
+    # e escopo de pacote npm ("@anthropic"); não são perfis de pessoas:
+    "@v1", "@beta", "@claude", "@anthropic",
 }
 
 # Páginas institucionais das plataformas (termos, políticas, documentação), não perfis:
