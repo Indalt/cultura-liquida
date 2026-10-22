@@ -1,0 +1,762 @@
+{
+ "workflow": "wf_beec673c-cdd",
+ "data": "2026-10-22",
+ "agentes": "3 auditores (claude-sonnet-5-5, high), um por fatia",
+ "tokens_informados_pelo_workflow": 267700,
+ "chamadas_informadas_pelo_workflow": 41,
+ "fatias": {
+  "brief-e-quadro": {
+   "achados": [
+    {
+     "id": "A-01",
+     "tipo": "atribuicao",
+     "gravidade": "media",
+     "onde_no_mapa": "quadro.md, cartões K-104 (l. 32), K-107 (l. 35) e K-112 (l. 41); mapa, seção 5, tabela Blocos, linhas dos blocos 2, 5 e 10a",
+     "fonte": "brief-execucoes-v0.1.md, l. 212, l. 267, l. 334-335",
+     "o_que_esta_errado": "A tabela Blocos do mapa leva as paradas de Vicente: (c) lugar da tabela código → nome, antes do bloco 7 (bloco 2); (c) chave do Internet Archive (bloco 5); e, no 10a, '(a) fornecedor, se valer a D-033'. O quadro leva paradas só em K-111, K-112 (termos do Actions) e K-113. O K-104 e o K-107 não trazem a parada (c), e o K-112 não traz o ramo do fornecedor da D-033. Quem pega o cartão pelo quadro (D-036 manda retomar por ele) não vê que há bloqueio de Vicente. O próprio brief se contradiz: a tabela do §4 (l. 136) e o fim do bloco 2 (l. 216) dizem 'nenhuma parada', e o texto do bloco (l. 212) traz a (c). O mapa escolheu o texto do bloco sem avisar.",
+     "correcao_sugerida": "Pôr no título ou no destino do K-104 'Parada (c) antes do K-109 (bloco 7): lugar da tabela código → nome; padrão: pasta na máquina de Vicente fora do repositório'. Pôr no K-107 'Parada (c): chave do Internet Archive; padrão: sem chave'. Pôr no K-112 'Parada (a): termos do Actions; e (a) fornecedor se valer a D-033'. Anotar no mapa que a l. 136 e a l. 216 do brief divergem da l. 212.",
+     "confirmado": true,
+     "como_confirmou": "Leitura do quadro.md l. 32, 35, 41 (sem 'Parada') contra brief l. 136 ('| 2 | ... | — |'), l. 212, l. 216, l. 267 e l. 334-335; mapa seção 5, linhas dos blocos 2, 5 e 10a.",
+     "trecho_da_fonte": "l. 212: \"Parada (c), antes do bloco 7: lugar da tabela código → nome.\"; l. 267: \"Parada (c): a chave da conta do Internet Archive\"; l. 335: \"Parada (a) para nomear o fornecedor.\""
+    },
+    {
+     "id": "A-02",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa, seção 5, tabela Partes gerais, linha '§6A, o que a próxima versão leva ao texto (16 linhas)'",
+     "fonte": "brief-execucoes-v0.1.md, l. 398-416",
+     "o_que_esta_errado": "A tabela 6A do brief tem 17 linhas de dados (l. 400 a 416, uma por linha do arquivo), não 16.",
+     "correcao_sugerida": "Trocar '(16 linhas)' por '(17 linhas, l. 400-416)'. A lista de V-nn da mesma célula tem 17 itens; conferir se cada linha da 6A tem o seu.",
+     "confirmado": true,
+     "como_confirmou": "Contei as linhas da tabela na leitura da faixa 394-431: l. 400 (Precedência) até l. 416 (O §9 com as D-031 a D-034), todas linhas de dado.",
+     "trecho_da_fonte": "l. 400: \"| Precedência do roteiro e deste brief ... |\"; l. 416: \"| O §9 com as D-031 a D-034; `AGENTS.md` ...\""
+    },
+    {
+     "id": "A-03",
+     "tipo": "linha",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa, seção 5, tabela Blocos, linhas 10a (315-328) e 10b (329-331)",
+     "fonte": "brief-execucoes-v0.1.md, l. 314-337",
+     "o_que_esta_errado": "As faixas citadas deixam de fora l. 332-337 (Agentes, Pronto quando, Parada (a) termos do Actions, 'Quando vale a D-033', Parada (c) conta e rotina, 'Sem parada'). É de lá que o mapa tira os agentes e as paradas dessas duas linhas, e a l. 314 (cabeçalho do bloco 10, '*muda o plano*') também fica fora.",
+     "correcao_sugerida": "10a: 314-328 e 332-335; 10b: 329-331, 332-333 e 336-337. Ou uma nota 'l. 332-337 valem para as duas'.",
+     "confirmado": true,
+     "como_confirmou": "Leitura da faixa 252-378 do brief: a l. 329 abre '10b' e a l. 332 traz '**Agentes:**'. As paradas estão em l. 334 e 336, depois do fim da faixa 329-331.",
+     "trecho_da_fonte": "l. 332: \"**Agentes:** rastreador com ficha-de-acesso nos ambientes novos\"; l. 336: \"**Parada (c): conta e rotina** (l. 506).\""
+    },
+    {
+     "id": "A-04",
+     "tipo": "atribuicao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa, seção 5, tabela Blocos: bloco 0 (agentes '—') e bloco 10b (agentes '—')",
+     "fonte": "brief-execucoes-v0.1.md, l. 162, l. 332-333",
+     "o_que_esta_errado": "O mapa copia a tabela do §4 (l. 134: '—'), mas o texto do bloco 0 dá agentes: redator e auditor, 2 chamadas previstas (l. 162). No 10b, o texto dá ao auditor a reconferência dos fatos das rotinas do Claude Code (l. 332) e a segunda leitura da D-026 em cada execução da rotina (l. 333); a linha do mapa diz '—'. O bloco 0 já foi feito (K-100), então o efeito é só de registro.",
+     "correcao_sugerida": "Bloco 0: 'redator, auditor (l. 162; a tabela do §4 diz —)'. Bloco 10b: 'auditor (reconfere os fatos das rotinas e faz a segunda leitura); a habilidade aprovada roda na rotina'.",
+     "confirmado": true,
+     "como_confirmou": "Leitura das l. 134, 144, 162, 332 e 333 do brief contra a tabela do mapa.",
+     "trecho_da_fonte": "l. 162: \"redator com escrever-secao-fundacao ...; auditor com verificar-fundacao\"; l. 332: \"O mesmo auditor reconfere os fatos das rotinas do Claude Code\""
+    },
+    {
+     "id": "A-05",
+     "tipo": "atribuicao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "quadro.md, K-101 (l. 31) e K-104 (l. 32), coluna Destino",
+     "fonte": "brief-execucoes-v0.1.md, l. 177 e l. 215",
+     "o_que_esta_errado": "O destino do K-101 ('o harness pronto para a coleta do piloto') não é o 'Pronto quando' do bloco 1, que é verificável: rodar_testes.py sem FALHA, o caso novo (log sem alcance) reprovando, versões 0.1.1 com Histórico e a ferramenta Agent listando os três agentes numa conversa nova. O K-104 segue o 'Pronto quando', mas omite 'os 4 casos do rastreador saem de PENDENTE' e o caso que reprova de cada habilidade (l. 215). Nos outros cartões (K-105 a K-111) o destino acompanha o 'Pronto quando'.",
+     "correcao_sugerida": "K-101: 'rodar_testes.py sem FALHA; log sem alcance reprova; versões 0.1.1 com Histórico; Agent lista avaliador, arquivista e campo-de-acao em conversa nova'. K-104: acrescentar 'os 4 casos do rastreador fora de PENDENTE e um caso que reprova por habilidade'.",
+     "confirmado": true,
+     "como_confirmou": "Comparação literal de quadro.md l. 31-32 com brief l. 177 e l. 215.",
+     "trecho_da_fonte": "l. 177: \"`rodar_testes.py` sem FALHA; o caso novo reprova como esperado; as versões 0.1.1 têm Histórico; numa conversa nova, a ferramenta Agent lista os três agentes.\""
+    },
+    {
+     "id": "A-06",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa, seção 8, o item do K-102 (l. 398)",
+     "fonte": "brief-execucoes-v0.1.md, l. 228-229, l. 306, l. 311",
+     "o_que_esta_errado": "A justificativa diz que, antes do bloco 9, o script de menções 'ganha o par real que passa e o caso que reprova, como os outros scripts'. O brief pede 'par real' só para habilidades (bloco 9, l. 306 e 311: 'nas habilidades dos blocos 4 a 8'). Os scripts recebem 'caso que passa e um que reprova' no próprio bloco (l. 228-229). A parte de que o K-102 depende de bloco 7 (texto processado), bloco 4 (Termos) e bloco 8 (atestados e grafo) se sustenta (l. 237, 283, 294, 296). O porquê de ficar antes do K-111 não vem do brief: vem da D-037, que o brief não conhece.",
+     "correcao_sugerida": "Reescrever: 'antes do bloco 9, entra no harness com caso que passa e caso que reprova em rodar_testes.py (como os scripts do bloco 3, l. 228-229); o brief não prevê par real para scripts'. Dizer que a posição vem da D-037 e do pedido de o harness estar completo na aprovação do K-111.",
+     "confirmado": true,
+     "como_confirmou": "Leitura de brief l. 228-229, 306 e 311 contra mapa l. 398.",
+     "trecho_da_fonte": "l. 311: \"FALHA 0 e PENDENTE 0 nas habilidades dos blocos 4 a 8 ... cada uma com par real que passa e caso real que reprova\""
+    },
+    {
+     "id": "A-07",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa, seção 5, tabela Partes gerais, linha '§5, não fazer' (379-392): 'vigente | regra; A-12'",
+     "fonte": "brief-execucoes-v0.1.md, l. 392 e l. 10",
+     "o_que_esta_errado": "A última cláusula da l. 392 ('mudar a Fundação fora dos blocos 0 e 14') está superada pela D-035 (l. 10: 'não há v0.2.1 (bloco 0) nem v0.3 (bloco 14)'; a Fundação só muda na sessão de planejamento). A linha do mapa a marca como 'vigente | regra'. Não consegui abrir o A-12 (seção 2 do mapa, fora da minha fatia), então não sei se ele cobre esta cláusula.",
+     "correcao_sugerida": "Dividir a linha: 'mudar os Anexos A e B' é regra; a cláusula 'fora dos blocos 0 e 14' é desatualizada pela D-035 e vai ao K-003 (e a um A-nn, se o A-12 não a cobrir).",
+     "confirmado": false,
+     "como_confirmou": "Li a l. 392 e a l. 10 do brief (contradição interna confirmada). A cobertura pelo A-12 não foi verificada por falta de chamadas.",
+     "trecho_da_fonte": "l. 392: \"Mudar os Anexos A e B; mudar a Fundação fora dos blocos 0 e 14.\"; l. 10: \"não há v0.2.1 (bloco 0) nem v0.3 (bloco 14).\""
+    },
+    {
+     "id": "A-08",
+     "tipo": "omissao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa, seção 5, tabela Blocos, linhas dos blocos 2 e 13 (coluna 'Depois, em outra frente')",
+     "fonte": "brief-execucoes-v0.1.md, l. 192-193 e l. 359",
+     "o_que_esta_errado": "As linhas do bloco 2 (fila, semana de curadoria e tamanho da amostra, l. 192-193) e do bloco 13 (horas de Vicente em 'revisões de uma tela, juízo de até 15 itens', l. 359) não apontam para nenhum A-nn, embora a D-037 (sem revisão de rotina; a amostra audita a ferramenta) as toque. O K-003 diz 'fila, amostra e horas relidas', então o destino existe no cartão. A rastreabilidade na linha do mapa é que falta. Não conferi o que A-03 e A-05 cobrem.",
+     "correcao_sugerida": "Acrescentar à linha do bloco 2 'A-03/A-05 (fila e amostra), V-20' e à do bloco 13 'A-nn das horas; K-003' (os números certos, conforme a seção 2).",
+     "confirmado": false,
+     "como_confirmou": "As linhas da fonte foram lidas e o K-003 confere. A seção 2 do mapa não foi aberta, então não confirmei se faltam os A-nn.",
+     "trecho_da_fonte": "l. 359: \"as horas de Vicente: revisões de uma tela, juízo de até 15 itens na ordem do §11 e busca assistida;\""
+    }
+   ],
+   "conferido_sem_achado": [
+    "Faixas dos blocos 1 a 9 e 11 a 14 na tabela Blocos: as l. 167-178, 180-216, 218-230, 232-249, 251-267, 269-278, 280-290, 292-302, 304-312, 339-345, 347-355, 357-364 e 366-372 abrem e fecham no bloco certo.",
+    "Agentes dos blocos 1 a 9 e 11 a 14 batem com a tabela do §4 (l. 135-148) e com os textos 'Agentes' de cada bloco.",
+    "Paradas: bloco 4 (a), bloco 9 (a) só para 10b e 12, bloco 11 (a) e o 10a (termos do Actions e nuvem) estão certas e coerentes com o brief (l. 242, 312, 345, 334-335). Bloco 6 e blocos 7 e 8 'sem parada' idem (l. 278, 290, 302).",
+    "Os destinos (Pronto quando) de K-105, K-106, K-107, K-108, K-109, K-110, K-111, K-112, K-113, K-114, K-115 e K-116 seguem as l. 229, 241, 266, 277, 289, 301, 311, 333, 344, 354 e 371.",
+    "Ordem do desenvolvimento no quadro (K-101, K-104 a K-111, K-112, K-113, K-114, K-115, K-116) segue a 'Ordem' do brief (l. 150): um bloco por vez de 0 a 14, 10a depois do 9, 10b e 12 depois da aprovação do 9 (l. 312, 329, 348), 13 como registro desde o bloco 6 (l. 9, 150).",
+    "Justificativa do K-103 antes do K-101: a l. 173 do brief confere ('o ritual da l. 512' no executar-brief, que o bloco 1 edita) e a retomada das l. 67-73 não lê o quadro (A-01). K-103 e K-102 não são blocos do brief, então não ferem 'uma tarefa por vez' da D-035 (l. 9), que vale entre blocos.",
+    "K-102 entre o K-110 e o K-111: a dependência dos blocos 4, 7 e 8 se sustenta (l. 237, 283, 294, 296). O ponto fraco é só a frase do par real (A-06).",
+    "K-104 'conversa nova': a l. 150 e a l. 169 do brief sustentam (agente editado no bloco 1 só carrega em sessão nova).",
+    "Ordem do planejamento na seção 8 (K-003, K-002, K-005, K-006, K-004, K-007, K-010, K-008, K-009) é igual à do quadro e respeita os 'Depois do' de cada cartão; K-005 'depois dos blocos 1 a 3 medidos' e K-007 'depois de 4 semanas medidas' batem com a l. 363 do brief.",
+    "Partes gerais: as faixas 1-6, 8-12, 18-20, 22-26, 28-34, 36-44, 46-53, 57-65, 67-73, 75-100, 104-113, 115-128, 130-150, 374-377, 379-392, 396-416 (início), 418 e 420-431 abrem no trecho certo. §2 'desatualizada' confere (l. 99-100 trazem D-033 e D-034 como não registradas e faltam D-035 a D-037). §1 retomada 'sem o quadro' confere (l. 70).",
+    "Todos os grupos do brief têm destino: §0 paradas (a) a (d), orçamento (K-005), fatos e Git (regra), 'Não fazer' (regra), 6A (V-nn), 6B (V-16, V-20, V-25, V-30, provisório), 6C (insumo 3), 'Depois do bloco 14' (A-09; K-003 'CLB nova por cartão'; cartões de CLB candidata na coluna Operação), 3a (A-02, A-04; K-003) e 3b (K-112, K-113).",
+    "K-014 e a l. 4 do brief: a aprovação de 17/10 fixou as fontes do piloto e o pedido do kit; por isso 'feita' nas paradas do bloco 4 e do bloco 11 está certo (l. 4 e 20).",
+    "Quadro e mapa coerentes entre si: Operação começa no K-112 (mapa l. 12 e quadro l. 56); K-201 espera K-109 (guia da Lei 9.610, brief l. 286) e K-010."
+   ],
+   "log": {
+    "agente": "auditor",
+    "habilidade": "verificar-fundacao (método, aplicado ao mapa)",
+    "versao_harness": "0.1.0",
+    "modelo": "claude-sonnet-5-5",
+    "esforco": "high",
+    "entrada_ref": "K-001, fatia A: brief de execuções e quadro. mapa-tres-frentes.md (l. 1-17, 281-327, 389-412), quadro.md (inteiro, 61 linhas) contra brief-execucoes-v0.1.md (l. 1-54, 55-129, 130-378, 379-431)",
+    "acoes": [
+     "Grep dos cabeçalhos (## e ###) do mapa para achar as faixas das seções 5 e 8",
+     "Read de quadro.md inteiro (l. 1-61)",
+     "Read do brief l. 1-54, 55-129, 130-251, 252-378, 379-393 e 394-431",
+     "Read do mapa l. 1-17, 281-327 e 389-412",
+     "Grep de cabeçalhos em trilhas/insumos-planejamento.md, só com a linha 1 de resultado; a numeração dos insumos não foi conferida",
+     "Comparação linha a linha da tabela Blocos, da tabela Partes gerais e dos cartões K-100 a K-116 e K-201 com o brief; conferência da ordem contra a l. 150 e a D-035 (l. 8-12)"
+    ],
+    "resultados": [
+     "8 achados: 1 media, 7 baixa, nenhum alta",
+     "Por tipo: atribuicao 2 (A-01, A-04, A-05 conta como atribuicao no quadro: 3 ao todo), texto 3 (A-02, A-06, A-07), linha 1 (A-03), omissao 1 (A-08)",
+     "Confirmados: A-01 a A-06. Não confirmados (confirmado=false): A-07 e A-08, porque dependem da seção 2 do mapa (A-nn), fora da fatia",
+     "Sem alto: a ordem do desenvolvimento e do planejamento no quadro bate com o brief; as exceções K-103 e K-102 se sustentam na dependência, com ressalva na redação (A-06)"
+    ],
+    "decisoes": [
+     {
+      "item": "A-01 (paradas (c) e fornecedor ausentes no quadro)",
+      "decisao": "aceito",
+      "motivo": "Linhas do quadro l. 32, 35 e 41 sem a parada; brief l. 212, 267 e 335 trazem; l. 136 e 216 divergem da l. 212"
+     },
+     {
+      "item": "A-02 (6A tem 17 linhas, não 16)",
+      "decisao": "aceito",
+      "motivo": "Contagem direta das l. 400-416"
+     },
+     {
+      "item": "A-03 (faixas do 10a e do 10b não incluem l. 332-337)",
+      "decisao": "aceito",
+      "motivo": "A l. 332 abre os agentes e as paradas estão nas l. 334 e 336"
+     },
+     {
+      "item": "A-04 (agentes dos blocos 0 e 10b: tabela × texto)",
+      "decisao": "aceito",
+      "motivo": "Brief l. 134 e 162; l. 332 e 333"
+     },
+     {
+      "item": "A-05 (destino do K-101 e K-104 fora do 'Pronto quando')",
+      "decisao": "aceito",
+      "motivo": "Brief l. 177 e 215 contra quadro l. 31-32"
+     },
+     {
+      "item": "A-06 (par real para scripts não está no brief)",
+      "decisao": "aceito",
+      "motivo": "Brief l. 228-229, 306 e 311 contra mapa l. 398"
+     },
+     {
+      "item": "A-07 (cláusula do 'Não fazer' superada pela D-035)",
+      "decisao": "falta",
+      "motivo": "A contradição interna do brief está confirmada (l. 392 × l. 10), mas não abri o A-12 para saber se o mapa já a cobre"
+     },
+     {
+      "item": "A-08 (blocos 2 e 13 sem A-nn)",
+      "decisao": "falta",
+      "motivo": "As linhas do brief foram confirmadas, mas a seção 2 do mapa (A-03, A-05 e outros) ficou fora da fatia e do teto"
+     },
+     {
+      "item": "Numeração 'insumo 3' para os itens da 6C e as origens 'insumos 3, 4, 6, 8, 12, 13' do quadro",
+      "decisao": "falta",
+      "motivo": "O grep em insumos-planejamento.md só achou o título; o formato dos cabeçalhos é outro e não sobraram chamadas para ler o arquivo"
+     },
+     {
+      "item": "Brief l. 433-435 ('Trilha', mapa: histórico)",
+      "decisao": "falta",
+      "motivo": "Faixa fora das que o pedido lista (394-431) e sem chamada restante"
+     }
+    ],
+    "duracao_s": 0,
+    "erros": [
+     "Nenhum erro de ferramenta. O Grep de cabeçalhos em insumos-planejamento.md devolveu só o título, e a numeração dos insumos ficou sem conferência."
+    ],
+    "alcance": {
+     "olhado": [
+      "mapa-tres-frentes.md: l. 1-17, 281-327 (seção 5, Partes gerais e Blocos) e 389-412 (seções 8 e 9); índice de cabeçalhos por grep",
+      "quadro.md: l. 1-61 (inteiro)",
+      "brief-execucoes-v0.1.md: l. 1-54, 55-129, 130-251, 252-378, 379-393 e 394-431 (de 435 linhas)",
+      "trilhas/insumos-planejamento.md: só o grep de cabeçalhos (1 resultado)",
+      "Total: 12 chamadas de ferramenta (teto 12), mais a entrega final"
+     ],
+     "fora": [
+      "mapa-tres-frentes.md l. 18-280 e 328-388 (seções 1 a 4, 6 e 7, incluindo a seção 2 dos atritos A-01 a A-13) e l. 413 em diante: fora da fatia A; por isso os A-nn e V-nn citados nas células não foram conferidos",
+      "proxima-versao.md inteiro: fora da fatia; a correspondência entre as linhas da 6A e os V-nn não foi verificada",
+      "brief l. 432-435 (Trilha): fora da faixa pedida e sem chamada restante",
+      "trilhas/insumos-planejamento.md: numeração dos insumos e conteúdo; a Fundação v0.2 e as decisões D-001 a D-037: não abertas (as D só foram lidas como citadas no brief, no mapa e no AGENTS.md já em contexto)",
+      "Cartões K-117 a K-122 e K-002, K-004 a K-010 contra a Fundação (§7, §8, §10): fora da fatia, que é o brief",
+      "Sem web e sem scripts (checar_fundacao.py etc.): não pedidos para esta fatia"
+     ]
+    }
+   }
+  },
+  "fundacao-e-proxima-versao": {
+   "achados": [
+    {
+     "id": "B-01",
+     "tipo": "omissao",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa seção 3, tabela §7, linha 'Passo 4' (l. 739-745, vira V-25); proxima-versao.md V-12, V-22 e V-25",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 742; brief l. 403 e 405-406 (6A)",
+     "o_que_esta_errado": "A l. 742 (Passo 4, Fase 2) diz que a camada 2, a rotina do Claude na nuvem, é da fase 2, o que a D-032 muda (tratamento com IA por rotina já na fase 1, depois do teste). Essa mesma linha traz 'onde vivem os dados pessoais dos canais de pessoas' (a tabela código → nome da 6A, linha 4, que cita l. 406 e 742). Nenhum item V cita a l. 742: V-12 cita só a l. 406, V-22 cita l. 669-674 e V-25 cita só a l. 743. O mapa leva o Passo 4 apenas a V-25 (boletim). A l. 742 ficaria velha na próxima versão.",
+     "correcao_sugerida": "Acrescentar a l. 742 a V-22 (camada 2 na fase 1 pela D-032, depois do teste) e a V-12 (tabela código → nome fixada antes do Passo 4). No mapa, a linha do Passo 4 deve apontar também para V-12, V-16 e V-22, e não só para V-25.",
+     "confirmado": true,
+     "como_confirmou": "Read da Fundação l. 739-745; Read de proxima-versao.md inteiro; grep -n -E '74[0-9]|707|668' em proxima-versao.md só devolve a linha da V-25 (l. 743).",
+     "trecho_da_fonte": "l. 742: 'e a camada 2, a rotina do Claude na nuvem (§5.5). Onde vivem os dados pessoais dos canais de pessoas é decisão de Vicente (§8).'"
+    },
+    {
+     "id": "B-02",
+     "tipo": "omissao",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa seção 3, linha 'Passo 4' (l. 739-745); proxima-versao.md V-22 e V-25",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 741 e 744; brief l. 405 (6A, linha 6) e l. 418 (6B)",
+     "o_que_esta_errado": "A 6A (linha 6) cita a l. 741 entre as linhas de 'rotinas e Actions já no piloto'. Ela diz que a Fase 1 do Passo 4 é a 'camada 1 do §5.5' para as fontes do caso-piloto e que os termos do Actions pedem uma leitura de Vicente. A 6B cita a l. 744 para o relatório do dia e o canal que o leva a Vicente ('Pronto quando: por 7 dias seguidos chega a Vicente o relatório calculado do dia'). Nenhum V cita a l. 741 ou a l. 744. V-25 só trata da l. 743. V-16 lista o relatório do dia, mas com a faixa l. 497-512.",
+     "correcao_sugerida": "Acrescentar l. 741 a V-22 (ou V-25) e l. 744 a V-25 ou V-16, junto ao item do relatório do dia e do canal.",
+     "confirmado": true,
+     "como_confirmou": "Read da Fundação l. 741 e 744; Read do brief l. 405 e 418; o grep em proxima-versao.md só acha a l. 743 (V-25).",
+     "trecho_da_fonte": "l. 741: 'na camada 1 do §5.5 (GitHub Actions, scripts, sem IA) [PROPOSTA]. Os termos do GitHub Actions pedem uma leitura que é decisão de Vicente (§8).' l. 744: 'por 7 dias seguidos chega a Vicente o relatório calculado do dia'"
+    },
+    {
+     "id": "B-03",
+     "tipo": "omissao",
+     "gravidade": "media",
+     "onde_no_mapa": "proxima-versao.md V-05, V-12, V-24 e V-26; mapa seção 3 (linhas de §5.1, §7 Fase 1 e §5 'Fluxo')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 200, 376, 396 e 667",
+     "o_que_esta_errado": "A D-037 faz a amostra sorteada auditar a ferramenta, e não a base. Quatro linhas ainda descrevem a amostra como segunda leitura do que entra na base, e nenhum V as cita. A l. 200 (§3.4) fala em 'amostra sorteada (D-026)'. A l. 376 (diagrama do §5) põe a amostra no portão da extração. A l. 396 (§5.1, 'Na fase 1, o portão é combinado ... amostra sorteada') e a l. 667 (§7, Fase 1, Pessoas) trazem a mesma ideia. V-24 só trata as l. 732 e 752, V-05 só a l. 76, e V-26 só a l. 795. V-12 cobre a faixa 393-409, mas não diz que a l. 396 muda.",
+     "correcao_sugerida": "Ampliar V-24 (ou V-05) para l. 76, 200, 376, 396 e 667 (e 795, 861), com a leitura pela D-037: a amostra audita a ferramenta. Incluir a l. 396 no texto de V-12.",
+     "confirmado": true,
+     "como_confirmou": "awk 'NR<=900' + grep -o por 'amostra sorteada|cota humana|cota de juízo|julgamento de Vicente' devolveu as l. 76, 200, 376, 396, 667, 732, 752, 795 e 861. A proxima-versao.md cita só as l. 76, 732, 752 e 795.",
+     "trecho_da_fonte": "l. 396: 'a segunda leitura vem do validador, de um verificador de harness diferente e da amostra sorteada (D-026). Rever na fase 2.' l. 667: 'de um verificador com harness diferente e da amostra sorteada (D-026).'"
+    },
+    {
+     "id": "B-04",
+     "tipo": "linha",
+     "gravidade": "baixa",
+     "onde_no_mapa": "proxima-versao.md V-04 ('§0, acordos (l. 58-65)'); mapa seção 3, linhas §0 l. 56 e l. 57-64",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 56, 58, 59-64 e 65",
+     "o_que_esta_errado": "V-04 cita l. 58-65, mas a l. 58 é só o título 'Acordos de trabalho', os acordos 1 a 6 estão nas l. 59-64, e a l. 65 é o 'Comentário novo de Vicente'. A l. 56, '[PROPOSTA] não é plano [VIGENTE]', é a que o mapa leva a V-04 (linha '§0: [PROPOSTA] não é plano, 56, vira regra; V-04'). V-04 trata do valor [PROPOSTA] usado pela execução, mas não a cita. A faixa do mapa para a Regra de Ouro e os acordos é 57-64, e a de V-04 é 58-65.",
+     "correcao_sugerida": "Em V-04, trocar 'l. 58-65' por 'l. 56 e 59-64'. Se o comentário novo (l. 65) também mudar, citá-lo à parte.",
+     "confirmado": true,
+     "como_confirmou": "sed -n das l. 54-67 (cortadas a 110 caracteres) mostra: l. 56 '[PROPOSTA] não é plano [VIGENTE]', l. 57 Regra de Ouro, l. 58 'Acordos de trabalho:', l. 63 acordo 5, l. 64 acordo 6, l. 65 'Comentário novo de Vicente'.",
+     "trecho_da_fonte": "l. 58: '- **Acordos de trabalho:**'; l. 65: '- **Comentário novo de Vicente [VIGENTE]:**'"
+    },
+    {
+     "id": "B-05",
+     "tipo": "omissao",
+     "gravidade": "media",
+     "onde_no_mapa": "proxima-versao.md V-21; mapa seção 3, linha 'Passo 2' (l. 704-726), que não leva a nenhum V",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 130-131 e 707; brief l. 404 (6A, linha 5)",
+     "o_que_esta_errado": "A 6A (linha 5) diz que 'localização do trecho, validador e μ e λ nascem no Passo 1' e cita as l. 130-131, 602, 660 e 707. V-21 (o item da ordem dos passos) cita só as l. 647-662 e não diz nada sobre a antecipação do validador e da localização do trecho. A l. 707 ('Falta entregar: o validador mecânico ... sobre os contratos do Passo 1') e a l. 131 ('o script, no Passo 2') não aparecem em nenhum V. V-06 usa a l. 130 para outro assunto (o limiar). Só o μ e λ (l. 602) fica coberto, por V-20. A linha 'Passo 2' do mapa vai a K-105, K-111 e K-112 sem V.",
+     "correcao_sugerida": "Acrescentar a V-21 as l. 130-131 e 707: validador e localização do trecho nascem no Passo 1 e o Passo 2 mantém o 'pronto quando'. No mapa, pôr V-21 na coluna 'Vira' do Passo 2.",
+     "confirmado": true,
+     "como_confirmou": "Read da Fundação l. 704-726 e sed das l. 130-131; Read do brief l. 404; V-21 e V-06 lidos em proxima-versao.md.",
+     "trecho_da_fonte": "l. 707: 'o validador mecânico das fichas, Proposições e Evidências, sobre os contratos do Passo 1, rodado antes de cada commit'; l. 131: 'Os eixos de status estão no §6; o script, no Passo 2.'"
+    },
+    {
+     "id": "B-06",
+     "tipo": "linha",
+     "gravidade": "baixa",
+     "onde_no_mapa": "proxima-versao.md V-20 (coluna 'Onde': '§6, l. 584-641')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 696 e 723; brief l. 418 (6B)",
+     "o_que_esta_errado": "V-20 inclui no 'O que muda' o registro único de valores provisórios, o layout das pastas, a pasta temporária e a tradução das Consultas, mas a coluna 'Onde' cita só l. 584-641. A 6B fixa essas leituras em outras linhas: registro único l. 696 (§7, Passo 1); layout das pastas l. 100, 407, 426, 591 e 723; só a l. 591 cai na faixa citada. As l. 696 (valores provisórios) e 723 (lista de pastas [PROPOSTA]) são do §7 e as l. 100 e 426 não estão na faixa.",
+     "correcao_sugerida": "Ampliar 'Onde' de V-20: '§6, l. 584-641; §7, l. 696 e 723; §5.1, l. 407; §5.3, l. 426; §1, l. 100'.",
+     "confirmado": true,
+     "como_confirmou": "Read da Fundação l. 696 e 723-724 (a l. 723 lista as pastas ambientes/, entrada/, acervo/ ...); Read do brief l. 418; V-20 lida em proxima-versao.md.",
+     "trecho_da_fonte": "l. 723: '[PROPOSTA] ambientes/  entrada/  acervo/  grafo/  site/  campo_de_acao/'; l. 696: 'Sem resposta, a sessão usa valores provisórios, marcados [PROPOSTA].'"
+    },
+    {
+     "id": "B-07",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde_no_mapa": "proxima-versao.md V-27 ('saem os resolvidos (caso-piloto, ilustração, orçamento, modelos)')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 805-828",
+     "o_que_esta_errado": "A tabela do §8 (l. 805-824) não tem item de 'modelos'. A l. 828 ('Resolvidas desde a v0.1') cita D-029, D-021, D-024, D-023 e D-026, e não a D-027. A 'ilustração' está na l. 821 como 'modo já escrito', e o mapa a trata assim. O texto de V-27 diz que saem do §8 itens que a fonte não traz (modelos) e mistura 'ilustração' (que está em linha pendente) com 'resolvidos'.",
+     "correcao_sugerida": "Reescrever V-27: saem as l. 807 (caso-piloto, D-031) e 821 (ilustração, modo escrito), e o 'orçamento do sistema' já consta na l. 828. Tirar 'modelos', ou apontar a linha do §8 onde estaria.",
+     "confirmado": true,
+     "como_confirmou": "Read da Fundação l. 801-828 inteira: nenhuma linha da tabela cita modelo ou D-027.",
+     "trecho_da_fonte": "l. 828: 'Resolvidas desde a v0.1: formato e local dos agentes (D-029); onde fica o repositório (D-021); tratamento do Drive (D-024); orçamento do sistema (D-023, provisório); quem trabalha na fase 1 e quem responde (D-026).'"
+    },
+    {
+     "id": "B-08",
+     "tipo": "linha",
+     "gravidade": "baixa",
+     "onde_no_mapa": "proxima-versao.md V-07 ('§2, princípio 10, l. 133; §6, l. 635')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 133, 372 e 635",
+     "o_que_esta_errado": "V-07 põe entre aspas 'permanece em quarentena até o julgamento de Vicente' e cita as l. 133 e 635. A frase só existe na l. 133. A l. 635 é a linha do selo PENDENTE_JULGAMENTO ('eixo 1 = quarentena, processável pelos agentes quando preenche os critérios'), que não diz quem tira o item da quarentena. O mapa (§6 'Eixos de status e selos') faz a mesma leitura do selo, o que está certo.",
+     "correcao_sugerida": "Em V-07: frase em l. 133; selo PENDENTE_JULGAMENTO em l. 372 (diagrama) e 635.",
+     "confirmado": true,
+     "como_confirmou": "grep -o 'julgamento de Vicente' nas l. 1-900 só acha a l. 133; sed -n 635p mostra o selo.",
+     "trecho_da_fonte": "l. 133: 'permanece em quarentena até o julgamento de Vicente'; l. 635: '`PENDENTE_JULGAMENTO` (P87) | eixo 1 = quarentena, processável pelos agentes quando preenche os critérios'"
+    },
+    {
+     "id": "B-09",
+     "tipo": "omissao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa seção 3, tabela '§0 a §2' (começa na l. 46); proxima-versao.md V-01",
+     "fonte": "00_Fundacao_Cultura_Liquida.md, l. 1-43 (em especial l. 3, 7, 9-17 e 19-40)",
+     "o_que_esta_errado": "A seção 3 do mapa não tem linha para o cabeçalho (l. 1-43): título e versão (l. 3), 'Quem escreveu esta versão [VIGENTE]' (l. 7, que cita a D-029), 'O que mudou' (l. 9-17) e Sumário (l. 19-40). V-01 trata o cabeçalho, o Sumário e 'O que mudou', mas não a l. 7, que a próxima versão, escrita pela sessão de planejamento (D-035), deixa de ter como está. A l. 13 ('A casa do projeto é o repositório público') está no 'O que mudou' e é lida pela D-033 (GitHub como repositório, com saída de reserva).",
+     "correcao_sugerida": "Acrescentar ao mapa uma linha 'Cabeçalho, Sumário, O que mudou (l. 1-43) | PDO | vigente | V-01', e ao V-01 a l. 7 (quem escreveu a versão).",
+     "confirmado": true,
+     "como_confirmou": "Read da Fundação l. 1-45 e da seção 3 do mapa (l. 49-263): a primeira linha de tabela é 'l. 46-47'.",
+     "trecho_da_fonte": "l. 7: '**Quem escreveu esta versão [VIGENTE]:** antes da v0.2, os agentes do projeto passaram a ficar em `.claude/` ... (D-029).'"
+    },
+    {
+     "id": "B-10",
+     "tipo": "atribuicao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa seção 3, tabela §8 (linhas 808, 810, 817, 819) e §10 (perguntas 1, 5, 22), que vão a K-010; quadro.md l. 21",
+     "fonte": "trilhas/planejamento/quadro.md, l. 21 (saída truncada do grep)",
+     "o_que_esta_errado": "Possível divergência entre o mapa e o quadro. O mapa leva as l. 808, 810, 817 e 819 do §8 e as perguntas 1, 5 e 22 do §10 ao K-010. O grep do quadro mostrou na l. 21 um registro com a origem '§8, l. 808-810, 817 e 819; §10, perguntas 1, 5 e 22; D-032' ligado a 'K-004*'. Se for o K-004 que carrega essas origens no quadro, a atribuição difere do mapa. Não foi possível ler a linha inteira nem os outros cartões por causa do teto de chamadas.",
+     "correcao_sugerida": "O curador confere quadro.md l. 21 (e os cartões K-010 e K-004). Se as origens são do K-004, ajusta-se o mapa ou o quadro, para os dois dizerem o mesmo.",
+     "confirmado": false,
+     "como_confirmou": "Só grep -o parcial em quadro.md, sem ler a linha inteira. Não confirmado."
+    }
+   ],
+   "conferido_sem_achado": [
+    "Mapa, seção 3, tabela §5 (l. 363-576): as faixas e os estados batem com a Fundação em todas as linhas lidas. Marcadores conferidos: [ABERTO] em l. 413 e 516; [VIGENTE] em l. 393-394, 396, 414, 442, 490, 497 e 511; [PENDENTE] em l. 520; [ADIADO] em l. 453; [PROPOSTA] nos demais.",
+    "Mapa §5.4: o estado 'Falta aberta' da l. 483 (F-0003) e 'só para publicar' da l. 484 (Lei 13.123) batem; 'conferido em parte' das l. 485-486 também.",
+    "Mapa §5.5: l. 497 ('cumprida em parte'), l. 498, 499, 505, 506, 508 (leitura de Vicente; 'rodar em sessão'), 509, 510, 511 e 512 ('uma tela') batem com o texto.",
+    "Mapa §7 (l. 647-797): faixas e estados de Ordem, Passo corrente (l. 662, defasado pela D-031), Fase 1 (666-672), Fase 2 (674), Gatilho (676-679, condição 3 = degrau 2), D-025 (681), Passos 0 a 10 e 'checklist mensal de 5 itens' (l. 797, sem lista) batem.",
+    "Mapa §8 (l. 807-828): todas as linhas batem com a tabela; o estado de 810, 811 e 818 coincide com [ABERTO], [ABERTO] e [PENDENTE]; 823 'passa ao piloto' é a 6A, linha 10.",
+    "Mapa §11 (l. 902-923): faixas e estados batem; 'regras de prudência' está nas l. 925-929.",
+    "Citações dos V que bateram com o texto: V-02 (l. 44-67 e 47), V-03 (l. 46), V-05 (l. 76 e 84), V-06 (l. 130 e 598, ambas dizem 'cota humana'), V-08 (l. 227 com [ABERTO] e l. 351), V-09 (l. 199, 243, 246), V-10 (l. 227, 319 [VIGENTE]), V-11 (l. 363), V-12 (l. 393, 406, 396), V-13 (l. 413, 430, 438), V-14 (l. 472-473), V-15 (l. 483-491), V-16 (l. 497-512), V-17 (l. 505-506, 'sem excedente'), V-18, V-19, V-21 (l. 647-662, 691), V-22 (l. 669-674), V-23 (l. 690 e 697-701), V-24 (l. 732 e 752), V-25 (l. 743), V-26 (l. 791-797), V-29 (l. 886) e V-30 (l. 900-929, 906).",
+    "Pergunta (d), tabela 6A (brief l. 400-416): as 17 linhas têm ao menos um V, só com as lacunas de B-01, B-02 e B-05 nas l. 741, 742, 707 e 130-131. Linha 1: V-03 e V-34. Linha 2: V-19. Linha 3: V-13. Linha 4: V-12 (l. 406; l. 742 em B-01). Linha 5: V-21 e V-20. Linha 6: V-11, V-13, V-17, V-22 e V-34. Linha 7: V-05, V-16 e V-22. Linha 8: V-12, V-16 e V-27. Linha 9: V-21 e V-27. Linha 10: V-16, V-27 e V-30. Linha 11: V-16. Linha 12: V-27 e V-29. Linha 13: V-19. Linha 14: V-18. Linha 15: V-17 e V-31. Linha 16: V-08. Linha 17: V-28 e V-34.",
+    "Pergunta (d), seção 6B (brief l. 418): cada leitura aparece em algum V (V-20, V-16, V-30, V-25, V-12), com as ressalvas de B-02 (l. 744) e B-06 (l. 696 e 723).",
+    "Pergunta (e): os pontos que as D-031 a D-037 mudam e que V-nn já trata: l. 76, 84, 130, 133, 199, 243, 246, 362-363, 393, 430, 438, 472-473, 497-512, 598, 635, 662, 691, 732, 752, 795, 807-823 e 902-906. As l. 200, 376, 396, 667 e 742 estão fora (B-01, B-03).",
+    "V-01 a V-36: o 'Sustenta' cita decisões que existem (D-023, D-027, D-031 a D-037). Nenhuma contradiz a essência lida em trilhas/decisoes/D-031 a D-037 (D-031, D-032, D-033, D-034, D-035 lidas até o fim da essência; D-036 e D-037 só no começo, por truncamento). O 'Quando' do V-03 bate com a D-035.",
+    "Mapa seção 3: os números de linha do §0 (46-47, 48-55, 56, 57-64, 65, 66) batem com o texto (l. 54 [PENDENTE], 55 [ABERTO], 56, 57 Regra de Ouro, 63-64 acordos 5 e 6, 65 comentário novo, 66 trilhas)."
+   ],
+   "log": {
+    "agente": "auditor",
+    "habilidade": "verificar-fundacao (método, aplicado ao mapa)",
+    "versao_harness": "0.1.0",
+    "modelo": "claude-sonnet-5-5",
+    "esforco": "high",
+    "entrada_ref": "Rodada K-001, fatia B: mapa seção 3 (l. 49-263) e proxima-versao.md (V-01 a V-36) contra 00_Fundacao_Cultura_Liquida.md (commit 2fe7025) e brief l. 394-418; teto de 14 chamadas",
+    "acoes": [
+     "grep -n dos títulos do mapa (1)",
+     "Read do mapa l. 1-17 (2) e de proxima-versao.md inteiro (3)",
+     "Read do mapa l. 49-263, seção 3 (4)",
+     "Read da Fundação l. 361-576 (5), 645-797 (7), 801-828 (8), 900-929 (9) e 1-45 (11)",
+     "Read do brief l. 394-418 (6)",
+     "Bash: head das D-031 a D-037 em trilhas/decisoes (10)",
+     "Bash: sed de linhas isoladas citadas pelos V (l. 46, 47, 76, 84, 130, 131, 133, 199, 227, 243, 246, 319, 351, 598, 635, 696) e dos marcadores das l. 584-641 (12)",
+     "Bash: grep -o por 'amostra sorteada|cota humana|cota de juízo|julgamento de Vicente' nas l. 1-900; conferência do [ABERTO] da l. 227 e da l. 84; grep dos cartões do quadro (13)",
+     "Bash: sed das l. 54-67 da Fundação; grep dos cartões K-nnn em quadro.md; grep de 74x/707/668 em proxima-versao.md (14)",
+     "Teto de 14 chamadas atingido; não rodei checar_fundacao.py, comparar_anexos.py nem validar.py (fora da fatia)"
+    ],
+    "resultados": [
+     "10 achados: 9 confirmados (omissao 5: B-01, B-02, B-03, B-05, B-09; linha 3: B-04, B-06, B-08; texto 1: B-07) e 1 não confirmado (B-10, atribuição)",
+     "Gravidade: media 4 (B-01, B-02, B-03, B-05), baixa 6",
+     "As faixas e os estados do mapa seção 3 (§5, §7, §8, §11) batem com a Fundação nas linhas lidas",
+     "Tabela 6A: 17 linhas, todas com V, exceto as linhas 741, 742, 707 e 130-131 (B-01, B-02, B-05); seção 6B coberta, com as ressalvas de l. 744, 696 e 723 (B-02, B-06)"
+    ],
+    "decisoes": [
+     {
+      "item": "B-01 l. 742 (camada 2 na fase 2, tabela código → nome) sem V",
+      "decisao": "aceito",
+      "motivo": "Read da l. 742 e grep em proxima-versao.md: nenhum V cita a linha"
+     },
+     {
+      "item": "B-02 l. 741 e 744 sem V",
+      "decisao": "aceito",
+      "motivo": "Read das linhas e do brief; só a l. 743 aparece em V-25"
+     },
+     {
+      "item": "B-03 l. 200, 376, 396 e 667 (amostra sorteada) sem V pela D-037",
+      "decisao": "aceito",
+      "motivo": "grep -o por 'amostra sorteada' dá as linhas; V cita só 76, 732, 752 e 795"
+     },
+     {
+      "item": "B-04 V-04 l. 58-65 em vez de 56 e 59-64",
+      "decisao": "aceito",
+      "motivo": "sed das l. 54-67"
+     },
+     {
+      "item": "B-05 l. 130-131 e 707 (validador e localização do trecho no Passo 1) sem V",
+      "decisao": "aceito",
+      "motivo": "Read da l. 707, sed da l. 131, 6A linha 5"
+     },
+     {
+      "item": "B-06 V-20 sem as l. 696 e 723 e as outras linhas da 6B",
+      "decisao": "aceito",
+      "motivo": "Read das l. 696 e 723 e do brief l. 418"
+     },
+     {
+      "item": "B-07 V-27 'modelos' sem linha no §8",
+      "decisao": "aceito",
+      "motivo": "Read das l. 801-828 inteira"
+     },
+     {
+      "item": "B-08 V-07 cita a l. 635 para a frase da l. 133",
+      "decisao": "aceito",
+      "motivo": "grep -o 'julgamento de Vicente' só acha a l. 133"
+     },
+     {
+      "item": "B-09 cabeçalho (l. 1-43) fora do mapa e l. 7 fora de V-01",
+      "decisao": "aceito",
+      "motivo": "Read das l. 1-45; a primeira linha de tabela do mapa é l. 46"
+     },
+     {
+      "item": "B-10 K-004 × K-010 no quadro l. 21",
+      "decisao": "falta",
+      "motivo": "o grep devolveu só um trecho da linha e o teto de chamadas impediu ler quadro.md"
+     },
+     {
+      "item": "Brief l. 382 (fonte do mapa para a l. 437)",
+      "decisao": "falta",
+      "motivo": "fora da faixa pedida (brief l. 394-418)"
+     },
+     {
+      "item": "Perguntas (b) 'cartão de cada linha faz sentido': títulos e contagens dos K-nnn",
+      "decisao": "falta",
+      "motivo": "quadro.md não foi lido (o teto de chamadas acabou); a leitura se limitou ao que o mapa diz de cada cartão e ao texto da Fundação"
+     }
+    ],
+    "duracao_s": 0,
+    "erros": [
+     "O grep dos cartões K-nnn em quadro.md (chamadas 13 e 14) devolveu só trechos parciais, sem a estrutura da tabela; o quadro não foi conferido",
+     "Truncamento por cut -c: l. 130 (a 330 caracteres) e D-033 a D-037 (a 600 caracteres); o resto dessas linhas não foi lido"
+    ],
+    "alcance": {
+     "olhado": [
+      "trilhas/planejamento/mapa-tres-frentes.md: l. 1-17 e 49-263 (seção 3 inteira), mais o grep dos títulos",
+      "trilhas/planejamento/proxima-versao.md: inteiro (48 linhas)",
+      "00_Fundacao_Cultura_Liquida.md: l. 1-45, 54-67 (sed), 361-576, 645-797, 801-828 e 900-929 por Read; linhas isoladas por sed: 46, 47, 76, 84, 130, 131, 133, 199, 227, 243, 246, 319, 351, 598, 635, 696; marcadores PROPOSTA/VIGENTE/ABERTO das l. 584-641; grep nas l. 1-900 por 'amostra sorteada', 'cota humana', 'cota de juízo' e 'julgamento de Vicente'",
+      "trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md: l. 394-418 (6A com 17 linhas e 6B)",
+      "trilhas/decisoes/D-031 a D-037.json: início de cada um (essência e diretriz, truncadas em 600 caracteres)",
+      "trilhas/planejamento/quadro.md: só dois greps parciais (K-nnn), sem leitura estruturada"
+     ],
+     "fora": [
+      "Mapa seções 1, 2 e 4 a 9 (fora da fatia B)",
+      "Fundação l. 44-360 (§0 a §4) e 577-644 (§6), fora de grep de linhas isoladas; l. 832-899 (§9 e §10) e Anexos A a E, só confiados a V-28, V-29, V-31 a V-33 pelo que dizem, sem leitura do texto",
+      "quadro.md inteiro e a coerência cartão × linha (pergunta b), por falta de chamadas",
+      "D-036 e D-037 lidos só no começo; não verifiquei a configuração de modelo por frente nem outros detalhes que possam constar na parte cortada",
+      "l. 930 da Fundação (fim das regras de prudência) e as l. 1-17 do mapa só quanto ao cabeçalho",
+      "brief l. 382 e seção 6C (l. 419-431); insumos-planejamento.md; AGENTS.md; não rodei checar_fundacao.py, comparar_anexos.py nem validar.py"
+     ]
+    }
+   }
+  },
+  "decisoes-insumos-atritos": {
+   "achados": [
+    {
+     "id": "C-01",
+     "tipo": "contradicao",
+     "gravidade": "alta",
+     "onde_no_mapa": "mapa l. 38 (A-04, 'leitura dada: ... o tamanho deixa de depender da cota'), lido junto com l. 37 (A-03), l. 42 (A-08); proxima-versao.md l. 36 (V-24) e l. 21 (V-09)",
+     "fonte": "trilhas/decisoes/D-037.json, campo substitui; 00_Fundacao_Cultura_Liquida.md l. 752",
+     "o_que_esta_errado": "A-04 e V-24 leem que a amostra sorteada sai da cota ('não a ir para Vicente, dentro da cota'; 'o tamanho deixa de depender da cota'). Mas a D-037, no campo substitui, diz que a cota humana passa a servir também à 'auditoria da ferramenta', e a amostra é justamente o que audita a ferramenta (D-037, diretriz 2). O próprio mapa diz isso em A-08 (l. 42: horas de Vicente = 'conflitos, Faltas a liberar, auditoria da ferramenta e busca assistida') e a V-09 também. A D-037 tem uma tensão interna (diretriz 1: 'nada mais chama Vicente'; substitui: a cota serve à auditoria da ferramenta), e a leitura de A-04 escolhe um lado sem dizê-lo. Também não está dito quem lê a amostra que audita a ferramenta (o auditor de outro harness, Vicente, ou os dois).",
+     "correcao_sugerida": "Trocar A-04 de 'leitura dada' para 'em aberto', com o destino dito: quem lê a amostra que audita a ferramenta (auditor, Vicente ou ambos) e se o tamanho dela entra na cota semanal. O aonde se quer chegar: uma auditoria da ferramenta que não vire revisão de rotina da base. Alinhar V-24, V-09 e A-08 à mesma leitura, com 'leitura a confirmar no K-003'.",
+     "confirmado": true,
+     "como_confirmou": "Imprimi o campo substitui da D-037 (Python/JSON) e li mapa l. 37-42, F l. 752 ('amostra sorteada semanal para Vicente, dentro da cota') e proxima-versao l. 21 e 36 por grep -n nos V-nn.",
+     "trecho_da_fonte": "D-037.substitui: 'ela passa a servir a conflitos, Faltas a liberar e auditoria da ferramenta'; mapa l. 38: 'o tamanho deixa de depender da cota'"
+    },
+    {
+     "id": "C-02",
+     "tipo": "contradicao",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa l. 40 (A-06, 'leitura dada') x proxima-versao.md l. 18 (V-06, '(leitura a confirmar)')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md l. 130 e 598; trilhas/decisoes/D-037.json diretriz (1); proxima-versao.md l. 18",
+     "o_que_esta_errado": "O mapa marca como 'leitura dada' que o trecho abaixo do limiar fica Falta 'não verificável por máquina' sem ir à cota; a lista V-06 marca a mesma leitura como 'a confirmar'. A D-037 só diz que o estado 'em tensão' e a Falta jurídica a liberar chamam Vicente; não fala de Falta 'não verificável por máquina' nem de para onde ela vai. A leitura é plausível, mas não decorre do texto da decisão.",
+     "correcao_sugerida": "Marcar A-06 como 'em aberto' (ou 'leitura proposta, a confirmar no K-003'), com o destino dito: quem resolve a Falta 'não verificável por máquina' (busca assistida de Vicente como fato novo, sem revisão de rotina). Igualar o estado no mapa e em V-06.",
+     "confirmado": true,
+     "como_confirmou": "sed -n 130p e 598p da Fundação mostraram 'vai para a cota humana'; grep -n 'V-06' em proxima-versao.md mostrou '(leitura a confirmar)'; D-037.json diretriz (1) não menciona essa Falta.",
+     "trecho_da_fonte": "F l. 598: 'vira Falta \"não verificável por máquina\" e vai para a cota humana'; V-06: '(leitura a confirmar)'"
+    },
+    {
+     "id": "C-03",
+     "tipo": "texto",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa l. 10 (P: 'esforço máximo e ultracode (D-027)'), l. 46 (A-12, coluna 'A decisão diz'), l. 377 (D-027, 'leitura de hoje')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md l. 862 (D-027)",
+     "o_que_esta_errado": "O mapa atribui à D-027 uma regra para as sessões de planejamento ('o planejamento roda com esforço máximo, ultracode e thinking'). A D-027 registrada diz 'O planejamento rodou em Opus 5.5 com esforço máximo, ultracode e thinking': é o registro do que o planejamento da v0.2 usou, não uma regra para as rodadas seguintes. A D-036 também não fixa a configuração da frente de planejamento. O pedido do próprio K-001 (Opus 5.5, esforço máximo, thinking) não traz ultracode, o que mostra que a configuração de ultracode não está decidida. A-12 está como 'leitura dada' e V-34 e o K-003 (CLAUDE.md) vão gravá-la como fato.",
+     "correcao_sugerida": "Reescrever a coluna 'A decisão diz' de A-12 como 'D-027 registra o que o planejamento da v0.2 usou (esforço máximo, ultracode, thinking); a D-036 cria as frentes sem fixar a configuração'. Trocar a leitura para 'provisória' (valor da execução em D-034) ou 'em aberto', com o destino K-002 (que já trata do teto e da cadência do planejamento). Corrigir mapa l. 10 e l. 377 e o item V-34 para dizer 'ultracode, a confirmar' em vez de afirmar.",
+     "confirmado": true,
+     "como_confirmou": "sed -n 862p da Fundação; leitura do mapa l. 10, 46 e 377; o texto do pedido do K-001 relayed no início da tarefa traz 'esforço máximo, thinking' sem ultracode.",
+     "trecho_da_fonte": "F l. 862: 'O planejamento rodou em Opus 5.5 com esforço máximo, ultracode e thinking.'"
+    },
+    {
+     "id": "C-04",
+     "tipo": "texto",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa l. 373 (D-023: 'o teto semanal é da execução'), l. 47 (A-13: 'só o teto da execução (D-023)'), l. 25 (Teto da operação: 'ainda a fixar (l. 511, 823...)')",
+     "fonte": "00_Fundacao_Cultura_Liquida.md l. 858 e 511; trilhas/decisoes/D-023 via AGENTS.md",
+     "o_que_esta_errado": "A D-023 e a l. 511 dizem 'teto provisório de 300 mil tokens por semana em agentes na operação da fase 1'. O mapa lê esse teto como 'da execução' e diz que o da operação está 'ainda a fixar (l. 511)'. A l. 511 não traz teto da operação a fixar: traz o próprio 300 mil, em 'operação da fase 1'. O teto das rotinas na nuvem a fixar é o da l. 823 (fase 2). A troca de 'operação da fase 1' por 'execução' é leitura do mapa, apresentada como o texto da decisão, e a palavra 'operação' passou a ser nome de frente (D-036), o que muda o sentido.",
+     "correcao_sugerida": "Dizer, em A-13 e na linha da D-023, que a D-023 usa 'operação da fase 1' no sentido de funcionamento do projeto na fase 1, que o mapa lê como teto da execução (leitura, a confirmar no K-002), e tirar a l. 511 da lista de 'a fixar'; manter só a l. 823 e o bloco 2.",
+     "confirmado": true,
+     "como_confirmou": "sed -n 858p, 511p e 823p da Fundação.",
+     "trecho_da_fonte": "F l. 858: 'Teto provisório de 300 mil tokens por semana em agentes na operação da fase 1'; F l. 823: 'Teto das rotinas na nuvem | dentro da guarda de orçamento (D-023) | fase 2'"
+    },
+    {
+     "id": "C-05",
+     "tipo": "omissao",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa l. 36-37 e 42 (A-02, A-03, A-08) e K-003 ('Acertar o brief')",
+     "fonte": "trilhas/2026-10-17_caminhos/caminhos.md l. 17, 101, 120, 176, 185; 00_Fundacao_Cultura_Liquida.md l. 199, 243, 246, 851; brief l. 322 e 422",
+     "o_que_esta_errado": "Os atritos citam do roteiro só a l. 17 (em A-02). Mas o roteiro, que vale sobre a Fundação nas linhas da 6A, repete o que a D-037 relê: l. 101 e 185 ('com a fila acima de uma semana de curadoria, nenhuma porta nova se abre'), l. 120 ('revisões de uma tela, juízo de até 15 itens, busca assistida'), l. 176 ('juízo humano de até 15 itens por semana'). Em A-03 também faltam F l. 199, 243, 246 e 851 (cota humana e lote de máquina como [PROPOSTA]) e brief l. 322 e 422 (fila de uma semana). O K-003 só acerta o brief, então o roteiro ficaria com a tela e a cota antigas.",
+     "correcao_sugerida": "Acrescentar as linhas ao A-02, A-03 e A-08 e fazer o K-003 cobrir 'brief e roteiro' (ou abrir cartão para o roteiro). Na lista V-09, os F l. 199, 243 e 246 já aparecem; incluir também a l. 851.",
+     "confirmado": true,
+     "como_confirmou": "Script Python com regex (cota|juízo|fila|uma tela|amostra|...) nas l. 1-932 da Fundação, no brief e no roteiro, excluindo as linhas já citadas na seção 2; imprimi as sobras.",
+     "trecho_da_fonte": "caminhos.md l. 120: 'as horas de Vicente (revisões de uma tela, juízo de até 15 itens, busca assistida)'; l. 176: 'juízo humano de até 15 itens por semana'"
+    },
+    {
+     "id": "C-06",
+     "tipo": "omissao",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa l. 35 (A-01), l. 39 (A-05), l. 40 (A-06): colunas 'Onde'",
+     "fonte": ".claude/skills/extrair-evidencia/SKILL.md l. 19 e 24; .claude/agents/avaliador.md l. 32; .claude/agents/curador.md l. 20",
+     "o_que_esta_errado": "O mapa diz na trilha (l. 420) que fez 'grep das linhas que as D-036 e D-037 tocam ... em .claude/', mas os atritos só citam de .claude/ o executar-brief/SKILL.md (A-01) e o CLAUDE.md (A-12). Ficaram de fora: extrair-evidencia/SKILL.md l. 24 ('abaixo do limiar, Falta \"não verificável por máquina\" para a cota humana', ligada ao A-06); extrair-evidencia l. 19 e avaliador.md l. 32 (quarentena com PENDENTE_JULGAMENTO, ligadas ao A-05); curador.md l. 20 (retomada pela habilidade executar-brief, ligada ao A-01). O K-101 só mexe no executar-brief.",
+     "correcao_sugerida": "Acrescentar essas linhas às colunas 'Onde' de A-01, A-05 e A-06 e dizer em K-003 ou K-101 que agentes e habilidades de .claude/ também são acertados (curador, avaliador, extrair-evidencia).",
+     "confirmado": true,
+     "como_confirmou": "Mesmo script de regex nos arquivos .claude/agents/*.md e .claude/skills/*/SKILL.md; saída com número de linha e trecho.",
+     "trecho_da_fonte": "extrair-evidencia/SKILL.md l. 24: 'abaixo do limiar, Falta \"não verificável por máquina\" para a cota humana'"
+    },
+    {
+     "id": "C-07",
+     "tipo": "texto",
+     "gravidade": "media",
+     "onde_no_mapa": "mapa l. 43 (A-09, 'leitura dada: o cartão nasce pelo script (K-102) ou pela triagem')",
+     "fonte": "trilhas/decisoes/D-037.json diretriz (4); brief l. 377",
+     "o_que_esta_errado": "A D-037 (4) cria o cartão de baixa prioridade para a menção, num texto já processado, a outra CLB ainda não registrada (exemplo: o mocororó na história da cajuína). O brief l. 377 trata de outra origem: 'CLB nova a partir de Entrada de rotina' que atende aos 4 critérios da D-022, e diz que, se a Fundação não tiver a regra, 'muda o plano e é decisão de Vicente'. A leitura 'dada' estende a D-037 (4) para a Entrada de rotina, que a decisão não cobre; o ponto que o brief deixou para Vicente continua sem resposta.",
+     "correcao_sugerida": "Dividir A-09: (a) menção incidental, leitura dada pela D-037 (4); (b) Entrada de rotina que atende aos critérios, 'em aberto', com o destino dito (K-003, leitura de Vicente) e o aonde se quer chegar: CLB nova entrando sem fila de revisão de rotina e com os 4 critérios da D-022.",
+     "confirmado": true,
+     "como_confirmou": "Li D-037.json diretriz (4) e sed -n 377p do brief (trecho final: 'uma CLB nova por vez e só com a fila abaixo de uma semana (l. 472)'; início: 'não foi achada no §5.4 ... muda o plano e é decisão de Vicente').",
+     "trecho_da_fonte": "D-037 (4): 'a menção a outra CLB vira ligação no grafo e, se a CLB ainda não estiver registrada, um cartão de baixa prioridade em A fazer'; brief l. 377: 'CLB nova a partir de Entrada de rotina'"
+    },
+    {
+     "id": "C-08",
+     "tipo": "omissao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa l. 36 (A-02)",
+     "fonte": "trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md l. 311-312; 00_Fundacao_Cultura_Liquida.md l. 701",
+     "o_que_esta_errado": "O A-02 trata a 'revisão de uma tela' como relatório do lote, sem aprovação. Mas há outra revisão de uma tela com aprovação de Vicente que a tabela não cita: brief l. 312 ('Vicente aprova o harness pronto pela revisão de uma tela do relatório da rodada B (l. 701)') e F l. 701 ('e Vicente aprova'). É portão da ferramenta, não da base, então talvez continue, mas a tabela não diz. Quem aplicar o A-02 ao pé da letra pode tirar também essa aprovação.",
+     "correcao_sugerida": "Acrescentar ao A-02 uma frase: a tela do relatório da rodada B (brief l. 311-312; F l. 701) é portão da ferramenta e fica, ou, se não, a leitura é de Vicente.",
+     "confirmado": true,
+     "como_confirmou": "Script de regex nas l. 1-932 da Fundação e no brief; linhas fora do conjunto citado.",
+     "trecho_da_fonte": "brief l. 312: 'Vicente aprova o harness pronto pela revisão de uma tela do relatório da rodada B'"
+    },
+    {
+     "id": "C-09",
+     "tipo": "omissao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa l. 410 (seção 9, segundo item: lista do que entra no K-008)",
+     "fonte": "trilhas/planejamento/rodadas/2026-10-21_K-001/lote-C3.json l. 110-111 e 124",
+     "o_que_esta_errado": "A seção 9 lista como 'não conferido' do C3 'conta exigida para abrir issue (C3.5)', mas o C3.5 tem duas partes não conferidas: a disponibilidade dos issue forms em repositório público de conta pessoal no plano Free e a exigência de conta. A primeira ficou fora da lista do K-008, e o terceiro item (l. 411) usa os formulários YAML como fato que 'vale já'.",
+     "correcao_sugerida": "Acrescentar à lista do K-008: 'disponibilidade dos issue forms em repositório público no plano Free (C3.5)'.",
+     "confirmado": true,
+     "como_confirmou": "Li lote-C3.json: partes de C3.5 com nivel 'não conferido' (l. 110-111, 114-115) e o campo nao_conferido (l. 124).",
+     "trecho_da_fonte": "lote-C3.json l. 124: 'C3.5: disponibilidade de issue forms em repositório público de conta pessoal Free; exigência de conta para abrir issue.'"
+    },
+    {
+     "id": "C-10",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa l. 411 (seção 9, 'Fatos do lote C3 que valem já ... oficial')",
+     "fonte": "trilhas/planejamento/rodadas/2026-10-21_K-001/lote-C3.json l. 125",
+     "o_que_esta_errado": "O mapa dá os fatos do C3 como 'oficial' sem levar a ressalva de método do lote: as citações vêm do extrator do WebFetch (um modelo pequeno devolve o trecho), não da página crua. O 'public preview' o mapa já hedga ('na página'). Os demais fatos (50.000 itens, 50 campos, 60 por hora, GITHUB_TOKEN) ficam sem a ressalva do método.",
+     "correcao_sugerida": "Acrescentar à l. 411: 'citações pelo extrator do WebFetch, não da página crua (ressalva do lote C3)'.",
+     "confirmado": true,
+     "como_confirmou": "Li lote-C3.json l. 125 (campo nao_conferido, item 'Método').",
+     "trecho_da_fonte": "lote-C3.json l. 125: 'as citações vêm do extrator do WebFetch (um modelo pequeno devolve o trecho), não da página crua'"
+    },
+    {
+     "id": "C-11",
+     "tipo": "omissao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa l. 334 (seção 6, linha do insumo 3: '11 → V-29')",
+     "fonte": "trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md l. 433 (6C, item 11); proxima-versao.md l. 25 (V-13)",
+     "o_que_esta_errado": "O item 11 da 6C junta 'Perguntas do §10' e 'o sentido de \"ambiente\" (l. 413)'. O mapa leva o item 11 só ao V-29. O sentido de 'ambiente' está no V-13 (que cita '6C, itens 5 e 11'), então o destino de metade do item está certo na lista, mas não no mapa.",
+     "correcao_sugerida": "Trocar '11 → V-29' por '11 → V-29 e V-13 (sentido de \"ambiente\")'.",
+     "confirmado": true,
+     "como_confirmou": "sed -n 423,436p do brief (item 11) e grep -n de V-13 em proxima-versao.md.",
+     "trecho_da_fonte": "brief l. 433: 'Perguntas do §10 (1 a 3, 6 a 8, 10 a 14, 16 a 20 e 22) e o sentido de \"ambiente\" (l. 413).'"
+    },
+    {
+     "id": "C-12",
+     "tipo": "atribuicao",
+     "gravidade": "baixa",
+     "onde_no_mapa": "mapa l. 387 (D-037, frente) x l. 26 (seção 1, coluna O)",
+     "fonte": "trilhas/decisoes/D-037.json diretriz (2); mapa l. 26",
+     "o_que_esta_errado": "Na seção 7 a D-037 põe a amostra só em P ('amostra como insumo'). Na seção 1 (l. 26) 'amostra que audita a ferramenta' está na frente O e 'o que a amostra acha na ferramenta' em P. A D-037 (2) diz 'na trilha de melhorias', que é planejamento, mas a amostra rodar é operação. As duas tabelas não dizem o mesmo.",
+     "correcao_sugerida": "Fixar a frente da amostra nas duas tabelas (sugestão: rodar a amostra em O ou D, o resultado como insumo em P) e repetir a mesma frase nas duas.",
+     "confirmado": true,
+     "como_confirmou": "Comparei mapa l. 26 e l. 387 com D-037.json diretriz (2).",
+     "trecho_da_fonte": "D-037 (2): 'A amostra sorteada audita a ferramenta (harness, validadores, agentes), na trilha de melhorias, e não revisa a base'"
+    }
+   ],
+   "conferido_sem_achado": [
+    "A-01: brief l. 70 traz 'Ler AGENTS.md, este brief ... e o checklist do piloto'; D-036 (2) pede quadro e estado-planejamento.md. Bate.",
+    "A-02: F l. 512 ('Vicente aprova ou devolve'), brief l. 110 (item 6) e l. 173 ('o ritual da l. 512'), roteiro l. 17 dizem o que a coluna afirma.",
+    "A-03: F l. 472 (fila de uma semana), 498 (cota de até 15 itens), 813, 886, 902 (ordem aviso/saúde/política, contribuições, amostra); brief l. 190, 192 (fila = itens à espera de juízo humano) e 259 conferem.",
+    "A-04: F l. 76, 376, 667, 732, 752, 795, 861 e brief l. 193 ('o que sobra da cota semanal') conferem; brief l. 92, 109, 287, 289, 299 mencionam a amostra como segunda leitura.",
+    "A-05: F l. 133 ('até o julgamento de Vicente'), 635 e 750 (PENDENTE_JULGAMENTO) conferem; marcar em aberto está certo, porque a D-037 não cita a quarentena.",
+    "A-06: F l. 130 e 598 trazem 'vai para a cota humana'.",
+    "A-07: F l. 473 ('exige segunda leitura (princípio 4; na fase 1, como no §5.1)'), F l. 396 (portão combinado) e F l. 575 e 787 (profissional antes de circular) conferem.",
+    "A-08: brief l. 359 traz 'revisões de uma tela, juízo de até 15 itens ... e busca assistida'.",
+    "A-10: F l. 473 ('quem propõe não aprova'), F l. 506 (ramificação claude/ para Vicente revisar), brief l. 325 ('Vicente a junta na revisão semanal') e l. 328 conferem; marcar em aberto está certo.",
+    "A-11: a tabela do brief de decisões termina na D-034 (l. 100, 'Proposta, não registrada'); faltam D-035 a D-037.",
+    "A-12: brief l. 23, 26 e 387 e as notas do CLAUDE.md (esforço médio, sem ultracode, sem Workflow) conferem; o problema está só na leitura da D-027 (C-03).",
+    "A-13: F l. 900 ('## 11. Orçamento e ritmo') e l. 902 só trazem o teto da execução; teto do planejamento por rodada só na D-036 (3).",
+    "Seção 7: as essências curtas de D-001 a D-029 batem com F l. 836-864; as de D-030 a D-037 batem com o essencia e a diretriz dos JSON. As leituras de D-001, D-002 e D-010 batem com F l. 867.",
+    "Seção 7: D-012 ('cumprida em parte') bate com F l. 867 e com V-16; D-016 e D-026 'se relê pela D-037' constam em V-28 e V-09; D-021 aponta ao insumo 3, item 4, que é o do material do piloto.",
+    "Seção 6: os 14 insumos de trilhas/insumos-planejamento.md têm linha no mapa; os itens 1 a 10 da 6C vão aos destinos que o aonde-quer-chegar pede (3 → K-113 e V-12; 4 → K-010 e V-12; 5 → V-13; 6 → V-23 e K-120; 7 → K-111; 9 → V-20; 10 → V-20 e V-30).",
+    "Seção 6: insumos 12 e 13 → K-002 e o 14 → K-001 e K-008, como pedem; V-35 traz os termos-chave das D-036 e D-037 (insumo 5 e 11); K-002, K-003, K-004, K-005, K-006, K-008, K-010, K-101, K-102, K-103, K-113, K-116 e K-201 existem no quadro com o papel que o mapa diz.",
+    "Seção 9: os fatos do C3 estão com o nível que o lote dá (C3.1 50.000 itens e 50 campos; C3.2 GITHUB_TOKEN sem Projects e token pessoal para projeto de usuário; C3.3 REST sem autenticação, 60 por hora; C3.5 YAML em .github/ISSUE_TEMPLATE e 'public preview').",
+    "Seção 9: o que ficou 'não conferido' no C3 (gratuidade do Projects no Free, GraphQL, clone, conta para abrir issue) não é afirmado como fato; o clone com Issues e Projects aparece como 'não conferido' (C3.4).",
+    "Seção 9: F l. 393 diz que a conta Indalt é conta pessoal de Vicente (então 'projeto de usuário' vale); F l. 135-136 (princípio 11), F l. 409 (chaves fora da pasta), F l. 442 (fase 1 sem contribuições externas) e F l. 450 (formulário público, fase 2) conferem; quadro.md l. 8 repete a conclusão da seção 9.",
+    "Busca (d): F l. 415 (fila de reabertura de ambiente), 505, 573 (fila de pedidos de IA), 788 e brief l. 343-344 (kit revisado por Vicente, campo de ação) e as paradas de aprovação da execução (brief l. 165, 311, 372) não contradizem a D-036 nem a D-037, porque não são revisão de rotina da base.",
+    "AGENTS.md l. 65 já traz a D-037 como vigente; CLAUDE.md, auditor, redator, rastreador, campo-de-acao e as demais habilidades não têm termos de cota, fila ou tela."
+   ],
+   "log": {
+    "agente": "auditor",
+    "habilidade": "verificar-fundacao (método, aplicado ao mapa)",
+    "versao_harness": "0.1.0",
+    "modelo": "claude-sonnet-5-5",
+    "esforco": "high",
+    "entrada_ref": "K-001, Fatia C: mapa-tres-frentes.md (seções 2, 6, 7, 9) contra Fundação l. 832-867, D-030 a D-037 (JSON), insumos-planejamento.md e lote-C3.json; commit-base 2fe7025 com rascunhos não commitados",
+    "acoes": [
+     "grep -n dos títulos do mapa (422 linhas)",
+     "impressão em Python de essencia, diretriz e substitui das D-030 a D-037",
+     "leitura do insumos-planejamento.md inteiro (14 linhas de tabela)",
+     "Read do mapa l. 1-48 e l. 328-422",
+     "Read da Fundação l. 832-867 e do lote-C3.json inteiro",
+     "sed -n das linhas citadas nos atritos (Fundação, brief, roteiro l. 17)",
+     "script Python com regex (cota, juízo, julgamento, uma tela, amostra, veredito, fila, retomada ...) nas l. 1-932 da Fundação, no brief, no roteiro, no AGENTS.md, no CLAUDE.md e em .claude/agents e .claude/skills, excluindo as linhas já citadas",
+     "sed/grep nas pontas das l. 130, 473, 512, 506, 598, brief 325 e 377 e brief l. 411-422 e 423-436 (6C)",
+     "grep -n de V-nn em proxima-versao.md e K-nnn em quadro.md"
+    ],
+    "resultados": [
+     "12 achados, todos confirmados: 1 alta (C-01), 6 media (C-02 a C-07), 5 baixa (C-08 a C-12)",
+     "por tipo: 2 contradicao, 3 texto, 1 atribuicao, 6 omissao, 0 linha",
+     "as 13 linhas de atrito (A-01 a A-13) citam linhas que de fato dizem o que a coluna afirma; os problemas estão nas leituras e nas linhas que faltam",
+     "seção 7: essências conferidas contra F l. 836-865 e contra os JSON; seção 6: 14 insumos com destino; seção 9: fatos do C3 com o nível do lote e sem afirmar o não conferido"
+    ],
+    "decisoes": [
+     {
+      "item": "C-01 A-04 e V-24 contra a D-037 (substitui) e A-08/V-09",
+      "decisao": "aceito",
+      "motivo": "confirmado por leitura do campo substitui e das linhas do mapa e da lista"
+     },
+     {
+      "item": "C-02 A-06 leitura dada x V-06 leitura a confirmar",
+      "decisao": "aceito",
+      "motivo": "confirmado por F l. 130/598 e grep de V-06"
+     },
+     {
+      "item": "C-03 D-027 lida como regra de ultracode para o planejamento",
+      "decisao": "aceito",
+      "motivo": "F l. 862 usa o passado 'rodou'; mapa l. 10, 46 e 377 afirmam como regra"
+     },
+     {
+      "item": "C-04 D-023 'operação da fase 1' lida como teto da execução",
+      "decisao": "aceito",
+      "motivo": "F l. 858 e 511 dizem 'operação da fase 1'; mapa l. 25, 47, 373"
+     },
+     {
+      "item": "C-05 roteiro e linhas da Fundação fora do A-02, A-03 e A-08",
+      "decisao": "aceito",
+      "motivo": "saída do script de regex"
+     },
+     {
+      "item": "C-06 linhas de .claude/ fora das colunas Onde",
+      "decisao": "aceito",
+      "motivo": "saída do script de regex nos arquivos de .claude/"
+     },
+     {
+      "item": "C-07 A-09 estende a D-037 (4) à Entrada de rotina",
+      "decisao": "aceito",
+      "motivo": "D-037.json diretriz (4) e brief l. 377"
+     },
+     {
+      "item": "C-08 revisão de uma tela da rodada B fora do A-02",
+      "decisao": "aceito",
+      "motivo": "brief l. 312 e F l. 701"
+     },
+     {
+      "item": "C-09 issue forms no Free fora da lista do K-008",
+      "decisao": "aceito",
+      "motivo": "lote-C3.json l. 110-111 e 124"
+     },
+     {
+      "item": "C-10 ressalva do método do lote C3 não levada ao mapa",
+      "decisao": "aceito",
+      "motivo": "lote-C3.json l. 125"
+     },
+     {
+      "item": "C-11 item 11 da 6C sem destino V-13",
+      "decisao": "aceito",
+      "motivo": "brief l. 433 e V-13"
+     },
+     {
+      "item": "C-12 amostra em frentes diferentes nas seções 1 e 7",
+      "decisao": "aceito",
+      "motivo": "mapa l. 26 e 387"
+     },
+     {
+      "item": "Brief l. 99: se a D-033 consta como 'a registrar' (A-11)",
+      "decisao": "falta",
+      "motivo": "o grep cortou a linha em 200 caracteres ('Essência a...'); não li o fim, então não confirmei o 'a registrar' do A-11"
+     },
+     {
+      "item": "Contagem de 1.912 linhas da Fundação (mapa l. 4) e total de tokens do lote C3 (mapa l. 422)",
+      "decisao": "falta",
+      "motivo": "fora da fatia e sem comando rodado; o número de chamadas do C3 (11) bate com o lote"
+     }
+    ],
+    "duracao_s": 0,
+    "erros": [
+     "O grep de brief l. 75-100 por 'D-03' devolveu números de linha relativos ao recorte (22-26), não ao arquivo; refiz a conta (D-030 na l. 96 até D-034 na l. 100)"
+    ],
+    "alcance": {
+     "olhado": [
+      "trilhas/planejamento/mapa-tres-frentes.md l. 1-48 e 328-422 (seções Como ler, 1, 2, 6, 7, 8, 9 e Trilha)",
+      "00_Fundacao_Cultura_Liquida.md l. 832-867 inteiras; linhas soltas citadas nos atritos (76, 130, 133, 135-136, 376, 396, 409, 442, 450, 472, 473, 498, 506, 511, 512, 575, 598, 635, 667, 696, 732, 750, 752, 787, 795, 813, 814, 823, 861, 858, 862, 886, 900, 902) e regex nas l. 1-932",
+      "trilhas/decisoes/D-030.json a D-037.json (essencia, diretriz, substitui)",
+      "trilhas/insumos-planejamento.md inteiro (14 insumos)",
+      "trilhas/planejamento/rodadas/2026-10-21_K-001/lote-C3.json inteiro",
+      "brief-execucoes-v0.1.md: linhas citadas nos atritos, l. 411-436 (6C) e regex em todo o arquivo",
+      "caminhos.md: l. 17 e regex em todo o arquivo",
+      "AGENTS.md, CLAUDE.md, .claude/agents/*.md e .claude/skills/*/SKILL.md por regex (hits fora do conjunto, no máximo 8 por arquivo)",
+      "proxima-versao.md: só linhas dos V-nn citados (V-03, 04, 06, 07, 09, 12, 13, 14, 16, 20, 23, 24, 28, 29, 30, 34, 35, 36); quadro.md: só linhas dos K-nnn citados"
+     ],
+     "fora": [
+      "mapa l. 49-327 (seções 3, 4 e 5) e l. 389-401 (seção 8, só vista no corte): fatias de outro verificador",
+      "D-001 a D-029 só pelo texto da Fundação (sem JSON); D-027.json e D-023.json não impressos",
+      "brief l. 99 inteira (D-033 'a registrar'), por corte de 200 caracteres",
+      "Fundação l. 933 em diante e contagem total de linhas",
+      "V-nn e K-nnn não citados na fatia; títulos de K-106 a K-122 (usados só por D-031, D-014 e outros) não conferidos",
+      "roteiro l. 41-123 e 222 em diante lidos só por regex",
+      "web: não usada (sem chamadas de rede); tokens do C3 (31.342) não conferíveis no lote",
+      "teto de 12 chamadas atingido, mais a entrega final; sem os scripts checar_fundacao.py, comparar_anexos.py e validar.py, que não eram desta fatia"
+     ]
+    }
+   }
+  }
+ }
+}

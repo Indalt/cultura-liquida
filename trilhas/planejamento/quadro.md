@@ -3,26 +3,58 @@
 Lógica kanban: **A fazer → Fazendo → Concluído**. Cada sessão pega **um** cartão e o leva até "Concluído", ou o devolve a "A fazer" com o estado salvo e o motivo. Na operação, quem move os cartões são os agentes.
 
 - **Formato do cartão:** ID, título, origem (decisão ou insumo) e destino (aonde se quer chegar).
-- **Onde o quadro mora:** neste arquivo, até o K-001 decidir se ele migra para as Issues e o Projects do GitHub.
+- **Ordem:** em "A fazer", a ordem das linhas é a ordem de execução de cada frente; em itálico, o que precisa vir antes. O porquê de cada ordem está no mapa das três frentes (`mapa-tres-frentes.md`, seção 8).
+- **IDs:** K-0nn no planejamento, K-1nn no desenvolvimento, K-2nn na operação. Um ID nunca muda nem se reaproveita.
+- **Onde o quadro mora:** neste arquivo, na fase 1. É a conclusão do K-001, pelo plano: princípios 11 e 16 e D-026 (mapa, seção 9). A porta de contribuição da fase 2 é o K-008.
 
 ## Planejamento de melhorias
 
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
-| A fazer | **K-001** Reunir tudo nas três frentes: mapear a Fundação v0.2, o roteiro, o brief de execuções, os insumos 1 a 14 e as decisões D-001 a D-037 em planejamento, desenvolvimento e operação; povoar este quadro; dizer o que vai para a próxima versão da Fundação | D-036 | um mapa das três frentes, este quadro completo e a lista do que entra na próxima versão |
-| A fazer | **K-002** Escolher a IA da operação (assinatura ou API com teto mensal) e a cadência e o teto do planejamento | insumos 12 e 13 | a operação sem disputar a cota de Vicente; rodadas com custo previsto |
+| A fazer | **K-003** Acertar o brief de execuções às D-036 e D-037: retomada pelo quadro; nenhuma revisão de rotina da base (a tela do lote fica como relatório); fila, amostra e horas relidas; menção incidental por cartão; tabela de decisões em dia e a l. 392 superada pela D-035; as regras de harness dos insumos 5 e 7 que cabem no bloco 1. Põe no roteiro uma nota de ajuste e diz o que muda em `.claude/` (curador, avaliador, extrair-evidencia, executar-brief), que o K-101 grava. Leva a Vicente os quatro pontos em aberto: quem lê a amostra e se ela entra na cota (A-04); a saída da quarentena (A-05); a CLB nova vinda de Entrada de rotina (A-09); a junção da ramificação das rotinas (A-10). *Antes do K-101* | D-036, D-037; insumos 5, 7 e 17; mapa, seção 2 (A-01 a A-11) | o brief com os ajustes das D-036 e D-037, aprovado por Vicente, e o bloco 1 pronto para começar |
+| A fazer | **K-002** Escolher a IA da operação (assinatura ou API com teto mensal) e a configuração, a cadência e o teto do planejamento; ler o teto da D-023 com as frentes. *Antes do K-113* | insumos 8, 12, 13, 15, 16 e 19; D-036, diretrizes 3 e 4; §10, perguntas 10 e 16; mapa, seção 2 (A-12, A-13) | a operação sem disputar a cota de Vicente; rodadas com custo e configuração previstos; o `CLAUDE.md` por frente |
+| A fazer | **K-005** Ritmo do piloto: o teto semanal da execução e a regra de folga calibrados pela medida, com estimativas por agente e habilidade. *Depois dos blocos 1 a 3 medidos, ou na primeira Parada (b)* | insumos 3 (item 1), 4, 6 e 16; D-023 | um ritmo do piloto que Vicente aceite |
+| A fazer | **K-006** Agente de melhorias e contribuições: desenho e habilidades (consolidar-para-planejamento, preparar-tarefa, medir-custo; triar-contribuicao na fase 2). *Depois do K-103 e do K-002* | insumos 10 e 18; D-036; P36 | o ciclo execução → insumo → planejamento → tarefa conduzido por um agente com harness próprio |
+| A fazer | **K-004** Próxima versão da Fundação, a partir de `proxima-versao.md` e do relatório do piloto. *Depois do K-116 (D-035)* | insumos 1, 2 e 11; D-031 a D-037; `proxima-versao.md` | a Fundação de novo fonte única, sem exceção de precedência, e o `checar_fundacao.py` cobrando todas as decisões |
+| A fazer | **K-007** Avaliar o gatilho da fase 2 (as três condições do §7, l. 676-679). *Depois do K-116 e de 4 semanas medidas* | §7; brief, blocos 13 e 14 | a fase 2 aberta, ou o que falta dito |
+| A fazer | **K-010** Decisões para publicar, antes do Passo 6: caminho na Lei 13.123, licença do acervo, enquadramento (Res. CNS 510), lugar e visibilidade do que fica no repositório (F-0003), grupos (tiers) e modo de expor a ferramenta. *Depois do K-004* | §8, l. 808-810, 817 e 819; §10, perguntas 1, 5 e 22; D-032 | o Passo 6 destravado |
+| A fazer | **K-008** Contribuição de outras pessoas na fase 2: a porta pelo quadro (Issues, Projects, formulários), quem não usa GitHub, tokens próprios, LGPD e consentimento, dados pessoais dos canais, P48 para entrevistas. *Depois do K-007* | insumos 9 e 14; D-011; D-037, diretriz 3; §5.4, degraus 2 e 3; §8, l. 815-816; lote C3 | contribuidores vendo o que falta e sugerindo pelo quadro, com a triagem jurídica |
+| A fazer | **K-009** Revisão de essencialidade. *Depois das coletas e verificações da fase 1* | D-025; §7, l. 681 | só o essencial das regras jurídicas, de colaboração e de organização, sem desprezar obrigação legal |
+| Concluído (22/10/2026) | **K-001** Reunir tudo nas três frentes: mapear a Fundação v0.2, o roteiro, o brief de execuções, os insumos 1 a 14 e as decisões D-001 a D-037 em planejamento, desenvolvimento e operação; povoar este quadro; dizer o que vai para a próxima versão da Fundação | D-036 | `mapa-tres-frentes.md`, este quadro completo e `proxima-versao.md`; relatório em `rodadas/2026-10-21_K-001/` |
 | Concluído | **K-000** Registrar as D-036 e D-037 e criar o quadro e o estado do planejamento (21/10/2026) | D-036, D-037 | este arquivo e `estado-planejamento.md` |
 
 ## Desenvolvimento
 
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
-| A fazer | **K-101** Bloco 1 do brief de execuções: harness e operação. Aguarda a autorização de Vicente | brief de execuções | o harness pronto para a coleta do piloto |
-| A fazer | **K-102** Script de menções incidentais. Ordem a definir no K-001 | D-037 | menções a outras CLB viram ligação no grafo e cartão de baixa prioridade |
-| A fazer | **K-103** Habilidade `registrar-melhoria`. Ordem a definir no K-001 | D-036; insumo 10 | toda sessão e toda rotina anota insumos num formato fixo |
+| A fazer | **K-103** Habilidade `registrar-melhoria`. *Primeiro cartão do desenvolvimento* | D-036; insumo 10; P36 | toda sessão e toda rotina anota insumos num formato fixo |
+| A fazer | **K-101** Bloco 1 do brief: harness e operação. *Depois do K-003 e do K-103; aguarda a autorização de Vicente* | brief, bloco 1 | o harness pronto para a coleta do piloto: `rodar_testes.py` sem FALHA; log sem alcance reprovando; versões 0.1.1 com Histórico; numa conversa nova, a ferramenta Agent lista avaliador, arquivista e campo-de-acao |
+| A fazer | **K-104** Bloco 2: contratos do §6 e valores provisórios. *Conversa nova, para os agentes da rodada B carregarem.* Parada (c), antes do K-109: lugar da tabela código → nome; padrão: uma pasta na máquina de Vicente, fora da pasta versionada | brief, bloco 2 | cada esquema com um exemplo que passa e um que reprova; os 4 casos do rastreador fora de PENDENTE e um caso que reprova por habilidade; o registro único de valores provisórios |
+| A fazer | **K-105** Bloco 3: scripts do núcleo | brief, bloco 3 | cada script com caso que passa e que reprova; o pre-commit rodando; os 69 ambientes semeados |
+| A fazer | **K-106** Bloco 4: fichas de acesso, Termos e Consultas do caju | brief, bloco 4 | fichas, Termos e Consultas válidos; a tradução de cada Consulta testada e datada |
+| A fazer | **K-107** Bloco 5: adaptadores, Recorte, deduplicação, modo assistido, entrada por link, Wayback. Parada (c): chave do Internet Archive; padrão: sem chave, no ritmo anônimo | brief, bloco 5 | cada adaptador testado e numa rodada real curta; o `relatorio_dia.py` rodando |
+| A fazer | **K-108** Bloco 6: primeira coleta real. A medição de horas e consumo (bloco 13) começa aqui e segue como registro, não como cartão (D-035) | brief, blocos 6 e 13 | todo Recorte com estado válido; o que não se exauriu, como Falta com o motivo |
+| A fazer | **K-109** Bloco 7: do bruto à Evidência, com triagem jurídica e guias | brief, bloco 7 | o `validar_acervo.py` passando; cada dúvida jurídica como Falta com norma e caminho |
+| A fazer | **K-110** Bloco 8: Termos, ficha, grafo, Educação e wiki local | brief, bloco 8 | a ficha aceita pelo validador; μ e λ batendo com o recálculo; o wiki abrindo na máquina, fora do Git |
+| A fazer | **K-102** Script de menções incidentais. *Depois do K-110, antes do K-111* | D-037 | menções a outras CLB viram ligação no grafo e cartão de baixa prioridade |
+| A fazer | **K-111** Bloco 9: pares reais, rodada B, README e reconstituição. Parada: Vicente aprova o harness pronto | brief, bloco 9 | FALHA 0 e PENDENTE 0 nas habilidades dos blocos 4 a 8; a reconstituição passando |
+| A fazer | **K-112** Bloco 10a: rotinas sem IA. Parada (a): termos do Actions; e (a) o fornecedor de outra nuvem, se valer a D-033 | brief, bloco 10; D-032, D-033 | 7 dias seguidos de relatório do dia e uma falha provocada que avisa; ligada, a rotina passa à operação |
+| A fazer | **K-113** Bloco 10b: rotina com IA. *Depois da aprovação do K-111 e do K-002*; parada: conta e rotina | brief, bloco 10; D-036, diretriz 4 | a rotina de teste mostrou o que se pedia; uma habilidade aprovada por vez, propondo em `claude/` |
+| A fazer | **K-114** Bloco 11: kit de fonte primária (pedido aprovado com o brief) | brief, bloco 11; princípio 15 | o rascunho com fontes, revisado por Vicente, sem publicar |
+| A fazer | **K-115** Bloco 12: testes de modelos. *Depois da aprovação do K-111* | brief, bloco 12; D-027 | cada habilidade com o modelo mais barato que passa |
+| A fazer | **K-116** Bloco 14: relatório do piloto para o planejamento | brief, bloco 14; D-035 | o relatório conferido, que alimenta o K-004 e o K-007 |
+| A fazer | **K-117** Passo 3: legado como ambiente (etapas A e B; régua de 4 filtros da P14). *Depois do piloto* | §7, Passo 3; D-024 | o relatório calculado do legado |
+| A fazer | **K-118** Passo 6: acervo e wiki público. *Depois do K-010* | §7, Passo 6 | o site publicando sozinho, e só fichas aprovadas |
+| A fazer | **K-119** Passo 7: vista navegável do grafo 4D, com componente próprio. *Depois do piloto; a pergunta 19 do §10 pode antecipá-la* | §7, Passo 7 | tensões lado a lado, "não observada" na matriz e o clique da ficha ao grafo e de volta |
+| A fazer | **K-120** Passo 8: ilustrações técnicas (dono a definir) | §7, Passo 8; insumo 3, item 6 | cada ilustração com a origem dita, conferida contra a ficha |
+| A fazer | **K-121** Passo 9: campo de ação além do kit (planejador de aulas, guia do IPHAN, cartilha), sob demanda | §7, Passo 9; D-005, D-006, D-007 | um pedido real vira rascunho com fontes, revisado |
+| A fazer | **K-122** Fase 2: o que o §7 deixa para ela (mutirão, bola de neve, relatório do funil, Wikidata, fichas das demais fontes, mapa e território, outros grupos e ferramentas, exportações SKOS, TBX e PROV). *Depois do K-007* | §7, l. 674 | a detalhar quando o gatilho abrir |
+| Concluído | **K-100** Bloco 0: plano em dia (18/10/2026) | brief, bloco 0 | D-033 a D-035 registradas; checklist do piloto; insumos para o planejamento |
 
 ## Operação
 
+Até o K-112 (bloco 10a), nada roda sozinho: os scripts rodam à mão nas conversas de trabalho (D-033). Depois, rodam aqui, sem ser cartões: as rotinas da camada 1 (buscas, deduplicação, Wayback, links, feed, validador, relatório do dia) e, depois do K-113, as da camada 2; a busca assistida e a entrada por link de Vicente; o script de menções incidentais (K-102); a amostra sorteada, que audita a ferramenta e manda o que acha ao planejamento (D-037). Os agentes abrem aqui os cartões de conflito (proposição em tensão), de Falta jurídica a liberar, de CLB candidata e, na fase 2, de sugestão. Só esses cartões chamam Vicente (D-037).
+
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
-| — | ainda vazia. A operação sem sessão começa com o Bloco 10. Depois disso, os agentes abrem aqui os cartões de conflito, de Falta a liberar, de CLB candidata e, na fase 2, de sugestão | D-036, D-037 | a ferramenta trabalhando sozinha, e Vicente chamado só por conflito |
+| A fazer | **K-201** Falta F-0003 a liberar: até onde o Git público já é publicação. *Espera o guia da Lei 9.610 (K-109) e a decisão de lugar e visibilidade de Vicente (K-010)* | Falta F-0003, criada pelo juridico em 17/10 (`trilhas/2026-10-17_verificacao/falta-F-0003.json`); D-037, diretriz 1 | a Falta liberada pelo caminho do guia, ou mantida com o porquê; até lá, a custódia do §5.1 |

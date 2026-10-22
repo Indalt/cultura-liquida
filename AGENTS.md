@@ -65,8 +65,8 @@ Resumo para qualquer agente que trabalhe nesta pasta. A fonte de verdade é `00_
 - **D-037:** a base de conhecimento não tem revisão de rotina. Vicente só é chamado por conflito de uma dimensão (proposição em tensão) ou por Falta jurídica a liberar. A amostra sorteada audita a ferramenta. Há sugestões de quem olha a base (fase 2) e das buscas, e um script sem IA de menções incidentais a outras CLB.
 
 ## Passo corrente
-- **Feito:** Fundação v0.2 completa e verificada. Roteiro `trilhas/2026-10-17_caminhos/caminhos.md` e brief de execuções `brief-execucoes-v0.1.md` aprovados por Vicente em 17/10/2026 (caso-piloto cajuína como teste da ferramenta inteira). Bloco 0 feito: D-033, D-034 e D-035 registradas; sem v0.2.1 (D-035).
-- **Próximo:** bloco 1 do brief (harness e operação), quando Vicente autorizar. Insumos para a sessão de planejamento: `trilhas/insumos-planejamento.md`.
+- **Feito:** Fundação v0.2 completa e verificada. Roteiro `trilhas/2026-10-17_caminhos/caminhos.md` e brief de execuções `brief-execucoes-v0.1.md` aprovados por Vicente em 17/10/2026 (caso-piloto cajuína como teste da ferramenta inteira). Bloco 0 feito: D-033, D-034 e D-035 registradas; sem v0.2.1 (D-035). Cartão K-001 feito (22/10): o mapa das três frentes, o quadro completo e a lista da próxima versão, em `trilhas/planejamento/`.
+- **Próximo:** pela ordem do quadro (`trilhas/planejamento/quadro.md`, D-036): o K-003, rodada de planejamento que acerta o brief às D-036 e D-037; depois, o K-103 e o K-101 (bloco 1 do brief), quando Vicente autorizar. Insumos para a sessão de planejamento: `trilhas/insumos-planejamento.md`.
 - **Estado do trabalho:** `trilhas/2026-10-17_execucao-piloto.md` (checklist do piloto). Leia-o antes de qualquer passo. O histórico da v0.2 está em `trilhas/2026-10-16_execucao-v0.2.md`.
 
 ## Agentes e habilidades (`.claude/agents/`, `.claude/skills/`)

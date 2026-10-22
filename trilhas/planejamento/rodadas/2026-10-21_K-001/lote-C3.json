@@ -1,0 +1,127 @@
+{
+  "lote": "C3",
+  "data": "2026-10-21",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "chamadas_usadas": 11,
+  "itens": [
+    {
+      "id": "C3.1",
+      "pergunta": "Projects (atual) é usável sem custo por conta pessoal Free com repositório público? Há limite de itens por projeto?",
+      "resposta": "Limite de 50.000 itens por projeto e de 50 campos: oficial. O uso sem custo no plano Free com repositório público não foi conferido.",
+      "partes": [
+        {
+          "afirmacao": "Um projeto pode ter no máximo 50.000 itens (somando views ativas e arquivo).",
+          "citacao": "A project can contain a maximum of 50,000 items across both active views and the archive page.",
+          "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Há também limite de campos por projeto (50), distinto do limite de itens.",
+          "citacao": "You can use up to 50 fields in a project, including built-in metadata and custom fields.",
+          "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Uso sem custo de Projects por conta pessoal Free com repositório público.",
+          "nivel": "não conferido"
+        }
+      ]
+    },
+    {
+      "id": "C3.2",
+      "pergunta": "Workflow do Actions move itens em Project de conta pessoal com GITHUB_TOKEN padrão?",
+      "resposta": "Não: o GITHUB_TOKEN não acessa Projects; para projeto de usuário, a documentação recomenda token pessoal (oficial).",
+      "partes": [
+        {
+          "afirmacao": "O GITHUB_TOKEN padrão não acessa Projects.",
+          "citacao": "`GITHUB_TOKEN` is scoped to the repository level and cannot access projects.",
+          "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "A documentação indica GitHub App (recomendado para projetos de organização) ou personal access token (recomendado para projetos de usuário).",
+          "citacao": "To access projects you can either create a GitHub App (recommended for organization projects) ... or a personal access token (recommended for user projects).",
+          "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C3.3",
+      "pergunta": "Ler Project pela API exige autenticação? Issues de repositório público pela REST sem autenticação, e com que limite por hora?",
+      "resposta": "A REST aceita pedidos sem autenticação para dados públicos, com 60 por hora (oficial). Que a GraphQL, por onde se lê um Project, exija autenticação em toda chamada não foi achado em frase expressa.",
+      "partes": [
+        {
+          "afirmacao": "A REST aceita pedidos sem autenticação para dados públicos, com limite primário de 60 pedidos por hora, contado por IP.",
+          "citacao": "60 requests per hour",
+          "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Pedidos sem autenticação são permitidos só para dados públicos.",
+          "citacao": "You can make unauthenticated requests if you are only fetching public data.",
+          "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "A GraphQL é chamada com token (exemplo com cabeçalho Authorization). A página não afirma que a autenticação é exigida em toda chamada.",
+          "citacao": "You can authenticate to the GraphQL API using a personal access token, GitHub App, or OAuth app.",
+          "url": "https://docs.github.com/en/graphql/guides/forming-calls-with-graphql",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C3.4",
+      "pergunta": "Clonar traz Issues e Projects ou só dados do Git?",
+      "resposta": "A página oficial de cópia de segurança fala só de dados do Git e avisa que os arquivos de migração são incompletos; não diz expressamente se o clone traz Issues e Projects (não conferido).",
+      "partes": [
+        {
+          "afirmacao": "A página 'Backing up a repository' descreve só dados do Git (histórico de revisões) e avisa que os arquivos de migração são incompletos. Não diz expressamente se o clone inclui Issues e Projects.",
+          "citacao": "Migration archives do not include all data related to a repository.",
+          "url": "https://docs.github.com/en/repositories/archiving-a-github-repository/backing-up-a-repository",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Que o clone não traz Issues nem Projects (afirmação expressa).",
+          "nivel": "não conferido"
+        }
+      ]
+    },
+    {
+      "id": "C3.5",
+      "pergunta": "Issue forms (YAML em .github/ISSUE_TEMPLATE) estão disponíveis para repositório público de conta pessoal? Abrir issue exige conta?",
+      "resposta": "Os formulários são arquivos YAML em .github/ISSUE_TEMPLATE e estão em 'public preview' segundo a página (oficial). Disponibilidade no plano Free e exigência de conta para abrir issue: não conferidas.",
+      "partes": [
+        {
+          "afirmacao": "Issue forms são arquivos YAML na pasta .github/ISSUE_TEMPLATE.",
+          "citacao": "To use an issue form in your repository, you must create a new file and add it to the `.github/ISSUE_TEMPLATE` folder in your repository.",
+          "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "A página rotula os issue forms como 'public preview', sujeitos a mudança (rótulo possivelmente defasado; só o dito na página).",
+          "citacao": "Issue forms are currently in public preview and subject to change.",
+          "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Disponibilidade para repositório público de conta pessoal no plano Free.",
+          "nivel": "não conferido"
+        },
+        {
+          "afirmacao": "Abrir issue exige conta no GitHub.",
+          "nivel": "não conferido"
+        }
+      ]
+    }
+  ],
+  "nao_conferido": [
+    "C3.1: uso sem custo de Projects por conta pessoal Free com repositório público. Motivo: about-projects (aberta) não trata de plano nem custo; githubs-plans (aberta) não menciona Projects nem Issues; teto de chamadas atingido antes de abrir a página de cobrança de Projects.",
+    "C3.3: afirmação expressa de que a GraphQL exige autenticação em toda chamada; leitura de Project pela API. Motivo: forming-calls-with-graphql e introduction-to-graphql não trazem frase de exigência; teto de chamadas.",
+    "C3.4: frase expressa sobre o clone (git clone) trazer ou não Issues e Projects. Motivo: backing-up-a-repository descreve só histórico de revisões e arquivos de migração; teto de chamadas.",
+    "C3.5: disponibilidade de issue forms em repositório público de conta pessoal Free; exigência de conta para abrir issue. Motivo: configuring-issue-templates não fala de plano; creating-an-issue não diz se conta é exigida (só trata de permissões); teto de chamadas.",
+    "Método: as citações vêm do extrator do WebFetch (um modelo pequeno devolve o trecho), não da página crua; o rótulo 'public preview' dos issue forms pode estar defasado."
+  ]
+}
