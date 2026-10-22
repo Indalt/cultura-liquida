@@ -32,6 +32,8 @@ A D-023 fala em "operação da fase 1" antes de a D-036 dar esse nome a uma fren
 
 As D-036 e D-037 foram registradas em 21/10, depois do brief (17/10) e sem versão nova da Fundação. A D-035 (diretriz 5) diz que as D-031 a D-035 valem pelos registros até a próxima versão; as D-036 e D-037 estão registradas como vigentes e listadas como tal no `AGENTS.md`. Os pontos abaixo são onde o texto ainda diz outra coisa. Vão ao K-003 (acertar o brief, o roteiro e os arquivos de `.claude/` antes do bloco 1) e à próxima versão. "Leitura dada" é o que o texto da decisão já responde, e a D-034 manda usar sem perguntar; "leitura proposta" é plausível, mas não decorre só do texto, e o K-003 a confirma; "em aberto" é insumo, com o destino e aonde se quer chegar.
 
+**K-003 (22/10/2026):** os atritos A-01 a A-11 estão aplicados no brief (quadro "Ajustes das D-036 e D-037", no início dele), com uma nota no roteiro; o que muda em `.claude/` está no bloco 1 do brief, para o K-101 gravar. Os padrões propostos para A-04, A-05, A-09 (b) e A-10, cada um com o porquê, estão em `rodadas/2026-10-22_K-003/pontos-em-aberto.md`, a aprovar por Vicente com o brief. As linhas "brief l." e "rot. l." desta tabela são as do commit 2fe7025, antes desses ajustes.
+
 | A | Onde | O texto diz | A decisão diz | Leitura e destino |
 |---|---|---|---|---|
 | A-01 | brief l. 67-73 (retomada); `.claude/skills/executar-brief/SKILL.md`; `.claude/agents/curador.md`, l. 20; `AGENTS.md`, "Passo corrente" | a sessão começa pelo `AGENTS.md`, o brief e o checklist | D-036 (2): toda sessão começa pelo quadro e pelo `estado-planejamento.md`, pega um cartão, move-o e termina movendo-o, com log, insumos novos, commit e push | leitura dada: a retomada ganha o quadro e o cartão. Destino: K-003 (brief) e K-101 (executar-brief) |
@@ -328,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 19 (os 15 a 19 nasceram nesta rodada)
+## 6. Insumos 1 a 23 (os 15 a 19 nasceram no K-001; os 20 a 23, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -351,6 +353,10 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 17, harness: validação reservada no teto, citação literal de verdade, log de agente de workflow (desta rodada) | D | K-003 (o que cabe no bloco 1), K-101 |
 | 18, script de checagem do mapa (desta rodada) | P (ferramenta do planejamento); D (construir) | K-006 |
 | 19, configuração e teto de cada frente; "operação" na D-023 (desta rodada) | P | K-002 |
+| 20, juntar a proposta da rotina sem Vicente, por script sem IA (K-003) | P; D (teste na 10b) | K-002, K-113 |
+| 21, o alcance do script de menções é o registro de Termos (K-003) | D; P | K-102, K-117 |
+| 22, `checar_mapa.py` lê a 6A do brief por linhas fixas (K-003) | P (ferramenta do planejamento); D (construir) | K-006 |
+| 23, o auditor da amostra usa o mesmo modelo dos agentes que produzem (K-003) | P; D (bloco 12) | K-115; V-24 |
 
 ## 7. Decisões D-001 a D-037
 

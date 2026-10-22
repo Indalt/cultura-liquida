@@ -4,7 +4,7 @@
 
 **Quando:** depois do relatório do piloto (cartão K-116, bloco 14). A D-035 diz que finalizar a v0.2 é construir e testar a ferramenta no piloto, e que a versão nova é da sessão de planejamento; o insumo 1 quer a versão "alinhada às decisões e ao que o piloto mostrar". Até lá, as decisões valem pelos registros em `trilhas/decisoes/` (D-035, diretriz 5), e o roteiro e o brief valem sobre o texto nas linhas da seção 6A do brief (D-034, D-035).
 
-**Como ler:** "l." é a linha da v0.2 (`00_Fundacao_Cultura_Liquida.md`, 1.912 linhas, commit 2fe7025); "6A", "6B" e "6C" são as partes da seção 6 do brief de execuções (`trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md`, l. 394-431). Item com "leitura proposta" ou "em aberto" depende do K-003, que leva a Vicente o que a D-037 deixa em aberto, ou do K-002.
+**Como ler:** "l." é a linha da v0.2 (`00_Fundacao_Cultura_Liquida.md`, 1.912 linhas, commit 2fe7025); "6A", "6B" e "6C" são as partes da seção 6 do brief de execuções (`trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md`, l. 394-431). Item com "leitura proposta" ou "em aberto" depende do K-003, que leva a Vicente o que a D-037 deixa em aberto, ou do K-002. Os padrões propostos pelo K-003 em 22/10 (V-06, V-07, V-09, V-12, V-14, V-16, V-20, V-21 e V-24; no V-20, também a l. 628, sobre quem muda o eixo 5) estão em `rodadas/2026-10-22_K-003/pontos-em-aberto.md`; com a aprovação de Vicente, a decisão que os registrar entra aqui como sustentação.
 
 ## Lista
 

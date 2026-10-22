@@ -1,0 +1,735 @@
+{
+ "workflow": "wf_a8931ef3-303",
+ "data": "2026-10-22",
+ "cartao": "K-003",
+ "agentes": "2 auditores (claude-sonnet-5-5, high, tipo auditor), em paralelo, num lote só",
+ "teto_de_chamadas_por_agente": 20,
+ "estimativa_antes": 239232,
+ "conta_antes": "orcamento.py --teto 300000 --estimativa 239232: PODE (consumido 0)",
+ "tokens_informados_pelo_workflow": 214004,
+ "chamadas_informadas_pelo_workflow": 30,
+ "medida_pelo_transcript": {
+  "contexto_final": {
+   "auditor A (brief e roteiro)": 111214,
+   "auditor B (quatro padrões)": 102775
+  },
+  "saida_do_ultimo_turno": {
+   "auditor A (brief e roteiro)": 16419,
+   "auditor B (quatro padrões)": 21328
+  },
+  "chamadas_de_ferramenta": {
+   "auditor A (brief e roteiro)": 17,
+   "auditor B (quatro padrões)": 13
+  },
+  "nota": "o número do workflow bate com a soma dos contextos finais (213.989) e deixa de fora a saída do último turno; com ela, o lote daria 251.736. É estimativa pelo transcript, não número oficial (insumo 15)."
+ },
+ "fatias": {
+  "brief-roteiro-quadro-claude": {
+   "achados": [
+    {
+     "id": "AUD-K003-01",
+     "ponto": "A-03 / invenção (bloco 7, 'Sem parada')",
+     "tipo": "invencao",
+     "gravidade": "media",
+     "onde": "trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md, l. 313 (bloco 7, 'Sem parada')",
+     "fonte": "Leitura A-03 em trilhas/planejamento/rodadas/2026-10-22_K-003/pontos-em-aberto.md (fim: 'Junto com os quatro, a aprovação do brief confirma') e D-037, diretriz 1. Nenhuma das duas fala de Falta que 'não conta na fila'.",
+     "o_que_esta_errado": "O diff cria uma regra de contagem da fila: a Falta jurídica que só vale para publicar 'espera as decisões do K-010, como o K-201 espera, e não conta na fila até lá'. A leitura A-03 define a fila como 'os cartões de conflito e de Falta jurídica a liberar que esperam uma ação de Vicente', sem exceção. A D-037 (diretriz 1) manda abrir o cartão para a Falta jurídica a liberar. Na fila, essa exceção muda o freio da l. 472: o K-201 (Falta F-0003) já é cartão de Falta a liberar em A fazer e sairia da conta. Isso não decorre de D-036, D-037, atritos, insumos 5, 7 e 17, dos quatro padrões nem de A-03 e A-06.",
+     "correcao_sugerida": "Tirar 'e não conta na fila até lá', ou levar a exceção a Vicente como ponto a aprovar. Sem isso, o cartão da Falta só de publicação conta na fila como qualquer outro cartão de Falta a liberar.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '313p' do brief mostrou a frase. Python (open + split) sobre pontos-em-aberto.md (trecho final) e o JSON D-037: não há a regra. A linha K-201 do quadro (python, filtro por ID) diz 'Espera o guia da Lei 9.610 (K-109) e a decisão de lugar e visibilidade de Vicente (K-010)... D-037, diretriz 1', ou seja, o cartão existe e hoje contaria na fila.",
+     "trecho_da_fonte": "brief l. 313: \"Cada Falta jurídica abre o seu cartão de Falta a liberar na operação (D-037, diretriz 1); a que só vale para publicar espera as decisões do K-010, como o K-201 espera, e não conta na fila até lá.\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "tirada a exceção 'não conta na fila'; a Falta que só vale para publicar segue a D-032 (o cartão espera o K-010 e não chama Vicente antes), escrita como parte do padrão A-05, junto com o F-11"
+    },
+    {
+     "id": "AUD-K003-02",
+     "ponto": "A-05 / invenção (bloco 5, fila_curadoria.py)",
+     "tipo": "invencao",
+     "gravidade": "baixa",
+     "onde": "brief l. 282 (bloco 5, `fila_curadoria.py`)",
+     "fonte": "D-037 (diretriz 1) e A-05, padrão item 3 em pontos-em-aberto.md: 'chega a Vicente pelo cartão de conflito', sem dizer o que ele faz nele.",
+     "o_que_esta_errado": "O texto define o que Vicente faz no cartão de conflito: 'ele confere a nossa leitura das Evidências em tensão (eixo 3), nunca a prática (D-019), e as duas documentações convivem (P29; l. 638)'. Nem a D-037 nem os quatro padrões nem A-03 e A-06 descrevem essa ação. A D-037 só diz que a revisão humana vem do conflito. O padrão A-04 dá a conferência da 'leitura do trecho (eixo 3)' ao auditor, não a Vicente. É mecanismo novo, e a checagem sem IA exige a expressão 'nunca a prática', o que mostra que foi posto de propósito.",
+     "correcao_sugerida": "Reduzir a 'Vicente age no cartão de conflito; a ação vira Execução com executor pessoa e fecha o cartão; não se julga a prática (D-019) e as duas documentações convivem (l. 638)'. Ou registrar a conferência da leitura do eixo 3 como leitura proposta a aprovar.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '282p' do brief. Busca textual de 'eixo 3' e 'cartão de conflito' em pontos-em-aberto.md e no JSON D-037 (python): o eixo 3 aparece só na A-04, item 1, como tarefa do auditor.",
+     "trecho_da_fonte": "brief l. 282: \"no de conflito, ele confere a nossa leitura das Evidências em tensão (eixo 3), nunca a prática (D-019), e as duas documentações convivem (P29; l. 638).\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o bloco 5 só diz que a ação de Vicente vira Execução e fecha o cartão, sem julgar a prática (D-019) e com as documentações em tensão convivendo (l. 638)"
+    },
+    {
+     "id": "AUD-K003-03",
+     "ponto": "A-04 / invenção (bloco 3, sortear_amostra.py)",
+     "tipo": "invencao",
+     "gravidade": "baixa",
+     "onde": "brief l. 248 (bloco 3, `sortear_amostra.py`)",
+     "fonte": "A-04, padrão item 4 em pontos-em-aberto.md: 'sorteados com semente registrada entre o que a ferramenta produziu desde a amostra anterior'.",
+     "o_que_esta_errado": "O texto acrescenta a lista fechada do que entra no sorteio: 'Entradas triadas, Trechos, Evidências, Faltas, campos da CLB situada'. O padrão A-04 diz só 'o que a ferramenta produziu desde a amostra anterior'. A lista fixa o universo de sorteio, e o brief usa exemplos que 'ilustram e nunca limitam' (D-017).",
+     "correcao_sugerida": "Pôr a lista como exemplo ('por exemplo: ...'), ou tirá-la e deixar o universo para o registro do bloco 2.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '248p' do brief mostrou a lista. Python sobre o texto do A-04 não achou os cinco tipos.",
+     "trecho_da_fonte": "brief l. 248: \"sorteada entre o que a ferramenta produziu desde a amostra anterior (Entradas triadas, Trechos, Evidências, Faltas, campos da CLB situada); ela audita a ferramenta (D-037, diretriz 2; padrão proposto A-04)\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a lista do que entra no sorteio virou exemplo (D-017)"
+    },
+    {
+     "id": "AUD-K003-04",
+     "ponto": "Insumo 5 / bloco 1",
+     "tipo": "omissao",
+     "gravidade": "baixa",
+     "onde": "brief l. 25 ('Harness (insumos 5, 7 e 17): o que cabe no bloco 1 está no bloco 1') e bloco 1, l. 189-196",
+     "fonte": "trilhas/insumos-planejamento.md, insumo 5 (cinco achados de harness); .claude/agents/*.md ('Campos do bloco LOG (exatamente estes...)'); scripts/checar_fundacao.py l. 9.",
+     "o_que_esta_errado": "O insumo 5 traz cinco regras: lista exata dos campos do log; soma pelo transcript contra o número do Agent; agente novo só carrega em sessão nova; termos-chave na primeira citação de D-nnn; o agente conta menos chamadas que o harness. O bloco 1 aplica três (a soma, a sessão nova, a contagem de chamadas). As outras duas não aparecem, e o brief não diz que já estão cobertas. A lista exata dos campos do log já existe nos sete agentes. Os termos-chave estão em checar_fundacao.py. A frase 'o que cabe no bloco 1 está no bloco 1' não diz quais ficaram de fora, nem por quê.",
+     "correcao_sugerida": "Acrescentar ao bloco 1 uma linha: 'insumo 5: a lista exata dos campos do log já está nos sete agentes, e os termos-chave das D-nnn, em scripts/checar_fundacao.py; nada a gravar'. Ou gravar a regra no curador e no executar-brief.",
+     "confirmado": true,
+     "como_confirmou": "Python sobre o brief: busca de 'termos-chave' (nenhuma linha), 'campos do log' (nenhuma) e 'exatamente' nas l. 180-205 (só ficha-de-acesso e log.schema). grep -n em .claude/agents/*.md mostrou a lista exata nos sete agentes; grep -n em scripts/*.py mostrou 'termos-chave' em checar_fundacao.py l. 9.",
+     "trecho_da_fonte": "insumos, linha 5: \"agente que inventa campos de log sem a lista exata; soma pelo transcript (cache) ≠ número do Agent; agente novo só carrega em sessão nova; a primeira citação de cada D-nnn precisa dos termos-chave; o agente conta menos chamadas do que o harness\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o bloco 1 diz que, do insumo 5, nada mais há a gravar e por quê (lista exata nos sete agentes; termos-chave no checar_fundacao.py e no V-35)"
+    },
+    {
+     "id": "AUD-K003-05",
+     "ponto": "Checagem sem IA (item 4): furo nas linhas de .claude/",
+     "tipo": "lacuna",
+     "gravidade": "baixa",
+     "onde": "trilhas/planejamento/rodadas/2026-10-22_K-003/checar_ajustes.py, l. 128-134 (dicionário `alvos`)",
+     "fonte": "brief l. 189 e 191 (citam `curador.md`, l. 37; `extrair-evidencia/SKILL.md`, l. 19 e 23).",
+     "o_que_esta_errado": "A checagem lista o que o K-101 deve gravar, mas só para as expressões do dicionário `alvos`. Ela não confere curador.md l. 37 ('Antes de parar: ... relatório de uma tela') nem extrair-evidencia l. 19 e 23 (quarentena). O brief cita essas linhas e a saída 'Para o K-101 (10)' não as traz. Os números de linha dessas três citações não são verificados, e ela só imprime o que acha.",
+     "correcao_sugerida": "Acrescentar a `alvos` as expressões 'relatório de uma tela' (curador.md), 'quarentena com `PENDENTE_JULGAMENTO`' e 'vai para a quarentena; nada é descartado' (extrair-evidencia), e fazer a checagem falhar se uma linha citada no brief não trouxer a expressão.",
+     "confirmado": true,
+     "como_confirmou": "Read de checar_ajustes.py l. 34-141 (alvos: curador 2 expressões, avaliador 1, extrair 1, executar-brief 4). Rodada com a base do disco: a saída 'Para o K-101 (10)' lista curador l. 20 e 43, avaliador l. 32, extrair l. 24 e executar-brief, e não traz curador l. 37 nem extrair l. 19 e 23. Eu conferi essas linhas à mão (sed/python): estão corretas.",
+     "trecho_da_fonte": "checar_ajustes.py l. 129-133: \".claude/agents/curador.md\": [\"Começa pela retomada\", \"D-015 a D-030\"], ... \".claude/skills/extrair-evidencia/SKILL.md\": [\"para a cota humana\"]",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a checagem confere as dez linhas de .claude/ que o bloco 1 cita e reprova se uma delas não trouxer a expressão"
+    },
+    {
+     "id": "AUD-K003-06",
+     "ponto": "Checagem sem IA (item 4): cobertura dos atritos e do sentido",
+     "tipo": "lacuna",
+     "gravidade": "baixa",
+     "onde": "checar_ajustes.py l. 63-106 (blocos 2 a 13 e seção 2)",
+     "fonte": "checar_ajustes.py l. 70-73, 87-90, 93-95; brief l. 129 (§3a item 5), l. 248, l. 282, l. 305, l. 310, l. 312 (blocos 3, 5, 7).",
+     "o_que_esta_errado": "A checagem deveria pegar a falta de um atrito em um lugar que a coluna Onde lista, e não pega alguns casos. (1) A seção 2 só confirma que a linha D-015..D-037 existe (regex `^\\| D-0nn \\|`), não o conteúdo. Um sentido invertido ou um termo-chave perdido passaria (conferi à mão: sem achado). (2) Bloco 3 (A-04, `sortear_amostra.py`), bloco 5 (A-05, 'a saída da quarentena não passa por ele'), bloco 7 (A-04/A-05) e a seção 3a, item 5 (A-04) não têm checagem. O bloco 10 só conta 'A-10' três vezes no total, e a tabela 3b (que recebeu o A-10) não é examinada. (3) As expressões proibidas são cadeias exatas e não acham paráfrase. (4) As referências 'l. N' da Fundação no texto novo não são verificadas.",
+     "correcao_sugerida": "Acrescentar: A-04 nos blocos 3, 7 e 8 e na §3a; A-05 nos blocos 5 e 7; A-10 na tabela 3b; verificar as 'l. N' da Fundação por palavra-chave como o roteiro; para a seção 2, comparar termos-chave dos JSON (como `checar_fundacao.py --essencias`).",
+     "confirmado": true,
+     "como_confirmou": "Read de checar_ajustes.py l. 34-141: as listas de termos por bloco (bloco 1, 2, 5, 10, 13, 'Depois do bloco 14', seção 5) e a ausência de bloco 3, 7, 8 e §3a. Execução: sem problemas na base do disco (os furos não acusam falso negativo no estado atual, porque conferi esses pontos à mão).",
+     "trecho_da_fonte": "checar_ajustes.py l. 71-73: \"for d in range(15, 38): if not re.search(rf\\\"^\\\\| D-0{d} \\\\|\\\", s2, re.M): problemas.append(f\\\"seção 2 sem a linha da D-0{d}\\\")\"",
+     "decisao_do_curador": "aceito em parte",
+     "o_que_mudou": "a checagem passou a cobrar o A-04 na seção 3a e nos blocos 3, 7 e 8, o A-05 nos blocos 5 e 7, o A-10 na seção 3b, 19 linhas da Fundação por palavra-chave e os termos-chave das D-033 a D-037 na seção 2; a paráfrase segue fora do alcance de um script sem IA"
+    }
+   ],
+   "conferido_sem_achado": [
+    "Item 1, A-01 a A-11: aplicados nos lugares da coluna Onde. A-01: retomada da seção 1 (l. 85-92 com quadro, estado do planejamento e mover cartão), curador.md l. 20 e executar-brief no bloco 1 (l. 189, 196), nota do roteiro. A-02: seção 3a item 6 (l. 130), bloco 1 (l. 196), bloco 9 mantido como portão (l. 343), nota do roteiro. A-03: bloco 2 (l. 213, 215), bloco 5 (l. 282), 3b (l. 143). A-04: §3a item 5, bloco 2 (l. 216), bloco 3 (l. 248), bloco 7 (l. 310, 312), bloco 8 (l. 322), bloco 13 (l. 390). A-05: bloco 1 (l. 190, 191), bloco 2 (l. 206), bloco 5 (l. 282), bloco 7 (l. 305). A-06: bloco 1 (l. 191) e quadro (l. 20). A-07: l. 16. A-08: bloco 13 (l. 390). A-09 b: bloco 2 (l. 208), bloco 5, seção nova, bloco 10b (l. 362), 'Depois do bloco 14' (l. 408). A-10: 3b (l. 144), bloco 10a (l. 356, 359), 10b (l. 361-362), bloco 13, seção 5 (l. 419). A-11: seção 2 até a D-037 e seção 5 (l. 424). A-13 no quadro de ajustes (l. 18). Nada ficou pela metade, salvo as observações dos achados 03 a 06.",
+    "Item 2, sobras: toda ocorrência do grep está ajustada, mantida de propósito ou histórica. Portão da ferramenta mantido: bloco 9 (l. 342-343) e kit do bloco 11 (l. 374-375). Seção 6 (l. 428-454) é histórica; a v0.2.1 já vale pela leitura da l. 10. Linhas 6, 35 e 49 sem contradição com a D-036 e a D-037. Nenhuma contradição achada.",
+    "Item 3, seção 2 (D-033 a D-037) contra a essência dos JSON: sem inversão e sem perda de termo-chave. D-036 traz as três frentes, a memória em arquivos, o teto próprio, o kanban, a porta da fase 2 e os agentes que movem os cartões. D-037 traz o conflito, a Falta jurídica, a amostra na ferramenta, quem olha a base, a ressalva dos relatos, o script sem IA e o 'substitui' da cota. D-035 idêntica ao JSON. D-034 traz o alcance e a precedência da seção 6A.",
+    "Item 4: checar_ajustes.py rodou sobre o disco e disse 'Sem problemas.' com 10 itens 'Para o K-101'. Com --commit 71dafff, 14 problemas e RC2=1 (PIPESTATUS), como esperado. O código 0 da primeira rodada não foi medido direto: o 'RC=$?' que imprimi era o do `tail`, e a conclusão vem do texto 'Sem problemas.' e do código do script, que retorna 0 sem problemas (l. 34-141). Ver o furo em AUD-K003-05 e 06.",
+    "Item 5, nota do roteiro: as 13 linhas citadas trazem o que ela diz. l. 17 e 104 com ramificação `claude/`, l. 18, 85 e 172 com quarentena, l. 19 e 122 com 'uma tela', l. 86, 92 e 106 com amostra, l. 103 e 187 com fila, l. 178 com 'juízo humano'. A contagem 'com a nota no arquivo' bate (as linhas do mapa, +2).",
+    "Item 6, invenção: fora os achados 01 a 03, o resto decorre de D-036, D-037, atritos, insumos 5, 7 e 17, dos quatro padrões e de A-03 e A-06. Em particular: o bloco 2 'candidata' (A-09 b), o script de menções (D-037 diretriz 4, K-102), '--teto 300000' (D-023), a parada (c) do bloco 2 (já no K-104 do quadro em 71dafff, fora da lista do K-003 mas com fonte no repositório), a transição 'enquanto a IA da operação não estiver ligada' (l. 406) e K-101, K-104 a K-116 (conferidos no quadro). Todos os K-nnn citados no brief existem no quadro.",
+    "Item 7, referências 'l. N' da Fundação conferidas com sed/python: l. 112-114 (admissão, critérios, campo vira Falta e nunca recusa), 133 (quarentena até o julgamento), 396 (portão combinado da fase 1: validador, logs, segunda leitura), 427 (Recorte), 472 (fila de uma semana), 473 (portão único), 498 (lote de 15 e cota de juízo), 506 (ramificação claude/ para Vicente revisar), 512 (revisão de uma tela), 575 e 787 (revisão por profissional), 592 (gatilhos que reabrem o Recorte), 638 (em tensão = inconsistente), 696 (valores provisórios), 812 (escala de valências, Passo 5), 902 (cota de 15 itens). 18 referências, todas dizem o que o texto afirma.",
+    "Linhas de .claude/ citadas no bloco 1 conferidas: curador l. 20, 37, 43; avaliador l. 32; extrair-evidencia l. 19, 23, 24; executar-brief l. 3, 18, 19, 26, 33, 43. Todas trazem o que o brief diz."
+   ],
+   "log": {
+    "agente": "auditor",
+    "habilidade": "verificar-fundacao",
+    "versao_harness": "0.1.0",
+    "modelo": "claude-sonnet-5-5",
+    "esforco": "high",
+    "entrada_ref": "Rodada K-003 (22/10/2026): brief-execucoes-v0.1.md, caminhos.md, quadro.md, mapa-tres-frentes.md e proxima-versao.md (diff contra 71dafff, arquivos não commitados)",
+    "acoes": [
+     "git diff 71dafff -U0 do brief e dos outros quatro arquivos, com filtro das linhas alteradas",
+     "grep -n dos atritos A-nn no mapa e dos insumos 5, 7 e 17",
+     "grep -n -i -E das sobras no brief (item 2) e sed -n das linhas longas (14-27, 189, 196, 282, 328, 364, 406, 408)",
+     "python: essência e diretriz dos D-036 e D-037, tabela da seção 2 (l. 116-120) contra os JSON D-033 a D-037, padrões A-04, A-05, A-09 b e A-10 e leituras A-03 e A-06 em pontos-em-aberto.md",
+     "python: linhas citadas da Fundação (18), de .claude/ (13) e do roteiro (13); K-nnn do brief contra o quadro",
+     "checar_ajustes.py . e checar_ajustes.py . --commit 71dafff; Read de checar_ajustes.py l. 34-141",
+     "grep -n de 'termos-chave' e 'exatamente estes' em .claude, scripts e no brief"
+    ],
+    "resultados": [
+     "6 achados: 3 invencao (1 media, 2 baixa), 1 omissao (baixa), 2 lacuna na checagem (baixa); todos confirmados por comando e trecho",
+     "Nenhuma contradição com a D-036 ou a D-037 nas sobras do brief",
+     "Seção 2 sem inversão de sentido; nota do roteiro e 18 referências da Fundação corretas",
+     "Checagem: base do disco 'Sem problemas.'; --commit 71dafff dá 14 problemas e código 1; furos em AUD-K003-05 e 06"
+    ],
+    "decisoes": [
+     {
+      "item": "AUD-K003-01 (l. 313, 'não conta na fila')",
+      "decisao": "aceito",
+      "motivo": "regra nova sem sustentação nas fontes autorizadas; confirmada por sed e busca no texto dos padrões"
+     },
+     {
+      "item": "AUD-K003-02 (l. 282, ação de Vicente no cartão de conflito)",
+      "decisao": "aceito",
+      "motivo": "mecanismo não decorre das fontes; confirmado por sed e busca"
+     },
+     {
+      "item": "AUD-K003-03 (l. 248, lista do sorteio)",
+      "decisao": "aceito",
+      "motivo": "lista fechada que o A-04 não traz"
+     },
+     {
+      "item": "AUD-K003-04 (insumo 5 parcial no bloco 1)",
+      "decisao": "aceito",
+      "motivo": "duas das cinco regras não aparecem e o brief não diz que já estão cobertas; confirmado por busca"
+     },
+     {
+      "item": "AUD-K003-05 e 06 (furos da checagem)",
+      "decisao": "aceito",
+      "motivo": "confirmados pela leitura do script e pela saída"
+     },
+     {
+      "item": "Parada (c) do bloco 2 (l. 239 e tabela da l. 156)",
+      "decisao": "aceito",
+      "motivo": "fora da lista do K-003, mas já está no K-104 do quadro em 71dafff; não é invenção"
+     },
+     {
+      "item": "Seção 6 e l. 428-432 com 'v0.2.1'",
+      "decisao": "descartado",
+      "motivo": "histórico e coberto pela l. 10 (D-035); fora da D-036 e da D-037"
+     },
+     {
+      "item": "Validação do relatório com scripts/validar.py achado-verificacao",
+      "decisao": "falta",
+      "motivo": "sem Write para gravar o relatório e sem chamadas sobrando; a saída segue o esquema da tarefa (StructuredOutput), não o JSON de achado-verificacao"
+     },
+     {
+      "item": "Código de saída 0 da primeira rodada do checar_ajustes.py",
+      "decisao": "falta",
+      "motivo": "o RC impresso era o do tail; conclusão pela mensagem 'Sem problemas.'"
+     }
+    ],
+    "duracao_s": null,
+    "erros": [
+     "O 'RC=$?' da primeira rodada de checar_ajustes.py mediu o tail, não o script; só a segunda (--commit) teve o código medido por PIPESTATUS (1)",
+     "Saídas longas do diff foram para arquivo e li em parte; linhas cortadas a 700 caracteres foram relidas por sed -n ou python quando importavam",
+     "Contagem de chamadas: estimo 14 ferramentas, mas Bash com vários comandos agrupados pode somar mais pela contagem do harness; informar ao curador"
+    ],
+    "alcance": {
+     "olhado": [
+      "git diff 71dafff -U0 do brief (todas as hunks), de caminhos.md (nota l. 5), quadro.md, mapa-tres-frentes.md e proxima-versao.md",
+      "brief l. 4-27 (quadro de ajustes), 49-56, 85-92, 116-130, 143-146, 156-170, 189-216, 238-250, 282-283, 305-313, 322-330, 342-343, 356-364, 390, 406-408, 419-424, 428-454",
+      "tabela de atritos A-01 a A-13 do mapa e insumos 5, 7 e 17",
+      "D-033 a D-037 (essência; diretriz e substitui das D-036 e D-037)",
+      "pontos-em-aberto.md: A-04, A-05, A-09 b (início), A-10 e as leituras A-03 e A-06 (trecho)",
+      "Fundação: l. 112-114, 133, 396, 427, 472, 473, 498, 506, 512, 575, 592, 638, 696, 787, 812, 902",
+      "curador.md l. 20, 37, 43; avaliador.md l. 32; extrair-evidencia l. 19, 23, 24; executar-brief l. 3, 18, 19, 26, 33, 43; roteiro 13 linhas",
+      "checar_ajustes.py l. 34-141 (exceto l. 141 em diante); saída das duas execuções"
+     ],
+     "fora": [
+      "Fundação fora das linhas citadas (por regra); Anexos A e B (checar_fundacao e comparar_anexos não rodados: fora deste pedido)",
+      "relatorio.md e pontos-em-aberto.md além dos trechos de A-04, A-05, A-09 b, A-10 e das leituras A-03 e A-06; se os quatro padrões estão certos (tarefa de outro auditor)",
+      "brief l. 28-48, 57-84, 93-115, 131-142, 171-188, 217-237, 251-281, 284-304, 331-341, 344-355, 365-389, 391-405, 409-418, 425-427, 433-449 e 455-fim: lidos só pelos greps do item 2 e pelas hunks do diff, sem leitura integral",
+      "AGENTS.md 'Passo corrente' (citado na coluna Onde do A-01): não está no pedido, que cita só brief, roteiro e .claude/",
+      "sem web (proibido); sem validar.py (sem Write)"
+     ]
+    }
+   }
+  },
+  "quatro-padroes-adversarial": {
+   "veredito_por_ponto": [
+    {
+     "ponto": "A-04",
+     "sustenta": true,
+     "resumo": "Nenhuma das causas (a) a (h) refuta o padrão: as âncoras da Fundação e do brief batem e a D-037 (2) sustenta que a amostra audita a ferramenta. Tem, porém, defeitos a corrigir antes de Vicente aprovar. O texto 'a amostra sai da cota de Vicente' é ambíguo e pode colidir com a leitura A-03. O 'não cria número novo' é discutível. O gatilho 'validador novo reabre o Recorte' não cobre falha de agente ou de habilidade. Faltam o caso da amostra que não acha nada e o fato de o auditor ter o mesmo modelo e esforço dos agentes que produzem.",
+     "ancoras_conferidas": [
+      "Fundação l. 76 (Quem trabalha VIGENTE, D-026)",
+      "l. 396 (portão combinado da fase 1)",
+      "l. 667 e l. 795 (amostra sorteada na segunda leitura)",
+      "l. 752 (Passo 5: amostra 'para Vicente, dentro da cota')",
+      "l. 732 (Passo 3, Etapa B, 'dentro da cota de juízo')",
+      "l. 902 (cota de até 15 por semana, amostra em terceiro)",
+      "l. 498 (lote de máquina de 15)",
+      "l. 592 (gatilhos que reabrem o Recorte, incluindo 'esquema ou validador novo')",
+      "l. 626 (eixo 3 = Evidência)",
+      "l. 200 (auditor igual ao produtor)",
+      "brief l. 193, 287, 289, 299 (tamanho e releitura da amostra pelo auditor)",
+      "brief l. 109 (segunda leitura) e l. 110 (devolução da tela, âncora que não diz o que o padrão atribui)",
+      "D-037 (2) e 'substitui'",
+      "V-24 em proxima-versao.md",
+      "K-103 e K-005 no quadro"
+     ]
+    },
+    {
+     "ponto": "A-05",
+     "sustenta": true,
+     "resumo": "O padrão não contradiz D-037 nem o princípio 10. Nada é descartado, a saída gera uma Execução (acordo 4), e a quarentena por barreira jurídica continua com Vicente pelo cartão de Falta (D-037, 1). As âncoras (l. 133, 394, 592, 624, 628, 635, 750, 812; brief l. 259, 290; avaliador.md l. 32; extrair-evidencia l. 19 e 23) conferem. Não refuta, mas há quatro lacunas e dois exageros. O padrão não diz que a saída passa pelo portão (validador e segunda leitura, l. 473). Não diz o que acontece quando a regra fica mais rígida. Não diz como a Falta jurídica só de publicação (D-032) se comporta. 'Os gatilhos são os da l. 592' é inexato: eles reabrem Recortes, e a regra de valências nova não está na lista. A P87 autoriza processar, e não sair da quarentena.",
+     "ancoras_conferidas": [
+      "Fundação l. 133 (princípio 10)",
+      "l. 394 (quarentena à vista no Git com selo)",
+      "l. 592 (gatilhos)",
+      "l. 624 e l. 635 (eixo 1; PENDENTE_JULGAMENTO)",
+      "l. 750 (Passo 5: quarentena processável)",
+      "l. 812 (§8: escala de valências, Passo 1 provisório e Passo 5)",
+      "l. 473 (portão único)",
+      "Anexo A P85, P87 (texto lido)",
+      "brief l. 259 (veredito de Vicente vira Execução), l. 290 (barreira jurídica deixa o item em quarentena), l. 183 e l. 282 não lidos",
+      "avaliador.md l. 32; extrair-evidencia/SKILL.md l. 19 e l. 23",
+      "D-037 (essência, diretriz 1)",
+      "V-07 em proxima-versao.md"
+     ]
+    },
+    {
+     "ponto": "A-09b",
+     "sustenta": true,
+     "resumo": "Não refutado. O padrão se apoia na D-031, na D-032 e na D-037 (4), recusa a nova fila de revisão e usa os mesmos campos da l. 114 e l. 605 ('nunca recusa'). Âncoras conferidas: l. 112-114, 472, 473, 512, 605, 628 e 733; brief l. 377; registrar-termo ('nasce candidato'); K-113 e K-102 existem. Faltam respostas a casos que o plano exige (h). Não diz o que acontece com a candidata que nunca atende às diretrizes de admissão (a linha 'não admitida' da l. 112 e o critério de revisionismo, que é pergunta aberta do §10). A l. 628 põe Vicente como quem muda o eixo 5, e o padrão faz a triagem mudá-lo. O freio da l. 472 é de 'porta nova' e o padrão o estende à 'ficha de CLB nova' sem dizer que é extensão. A redação 'no piloto, o agente na conversa' destoa da D-031.",
+     "ancoras_conferidas": [
+      "Fundação l. 112 (Admissão VIGENTE, D-019)",
+      "l. 113 (critérios VIGENTE, D-022)",
+      "l. 114 ([PROPOSTA] campos e Falta, 'nunca recusa')",
+      "l. 455 (P14)",
+      "l. 472 (fila, 'nenhuma porta nova')",
+      "l. 473",
+      "l. 512 (prioridade)",
+      "l. 605 (CLB situada)",
+      "l. 628 (eixo 5: 'Vicente, pelo portão')",
+      "l. 733 (termos candidatos)",
+      "l. 828 (critério de revisionismo, pergunta 17)",
+      "brief l. 377",
+      "D-031 (diretriz)",
+      "D-032",
+      "D-036",
+      "D-037 (4)",
+      "registrar-termo/SKILL.md ('nascendo candidato')",
+      "K-102, K-113 no quadro"
+     ]
+    },
+    {
+     "ponto": "A-10",
+     "sustenta": false,
+     "resumo": "Não se sustenta como está escrito. O item 1 faz do portão da fase 1 'o validador, o auditor da segunda leitura com o log dele e a semente da amostra gravada', e o item 2 estende isso à ramificação das rotinas sem IA. Para a camada 1 (sem IA) o brief não prevê auditor nenhum, e para a camada 2 o brief diz que se a rotina carrega .claude/agents/ é 'não conferido' (brief l. 333). O padrão apresenta como mecanismo existente o que o plano não tem (e, f, h). O portão da l. 396 diz 'validador, logs e segunda leitura (validador, verificador, amostra)', o que serve ao workflow sem IA só pela parte do validador. Além disso, a junção semanal por Vicente fica fora dos dois cartões da D-037 (1), e a precedência citada (A-02) é uma aprovação pontual do relatório da rodada B, não uma junção recorrente. Falta dizer o que fazer com o conteúdo que reprova numa ramificação permanente que a próxima execução lê.",
+     "ancoras_conferidas": [
+      "Fundação l. 396 (portão combinado)",
+      "l. 473 (quem propõe não aprova)",
+      "l. 506 (camada 2, ramificação claude/)",
+      "brief l. 124 (nunca na principal)",
+      "brief l. 325 (ramificação única e permanente; permissões do token: não conferido)",
+      "brief l. 328 (Vicente junta na revisão de uma tela)",
+      "brief l. 331 e l. 333 (10b: auditor chamado pela rotina 'não conferido')",
+      "brief l. 315 (10a sem IA)",
+      "insumo 3 (brief 6C, item 3; insumos-planejamento.md, linha 9 da tabela e insumo 20)",
+      "D-036 (operação sem sessão)",
+      "D-037 (diretriz 1 e 'substitui')",
+      "mapa, atritos A-02 e A-10",
+      "V-12, V-14 e V-16 em proxima-versao.md"
+     ]
+    }
+   ],
+   "achados": [
+    {
+     "id": "F-01",
+     "ponto": "A-04",
+     "tipo": "texto",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 16 (A-04, padrão, item 4) e l. 94 (A-03)",
+     "fonte": "pontos-em-aberto.md l. 16 e l. 94; Fundação l. 902",
+     "o_que_esta_errado": "A pergunta do ponto é 'se ela entra na cota'. A resposta 'a amostra sai da cota de Vicente' pode ser lida como 'é descontada da cota' (contradiz o item 3 e o custo 'do auditor, em tokens') ou como 'fica fora da cota'. Se é descontada, colide com a leitura A-03 (a cota são até 15 cartões de conflito e Falta). Pela l. 902 a amostra é a terceira prioridade dentro dos mesmos 15.",
+     "correcao_sugerida": "Dizer sem ambiguidade: 'a amostra não entra na cota de Vicente; o custo é do auditor, em tokens'. Dizer também que os 15 do A-03 e os 15 da amostra são contas separadas.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '7,26p' e grep -n 'sai da cota\\|15 itens\\|número novo' no arquivo; sed -n '902p' na Fundação; leitura das l. 94 e l. 902",
+     "trecho_da_fonte": "\"a amostra sai da cota de Vicente. O tamanho é valor provisório do registro do bloco 2: até 15 itens por amostra (o número da l. 902)\" / A-03: \"a semana de curadoria, até 15 desses cartões (o número da l. 902)\" / l. 902: \"Até 15 itens por semana ... na ordem: o que sustenta aviso, saúde ou política; as contribuições de pessoas; uma amostra sorteada\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a amostra não entra na cota de Vicente; os 15 dela e os 15 cartões da semana são contas separadas"
+    },
+    {
+     "id": "F-02",
+     "ponto": "A-04",
+     "tipo": "invencao",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 16 e l. 23",
+     "fonte": "brief l. 193 (commit 71dafff); Fundação l. 498 e l. 902",
+     "o_que_esta_errado": "O 'Por quê' diz que o padrão 'não cria número novo'. O brief diz que 'a Fundação não fixa' o tamanho da amostra. A l. 902 põe a amostra dentro dos 15 por semana, e a l. 498 trata o 15 do lote de máquina como outro parâmetro. O padrão dá o valor 15 a um terceiro uso (por amostra, uma por lote nos blocos 7 e 8 e uma por semana na operação), o que pode passar de 15 por semana. É valor provisório novo, ainda que reaproveite o dígito.",
+     "correcao_sugerida": "Dizer que é valor provisório novo (D-034), com o 15 emprestado das l. 498 e l. 902, que a Fundação não fixa para a amostra, e que o K-005 o calibra. Tirar 'não cria número novo'.",
+     "confirmado": true,
+     "como_confirmou": "git show 71dafff:brief | sed -n '180,216p' (l. 193) e sed -n '495,512p;900,904p' na Fundação; grep no pontos-em-aberto.md",
+     "trecho_da_fonte": "brief l. 193: \"o tamanho da amostra sorteada (D-026), que a Fundação não fixa. Padrão: o que sobra da cota semanal depois das duas primeiras prioridades da l. 902\" / pontos l. 23: \"o padrão não cria número novo\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o tamanho é valor provisório novo (D-034), com o 15 emprestado das l. 498 e 902; saiu 'não cria número novo'"
+    },
+    {
+     "id": "F-03",
+     "ponto": "A-04",
+     "tipo": "invencao",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 14 (item 2)",
+     "fonte": "Fundação l. 592",
+     "o_que_esta_errado": "O padrão manda refazer o item 'pela ferramenta corrigida, porque validador novo reabre o Recorte (l. 592)'. A l. 592 lista como gatilhos 'esquema ou validador novo', mas não agente, habilidade nem harness novos. O padrão diz que a falha pode estar em agente, habilidade, validador ou script. Para três dos quatro casos não há gatilho no plano. E o Recorte é a unidade da busca, não do item.",
+     "correcao_sugerida": "Dizer que o gatilho para agente, habilidade ou harness corrigidos é valor provisório novo (ou gatilho a incluir na próxima versão, V-24), ou limitar o texto ao caso do validador.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '592p' 00_Fundacao_Cultura_Liquida.md | cut -c850-2000 mostrou o fim da lista de gatilhos",
+     "trecho_da_fonte": "l. 592: \"Reabrem o Recorte: variante nova, título novo, OCR refeito, novidade no canal da fonte, esquema ou validador novo, Falta resolvida.\" / pontos l. 14: \"é refeito pela ferramenta corrigida, porque validador novo reabre o Recorte (l. 592)\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "refazer o item quando o corrigido é agente, habilidade ou harness é valor provisório novo, para a próxima versão (V-24); a l. 592 cobre só esquema ou validador"
+    },
+    {
+     "id": "F-04",
+     "ponto": "A-04",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 14 (item 2)",
+     "fonte": "Fundação l. 626 (eixo 3) e pontos l. 13",
+     "o_que_esta_errado": "O padrão põe 'o item afetado com o eixo 3 em leitura divergente' para toda falha achada. O eixo 3 é da Evidência e mede a fidelidade da nossa leitura do trecho. O auditor também confere voz, regra de valências (eixo 1), Falta completada e perguntas da triagem jurídica, que não são o eixo 3, e o item pode não ser uma Evidência.",
+     "correcao_sugerida": "Dizer que 'leitura divergente' vale só quando a falha é de leitura do trecho; nos outros casos o item volta ao estado do eixo próprio (por exemplo, o eixo 1).",
+     "confirmado": true,
+     "como_confirmou": "sed -n '624,635p' na Fundação (linha do eixo 3) comparado com a l. 13 e l. 14 do pontos-em-aberto.md",
+     "trecho_da_fonte": "l. 626: \"3. Fidelidade da leitura | Evidência | não conferida · conferida · leitura divergente (corrige-se a nossa leitura)\" / pontos l. 14: \"O item afetado fica com o eixo 3 em 'leitura divergente'\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o item volta ao estado do eixo próprio (eixo 3 se a falha foi de leitura; eixo 1 se foi de triagem)"
+    },
+    {
+     "id": "F-05",
+     "ponto": "A-04",
+     "tipo": "linha",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 14",
+     "fonte": "brief l. 110 (commit 71dafff)",
+     "o_que_esta_errado": "A âncora 'vira lote de correção no mesmo bloco (brief l. 110)' aponta para o item da revisão de uma tela, onde 'a devolução' é a que Vicente faz. O mapa A-02 já diz que essa tela deixa de pedir aprovação. A linha não diz nada sobre o achado da amostra.",
+     "correcao_sugerida": "Tirar a âncora ou dizer que o mecanismo do lote de correção é reaproveitado (brief l. 110) e a origem muda para o achado da amostra.",
+     "confirmado": true,
+     "como_confirmou": "git show 71dafff:brief | sed -n '104,128p' (l. 110)",
+     "trecho_da_fonte": "brief l. 110: \"6. **Revisão de uma tela por lote** (o que entrou, o que ficou em quarentena, as Faltas novas), que Vicente aprova ou devolve (l. 512). A devolução vira um lote de correção, sem parar os outros blocos.\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a âncora da brief l. 110 diz que o mecanismo do lote de correção é reaproveitado, com origem no achado da amostra"
+    },
+    {
+     "id": "F-06",
+     "ponto": "A-04",
+     "tipo": "lacuna",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 13-16 (A-04, padrão)",
+     "fonte": "grep no pontos-em-aberto.md, l. 7-26",
+     "o_que_esta_errado": "O padrão não diz o que acontece quando a amostra não acha nada (se isso reduz tamanho ou frequência, se fica registrado, se é só um número no log). Caso que o plano exige tratar.",
+     "correcao_sugerida": "Dizer que a amostra sem achado também vira linha no log (tamanho, semente, itens lidos, zero achados) e que o K-005 usa esses registros para calibrar o tamanho.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '7,26p' | grep -n -i 'nada ach\\|não acha\\|nenhum\\|sem achado\\|zero' devolveu vazio",
+     "trecho_da_fonte": "(ausência) grep sem ocorrência de 'sem achado', 'nenhum' ou 'zero' nas l. 7-26",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a amostra sem achado também vira linha de log, que o K-005 usa"
+    },
+    {
+     "id": "F-07",
+     "ponto": "A-04",
+     "tipo": "lacuna",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 13 e l. 21",
+     "fonte": "Fundação l. 200; .claude/agents/auditor.md, avaliador.md, arquivista.md, juridico.md (frontmatter)",
+     "o_que_esta_errado": "O padrão diz que o auditor 'é o verificador de outro harness' e 'não produziu o item'. A l. 200 lista como falha do legado 'Auditor igual ao produtor ... o mesmo modelo que produzia'. O auditor, o avaliador, o arquivista e o juridico, que produzem os itens dos blocos 7 e 8, usam o mesmo modelo e o mesmo esforço (claude-sonnet-5-5, high). O auditor.md diz que difere 'do redator', não dos outros. O padrão não trata a diferença.",
+     "correcao_sugerida": "Dizer em que o harness do auditor difere do harness dos agentes que produzem (agente, habilidade, ferramentas sem Write) e que modelo e esforço iguais estão para teste no bloco 12 (D-027). Ou registrar como insumo para a próxima versão.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '200p' na Fundação; grep -n '^model\\|^effort' nos quatro agentes; grep -n -i harness em auditor.md",
+     "trecho_da_fonte": "l. 200: \"Auditor igual ao produtor. A auditoria era feita pelo mesmo modelo que produzia. → Checagens mecânicas por script, verificador com harness diferente e amostra sorteada (D-026).\" / auditor.md l. 5-6 e avaliador.md l. 5-6: \"model: claude-sonnet-5-5\" \"effort: high\" / auditor.md l. 15: \"O harness e o modelo diferem dos do redator de propósito\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o limite (mesmo modelo e esforço do auditor e dos agentes que produzem) ficou dito no padrão e virou o insumo 23"
+    },
+    {
+     "id": "F-08",
+     "ponto": "A-05",
+     "tipo": "invencao",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 34 e l. 45",
+     "fonte": "Fundação l. 592",
+     "o_que_esta_errado": "O 'Por quê' diz 'não nasce mecanismo novo: os gatilhos são os da l. 592'. Os gatilhos da l. 592 reabrem o Recorte (a unidade da busca), não o item em quarentena, e nenhum é uma regra de valências nova ou calibrada. O padrão acrescenta a 'calibração da escala no Passo 5' e a 'regra versionada' como gatilhos de nova triagem. Isso é um mecanismo novo (valor provisório).",
+     "correcao_sugerida": "Dizer que reaproveita a lista da l. 592 para os Recortes e acrescenta um gatilho próprio, 'regra de valências com versão nova', como valor provisório do registro do bloco 2.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '592p' (final da lista) e sed -n '28,48p' do pontos-em-aberto.md",
+     "trecho_da_fonte": "pontos l. 45: \"E não nasce mecanismo novo: os gatilhos são os da l. 592.\" / l. 592: \"Reabrem o Recorte: variante nova, título novo, OCR refeito, novidade no canal da fonte, esquema ou validador novo, Falta resolvida.\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a regra com versão nova é gatilho próprio, valor provisório novo; os da l. 592 são os de reabrir Recorte"
+    },
+    {
+     "id": "F-09",
+     "ponto": "A-05",
+     "tipo": "sem_trilha",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 34 (item 1)",
+     "fonte": "Fundação l. 473; l. 396",
+     "o_que_esta_errado": "O item que sai da quarentena é admitido no acervo por quem triou: 'a triagem refeita aplica a regra ... sai, com uma Execução que diz quem aplicou a regra (agente ou script)'. O padrão não diz que essa saída passa pelo portão (validador, log, segunda leitura) nem que o agente que triou não aprova o que triou. A l. 473 diz 'quem propõe não aprova'. A Execução é trilha (acordo 4), mas não é portão. A A-04 só audita por amostra, depois.",
+     "correcao_sugerida": "Dizer que a saída da quarentena é uma proposta como as outras: o script a calcula quando a regra é aritmética, e o validador e o portão da fase 1 (l. 396) a conferem antes de entrar em `acervo/`, e a amostra audita a aplicação da regra.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '28,48p' | grep -n -i 'portão\\|validador\\|pull\\|proposta\\|propõe\\|quem aplicou' só acha a frase 'quem aplicou a regra'; sed -n '440,473p' na Fundação para a l. 473",
+     "trecho_da_fonte": "l. 473: \"Quem produz propõe por *pull request* ..., o validador confere e quem propõe não aprova\" / pontos l. 34: \"Se passa, sai, com uma Execução que diz quem aplicou a regra (agente ou script), a versão dela e o motivo.\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a saída da quarentena é proposta e passa pelo portão combinado da fase 1 (l. 396)"
+    },
+    {
+     "id": "F-10",
+     "ponto": "A-05",
+     "tipo": "lacuna",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 34-37",
+     "fonte": "grep no pontos-em-aberto.md l. 28-48",
+     "o_que_esta_errado": "Caso que o plano exige: quando a regra muda. O padrão só trata o sentido 'quarentena para fora'. Não diz o que acontece com o item que saiu sob a regra antiga e não passaria sob uma regra mais rígida: volta à quarentena? Fica? O princípio 10 pede que a quarentena não descarte, e uma volta sem trilha seria descarte.",
+     "correcao_sugerida": "Dizer que o item que já saiu não é retirado automaticamente. A regra nova vale para a próxima triagem. O que a amostra achar de mal aplicado vira achado sobre a ferramenta (A-04). Ou, se voltar, que volta com selo e Execução.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '28,48p' | grep -n -i 'volta\\|reent\\|retorn\\|rigor\\|mais restrit\\|deixa de passar' devolveu vazio",
+     "trecho_da_fonte": "(ausência) nenhuma das palavras acima aparece nas l. 28-48 do pontos-em-aberto.md",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o que já entrou não sai do acervo só porque a regra mudou; volta à quarentena, com selo e Execução, se a triagem refeita não o aprovar"
+    },
+    {
+     "id": "F-11",
+     "ponto": "A-05",
+     "tipo": "lacuna",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 35 (A-05 item 2), l. 60 (A-09 item 5), l. 77-78 (A-10)",
+     "fonte": "D-032 (essência e diretriz); brief l. 290; D-037 (1)",
+     "o_que_esta_errado": "Caso que o plano exige: a Falta jurídica que só vale para publicar. A D-032 diz 'não se problematiza agora o que só vale para publicar', e o brief (bloco 7, l. 290) diz que isso 'vira Falta e não trava'. A D-037 (1) abre cartão para 'Falta jurídica a liberar'. O padrão A-05 (item 2) fala da barreira que prende o item, mas nenhum dos quatro padrões diz se a Falta que só vale para publicar abre ou não o cartão que chama Vicente. A palavra 'publicar' nem aparece no arquivo.",
+     "correcao_sugerida": "Dizer que a Falta jurídica que só vale para publicar (Lei 13.123 no que se publica, F-0003, licença) fica registrada e não abre cartão a liberar no piloto (D-032). Só abre cartão a Falta que prende o item (D-025).",
+     "confirmado": true,
+     "como_confirmou": "grep -n -i 'só vale para publicar\\|publicar\\|F-0003' pontos-em-aberto.md devolveu vazio; D-032 e brief l. 290 lidos",
+     "trecho_da_fonte": "brief l. 290: \"O que só vale para publicar (Lei 13.123 no que se publica, F-0003, licença) vira Falta e não trava (D-032). Barreira que valha para o item em si o deixa em quarentena, com a Falta (D-025).\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a Falta que só vale para publicar fica registrada e o cartão dela espera o K-010 sem chamar Vicente (D-032), como o K-201"
+    },
+    {
+     "id": "F-12",
+     "ponto": "A-05",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 42",
+     "fonte": "Anexo A, P87 (grep -n '#### P87')",
+     "o_que_esta_errado": "O 'Por quê' diz que a P87 'já deu aos agentes o processamento da quarentena' e que 'o padrão leva a mesma lógica à saída'. A P87 trata de trabalhar sobre o que está em quarentena com o selo `PENDENTE_JULGAMENTO`, que continua pendente do julgamento de Vicente (l. 133, l. 635). Não trata de sair. O padrão é uma extensão, apoiada na D-037 e não na P87, e muda a l. 133 e a l. 624.",
+     "correcao_sugerida": "Dizer que a saída pela regra é extensão (apoiada na D-037 e na P85 lida no nível da regra), e que a P87 só sustenta o processamento. Manter V-07.",
+     "confirmado": true,
+     "como_confirmou": "grep -n '#### P87' e leitura das linhas seguintes do Anexo A; sed -n '129,136p' (l. 133)",
+     "trecho_da_fonte": "P87: \"os agentes de curadoria podem trabalhar sobre o que esta em quarentena mesmo que eu nao autorize. se o que esta la preenche os criterios já pode processar...\" / l. 133: \"permanece em quarentena até o julgamento de Vicente\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a P87 sustenta só o processamento; a saída pela regra é extensão apoiada na D-037 e na P85 lida no nível da regra"
+    },
+    {
+     "id": "F-13",
+     "ponto": "A-05",
+     "tipo": "lacuna",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 37 (item 4)",
+     "fonte": "D-037 (diretriz 1); D-034 (diretriz 2); Fundação l. 812",
+     "o_que_esta_errado": "O item 4 diz que a escala de valências é 'decisão dele (§8, l. 812)', 'calibrada no Passo 5'. Não diz por qual caminho a calibração chega a Vicente. A D-037 (1) diz que 'nada mais chama Vicente'. A D-034 diz que os valores provisórios se calibram 'na v0.3'.",
+     "correcao_sugerida": "Dizer que a calibração da escala chega a Vicente pela frente de planejamento (a trilha de melhorias, K-005), não por um chamado da operação.",
+     "confirmado": false,
+     "como_confirmou": "Leitura de pontos l. 37, D-037 diretriz (1) e D-034 diretriz (2). Não é contradição provada, porque a calibração não é chamado da operação. Só a lacuna do caminho.",
+     "trecho_da_fonte": "pontos l. 37: \"A escala de valências e o critério de `PENDENTE_JULGAMENTO` já são decisão dele (§8, l. 812): provisórios no bloco 2 e calibrados no Passo 5.\" / D-037 diretriz 1: \"nada mais chama Vicente\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "não confirmado pelo auditor, mas a clareza não muda o sentido: a calibração chega a Vicente pela frente de planejamento (K-005)"
+    },
+    {
+     "id": "F-14",
+     "ponto": "A-09b",
+     "tipo": "sem_trilha",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 58 (item 3)",
+     "fonte": "Fundação l. 112 e l. 828; D-037 (essência)",
+     "o_que_esta_errado": "Caso que o plano exige: a candidata que nunca atende às diretrizes de admissão. O padrão diz que 'a ficha sai quando valem as diretrizes' e que a triagem as aplica. Não diz o que acontece com a candidata que não passa (fica candidata? é arquivada? descartada?). A l. 112 pede 'uma linha na trilha (\"não admitida: revisionismo\", acordo 4)'. O critério de revisionismo é 'pergunta aberta (§10)' (pergunta 17, na l. 828), então a triagem não tem régua para aplicá-lo. O princípio 10 e o acordo 4 pedem que nada seja descartado nem entre sem trilha.",
+     "correcao_sugerida": "Dizer que a candidata que não passa permanece candidata, com a linha de trilha 'não admitida: <diretriz>' e a Evidência à vista. Dizer também que, enquanto o §10 não definir revisionismo, a triagem só registra o caso duvidoso como Falta, sem decidir.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '50,69p' | grep -n -i 'não admitida\\|nunca atende\\|descart\\|trilha\\|permanece' só achou 'nunca recusa' (l. 114); sed -n '107,119p' e '801,828p' na Fundação",
+     "trecho_da_fonte": "l. 112: \"[PROPOSTA] O revisionismo deixado de fora deixa uma linha na trilha (\\\"não admitida: revisionismo\\\", acordo 4); o que conta como revisionismo é pergunta aberta (§10).\" / l. 828: \"o critério de revisionismo (pergunta 17)\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a candidata que não passa fica candidata, com a Evidência à vista e a linha 'não admitida' (l. 112); o caso duvidoso de revisionismo fica Falta"
+    },
+    {
+     "id": "F-15",
+     "ponto": "A-09b",
+     "tipo": "contradicao",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 56 e l. 58",
+     "fonte": "Fundação l. 628",
+     "o_que_esta_errado": "O padrão põe 'candidata' no eixo 5, o estado editorial da ficha, e a passagem de candidata a ficha é feita pela triagem. A l. 628 diz que quem muda o eixo 5 é 'Vicente, pelo portão (§5.4)'. O padrão não diz quem muda o eixo 5 nem reconhece a l. 628. Se Vicente muda, é revisão de rotina da base (D-037); se muda a triagem, o padrão contraria a l. 628, e então tem de entrar em V-14 ou V-21.",
+     "correcao_sugerida": "Dizer quem passa a mudar o eixo 5 (a triagem, com portão e amostra) e acrescentar a l. 628 à lista 'O que muda' (próxima versão).",
+     "confirmado": true,
+     "como_confirmou": "sed -n '628p' na Fundação",
+     "trecho_da_fonte": "l. 628: \"| 5. Estado editorial da ficha | CLB situada (ficha) | valores a definir no Passo 1 (inclui \\\"publicada\\\") | Vicente, pelo portão (§5.4) |\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a triagem muda o eixo 5 pelo portão; o valor 'publicada' fica com Vicente; a l. 628 vai à próxima versão (V-14, V-20)"
+    },
+    {
+     "id": "F-16",
+     "ponto": "A-09b",
+     "tipo": "linha",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 59 e l. 66",
+     "fonte": "Fundação l. 472",
+     "o_que_esta_errado": "O padrão apoia o freio na l. 472 ('só com a fila abaixo de uma semana') e diz que ele 'protege as horas de Vicente'. A l. 472 trata de 'nenhuma porta nova' (canal ou tipo de evidência), não de ficha de CLB nova. A extensão vem do brief, não da Fundação. Depende também da leitura A-03, que ainda está proposta.",
+     "correcao_sugerida": "Dizer que a l. 472 é aplicada por analogia à ficha de CLB nova (valor provisório, D-034), junto com a A-03.",
+     "confirmado": true,
+     "como_confirmou": "sed -n '440,473p' na Fundação (l. 472)",
+     "trecho_da_fonte": "l. 472: \"se a fila passar de uma semana de trabalho de curadoria, nenhuma porta nova se abre\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o freio da l. 472 é aplicado por analogia à ficha nova, valor provisório que depende da leitura A-03"
+    },
+    {
+     "id": "F-17",
+     "ponto": "A-09b",
+     "tipo": "texto",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 56 e l. 63",
+     "fonte": "D-031 (diretriz)",
+     "o_que_esta_errado": "O item 1 põe 'no piloto, o agente na conversa de trabalho' como quem registra a candidata. O 'Por quê' diz que a D-031 é 'o fluxo normal das rotinas, e não o piloto nem uma conversa aberta para isso'. A D-031 diz que as outras CLB 'entram pelo fluxo normal das rotinas ... e não pelo piloto'. O item 4 desfaz a tensão ('no piloto, o cartão espera'), mas a redação do item 1 diz o contrário.",
+     "correcao_sugerida": "No item 1, dizer que, nas conversas do piloto, a candidata só se registra como cartão (e não como ficha) quando a Entrada da cajuína a traz por acaso.",
+     "confirmado": true,
+     "como_confirmou": "grep nas l. 50-69; D-031 lida no JSON",
+     "trecho_da_fonte": "D-031: \"As outras CLB que aparecerem entram pelo fluxo normal das rotinas, que encontram CLB em geral (D-032), e não pelo piloto.\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "no piloto, a candidata só nasce, como registro e cartão, quando uma Entrada do piloto a traz por acaso (D-031)"
+    },
+    {
+     "id": "F-18",
+     "ponto": "A-10",
+     "tipo": "invencao",
+     "gravidade": "alta",
+     "onde": "pontos-em-aberto.md l. 77-78 (A-10, padrão, itens 1 e 2)",
+     "fonte": "brief l. 315 e l. 333 (commit 71dafff); Fundação l. 396",
+     "o_que_esta_errado": "O item 1 põe como condição de juntar 'o validador, o auditor da segunda leitura com o log dele e a semente da amostra gravada', e o item 2 estende isso 'à ramificação das rotinas sem IA'. A 10a é a camada 1, 'sem IA', e o plano não põe auditor nela (só o validador). A l. 396 pede 'o validador roda em toda proposta, os agentes gravam logs e a segunda leitura vem do validador, de um verificador ... e da amostra'. Na camada 2, o brief só prevê o auditor chamado pela rotina e diz que se a rotina carrega `.claude/agents/` é 'não conferido'. O padrão apresenta como mecanismo existente algo que o plano não tem, e a operação sem sessão (D-036) não chama o auditor.",
+     "correcao_sugerida": "Separar o portão por camada. Camada 1: o validador e as checagens por script, mais o log. Camada 2: o validador, o auditor e a semente, só depois de a rotina de teste da 10b mostrar que a rotina chama o auditor. Até lá, o portão da camada 2 é o validador mais a segunda leitura numa conversa de trabalho.",
+     "confirmado": true,
+     "como_confirmou": "git show 71dafff:brief | sed -n '314,337p' (l. 315 e l. 333); sed -n '71,90p' do pontos-em-aberto.md",
+     "trecho_da_fonte": "brief l. 315: \"10a, camada 1, sem IA\" / l. 333: \"cada execução da rotina roda a segunda leitura da D-026: o validador, o auditor chamado pela ferramenta Agent e a semente da amostra gravada (se a rotina carrega `.claude/agents/`: não conferido\" / pontos l. 78: \"Vale para a `claude/` da camada 2 e para a ramificação das rotinas sem IA\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "o portão é por camada: na 1, validador e checagens por script; na 2, também o auditor e a semente, se a 10b mostrar que a rotina chama o auditor, e senão a segunda leitura numa conversa de trabalho"
+    },
+    {
+     "id": "F-19",
+     "ponto": "A-10",
+     "tipo": "chamado_fora_da_D-037",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 78 (item 2) e l. 86",
+     "fonte": "D-037 (diretriz 1 e 'substitui'); mapa-tres-frentes.md l. 40 (A-02)",
+     "o_que_esta_errado": "O padrão faz de Vicente quem junta, 'uma vez por semana'. É uma ação recorrente dele, que não está ligada ao cartão de conflito nem ao de Falta jurídica a liberar. A D-037 (1) diz 'nada mais chama Vicente'. O apoio do padrão é o A-02, que trata de uma aprovação pontual do relatório da rodada B (a tela do harness pronto, brief l. 311-312), não de junção semanal das saídas das rotinas. A saída para sustentar o padrão seria o 'substitui' ('auditoria da ferramenta'), e é uma leitura que precisa ser dita como escolha de Vicente. O 'Por quê' trata como precedente o que é caso diferente. Os rótulos também variam: 'portão da ferramenta' aqui e 'auditoria da ferramenta' na A-04, para a mesma rubrica das horas (bloco 13).",
+     "correcao_sugerida": "Dizer que juntar é uma ação semanal de Vicente fora dos dois cartões e que isso é leitura do 'substitui', para ele confirmar. Dar o mesmo rótulo às horas nas A-04 e A-10. E ligar a junção a um cartão (por exemplo 'proposta de rotina à espera de junção'), para o chamado deixar de ser avulso.",
+     "confirmado": true,
+     "como_confirmou": "Leitura literal da D-037 (diretriz 1 e 'substitui'), pontos l. 78 e l. 86, e mapa l. 40 (A-02). A interpretação (junção = chamado ou = portão da ferramenta) é de Vicente, e por isso a gravidade é media.",
+     "trecho_da_fonte": "D-037 diretriz 1: \"nada mais chama Vicente\" / pontos l. 78: \"Vicente ... pela página do GitHub, sem IDE e sem sessão, uma vez por semana\" / mapa A-02: \"A outra tela que Vicente aprova, a do relatório da rodada B (brief l. 311-312; l. 701), é portão da ferramenta e fica\"",
+     "decisao_do_curador": "aceito em parte",
+     "o_que_mudou": "a junção semanal ficou dita como ação de Vicente fora dos dois cartões, lida como auditoria da ferramenta e a confirmar por ele; o rótulo das horas é o mesmo nas A-04 e A-10. Em vez de um terceiro tipo de cartão que chame Vicente, que a D-037 (diretriz 1) não prevê, o relatório do dia lista as propostas à espera de junção"
+    },
+    {
+     "id": "F-20",
+     "ponto": "A-10",
+     "tipo": "lacuna",
+     "gravidade": "media",
+     "onde": "pontos-em-aberto.md l. 77 (item 1, 'O que não passou não entra') e brief l. 325",
+     "fonte": "brief l. 325 (commit 71dafff)",
+     "o_que_esta_errado": "Caso que o plano exige: a proposta da rotina que falha no portão. O padrão diz que 'o que não passou não entra e vira correção da ferramenta'. O brief diz que a ramificação do workflow é 'única e permanente', que 'toda execução lê e grava' (IDs vistos, cursores, reserva dos Recortes, feed). O padrão não diz o que fazer com o estado ruim que já está na ramificação e que a próxima execução vai ler: refaz? apaga? reverte? Também não diz como o item 5 (um script sem IA que junta quando o portão passa) se distingue de 'a rotina junta a própria proposta' (l. 473; insumo 3, item 3).",
+     "correcao_sugerida": "Dizer que a parte reprovada da ramificação permanente é revertida por commit (sem apagar a trilha) e a execução seguinte retoma do último estado aprovado. Dizer que o item 5, se for feito, usa uma conta ou ator diferente do que gera a proposta.",
+     "confirmado": true,
+     "como_confirmou": "git show 71dafff:brief | sed -n '314,337p' (l. 325); sed -n '71,90p' | grep -n -i 'permanente\\|descart\\|refaz\\|cartão'",
+     "trecho_da_fonte": "brief l. 325: \"grava sempre na mesma ramificação de trabalho das rotinas, única e permanente [PROPOSTA] (seção 6B), que toda execução lê e grava com o estado da coleta (IDs vistos, cursores e reserva dos Recortes, feed); Vicente a junta na revisão semanal.\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a parte reprovada da ramificação permanente é revertida por commit, com trilha, e a execução seguinte retoma do último estado que passou; caso de teste na 10a; o script de junção é outro ator, sem IA, que não gera a proposta"
+    },
+    {
+     "id": "F-21",
+     "ponto": "A-10",
+     "tipo": "lacuna",
+     "gravidade": "baixa",
+     "onde": "pontos-em-aberto.md l. 79 e l. 81",
+     "fonte": "insumos-planejamento.md (insumo 3; insumo 20); brief 6C item 3",
+     "o_que_esta_errado": "O item 3 afirma 'A rotina nunca junta a própria proposta' como regra do padrão, mas o próprio insumo 3 diz que hoje os commits da rotina saem com o usuário do dono, e que uma regra que essa conta contorna 'não barra o envio'. O padrão diz que a 10b mostra se ela se sustenta (honesto, e não é achado de fato não conferido apresentado como conferido). Mas a regra fica só por instrução, e o padrão não diz que, até a 10b, vale como instrução.",
+     "correcao_sugerida": "No item 3, dizer 'por instrução até a 10b mostrar o que a conta barra'.",
+     "confirmado": true,
+     "como_confirmou": "git show 71dafff:brief | sed -n '420,424p' (item 3); grep -n -i 'protegida\\|contorna' trilhas/insumos-planejamento.md",
+     "trecho_da_fonte": "brief 6C item 3: \"Hoje os commits da rotina saem com o usuário do GitHub conectado, que é o dono, e uma regra que essa conta contorna não barra o envio (oficial, https://code.claude.com/docs/en/routines; l. 396).\"",
+     "decisao_do_curador": "aceito",
+     "o_que_mudou": "a regra de a rotina não juntar a própria proposta vale por instrução até a 10b mostrar o que a conta barra"
+    }
+   ],
+   "conferido_sem_achado": [
+    "A-04: Fundação l. 76, 396, 667, 732, 752, 795 e 902 dizem o que o padrão cita; brief l. 193, 287, 289 e 299 e V-24 conferem. K-103 (registrar-melhoria) e K-005 existem no quadro.",
+    "A-04: nenhuma contradição com D-037 (2), D-026 ou o princípio 9. A divisão 'script primeiro, auditor só no que o script não decide' é consistente com P62 (Fundação l. 130).",
+    "A-05: l. 133, 394, 592, 624, 628, 635, 750 e 812 conferem. brief l. 259 e l. 290 conferem. avaliador.md l. 32 e extrair-evidencia l. 19 e 23 conferem. V-07 existe.",
+    "A-05: nada é descartado (princípio 10) e a saída gera Execução (acordo 4). O caminho da barreira jurídica (D-020, D-025) fica com Vicente pelo cartão de Falta a liberar, como a D-037 (1) pede.",
+    "A-05 e A-04: consistentes entre si (a amostra audita a aplicação da regra).",
+    "A-09b: D-031, D-032, D-036 e D-037 (4) conferem. l. 112-114, 455, 472, 473, 512, 605 e 733 conferem. brief l. 377 confere. registrar-termo diz 'nascendo candidato e virando atestado'. K-102 e K-113 existem. Os 4 critérios entram como campo com Evidência ou Falta, nunca recusa (l. 114 e l. 605). O padrão não pede aprovação de Vicente (item 5).",
+    "A-09b: o padrão não contradiz A-03 nem A-06; usa a leitura A-03 para a fila e diz isso.",
+    "A-10: l. 396, 473, 506, brief l. 124, 325, 328, 331 e 333 conferem e dizem o que o padrão cita. D-021 e D-026 sustentam 'Vicente, dono, única pessoa'. O item 5 (juntar sem Vicente) é dado como insumo e assinala os fatos não conferidos (token do workflow, commits do workflow na proteção do main), e não é apresentado como conferido. Insumo 20 existe em insumos-planejamento.md.",
+    "Entre os quatro padrões e as leituras A-03 e A-06: nenhuma contradição aberta além de F-01 (A-04 × A-03 sobre os 15) e F-15 (A-09 × l. 628).",
+    "Dado pessoal: não houve achado e não foi rodado o procurar_dado_pessoal.py (fora do pedido)."
+   ],
+   "log": {
+    "agente": "auditor",
+    "habilidade": "verificar-fundacao",
+    "versao_harness": "0.1.0",
+    "modelo": "claude-sonnet-5-5",
+    "esforco": "high",
+    "entrada_ref": "trilhas/planejamento/rodadas/2026-10-22_K-003/pontos-em-aberto.md (A-04, A-05, A-09 b, A-10); Fundação v0.2 por faixas; brief no commit 71dafff; decisões D-031 a D-037",
+    "acoes": [
+     "Read de pontos-em-aberto.md (97 linhas) inteiro.",
+     "Bash: sed -n por faixas da Fundação (l. 76, 107-119, 129-136, 393-396, 440-473, 495-512, 592, 605, 624-635, 664-681, 728-757, 791-797, 801-828, 900-904), gravadas em arquivo de resultado e lidas com Read por faixas.",
+     "Bash: python3 lendo trilhas/decisoes/D-031, D-032, D-034, D-036 e D-037 (campos essencia, diretriz, substitui). Para D-026, D-020 e D-025 o ls não achou arquivo (só existem D-030 a D-037).",
+     "Bash: git show 71dafff:brief-execucoes-v0.1.md com sed nas faixas l. 34, 104-128, 180-216, 251-312, 314-337, 374-377 e 420-424; grep -n '^| A-' do mapa; grep do insumos-planejamento.md.",
+     "Bash: grep -n '#### P84-P87' e P62 no Anexo A (P84 a P87 lidos).",
+     "Bash: l. 592 (fim), quadro (K-xxx), proxima-versao (V-xx), avaliador.md l. 32, extrair-evidencia l. 19 e 23, ls de scripts, registrar-termo ('candidat').",
+     "Bash: grep de confirmação de ausências no pontos-em-aberto.md (portão, publicar, não admitida, volta, sem achado, permanente), l. 200 da Fundação e frontmatter dos agentes.",
+     "Total: 11 chamadas de ferramenta antes do StructuredOutput (teto 20); sem web."
+    ],
+    "resultados": [
+     "A-04: sustenta (true); 7 achados (F-01 a F-07): 3 media (F-01, F-02, F-03), 1 media lacuna (F-07), 3 baixa.",
+     "A-05: sustenta (true); 6 achados (F-08 a F-13): 4 media, 2 baixa (F-13 com confirmado=false).",
+     "A-09 b: sustenta (true); 4 achados (F-14 a F-17): 2 media, 2 baixa.",
+     "A-10: não sustenta (false); 4 achados (F-18 a F-21): 1 alta (F-18), 2 media (F-19, F-20), 1 baixa. Total 21 achados; 20 confirmados e 1 não confirmado (F-13).",
+     "Nenhuma contradição direta com D-016 a D-037 ou com texto [VIGENTE] foi provada, exceto a tensão do item F-19 (D-037, diretriz 1), que é leitura de Vicente.",
+     "Âncoras citadas nos 'Por quê' conferidas linha a linha; a única que não diz o que o padrão atribui é a brief l. 110 (F-05)."
+    ],
+    "decisoes": [
+     {
+      "item": "F-01 a F-12, F-14 a F-21",
+      "decisao": "aceito",
+      "motivo": "Confirmados por sed, grep ou git show, com a linha e o trecho literal da fonte."
+     },
+     {
+      "item": "F-13 (caminho da calibração da escala até Vicente)",
+      "decisao": "descartado",
+      "motivo": "Sem prova de contradição: a calibração não é chamado da operação. Fica registrado como confirmado=false, só como lacuna de texto."
+     },
+     {
+      "item": "Decisões D-016 a D-029 em trilhas/decisoes/*.json",
+      "decisao": "falta",
+      "motivo": "Só existem os JSON de D-030 a D-037. As decisões anteriores foram lidas pelas linhas da Fundação e do AGENTS.md, não pelo JSON (essencia, diretriz, substitui)."
+     },
+     {
+      "item": "Fundação l. 200 (parcial), l. 376 e l. 861; l. 832-865 e 584-641 (só l. 592, 605, 624-635)",
+      "decisao": "falta",
+      "motivo": "Fora do teto de leitura ou não necessárias para o argumento. Âncoras de l. 376 e l. 861 do A-04 não conferidas uma a uma. l. 200 lida."
+     },
+     {
+      "item": "Conferência na web (permissões do token do workflow, commits do workflow na proteção do main, se a rotina carrega .claude/agents/)",
+      "decisao": "falta",
+      "motivo": "O pedido veda web; o padrão A-10 já os marca como não conferidos, e o auditor também não os confere."
+     }
+    ],
+    "duracao_s": null,
+    "erros": [
+     "Um laço de Python que lê D-026, D-020 e D-025 falhou (ls sem arquivo) e saiu com código 1. Não afetou os demais, e as outras decisões foram lidas.",
+     "Duas saídas passaram do limite e foram lidas por Read nos arquivos de resultado (Fundação e brief). A faixa do brief l. 104-128 foi cortada a 700 colunas por linha e a da Fundação a 900."
+    ],
+    "alcance": {
+     "olhado": [
+      "pontos-em-aberto.md, l. 1-97 (todos os quatro padrões, 'Por quê', 'O que muda', 'Aonde se quer chegar' e o fecho A-03 e A-06).",
+      "Fundação: l. 76, 107-119, 129-136, 393-396, 440-473, 495-512, 592, 605, 624-635, 664-681, 728-757, 791-797, 801-828, 900-904 e, depois, l. 200 e 628.",
+      "Anexo A: P84 a P87 (texto) e P62 (só o cabeçalho).",
+      "Decisões D-031, D-032, D-034, D-036, D-037 (JSON).",
+      "Brief no commit 71dafff: l. 34, 104-128, 180-216, 251-312, 314-337, 374-377 e 420-424.",
+      "Mapa das três frentes: tabela de atritos (A-01 a A-13).",
+      "quadro.md (K-002, 004, 005, 006, 008, 010, 101, 102, 103, 113, 116, 117); proxima-versao.md (V-06, 07, 09, 12, 14, 16, 21, 24); insumos-planejamento.md (cabeçalhos e insumos 3 e 20).",
+      "avaliador.md l. 32; extrair-evidencia/SKILL.md l. 19 e 23; registrar-termo/SKILL.md; frontmatter de auditor, avaliador, arquivista e juridico."
+     ],
+     "fora": [
+      "Fundação inteira (só faixas), Anexos B a E e o resto do Anexo A.",
+      "D-016 a D-029 e D-033 e D-035 em JSON (D-016 a D-029 não existem em trilhas/decisoes; D-033 e D-035 não foram lidos por fora do teto).",
+      "Fundação l. 584-641 inteira, l. 832-865, l. 376 e l. 861, e o brief fora das faixas pedidas.",
+      "Web (vedada), scripts de validação (checar_fundacao, comparar_anexos, procurar_dado_pessoal) e os scripts futuros localizar_trecho.py, validar_acervo.py e sortear_amostra.py, que ainda não existem em scripts/."
+     ]
+    }
+   }
+  }
+ },
+ "resumo": {
+  "achados": 27,
+  "aceitos": 25,
+  "aceitos_em_parte": 2,
+  "descartados": 0,
+  "veredito_dos_padroes_antes_das_correcoes": {
+   "A-04": true,
+   "A-05": true,
+   "A-09b": true,
+   "A-10": false
+  },
+  "segunda_verificacao": "não houve: depois do lote, a folga (85.996) é menor que 2x o lote medido (D-023, regra 2); as correções passaram de novo pela checagem sem IA"
+ }
+}

@@ -2,7 +2,7 @@
 
 **Cartão:** K-001, "Reunir tudo nas três frentes" (D-036). **Frente:** planejamento de melhorias.
 **Pedido de Vicente (fala original, para a trilha):** "Rodada de planejamento de melhorias: cartão K-001 de trilhas/planejamento/quadro.md. Siga trilhas/planejamento/estado-planejamento.md (kit de leitura, teto de 300 mil tokens de agentes, essência e não transcrição). Opus 5.5, esforço máximo, thinking. Uso atual:4%."
-**Sessão:** `claude-opus-5-5` (conferido), esforço máximo, thinking e ultracode (`estado-planejamento.md`, passo 1). **Uso da conta:** 4% no início, informado por Vicente; no fim, a informar.
+**Sessão:** `claude-opus-5-5` (conferido), esforço máximo, thinking e ultracode (`estado-planejamento.md`, passo 1). **Uso da conta:** 4% no início, informado por Vicente; no fim, 12%, informado por Vicente em 22/10/2026 ao abrir a rodada K-003, como resposta ao pedido deste relatório. Nenhuma sessão está registrada entre o fim do K-001 e essa leitura; se a janela de uso renovou nesse intervalo, não está registrado.
 
 ## Entregas
 
@@ -76,7 +76,7 @@ O que cada auditor conferiu e achou certo está em `verificacao.json` (`conferid
 - **Dentro do teto, pelo número oficial:** 299.042 de 300.000, com 958 de folga. Nenhum agente pode mais rodar nesta rodada.
 - **Desvio do curador na estimativa:** usei a referência genérica do `AGENTS.md` (60 mil por agente Sonnet). O brief (l. 40) manda usar a última medida do mesmo agente com a mesma habilidade: o auditor mediu 76.771, 111.575 e 108.754 nas passadas da v0.2. Com essa estimativa (cerca de 300 mil para três), a conta daria PARAR, e o lote teria de ser menor. O lote veio 49% acima do estimado.
 - **As duas contas não batem:** o número do workflow (267.700) soma o contexto de entrada do último turno de cada agente e deixa de fora a saída desse turno. Pelo contexto final de cada auditor no transcript (100.038, 119.616 e 109.794), o lote daria 329.448, e a rodada, cerca de 361 mil, acima do teto. É estimativa pelo transcript, não número oficial, e vai como insumo 15.
-- **Sessão principal:** fora da soma, como manda a regra; a medida é o uso da conta que Vicente lê (4% no início).
+- **Sessão principal:** fora da soma, como manda a regra; a medida é o uso da conta que Vicente lê: 4% no início e 12% no fim (leitura de 22/10, ao abrir o K-003). Os 8 pontos de diferença são a medida da conta para a rodada só se não houve outro uso nem renovação da janela entre as duas leituras, o que não está registrado.
 
 ## Insumos novos (15 a 19, em `trilhas/insumos-planejamento.md`)
 
