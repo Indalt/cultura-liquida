@@ -27,8 +27,7 @@ Lógica kanban: **A fazer → Fazendo → Concluído**. Cada sessão pega **um**
 
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
-| A fazer | **K-103** Habilidade `registrar-melhoria`. *Primeiro cartão do desenvolvimento* | D-036; insumo 10; P36 | toda sessão e toda rotina anota insumos num formato fixo |
-| A fazer | **K-101** Bloco 1 do brief: harness e operação. *Depois do K-103 (o K-003 foi concluído em 22/10); aguarda a autorização de Vicente* | brief, bloco 1 | o harness pronto para a coleta do piloto: `rodar_testes.py` sem FALHA; log sem alcance reprovando; versões 0.1.1 com Histórico; numa conversa nova, a ferramenta Agent lista avaliador, arquivista e campo-de-acao |
+| A fazer | **K-101** Bloco 1 do brief: harness e operação. *Depois do K-103 (o K-003 e o K-103 foram concluídos em 22/10); aguarda a autorização de Vicente* | brief, bloco 1 | o harness pronto para a coleta do piloto: `rodar_testes.py` sem FALHA; log sem alcance reprovando; versões 0.1.1 com Histórico; numa conversa nova, a ferramenta Agent lista avaliador, arquivista e campo-de-acao |
 | A fazer | **K-104** Bloco 2: contratos do §6 e valores provisórios. *Conversa nova, para os agentes da rodada B carregarem.* Parada (c), antes do K-109: lugar da tabela código → nome; padrão: uma pasta na máquina de Vicente, fora da pasta versionada | brief, bloco 2 | cada esquema com um exemplo que passa e um que reprova; os 4 casos do rastreador fora de PENDENTE e um caso que reprova por habilidade; o registro único de valores provisórios |
 | A fazer | **K-105** Bloco 3: scripts do núcleo | brief, bloco 3 | cada script com caso que passa e que reprova; o pre-commit rodando; os 69 ambientes semeados |
 | A fazer | **K-106** Bloco 4: fichas de acesso, Termos e Consultas do caju | brief, bloco 4 | fichas, Termos e Consultas válidos; a tradução de cada Consulta testada e datada |
@@ -49,6 +48,7 @@ Lógica kanban: **A fazer → Fazendo → Concluído**. Cada sessão pega **um**
 | A fazer | **K-120** Passo 8: ilustrações técnicas (dono a definir) | §7, Passo 8; insumo 3, item 6 | cada ilustração com a origem dita, conferida contra a ficha |
 | A fazer | **K-121** Passo 9: campo de ação além do kit (planejador de aulas, guia do IPHAN, cartilha), sob demanda | §7, Passo 9; D-005, D-006, D-007 | um pedido real vira rascunho com fontes, revisado |
 | A fazer | **K-122** Fase 2: o que o §7 deixa para ela (mutirão, bola de neve, relatório do funil, Wikidata, fichas das demais fontes, mapa e território, outros grupos e ferramentas, exportações SKOS, TBX e PROV). *Depois do K-007* | §7, l. 674 | a detalhar quando o gatilho abrir |
+| Concluído (22/10/2026) | **K-103** Habilidade `registrar-melhoria`. *Primeiro cartão do desenvolvimento* | D-036; insumo 10; P36 | toda sessão e toda rotina anota insumos num formato fixo: a habilidade `registrar-melhoria` 0.1.0, o esquema `esquemas/insumo.schema.json` e o script sem IA `scripts/registrar_melhoria.py`, com 5 casos OK; primeiro uso real, o insumo 27 (vai ao K-101) |
 | Concluído | **K-100** Bloco 0: plano em dia (18/10/2026) | brief, bloco 0 | D-033 a D-035 registradas; checklist do piloto; insumos para o planejamento |
 
 ## Operação

@@ -1,0 +1,13 @@
+{
+  "data": "2026-10-22",
+  "origem": "caso de teste da registrar-melhoria: o texto do insumo 26 repetido",
+  "insumo": "a D-039 desdobra o termo ambíguo em mais de uma CLB, e o modelo do Termo já separa conceito, designações e variantes (Fundação, l. 613; habilidade registrar-termo); mas a registrar-termo não tem passo nem caso para a designação que nomeia mais de um conceito (o passo 1 só procura o conceito existente), e a montar-ficha não diz a que conceito a ficha se liga; no piloto, a cajuína não é ambígua até agora",
+  "aonde": "o desdobramento de um termo ambíguo pela regra, a partir das abonações, com trilha e sem julgar a prática; cartões K-110 (Termos e ficha do bloco 8) e K-111 (o caso que passa e o que reprova)",
+  "rotulo": "o insumo 26 repetido (caso de teste)",
+  "frente": [
+    "D",
+    "P"
+  ],
+  "vira": "K-110",
+  "sem_explorar": true
+}

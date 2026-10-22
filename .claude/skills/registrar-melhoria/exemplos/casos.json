@@ -1,0 +1,24 @@
+{
+  "habilidade": "registrar-melhoria",
+  "rodada": "A",
+  "casos": [
+    {"nome": "insumo 22 no formato fixo", "espera": "passa", "esquema": "insumo",
+     "entrada": ".claude/skills/registrar-melhoria/exemplos/insumo-22-no-formato.json",
+     "criterio": "data, origem por apontamento, insumo, aonde se quer chegar, frente, cartão proposto e sem explorar"},
+    {"nome": "insumo explorado na sessão e com campo inventado", "espera": "reprova", "esquema": "insumo",
+     "entrada": ".claude/skills/registrar-melhoria/exemplos/erro-explorado-e-campo-inventado.json",
+     "criterio": "o que surge não se explora (D-035) e o formato é fixo: campo fora da lista não entra (insumo 5)"},
+    {"nome": "o script daria o número seguinte e as duas linhas", "espera": "passa",
+     "comando": ["scripts/registrar_melhoria.py", ".claude/skills/registrar-melhoria/exemplos/insumo-22-no-formato.json", "--simular"],
+     "saida_contem": "PASSA (simulação, nada gravado)",
+     "criterio": "a tabela de insumos e a seção 6 do mapa em sincronia; nada gravado"},
+    {"nome": "texto de insumo já anotado é recusado", "espera": "reprova",
+     "comando": ["scripts/registrar_melhoria.py", ".claude/skills/registrar-melhoria/exemplos/erro-repetido.json", "--simular"],
+     "saida_contem": "já está anotado",
+     "criterio": "o mesmo insumo não entra duas vezes"},
+    {"nome": "insumo com e-mail de terceiro é recusado", "espera": "reprova",
+     "comando": ["scripts/registrar_melhoria.py", ".claude/skills/registrar-melhoria/exemplos/erro-dado-pessoal.json", "--simular"],
+     "saida_contem": "dado pessoal de terceiros",
+     "criterio": "nada de dado pessoal de terceiros no Git (D-021)"}
+  ]
+}

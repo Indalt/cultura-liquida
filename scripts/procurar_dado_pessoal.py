@@ -58,6 +58,7 @@ PADROES = [
 # Só a varredura de arquivos os pula; a função achar() (usada pelo registrar_log.py) continua acusando.
 FIXTURES_COM_DADO_FICTICIO = {
     ".claude/skills/executar-brief/exemplos/erro-log-com-email.json",
+    ".claude/skills/registrar-melhoria/exemplos/erro-dado-pessoal.json",
 }
 
 EXT_ARQUIVO = re.compile(r"\.(md|json|jsonl|py|txt|csv|yml|yaml|html)$", re.I)

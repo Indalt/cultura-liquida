@@ -44,12 +44,23 @@
 - **Pronto quando** (ajustado pela D-035): as decisões D-033 a D-035 validam; `checar_fundacao.py` passa na v0.2 (0 achados); Anexos A e B intactos; commit e push feitos. Sem agente neste bloco: consumo 0.
 - **Próximo:** bloco 1 (harness e operação), quando Vicente autorizar. A semana de 12 a 18/10 está fechada para agentes; o bloco 1 usa o auditor, então começa na semana de 19/10.
 
+## Conversa do cartão K-103 — 22/10/2026 (quarta)
+
+- **Autorização de Vicente:** cartão K-103 (habilidade registrar-melhoria), pela retomada do brief; Opus 5.5, esforço médio; uso da conta informado: 29% no início.
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (51ceee8), árvore limpa; quadro e estado do planejamento lidos; cartão movido para Fazendo e, no fim, para Concluído.
+- **Feito:** `.claude/skills/registrar-melhoria/` 0.1.0 (SKILL.md e 5 casos em `exemplos/`); `esquemas/insumo.schema.json` (formato fixo: data, origem, insumo, aonde, rótulo, frente, cartão proposto, `sem_explorar: true`, nenhum campo a mais); `scripts/registrar_melhoria.py` (sem IA: valida, recusa dado pessoal, texto repetido, `|` ou quebra de linha e a lista fora de sincronia com o mapa; dá o número e grava a linha em `trilhas/insumos-planejamento.md` e na seção 6 do mapa); o fixture com e-mail fictício na lista de `procurar_dado_pessoal.py`.
+- **Testes:** `rodar_testes.py` dá OK 32 · FALHA 0 · PENDENTE 9 (eram 27 OK; os 5 novos são da registrar-melhoria). A gravação real foi testada antes em cópias no scratchpad (uma linha a mais em cada arquivo, fim de linha preservado).
+- **Primeiro uso real:** insumo 27 (o `curador.md` e o `executar-brief` ainda sem a registrar-melhoria; vai ao K-101, que versiona os dois).
+- **Não feito:** verificação independente pelo auditor (nenhum agente nesta conversa); a ligação no `executar-brief` e no `curador.md`, que é do K-101.
+- **Consumo:** 0 tokens de agentes.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
 |---|---|---|---|---|
 | 12–18/10 | lotes da v0.2 e da rodada de planejamento (ver acima) | 3.352.741 | — | 3.352.741 |
 | 12–18/10 | bloco 0, conversa 1 | 0 (nenhum agente) | — | 3.352.741 |
+| 19–25/10 | K-103, desenvolvimento (os agentes do K-001 e do K-003 estão no estado do planejamento) | 0 (nenhum agente) | — | 0 |
 
 ## Horas de Vicente e uso da conta (bloco 13; medição desde o bloco 6)
 

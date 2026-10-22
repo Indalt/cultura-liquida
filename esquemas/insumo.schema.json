@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "insumo.schema.json",
+  "title": "Insumo para o planejamento de melhorias",
+  "description": "Saída da habilidade registrar-melhoria (K-103; D-035, D-036; insumo 10; P36). Um insumo é o que surgiu numa sessão ou numa rotina e não se explora ali: anota-se, com data, origem por apontamento e aonde se quer chegar, e vai ao planejamento. O número é dado por scripts/registrar_melhoria.py, que grava a linha em trilhas/insumos-planejamento.md e no mapa das três frentes (seção 6). Quem anota propõe o cartão; o planejamento confirma.",
+  "type": "object",
+  "required": ["data", "origem", "insumo", "aonde", "rotulo", "frente", "vira", "sem_explorar"],
+  "additionalProperties": false,
+  "properties": {
+    "data": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "origem": {"type": "string", "minLength": 10, "description": "Onde o insumo nasceu, por apontamento: cartão ou rotina, e arquivo com linha ou seção, achado ou commit. Nunca a transcrição de uma fala."},
+    "insumo": {"type": "string", "minLength": 20, "description": "O que se viu, dito sem explorar e sem propor a solução como decidida."},
+    "aonde": {"type": "string", "minLength": 10, "description": "Aonde se quer chegar (o resultado, não o caminho)."},
+    "rotulo": {"type": "string", "minLength": 5, "description": "Nome curto do insumo para a seção 6 do mapa das três frentes."},
+    "frente": {
+      "type": "array", "minItems": 1,
+      "items": {"enum": ["P", "D", "O"]},
+      "description": "Frente(s) que o insumo toca (D-036): P = planejamento, D = desenvolvimento, O = operação."
+    },
+    "vira": {"type": "string", "pattern": "(K-[0-9]{3}|V-[0-9]{2}|a definir pelo planejamento)", "description": "Cartão do quadro ou item de proxima-versao.md que o leva, proposto por quem anota; ou 'a definir pelo planejamento'."},
+    "sem_explorar": {"const": true, "description": "O insumo foi anotado e não explorado na sessão ou na rotina (D-035)."}
+  }
+}

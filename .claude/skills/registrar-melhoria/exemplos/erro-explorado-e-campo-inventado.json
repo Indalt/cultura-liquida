@@ -1,0 +1,11 @@
+{
+  "data": "2026-10-22",
+  "origem": "rodada K-003, checagem mecânica (rodadas/2026-10-21_K-001/checar_mapa.py)",
+  "insumo": "o script do planejamento que confere o mapa lê a seção 6A do brief por linhas fixas",
+  "aonde": "o script acha as seções pelo título",
+  "rotulo": "script do mapa por linhas fixas",
+  "frente": ["P"],
+  "vira": "K-006",
+  "sem_explorar": false,
+  "solucao_aplicada": "o script foi reescrito na mesma sessão para achar a 6A pelo título"
+}
