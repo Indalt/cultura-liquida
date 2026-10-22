@@ -1,0 +1,25 @@
+{
+  "id": "D-036",
+  "data": "2026-10-21",
+  "essencia": "O projeto se organiza em três frentes. (1) Planejamento de melhorias: função contínua, exercida por sessões curtas e periódicas que leem a memória do planejamento em arquivos (trilhas/planejamento/, insumos, decisões, Fundação), em vez de depender da memória de uma conversa; tem ferramentas e teto de custo próprios. (2) Desenvolvimento: sessões na IDE, uma tarefa por vez, para construir e corrigir a ferramenta. (3) Operação: a ferramenta trabalha sem depender de sessões (coleta, recebe, organiza, gera grafos e propõe por rotinas e automações), e Vicente acompanha sem precisar da IDE. As três frentes seguem a lógica kanban (A fazer, Fazendo, Concluído): cada sessão leva um cartão até Concluído, e na operação os agentes movem os cartões. Na fase 2, o quadro pode servir de porta para quem quiser contribuir.",
+  "diretriz": "(1) O quadro fica em trilhas/planejamento/quadro.md até o cartão K-001 decidir se ele migra para as Issues e o Projects do GitHub. (2) Toda sessão começa pelo quadro e por trilhas/planejamento/estado-planejamento.md, pega um cartão, move-o para Fazendo e termina movendo-o, com log, insumos novos, commit e push. (3) As rodadas de planejamento acontecem por acúmulo de insumos ou por calendário, com teto próprio (insumo 13); provisoriamente, 300 mil tokens de agentes por rodada. (4) A operação sem sessão depende do Bloco 10 do brief de execuções e da escolha da IA da operação (insumo 12). (5) Reunir tudo o que já existe nas três frentes é o cartão K-001.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-21",
+  "fala_original_ref": "trilhas/planejamento/estado-planejamento.md, seção 'Falas originais (20 e 21/10/2026)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "sessão de melhoramento constante",
+      "sentido_confirmado": "uma função contínua, exercida por sessões curtas e periódicas que leem arquivos; não uma conversa contínua, que enche, se resume e encarece a cada turno"
+    },
+    {
+      "palavra": "a execução e o trabalho da ferramenta não dependam das sessões",
+      "sentido_confirmado": "a operação roda por rotinas e automações; sessões na IDE só para desenvolver e planejar"
+    },
+    {
+      "palavra": "lógica kanban",
+      "sentido_confirmado": "A fazer, Fazendo, Concluído, nas três frentes; uma sessão leva um cartão até Concluído"
+    }
+  ],
+  "substitui": "Complementa a D-035 (uma tarefa por vez): a tarefa passa a ser um cartão do quadro.",
+  "marcador": "VIGENTE"
+}

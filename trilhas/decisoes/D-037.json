@@ -1,0 +1,25 @@
+{
+  "id": "D-037",
+  "data": "2026-10-21",
+  "essencia": "É uma base de conhecimento, e ela não passa por revisão de rotina. A revisão humana só acontece quando uma das dimensões acusa conflito sobre o que está na base (uma proposição em tensão) ou quando uma Falta jurídica pede liberação; isso faz parte da trilha de melhorias da aplicação. A amostra sorteada passa a auditar a ferramenta, não a base. Quem olha a base pode sugerir CLB novas ou mais conhecimento sobre uma CLB: pesquisadores, produtores, indústrias, quem convive com as comunidades, as próprias comunidades e seus membros, associações. As buscas e escavações também percebem essas sugestões. As diretrizes de admissão seguem valendo (contra o revisionismo, contra a história de uma pessoa só, contra CLB sem lastro histórico, cultural ou antropológico), com a ressalva de que o relato de uma pessoa pode testemunhar outras CLB sem querer. Um script simples, sem IA, checa essas menções incidentais durante o processamento normal de cada CLB, sem prioridade.",
+  "diretriz": "(1) Revisão por conflito: o estado 'em tensão' de uma proposição ou uma Falta jurídica a liberar abre um cartão na frente de operação; nada mais chama Vicente. (2) A amostra sorteada audita a ferramenta (harness, validadores, agentes), na trilha de melhorias, e não revisa a base. (3) As sugestões de pessoas entram na fase 2, pelo quadro e pelos formulários, com as diretrizes de admissão e a triagem jurídica; as sugestões que as buscas percebem entram pelo fluxo normal. (4) Script de menções incidentais: compara o texto processado com o registro de Termos; a menção a outra CLB vira ligação no grafo e, se a CLB ainda não estiver registrada, um cartão de baixa prioridade em A fazer. Exemplo que ilustra e não limita: o mocororó, que aparece como suco do caju na história da cajuína e é também uma CLB.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-21",
+  "fala_original_ref": "trilhas/planejamento/estado-planejamento.md, seção 'Falas originais (20 e 21/10/2026)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "revisão",
+      "sentido_confirmado": "só quando uma dimensão acusa conflito, ou quando uma Falta jurídica pede liberação; não há revisão de rotina da base"
+    },
+    {
+      "palavra": "amostra sorteada",
+      "sentido_confirmado": "auditoria da ferramenta, não da base (leitura proposta em 20/10 e aprovada com 'podemos seguir' em 21/10)"
+    },
+    {
+      "palavra": "um script com roteiro simples de checagem",
+      "sentido_confirmado": "sem IA, durante o processamento normal de cada CLB, sem prioridade"
+    }
+  ],
+  "substitui": "Ajusta o papel da cota humana semanal (P84; v0.2, §11): ela passa a servir a conflitos, Faltas a liberar e auditoria da ferramenta, não à revisão de rotina da base.",
+  "marcador": "VIGENTE"
+}
