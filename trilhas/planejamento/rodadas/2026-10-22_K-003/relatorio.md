@@ -54,6 +54,30 @@ O auditor B não refutou os padrões A-04, A-05 e A-09 (b), e refutou o A-10 com
 
 O que cada auditor conferiu e achou certo está em `verificacao.json` (`conferido_sem_achado`: 8 e 10 itens). **Nenhuma segunda verificação das correções:** depois do lote, a folga (85.996) é menor que 2× o lote medido (D-023, regra 2). As correções aplicam achados confirmados e passaram de novo pela checagem sem IA.
 
+## Releitura do brief, a pedido de Vicente ("Ficou algo ambíguo no brief?")
+
+Feita pela sessão principal, sem agente: depois do lote de verificação, a folga da rodada (85.996) é menor que 2× o lote medido (D-023, regra 2). É releitura de quem escreveu, não verificação independente. O brief foi lido inteiro.
+
+**Corrigido no brief, sem mudar o sentido (o plano responde):**
+- o quadro de ajustes dizia que tudo vale "depois da aprovação" e, no fim, que só os padrões esperam por ela: agora diz que as leituras dadas valem pelas decisões (D-034) e os padrões e as leituras propostas, com a aprovação, e que até ela nenhum cartão do desenvolvimento começa;
+- "frentes" tinha dois sentidos: na retomada, na prioridade da seção 3a e no `relatorio_dia.py`, eram as frentes de trabalho da l. 512 (a CLB do piloto, os vácuos por região e período), e não as três frentes da D-036; agora está dito;
+- a regra de valências com versão nova refaz a triagem só do que está em quarentena; o que já entrou só volta à triagem nos gatilhos da l. 592;
+- "o que falha no portão é revertido": vale só para a ramificação permanente das rotinas sem IA; na camada 2, a proposta que falha só não entra;
+- "teto de 15" ao lado de "15 itens" (blocos 7 e 8) virou "teto de 15 chamadas";
+- a fila passa de uma semana quando há mais de 15 cartões à espera (estoque, não ritmo);
+- "a saída é proposta": nas conversas, a saída que o curador valida e grava; nas rotinas, a ramificação;
+- o script de menções lê o texto que o processamento leu, e não só os Trechos, durante o lote;
+- "por acaso", na CLB nova do piloto, confundia-se com a menção incidental;
+- "valor provisório novo (D-034)": a D-034 cobre só os [PROPOSTA] da Fundação, e esses valores valem com a aprovação;
+- a amostra semanal da operação roda onde roda a segunda leitura das rotinas;
+- "15 itens por amostra, ou todos se forem menos", no lugar de "até 15", que deixava o tamanho sem piso (o único ajuste que fecha uma margem; continua padrão a aprovar);
+- na seção 3a, "o que precisa de Vicente vira cartão" passou a falar só do conteúdo do lote, e as paradas da seção 0 seguem como estão;
+- a precedência (cabeçalho e 6A) ainda falava da v0.2.1 e de registro pendente no bloco 0; a parada do bloco 14 era do K-004; "que junta o que a amostra achou" misturava "juntar" e "junção".
+
+**Pontos de conteúdo que o plano não resolve sozinho** (o texto inteiro, com a leitura proposta, em `pontos-em-aberto.md`, seção da releitura): o que Vicente faz num cartão de conflito; se tudo o que sustenta aviso, saúde ou política passa pelo auditor ou só o que cai na amostra; qual é a cajuína do piloto (a CLB situada); e o kit diante da regra do campo-de-acao sem a v0.2.1 (insumo 25). Mais o cartão do tratamento com IA entre o piloto e o K-113 (insumo 24, para o K-002). O brief marca cada um no lugar.
+
+A checagem sem IA passou a cobrar essas correções e passa no estado atual; no commit 71dafff, reprova.
+
 ## Consumo de agentes (teto da rodada: 300 mil tokens, D-036)
 
 | Lote | Agentes | Estimativa | `orcamento.py` antes | Medido (número da ferramenta) | Chamadas |
@@ -67,9 +91,9 @@ O que cada auditor conferiu e achou certo está em `verificacao.json` (`conferid
 - **Sessão principal:** fora da soma, como manda a regra; a medida é o uso da conta que Vicente lê (12% no início).
 - **Incidente:** um comando da sessão principal, que gravava e apagava um arquivo temporário na raiz do disco, foi barrado pela proteção do harness e não rodou; a checagem foi refeita gravando na pasta temporária da sessão.
 
-## Insumos novos (20 a 23, em `trilhas/insumos-planejamento.md`)
+## Insumos novos (20 a 25, em `trilhas/insumos-planejamento.md`)
 
-20 · juntar a proposta da rotina sem Vicente, por script sem IA (K-002, K-113) · 21 · o alcance do script de menções é o registro de Termos (K-102, K-117) · 22 · `checar_mapa.py` lê a 6A do brief por linhas fixas e hoje passa sem olhar nada nessa checagem (K-006) · 23 · o auditor da amostra usa o mesmo modelo dos agentes que produzem (K-115; V-24).
+20 · juntar a proposta da rotina sem Vicente, por script sem IA (K-002, K-113) · 21 · o alcance do script de menções é o registro de Termos (K-102, K-117) · 22 · `checar_mapa.py` lê a 6A do brief por linhas fixas e hoje passa sem olhar nada nessa checagem (K-006) · 23 · o auditor da amostra usa o mesmo modelo dos agentes que produzem (K-115; V-24) · 24 · o cartão do tratamento com IA entre o piloto e o K-113 (K-002) · 25 · o kit e a regra do campo-de-acao sobre Falta jurídica aberta, sem a v0.2.1 (K-114).
 
 ## Alcance
 

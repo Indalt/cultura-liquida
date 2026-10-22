@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 23 (os 15 a 19 nasceram no K-001; os 20 a 23, no K-003)
+## 6. Insumos 1 a 25 (os 15 a 19 nasceram no K-001; os 20 a 25, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -357,6 +357,8 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 21, o alcance do script de menções é o registro de Termos (K-003) | D; P | K-102, K-117 |
 | 22, `checar_mapa.py` lê a 6A do brief por linhas fixas (K-003) | P (ferramenta do planejamento); D (construir) | K-006 |
 | 23, o auditor da amostra usa o mesmo modelo dos agentes que produzem (K-003) | P; D (bloco 12) | K-115; V-24 |
+| 24, o cartão do tratamento com IA entre o piloto e o K-113 (K-003) | P; O | K-002 |
+| 25, o kit e a regra do campo-de-acao sobre Falta jurídica aberta, sem a v0.2.1 (K-003) | P; D (bloco 11) | K-114 |
 
 ## 7. Decisões D-001 a D-037
 

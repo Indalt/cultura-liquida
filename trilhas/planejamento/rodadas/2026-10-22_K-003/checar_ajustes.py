@@ -57,6 +57,22 @@ def main() -> int:
         # achados da verificação do K-003 (AUD-K003-01 e 02): regras que o texto tinha criado sem âncora
         ("não conta na fila até lá", None),
         ("ele confere a nossa leitura das Evidências em tensão", None),
+        # releitura de 22/10: ambiguidades de redação corrigidas
+        ("Prioridade entre frentes**", None),
+        ("relatório calculado das frentes (l. 512)", None),
+        ("o relatório calculado das frentes e do dia", None),
+        ("a traz por acaso", None),
+        ("até 15 itens por amostra", None),
+        ("o que falha no portão é revertido com trilha", None),
+        ("valor provisório novo (D-034)", None),
+        ("que junta o que a amostra achou", None),
+        ("uma semana de curadoria são até 15", None),
+        ("uma semana de curadoria = até 15", None),
+        ("depois da aprovação de Vicente.**", None),
+        ("só até a v0.2.1, muda o plano", None),
+        ("D-034 ou decisão própria (pendente)", None),
+        ("Vicente aprova a v0.3 (acordo 5). Sem a aprovação, valem a v0.2.1", None),
+        ("teto de 15; padrão proposto A-04", None),
     ]
     for n, linha in enumerate(brief.splitlines(), 1):
         for expr, permitido_se in proibidas:
@@ -70,6 +86,12 @@ def main() -> int:
     for a in ["A-01", "A-02", "A-03", "A-04", "A-05", "A-06", "A-07", "A-08", "A-09", "A-10", "A-11", "A-13"]:
         if ajustes and a not in ajustes:
             problemas.append(f"quadro de ajustes sem o {a}")
+    # o quadro diz uma regra só para o que vale quando, e marca os pontos levados a Vicente (releitura de 22/10)
+    for t in ["O que vale quando", "commit 71dafff", "ponto levado a Vicente no K-003"]:
+        if ajustes and t not in ajustes:
+            problemas.append(f"quadro de ajustes sem '{t}'")
+    if brief.count("ponto levado a Vicente no K-003") + brief.count("ponto levado a ele no K-003") < 4:
+        problemas.append("o brief não marca os quatro pontos da releitura levados a Vicente")
     s2 = secao(brief, "## 2. Decisões vigentes", "## 3.")
     for d in range(15, 38):
         if not re.search(rf"^\| D-0{d} \|", s2, re.M):
