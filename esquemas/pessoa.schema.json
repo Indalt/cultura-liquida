@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pessoa.schema.json",
+  "title": "Pessoa e papéis",
+  "description": "Pessoa do §6 (l. 615): no Git, só o código opaco e os papéis; a tabela código → nome fica fora da pasta versionada (valores-provisorios: tabela_codigo_nome). Nenhum campo de nome, contato ou perfil (additionalProperties: false). Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "codigo",
+    "papeis",
+    "forma_atribuicao",
+    "nivel_colaborador",
+    "consentimento",
+    "origem_registro"
+  ],
+  "properties": {
+    "codigo": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/P"
+    },
+    "papeis": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "contribuinte",
+          "detentor ou mestre",
+          "quem ensinou",
+          "quem fala no trecho",
+          "mediador",
+          "comunidade, coletivo ou sujeito de direitos",
+          "colaborador do projeto",
+          "autor de fonte",
+          "outro"
+        ]
+      }
+    },
+    "forma_atribuicao": {
+      "enum": [
+        "nome",
+        "pseudônimo",
+        "anônimo",
+        "coletivo"
+      ]
+    },
+    "nivel_colaborador": {
+      "enum": [
+        "anônimo",
+        "identificado"
+      ]
+    },
+    "consentimento": {
+      "type": "string",
+      "minLength": 1,
+      "description": "só a referência ao termo, fora do Git, ou 'não se aplica' (autor de obra publicada)"
+    },
+    "declaracao_interesse": {
+      "type": "string"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  }
+}

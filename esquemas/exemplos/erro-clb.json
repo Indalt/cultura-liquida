@@ -1,0 +1,46 @@
+{
+  "id": "CL-900001",
+  "termo": "TE-900001",
+  "termos": [
+    "TE-900001"
+  ],
+  "situacoes": [
+    {
+      "lugares": [
+        "LU-900001"
+      ],
+      "periodo": "registro de 2014 a revalidação de 2025",
+      "evidencias": [
+        "EV-900001"
+      ]
+    }
+  ],
+  "criterios": {
+    "identidade_ou_memoria": {},
+    "reconhecimento_pelo_grupo": {
+      "falta": "F-900003"
+    },
+    "transmissao_entre_geracoes": {
+      "falta": "F-900003"
+    },
+    "recriacao": {
+      "falta": "F-900003"
+    }
+  },
+  "estado": "admitida",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "caso que reprova: critério recusado em vez de Falta",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

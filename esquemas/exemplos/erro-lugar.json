@@ -1,0 +1,20 @@
+{
+  "id": "LU-900001",
+  "nivel": "território tradicional",
+  "nome_na_fonte": "Piauí",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "caso que reprova: território tradicional sem fonte que o nomeie",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

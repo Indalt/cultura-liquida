@@ -1,0 +1,14 @@
+{
+  "id": "IN-900001",
+  "nome": "pedúnculo do caju",
+  "tipo": "fruto",
+  "falta_status": "F-900005",
+  "proposicoes": [],
+  "nota": "caso que reprova: status e Falta ao mesmo tempo",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "status_botanico_cultural": "nativo"
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "consulta.schema.json",
+  "title": "Consulta",
+  "description": "Consulta do §6 (l. 591): uma busca nomeada, independente do ambiente, que nasce dos Termos (princípio 2). A tradução para a sintaxe de cada Ambiente fica em ambientes/traducao-consultas.json (l. 426), e o campo traducao aponta para ela. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "nome",
+    "tipo",
+    "traducao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CO"
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tipo": {
+      "enum": [
+        "termo",
+        "mista",
+        "só descritores"
+      ]
+    },
+    "termos": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+      },
+      "uniqueItems": true
+    },
+    "variantes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "descritores": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "descritores processuais (P3)"
+    },
+    "traducao": {
+      "type": "string",
+      "pattern": "^ambientes/traducao-consultas\\.json#"
+    },
+    "rendimento": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EN"
+      },
+      "uniqueItems": true
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "tipo": {
+            "enum": [
+              "termo",
+              "mista"
+            ]
+          }
+        },
+        "required": [
+          "tipo"
+        ]
+      },
+      "then": {
+        "required": [
+          "termos"
+        ],
+        "properties": {
+          "termos": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "tipo": {
+            "enum": [
+              "só descritores",
+              "mista"
+            ]
+          }
+        },
+        "required": [
+          "tipo"
+        ]
+      },
+      "then": {
+        "required": [
+          "descritores"
+        ],
+        "properties": {
+          "descritores": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

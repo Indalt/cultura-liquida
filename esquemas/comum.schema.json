@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "comum.schema.json",
+  "title": "Definições comuns aos contratos do §6",
+  "description": "Data, URL, nível, origem do registro (l. 587) e campos de proteção (l. 586). Usado por $ref nos contratos; não valida arquivo sozinho. Versão 0.1.0 (22/10/2026, K-104).",
+  "$defs": {
+    "data": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https?://\\S+$"
+    },
+    "nivel": {
+      "enum": [
+        "oficial",
+        "secundária",
+        "não conferido"
+      ]
+    },
+    "origem_registro": {
+      "description": "Data e origem em tudo (l. 587): quem criou (agente, script ou Vicente), quando e de qual Execução (o id do log).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "criado_por",
+        "data",
+        "execucao"
+      ],
+      "properties": {
+        "criado_por": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "execucao": {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EX"
+        },
+        "versao_regra": {
+          "type": "string",
+          "description": "a versão da regra, quando o registro nasceu ou mudou por decisão automática (D-038)"
+        }
+      }
+    },
+    "protecao": {
+      "description": "Campos de proteção (l. 586). Nenhum guarda dado pessoal: no Git, só códigos opacos. 'não se aplica' quando o registro não toca pessoa, comunidade ou texto de terceiro.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "licenca",
+        "consentimento",
+        "restricao_comunitaria",
+        "precisao_lugar",
+        "dado_sensivel",
+        "crianca_ou_adolescente",
+        "pedido_de_retirada"
+      ],
+      "properties": {
+        "licenca": {
+          "type": "string",
+          "minLength": 1,
+          "description": "licença ou regra da fonte, ou 'não conferido'"
+        },
+        "consentimento": {
+          "type": "string",
+          "minLength": 1,
+          "description": "só a referência ao termo (que fica fora do Git), ou 'não se aplica'"
+        },
+        "restricao_comunitaria": {
+          "type": "string",
+          "minLength": 1,
+          "description": "vale acima de todas as licenças (§5.4); 'nenhuma conhecida' se não há"
+        },
+        "precisao_lugar": {
+          "enum": [
+            "exata",
+            "localidade",
+            "município",
+            "UF",
+            "bioma",
+            "não se aplica"
+          ]
+        },
+        "dado_sensivel": {
+          "type": "boolean",
+          "description": "true vira Falta até haver base legal"
+        },
+        "crianca_ou_adolescente": {
+          "type": "boolean",
+          "description": "true impede imagem, voz e nome"
+        },
+        "pedido_de_retirada": {
+          "enum": [
+            "nenhum",
+            "pedido",
+            "retirado: havia uma fala retirada"
+          ]
+        }
+      }
+    }
+  }
+}

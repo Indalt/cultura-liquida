@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidencia.schema.json",
+  "title": "Evidência",
+  "description": "Evidência do §6 (l. 601): um Trecho a serviço de uma Proposição, com o sentido, a voz e os três Lugares. Sem o lugar da prática, há Falta (o campo aponta para ela). W só se ancora na fala de quem pratica, pelo papel da Pessoa (l. 615). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "trecho",
+    "proposicao",
+    "sentido",
+    "voz",
+    "lugares",
+    "estado",
+    "protecao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+    },
+    "trecho": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TR"
+    },
+    "proposicao": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PR"
+    },
+    "sentido": {
+      "enum": [
+        "a favor",
+        "divergente"
+      ]
+    },
+    "voz": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tipo"
+      ],
+      "properties": {
+        "tipo": {
+          "enum": [
+            "autor",
+            "pessoa citada em fala direta",
+            "instituição",
+            "anúncio"
+          ]
+        },
+        "pessoa": {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/P"
+        },
+        "papel": {
+          "type": "string",
+          "description": "o papel da pessoa (l. 615), como 'detentor ou mestre'"
+        }
+      }
+    },
+    "lugares": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pratica",
+        "publicacao",
+        "pesquisa"
+      ],
+      "properties": {
+        "pratica": {
+          "anyOf": [
+            {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/LU"
+            },
+            {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          ]
+        },
+        "publicacao": {
+          "anyOf": [
+            {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/LU"
+            },
+            {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          ]
+        },
+        "pesquisa": {
+          "anyOf": [
+            {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/LU"
+            },
+            {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          ]
+        }
+      }
+    },
+    "criterio_pratica_cultural": {
+      "enum": [
+        "identidade ou memória",
+        "reconhecimento pelo grupo",
+        "transmissão entre gerações",
+        "recriação"
+      ]
+    },
+    "estado": {
+      "$ref": "valores-provisorios.json#/estrutura/eixos/eixo3/esquema"
+    },
+    "sustenta_aviso_saude_politica": {
+      "type": "boolean"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  }
+}

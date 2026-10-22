@@ -27,18 +27,26 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _comum import RAIZ, carregar_esquema, validar_objeto  # noqa: E402
+from _comum import RAIZ, carregar_esquema, carregar_valores, validar_objeto  # noqa: E402
 from procurar_dado_pessoal import achar  # noqa: E402
 
 PASTA_LOGS = RAIZ / "trilhas" / "logs"
-PREFIXO_ID = "EX"  # provisório: o registro de valores do bloco 2 fixa o prefixo
+_VALORES = carregar_valores()["valores"]
+PREFIXO_ID = "EX"  # o prefixo da Execução no registro de valores (prefixos_id; insumo 28)
+assert PREFIXO_ID in _VALORES["prefixos_id"]["valor"]["tipos"]
+FAIXA = _VALORES["numeracao_id"]["valor"]["faixas"]["conversa"]  # este script grava pela conversa
 
 
 def proximo_id() -> str:
-    maior = 0
+    """O maior número da faixa da conversa + 1 (registro de valores: numeracao_id)."""
+    menor, teto = FAIXA
+    maior = menor - 1
     for arq in PASTA_LOGS.glob("*.jsonl"):
         for m in re.finditer(rf'"id": "{PREFIXO_ID}-([0-9]+)"', arq.read_text(encoding="utf-8")):
-            maior = max(maior, int(m.group(1)))
+            if menor <= int(m.group(1)) <= teto:
+                maior = max(maior, int(m.group(1)))
+    if maior + 1 > teto:
+        raise SystemExit(f"faixa da conversa cheia ({menor}-{teto}): faixa nova só por decisão")
     return f"{PREFIXO_ID}-{maior + 1:04d}"
 
 

@@ -5,7 +5,7 @@ description: Roda uma consulta num ambiente de busca do projeto Cultura Líquida
 
 # consulta
 
-**Versão do harness:** 0.1.1 · **Quem usa:** rastreador · **Rodada:** B
+**Versão do harness:** 0.1.2 · **Quem usa:** rastreador · **Rodada:** B
 
 ## Objetivo
 Saber, para cada consulta, quanto o ambiente diz ter, quanto já vimos e o que falta, para que nenhuma fonte seja dada como esgotada cedo demais (D-016: os "15" são lote de tratamento, nunca teto).
@@ -16,7 +16,7 @@ Saber, para cada consulta, quanto o ambiente diz ter, quanto já vimos e o que f
 
 ## Entradas e saídas
 - **Entrada:** termo e variantes (da terminologia), ambiente (do Anexo E da Fundação e da ficha em `ambientes/`, que é a fonte de trabalho a partir do bloco 2 do brief), modo (monitoramento ou escavação), cursor anterior e pegadas.
-- **Saída:** estado da consulta: `ambiente`, `consulta` (texto exato enviado), `data`, `total_informado`, `total_visto`, `cursor`, `saturacao`, `erros`, `proxima_acao`, `resultados_novos` (IDs e links, nunca texto integral). `bola_de_neve` (citadas e citantes) só na fase 2 (l. 438; §6, Recorte, l. 592). **Esquema:** pendente; o contrato de Consulta (§6) é entrega do Passo 1.
+- **Saída:** estado da consulta: `ambiente`, `consulta` (texto exato enviado), `data`, `total_informado`, `total_visto`, `cursor`, `saturacao`, `erros`, `proxima_acao`, `resultados_novos` (IDs e links, nunca texto integral). `bola_de_neve` (citadas e citantes) só na fase 2 (l. 438; §6, Recorte, l. 592). **Esquema:** `esquemas/estado-consulta.schema.json` (esta saída; o total visto acima do informado sem `explicacao_total_visto` reprova pela regra entre campos de `scripts/validar.py`). No acervo, cada linha vira o estado de um Recorte (`esquemas/recorte.schema.json`, em `ambientes/recortes/`), e a Consulta nomeada tem `esquemas/consulta.schema.json` (em `ambientes/consultas/`). Validar: `.venv/Scripts/python.exe scripts/validar.py estado-consulta <arquivo>`.
 
 ## Passos
 1. Monte a consulta na sintaxe do ambiente (ficha de acesso). País e idioma **nunca** recortam: só anotam (PA-4).
@@ -52,8 +52,10 @@ Não avalia relevância (isso é do avaliador), não guarda texto integral de te
 
 ## Exemplos (reais, da pesquisa de 15/10)
 - [exemplos/cauim-totais.json](exemplos/cauim-totais.json): "cauim" → 54 no OpenAlex, 10 na BDTD, 30 no Oasisbr, 12 na Crossref; e a bola de neve do artigo do Boletim Goeldi (8 trabalhos que o citam; 22 referências).
-- Casos (validador pendente): [exemplos/casos.json](exemplos/casos.json).
+- [exemplos/erro-visto-maior-que-informado.json](exemplos/erro-visto-maior-que-informado.json): o mesmo estado com 14 vistos para 10 informados na BDTD, sem explicação, que reprova.
+- Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.1.2 (22/10/2026, K-104): esquemas do estado da consulta, da Consulta e do Recorte (bloco 2); o exemplo real valida; caso que reprova: total visto maior que o informado sem explicação.
 - 0.1.1 (22/10/2026, K-101): bola de neve só na fase 2 (l. 438, 592); novidade por ID não visto, nunca por data (l. 428); entrada pelo Anexo E e por `ambientes/`; Ambientes, Consultas, Recortes e alcance no log.
 - 0.1.0 (16/10/2026): papel, formato, passos e exemplo real; esquema pendente do Passo 1.

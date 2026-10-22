@@ -1,0 +1,88 @@
+{
+  "$schema": "valores-provisorios.schema.json",
+  "versao": "0.1.0",
+  "data": "2026-10-22",
+  "cartao": "K-104 (bloco 2 do brief de execuções)",
+  "descricao": "Registro único dos valores provisórios ([PROPOSTA]) que a execução usa (brief, bloco 2; Fundação l. 696). Esquemas e scripts leem daqui, sem cópia: os esquemas por $ref (resolvido por scripts/_comum.py), os scripts por carregar_valores(). Pela D-038, a 'estrutura' é fixada e não muda com a calibração; os 'valores' são provisórios e cada um diz a linha da Fundação que o permite, a decisão que o cobre, quem o usa e quando se calibra. Mudar um valor é versão nova deste arquivo e, quando o valor é uma regra, versão nova da regra (o campo versao_regra), que toda decisão automática grava na Execução.",
+  "estrutura": {
+    "base": "D-038 (estrutura fixada); Fundação §6, l. 620-641",
+    "eixos": {
+      "eixo1": {
+        "nome": "Fluxo da Entrada",
+        "onde": "Entrada",
+        "quem_define": "agentes e Vicente (quarentena: princípio 10); a saída da quarentena é pela regra (padrão A-05, D-038)",
+        "esquema": {
+          "enum": [
+            "bruto",
+            "triagem",
+            "quarentena",
+            "aceito",
+            "extraído"
+          ]
+        }
+      },
+      "eixo2": {
+        "nome": "Localização do trecho",
+        "onde": "Trecho",
+        "quem_define": "script (bloco 3, localizar_trecho.py)",
+        "esquema": {
+          "enum": [
+            "localizado",
+            "não localizado",
+            "não verificável por máquina"
+          ]
+        }
+      },
+      "eixo3": {
+        "nome": "Fidelidade da leitura",
+        "onde": "Evidência",
+        "quem_define": "script e pessoa; confere a nossa leitura, não a prática (D-038)",
+        "esquema": {
+          "enum": [
+            "não conferida",
+            "conferida",
+            "leitura divergente"
+          ]
+        }
+      },
+      "eixo4": {
+        "nome": "Estado da proposição",
+        "onde": "Proposição, Aresta",
+        "quem_define": "script (calcular_mu_lambda.py); descreve a documentação, não é veredito",
+        "esquema": {
+          "enum": [
+            "verdadeiro",
+            "falso",
+            "inconsistente",
+            "paracompleto",
+            "intermediário",
+            "não calculado"
+          ]
+        }
+      }
+    },
+    "estados_do_modelo": {
+      "candidata": "CLB de outro termo, Termo e Fonte nascem candidatos e passam pela regra (D-038, D-039)",
+      "quarentena": "eixo 1 = quarentena, com o selo abaixo e o motivo",
+      "eixos": "cada eixo num campo próprio, nunca pasta (§3; l. 620)"
+    },
+    "selo_quarentena": {
+      "esquema": {
+        "const": "PENDENTE_JULGAMENTO"
+      }
+    },
+    "versao_da_regra": "toda decisão automática grava a versão da regra na Execução (esquemas/log.schema.json, campos automatica e versao_regra; D-038) e no registro que ela muda (campo versao_regra)",
+    "quem_propoe_nao_aprova": "quem propõe não aprova; o papel de quem aprova é trocável, nunca por quem propôs (D-038; l. 473)",
+    "protecao_e_origem": "todo registro traz data e origem (quem criou, quando, de qual Execução; l. 587); o que toca pessoa, comunidade ou texto de terceiro traz os campos de proteção (l. 586); nenhum guarda dado pessoal: no Git, só códigos opacos"
+  },
+  "valores": {
+    "lote_maquina": {
+      "valor": 15,
+      "base": "D-034",
+      "quem_usa": [
+        "avaliador"
+      ],
+      "calibracao": "K-005"
+    }
+  }
+}

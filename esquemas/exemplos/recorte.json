@@ -1,0 +1,21 @@
+{
+  "id": "RC-900001",
+  "ambiente": "AM-900002",
+  "consulta": "CO-900001",
+  "modo": "termo",
+  "periodo": "todo",
+  "total_informado": 25,
+  "total_visto": 0,
+  "cursor": null,
+  "saturacao": "não exaurido: nada visto ainda",
+  "erros": [],
+  "proxima_acao": "paginar até 25 e comparar com as pegadas",
+  "estado": "aberto",
+  "data": "2026-10-17",
+  "nota": "dado real: BDTD, 'cajuína', AllFields, total informado 25, HTTP 200, 17/10 (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json)",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "$schema": "valores-provisorios.schema.json",
+  "versao": "0.1.0",
+  "data": "2026-10-22",
+  "cartao": "K-104 (bloco 2 do brief de execuções)",
+  "descricao": "Registro único dos valores provisórios ([PROPOSTA]) que a execução usa (brief, bloco 2; Fundação l. 696). Esquemas e scripts leem daqui, sem cópia: os esquemas por $ref (resolvido por scripts/_comum.py), os scripts por carregar_valores(). Pela D-038, a 'estrutura' é fixada e não muda com a calibração; os 'valores' são provisórios e cada um diz a linha da Fundação que o permite, a decisão que o cobre, quem o usa e quando se calibra. Mudar um valor é versão nova deste arquivo e, quando o valor é uma regra, versão nova da regra (o campo versao_regra), que toda decisão automática grava na Execução.",
+  "estrutura": {
+    "base": "D-038 (estrutura fixada); Fundação §6, l. 620-641",
+    "eixos": {
+      "eixo1": {
+        "nome": "Fluxo da Entrada",
+        "onde": "Entrada",
+        "quem_define": "agentes e Vicente (quarentena: princípio 10); a saída da quarentena é pela regra (padrão A-05, D-038)",
+        "esquema": {
+          "enum": [
+            "bruto",
+            "triagem",
+            "quarentena",
+            "aceito",
+            "extraído"
+          ]
+        }
+      },
+      "eixo2": {
+        "nome": "Localização do trecho",
+        "onde": "Trecho",
+        "quem_define": "script (bloco 3, localizar_trecho.py)",
+        "esquema": {
+          "enum": [
+            "localizado",
+            "não localizado",
+            "não verificável por máquina"
+          ]
+        }
+      },
+      "eixo3": {
+        "nome": "Fidelidade da leitura",
+        "onde": "Evidência",
+        "quem_define": "script e pessoa; confere a nossa leitura, não a prática (D-038)",
+        "esquema": {
+          "enum": [
+            "não conferida",
+            "conferida",
+            "leitura divergente"
+          ]
+        }
+      },
+      "eixo4": {
+        "nome": "Estado da proposição",
+        "onde": "Proposição, Aresta",
+        "quem_define": "script (calcular_mu_lambda.py); descreve a documentação, não é veredito",
+        "esquema": {
+          "enum": [
+            "verdadeiro",
+            "falso",
+            "inconsistente",
+            "paracompleto",
+            "intermediário",
+            "não calculado"
+          ]
+        }
+      }
+    },
+    "estados_do_modelo": {
+      "candidata": "CLB de outro termo, Termo e Fonte nascem candidatos e passam pela regra (D-038, D-039)",
+      "quarentena": "eixo 1 = quarentena, com o selo abaixo e o motivo",
+      "eixos": "cada eixo num campo próprio, nunca pasta (§3; l. 620)"
+    },
+    "selo_quarentena": {
+      "esquema": {
+        "const": "PENDENTE_JULGAMENTO"
+      }
+    },
+    "versao_da_regra": "toda decisão automática grava a versão da regra na Execução (esquemas/log.schema.json, campos automatica e versao_regra; D-038) e no registro que ela muda (campo versao_regra)",
+    "quem_propoe_nao_aprova": "quem propõe não aprova; o papel de quem aprova é trocável, nunca por quem propôs (D-038; l. 473)",
+    "protecao_e_origem": "todo registro traz data e origem (quem criou, quando, de qual Execução; l. 587); o que toca pessoa, comunidade ou texto de terceiro traz os campos de proteção (l. 586); nenhum guarda dado pessoal: no Git, só códigos opacos"
+  },
+  "valores": {
+    "escala_valencias": {
+      "valor": {
+        "versao_regra": "valencias-0.1",
+        "criterios": {
+          "lastro": {
+            "0": "sem referência que se possa conferir",
+            "1": "referência sem link permanente nem cópia no Wayback",
+            "2": "referência com link permanente (DOI, handle, URL estável) ou cópia no Wayback"
+          },
+          "trecho_localizado": {
+            "0": "trecho não localizado ou não verificável por máquina",
+            "1": "localizado por semelhança, acima do limiar",
+            "2": "localizado exato"
+          },
+          "voz": {
+            "0": "não se sabe quem fala",
+            "1": "quem fala está identificado (autor, pessoa citada em fala direta, instituição ou anúncio), sem ordem entre eles"
+          }
+        },
+        "regra": "Cada critério se pontua sozinho; ajustar um não zera os outros (P86). Vai para extração quem tem os três critérios acima de 0. Quem tem algum critério em 0 fica em quarentena, com o selo PENDENTE_JULGAMENTO e o critério que falta dito, e os agentes a processam quando ela preenche os critérios (P87). Não há peso por tipo de fonte nem por ser institucional (D-039; l. 116): a perspectiva é campo da Fonte, não pontua.",
+        "esquema_pontuacao": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "lastro",
+            "trecho_localizado",
+            "voz",
+            "versao_regra"
+          ],
+          "properties": {
+            "lastro": {
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "trecho_localizado": {
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "voz": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "versao_regra": {
+              "type": "string",
+              "pattern": "^valencias-[0-9]+\\.[0-9]+$"
+            },
+            "criterio_em_falta": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "lastro",
+                  "trecho_localizado",
+                  "voz"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "linha_fundacao": "l. 696, 812 (escala de valências e critério de PENDENTE_JULGAMENTO); P85-P87",
+      "base": "D-034; D-038 (padrão A-05); D-039 (sem peso institucional)",
+      "quem_usa": [
+        "avaliador (extrair-evidencia)",
+        "esquemas/entrada.schema.json"
+      ],
+      "calibracao": "Passo 5, com as Entradas triadas no piloto; os números até o K-005"
+    },
+    "saida_quarentena": {
+      "valor": {
+        "versao_regra": "quarentena-0.1",
+        "regra": "A mesma escala de valências, aplicada de novo nos gatilhos que reabrem um Recorte (l. 592) e, só para o que está em quarentena, quando a regra de valências ganha versão nova. A saída é proposta (na conversa, a saída que o curador valida e grava; na rotina, a ramificação claude/), passa pelo portão combinado da fase 1 (l. 396) e deixa uma Execução com a versão da regra e o motivo. O que já entrou não sai do acervo só porque a regra mudou; só volta a ser triado nos gatilhos da l. 592 e, se não passar, volta à quarentena com o selo. A quarentena por barreira jurídica sai pela liberação da Falta."
+      },
+      "linha_fundacao": "l. 592, 396, 812; P87",
+      "base": "D-038 (padrão A-05)",
+      "quem_usa": [
+        "avaliador",
+        "curador",
+        "rotinas (bloco 10)"
+      ],
+      "calibracao": "com a escala de valências (Passo 5; K-005)"
+    },
+    "unidade_ficha": {
+      "valor": "A CLB identificada pelo termo, enquanto ele não for ambíguo. Lugares, grupos e períodos que as fontes mostrarem são dados dela (as situações: bebida × Lugar × grupo × período). Um termo ambíguo se desdobra em mais de uma CLB (campo desdobrada_de). O Termo segue como entrada própria, com a ligação muitos para muitos (l. 605).",
+      "linha_fundacao": "l. 516, 605, 811; §10, pergunta 6, l. 880",
+      "base": "D-039",
+      "quem_usa": [
+        "esquemas/clb.schema.json",
+        "arquivista (montar-ficha)"
+      ],
+      "calibracao": "fixado pela D-039; o texto vai à próxima versão da Fundação (K-004)"
+    },
+    "eixo5_estado_editorial": {
+      "valor": {
+        "versao_regra": "eixo5-0.1",
+        "esquema": {
+          "enum": [
+            "candidata",
+            "admitida",
+            "ficha em montagem",
+            "ficha montada",
+            "publicada"
+          ]
+        },
+        "regra": "'candidata' é a CLB de outro termo que nasce pela regra (a situação nova de uma CLB já registrada é dado dela; D-039). A triagem muda o eixo 5 pelo portão; a candidata que não passa fica candidata, com a linha 'não admitida' na trilha (l. 112). 'publicada' existe e não se usa no piloto: fica com Vicente, na decisão de publicar (K-010)."
+      },
+      "linha_fundacao": "l. 628 (valores a definir no Passo 1, inclui 'publicada'); l. 112",
+      "base": "D-038 (padrão A-09 b), ajustado pela D-039",
+      "quem_usa": [
+        "esquemas/clb.schema.json",
+        "arquivista",
+        "auditor"
+      ],
+      "calibracao": "Passo 6 (publicação); a l. 628 vai à próxima versão"
+    },
+    "normalizacao_e_limiar": {
+      "valor": {
+        "versao_regra": "normalizacao-0.1",
+        "normalizacao": [
+          "Unicode NFC",
+          "hífen de fim de linha com quebra removido (pala-\\nvra → palavra)",
+          "quebras de linha e espaços seguidos viram um espaço",
+          "aspas e apóstrofos tipográficos viram retos",
+          "espaços do início e do fim removidos",
+          "maiúsculas, minúsculas e acentos preservados"
+        ],
+        "hash": "SHA-256 do texto normalizado, em hexadecimal minúsculo",
+        "limiar_semelhanca": 0.9,
+        "medida": "razão de semelhança de sequência (difflib.SequenceMatcher.ratio) entre o trecho e a melhor janela do texto lido, ambos normalizados",
+        "regra": "1,0 = localizado exato; de 0,9 a 1,0 = localizado por semelhança; abaixo de 0,9 = Falta 'trecho não verificável por máquina', dita e nunca completada (leitura A-06, D-038)"
+      },
+      "linha_fundacao": "l. 130, 598",
+      "base": "D-034; D-038 (leitura A-06)",
+      "quem_usa": [
+        "scripts/localizar_trecho.py (bloco 3)",
+        "esquemas/trecho.schema.json"
+      ],
+      "calibracao": "bloco 3, com trechos reais (casos que passam e que reprovam); K-005"
+    },
+    "mu_lambda": {
+      "valor": {
+        "versao_regra": "mu-lambda-0.1",
+        "linhagem": "componente conexo do grafo de deriva_de entre as Fontes das Evidências; dez textos que copiam o mesmo autor contam como um (l. 116)",
+        "saturacao": 2,
+        "formula": "μ = min(1, linhagens a favor / 2); λ = min(1, linhagens divergentes / 2); Dc = μ − λ; Dct = μ + λ − 1",
+        "limites": {
+          "certeza": 0.5,
+          "contradicao": 0.5
+        },
+        "estados": "Dc ≥ 0,5 e |Dct| < 0,5 → verdadeiro; Dc ≤ −0,5 e |Dct| < 0,5 → falso; Dct ≥ 0,5 e |Dc| < 0,5 → inconsistente (a tensão, que abre o cartão de conflito; D-037); Dct ≤ −0,5 e |Dc| < 0,5 → paracompleto (Falta); o resto → intermediário, com o nome do quadrante como na Para-analisador de 12 estados (Anexo C, F-12, secundária)",
+        "sem_peso_por_tipo": "nenhum peso por tipo de fonte (l. 116; P27; D-039)"
+      },
+      "linha_fundacao": "l. 116-117; Anexo C, F-12 (secundária)",
+      "base": "D-034",
+      "quem_usa": [
+        "scripts/calcular_mu_lambda.py (bloco 3)",
+        "esquemas/proposicao.schema.json",
+        "esquemas/aresta.schema.json"
+      ],
+      "calibracao": "Passo 7 (grafo 4D), com a fonte primária de Eτ localizada (F-12 'não conferido')"
+    },
+    "prefixos_id": {
+      "valor": {
+        "regra": "Um prefixo por tipo, um hífen e ao menos 4 algarismos. F- é da Falta e P- da pessoa (l. 585). EX- é da Execução, o prefixo que o registrar_log.py já grava desde o K-101 (insumo 28): fica, sem migração.",
+        "tipos": {
+          "AM": "Ambiente",
+          "CO": "Consulta",
+          "RC": "Recorte",
+          "EX": "Execução",
+          "EN": "Entrada",
+          "FO": "Fonte",
+          "TR": "Trecho",
+          "EV": "Evidência",
+          "PR": "Proposição",
+          "CL": "CLB situada",
+          "EL": "Elemento de prática",
+          "IN": "Insumo",
+          "PC": "Processo",
+          "CP": "Compreensão local",
+          "TF": "Transformação",
+          "AR": "Aresta",
+          "TE": "Termo",
+          "LU": "Lugar",
+          "F": "Falta",
+          "P": "Pessoa"
+        },
+        "padroes": {
+          "AM": {
+            "type": "string",
+            "pattern": "^AM-[0-9]{4,}$"
+          },
+          "CO": {
+            "type": "string",
+            "pattern": "^CO-[0-9]{4,}$"
+          },
+          "RC": {
+            "type": "string",
+            "pattern": "^RC-[0-9]{4,}$"
+          },
+          "EX": {
+            "type": "string",
+            "pattern": "^EX-[0-9]{4,}$"
+          },
+          "EN": {
+            "type": "string",
+            "pattern": "^EN-[0-9]{4,}$"
+          },
+          "FO": {
+            "type": "string",
+            "pattern": "^FO-[0-9]{4,}$"
+          },
+          "TR": {
+            "type": "string",
+            "pattern": "^TR-[0-9]{4,}$"
+          },
+          "EV": {
+            "type": "string",
+            "pattern": "^EV-[0-9]{4,}$"
+          },
+          "PR": {
+            "type": "string",
+            "pattern": "^PR-[0-9]{4,}$"
+          },
+          "CL": {
+            "type": "string",
+            "pattern": "^CL-[0-9]{4,}$"
+          },
+          "EL": {
+            "type": "string",
+            "pattern": "^EL-[0-9]{4,}$"
+          },
+          "IN": {
+            "type": "string",
+            "pattern": "^IN-[0-9]{4,}$"
+          },
+          "PC": {
+            "type": "string",
+            "pattern": "^PC-[0-9]{4,}$"
+          },
+          "CP": {
+            "type": "string",
+            "pattern": "^CP-[0-9]{4,}$"
+          },
+          "TF": {
+            "type": "string",
+            "pattern": "^TF-[0-9]{4,}$"
+          },
+          "AR": {
+            "type": "string",
+            "pattern": "^AR-[0-9]{4,}$"
+          },
+          "TE": {
+            "type": "string",
+            "pattern": "^TE-[0-9]{4,}$"
+          },
+          "LU": {
+            "type": "string",
+            "pattern": "^LU-[0-9]{4,}$"
+          },
+          "F": {
+            "type": "string",
+            "pattern": "^F-[0-9]{4,}$"
+          },
+          "P": {
+            "type": "string",
+            "pattern": "^P-[0-9]{4,}$"
+          }
+        }
+      },
+      "linha_fundacao": "l. 585",
+      "base": "D-034; insumo 28",
+      "quem_usa": [
+        "todos os contratos de esquemas/",
+        "scripts/registrar_log.py",
+        "validar_acervo.py (bloco 3)"
+      ],
+      "calibracao": "fixo depois do primeiro registro de cada tipo: um ID nunca muda (l. 585)"
+    },
+    "numeracao_id": {
+      "valor": {
+        "regra": "Faixa por gravador, para três gravadores ao mesmo tempo nunca colidirem: o próximo número é o maior da faixa + 1. Um ID nunca se repete nem se reaproveita; fusão aponta o antigo para o novo (fundido_em) e retirada deixa a marca 'retirado' (l. 585). O validar_acervo.py (bloco 3) reprova colisão.",
+        "faixas": {
+          "conversa": [
+            1,
+            49999
+          ],
+          "rotina": [
+            50000,
+            89999
+          ],
+          "workflow": [
+            90000,
+            99999
+          ],
+          "exemplos de esquema": [
+            900000,
+            999999
+          ]
+        },
+        "nota": "A faixa 'exemplos de esquema' é dos exemplos de esquemas/exemplos/ e dos casos das habilidades: nenhum gravador a usa, e nenhum registro real aponta para ela."
+      },
+      "linha_fundacao": "l. 585",
+      "base": "D-034 (padrão do brief, bloco 2)",
+      "quem_usa": [
+        "scripts/registrar_log.py",
+        "rotinas (bloco 10)",
+        "validar_acervo.py (bloco 3)"
+      ],
+      "calibracao": "se uma faixa encher, faixa nova por decisão, sem mudar as antigas"
+    },
+    "marcacao_frase_proposicao": {
+      "valor": {
+        "formato": "[PR-nnnn] ao fim da frase factual; várias Proposições: [PR-0001; PR-0002]",
+        "padrao": "\\[PR-[0-9]{4,}(; PR-[0-9]{4,})*\\]"
+      },
+      "linha_fundacao": "l. 605",
+      "base": "D-034",
+      "quem_usa": [
+        "arquivista (montar-ficha)",
+        "validar_acervo.py (bloco 3)",
+        "wiki local (bloco 8)"
+      ],
+      "calibracao": "bloco 8, com a primeira ficha"
+    },
+    "lote_maquina": {
+      "valor": 15,
+      "unidade": "itens por rodada de máquina; nunca teto de coleta (D-016)",
+      "linha_fundacao": "l. 498 (P94)",
+      "base": "D-034",
+      "quem_usa": [
+        "avaliador",
+        "rotinas"
+      ],
+      "calibracao": "K-005, com o custo medido por lote"
+    },
+    "fila_curadoria": {
+      "valor": {
+        "cartoes_por_semana": 15,
+        "regra": "Fila = os cartões de conflito e de Falta jurídica a liberar que esperam uma ação de Vicente. A fila passa de uma semana de curadoria quando há mais de 15 desses cartões à espera. O relatorio_dia.py a calcula, e o script das rotinas não abre ambiente novo acima dela."
+      },
+      "linha_fundacao": "l. 472, 902",
+      "base": "D-037; D-038 (leitura A-03)",
+      "quem_usa": [
+        "scripts/relatorio_dia.py (bloco 5)",
+        "rotinas (bloco 10)"
+      ],
+      "calibracao": "K-005, com as horas medidas no bloco 13"
+    },
+    "amostra_sorteada": {
+      "valor": {
+        "itens": 15,
+        "regra": "15 itens por amostra, ou todos, se a ferramenta produziu menos; sorteados com semente registrada entre o que a ferramenta produziu desde a amostra anterior; lidos pelo auditor, depois dos scripts; fora da cota de Vicente; uma por lote nos blocos 7 e 8 e uma por semana na operação; a amostra sem achado também vira linha de log; o custo entra no teto da D-023. Fora da amostra, o auditor lê todo item marcado por sustentar aviso, saúde ou política."
+      },
+      "linha_fundacao": "D-026 (a Fundação não fixa o tamanho); l. 498, 902 (número emprestado)",
+      "base": "D-038 (padrão A-04), valor novo que a Fundação não fixa",
+      "quem_usa": [
+        "scripts/sortear_amostra.py (bloco 3)",
+        "auditor"
+      ],
+      "calibracao": "K-005, com o custo medido e o que as amostras acharem"
+    },
+    "medida_rotinas": {
+      "valor": {
+        "regra": "Leitura semanal do uso da conta atribuída às rotinas, marcada como medida da conta e não de agente, e um teto em número de execuções por semana.",
+        "teto_execucoes_semana": null,
+        "nota": "o teto se fixa com o consumo medido na rotina de teste (bloco 10b); até lá, não há rotina com IA"
+      },
+      "linha_fundacao": "l. 511",
+      "base": "D-023; D-034",
+      "quem_usa": [
+        "rotinas (bloco 10)",
+        "scripts/relatorio_dia.py"
+      ],
+      "calibracao": "bloco 10b; K-002"
+    },
+    "parada_conversa_principal": {
+      "valor": "Vicente lê o uso da conta ao abrir e ao fim de cada bloco; a sessão para no limite que ele indicar, com o estado salvo antes. Somar o consumo da sessão pelo registro dela é 'não conferido'.",
+      "linha_fundacao": "l. 511, 923",
+      "base": "D-023; D-034",
+      "quem_usa": [
+        "curador (executar-brief)"
+      ],
+      "calibracao": "K-005"
+    },
+    "orcamento": {
+      "valor": {
+        "teto_semanal": 300000,
+        "semana": "segunda a domingo, pela data do log",
+        "estimativa_sem_medida": 60000,
+        "estimativa": "a última medida do mesmo agente com a mesma habilidade; sem medida, 60 mil",
+        "folga_minima": "2 × o maior lote já medido"
+      },
+      "vigente": "o teto de 300 mil por semana é a D-023 (vigente); a semana e a estimativa são [PROPOSTA] (brief, seção 0)",
+      "linha_fundacao": "l. 511 (D-023)",
+      "base": "D-023; D-034",
+      "quem_usa": [
+        "scripts/orcamento.py",
+        "curador"
+      ],
+      "calibracao": "K-005 (ritmo do piloto); as rodadas de planejamento ficam fora desta soma até o K-002 (A-13)"
+    },
+    "fonte_no_git": {
+      "valor": "A referência completa da Fonte vai sem nome de pessoa: título, instituição, ano, tipo e link permanente (DOI, handle ou URL). A autoria entra por código opaco (P-nnnn) só quando a linhagem ou a perspectiva pedirem.",
+      "linha_fundacao": "l. 597, 615; §5.1",
+      "base": "D-034 (brief, bloco 2)",
+      "quem_usa": [
+        "esquemas/fonte.schema.json",
+        "avaliador"
+      ],
+      "calibracao": "K-010 (decisões para publicar)"
+    },
+    "tabela_codigo_nome": {
+      "valor": {
+        "lugar": "uma pasta na máquina de Vicente, fora da pasta versionada",
+        "caminho_padrao": "C:/Antigravity/Cultura Liquida - privado/pessoas/",
+        "variavel": "CL_PRIVADO (se definida, vale no lugar do caminho padrão)",
+        "regra": "Nada dessa pasta entra no Git. A cópia é a que Vicente definir. Rotinas não criam código de pessoa. A reconstituição (bloco 9) não espera a tabela no repositório e registra a ausência dela."
+      },
+      "linha_fundacao": "l. 406 (Vicente define o lugar no Passo 4); l. 615; §5.1",
+      "base": "parada (c) do bloco 2: padrão dado por Vicente em 22/10/2026, na autorização do K-104 (D-032; seção 6A do brief)",
+      "quem_usa": [
+        "avaliador e arquivista (blocos 7 e 8)",
+        "Vicente"
+      ],
+      "calibracao": "Passo 4 (lugar com acesso controlado, l. 406)"
+    },
+    "layout": {
+      "valor": {
+        "regra": "As pastas nascem no passo em que entram (l. 723).",
+        "pastas": {
+          "ambientes/<id>.json": "o Ambiente, a ficha de acesso e os dois eixos de estado (l. 415)",
+          "ambientes/consultas/": "as Consultas",
+          "ambientes/recortes/": "os Recortes, com o estado de cada um",
+          "ambientes/traducao-consultas.json": "Consulta × Ambiente → sintaxe, data e o teste que a conferiu (l. 426)",
+          "ambientes/rotinas.json": "ambiente × Consulta × cadência × reserva (l. 430, 497; bloco 10a)",
+          "entrada/": "as Entradas; a máquina grava aqui (l. 473)",
+          "acervo/<tipo>/": "Fonte, Trecho, Evidência, Proposição, Termo, CLB situada, Elemento, Insumo, Processo, Compreensão local, Transformação, Aresta, Lugar, Falta e Pessoa (só código opaco e papéis)",
+          "acervo/fichas/<id>.md": "as fichas",
+          "grafo/": "só o que o script gera"
+        },
+        "fora_do_git": {
+          "texto das fontes": "pasta temporária fora da pasta versionada (padrão: <TEMP>/cultura-liquida/fontes/), apagada ao fim do lote; na busca assistida, recebe o que Vicente salvar (l. 100, 407)",
+          "tabela código → nome": "ver tabela_codigo_nome"
+        }
+      },
+      "linha_fundacao": "l. 415, 426, 473, 723; l. 100, 407",
+      "base": "D-034 (leitura da seção 6B do brief)",
+      "quem_usa": [
+        "todos os scripts e agentes a partir do bloco 3"
+      ],
+      "calibracao": "K-004 (próxima versão da Fundação)"
+    }
+  }
+}

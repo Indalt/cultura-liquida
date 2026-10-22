@@ -1,0 +1,21 @@
+{
+  "id": "EL-900001",
+  "clb": "CL-900001",
+  "x": [
+    "IN-900001"
+  ],
+  "y": [
+    "PC-900001"
+  ],
+  "z": "não conferido",
+  "w": "F-900004",
+  "proposicoes": [
+    "PR-900001"
+  ],
+  "nota": "exemplo de esquema; W não captada como Falta (D-018)",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "TF-900001",
+  "de": "CP-900001",
+  "para": "CP-900002",
+  "tipo": "por interação",
+  "lugares": [
+    "LU-900001"
+  ],
+  "evidencias": [
+    "EV-900001"
+  ],
+  "nota": "caso que reprova: por interação sem dizer com quem",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

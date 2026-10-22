@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "processo.schema.json",
+  "title": "Processo (Y)",
+  "description": "Processo do §6 (l. 607). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "nome",
+    "tipo",
+    "proposicoes",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PC"
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "termos": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+      },
+      "uniqueItems": true
+    },
+    "tipo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposicoes": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PR"
+      },
+      "uniqueItems": true
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  }
+}

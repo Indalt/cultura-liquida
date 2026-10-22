@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "termo.schema.json",
+  "title": "Termo (entrada terminológica)",
+  "description": "Termo do §6 (l. 613) e princípio 2 (l. 103). Estrutura compatível com TBX (ISO 30042) e exportável para SKOS (Anexo C, F-13, não conferido): conceito ~ entrada de conceito do TBX e skos:Concept; designacoes ~ termos da entrada e skos:prefLabel/altLabel; definicao ~ skos:definition; relacoes ~ skos:broader/narrower/related. Nasce candidato e vira atestado com a primeira abonação cujo trecho foi localizado (o validar_acervo.py confere a localização). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "conceito",
+    "designacoes",
+    "estado",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+    },
+    "conceito": {
+      "type": "string",
+      "minLength": 1
+    },
+    "designacoes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "variantes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "forma",
+          "tipo_variacao"
+        ],
+        "properties": {
+          "forma": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tipo_variacao": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lugares": {
+            "type": "array",
+            "items": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/LU"
+            },
+            "uniqueItems": true
+          },
+          "periodo": {
+            "type": "string"
+          },
+          "abonacoes": {
+            "type": "array",
+            "items": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "formas_de_busca": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "OCR, grafia truncada: só no booleano, nunca variante"
+    },
+    "abonacoes": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+      },
+      "uniqueItems": true
+    },
+    "definicao": {
+      "type": "string",
+      "description": "construída das abonações"
+    },
+    "estado": {
+      "enum": [
+        "candidato",
+        "atestado"
+      ]
+    },
+    "relacoes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tipo",
+          "termo"
+        ],
+        "properties": {
+          "tipo": {
+            "enum": [
+              "mais amplo",
+              "mais estrito",
+              "relacionado"
+            ]
+          },
+          "termo": {
+            "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+          }
+        }
+      }
+    },
+    "booleanos": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "derivados por script (gerar_termo.py, bloco 3)"
+    },
+    "do_legado": {
+      "type": "boolean"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "const": "atestado"
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "abonacoes"
+        ],
+        "properties": {
+          "abonacoes": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "do_legado": {
+            "const": true
+          }
+        },
+        "required": [
+          "do_legado"
+        ]
+      },
+      "then": {
+        "properties": {
+          "estado": {
+            "const": "candidato"
+          }
+        }
+      }
+    }
+  ]
+}

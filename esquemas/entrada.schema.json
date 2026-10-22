@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "entrada.schema.json",
+  "title": "Entrada",
+  "description": "Entrada do §6 (l. 596): cada item que chega, por qualquer canal, uma só por item. Na fase 1, só os canais do §5.4 da fase 1 (D-026, D-035). Toda fonte nasce aqui, candidata (D-039). Em quarentena, o selo PENDENTE_JULGAMENTO, o motivo e a versão da regra (padrão A-05, D-038). A marca de aviso, saúde ou política é posta na triagem. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "canal",
+    "data_entrada",
+    "url_ou_arquivo",
+    "estado",
+    "sustenta_aviso_saude_politica",
+    "protecao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EN"
+    },
+    "canal": {
+      "enum": [
+        "monitoramento e escavação",
+        "busca assistida",
+        "link ou documento trazido por Vicente",
+        "alertas por e-mail"
+      ]
+    },
+    "ambiente": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/AM"
+    },
+    "recortes": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/RC"
+      },
+      "uniqueItems": true
+    },
+    "data_entrada": {
+      "$ref": "comum.schema.json#/$defs/data"
+    },
+    "url_ou_arquivo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "wayback": {
+      "type": "string"
+    },
+    "pessoa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "codigo",
+        "papel"
+      ],
+      "properties": {
+        "codigo": {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/P"
+        },
+        "papel": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "declaracao_interesse": {
+      "type": "string"
+    },
+    "valencias": {
+      "$ref": "valores-provisorios.json#/valores/escala_valencias/valor/esquema_pontuacao"
+    },
+    "parecer": {
+      "type": "string"
+    },
+    "estado": {
+      "$ref": "valores-provisorios.json#/estrutura/eixos/eixo1/esquema"
+    },
+    "selo": {
+      "$ref": "valores-provisorios.json#/estrutura/selo_quarentena/esquema"
+    },
+    "motivo_quarentena": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sustenta_aviso_saude_politica": {
+      "type": "boolean"
+    },
+    "gera": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fontes": {
+          "type": "array",
+          "items": {
+            "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/FO"
+          },
+          "uniqueItems": true
+        },
+        "trechos": {
+          "type": "array",
+          "items": {
+            "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TR"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "const": "quarentena"
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "selo",
+          "motivo_quarentena",
+          "valencias"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "enum": [
+              "aceito",
+              "extraído"
+            ]
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "valencias"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "canal": {
+            "const": "monitoramento e escavação"
+          }
+        },
+        "required": [
+          "canal"
+        ]
+      },
+      "then": {
+        "required": [
+          "ambiente",
+          "recortes"
+        ]
+      }
+    }
+  ]
+}

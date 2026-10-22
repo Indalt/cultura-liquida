@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recorte.schema.json",
+  "title": "Recorte",
+  "description": "Recorte do §6 (l. 592): Ambiente × Consulta × período × lugar de publicação × modo, com o arquivo de estado. 'lido por inteiro' só com folheio. A fonte que não informa o total nunca fica 'percorrido pela busca' e leva a Falta 'total desconhecido'; teto estourado leva a Falta 'busca interrompida por teto'. O total visto nunca passa do informado sem explicação (regra conferida por scripts/validar.py). Bola de neve só na fase 2. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "ambiente",
+    "consulta",
+    "modo",
+    "total_informado",
+    "total_visto",
+    "saturacao",
+    "erros",
+    "proxima_acao",
+    "estado",
+    "data",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/RC"
+    },
+    "ambiente": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/AM"
+    },
+    "consulta": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CO"
+    },
+    "periodo": {
+      "type": "string"
+    },
+    "lugar_publicacao": {
+      "type": "string"
+    },
+    "modo": {
+      "enum": [
+        "termo",
+        "descritores",
+        "folheio"
+      ]
+    },
+    "cursor": {
+      "type": [
+        "string",
+        "integer",
+        "null"
+      ]
+    },
+    "total_informado": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "total_visto": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "explicacao_total_visto": {
+      "type": "string",
+      "minLength": 1
+    },
+    "saturacao": {
+      "type": "string",
+      "minLength": 1
+    },
+    "erros": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "proxima_acao": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reserva": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "codigo",
+        "prazo"
+      ],
+      "properties": {
+        "codigo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prazo": {
+          "$ref": "comum.schema.json#/$defs/data"
+        }
+      }
+    },
+    "teto": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "chamadas": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "divisoes_janela": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "estado": {
+      "enum": [
+        "aberto",
+        "em curso",
+        "percorrido pela busca",
+        "lido por inteiro",
+        "interrompido por teto"
+      ]
+    },
+    "faltas": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+      },
+      "uniqueItems": true
+    },
+    "bola_de_neve": {
+      "type": "object",
+      "description": "só na fase 2 (§5.3)"
+    },
+    "data": {
+      "$ref": "comum.schema.json#/$defs/data"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "const": "lido por inteiro"
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "properties": {
+          "modo": {
+            "const": "folheio"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "total_informado": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "total_informado"
+        ]
+      },
+      "then": {
+        "required": [
+          "faltas"
+        ],
+        "properties": {
+          "faltas": {
+            "minItems": 1
+          },
+          "estado": {
+            "not": {
+              "const": "percorrido pela busca"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "const": "interrompido por teto"
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "faltas"
+        ],
+        "properties": {
+          "faltas": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

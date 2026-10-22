@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "proposicao.schema.json",
+  "title": "Proposição",
+  "description": "Proposição do §6 (l. 602): CLB situada × atributo × valor × período. μ e λ calculados por script e contados por linhagem (Passo 7); null até o cálculo. A fonte contrária entra como Evidência divergente e não derruba a Proposição (D-019). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "clb",
+    "atributo",
+    "valor",
+    "periodo",
+    "evidencias",
+    "mu",
+    "lambda",
+    "estado",
+    "sustenta_aviso_saude_politica",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PR"
+    },
+    "clb": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CL"
+    },
+    "atributo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "insumo, processo, recipiente, lugar, época, transmissão, uso, risco… (D-017: exemplos não limitam)"
+    },
+    "valor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "periodo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "referido"
+      ],
+      "properties": {
+        "referido": {
+          "type": "string",
+          "minLength": 1,
+          "description": "o período a que a fonte se refere (Z; P9)"
+        },
+        "data_fonte": {
+          "type": "string",
+          "description": "a data da fonte (P9), quando difere"
+        }
+      }
+    },
+    "evidencias": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+      },
+      "uniqueItems": true
+    },
+    "mu": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "lambda": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "estado": {
+      "$ref": "valores-provisorios.json#/estrutura/eixos/eixo4/esquema"
+    },
+    "estado_detalhe": {
+      "type": "string",
+      "description": "o nome do estado intermediário"
+    },
+    "sustenta_aviso_saude_politica": {
+      "type": "boolean",
+      "description": "marca posta na triagem; o auditor lê todos os marcados, fora da amostra (D-038; l. 473)"
+    },
+    "versao_regra": {
+      "type": "string",
+      "pattern": "^mu-lambda-[0-9]+\\.[0-9]+$"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "not": {
+              "const": "não calculado"
+            }
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "versao_regra"
+        ],
+        "properties": {
+          "mu": {
+            "type": "number"
+          },
+          "lambda": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  ]
+}

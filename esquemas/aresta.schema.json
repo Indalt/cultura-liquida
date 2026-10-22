@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aresta.schema.json",
+  "title": "Aresta",
+  "description": "Aresta do §6 (l. 610): a ligação entre dois pontos do grafo, inclusive a de tensão (P29), com as Proposições que a sustentam, Z, W, μ e λ calculados por script. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "de",
+    "para",
+    "tipo",
+    "proposicoes",
+    "z",
+    "w",
+    "mu",
+    "lambda",
+    "estado",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/AR"
+    },
+    "de": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EL"
+    },
+    "para": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EL"
+    },
+    "tipo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tensao": {
+      "type": "boolean"
+    },
+    "proposicoes": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PR"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "z": {
+      "type": "string",
+      "minLength": 1
+    },
+    "w": {
+      "anyOf": [
+        {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CP"
+        },
+        {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+        }
+      ]
+    },
+    "mu": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "lambda": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "estado": {
+      "$ref": "valores-provisorios.json#/estrutura/eixos/eixo4/esquema"
+    },
+    "versao_regra": {
+      "type": "string",
+      "pattern": "^mu-lambda-[0-9]+\\.[0-9]+$"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "not": {
+              "const": "não calculado"
+            }
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "versao_regra"
+        ]
+      }
+    }
+  ]
+}

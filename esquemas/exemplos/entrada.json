@@ -1,0 +1,34 @@
+{
+  "id": "EN-900001",
+  "canal": "link ou documento trazido por Vicente",
+  "data_entrada": "2026-10-22",
+  "url_ou_arquivo": "https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
+  "estado": "quarentena",
+  "selo": "PENDENTE_JULGAMENTO",
+  "motivo_quarentena": "trecho ainda não localizado por script",
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+      "trecho_localizado"
+    ]
+  },
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "exemplo de esquema: o canal é ilustrativo",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "clb.schema.json",
+  "title": "CLB situada",
+  "description": "CLB do §6 (l. 605), identificada pelo termo enquanto ele não for ambíguo; lugares, grupos e períodos são dados dela, as situações (D-039; valores-provisorios: unidade_ficha). Um campo por critério de prática cultural da D-022, cada um com Evidência ou Falta (l. 114). Eixo 5 pelo registro de valores (padrão A-09 b, D-038, com a D-039). A ficha é a página desta CLB. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "termo",
+    "termos",
+    "situacoes",
+    "criterios",
+    "estado",
+    "protecao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CL"
+    },
+    "termo": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+    },
+    "termos": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "desdobrada_de": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TE"
+    },
+    "situacoes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "lugares",
+          "periodo",
+          "evidencias"
+        ],
+        "properties": {
+          "lugares": {
+            "type": "array",
+            "items": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/LU"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "grupo": {
+            "type": "string"
+          },
+          "periodo": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidencias": {
+            "type": "array",
+            "items": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "criterios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identidade_ou_memoria",
+        "reconhecimento_pelo_grupo",
+        "transmissao_entre_geracoes",
+        "recriacao"
+      ],
+      "properties": {
+        "identidade_ou_memoria": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "maxProperties": 1,
+          "properties": {
+            "evidencias": {
+              "type": "array",
+              "items": {
+                "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "falta": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          },
+          "description": "a Evidência que o atesta, ou a Falta: nunca recusa (princípio 10)"
+        },
+        "reconhecimento_pelo_grupo": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "maxProperties": 1,
+          "properties": {
+            "evidencias": {
+              "type": "array",
+              "items": {
+                "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "falta": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          },
+          "description": "a Evidência que o atesta, ou a Falta: nunca recusa (princípio 10)"
+        },
+        "transmissao_entre_geracoes": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "maxProperties": 1,
+          "properties": {
+            "evidencias": {
+              "type": "array",
+              "items": {
+                "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "falta": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          },
+          "description": "a Evidência que o atesta, ou a Falta: nunca recusa (princípio 10)"
+        },
+        "recriacao": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "maxProperties": 1,
+          "properties": {
+            "evidencias": {
+              "type": "array",
+              "items": {
+                "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "falta": {
+              "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+            }
+          },
+          "description": "a Evidência que o atesta, ou a Falta: nunca recusa (princípio 10)"
+        }
+      }
+    },
+    "elementos": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EL"
+      },
+      "uniqueItems": true
+    },
+    "estado": {
+      "$ref": "valores-provisorios.json#/valores/eixo5_estado_editorial/valor/esquema"
+    },
+    "ficha": {
+      "type": "string",
+      "pattern": "^acervo/fichas/CL-[0-9]{4,}\\.md$"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "habilidade": "contratos do §6 (esquemas/)",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "termo: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/termo.json",
+      "criterio": "dado real: o termo do piloto (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json); conceito e forma de busca são exemplo de esquema"
+    },
+    {
+      "nome": "termo: atestado sem abonação",
+      "espera": "reprova",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/erro-termo.json",
+      "criterio": "o contrato recusa: atestado sem abonação"
+    },
+    {
+      "nome": "proposicao: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "proposicao",
+      "entrada": "esquemas/exemplos/proposicao.json",
+      "criterio": "dado real (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json, registro_iphan, nível oficial); IDs da faixa de exemplos"
+    },
+    {
+      "nome": "proposicao: estado calculado sem μ",
+      "espera": "reprova",
+      "esquema": "proposicao",
+      "entrada": "esquemas/exemplos/erro-proposicao.json",
+      "criterio": "o contrato recusa: estado calculado sem μ"
+    },
+    {
+      "nome": "evidencia: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "evidencia",
+      "entrada": "esquemas/exemplos/evidencia.json",
+      "criterio": "exemplo de esquema sobre dado real (página do bem no BCR); os lugares de publicação e de pesquisa como Faltas do exemplo"
+    },
+    {
+      "nome": "evidencia: voz fora da lista",
+      "espera": "reprova",
+      "esquema": "evidencia",
+      "entrada": "esquemas/exemplos/erro-evidencia.json",
+      "criterio": "o contrato recusa: voz fora da lista"
+    },
+    {
+      "nome": "fonte: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "fonte",
+      "entrada": "esquemas/exemplos/fonte.json",
+      "criterio": "dado real (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json, registro_iphan, nível oficial). Nasceria candidata como Entrada (D-039); aqui só mostra o formato"
+    },
+    {
+      "nome": "fonte: nome de pessoa na referência",
+      "espera": "reprova",
+      "esquema": "fonte",
+      "entrada": "esquemas/exemplos/erro-fonte.json",
+      "criterio": "o contrato recusa: nome de pessoa na referência"
+    },
+    {
+      "nome": "ambiente: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "ambiente",
+      "entrada": "esquemas/exemplos/ambiente.json",
+      "criterio": "dado real (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json, ambientes); ID da faixa de exemplos"
+    },
+    {
+      "nome": "ambiente: ambiente minerando sem ficha de acesso",
+      "espera": "reprova",
+      "esquema": "ambiente",
+      "entrada": "esquemas/exemplos/erro-ambiente.json",
+      "criterio": "o contrato recusa: ambiente minerando sem ficha de acesso"
+    },
+    {
+      "nome": "consulta: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "consulta",
+      "entrada": "esquemas/exemplos/consulta.json",
+      "criterio": "exemplo de esquema sobre a consulta real de 17/10 (BDTD)"
+    },
+    {
+      "nome": "consulta: consulta de termo sem termos",
+      "espera": "reprova",
+      "esquema": "consulta",
+      "entrada": "esquemas/exemplos/erro-consulta.json",
+      "criterio": "o contrato recusa: consulta de termo sem termos"
+    },
+    {
+      "nome": "recorte: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "recorte",
+      "entrada": "esquemas/exemplos/recorte.json",
+      "criterio": "dado real: BDTD, 'cajuína', AllFields, total informado 25, HTTP 200, 17/10 (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json)"
+    },
+    {
+      "nome": "recorte: sem total informado e dado como percorrido",
+      "espera": "reprova",
+      "esquema": "recorte",
+      "entrada": "esquemas/exemplos/erro-recorte.json",
+      "criterio": "o contrato recusa: sem total informado e dado como percorrido"
+    },
+    {
+      "nome": "entrada: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "entrada",
+      "entrada": "esquemas/exemplos/entrada.json",
+      "criterio": "exemplo de esquema: o canal é ilustrativo"
+    },
+    {
+      "nome": "entrada: quarentena sem o selo",
+      "espera": "reprova",
+      "esquema": "entrada",
+      "entrada": "esquemas/exemplos/erro-entrada.json",
+      "criterio": "o contrato recusa: quarentena sem o selo"
+    },
+    {
+      "nome": "trecho: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "trecho",
+      "entrada": "esquemas/exemplos/trecho.json",
+      "criterio": "dado real (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json): extraído por leitor de página, a conferir no original; por isso 'não localizado' até o localizar_trecho.py (bloco 3)"
+    },
+    {
+      "nome": "trecho: dado como localizado sem hash nem grau",
+      "espera": "reprova",
+      "esquema": "trecho",
+      "entrada": "esquemas/exemplos/erro-trecho.json",
+      "criterio": "o contrato recusa: dado como localizado sem hash nem grau"
+    },
+    {
+      "nome": "clb: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "clb",
+      "entrada": "esquemas/exemplos/clb.json",
+      "criterio": "exemplo de esquema sobre o piloto (cajuína, PI); os critérios em Falta são do exemplo"
+    },
+    {
+      "nome": "clb: critério recusado em vez de Falta",
+      "espera": "reprova",
+      "esquema": "clb",
+      "entrada": "esquemas/exemplos/erro-clb.json",
+      "criterio": "o contrato recusa: critério recusado em vez de Falta"
+    },
+    {
+      "nome": "elemento: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "elemento",
+      "entrada": "esquemas/exemplos/elemento.json",
+      "criterio": "exemplo de esquema; W não captada como Falta (D-018)"
+    },
+    {
+      "nome": "elemento: W completada com texto em vez de Compreensão local ou Falta",
+      "espera": "reprova",
+      "esquema": "elemento",
+      "entrada": "esquemas/exemplos/erro-elemento.json",
+      "criterio": "o contrato recusa: W completada com texto em vez de Compreensão local ou Falta"
+    },
+    {
+      "nome": "insumo-x: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "insumo-x",
+      "entrada": "esquemas/exemplos/insumo-x.json",
+      "criterio": "exemplo de esquema; o folheto Embrapa Documentos 123 liga o insumo ao processo (mapa de 17/10); status botânico-cultural em Falta, sem inferir"
+    },
+    {
+      "nome": "insumo-x: status e Falta ao mesmo tempo",
+      "espera": "reprova",
+      "esquema": "insumo-x",
+      "entrada": "esquemas/exemplos/erro-insumo-x.json",
+      "criterio": "o contrato recusa: status e Falta ao mesmo tempo"
+    },
+    {
+      "nome": "processo: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "processo",
+      "entrada": "esquemas/exemplos/processo.json",
+      "criterio": "exemplo de esquema"
+    },
+    {
+      "nome": "processo: sem nome",
+      "espera": "reprova",
+      "esquema": "processo",
+      "entrada": "esquemas/exemplos/erro-processo.json",
+      "criterio": "o contrato recusa: sem nome"
+    },
+    {
+      "nome": "compreensao-local: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "compreensao-local",
+      "entrada": "esquemas/exemplos/compreensao-local.json",
+      "criterio": "exemplo de esquema: sem a fala de quem pratica, não ancora W"
+    },
+    {
+      "nome": "compreensao-local: atestada sem Evidência",
+      "espera": "reprova",
+      "esquema": "compreensao-local",
+      "entrada": "esquemas/exemplos/erro-compreensao-local.json",
+      "criterio": "o contrato recusa: atestada sem Evidência"
+    },
+    {
+      "nome": "transformacao: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "transformacao",
+      "entrada": "esquemas/exemplos/transformacao.json",
+      "criterio": "exemplo de esquema"
+    },
+    {
+      "nome": "transformacao: por interação sem dizer com quem",
+      "espera": "reprova",
+      "esquema": "transformacao",
+      "entrada": "esquemas/exemplos/erro-transformacao.json",
+      "criterio": "o contrato recusa: por interação sem dizer com quem"
+    },
+    {
+      "nome": "aresta: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "aresta",
+      "entrada": "esquemas/exemplos/aresta.json",
+      "criterio": "exemplo de esquema"
+    },
+    {
+      "nome": "aresta: μ fora de [0, 1]",
+      "espera": "reprova",
+      "esquema": "aresta",
+      "entrada": "esquemas/exemplos/erro-aresta.json",
+      "criterio": "o contrato recusa: μ fora de [0, 1]"
+    },
+    {
+      "nome": "lugar: exemplo que passa (dado real)",
+      "espera": "passa",
+      "esquema": "lugar",
+      "entrada": "esquemas/exemplos/lugar.json",
+      "criterio": "dado real: abrangência estadual (PI) do registro (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json); sem geocódigo, que não foi conferido"
+    },
+    {
+      "nome": "lugar: território tradicional sem fonte que o nomeie",
+      "espera": "reprova",
+      "esquema": "lugar",
+      "entrada": "esquemas/exemplos/erro-lugar.json",
+      "criterio": "o contrato recusa: território tradicional sem fonte que o nomeie"
+    },
+    {
+      "nome": "pessoa: exemplo que passa (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "pessoa",
+      "entrada": "esquemas/exemplos/pessoa.json",
+      "criterio": "exemplo de esquema: nenhuma pessoa real"
+    },
+    {
+      "nome": "pessoa: nome no registro",
+      "espera": "reprova",
+      "esquema": "pessoa",
+      "entrada": "esquemas/exemplos/erro-pessoa.json",
+      "criterio": "o contrato recusa: nome no registro"
+    },
+    {
+      "nome": "valores-provisorios: o registro real passa",
+      "espera": "passa",
+      "esquema": "valores-provisorios",
+      "entrada": "esquemas/valores-provisorios.json",
+      "criterio": "o registro único do bloco 2"
+    },
+    {
+      "nome": "valores-provisorios: valor sem a linha da Fundação que o permite",
+      "espera": "reprova",
+      "esquema": "valores-provisorios",
+      "entrada": "esquemas/exemplos/erro-valores-provisorios.json",
+      "criterio": "cada valor diz a linha da Fundação"
+    }
+  ]
+}

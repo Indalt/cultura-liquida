@@ -2,8 +2,19 @@
   "habilidade": "consulta",
   "rodada": "B",
   "casos": [
-    {"nome": "'cauim' em quatro bases + bola de neve do Boletim Goeldi", "espera": "pendente",
-     "entrada": ".claude/skills/consulta/exemplos/cauim-totais.json",
-     "criterio": "exemplo real pronto; validador pendente do contrato de Consulta (Passo 1). Aceitação: total informado e data por base; total visto nunca maior que o informado; 'não exaurido' até tudo ser visto e a bola de neve não trazer nada novo; país e idioma só anotam"}
+    {
+      "nome": "'cauim' em quatro bases + bola de neve do Boletim Goeldi",
+      "espera": "passa",
+      "esquema": "estado-consulta",
+      "entrada": ".claude/skills/consulta/exemplos/cauim-totais.json",
+      "criterio": "exemplo real (15/10): total informado e data por base; total visto nulo enquanto não se paginou; 'não exaurido'; a bola de neve fica como registro de 15/10 (na fase 1 não se segue)"
+    },
+    {
+      "nome": "total_visto maior que total_informado sem explicação",
+      "espera": "reprova",
+      "esquema": "estado-consulta",
+      "entrada": ".claude/skills/consulta/exemplos/erro-visto-maior-que-informado.json",
+      "criterio": "o total visto nunca passa do informado sem explicação (regra entre campos de scripts/validar.py; brief, bloco 2)"
+    }
   ]
 }

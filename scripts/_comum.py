@@ -25,12 +25,51 @@ def carregar_json(caminho: Path | str):
 
 
 def carregar_esquema(nome: str) -> dict:
-    """Aceita 'log', 'log.schema.json' ou um caminho."""
+    """Aceita 'log', 'log.schema.json' ou um caminho. Os $ref para outro arquivo de
+    esquemas/ (ex.: "comum.schema.json#/$defs/data" ou "valores-provisorios.json#/valores/...")
+    são resolvidos na carga e postos no lugar: o registro de valores provisórios é lido
+    daqui, sem cópia nos esquemas (brief, bloco 2)."""
     p = Path(nome)
     if not p.exists():
         base = nome if nome.endswith(".schema.json") else f"{nome}.schema.json"
         p = ESQUEMAS / base
-    return carregar_json(p)
+    return _embutir(carregar_json(p), None, p.parent)
+
+
+def carregar_valores() -> dict:
+    """O registro único de valores provisórios (esquemas/valores-provisorios.json)."""
+    return carregar_json(ESQUEMAS / "valores-provisorios.json")
+
+
+def _ponteiro(raiz, ponteiro: str):
+    no = raiz
+    for parte in [x for x in ponteiro.lstrip("/").split("/") if x]:
+        no = no[parte.replace("~1", "/").replace("~0", "~")]
+    return no
+
+
+def _embutir(no, raiz_externa, pasta: Path, arq_externo: str = "", vistos: tuple = ()):
+    """Troca cada $ref externo pelo conteúdo apontado. Dentro de um pedaço vindo de
+    outro arquivo, também os $ref locais (#/...) desse arquivo. Os $ref locais do
+    esquema principal ficam como estão."""
+    if isinstance(no, list):
+        return [_embutir(x, raiz_externa, pasta, arq_externo, vistos) for x in no]
+    if not isinstance(no, dict):
+        return no
+    ref = no.get("$ref")
+    if isinstance(ref, str) and (not ref.startswith("#") or raiz_externa is not None):
+        arq, _, ponteiro = ref.partition("#")
+        if arq:
+            raiz = carregar_json(pasta / arq)
+        else:
+            raiz, arq = raiz_externa, arq_externo
+        chave = f"{arq}#{ponteiro}"
+        if chave in vistos:
+            raise ValueError(f"$ref circular: {chave}")
+        alvo = _embutir(_ponteiro(raiz, ponteiro), raiz, pasta, arq, vistos + (chave,))
+        resto = {k: _embutir(v, raiz_externa, pasta, arq_externo, vistos) for k, v in no.items() if k != "$ref"}
+        return {"allOf": [alvo, resto]} if resto else alvo
+    return {k: _embutir(v, raiz_externa, pasta, arq_externo, vistos) for k, v in no.items()}
 
 
 def validar_objeto(obj, esquema: dict, minimo: bool = False) -> list[str]:
@@ -54,7 +93,8 @@ def validar_objeto(obj, esquema: dict, minimo: bool = False) -> list[str]:
 class _MiniValidador:
     """Validador mínimo (subconjunto do JSON Schema 2020-12): type, enum, const,
     required, properties, additionalProperties=false, items, minItems, minLength,
-    minimum, pattern, $ref local, allOf, anyOf, oneOf, not, if/then/else."""
+    minimum, maximum, minProperties, maxProperties, uniqueItems, pattern, $ref local
+    (os externos chegam já embutidos por carregar_esquema), allOf, anyOf, oneOf, not, if/then/else."""
 
     TIPOS = {
         "object": dict, "array": list, "string": str, "boolean": bool,
@@ -106,6 +146,8 @@ class _MiniValidador:
         if isinstance(obj, (int, float)) and not isinstance(obj, bool):
             if "minimum" in esq and obj < esq["minimum"]:
                 erros.append(f"{c}: menor que {esq['minimum']}")
+            if "maximum" in esq and obj > esq["maximum"]:
+                erros.append(f"{c}: maior que {esq['maximum']}")
         if isinstance(obj, dict):
             for r in esq.get("required", []):
                 if r not in obj:
@@ -116,9 +158,17 @@ class _MiniValidador:
                     self.validar(v, props[k], f"{caminho}/{k}", erros)
                 elif esq.get("additionalProperties") is False:
                     erros.append(f"{c}: campo não previsto '{k}'")
+                elif isinstance(esq.get("additionalProperties"), dict):
+                    self.validar(v, esq["additionalProperties"], f"{caminho}/{k}", erros)
+            if len(obj) < esq.get("minProperties", 0):
+                erros.append(f"{c}: campos de menos")
+            if "maxProperties" in esq and len(obj) > esq["maxProperties"]:
+                erros.append(f"{c}: campos demais")
         if isinstance(obj, list):
             if len(obj) < esq.get("minItems", 0):
                 erros.append(f"{c}: itens de menos")
+            if esq.get("uniqueItems") and len({json.dumps(x, sort_keys=True) for x in obj}) < len(obj):
+                erros.append(f"{c}: itens repetidos")
             if "items" in esq:
                 for i, v in enumerate(obj):
                     self.validar(v, esq["items"], f"{caminho}/{i}", erros)

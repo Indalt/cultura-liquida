@@ -1,0 +1,25 @@
+{
+  "id": "TR-900001",
+  "fonte": "FO-900001",
+  "texto_exato": "No Piauí, oferecer uma garrafa de cajuína a uma visita é um gesto que expressa acolhimento, respeito e identidade.",
+  "antes": "",
+  "depois": "",
+  "localizador": "https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
+  "origem_texto": "fonte",
+  "estado": "não localizado",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "dado real (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json): extraído por leitor de página, a conferir no original; por isso 'não localizado' até o localizar_trecho.py (bloco 3)",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "TE-900001",
+  "conceito": "bebida não alcoólica do suco clarificado do caju, cozido na garrafa (a definição se constrói das abonações; esta é provisória do exemplo)",
+  "designacoes": [
+    "cajuína"
+  ],
+  "variantes": [],
+  "formas_de_busca": [
+    "cajuina"
+  ],
+  "abonacoes": [],
+  "estado": "candidato",
+  "nota": "dado real: o termo do piloto (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json); conceito e forma de busca são exemplo de esquema",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

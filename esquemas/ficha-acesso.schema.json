@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ficha-acesso.schema.json",
+  "title": "Ficha de acesso de um Ambiente",
+  "description": "A ficha de acesso (§5.2, l. 418; §6, l. 590), no formato da habilidade ficha-de-acesso: todo campo preenchido ou 'não conferido'; o teste com data, pedido e resposta literal. Bloqueio anti-robô (403, captcha, verificação de navegador) nunca se contorna: a decisão é Falta com via humana, nunca 'aceito'. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "nome",
+    "tipo",
+    "acesso",
+    "como_buscar",
+    "endpoint",
+    "link_permanente",
+    "texto_integral",
+    "termos",
+    "robots",
+    "cobertura",
+    "uso",
+    "nivel",
+    "teste",
+    "decisao"
+  ],
+  "properties": {
+    "fonte_do_exemplo": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tipo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acesso": {
+      "type": "string",
+      "minLength": 1
+    },
+    "como_buscar": {
+      "type": "string",
+      "minLength": 1
+    },
+    "endpoint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "link_permanente": {
+      "type": "string",
+      "minLength": 1
+    },
+    "texto_integral": {
+      "type": "string",
+      "minLength": 1
+    },
+    "termos": {
+      "type": "string",
+      "minLength": 1
+    },
+    "robots": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cobertura": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uso": {
+      "enum": [
+        "monitoramento",
+        "escavação",
+        "ambos"
+      ]
+    },
+    "nivel": {
+      "$ref": "comum.schema.json#/$defs/nivel"
+    },
+    "teste": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "data",
+        "pedido",
+        "resposta"
+      ],
+      "properties": {
+        "data": {
+          "$ref": "comum.schema.json#/$defs/data"
+        },
+        "pedido": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resposta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observacao": {
+          "type": "string"
+        }
+      }
+    },
+    "decisao": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "teste": {
+            "properties": {
+              "resposta": {
+                "pattern": "(?i)(403|captcha|verifica[çc][ãa]o de navegador)"
+              }
+            }
+          }
+        },
+        "required": [
+          "teste"
+        ]
+      },
+      "then": {
+        "properties": {
+          "decisao": {
+            "pattern": "^falta"
+          }
+        }
+      }
+    }
+  ]
+}

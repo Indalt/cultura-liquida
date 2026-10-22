@@ -5,7 +5,7 @@ description: Monta ou atualiza a ficha de acesso de um ambiente de busca do proj
 
 # ficha-de-acesso
 
-**Versão do harness:** 0.1.1 · **Quem usa:** rastreador · **Rodada:** B
+**Versão do harness:** 0.1.2 · **Quem usa:** rastreador · **Rodada:** B
 
 ## Objetivo
 Saber, antes de buscar, **como** cada ambiente pode ser lido, o que ele permite e o que respondeu no último teste, para não repetir erro nem contornar proteção.
@@ -16,7 +16,7 @@ Saber, antes de buscar, **como** cada ambiente pode ser lido, o que ele permite 
 
 ## Entradas e saídas
 - **Entrada:** nome do ambiente e o que já se sabe: o Anexo E da Fundação (ambientes candidatos) e a ficha em `ambientes/`, que é a fonte de trabalho a partir do bloco 2 do brief; o catálogo da pesquisa (`trilhas/2026-10-15_pesquisa/indice.md`, seção 1) fica como trilha.
-- **Saída:** uma ficha com os campos do catálogo da pesquisa: `nome`, `tipo`, `acesso`, `como_buscar`, `endpoint`, `link_permanente`, `texto_integral`, `termos`, `robots`, `cobertura`, `uso` (monitoramento, escavação ou ambos), `nivel`, `teste` (data, pedido, resposta HTTP, observação). **Esquema:** pendente; o contrato de Ambiente (§6) é entrega do Passo 1. Até lá, valem os critérios de aceitação abaixo.
+- **Saída:** uma ficha com os campos do catálogo da pesquisa: `nome`, `tipo`, `acesso`, `como_buscar`, `endpoint`, `link_permanente`, `texto_integral`, `termos`, `robots`, `cobertura`, `uso` (monitoramento, escavação ou ambos), `nivel`, `teste` (data, pedido, resposta HTTP, observação). **Esquema:** `esquemas/ficha-acesso.schema.json` (a ficha; com 403, captcha ou verificação de navegador, a decisão tem de começar por "falta"), dentro do Ambiente de `esquemas/ambiente.schema.json`, que mora em `ambientes/<id>.json`. Validar: `.venv/Scripts/python.exe scripts/validar.py ficha-acesso <arquivo>`.
 
 ## Passos
 1. Leia a linha do ambiente no Anexo E (`grep -n "<nome>" 00_Fundacao_Cultura_Liquida.md`) e a ficha em `ambientes/`, se houver; na falta dela, o índice da pesquisa.
@@ -54,8 +54,10 @@ Não contorna proteção, não coleta conteúdo, não usa instâncias públicas 
 - [exemplos/hemeroteca-403.json](exemplos/hemeroteca-403.json): a Hemeroteca Digital Brasileira recusou o leitor automático (403) → via humana.
 - [exemplos/bdtd-api.json](exemplos/bdtd-api.json): a API do VuFind da BDTD funcionando, sem cadastro.
 - [exemplos/querido-diario-instavel.json](exemplos/querido-diario-instavel.json): a API do Querido Diário funcionou em 3 de 5 chamadas.
-- Casos (validador pendente): [exemplos/casos.json](exemplos/casos.json).
+- [exemplos/erro-403-aceito.json](exemplos/erro-403-aceito.json): a ficha da Hemeroteca com a decisão trocada para "aceito", que reprova.
+- Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.1.2 (22/10/2026, K-104): esquema da ficha e do Ambiente (bloco 2); os três exemplos reais validam; caso que reprova: 403 com decisão "aceito".
 - 0.1.1 (22/10/2026, K-101): entrada pelo Anexo E e por `ambientes/`; `robots` e `cobertura` nos três exemplos, com "não conferido" onde faltava dado; Ambientes e alcance no log.
 - 0.1.0 (16/10/2026): papel, formato, passos e exemplos reais; esquema pendente do Passo 1.

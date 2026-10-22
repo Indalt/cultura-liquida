@@ -1,0 +1,21 @@
+{
+  "id": "AR-900001",
+  "de": "EL-900001",
+  "para": "EL-900002",
+  "tipo": "tensão",
+  "tensao": true,
+  "proposicoes": [
+    "PR-900001"
+  ],
+  "z": "não conferido",
+  "w": "F-900004",
+  "mu": 1.4,
+  "lambda": null,
+  "estado": "não calculado",
+  "nota": "caso que reprova: μ fora de [0, 1]",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

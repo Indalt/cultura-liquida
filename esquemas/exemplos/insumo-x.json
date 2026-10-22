@@ -1,0 +1,13 @@
+{
+  "id": "IN-900001",
+  "nome": "pedúnculo do caju",
+  "tipo": "fruto",
+  "falta_status": "F-900005",
+  "proposicoes": [],
+  "nota": "exemplo de esquema; o folheto Embrapa Documentos 123 liga o insumo ao processo (mapa de 17/10); status botânico-cultural em Falta, sem inferir",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

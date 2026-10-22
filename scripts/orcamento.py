@@ -5,14 +5,20 @@ Regras:
   2. não abrir lote se a folga (teto - consumido) for menor que 2x o maior lote já medido.
 
 Uso:
-    python scripts/orcamento.py --teto 600000 --medidos 81852 77351 --estimativa 60000
-    (--medidos: consumo de cada agente já rodado na janela; vazio na primeira vez)
+    python scripts/orcamento.py --teto 300000 --medidos 81852 77351 --estimativa 60000
+    (--medidos: consumo de cada agente já rodado na semana; vazio na primeira vez)
+    Sem --teto e sem --estimativa, valem os do registro de valores provisórios
+    (esquemas/valores-provisorios.json, orcamento): 300 mil por semana e 60 mil.
 Código 0 = PODE abrir; 1 = PARAR (com o estado salvo).
 """
 from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _comum import carregar_valores  # noqa: E402
 
 
 def conta(teto: int, medidos: list[int], estimativa: int) -> tuple[bool, list[str]]:
@@ -36,9 +42,10 @@ def conta(teto: int, medidos: list[int], estimativa: int) -> tuple[bool, list[st
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--teto", type=int, default=600_000)
+    orc = carregar_valores()["valores"]["orcamento"]["valor"]  # registro de valores provisórios
+    ap.add_argument("--teto", type=int, default=orc["teto_semanal"])
     ap.add_argument("--medidos", type=int, nargs="*", default=[])
-    ap.add_argument("--estimativa", type=int, default=60_000)
+    ap.add_argument("--estimativa", type=int, default=orc["estimativa_sem_medida"])
     a = ap.parse_args()
     pode, linhas = conta(a.teto, a.medidos, a.estimativa)
     for l in linhas:

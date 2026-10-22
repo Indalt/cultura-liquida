@@ -1,0 +1,16 @@
+{
+  "codigo": "P-900001",
+  "papeis": [
+    "detentor ou mestre",
+    "quem fala no trecho"
+  ],
+  "forma_atribuicao": "anônimo",
+  "nivel_colaborador": "anônimo",
+  "consentimento": "referência fora do Git (exemplo)",
+  "nota": "exemplo de esquema: nenhuma pessoa real",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

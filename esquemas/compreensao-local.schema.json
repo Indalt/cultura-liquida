@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "compreensao-local.schema.json",
+  "title": "Compreensão local (W)",
+  "description": "Compreensão local do §6 (l. 608): o modo como a prática é entendida no lugar, como saber comum (D-018). Só ancora W quando atestada como prática comum, com a fala de quem pratica; a tradução vem depois da compreensão local. Os valores nascem dos dados (princípio 7). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "designacao_local",
+    "lugar",
+    "comunidade",
+    "periodo",
+    "evidencias",
+    "atestada_pratica_comum",
+    "protecao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CP"
+    },
+    "designacao_local": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lugar": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/LU"
+    },
+    "comunidade": {
+      "type": "string",
+      "minLength": 1
+    },
+    "periodo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidencias": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EV"
+      },
+      "uniqueItems": true
+    },
+    "atestada_pratica_comum": {
+      "type": "boolean"
+    },
+    "traducao": {
+      "type": "string"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "atestada_pratica_comum": {
+            "const": true
+          }
+        },
+        "required": [
+          "atestada_pratica_comum"
+        ]
+      },
+      "then": {
+        "properties": {
+          "evidencias": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

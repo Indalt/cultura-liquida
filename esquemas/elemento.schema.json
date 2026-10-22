@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "elemento.schema.json",
+  "title": "Elemento de prática",
+  "description": "Elemento do §6 (l. 606): cada ponto do grafo 4D, com X (Insumos), Y (Processos), Z (período) e W (uma Compreensão local, ou a Falta quando não captada; D-018). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "clb",
+    "x",
+    "y",
+    "z",
+    "w",
+    "proposicoes",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EL"
+    },
+    "clb": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CL"
+    },
+    "x": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/IN"
+      },
+      "uniqueItems": true
+    },
+    "y": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PC"
+      },
+      "uniqueItems": true
+    },
+    "z": {
+      "type": "string",
+      "minLength": 1
+    },
+    "w": {
+      "anyOf": [
+        {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/CP"
+        },
+        {
+          "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+        }
+      ]
+    },
+    "proposicoes": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/PR"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  }
+}

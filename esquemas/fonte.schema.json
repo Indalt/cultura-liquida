@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fonte.schema.json",
+  "title": "Fonte",
+  "description": "Fonte do §6 (l. 597). A referência completa vai sem nome de pessoa (valores-provisorios: fonte_no_git): a autoria só por código opaco. Toda fonte, inclusive a institucional, nasce candidata (Entrada) e só vira Fonte em acervo/ pela regra, pelo portão e pela segunda leitura (D-039; l. 473); a perspectiva diz de onde ela fala e não pontua. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "referencia",
+    "tipo_evidencia",
+    "data_fonte",
+    "url",
+    "data_acesso",
+    "perspectiva",
+    "deriva_de",
+    "protecao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/FO"
+    },
+    "referencia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "titulo",
+        "instituicao",
+        "ano",
+        "tipo",
+        "link_permanente"
+      ],
+      "properties": {
+        "titulo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "instituicao": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ano": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "tipo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "link_permanente": {
+          "$ref": "comum.schema.json#/$defs/url"
+        },
+        "autoria": {
+          "type": "array",
+          "items": {
+            "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/P"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "tipo_evidencia": {
+      "enum": [
+        "escrito publicado, de arquivo ou oficial",
+        "oralidade registrada por pesquisa",
+        "depoimento gravado em acervo",
+        "imagem ou foto",
+        "objeto ou recipiente",
+        "relato de contribuinte",
+        "entrevista feita pelo projeto",
+        "observação de campo"
+      ]
+    },
+    "data_fonte": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "$ref": "comum.schema.json#/$defs/url"
+    },
+    "wayback": {
+      "type": "string",
+      "description": "a cópia no Wayback (URL), ou 'não feita'"
+    },
+    "data_acesso": {
+      "$ref": "comum.schema.json#/$defs/data"
+    },
+    "perspectiva": {
+      "type": "string",
+      "minLength": 1,
+      "description": "de onde a fonte fala: repórter, médico, folclorista, pesquisador, instituição, anúncio, quem pratica… (D-017)"
+    },
+    "deriva_de": {
+      "type": "array",
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/FO"
+      },
+      "uniqueItems": true
+    },
+    "correcao": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fonte",
+          "o_que_corrige"
+        ],
+        "properties": {
+          "fonte": {
+            "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/FO"
+          },
+          "o_que_corrige": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "entrada": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/EN"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  }
+}

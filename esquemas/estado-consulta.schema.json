@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "estado-consulta.schema.json",
+  "title": "Estado de uma consulta (saída da habilidade consulta)",
+  "description": "A saída da habilidade consulta: por termo e data, o que cada ambiente informou e o que se viu, a saturação e a próxima ação. Cada linha de 'consultas' vira, no acervo, o estado de um Recorte (recorte.schema.json). O total visto nunca passa do informado sem explicação (regra conferida por scripts/validar.py); 'exaurido' só quando tudo o que cada consulta informa foi visto. Bola de neve só na fase 2 (o exemplo de 15/10 a traz como registro). Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "termo",
+    "data",
+    "consultas",
+    "saturacao",
+    "proxima_acao"
+  ],
+  "properties": {
+    "fonte_do_exemplo": {
+      "type": "string"
+    },
+    "nota": {
+      "type": "string"
+    },
+    "termo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data": {
+      "$ref": "comum.schema.json#/$defs/data"
+    },
+    "consultas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ambiente",
+          "consulta",
+          "total_informado",
+          "total_visto",
+          "nivel"
+        ],
+        "properties": {
+          "ambiente": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consulta": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recorte": {
+            "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/RC"
+          },
+          "total_informado": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "total_visto": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "explicacao_total_visto": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nivel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cursor": {
+            "type": [
+              "string",
+              "integer",
+              "null"
+            ]
+          },
+          "erros": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "resultados_novos": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "IDs e links, nunca texto integral"
+          },
+          "observacao": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "bola_de_neve": {
+      "type": "object"
+    },
+    "saturacao": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proxima_acao": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

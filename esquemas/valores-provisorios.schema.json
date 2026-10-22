@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "valores-provisorios.schema.json",
+  "title": "Registro de valores provisórios",
+  "description": "Formato de esquemas/valores-provisorios.json (brief, bloco 2). A estrutura é fixada (D-038); cada valor traz a linha da Fundação que o permite, a decisão que o cobre, quem o usa e quando se calibra. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "required": [
+    "versao",
+    "data",
+    "cartao",
+    "descricao",
+    "estrutura",
+    "valores"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "versao": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "data": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "cartao": {
+      "type": "string",
+      "minLength": 1
+    },
+    "descricao": {
+      "type": "string",
+      "minLength": 1
+    },
+    "estrutura": {
+      "type": "object",
+      "required": [
+        "base",
+        "eixos",
+        "estados_do_modelo",
+        "selo_quarentena",
+        "versao_da_regra",
+        "quem_propoe_nao_aprova",
+        "protecao_e_origem"
+      ],
+      "properties": {
+        "eixos": {
+          "type": "object",
+          "required": [
+            "eixo1",
+            "eixo2",
+            "eixo3",
+            "eixo4"
+          ],
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "nome",
+              "onde",
+              "quem_define",
+              "esquema"
+            ]
+          }
+        }
+      }
+    },
+    "valores": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "valor",
+          "linha_fundacao",
+          "base",
+          "quem_usa",
+          "calibracao"
+        ],
+        "properties": {
+          "linha_fundacao": {
+            "type": "string",
+            "minLength": 1
+          },
+          "base": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quem_usa": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "calibracao": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

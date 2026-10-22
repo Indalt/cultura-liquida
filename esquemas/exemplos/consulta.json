@@ -1,0 +1,16 @@
+{
+  "id": "CO-900001",
+  "nome": "cajuína",
+  "tipo": "termo",
+  "termos": [
+    "TE-900001"
+  ],
+  "variantes": [],
+  "traducao": "ambientes/traducao-consultas.json#CO-900001",
+  "nota": "exemplo de esquema sobre a consulta real de 17/10 (BDTD)",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

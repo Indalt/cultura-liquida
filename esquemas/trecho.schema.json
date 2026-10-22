@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "trecho.schema.json",
+  "title": "Trecho",
+  "description": "Trecho do §6 (l. 598): a passagem literal, com o seletor de citação da W3C Web Annotation (exato, antes, depois), o localizador, o hash do texto lido (regra de normalização com versão) e o grau de semelhança. Abaixo do limiar, Falta 'trecho não verificável por máquina', dita e nunca completada (leitura A-06, D-038). Transcrição por IA, marcada e com o link da imagem da página. Nunca texto integral da fonte (l. 100). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "fonte",
+    "texto_exato",
+    "antes",
+    "depois",
+    "localizador",
+    "origem_texto",
+    "estado",
+    "protecao",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/TR"
+    },
+    "fonte": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/FO"
+    },
+    "texto_exato": {
+      "type": "string",
+      "minLength": 1
+    },
+    "antes": {
+      "type": "string"
+    },
+    "depois": {
+      "type": "string"
+    },
+    "localizador": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "data_conferencia": {
+      "$ref": "comum.schema.json#/$defs/data"
+    },
+    "origem_texto": {
+      "enum": [
+        "fonte",
+        "wayback",
+        "transcrição por IA"
+      ]
+    },
+    "link_imagem": {
+      "$ref": "comum.schema.json#/$defs/url"
+    },
+    "grau_semelhanca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "versao_normalizacao": {
+      "type": "string",
+      "pattern": "^normalizacao-[0-9]+\\.[0-9]+$"
+    },
+    "estado": {
+      "$ref": "valores-provisorios.json#/estrutura/eixos/eixo2/esquema"
+    },
+    "falta": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/F"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "origem_texto": {
+            "const": "transcrição por IA"
+          }
+        },
+        "required": [
+          "origem_texto"
+        ]
+      },
+      "then": {
+        "required": [
+          "link_imagem"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "const": "localizado"
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "hash",
+          "data_conferencia",
+          "grau_semelhanca",
+          "versao_normalizacao"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "estado": {
+            "const": "não verificável por máquina"
+          }
+        },
+        "required": [
+          "estado"
+        ]
+      },
+      "then": {
+        "required": [
+          "falta"
+        ]
+      }
+    }
+  ]
+}

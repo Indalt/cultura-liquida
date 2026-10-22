@@ -1,0 +1,15 @@
+{
+  "id": "AM-900001",
+  "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
+  "tipo": "documento oficial",
+  "via_protocolo": "web aberta (WordPress com Tainacan); API e link permanente por bem não conferidos",
+  "estado_escavacao": "minerando",
+  "estado_monitoramento": "não iniciado",
+  "ultima_visita": "2026-10-17",
+  "nota": "caso que reprova: ambiente minerando sem ficha de acesso",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

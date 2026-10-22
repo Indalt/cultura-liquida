@@ -79,6 +79,13 @@
 - **Não feito:** nenhuma parada; nada "não conferido" novo além dos dois `robots` e da `cobertura` da Hemeroteca nos exemplos.
 - **Consumo:** 73.464 tokens de agentes (auditor).
 
+## Conversa do cartão K-104 (bloco 2) — 22/10/2026 (quarta)
+
+- **Autorização de Vicente, fala original:** "Autorizo o cartão K-104 (Bloco 2 do brief de execuções: contratos do §6 e valores provisórios). Retome pelo quadro, mova o cartão e pare nas paradas do brief; na parada (c), vale o padrão: a tabela código → nome numa pasta da minha máquina, fora da pasta versionada. Opus 5.5, esforço médio. Uso atual: 34%."
+- **Uso da conta no início:** 34%.
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (fc0c5c3), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 40 · FALHA 0 · PENDENTE 9; cartão movido para Fazendo. A ferramenta Agent desta conversa lista avaliador, arquivista e campo-de-acao (pendência do K-101 conferida).
+- **Parada (c) do bloco 2:** não acontece; vale o padrão dado por Vicente na autorização.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |

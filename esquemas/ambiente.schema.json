@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ambiente.schema.json",
+  "title": "Ambiente",
+  "description": "Ambiente do §6 (l. 590): o lugar onde se busca, com a ficha de acesso e os dois eixos de estado. A escavação anda sempre por Recorte; o monitoramento nunca se exaure. Mora em ambientes/<id>.json (layout). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "nome",
+    "tipo",
+    "via_protocolo",
+    "estado_escavacao",
+    "estado_monitoramento",
+    "origem_registro"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/AM"
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tipo": {
+      "enum": [
+        "hemeroteca",
+        "periódico científico",
+        "repositório de teses",
+        "revista",
+        "jornal",
+        "blog",
+        "substack",
+        "rede social",
+        "documento oficial",
+        "acervo pessoal",
+        "outro"
+      ]
+    },
+    "tipo_detalhe": {
+      "type": "string"
+    },
+    "via_protocolo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ficha_de_acesso": {
+      "$ref": "ficha-acesso.schema.json"
+    },
+    "pegadas_e_vacuos": {
+      "type": "string",
+      "description": "caminho do arquivo de pegadas e vácuos (P89)"
+    },
+    "estado_escavacao": {
+      "enum": [
+        "proposto",
+        "mapeando",
+        "minerando",
+        "exaurido"
+      ]
+    },
+    "estado_monitoramento": {
+      "enum": [
+        "não iniciado",
+        "ativo",
+        "pausado"
+      ]
+    },
+    "ultima_visita": {
+      "$ref": "comum.schema.json#/$defs/data"
+    },
+    "linha_anexo_e": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "a linha do Anexo E de onde o ambiente foi semeado"
+    },
+    "origem_registro": {
+      "$ref": "comum.schema.json#/$defs/origem_registro"
+    },
+    "retirado": {
+      "type": "boolean"
+    },
+    "fundido_em": {
+      "type": "string",
+      "pattern": "^[A-Z]{1,2}-[0-9]{4,}$"
+    },
+    "nota": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "tipo": {
+            "const": "outro"
+          }
+        },
+        "required": [
+          "tipo"
+        ]
+      },
+      "then": {
+        "required": [
+          "tipo_detalhe"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "estado_escavacao": {
+            "enum": [
+              "mapeando",
+              "minerando",
+              "exaurido"
+            ]
+          }
+        },
+        "required": [
+          "estado_escavacao"
+        ]
+      },
+      "then": {
+        "required": [
+          "ficha_de_acesso"
+        ]
+      }
+    }
+  ]
+}

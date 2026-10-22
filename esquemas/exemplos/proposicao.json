@@ -1,0 +1,22 @@
+{
+  "id": "PR-900001",
+  "clb": "CL-900001",
+  "atributo": "reconhecimento",
+  "valor": "inscrita no Livro dos Saberes do IPHAN, com registro em 15/05/2014 e revalidação em 17/06/2025",
+  "periodo": {
+    "referido": "2014-2025"
+  },
+  "evidencias": [
+    "EV-900001"
+  ],
+  "mu": null,
+  "lambda": null,
+  "estado": "não calculado",
+  "sustenta_aviso_saude_politica": false,
+  "nota": "dado real (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json, registro_iphan, nível oficial); IDs da faixa de exemplos",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}

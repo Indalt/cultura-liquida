@@ -1,0 +1,14 @@
+{
+  "id": "CO-900001",
+  "nome": "cajuína",
+  "tipo": "termo",
+  "termos": [],
+  "variantes": [],
+  "traducao": "ambientes/traducao-consultas.json#CO-900001",
+  "nota": "caso que reprova: consulta de termo sem termos",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  }
+}
