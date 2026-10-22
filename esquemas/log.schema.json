@@ -7,7 +7,7 @@
   "required": ["data_hora", "agente", "habilidade", "versao_harness", "entrada_ref", "acoes", "resultados", "decisoes", "tokens", "chamadas", "duracao_s", "erros"],
   "additionalProperties": false,
   "properties": {
-    "id": {"type": "string", "pattern": "^EX-[0-9]{4,}$", "description": "ID da Execução, imutável (§6, l. 584), dado por scripts/registrar_log.py. Prefixo EX provisório, a fixar no registro de valores do bloco 2; os registros do bloco 2 o guardam na origem e o validar_acervo.py o confere. A linha do hook não tem id."},
+    "id": {"type": "string", "pattern": "^EX-[0-9]{4,}$", "description": "ID da Execução, imutável (§6, l. 585), dado por scripts/registrar_log.py. Prefixo EX provisório, a fixar no registro de valores do bloco 2; os registros do bloco 2 o guardam na origem e o validar_acervo.py o confere. A linha do hook não tem id."},
     "data_hora": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"},
     "agente": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$", "description": "Nome do agente, do script (sem .py, com hífen) ou 'vicente' quando a Execução é de pessoa."},
     "habilidade": {"type": "string", "minLength": 1},
@@ -15,11 +15,12 @@
     "modelo": {"type": "string", "minLength": 1},
     "esforco": {"enum": ["low", "medium", "high", "xhigh", "max", "n/a"]},
     "entrada_ref": {"type": "string", "minLength": 1, "description": "Caminho, commit ou ID da entrada; nunca o conteúdo."},
-    "ambientes": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs dos Ambientes usados (l. 593)."},
+    "ambientes": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs dos Ambientes usados (brief, bloco 1; a l. 593 pede Recortes e Consultas)."},
     "consultas": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs das Consultas usadas (l. 593)."},
     "recortes": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs dos Recortes usados (l. 593)."},
     "acoes": {"type": "array", "items": {"type": "string", "minLength": 1}},
     "resultados": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "saidas": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "Caminhos ou IDs das saídas gravadas pela Execução (§6, l. 593); nunca o conteúdo."},
     "decisoes": {
       "type": "array",
       "items": {

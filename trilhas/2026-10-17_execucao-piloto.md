@@ -54,6 +54,31 @@
 - **Não feito:** verificação independente pelo auditor (nenhum agente nesta conversa); a ligação no `executar-brief` e no `curador.md`, que é do K-101.
 - **Consumo:** 0 tokens de agentes.
 
+## Conversa do cartão K-101 (bloco 1) — 22/10/2026 (quarta)
+
+- **Autorização de Vicente:** cartão K-101 (bloco 1 do brief: harness e operação), retomando pelo quadro e parando nas paradas do brief; Opus 5.5, esforço médio; uso da conta: não informado (veio em branco, "__%").
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (cd5e26e), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 32 · FALHA 0 · PENDENTE 9; cartão movido para Fazendo e, no fim, para Concluído.
+
+### Bloco 1 — Harness e operação
+
+| Item | Estado | Consumo (tokens) | Modelo / esforço | Observação |
+|---|---|---|---|---|
+| `curador.md` 0.1.1 | feito | — | sessão principal | Agent com avaliador, arquivista e campo-de-acao; retomada pelo quadro e pelo estado do planejamento; relatório sem aprovação de rotina; Vicente só por cartão de conflito ou de Falta jurídica a liberar; Agent só com os tipos de `.claude/agents/` (insumo 7); `registrar-melhoria` (insumo 27); regras até a D-039, com a regra-mãe da D-038 |
+| avaliador, arquivista, campo-de-acao 0.1.1 | feito | — | sessão principal | `claude-sonnet-5-5`, esforço alto, deixa de ser marcador; avaliador com a saída da quarentena pela regra versionada (A-05) |
+| `extrair-evidencia` 0.1.1 | feito | — | sessão principal | Falta abaixo do limiar sem cota humana (A-06); quarentena pela regra (A-05); valências sem peso institucional (D-039); marca de aviso, saúde ou política ao auditor (D-038) |
+| `consulta` e `ficha-de-acesso` 0.1.1 | feito | — | sessão principal | bola de neve só na fase 2; novidade por ID; entrada pelo Anexo E e por `ambientes/`; `robots` e `cobertura` nos três exemplos, com "não conferido" onde faltava dado |
+| `conferir-fato` 0.1.1 | feito | — | sessão principal | chamada reservada para validar, com `resposta`; citação por `curl` e `grep -n`; WebFetch só para localizar (insumo 17) |
+| `executar-brief` 0.1.1 | feito | — | sessão principal | retomada pelo quadro; `--teto 300000` por semana; teto contado como o harness conta; log por arquivo; tokens do retorno do Agent (insumo 5); relatório sem aprovação (A-02); `registrar-melhoria` |
+| `esquemas/log.schema.json` 0.1.1 e `registrar_log.py` | feito | — | sessão principal | alcance obrigatório em toda linha com id e em script, rotina e pessoa; id EX-nnnn (prefixo provisório; insumo 28); Ambientes, Consultas, Recortes e saídas; `automatica` e `versao_regra` (D-038); tokens null com motivo para script, rotina, pessoa e workflow. Logs antigos válidos nos dois validadores. Primeiro id emitido: EX-0001 (log do auditor) |
+| Validador | feito | — | sessão principal | 8 casos novos no `executar-brief`, entre eles log sem alcance e log de workflow sem motivo, que reprovam; `rodar_testes.py`: OK 40 · FALHA 0 · PENDENTE 9 |
+| `testes/relatorio-rodada-A.md` | feito | — | sessão principal | regenerado com `--rodada A` (OK 40; o caso da v0.1 diz 38 ausências) |
+| Auditor, olhar mecânico (§5.3, §6) | feito | 73.464 (18 chamadas) | Sonnet 5.5 alto | Todos os itens gravados, sem divergência do pedido. Achados em `trilhas/2026-10-22_K-101/achados-auditor.json`: A-001 (citação l. 584 → 585) e A-003 (campo `saidas` da l. 593) corrigidos; A-002 (l. 130 × A-06) já está em `proxima-versao.md`, V-06; A-004 (prefixo EX) virou o insumo 28, para o K-104. O agente passou do teto de 15 chamadas (18 pelo retorno), por uma validação refeita. Conta antes: `orcamento.py --teto 300000 --estimativa 110000` → pode |
+
+- **Pronto quando:** `rodar_testes.py` sem FALHA (OK 40 · FALHA 0 · PENDENTE 9); os casos novos reprovam como esperado; as versões 0.1.1 têm Histórico; o curador e o `executar-brief` começam pelo quadro. **Fica para a abertura da próxima conversa (K-104):** conferir que a ferramenta Agent do curador lista avaliador, arquivista e campo-de-acao, porque agente editado só carrega em conversa nova.
+- **Insumos:** 28 novo (prefixo do id da Execução, para o K-104); 27 atendido pelo `curador.md` e pelo `executar-brief` 0.1.1 (fica aberto até o planejamento fechá-lo).
+- **Não feito:** nenhuma parada; nada "não conferido" novo além dos dois `robots` e da `cobertura` da Hemeroteca nos exemplos.
+- **Consumo:** 73.464 tokens de agentes (auditor).
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -61,6 +86,7 @@
 | 12–18/10 | lotes da v0.2 e da rodada de planejamento (ver acima) | 3.352.741 | — | 3.352.741 |
 | 12–18/10 | bloco 0, conversa 1 | 0 (nenhum agente) | — | 3.352.741 |
 | 19–25/10 | K-103, desenvolvimento (os agentes do K-001 e do K-003 estão no estado do planejamento) | 0 (nenhum agente) | — | 0 |
+| 19–25/10 | K-101, auditor (olhar mecânico do harness) | 73.464 | 18 | 73.464 |
 
 ## Horas de Vicente e uso da conta (bloco 13; medição desde o bloco 6)
 
