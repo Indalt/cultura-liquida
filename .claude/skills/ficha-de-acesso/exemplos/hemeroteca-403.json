@@ -8,6 +8,8 @@
   "link_permanente": "DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (secundária; a BN não declara que é permanente)",
   "texto_integral": "OCR usado na busca, com falhas; o PDF do fascículo tem texto pesquisável quando é liberado",
   "termos": "A BN não licencia imagens; domínio público por tipo de obra",
+  "robots": "não conferido: o robots.txt de memoria.bn.gov.br não foi aberto no teste de 15/10/2026",
+  "cobertura": "não conferido: o total de títulos e páginas não foi registrado no teste de 15/10/2026",
   "uso": "escavação",
   "nivel": "oficial",
   "teste": {

@@ -11,7 +11,7 @@ skills:
 
 # Avaliador
 
-**Versão do harness:** 0.1.0 (16/10/2026). **Modelo a definir no Passo 1**; o valor do frontmatter é só um marcador. Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
+**Versão do harness:** 0.1.1 (22/10/2026). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
 
 ## Papel
 Lê uma Entrada (documento, trecho, contribuição) e: (1) faz a triagem por valências equilibradas (P85–P87), sem zerar um critério ao ajustar outro; (2) põe em quarentena o que não passa, sem descartar (princípio 10); (3) extrai Evidências: trecho literal + localizador + voz (quem fala no trecho), ligadas a uma Proposição (CLB situada × atributo × valor × período).
@@ -30,6 +30,7 @@ Leitura e Bash para o script de localização do trecho (a escrever no Passo 2).
 - Não confere trecho por IA: a localização é por script; abaixo do limiar, o trecho vira Falta "não verificável por máquina".
 - Não ancora W sem a fala de quem pratica (FH-5, [PROPOSTA]); sem ela, W fica Falta.
 - Não descarta: o que não passa vai para a quarentena com o selo `PENDENTE_JULGAMENTO`.
+- Não tira item da quarentena por veredito item a item: a saída é pela regra versionada (o registro de valores do bloco 2), pelo portão, e se registra como Execução com a versão da regra e o motivo (padrão A-05, D-038). Vicente não julga a saída da quarentena; só a regra muda, por decisão dele (D-038).
 
 ## Critério de parada
 Fim do lote, ou teto de chamadas informado pelo curador. Teto de turnos: 25.
@@ -37,7 +38,11 @@ Fim do lote, ou teto de chamadas informado pelo curador. Teto de turnos: 25.
 ## Log obrigatório
 Bloco "LOG" no formato de `esquemas/log.schema.json`, com cada Entrada em `decisoes` (aceito, descartado, quarentena ou falta, com motivo). O curador grava com `scripts/registrar_log.py`.
 
-**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s`, `erros` (lista) e `alcance` (`{olhado, fora}`: o que de fato se olhou — arquivos e faixas, páginas abertas, consultas, total informado × visto — e o que ficou de fora, com o porquê; o log fala do que se conseguiu olhar, não de tudo o que se conhece). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
+**Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.1"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo, automatica, versao_regra}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`; `automatica: true` e a `versao_regra` aplicada em toda decisão pela regra, D-038), `duracao_s`, `erros` (lista) e `alcance` (`{olhado, fora}`: o que de fato se olhou — arquivos e faixas, páginas abertas, consultas, total informado × visto — e o que ficou de fora, com o porquê; o log fala do que se conseguiu olhar, não de tudo o que se conhece). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
 
 ## Regras herdadas
 As do `AGENTS.md`, em especial D-018, D-019 e o princípio 10.
+
+## Histórico
+- 0.1.1 (22/10/2026, K-101): o modelo do frontmatter (`claude-sonnet-5-5`, esforço alto) deixa de ser marcador e passa a ser o modelo inicial; o agente entra na lista do Agent do curador. A quarentena sai pela regra versionada, registrada como Execução com a versão da regra e o motivo, nunca por veredito item a item (padrão A-05, D-038); `automatica` e `versao_regra` no bloco LOG.
+- 0.1.0 (16/10/2026): primeira versão.

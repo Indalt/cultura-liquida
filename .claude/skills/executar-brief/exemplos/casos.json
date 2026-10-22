@@ -1,21 +1,127 @@
 {
-  "habilidade": "executar-brief",
-  "rodada": "A",
-  "casos": [
-    {"nome": "conta real da janela 1 antes do C2: pode", "espera": "passa",
-     "comando": ["scripts/orcamento.py", "--teto", "600000", "--medidos", "81852", "--estimativa", "60000"],
-     "saida_contem": "folga = 600.000 - 81.852 = 518.148",
-     "criterio": "a mesma conta registrada no checklist em 16/10"},
-    {"nome": "folga menor que 2x o maior lote: parar", "espera": "reprova",
-     "comando": ["scripts/orcamento.py", "--teto", "600000", "--medidos", "300000", "200000", "--estimativa", "60000"],
-     "saida_contem": "regra 2 falhou",
-     "criterio": "a regra da folga manda parar com o estado salvo"},
-    {"nome": "log real do teste do auditor (Bloco 2.5)", "espera": "passa", "esquema": "log",
-     "entrada": ".claude/skills/executar-brief/exemplos/log-teste-auditor.json",
-     "criterio": "linha completa gravada pelo curador depois do teste do passo 2.5.5"},
-    {"nome": "log com e-mail de terceiro é recusado", "espera": "reprova",
-     "comando": ["scripts/registrar_log.py", ".claude/skills/executar-brief/exemplos/erro-log-com-email.json", "--simular"],
-     "saida_contem": "dado pessoal de terceiros",
-     "criterio": "registrar_log.py reprova dado pessoal de terceiros"}
-  ]
+ "habilidade": "executar-brief",
+ "rodada": "A",
+ "casos": [
+  {
+   "nome": "conta real da janela 1 antes do C2 (teto de 600 mil da v0.2): pode",
+   "espera": "passa",
+   "comando": [
+    "scripts/orcamento.py",
+    "--teto",
+    "600000",
+    "--medidos",
+    "81852",
+    "--estimativa",
+    "60000"
+   ],
+   "saida_contem": "folga = 600.000 - 81.852 = 518.148",
+   "criterio": "a mesma conta registrada no checklist em 16/10"
+  },
+  {
+   "nome": "folga menor que 2x o maior lote: parar",
+   "espera": "reprova",
+   "comando": [
+    "scripts/orcamento.py",
+    "--teto",
+    "600000",
+    "--medidos",
+    "300000",
+    "200000",
+    "--estimativa",
+    "60000"
+   ],
+   "saida_contem": "regra 2 falhou",
+   "criterio": "a regra da folga manda parar com o estado salvo"
+  },
+  {
+   "nome": "log real do teste do auditor (Bloco 2.5)",
+   "espera": "passa",
+   "esquema": "log",
+   "entrada": ".claude/skills/executar-brief/exemplos/log-teste-auditor.json",
+   "criterio": "linha completa gravada pelo curador depois do teste do passo 2.5.5"
+  },
+  {
+   "nome": "log com e-mail de terceiro é recusado",
+   "espera": "reprova",
+   "comando": [
+    "scripts/registrar_log.py",
+    ".claude/skills/executar-brief/exemplos/erro-log-com-email.json",
+    "--simular"
+   ],
+   "saida_contem": "dado pessoal de terceiros",
+   "criterio": "registrar_log.py reprova dado pessoal de terceiros"
+  },
+  {
+   "nome": "conta da semana com o teto de 300 mil (seção 0 do brief): pode",
+   "espera": "passa",
+   "comando": [
+    "scripts/orcamento.py",
+    "--teto",
+    "300000",
+    "--estimativa",
+    "60000"
+   ],
+   "criterio": "semana sem agente medido; a estimativa padrão de 60 mil cabe com folga"
+  },
+  {
+   "nome": "log de agente sem alcance é recusado (D-030)",
+   "espera": "reprova",
+   "comando": [
+    "scripts/registrar_log.py",
+    ".claude/skills/executar-brief/exemplos/erro-log-sem-alcance.json",
+    "--simular"
+   ],
+   "saida_contem": "alcance",
+   "criterio": "registrar_log.py dá o id da Execução, e toda linha com id exige o alcance"
+  },
+  {
+   "nome": "log de agente de workflow com tokens nulos e sem o motivo",
+   "espera": "reprova",
+   "esquema": "log",
+   "entrada": ".claude/skills/executar-brief/exemplos/erro-log-workflow-sem-motivo.json",
+   "criterio": "o workflow não informa o consumo por agente: tokens null só com motivo_sem_consumo (insumo 17)"
+  },
+  {
+   "nome": "log de agente de workflow com tokens nulos e o motivo",
+   "espera": "passa",
+   "esquema": "log",
+   "entrada": ".claude/skills/executar-brief/exemplos/log-workflow-com-motivo.json",
+   "criterio": "o par que passa do caso anterior"
+  },
+  {
+   "nome": "log de script sem alcance",
+   "espera": "reprova",
+   "esquema": "log",
+   "entrada": ".claude/skills/executar-brief/exemplos/erro-log-script-sem-alcance.json",
+   "criterio": "script, rotina e pessoa trazem sempre o alcance (D-030)"
+  },
+  {
+   "nome": "log de script com alcance, sem campos de agente",
+   "espera": "passa",
+   "esquema": "log",
+   "entrada": ".claude/skills/executar-brief/exemplos/log-script-com-alcance.json",
+   "criterio": "modelo e esforço dispensados; tokens null com o motivo"
+  },
+  {
+   "nome": "decisão automática sem a versão da regra",
+   "espera": "reprova",
+   "esquema": "log",
+   "entrada": ".claude/skills/executar-brief/exemplos/erro-log-decisao-sem-versao-regra.json",
+   "criterio": "toda decisão automática grava a versão da regra aplicada (D-038)"
+  },
+  {
+   "nome": "os logs gravados até hoje continuam válidos",
+   "espera": "passa",
+   "comando": [
+    "scripts/validar.py",
+    "log",
+    "trilhas/logs/2026-10-16_auditor.jsonl",
+    "trilhas/logs/2026-10-16_redator.jsonl",
+    "trilhas/logs/2026-10-17_curador.jsonl",
+    "trilhas/logs/2026-10-17_workflow-subagent.jsonl",
+    "trilhas/logs/2026-10-22_curador.jsonl"
+   ],
+   "criterio": "as linhas antigas, sem id, não exigem o alcance (brief, bloco 1)"
+  }
+ ]
 }

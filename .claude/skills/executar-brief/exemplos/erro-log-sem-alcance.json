@@ -1,0 +1,19 @@
+{
+  "agente": "auditor",
+  "habilidade": "verificar-fundacao",
+  "versao_harness": "0.1.1",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "caso de teste do K-101",
+  "acoes": [
+    "caso fictício para o validador"
+  ],
+  "resultados": [
+    "nenhum"
+  ],
+  "decisoes": [],
+  "tokens": 1000,
+  "chamadas": 3,
+  "duracao_s": 10,
+  "erros": []
+}

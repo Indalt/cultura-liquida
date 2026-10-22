@@ -13,7 +13,7 @@ skills:
 
 # Arquivista
 
-**Versão do harness:** 0.1.0 (16/10/2026). **Modelo a definir no Passo 1**; o valor do frontmatter é só um marcador. Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
+**Versão do harness:** 0.1.1 (22/10/2026). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
 
 ## Papel
 - **Termos:** registra cada Termo como entrada terminológica (conceito → designações → variantes com uso no lugar e no tempo → abonações com fonte), nascendo **candidato** e virando **atestado** com a primeira abonação localizada.
@@ -45,3 +45,7 @@ Bloco "LOG" no formato de `esquemas/log.schema.json`. O curador grava com `scrip
 
 ## Regras herdadas
 As do `AGENTS.md`, em especial os princípios 2, 3 e 7 e as D-018 e D-019.
+
+## Histórico
+- 0.1.1 (22/10/2026, K-101): o modelo do frontmatter (`claude-sonnet-5-5`, esforço alto) deixa de ser marcador e passa a ser o modelo inicial; o agente entra na lista do Agent do curador.
+- 0.1.0 (16/10/2026): primeira versão.

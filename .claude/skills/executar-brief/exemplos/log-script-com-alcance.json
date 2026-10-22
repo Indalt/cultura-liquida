@@ -1,0 +1,29 @@
+{
+  "agente": "relatorio-dia",
+  "habilidade": "n/a",
+  "versao_harness": "n/a",
+  "entrada_ref": "caso de teste do K-101",
+  "acoes": [
+    "caso fictício"
+  ],
+  "resultados": [
+    "nenhum"
+  ],
+  "decisoes": [],
+  "tokens": null,
+  "chamadas": null,
+  "motivo_sem_consumo": "script sem IA",
+  "duracao_s": 1,
+  "erros": [],
+  "data_hora": "2026-10-22T12:00:00-03:00",
+  "fonte_do_registro": "script",
+  "id": "EX-9002",
+  "alcance": {
+    "olhado": [
+      "caso fictício"
+    ],
+    "fora": [
+      "nada mais"
+    ]
+  }
+}

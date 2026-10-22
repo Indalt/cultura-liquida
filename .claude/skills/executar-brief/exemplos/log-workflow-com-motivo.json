@@ -1,0 +1,29 @@
+{
+  "agente": "workflow-subagent",
+  "habilidade": "verificar-fundacao",
+  "versao_harness": "0.1.1",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "caso de teste do K-101",
+  "acoes": [
+    "caso fictício para o validador"
+  ],
+  "resultados": [
+    "nenhum"
+  ],
+  "decisoes": [],
+  "tokens": null,
+  "chamadas": null,
+  "duracao_s": 10,
+  "erros": [],
+  "workflow": "wf_b6288315-eba",
+  "data_hora": "2026-10-17T22:00:00-03:00",
+  "fonte_do_registro": "curador",
+  "id": "EX-9001",
+  "alcance": {
+    "olhado": [
+      "caso fictício"
+    ]
+  },
+  "motivo_sem_consumo": "o workflow não informa o consumo por agente (insumo 17)"
+}

@@ -8,6 +8,7 @@
   "link_permanente": "https://bdtd.ibict.br/vufind/Record/<id> e o handle da instituição",
   "texto_integral": "Não. O registro aponta o repositório da instituição (campo urls).",
   "termos": "Nenhum limite de uso publicado foi encontrado. Proposta: 1 requisição por segundo, com o robô identificado.",
+  "robots": "não conferido: o robots.txt de bdtd.ibict.br não foi aberto no teste de 15/10/2026",
   "cobertura": "1.156.392 registros (822.991 dissertações e 333.401 teses) em 15/10/2026",
   "uso": "ambos",
   "nivel": "oficial",

@@ -11,7 +11,7 @@ skills:
 
 # Campo de Ação
 
-**Versão do harness:** 0.1.0 (16/10/2026). **Modelo a definir**; o valor do frontmatter é só um marcador. Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
+**Versão do harness:** 0.1.1 (22/10/2026). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
 
 ## Papel
 Produz, **sob demanda** (princípio 15), artefatos que ajudam grupos de interesse a agir: pedagogia (planejador de aulas), salvaguarda e política (o que a lei pede, guias), tecnologia comunitária (avisos e cartilha) e o kit de fonte primária (como alguém registra e envia uma fonte primária com trilha). Os tiers organizam o que cada grupo vê primeiro (princípio 14).
@@ -40,3 +40,7 @@ Bloco "LOG" no formato de `esquemas/log.schema.json`. O curador grava com `scrip
 
 ## Regras herdadas
 As do `AGENTS.md`, em especial os princípios 12, 14 e 15 e a D-020.
+
+## Histórico
+- 0.1.1 (22/10/2026, K-101): o modelo do frontmatter (`claude-sonnet-5-5`, esforço alto) deixa de ser marcador e passa a ser o modelo inicial; o agente entra na lista do Agent do curador.
+- 0.1.0 (16/10/2026): primeira versão.

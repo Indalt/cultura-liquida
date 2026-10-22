@@ -1,22 +1,27 @@
-"""Acrescenta uma linha validada ao log de um agente: trilhas/logs/AAAA-MM-DD_<agente>.jsonl.
+"""Acrescenta uma linha validada ao log de uma Execução: trilhas/logs/AAAA-MM-DD_<agente>.jsonl.
 
-O log completo é gravado pelo curador (sessão principal) depois de cada chamada de Agent,
-porque é ele quem recebe os tokens e as chamadas no retorno do Agent.
+O log completo de agente é gravado pelo curador (sessão principal) depois de cada chamada de Agent,
+porque é ele quem recebe os tokens e as chamadas no retorno do Agent (o número oficial; nunca a
+soma pelo transcript). Scripts, rotinas e pessoa gravam com `fonte_do_registro` "script", "rotina"
+ou "pessoa", sem os campos de agente e com tokens e chamadas null e o motivo.
 
 Uso:
     python scripts/registrar_log.py <arquivo.json>      # um objeto no formato de esquemas/log.schema.json
     python scripts/registrar_log.py -                   # o objeto vem pela entrada padrão
     python scripts/registrar_log.py <arquivo.json> --simular   # valida e mostra, sem gravar
 
-Preenche `data_hora` (hora local, ISO 8601) e `fonte_do_registro` ("curador") se faltarem.
+Preenche `data_hora` (hora local, ISO 8601), `fonte_do_registro` ("curador") e o `id` da
+Execução (EX-nnnn, o próximo número livre em trilhas/logs/; prefixo provisório até o registro de
+valores do bloco 2) se faltarem.
 Reprova (código 1, sem gravar) se:
-  - o objeto não passa no esquema de log;
+  - o objeto não passa no esquema de log (com id, o alcance é obrigatório: D-030);
   - aparece dado pessoal de terceiros (scripts/procurar_dado_pessoal.py).
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -26,12 +31,23 @@ from _comum import RAIZ, carregar_esquema, validar_objeto  # noqa: E402
 from procurar_dado_pessoal import achar  # noqa: E402
 
 PASTA_LOGS = RAIZ / "trilhas" / "logs"
+PREFIXO_ID = "EX"  # provisório: o registro de valores do bloco 2 fixa o prefixo
+
+
+def proximo_id() -> str:
+    maior = 0
+    for arq in PASTA_LOGS.glob("*.jsonl"):
+        for m in re.finditer(rf'"id": "{PREFIXO_ID}-([0-9]+)"', arq.read_text(encoding="utf-8")):
+            maior = max(maior, int(m.group(1)))
+    return f"{PREFIXO_ID}-{maior + 1:04d}"
 
 
 def preparar(entrada: dict) -> dict:
     e = dict(entrada)
     e.setdefault("data_hora", datetime.now().astimezone().isoformat(timespec="seconds"))
     e.setdefault("fonte_do_registro", "curador")
+    if e["fonte_do_registro"] != "hook-SubagentStop":
+        e.setdefault("id", proximo_id())
     return e
 
 
