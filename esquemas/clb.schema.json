@@ -2,17 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "clb.schema.json",
   "title": "CLB situada",
-  "description": "CLB do §6 (l. 605), identificada pelo termo enquanto ele não for ambíguo; lugares, grupos e períodos são dados dela, as situações (D-039; valores-provisorios: unidade_ficha). Um campo por critério de prática cultural da D-022, cada um com Evidência ou Falta (l. 114). Eixo 5 pelo registro de valores (padrão A-09 b, D-038, com a D-039). A ficha é a página desta CLB. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "CLB do §6 (l. 605), identificada pelo termo enquanto ele não for ambíguo; lugares, grupos e períodos são dados dela, as situações (D-039; valores-provisorios: unidade_ficha). Um campo por critério de prática cultural da D-022, cada um com Evidência ou Falta (l. 114). Eixo 5 pelo registro de valores (padrão A-09 b, D-038, com a D-039). A ficha é a página desta CLB. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "termo",
-    "termos",
-    "situacoes",
-    "criterios",
-    "estado",
-    "protecao",
     "origem_registro"
   ],
   "properties": {
@@ -191,5 +185,41 @@
     "nota": {
       "type": "string"
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retirado": {
+            "const": true
+          }
+        },
+        "required": [
+          "retirado"
+        ]
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
+        }
+      },
+      "else": {
+        "required": [
+          "termo",
+          "termos",
+          "situacoes",
+          "criterios",
+          "estado",
+          "protecao"
+        ],
+        "allOf": []
+      }
+    }
+  ]
 }

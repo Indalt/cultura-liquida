@@ -86,6 +86,22 @@
 - **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (fc0c5c3), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 40 · FALHA 0 · PENDENTE 9; cartão movido para Fazendo. A ferramenta Agent desta conversa lista avaliador, arquivista e campo-de-acao (pendência do K-101 conferida).
 - **Parada (c) do bloco 2:** não acontece; vale o padrão dado por Vicente na autorização.
 
+### Bloco 2 — Contratos do §6 e valores provisórios
+
+| Item | Estado | Consumo (tokens) | Modelo / esforço | Observação |
+|---|---|---|---|---|
+| Registro de valores provisórios | feito | — | sessão principal | `esquemas/valores-provisorios.json` (19 valores) com `valores-provisorios.schema.json`. A estrutura fixada pela D-038 (eixos 1 a 4, selo, versão da regra, quem propõe não aprova) fica separada dos valores; cada valor diz a linha da Fundação, a base, quem usa e quando se calibra. Esquemas leem por `$ref` (resolvido em `_comum.carregar_esquema`), scripts por `carregar_valores()` (`registrar_log.py`, `orcamento.py`) |
+| Contratos do §6 | feito | — | sessão principal | 18 contratos (Termo, Proposição, Evidência, Fonte, Ambiente, Consulta, Recorte, Entrada, Trecho, CLB situada, Elemento, Insumo como `insumo-x`, Processo, Compreensão local, Transformação, Aresta, Lugar, Pessoa), mais `comum`, `ficha-acesso` e `estado-consulta`; proteção, origem, eixos, retirada (l. 585) e a marca de aviso, saúde ou política |
+| Exemplos | feito | — | sessão principal | `esquemas/exemplos/`: um que passa e um que reprova por contrato, mais a retirada e o registro (40 casos). Com dado real (mapa de 17/10): Termo, Proposição, Fonte, Ambiente, Recorte, Trecho, Lugar; os demais levam "exemplo de esquema". IDs dos exemplos na faixa 900000-999999 |
+| Casos do rastreador | feito | — | sessão principal | ficha-de-acesso e consulta 0.1.2: os 4 casos reais passam; reprovam a ficha com 403 e "aceito" e o total visto acima do informado sem explicação (regra entre campos de `validar.py`) |
+| Parada (c) | padrão | — | — | tabela código → nome numa pasta da máquina de Vicente, fora da pasta versionada: caminho padrão `C:/Antigravity/Cultura Liquida - privado/pessoas/` ou a variável `CL_PRIVADO` (registro: `tabela_codigo_nome`) |
+| Auditor, olhar mecânico e lote C4 | feito | 143.833 (20 chamadas) | Sonnet 5.5 alto | Conta antes: `orcamento.py --medidos 73464 --estimativa 73464` → pode. 5 achados (`trilhas/2026-10-22_K-104/achados-auditor.json`), os 5 corrigidos: retirada sem o conteúdo; proteção obrigatória na Pessoa e permitida em todos; "não calculado" fora do eixo 4 (estado ausente até o cálculo); `estado_detalhe` na Aresta; estados da busca no registro. C4 (`conferencia-C4.json`): SKOS oficial (w3.org); TBX oficial pelo tbxinfo; ISO 30042 não conferida (403). O agente conta 24 chamadas pelos pedidos HTTP; o retorno diz 20. Ele não validou os JSON (heredoc); o curador gravou e validou: PASSA |
+
+- **Pronto quando:** cada esquema com um exemplo que passa e um que reprova; os 4 casos do rastreador fora de PENDENTE; um caso que reprova por habilidade; `rodar_testes.py`: OK 86 · FALHA 0 · PENDENTE 5 (os 5 pendentes são das habilidades dos blocos 7 e 8, sem exemplo do piloto ainda).
+- **Insumos novos:** 29 (agente sem Write não valida JSON por heredoc; K-111), 30 (Termo sem a língua das designações, TBX langSec; K-106), 31 (User-Agent do projeto; K-107).
+- **Não conferido:** a ISO 30042 na página da ISO (403); a equivalência campo a campo do Termo com TBX e SKOS; as correções A-001 a A-005 não passaram por segunda leitura independente.
+- **Consumo:** 143.833 tokens de agentes (auditor).
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -94,6 +110,7 @@
 | 12–18/10 | bloco 0, conversa 1 | 0 (nenhum agente) | — | 3.352.741 |
 | 19–25/10 | K-103, desenvolvimento (os agentes do K-001 e do K-003 estão no estado do planejamento) | 0 (nenhum agente) | — | 0 |
 | 19–25/10 | K-101, auditor (olhar mecânico do harness) | 73.464 | 18 | 73.464 |
+| 19–25/10 | K-104, auditor (contratos do §6 e lote C4) | 143.833 | 20 | 217.297 |
 
 ## Horas de Vicente e uso da conta (bloco 13; medição desde o bloco 6)
 

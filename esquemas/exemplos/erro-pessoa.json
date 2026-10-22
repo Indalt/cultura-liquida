@@ -7,6 +7,15 @@
   "forma_atribuicao": "anônimo",
   "nivel_colaborador": "anônimo",
   "consentimento": "referência fora do Git (exemplo)",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "referência fora do Git (exemplo)",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
   "nota": "caso que reprova: nome no registro",
   "origem_registro": {
     "criado_por": "curador (exemplo de esquema, K-104)",

@@ -11,6 +11,7 @@
     "forma_atribuicao",
     "nivel_colaborador",
     "consentimento",
+    "protecao",
     "origem_registro"
   ],
   "properties": {

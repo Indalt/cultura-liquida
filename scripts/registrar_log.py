@@ -11,8 +11,8 @@ Uso:
     python scripts/registrar_log.py <arquivo.json> --simular   # valida e mostra, sem gravar
 
 Preenche `data_hora` (hora local, ISO 8601), `fonte_do_registro` ("curador") e o `id` da
-Execução (EX-nnnn, o próximo número livre em trilhas/logs/; prefixo provisório até o registro de
-valores do bloco 2) se faltarem.
+Execução (EX-nnnn, o próximo número livre da faixa da conversa em trilhas/logs/; prefixo e
+faixa no registro de valores provisórios, esquemas/valores-provisorios.json) se faltarem.
 Reprova (código 1, sem gravar) se:
   - o objeto não passa no esquema de log (com id, o alcance é obrigatório: D-030);
   - aparece dado pessoal de terceiros (scripts/procurar_dado_pessoal.py).

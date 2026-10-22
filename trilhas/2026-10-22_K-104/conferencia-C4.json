@@ -1,0 +1,53 @@
+{
+ "lote": "C4",
+ "data": "2026-10-22",
+ "modelo": "claude-sonnet-5-5",
+ "esforco": "high",
+ "chamadas_usadas": 24,
+ "itens": [
+  {
+   "id": "C4.1",
+   "pergunta": "TBX é a ISO 30042 e a estrutura é entrada de conceito, seção de língua e seção de termo?",
+   "resposta": "Sim, pela página do TBX do tbxinfo (a página da ISO deu 403 e não foi aberta). O tbxinfo diz que o site complementa a ISO 30042 e que TBX é o padrão internacional de troca de informação terminológica; a referência de elementos define conceptEntry (conceito), langSec (língua, dentro do conceito) e termSec (termo, dentro da língua).",
+   "observacao": "Citações por curl -s, marcas HTML removidas por sed e linhas por grep -n: home l. 296-297; referência de elementos l. 432, 464 e 516. Que o tbxinfo seja mantido pela LTAC veio do pedido, não da página. O contrato Termo guarda designações sem campo de língua; o TBX organiza os termos por seção de língua; se o campo de língua é necessário para a exportação não foi verificado.",
+   "partes": [
+    {"afirmacao": "TBX (TermBase eXchange) é o padrão internacional ISO 30042 de troca de informação terminológica", "nivel": "oficial", "url": "https://www.tbxinfo.net/",
+     "citacao": "This website is a complement to ISO 30042 – Management of terminology resources. TBX, or TermBase eXchange, is the international standard for archiving and exchanging terminological information exported from terminology databases (termbases)."},
+    {"afirmacao": "A entrada de conceito (conceptEntry) contém as seções de língua (langSec)", "nivel": "oficial", "url": "https://www.tbxinfo.net/developer-resources/tbx-elements-reference/",
+     "citacao": "The TBX <conceptEntry> is a container for concept level information, including all <langSec> elements belonging to that concept."},
+    {"afirmacao": "A seção de língua (langSec) contém as seções de termo (termSec)", "nivel": "oficial", "url": "https://www.tbxinfo.net/developer-resources/tbx-elements-reference/",
+     "citacao": "The TBX <langSec> element is a container for language level information, including all <termSec> elements belonging to that language (within the same terminological concept)."},
+    {"afirmacao": "A seção de termo (termSec) traz um termo mais o que o descreve", "nivel": "oficial", "url": "https://www.tbxinfo.net/developer-resources/tbx-elements-reference/",
+     "citacao": "The TBX <termSec> element is a container for term level information, including a single <term> any other elements which provide more information or context about that term."},
+    {"afirmacao": "A página oficial da ISO (iso.org/standard/62510.html) confirma o número e o título da norma", "nivel": "não conferido", "url": "https://www.iso.org/standard/62510.html"}
+   ]
+  },
+  {
+   "id": "C4.2",
+   "pergunta": "SKOS é recomendação do W3C com skos:Concept, prefLabel, altLabel, definition, broader, narrower e related?",
+   "resposta": "Sim, pela própria Recomendação do W3C, aberta e lida por curl: SKOS Reference, W3C Recommendation de 18/08/2009, com a classe skos:Concept e as propriedades prefLabel, altLabel, definition, broader, narrower e related.",
+   "observacao": "Citações por curl -s de https://www.w3.org/TR/skos-reference/, marcas HTML removidas por sed e linhas por grep -n: Recomendação l. 25 e 168; skos:Concept l. 1318; rótulos l. 1733-1735; skos:definition l. 194, 1210, 2319 e 2344; broader e narrower l. 2457-2458; related l. 2494-2495. As frases de definição formal de prefLabel, altLabel e definition não foram citadas.",
+   "partes": [
+    {"afirmacao": "SKOS é Recomendação do W3C", "nivel": "oficial", "url": "https://www.w3.org/TR/skos-reference/", "citacao": "W3C Recommendation 18 August 2009"},
+    {"afirmacao": "skos:Concept é a classe dos conceitos SKOS", "nivel": "oficial", "url": "https://www.w3.org/TR/skos-reference/", "citacao": "The class skos:Concept is the class of SKOS concepts."},
+    {"afirmacao": "skos:prefLabel e skos:altLabel são as etiquetas léxicas preferida e alternativa de um recurso", "nivel": "oficial", "url": "https://www.w3.org/TR/skos-reference/", "citacao": "SKOS enables a distinction to be made between the preferred, alternative and \"hidden\" lexical labels for any given resource."},
+    {"afirmacao": "skos:definition é propriedade de documentação do SKOS", "nivel": "oficial", "url": "https://www.w3.org/TR/skos-reference/", "citacao": "skos:note, skos:changeNote, skos:definition, skos:editorialNote, skos:example, skos:historyNote and skos:scopeNote are each instances of"},
+    {"afirmacao": "skos:broader e skos:narrower ligam hierarquicamente dois conceitos", "nivel": "oficial", "url": "https://www.w3.org/TR/skos-reference/", "citacao": "The properties skos:broader and skos:narrower are used to assert a direct hierarchical link between two SKOS concepts."},
+    {"afirmacao": "skos:related liga dois conceitos por associação", "nivel": "oficial", "url": "https://www.w3.org/TR/skos-reference/", "citacao": "The property skos:related is used to assert an associative link between two SKOS concepts."}
+   ]
+  },
+  {
+   "id": "C4.3",
+   "pergunta": "O mapeamento da descrição de esquemas/termo.schema.json está sustentado pelas fontes?",
+   "resposta": "Os elementos e propriedades citados existem nas duas fontes (C4.1 e C4.2). Que cada campo do contrato corresponda a eles é decisão de desenho do contrato, não afirmação das fontes. Nenhuma exportação TBX ou SKOS foi gerada nem validada.",
+   "nivel": "não conferido"
+  }
+ ],
+ "nao_conferido": [
+  "iso.org/standard/62510.html: HTTP 403 (anti-robô, não contornado); número, título e edição vigente da ISO 30042 não lidos na ISO.",
+  "ltacglobal.org: HTTP 403 (anti-robô, não contornado); que o tbxinfo seja mantido pela LTAC não foi confirmado.",
+  "Frases de definição formal de prefLabel, altLabel e definition na Recomendação do W3C: não citadas.",
+  "Equivalência campo a campo do contrato Termo com TBX e SKOS (inclusive a língua das designações): não verificada; nenhuma exportação gerada.",
+  "chamadas_usadas = 24 é a conta do próprio agente (pedidos HTTP somados); o retorno do Agent informa 20 usos de ferramenta, o número oficial (insumo 5)."
+ ]
+}

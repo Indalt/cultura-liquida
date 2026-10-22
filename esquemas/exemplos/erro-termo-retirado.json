@@ -1,0 +1,11 @@
+{
+  "id": "TE-900003",
+  "retirado": true,
+  "conceito": "conteúdo que devia ter saído",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "caso que reprova: retirado com conteúdo"
+}

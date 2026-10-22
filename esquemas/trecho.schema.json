@@ -2,19 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "trecho.schema.json",
   "title": "Trecho",
-  "description": "Trecho do §6 (l. 598): a passagem literal, com o seletor de citação da W3C Web Annotation (exato, antes, depois), o localizador, o hash do texto lido (regra de normalização com versão) e o grau de semelhança. Abaixo do limiar, Falta 'trecho não verificável por máquina', dita e nunca completada (leitura A-06, D-038). Transcrição por IA, marcada e com o link da imagem da página. Nunca texto integral da fonte (l. 100). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Trecho do §6 (l. 598): a passagem literal, com o seletor de citação da W3C Web Annotation (exato, antes, depois), o localizador, o hash do texto lido (regra de normalização com versão) e o grau de semelhança. Abaixo do limiar, Falta 'trecho não verificável por máquina', dita e nunca completada (leitura A-06, D-038). Transcrição por IA, marcada e com o link da imagem da página. Nunca texto integral da fonte (l. 100). Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "fonte",
-    "texto_exato",
-    "antes",
-    "depois",
-    "localizador",
-    "origem_texto",
-    "estado",
-    "protecao",
     "origem_registro"
   ],
   "properties": {
@@ -94,54 +86,91 @@
     {
       "if": {
         "properties": {
-          "origem_texto": {
-            "const": "transcrição por IA"
+          "retirado": {
+            "const": true
           }
         },
         "required": [
-          "origem_texto"
+          "retirado"
         ]
       },
       "then": {
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
+        }
+      },
+      "else": {
         "required": [
-          "link_imagem"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "estado": {
-            "const": "localizado"
+          "fonte",
+          "texto_exato",
+          "antes",
+          "depois",
+          "localizador",
+          "origem_texto",
+          "estado",
+          "protecao"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "origem_texto": {
+                  "const": "transcrição por IA"
+                }
+              },
+              "required": [
+                "origem_texto"
+              ]
+            },
+            "then": {
+              "required": [
+                "link_imagem"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "estado": {
+                  "const": "localizado"
+                }
+              },
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "required": [
+                "hash",
+                "data_conferencia",
+                "grau_semelhanca",
+                "versao_normalizacao"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "estado": {
+                  "const": "não verificável por máquina"
+                }
+              },
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "required": [
+                "falta"
+              ]
+            }
           }
-        },
-        "required": [
-          "estado"
-        ]
-      },
-      "then": {
-        "required": [
-          "hash",
-          "data_conferencia",
-          "grau_semelhanca",
-          "versao_normalizacao"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "estado": {
-            "const": "não verificável por máquina"
-          }
-        },
-        "required": [
-          "estado"
-        ]
-      },
-      "then": {
-        "required": [
-          "falta"
         ]
       }
     }

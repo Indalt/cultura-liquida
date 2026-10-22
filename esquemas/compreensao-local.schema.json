@@ -2,18 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "compreensao-local.schema.json",
   "title": "Compreensão local (W)",
-  "description": "Compreensão local do §6 (l. 608): o modo como a prática é entendida no lugar, como saber comum (D-018). Só ancora W quando atestada como prática comum, com a fala de quem pratica; a tradução vem depois da compreensão local. Os valores nascem dos dados (princípio 7). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Compreensão local do §6 (l. 608): o modo como a prática é entendida no lugar, como saber comum (D-018). Só ancora W quando atestada como prática comum, com a fala de quem pratica; a tradução vem depois da compreensão local. Os valores nascem dos dados (princípio 7). Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "designacao_local",
-    "lugar",
-    "comunidade",
-    "periodo",
-    "evidencias",
-    "atestada_pratica_comum",
-    "protecao",
     "origem_registro"
   ],
   "properties": {
@@ -69,20 +62,56 @@
     {
       "if": {
         "properties": {
-          "atestada_pratica_comum": {
+          "retirado": {
             "const": true
           }
         },
         "required": [
-          "atestada_pratica_comum"
+          "retirado"
         ]
       },
       "then": {
-        "properties": {
-          "evidencias": {
-            "minItems": 1
-          }
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
         }
+      },
+      "else": {
+        "required": [
+          "designacao_local",
+          "lugar",
+          "comunidade",
+          "periodo",
+          "evidencias",
+          "atestada_pratica_comum",
+          "protecao"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "atestada_pratica_comum": {
+                  "const": true
+                }
+              },
+              "required": [
+                "atestada_pratica_comum"
+              ]
+            },
+            "then": {
+              "properties": {
+                "evidencias": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
       }
     }
   ]

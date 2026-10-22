@@ -2,21 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "recorte.schema.json",
   "title": "Recorte",
-  "description": "Recorte do §6 (l. 592): Ambiente × Consulta × período × lugar de publicação × modo, com o arquivo de estado. 'lido por inteiro' só com folheio. A fonte que não informa o total nunca fica 'percorrido pela busca' e leva a Falta 'total desconhecido'; teto estourado leva a Falta 'busca interrompida por teto'. O total visto nunca passa do informado sem explicação (regra conferida por scripts/validar.py). Bola de neve só na fase 2. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Recorte do §6 (l. 592): Ambiente × Consulta × período × lugar de publicação × modo, com o arquivo de estado. 'lido por inteiro' só com folheio. A fonte que não informa o total nunca fica 'percorrido pela busca' e leva a Falta 'total desconhecido'; teto estourado leva a Falta 'busca interrompida por teto'. O total visto nunca passa do informado sem explicação (regra conferida por scripts/validar.py). Bola de neve só na fase 2. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "ambiente",
-    "consulta",
-    "modo",
-    "total_informado",
-    "total_visto",
-    "saturacao",
-    "erros",
-    "proxima_acao",
-    "estado",
-    "data",
     "origem_registro"
   ],
   "properties": {
@@ -133,6 +123,9 @@
     "data": {
       "$ref": "comum.schema.json#/$defs/data"
     },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
     "origem_registro": {
       "$ref": "comum.schema.json#/$defs/origem_registro"
     },
@@ -151,69 +144,108 @@
     {
       "if": {
         "properties": {
-          "estado": {
-            "const": "lido por inteiro"
+          "retirado": {
+            "const": true
           }
         },
         "required": [
-          "estado"
+          "retirado"
         ]
       },
       "then": {
-        "properties": {
-          "modo": {
-            "const": "folheio"
-          }
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
         }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "total_informado": {
-            "type": "null"
-          }
-        },
-        "required": [
-          "total_informado"
-        ]
       },
-      "then": {
+      "else": {
         "required": [
-          "faltas"
+          "ambiente",
+          "consulta",
+          "modo",
+          "total_informado",
+          "total_visto",
+          "saturacao",
+          "erros",
+          "proxima_acao",
+          "estado",
+          "data"
         ],
-        "properties": {
-          "faltas": {
-            "minItems": 1
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "estado": {
+                  "const": "lido por inteiro"
+                }
+              },
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "properties": {
+                "modo": {
+                  "const": "folheio"
+                }
+              }
+            }
           },
-          "estado": {
-            "not": {
-              "const": "percorrido pela busca"
+          {
+            "if": {
+              "properties": {
+                "total_informado": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "total_informado"
+              ]
+            },
+            "then": {
+              "required": [
+                "faltas"
+              ],
+              "properties": {
+                "faltas": {
+                  "minItems": 1
+                },
+                "estado": {
+                  "not": {
+                    "const": "percorrido pela busca"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "estado": {
+                  "const": "interrompido por teto"
+                }
+              },
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "required": [
+                "faltas"
+              ],
+              "properties": {
+                "faltas": {
+                  "minItems": 1
+                }
+              }
             }
           }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "estado": {
-            "const": "interrompido por teto"
-          }
-        },
-        "required": [
-          "estado"
         ]
-      },
-      "then": {
-        "required": [
-          "faltas"
-        ],
-        "properties": {
-          "faltas": {
-            "minItems": 1
-          }
-        }
       }
     }
   ]

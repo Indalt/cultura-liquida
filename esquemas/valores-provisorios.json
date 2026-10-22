@@ -55,8 +55,7 @@
             "falso",
             "inconsistente",
             "paracompleto",
-            "intermediário",
-            "não calculado"
+            "intermediário"
           ]
         }
       }
@@ -483,6 +482,31 @@
         "curador"
       ],
       "calibracao": "K-005 (ritmo do piloto); as rodadas de planejamento ficam fora desta soma até o K-002 (A-13)"
+    },
+    "estados_busca": {
+      "valor": {
+        "monitoramento_do_ambiente": [
+          "não iniciado",
+          "ativo",
+          "pausado"
+        ],
+        "recorte": [
+          "aberto",
+          "em curso",
+          "percorrido pela busca",
+          "lido por inteiro",
+          "interrompido por teto"
+        ],
+        "regra": "O §6 dá os estados finais do Recorte ('percorrido pela busca', 'lido por inteiro') e diz que o monitoramento nunca se exaure; 'aberto', 'em curso' e 'interrompido por teto' (com a Falta 'busca interrompida por teto') e os estados do monitoramento são provisórios."
+      },
+      "linha_fundacao": "l. 590, 592",
+      "base": "D-034",
+      "quem_usa": [
+        "esquemas/ambiente.schema.json",
+        "esquemas/recorte.schema.json",
+        "rastreador (consulta)"
+      ],
+      "calibracao": "bloco 5 (Recorte e adaptadores) e bloco 10 (rotinas)"
     },
     "fonte_no_git": {
       "valor": "A referência completa da Fonte vai sem nome de pessoa: título, instituição, ano, tipo e link permanente (DOI, handle ou URL). A autoria entra por código opaco (P-nnnn) só quando a linhagem ou a perspectiva pedirem.",

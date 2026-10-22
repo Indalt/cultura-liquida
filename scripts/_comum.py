@@ -93,7 +93,7 @@ def validar_objeto(obj, esquema: dict, minimo: bool = False) -> list[str]:
 class _MiniValidador:
     """Validador mínimo (subconjunto do JSON Schema 2020-12): type, enum, const,
     required, properties, additionalProperties=false, items, minItems, minLength,
-    minimum, maximum, minProperties, maxProperties, uniqueItems, pattern, $ref local
+    minimum, maximum, minProperties, maxProperties, propertyNames, uniqueItems, pattern, $ref local
     (os externos chegam já embutidos por carregar_esquema), allOf, anyOf, oneOf, not, if/then/else."""
 
     TIPOS = {
@@ -160,6 +160,9 @@ class _MiniValidador:
                     erros.append(f"{c}: campo não previsto '{k}'")
                 elif isinstance(esq.get("additionalProperties"), dict):
                     self.validar(v, esq["additionalProperties"], f"{caminho}/{k}", erros)
+            if "propertyNames" in esq:
+                for k in obj:
+                    self.validar(k, esq["propertyNames"], f"{caminho}/{k}", erros)
             if len(obj) < esq.get("minProperties", 0):
                 erros.append(f"{c}: campos de menos")
             if "maxProperties" in esq and len(obj) > esq["maxProperties"]:

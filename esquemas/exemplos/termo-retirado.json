@@ -1,0 +1,10 @@
+{
+  "id": "TE-900002",
+  "retirado": true,
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-104)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema: termo retirado, o ID fica sem o conteúdo (l. 585)"
+}

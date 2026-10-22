@@ -2,14 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "termo.schema.json",
   "title": "Termo (entrada terminológica)",
-  "description": "Termo do §6 (l. 613) e princípio 2 (l. 103). Estrutura compatível com TBX (ISO 30042) e exportável para SKOS (Anexo C, F-13, não conferido): conceito ~ entrada de conceito do TBX e skos:Concept; designacoes ~ termos da entrada e skos:prefLabel/altLabel; definicao ~ skos:definition; relacoes ~ skos:broader/narrower/related. Nasce candidato e vira atestado com a primeira abonação cujo trecho foi localizado (o validar_acervo.py confere a localização). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Termo do §6 (l. 613) e princípio 2 (l. 103). Estrutura compatível com TBX (ISO 30042) e exportável para SKOS (Anexo C, F-13, não conferido): conceito ~ entrada de conceito do TBX e skos:Concept; designacoes ~ termos da entrada e skos:prefLabel/altLabel; definicao ~ skos:definition; relacoes ~ skos:broader/narrower/related. Nasce candidato e vira atestado com a primeira abonação cujo trecho foi localizado (o validar_acervo.py confere a localização). Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "conceito",
-    "designacoes",
-    "estado",
     "origem_registro"
   ],
   "properties": {
@@ -125,6 +122,9 @@
     "do_legado": {
       "type": "boolean"
     },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
     "origem_registro": {
       "$ref": "comum.schema.json#/$defs/origem_registro"
     },
@@ -143,42 +143,74 @@
     {
       "if": {
         "properties": {
-          "estado": {
-            "const": "atestado"
-          }
-        },
-        "required": [
-          "estado"
-        ]
-      },
-      "then": {
-        "required": [
-          "abonacoes"
-        ],
-        "properties": {
-          "abonacoes": {
-            "minItems": 1
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "do_legado": {
+          "retirado": {
             "const": true
           }
         },
         "required": [
-          "do_legado"
+          "retirado"
         ]
       },
       "then": {
-        "properties": {
-          "estado": {
-            "const": "candidato"
-          }
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
         }
+      },
+      "else": {
+        "required": [
+          "conceito",
+          "designacoes",
+          "estado"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "estado": {
+                  "const": "atestado"
+                }
+              },
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "required": [
+                "abonacoes"
+              ],
+              "properties": {
+                "abonacoes": {
+                  "minItems": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "do_legado": {
+                  "const": true
+                }
+              },
+              "required": [
+                "do_legado"
+              ]
+            },
+            "then": {
+              "properties": {
+                "estado": {
+                  "const": "candidato"
+                }
+              }
+            }
+          }
+        ]
       }
     }
   ]

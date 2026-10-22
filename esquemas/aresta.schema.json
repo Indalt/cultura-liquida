@@ -2,20 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "aresta.schema.json",
   "title": "Aresta",
-  "description": "Aresta do §6 (l. 610): a ligação entre dois pontos do grafo, inclusive a de tensão (P29), com as Proposições que a sustentam, Z, W, μ e λ calculados por script. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Aresta do §6 (l. 610): a ligação entre dois pontos do grafo, inclusive a de tensão (P29), com as Proposições que a sustentam, Z, W, μ e λ calculados por script. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "de",
-    "para",
-    "tipo",
-    "proposicoes",
-    "z",
-    "w",
-    "mu",
-    "lambda",
-    "estado",
     "origem_registro"
   ],
   "properties": {
@@ -76,9 +67,16 @@
     "estado": {
       "$ref": "valores-provisorios.json#/estrutura/eixos/eixo4/esquema"
     },
+    "estado_detalhe": {
+      "type": "string",
+      "description": "o nome do estado intermediário"
+    },
     "versao_regra": {
       "type": "string",
       "pattern": "^mu-lambda-[0-9]+\\.[0-9]+$"
+    },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
     },
     "origem_registro": {
       "$ref": "comum.schema.json#/$defs/origem_registro"
@@ -98,19 +96,57 @@
     {
       "if": {
         "properties": {
-          "estado": {
-            "not": {
-              "const": "não calculado"
-            }
+          "retirado": {
+            "const": true
           }
         },
         "required": [
-          "estado"
+          "retirado"
         ]
       },
       "then": {
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
+        }
+      },
+      "else": {
         "required": [
-          "versao_regra"
+          "de",
+          "para",
+          "tipo",
+          "proposicoes",
+          "z",
+          "w",
+          "mu",
+          "lambda"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "required": [
+                "versao_regra"
+              ],
+              "properties": {
+                "mu": {
+                  "type": "number"
+                },
+                "lambda": {
+                  "type": "number"
+                }
+              }
+            }
+          }
         ]
       }
     }

@@ -1,0 +1,74 @@
+{
+ "arquivo": "esquemas/ (contratos do §6)",
+ "commit": "cba3e86",
+ "data": "2026-10-22",
+ "verificador": "auditor (Sonnet 5.5 alto)",
+ "olhar": "mecanico",
+ "achados": [
+  {
+   "id": "A-001",
+   "tipo": "outro",
+   "descricao": "A l. 585 diz que a retirada deixa o ID com a marca 'retirado', sem o conteúdo. Os 18 contratos que têm o campo booleano `retirado` seguem exigindo os campos de conteúdo (`required`) e nenhum contrato tem condição sobre `retirado`: um registro retirado e sem conteúdo reprova no próprio esquema. Correção do curador: com retirado = true, só id, retirado, fundido_em, origem_registro e nota (propertyNames); senão, os campos do contrato; casos novos termo-retirado (passa) e erro-termo-retirado (reprova).",
+   "linha": 585,
+   "trecho": "retirada deixa o ID com a marca \"retirado\", sem o conteúdo",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python -c: conta os esquemas com o campo retirado e os que têm condição (if/allOf/oneOf/anyOf/then) sobre ele; grep -rn de lápide, tombstone e 'sem o conteúdo' em esquemas/ e scripts/",
+    "saida": "com campo retirado: 18 | com condicao sobre retirado: [] | grep sem saída"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A-002",
+   "tipo": "outro",
+   "descricao": "A l. 586 diz que todo registro que toca pessoa traz os campos de proteção. O contrato Pessoa (l. 615) tem a propriedade `protecao` fora de `required`. Correção do curador: `protecao` obrigatória na Pessoa.",
+   "linha": 586,
+   "trecho": "todo registro que toca pessoa, comunidade ou texto de terceiro traz:",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "sed -n 8,16p esquemas/pessoa.schema.json ; grep -n \"protecao\" esquemas/pessoa.schema.json",
+    "saida": "required: codigo, papeis, forma_atribuicao, nivel_colaborador, consentimento, origem_registro | protecao presente como propriedade, fora de required"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A-003",
+   "tipo": "outro",
+   "descricao": "A descrição de dez contratos (ambiente, aresta, consulta, elemento, insumo-x, processo, proposicao, recorte, termo, transformacao) promete os campos de proteção quando o registro toca pessoa, comunidade ou texto de terceiro, mas eles têm additionalProperties false e nenhuma propriedade `protecao`: o registro que tocar pessoa seria recusado por campo a mais. Correção do curador: `protecao` permitida em todos os contratos e obrigatória nos que tocam por natureza; a descrição diz isso.",
+   "linha": 586,
+   "trecho": "todo registro que toca pessoa, comunidade ou texto de terceiro traz:",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python -c: lista os esquemas com properties, sem protecao, com additionalProperties false e com 'proteção' na descrição",
+    "saida": "['ambiente', 'aresta', 'consulta', 'elemento', 'insumo-x', 'processo', 'proposicao', 'recorte', 'termo', 'transformacao']"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A-004",
+   "tipo": "outro",
+   "descricao": "O eixo 4 da tabela (l. 627) lista verdadeiro, falso, inconsistente, paracompleto e intermediários. O registro e os contratos Proposição e Aresta acrescentavam 'não calculado', que não está na tabela. Correção do curador: o valor saiu do eixo 4 (estrutura fixada pela D-038); até o cálculo, a Proposição e a Aresta ficam sem o campo estado, com μ e λ nulos; com estado, exigem μ, λ e a versão da regra.",
+   "linha": 627,
+   "trecho": "calculado de μ e λ: verdadeiro, falso, inconsistente (\"há documentação divergente\"), paracompleto (Falta) e intermediários",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n \"não calculado\" esquemas/*.json ; sed -n 627p 00_Fundacao_Cultura_Liquida.md | grep -c \"não calculado\"",
+    "saida": "aresta.schema.json, proposicao.schema.json e valores-provisorios.json com 'não calculado' | l. 627: 0"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A-005",
+   "tipo": "outro",
+   "descricao": "O eixo 4 vale para Proposição e Aresta (l. 627) e prevê intermediários. Só a Proposição tinha `estado_detalhe`. Correção do curador: `estado_detalhe` também na Aresta.",
+   "linha": 627,
+   "trecho": "| 4. Estado da proposição | Proposição, Aresta |",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n \"estado_detalhe\" esquemas/aresta.schema.json esquemas/proposicao.schema.json",
+    "saida": "proposicao.schema.json:81 | aresta.schema.json: sem ocorrência"
+   },
+   "estado": "corrigido"
+  }
+ ]
+}

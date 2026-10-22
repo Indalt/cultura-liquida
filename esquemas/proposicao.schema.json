@@ -2,20 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "proposicao.schema.json",
   "title": "Proposição",
-  "description": "Proposição do §6 (l. 602): CLB situada × atributo × valor × período. μ e λ calculados por script e contados por linhagem (Passo 7); null até o cálculo. A fonte contrária entra como Evidência divergente e não derruba a Proposição (D-019). Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Proposição do §6 (l. 602): CLB situada × atributo × valor × período. μ e λ calculados por script e contados por linhagem (Passo 7); null e sem o campo estado (eixo 4) até o cálculo, porque o eixo 4 não tem valor de 'não calculado' (l. 627). A fonte contrária entra como Evidência divergente e não derruba a Proposição (D-019). Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "clb",
-    "atributo",
-    "valor",
-    "periodo",
-    "evidencias",
-    "mu",
-    "lambda",
-    "estado",
-    "sustenta_aviso_saude_politica",
     "origem_registro"
   ],
   "properties": {
@@ -90,6 +81,9 @@
       "type": "string",
       "pattern": "^mu-lambda-[0-9]+\\.[0-9]+$"
     },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
     "origem_registro": {
       "$ref": "comum.schema.json#/$defs/origem_registro"
     },
@@ -108,28 +102,58 @@
     {
       "if": {
         "properties": {
-          "estado": {
-            "not": {
-              "const": "não calculado"
-            }
+          "retirado": {
+            "const": true
           }
         },
         "required": [
-          "estado"
+          "retirado"
         ]
       },
       "then": {
-        "required": [
-          "versao_regra"
-        ],
-        "properties": {
-          "mu": {
-            "type": "number"
-          },
-          "lambda": {
-            "type": "number"
-          }
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
         }
+      },
+      "else": {
+        "required": [
+          "clb",
+          "atributo",
+          "valor",
+          "periodo",
+          "evidencias",
+          "mu",
+          "lambda",
+          "sustenta_aviso_saude_politica"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "estado"
+              ]
+            },
+            "then": {
+              "required": [
+                "versao_regra"
+              ],
+              "properties": {
+                "mu": {
+                  "type": "number"
+                },
+                "lambda": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        ]
       }
     }
   ]

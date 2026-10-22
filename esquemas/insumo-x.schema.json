@@ -2,14 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "insumo-x.schema.json",
   "title": "Insumo (X)",
-  "description": "Insumo do §6 (l. 607). O status botânico-cultural (nativo ou aculturado, princípio 6) vem de Proposição; sem ela, Falta. Os campos de origem (l. 587) e, quando o registro toca pessoa, comunidade ou texto de terceiro, os de proteção (l. 586). Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Insumo do §6 (l. 607). O status botânico-cultural (nativo ou aculturado, princípio 6) vem de Proposição; sem ela, Falta. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
-    "nome",
-    "tipo",
-    "proposicoes",
     "origem_registro"
   ],
   "properties": {
@@ -47,6 +44,9 @@
       },
       "uniqueItems": true
     },
+    "protecao": {
+      "$ref": "comum.schema.json#/$defs/protecao"
+    },
     "origem_registro": {
       "$ref": "comum.schema.json#/$defs/origem_registro"
     },
@@ -63,18 +63,50 @@
   },
   "allOf": [
     {
-      "oneOf": [
-        {
-          "required": [
-            "status_botanico_cultural"
-          ]
+      "if": {
+        "properties": {
+          "retirado": {
+            "const": true
+          }
         },
-        {
-          "required": [
-            "falta_status"
+        "required": [
+          "retirado"
+        ]
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "id",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
           ]
         }
-      ]
+      },
+      "else": {
+        "required": [
+          "nome",
+          "tipo",
+          "proposicoes"
+        ],
+        "allOf": [
+          {
+            "oneOf": [
+              {
+                "required": [
+                  "status_botanico_cultural"
+                ]
+              },
+              {
+                "required": [
+                  "falta_status"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

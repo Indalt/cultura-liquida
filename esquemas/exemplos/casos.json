@@ -3,6 +3,20 @@
   "rodada": "B",
   "casos": [
     {
+      "nome": "termo: retirado só com o ID (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/termo-retirado.json",
+      "criterio": "l. 585: a retirada deixa o ID com a marca, sem o conteúdo"
+    },
+    {
+      "nome": "termo: retirado ainda com conteúdo",
+      "espera": "reprova",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/erro-termo-retirado.json",
+      "criterio": "l. 585: sem o conteúdo"
+    },
+    {
       "nome": "termo: exemplo que passa (dado real)",
       "espera": "passa",
       "esquema": "termo",
