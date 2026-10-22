@@ -9,7 +9,7 @@
 - **As três frentes (D-036):**
   - **P, planejamento de melhorias:** reavalia o plano. Decisões novas, versões da Fundação, insumos, perguntas, calibrações e o custo e a cadência do próprio planejamento. Sessões curtas, com teto próprio por rodada (D-036), na configuração do `estado-planejamento.md` (Opus 5.5, esforço máximo, ultracode e thinking). Essa é a configuração que o planejamento da v0.2 usou, segundo a D-027; nenhuma decisão a fixa para a frente, e ela vai ao K-002 (A-12).
   - **D, desenvolvimento:** constrói e corrige a ferramenta (harness, esquemas, scripts, adaptadores, agentes e habilidades, wiki local, grafo, rotinas antes de ligar). Sessões na IDE, um cartão por vez, em Opus 5.5 médio, com subagentes Sonnet 5.5 alto, um por vez (D-027, D-035).
-  - **O, operação:** a ferramenta trabalhando sem sessão: rotinas, coleta, entrada, processamento por rotina, relatório do dia, grafos, propostas sob demanda e os cartões que os agentes abrem (conflito, Falta a liberar, CLB candidata e, na fase 2, sugestão). Começa quando a rotina sem IA for ligada (K-112, bloco 10a); até lá, os scripts rodam à mão nas conversas de trabalho (D-033).
+  - **O, operação:** a ferramenta trabalhando sem sessão: rotinas, coleta, entrada, processamento por rotina, relatório do dia, grafos, propostas sob demanda e os cartões que os agentes abrem (conflito, Falta a liberar, a lista única das CLB candidatas, pela D-039, e, na fase 2, sugestão). Começa quando a rotina sem IA for ligada (K-112, bloco 10a); até lá, os scripts rodam à mão nas conversas de trabalho (D-033).
   - **PDO:** regra que vale nas três frentes.
 - **Estado:** vigente; feito; a fazer; provisório (valor [PROPOSTA] que a execução usa no alcance da D-034); proposta (desenho ainda não decidido); pendente; aberto; adiado; histórico.
 - **Vira:** um cartão do quadro (K-nnn); "regra" (vale como está, sem cartão); um item da próxima versão (V-nn, em `proxima-versao.md`); um atrito da seção 2 (A-nn); "histórico" (fica na trilha).
@@ -23,7 +23,7 @@
 | **Começo de cada sessão ou rotina** | `estado-planejamento.md`, quadro, insumos abertos, decisões do cartão e só as seções da Fundação que o cartão pede | retomada do brief (brief l. 67-73) e, pela D-036, o quadro (A-01) | `git pull` e o relatório calculado (l. 512; bloco 10a) |
 | **Configuração** | Opus 5.5, esforço máximo, ultracode, thinking (`estado-planejamento.md`, passo 1: a do planejamento da v0.2, D-027; a confirmar no K-002) | Opus 5.5 médio, sem ultracode; subagentes Sonnet 5.5 alto, um por vez (D-027); modelos menores só no bloco 12 | camada 1 sem IA; camada 2 com uma habilidade aprovada por vez, em Sonnet 5.5 alto até o bloco 12 (brief l. 123); a IA da operação é o K-002 |
 | **Teto** | 300 mil tokens de agentes por rodada, provisório (D-036; insumo 13) | 300 mil tokens por semana em agentes (D-023, "na operação da fase 1"; brief l. 37) | a mesma guarda da D-023 (l. 511): as rotinas medidas pelo uso da conta, com um teto em execuções por semana a fixar nos blocos 2 e 10b (brief l. 194); o teto das rotinas na nuvem (l. 823) e a IA da operação vão ao K-002 |
-| **O que é dela** | as decisões pendentes do §8 e as perguntas do §10 como insumos; as versões da Fundação (D-035); calibrações; IA da operação; gatilho da fase 2; revisão de essencialidade (D-025); o que a amostra acha na ferramenta (D-037) | os blocos 1 a 14 do brief (o 13 é registro, não cartão: D-035), o K-102 e o K-103; depois do piloto, os Passos 3, 6, 7, 8 e 9 e a fase 2 | rotinas das camadas 1 e 2; busca assistida e entrada por link de Vicente; cartões de conflito, de Falta a liberar e de CLB candidata; rodar a amostra que audita a ferramenta (o que ela acha vai ao P); campo de ação sob demanda; medidas (horas, consumo, minutos do Actions) |
+| **O que é dela** | as decisões pendentes do §8 e as perguntas do §10 como insumos; as versões da Fundação (D-035); calibrações; IA da operação; gatilho da fase 2; revisão de essencialidade (D-025); o que a amostra acha na ferramenta (D-037) | os blocos 1 a 14 do brief (o 13 é registro, não cartão: D-035), o K-102 e o K-103; depois do piloto, os Passos 3, 6, 7, 8 e 9 e a fase 2 | rotinas das camadas 1 e 2; busca assistida e entrada por link de Vicente; cartões de conflito e de Falta a liberar e o cartão de lista das CLB candidatas (D-039); rodar a amostra que audita a ferramenta (o que ela acha vai ao P); campo de ação sob demanda; medidas (horas, consumo, minutos do Actions) |
 | **Cartões** | K-000 a K-010 | K-100 a K-122 | K-201 (Falta F-0003) |
 
 A D-023 fala em "operação da fase 1" antes de a D-036 dar esse nome a uma frente. O brief aplica o teto semanal aos agentes das sessões de trabalho e põe as rotinas na mesma guarda (brief l. 37 e 194). O mapa segue essa leitura, que vai ao K-002 para confirmar (A-13).
@@ -32,7 +32,7 @@ A D-023 fala em "operação da fase 1" antes de a D-036 dar esse nome a uma fren
 
 As D-036 e D-037 foram registradas em 21/10, depois do brief (17/10) e sem versão nova da Fundação. A D-035 (diretriz 5) diz que as D-031 a D-035 valem pelos registros até a próxima versão; as D-036 e D-037 estão registradas como vigentes e listadas como tal no `AGENTS.md`. Os pontos abaixo são onde o texto ainda diz outra coisa. Vão ao K-003 (acertar o brief, o roteiro e os arquivos de `.claude/` antes do bloco 1) e à próxima versão. "Leitura dada" é o que o texto da decisão já responde, e a D-034 manda usar sem perguntar; "leitura proposta" é plausível, mas não decorre só do texto, e o K-003 a confirma; "em aberto" é insumo, com o destino e aonde se quer chegar.
 
-**K-003 (22/10/2026):** os atritos A-01 a A-11 estão aplicados no brief (quadro "Ajustes das D-036 e D-037", no início dele), com uma nota no roteiro; o que muda em `.claude/` está no bloco 1 do brief, para o K-101 gravar. Os padrões propostos para A-04, A-05, A-09 (b) e A-10, cada um com o porquê, estão em `rodadas/2026-10-22_K-003/pontos-em-aberto.md`, a aprovar por Vicente com o brief. As linhas "brief l." e "rot. l." desta tabela são as do commit 2fe7025, antes desses ajustes.
+**K-003 (22/10/2026):** os atritos A-01 a A-11 estão aplicados no brief (quadro "Ajustes das D-036 e D-037", no início dele), com uma nota no roteiro; o que muda em `.claude/` está no bloco 1 do brief, para o K-101 gravar. Os padrões para A-04, A-05, A-09 (b) e A-10, cada um com o porquê, estão em `rodadas/2026-10-22_K-003/pontos-em-aberto.md`. Vicente os aprovou em 22/10, com as leituras A-03 e A-06, pela D-038, e a D-039 ajustou o A-09 b: os pontos "em aberto" e as "leituras propostas" desta tabela estão decididos, e o que a próxima versão leva está em `proxima-versao.md`. As linhas "brief l." e "rot. l." desta tabela são as do commit 2fe7025, antes desses ajustes.
 
 | A | Onde | O texto diz | A decisão diz | Leitura e destino |
 |---|---|---|---|---|
@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 25 (os 15 a 19 nasceram no K-001; os 20 a 25, no K-003)
+## 6. Insumos 1 a 26 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -359,8 +359,9 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 23, o auditor da amostra usa o mesmo modelo dos agentes que produzem (K-003) | P; D (bloco 12) | K-115; V-24 |
 | 24, o cartão do tratamento com IA entre o piloto e o K-113 (K-003) | P; O | K-002 |
 | 25, o kit e a regra do campo-de-acao sobre Falta jurídica aberta, sem a v0.2.1 (K-003) | P; D (bloco 11) | K-114 |
+| 26, o termo ambíguo e o desdobramento da CLB na registrar-termo e na montar-ficha (K-003, D-039) | D (blocos 8 e 9); P | K-110, K-111 |
 
-## 7. Decisões D-001 a D-037
+## 7. Decisões D-001 a D-039
 
 | D | Essência curta | Frente | Estado e leitura de hoje | Vira |
 |---|---|---|---|---|
@@ -401,6 +402,8 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | D-035 | finalizar a v0.2 é construir e testar; sem versão nova na execução; insumos; uma tarefa por vez | PDO | vigente | o quadro; K-004 |
 | D-036 | três frentes, quadro kanban, rodadas com teto próprio | PDO | vigente | o quadro; K-001, K-002; A-01, A-12, A-13; V-02 |
 | D-037 | base sem revisão de rotina; Vicente só por conflito ou Falta a liberar; amostra audita a ferramenta; sugestões na fase 2; script de menções | O (cartões de conflito e de Falta; rodar a amostra); D (K-102); P (o que a amostra acha; sugestões, K-008) | vigente; o "substitui" (a cota serve a conflitos, Faltas e auditoria da ferramenta) convive com a diretriz 1 (nada mais chama Vicente): A-04 | K-102, K-201, K-003; A-02 a A-10; V-06, V-07, V-09, V-14, V-24 |
+| D-038 | regra-mãe: a ferramenta decide os itens pela regra, e Vicente decide as regras; os padrões e as leituras do K-003 aprovados; estrutura fixada (estados do modelo, versão da regra em toda decisão automática, quem propõe não aprova com o papel trocável); números provisórios até o K-005; kit e F-0003 no K-114 | PDO; D (blocos 1, 2, 5, 7, 8 e 10); O (cartões, junção); P (calibração, K-005) | vigente, registrada em 22/10 no fechamento do K-003 | K-003, K-005, K-101, K-104, K-114; A-03 a A-06, A-09, A-10; V-37 |
+| D-039 | a CLB pelo termo enquanto ele não for ambíguo, com lugares, grupos e períodos como dados; nenhuma fonte como verdade única, nem a institucional; a valência mede lastro, trecho localizado e voz; no piloto, toda a cajuína que as fontes mostrarem; só CLB de outro termo vira candidata, num único cartão de lista | PDO; D (bloco 2, unidade da ficha e valências; blocos 7, 8 e K-102); O (cartão de lista) | vigente, registrada em 22/10; ajusta o A-09 b e a forma do cartão da D-037 (4) | K-104, K-109, K-110, K-102; A-09; V-20, V-38 |
 
 ## 8. Ordem dos cartões e por quê
 

@@ -1,0 +1,33 @@
+{
+  "id": "D-038",
+  "data": "2026-10-22",
+  "essencia": "Regra-mãe: a ferramenta decide os itens pela regra; Vicente decide as regras. Com ela, Vicente aprova os padrões dos quatro pontos em aberto do K-003 (A-04, a amostra; A-05, a quarentena; A-09 b, a CLB nova vinda de Entrada; A-10, a junção das ramificações das rotinas) e as leituras propostas: no cartão de conflito, Vicente confere a leitura, nunca a prática; o que sustenta aviso, saúde ou política passa todo pelo auditor, fora da amostra; a fila de cartões (A-03); o trecho abaixo do limiar como Falta (A-06). O kit e a F-0003 ficam para o K-114. A estrutura fica fixada agora: os estados do modelo (candidata, quarentena com selo, eixos), a versão da regra gravada em toda decisão automática e 'quem propõe não aprova', com o papel trocável. Os números são provisórios até o K-005.",
+  "diretriz": "(1) Os padrões e as leituras valem como estão em trilhas/planejamento/rodadas/2026-10-22_K-003/pontos-em-aberto.md e no brief de execuções (quadro 'Ajustes das D-036 e D-037'), com o A-09 b ajustado pela D-039; saem do brief as marcas 'a aprovar', 'padrão proposto', 'leitura proposta' e 'ponto levado a Vicente'. (2) Vicente não decide item a item: o item sai da quarentena, muda de eixo e entra no acervo pela regra versionada, pelo portão combinado da fase 1 e com a segunda leitura; o julgamento dele fica na regra (a escala de valências e o critério de PENDENTE_JULGAMENTO, §8, l. 812), que chega a ele pela frente de planejamento. (3) No cartão de conflito, Vicente confere se cada trecho em tensão diz o que dissemos que ele diz (eixo 3, l. 626); se a leitura está certa, as duas documentações ficam lado a lado (P29; l. 638) e o cartão fecha; se não está, a leitura se corrige e a ferramenta ganha um insumo; nunca se julga a prática (D-019). (4) Todo item que sustente aviso, saúde ou política é marcado na triagem e lido pelo auditor, fora da amostra (princípio 4; l. 473). (5) Estrutura fixada: os estados do modelo (candidata, quarentena com o selo PENDENTE_JULGAMENTO, os eixos de status do §6); toda decisão automática grava na Execução a versão da regra que aplicou; quem propõe não aprova, e o papel de quem aprova é trocável (hoje, Vicente na junção, até o K-113; depois, quem uma decisão indicar, como o script sem IA do insumo 20), nunca ocupado por quem propôs. (6) Os números destes padrões e leituras (por exemplo, os 15 itens da amostra e os 15 cartões da semana de curadoria) são provisórios até o K-005. (7) A leitura da regra do campo-de-acao sobre Falta jurídica aberta, para o kit (insumo 25), e a F-0003 ficam para o K-114. (8) A decisão vale pelo registro, como as D-031 a D-037, até a próxima versão da Fundação, que a escreve (K-004; trilhas/planejamento/proxima-versao.md).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-22",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-10-22_K-003/relatorio.md, seção 'Fechamento (22/10/2026)', parte 'Falas originais de Vicente'",
+  "palavras_conferidas": [
+    {
+      "palavra": "Aprovo assim",
+      "sentido_confirmado": "aprova os padrões e as leituras como estão escritos em pontos-em-aberto.md e no brief, com as escolhas ditas na própria decisão (o cartão de conflito; aviso, saúde e política; o kit e a F-0003 no K-114) e o A-09 b ajustado pela D-039; nenhuma outra correção"
+    },
+    {
+      "palavra": "regra-mãe",
+      "sentido_confirmado": "a regra de que as outras derivam: a ferramenta decide cada item pela regra, e Vicente decide as regras, nunca o item"
+    },
+    {
+      "palavra": "estrutura fixada agora",
+      "sentido_confirmado": "o que não muda com a calibração: os estados do modelo, a versão da regra gravada em toda decisão automática e 'quem propõe não aprova'"
+    },
+    {
+      "palavra": "números provisórios até o K-005",
+      "sentido_confirmado": "os valores numéricos destes padrões e leituras (por exemplo, o tamanho da amostra e o número de cartões que faz a fila passar de uma semana) valem até o K-005 calibrá-los pela medida"
+    },
+    {
+      "palavra": "com o papel trocável",
+      "sentido_confirmado": "a regra prende os papéis, não quem os ocupa: quem aprova pode mudar (Vicente hoje; um script sem IA depois, por decisão), mas nunca é quem propôs"
+    }
+  ],
+  "substitui": "Complementa a D-037 e substitui, até a próxima versão da Fundação (K-004), o que o texto punha nas mãos de Vicente item a item: o julgamento da quarentena (l. 133 e 624), o eixo 5 'Vicente, pelo portão' (l. 628; fica com ele o valor 'publicada'), a amostra 'para Vicente, dentro da cota' (l. 752), a prioridade de aviso, saúde ou política na cota (l. 902), a proposta da rotina 'para Vicente revisar' (l. 506), que passa a ser junção pelo portão da ferramenta, e o padrão de 17/10 da CLB nova (brief de execuções, 'Depois do bloco 14': o curador a abria numa conversa de trabalho).",
+  "marcador": "VIGENTE"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "D-039",
+  "data": "2026-10-22",
+  "essencia": "A CLB se identifica pelo termo enquanto ele não for ambíguo; os lugares, os grupos e os períodos são dados que as fontes mostram, e um termo ambíguo se desdobra em mais de uma CLB. Nenhuma fonte é fonte de verdade única, nem a institucional: o registro do IPHAN é uma fonte com perspectiva institucional que fala sobre a CLB. A valência não dá peso a uma fonte por ser institucional: mede lastro, trecho localizado e voz. Vale para o piloto e para todas as CLB: no piloto, todas as situações da cajuína que as fontes mostrarem fazem parte dele, e só CLB de outro termo viram candidatas.",
+  "diretriz": "(1) No piloto, todas as situações da cajuína que as fontes mostrarem (lugares, grupos, períodos) fazem parte dele; só CLB de outro termo viram candidatas (ajusta o A-09 b da D-038). (2) Toda fonte do termo, inclusive a institucional, nasce candidata e é tratada pela regra (triagem, portão, auditor) antes de virar fonte de conhecimento; Vicente entra só pelo conflito, e a Falta jurídica a liberar segue o seu cartão (D-037, diretriz 1). (3) As CLB candidatas de outro termo ficam num único cartão de lista, na frente de operação, de baixa prioridade e sem chamar Vicente, e não num cartão por CLB. (4) No registro de valores do bloco 2 do brief de execuções: a unidade da ficha é a CLB identificada pelo termo, com o Termo como entrada própria e as situações como dados, o que responde, até a próxima versão, ao que a Fundação deixa em aberto (l. 516 e 811; §10, pergunta 6); a escala de valências (§8, l. 812) mede lastro, trecho localizado e voz e não dá peso a uma fonte por ser institucional. (5) A decisão vale pelo registro até a próxima versão da Fundação, que a escreve (K-004).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-22",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-10-22_K-003/relatorio.md, seção 'Fechamento (22/10/2026)', parte 'Falas originais de Vicente'",
+  "palavras_conferidas": [
+    {
+      "palavra": "Cajuína é uma CLB",
+      "sentido_confirmado": "a CLB do piloto é a cajuína, identificada pelo termo, com todas as situações que as fontes mostrarem; responde ao ponto 3 da releitura do K-003 (a do registro do IPHAN ou toda cajuína)"
+    },
+    {
+      "palavra": "até o momento não gera ambiguidade, pelo que entendo",
+      "sentido_confirmado": "a falta de ambiguidade é o estado de hoje; se as fontes mostrarem que o termo nomeia mais de uma prática, ele se desdobra em mais de uma CLB"
+    },
+    {
+      "palavra": "fonte institucional",
+      "sentido_confirmado": "uma fonte com perspectiva institucional (campo perspectiva da Fonte, l. 597), que fala sobre a CLB e é tratada como as outras; não é fonte de verdade única"
+    },
+    {
+      "palavra": "a pergunta da valência",
+      "sentido_confirmado": "a escala de valências (§8, l. 812): mede lastro, trecho localizado e voz, sem dar peso a uma fonte por ser institucional"
+    },
+    {
+      "palavra": "regra de como olhar o piloto e por conseguinte todas as CLB",
+      "sentido_confirmado": "a resposta vale como regra geral, para o piloto e para todas as CLB, não só como resposta sobre a cajuína"
+    },
+    {
+      "palavra": "nasce candidata (a fonte)",
+      "sentido_confirmado": "a fonte ainda não tratada pela regra (triagem, portão, auditor); só depois vira fonte de conhecimento"
+    },
+    {
+      "palavra": "único cartão de lista",
+      "sentido_confirmado": "um cartão só, com uma linha por CLB candidata de outro termo, e não um cartão por CLB"
+    }
+  ],
+  "substitui": "Ajusta o padrão A-09 b da D-038, que faria das outras situações da cajuína candidatas: só CLB de outro termo viram candidatas. Ajusta a forma do cartão da D-037 (diretriz 4): um único cartão de lista, não um por CLB. Responde, até a próxima versão, à unidade da ficha que a Fundação deixa em aberto (l. 516 e 811; §10, pergunta 6) e que o brief usava como valor provisório (a CLB situada).",
+  "marcador": "VIGENTE"
+}

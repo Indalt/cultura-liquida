@@ -1,8 +1,8 @@
 # Relatório da rodada K-003 (22/10/2026)
 
-**Cartão:** K-003, "Acertar o brief de execuções às D-036 e D-037". **Frente:** planejamento de melhorias. **Estado:** em Fazendo, à espera da aprovação de Vicente; com ela, a decisão que registra os padrões (registrar-decisao) e o cartão vai a Concluído.
+**Cartão:** K-003, "Acertar o brief de execuções às D-036 e D-037". **Frente:** planejamento de melhorias. **Estado:** concluído em 22/10/2026. Vicente aprovou os padrões e as leituras (D-038) e decidiu a CLB do piloto e o lugar da fonte institucional (D-039); o fechamento está na seção "Fechamento", no fim. As seções até "Alcance" contam a primeira conversa da rodada, como estava antes da aprovação.
 **Pedido de Vicente (fala original, para a trilha):** "Rodada de planejamento de melhorias: cartão K-003 de trilhas/planejamento/quadro.md. Siga trilhas/planejamento/estado-planejamento.md. Traga para mim os quatro pontos em aberto (A-04, A-05, A-09, A-10), cada um com o padrão proposto e o porquê. Uso atual da conta: 12% (registre também no relatório do K-001, que pediu esse número)."
-**Sessão:** `claude-opus-5-5` (conferido), esforço máximo, ultracode (`estado-planejamento.md`, passo 1). **Uso da conta:** 12% no início, informado por Vicente; no fim, a informar. O mesmo número fechou o relatório do K-001, como Vicente pediu.
+**Sessões:** duas conversas em `claude-opus-5-5` (conferido nas duas), esforço máximo: a primeira com ultracode e o lote de verificação (`estado-planejamento.md`, passo 1); a de fechamento sem agentes, a pedido de Vicente. **Uso da conta, lido por Vicente:** 12% no início da rodada (o mesmo número fechou o relatório do K-001, como ele pediu); 23% ao abrir a conversa de fechamento; o fim dela, a informar.
 
 ## Entregas
 
@@ -100,6 +100,48 @@ A checagem sem IA passou a cobrar essas correções e passa no estado atual; no 
 - **Olhado (sessão principal):** Fundação, l. 74-78, 105-120, 128-134, 196-201, 241-247, 369-377, 393-410, 438-514, 592-612, 618-641, 660-760, 780-831, 832-932 (estas, até 900 caracteres por linha), e 1480-1530 (Anexo A, P84 a P89), com `grep` de quarentena, julgamento e admissão no texto inteiro; o brief inteiro; o roteiro, l. 1-40, 95-125 e 170-190, e as linhas que a nota cita; o mapa, seções 1, 2, 5, 6, 7, 8 e 9; `proxima-versao.md`; os insumos 1 a 19; D-031 a D-037; o checklist do piloto; `curador.md`, `avaliador.md`, `auditor.md`, `extrair-evidencia`, `executar-brief`, `verificar-fundacao` e trechos de `conferir-fato`; `orcamento.py`, `registrar_log.py`, o esquema de log e o de achados; o relatório e a verificação do K-001. Os auditores: cada um a sua fatia (`verificacao.json`, campo `log.alcance` de cada fatia).
 - **Fora:** o resto dos Anexos A a E; o roteiro, l. 41-94 e 126-169 (etapas que o brief detalha), salvo as linhas citadas; os mapas de 17/10; `legado/`; a web (nenhum fato novo nesta rodada). Uma segunda verificação das correções não coube no teto.
 
+## Fechamento (22/10/2026, conversa sem agentes)
+
+**Pedido de Vicente (fala original, para a trilha):** "Rodada de planejamento de melhorias: fechar o cartão K-003 (está em Fazendo; ver trilhas/planejamento/rodadas/2026-10-22_K-003/relatorio.md, "Próximo"). Sem agentes; trabalho mecânico. Siga trilhas/planejamento/estado-planejamento.md." Na mesma mensagem vieram as duas decisões abaixo, a ordem do trabalho ("tirar do brief as marcas 'a aprovar'; aplicar a D-039 no A-09 b e no bloco 2 (escala de valências); rodar checar_ajustes.py; incluir D-038 e D-039 no AGENTS.md; quadro (K-003 em Concluído), estado e log em dia; registrar o uso da conta no fim; commit e push") e a configuração ("Opus 5.5, esforço máximo, thinking. Uso atual: 23%").
+
+**Falas originais de Vicente (22/10/2026)**
+- **D-038:** "Aprovo assim".
+- **D-039:** "Cajuina é uma CLB, é um termo que até o momento não gera ambiguidade pelo que entendo. O registro do Iphan é fonte institucional que fala sobre a CLB, não é fonte de verdade unica, e comento isso porque a pergunta da valencia como deve ser, mas temos que a resposta vire uma regra de como olhar o piloto e por conseguinte todas as clbs."
+- **Complemento, na mensagem que mandou registrar as duas:** "Toda fonte do termo, inclusive a institucional, nasce candidata e é tratada pela regra (triagem, portão, auditor) antes de virar fonte de conhecimento; Vicente entra só pelo conflito. As CLB candidatas de outro termo ficam num único cartão de lista, não num cartão por CLB."
+
+**As decisões** (habilidade registrar-decisao; `trilhas/decisoes/D-038.json` e `D-039.json`, as duas aprovadas por `validar.py decisao`). As essências vieram de Vicente já formuladas, na mensagem que mandou registrá-las, junto com as falas originais: essa mensagem é a confirmação, e a sessão não as devolveu de novo (D-028, D-034). O sentido de cada palavra ambígua ficou em `palavras_conferidas`, tirado do texto da mesma mensagem.
+- **D-038:** a regra-mãe ("a ferramenta decide os itens pela regra; Vicente decide as regras"); os padrões A-04, A-05, A-09 b e A-10 e as leituras (o cartão de conflito; aviso, saúde ou política; A-03; A-06); a estrutura fixada e os números até o K-005; o kit e a F-0003 no K-114. **Substitui**, até a próxima versão, o que o texto punha nas mãos de Vicente item a item: o julgamento da quarentena (l. 133 e 624), o eixo 5 (l. 628, menos o valor "publicada"), a amostra dentro da cota (l. 752), a prioridade de aviso, saúde ou política na cota (l. 902), a proposta da rotina "para Vicente revisar" (l. 506) e o padrão de 17/10 da CLB nova.
+- **D-039:** a CLB pelo termo; nenhuma fonte como verdade única, nem a institucional; a valência sem peso por ser institucional; a fonte que nasce candidata; um único cartão de lista. **Ajusta** o A-09 b (só CLB de outro termo vira candidata), a forma do cartão da D-037, diretriz 4 (um cartão de lista, não um por CLB), e dá a unidade da ficha que a Fundação deixa em aberto (l. 516 e 811; §10, pergunta 6), que o brief usava como valor provisório (a CLB situada).
+
+**O que mudou**
+
+| Arquivo | O que mudou |
+|---|---|
+| `trilhas/decisoes/D-038.json`, `D-039.json` | novos |
+| brief de execuções | o cabeçalho e o quadro de ajustes: "O que vale quando", com a regra-mãe, a estrutura fixada e os números até o K-005; o cartão de conflito; aviso, saúde ou política; o A-09 b com a D-039; uma linha nova para as fontes, as valências e a unidade da ficha; o papel trocável no A-10; o registro. A seção 2 com as D-038 e D-039; a seção 3a (o auditor dos itens de aviso, saúde ou política); o bloco 1 (a versão da regra no log; a escala e a marca na extrair-evidencia; as regras herdadas do curador até a D-039); o bloco 2 (a estrutura e os números do registro; a escala de valências, a fonte candidata, a unidade da ficha e o eixo 5 pela D-039; a marca nos contratos); o bloco 5 (o cartão de lista; o cartão de conflito); os blocos 7 e 8 (a triagem da fonte institucional; o auditor dos itens marcados; a ficha da cajuína pelo termo); a seção do K-102, o bloco 10, a operação e a seção 5; o bloco 11 (o kit fica para o K-114); a 6A (o §9 até a D-039); a trilha. Saíram também duas marcas de 17/10 que a aprovação daquele dia já resolvera (os critérios do kit; a 6B) |
+| roteiro | a nota de ajuste, aprovada, com a D-039 nas l. 91 e 173; a nota segue numa linha só, e as linhas que ela cita não mudaram de número |
+| `pontos-em-aberto.md` | o estado; os quatro padrões como aprovados; o A-09 b com a D-039; as leituras A-03 e A-06 aprovadas; a decisão no fim de cada ponto da releitura; o "(D-034)" do A-04, item 3, que a releitura tinha corrigido só no brief |
+| `checar_ajustes.py` | a checagem do estado aprovado: nenhuma marca de aprovação pendente; as D-038 e D-039 no quadro de ajustes, na seção 2, nos blocos 1, 2, 5, 7, 8, 10 e 11, na seção do K-102 e na operação; mais linhas da Fundação e do roteiro conferidas pela palavra-chave; o K-003 em Concluído; as decisões, o `AGENTS.md`, os padrões e o estado. Reprova os dois estados anteriores |
+| `quadro.md` | o K-003 em Concluído; o K-101 já não espera o K-003; o K-102 e o texto da operação com o cartão de lista (D-039), o cartão de conflito e a regra-mãe (D-038) |
+| `AGENTS.md` | as D-038 e D-039; o passo corrente; os valores provisórios novos pela D-038 |
+| `estado-planejamento.md`, `mapa-tres-frentes.md`, `proxima-versao.md` | em dia: o K-003 concluído; no mapa, as D-038 e D-039 (seção 7), o insumo 26 (seção 6) e a nota do K-003; na lista da próxima versão, as duas como sustentação dos V do K-003 e os itens novos V-37 (a regra-mãe e a estrutura) e V-38 (a CLB pelo termo e as fontes) |
+| `trilhas/insumos-planejamento.md` | o insumo 26 |
+
+**Checagens, sem IA**
+- `checar_ajustes.py`: passa nos arquivos da pasta (código 0); reprova no commit 4e7b3fd, de antes da aprovação (código 1, 121 problemas), e no 71dafff, de antes dos ajustes (código 1, 128 problemas).
+- `checar_mapa.py` (K-001): passa (35 cartões, 38 V, 13 atritos).
+- `validar.py decisao`: as D-038 e D-039 passam.
+- `rodar_testes.py`: OK 27 · FALHA 0 · PENDENTE 9, como antes; `comparar_anexos.py`: Anexos A e B idênticos.
+- `procurar_dado_pessoal.py`: 0 ocorrência nas duas decisões e, com `--git`, antes do commit.
+
+**Insumo novo:** 26, o termo ambíguo e o desdobramento da CLB. A registrar-termo não tem passo nem caso para a designação que nomeia mais de um conceito, e a montar-ficha não diz a que conceito a ficha se liga (cartões K-110 e K-111).
+
+**Consumo:** nenhum agente nesta conversa, a pedido de Vicente (0 tokens de agentes; sem Workflow, embora a sessão tivesse ultracode ligado). A rodada fica com 214.004 tokens de agentes, pelo número da ferramenta, dentro do teto de 300 mil. Uso da conta: 23% ao abrir esta conversa, lido por Vicente; no fim, a informar.
+
+**Alcance do fechamento**
+- **Olhado:** `estado-planejamento.md`, este relatório, `pontos-em-aberto.md`, `checar_ajustes.py`, o quadro, o brief inteiro, o roteiro (l. 1-40, 55, 91 e 173), `AGENTS.md`, os insumos, o checklist do piloto, `proxima-versao.md`, o mapa (seções 1, 2, 6, 7 e 8), as D-034 a D-037, o esquema de decisão e o de log, a habilidade registrar-decisao, `registrar_log.py` e `checar_mapa.py`; na Fundação, as l. 112-115, 133, 472-473, 516, 597, 602, 605, 613, 624-628, 811-812, 880 e 902, com `grep` de "CLB situada", "institucional", "valência" e "ambíg"; em `.claude/`, a registrar-termo e a montar-ficha (por `grep` e os passos), o avaliador (l. 25-36) e a extrair-evidencia (l. 15-30).
+- **Fora:** a web (nenhum fato novo); `legado/`; os Anexos A e B, salvo a comparação por script; o roteiro fora das linhas citadas; uma verificação independente das mudanças desta conversa, que Vicente pediu sem agentes: valem a checagem sem IA e a releitura de quem escreveu.
+
 ## Próximo
 
-Vicente lê os quatro pontos (`pontos-em-aberto.md`) e o brief ajustado. Aprovando com os padrões, ou dizendo o que neles não corresponde ao que quis dizer na D-037, a sessão registra a decisão (registrar-decisao), tira as marcas "a aprovar" do brief e do roteiro, fecha o K-003 em Concluído e passa ao K-002, pela ordem do quadro. No desenvolvimento, o K-103 e depois o K-101 (bloco 1), quando Vicente autorizar.
+O K-003 está em Concluído. Pela ordem do quadro: no planejamento, o K-002 (a IA da operação, a configuração e o teto de cada frente, com os insumos 20 e 24); no desenvolvimento, o K-103 (registrar-melhoria) e depois o K-101 (o bloco 1, que grava em `.claude/` o que o bloco 1 do brief lista), quando Vicente autorizar. O uso da conta que Vicente der ao abrir a próxima conversa fecha a conta desta.
