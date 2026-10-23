@@ -161,6 +161,9 @@
 
 ### Bloco 4 — Fichas de acesso, Termos e Consultas do caju
 
+- [x] **Lote 1, insumo 30 (curador, scripts):** o contrato do Termo passa a 0.2.0: cada designação é um objeto com a forma e, só quando a fonte a der, a língua (BCP 47) e de onde ela veio (`lingua_fonte`); a variante ganha os mesmos dois campos; sem língua, a exportação usa `und` e nada se infere (no TBX, a seção de língua; no SKOS, o rótulo com a etiqueta). Três exemplos novos (passa: com a língua e a fonte; reprova: língua sem fonte, designação como texto solto); `gerar_termo.py` na regra termo-0.2 (o booleano não muda); acervos de teste remontados; `registrar-termo` 0.1.1. `rodar_testes.py`: OK 135 · FALHA 0 · PENDENTE 5. Commit f0cdee8. A equivalência com TBX e SKOS fica para o auditor (lote 4).
+- [x] **Lote 2, Termos e Consultas:** arquivista com registrar-termo 0.1.1 (EX-0014; **56.779 tokens, 8 chamadas**, Sonnet 5.5 alto; conta antes: 3,54 ≤ 7 pp): TE-0001 (caju) e TE-0002 (cajuína), candidatos, sem abonação, sem variante e sem língua (nenhuma fonte a dá), com as formas de busca por família (l. 433) e a relação "relacionado"; 13 descritores tirados do mapa de 17/10, 4 deles processuais (`trilhas/2026-10-23_K-106/descritores.json`). O curador gravou e validou (PASSA). `gerar_termo.py` (EX-0015): booleanos, glossário e as Consultas CO-0001 e CO-0002 (termo), CO-0003 e CO-0004 (mistas, com os 4 processuais); CO-0005 (só descritores) pelo curador. `validar_acervo.py`: 76 registros, válido. Em quarentena: as citações do BCR e da USCS, que vieram de leitor de página e não do PDF.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -195,4 +198,4 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | planejamento | K-005 | 43 | 49 | 6 | 0 | — | Opus 5.5 máximo, sem agentes |
 | 21/10–28/10/2026 | planejamento | K-005 (fechamento) | 49 | 51 | 2 | 0 | — | A1 pela abertura do K-123; janela de 5 h: 36% ao abrir |
 | 21/10–28/10/2026 | desenvolvimento | K-123 | 51 | 53 | 2 | 0 | — | janela de 5 h: 48% ao abrir; A1 pela abertura do K-106; renovação em 28/10/2026, 23h |
-| 21/10–28/10/2026 | desenvolvimento | K-106 | 53 | a informar | a informar | 0 | — | janela de 5 h: 58% ao abrir; Opus 5.5 médio |
+| 21/10–28/10/2026 | desenvolvimento | K-106 | 53 | a informar | a informar | 56.779 | 8 | janela de 5 h: 58% ao abrir; Opus 5.5 médio |

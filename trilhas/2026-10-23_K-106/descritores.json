@@ -1,0 +1,24 @@
+{
+  "nota": "Descritores para as Consultas mistas do bloco 4, propostos pelo arquivista (EX-0014) só a partir de trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json, cada um com o campo e o trecho copiado. Processuais (P3, princípio 8): os quatro primeiros. Os de fatos[4] vêm de títulos vistos só em busca (secundária). Os PDFs das fontes não foram abertos: é deles que devem sair mais descritores (bloco 6 em diante).",
+  "processuais": [
+    {"descritor": "processamento do pedúnculo", "origem": "web-cajuina-fontes.json#fatos[3].afirmacao: 'Processamento do pedúnculo do caju: cajuína'"},
+    {"descritor": "etapas de produção", "origem": "web-cajuina-fontes.json#fatos[3].citacao: \"Definição do produto; Etapas de produção; Colheita; Descastanhamento\""},
+    {"descritor": "colheita", "origem": "web-cajuina-fontes.json#fatos[3].citacao: \"Definição do produto; Etapas de produção; Colheita; Descastanhamento\""},
+    {"descritor": "descastanhamento", "origem": "web-cajuina-fontes.json#fatos[3].citacao: \"Definição do produto; Etapas de produção; Colheita; Descastanhamento\""}
+  ],
+  "outros": [
+    {"descritor": "produção tradicional", "tipo": "nome do bem", "origem": "web-cajuina-fontes.json#registro_iphan.situacao: Bem: 'Produção tradicional e práticas socioculturais associadas à cajuína no Piauí'"},
+    {"descritor": "práticas socioculturais", "tipo": "nome do bem", "origem": "web-cajuina-fontes.json#registro_iphan.situacao: Bem: 'Produção tradicional e práticas socioculturais associadas à cajuína no Piauí'"},
+    {"descritor": "continuidade e transformação", "tipo": "dossiê", "origem": "web-cajuina-fontes.json#registro_iphan.fatos[1].citacao: \"Nesse documento, é enfatizada a continuidade e a transformação do bem cultural ao longo do tempo\""},
+    {"descritor": "artesanal", "tipo": "atributo dos respondentes", "origem": "web-cajuina-fontes.json#fatos[5].citacao: \"Dois atributos, Natural e Artesanal, tiveram maior menção entre os respondentes\""},
+    {"descritor": "garrafa", "tipo": "recipiente", "origem": "web-cajuina-fontes.json#registro_iphan.fatos[0].citacao: \"No Piauí, oferecer uma garrafa de cajuína a uma visita é um gesto que expressa acolhimento, respeito e identidade.\""},
+    {"descritor": "sucos clarificados", "tipo": "título visto em busca (secundária)", "origem": "web-cajuina-fontes.json#fatos[4].afirmacao"},
+    {"descritor": "doces em calda", "tipo": "título visto em busca (secundária)", "origem": "web-cajuina-fontes.json#fatos[4].afirmacao"},
+    {"descritor": "rapadura de caju", "tipo": "título visto em busca (secundária)", "origem": "web-cajuina-fontes.json#fatos[4].afirmacao"},
+    {"descritor": "bebidas fermentadas de caju", "tipo": "título visto em busca (secundária)", "origem": "web-cajuina-fontes.json#fatos[4].afirmacao"}
+  ],
+  "descartados": [
+    {"descritor": "definição do produto", "motivo": "cabeçalho de documento, não processo"},
+    {"descritor": "cultivo, castanha, extrativismo", "motivo": "só no alcance.fora do mapa, não em citação nem título de fonte"}
+  ]
+}
