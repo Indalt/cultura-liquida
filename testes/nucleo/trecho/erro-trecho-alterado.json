@@ -1,0 +1,15 @@
+{
+  "trecho": {
+    "grau_semelhanca": 1.0,
+    "localizador": "car. 168-228 do texto normalizado (normalizacao-0.1)",
+    "hash": "db5a7df4a248e2267d6a291d5e1c89f75302c1652fe49b3cba84638c8bba8d50",
+    "versao_normalizacao": "normalizacao-0.1",
+    "data_conferencia": "2026-10-22",
+    "estado": "localizado",
+    "texto_exato": "levado em garrafas ao banho-maria, até ganhar a cor de ouro velho",
+    "antes": " do caju era coado em pano, depois clarificado com resina e ",
+    "depois": ". A receita passava de mãe para filha, e cada família dizia ",
+    "origem_texto": "fonte"
+  },
+  "nota": "caso que reprova: trecho alterado (âmbar → ouro velho) e ainda marcado como localizado exato"
+}

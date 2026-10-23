@@ -1,0 +1,16 @@
+{
+  "id": "AM-0030",
+  "nome": "LA Referencia",
+  "tipo": "outro",
+  "tipo_detalhe": "agregador latino-americano de repositórios",
+  "via_protocolo": "Aberta, com API do VuFind.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 30,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 30 (frentes FH, PA e MO): uso escavação; nível oficial; link /Record/<id> e o link de origem; termos de uso Nenhum limite publicado foi encontrado.; como buscar Escavação por termos em português e em espanhol (“chicha” deu 359 resultados), deduplicando com o Oasisbr. RSS nosso só para as consultas que cruzam fronteiras.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

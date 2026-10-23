@@ -1,0 +1,16 @@
+{
+  "id": "AM-0056",
+  "nome": "Missão de Pesquisas Folclóricas (1938) — Discoteca Oneyda Alvarenga, Centro Cultural São Paulo",
+  "tipo": "outro",
+  "tipo_detalhe": "acervo sonoro e documental",
+  "via_protocolo": "Mais de 20 mil itens guardados pela Discoteca. O acesso online não foi confirmado; a consulta é presencial ou por contato com a Discoteca.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 56,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 56 (frentes FH, PA e MO): uso escavação; nível oficial; link https://prefeitura.sp.gov.br/web/cultura/w/noticias/18883; termos de uso —; como buscar Escavação assistida presencial ou por contato; registrar o item, a faixa e o minuto.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

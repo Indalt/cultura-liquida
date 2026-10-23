@@ -1,0 +1,16 @@
+{
+  "id": "AM-0019",
+  "nome": "CRL — Brazilian Government Documents",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "documentos oficiais seriados digitalizados",
+  "via_protocolo": "digitalcollections.crl.edu; recusou nosso leitor (403).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 19,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 19 (frentes FH, PA e MO): uso escavação; nível secundária; link —; termos de uso —; como buscar Por província e ano (relatórios de presidentes, 1830–1930) e por ministério e ano (relatórios ministeriais, 1821–1960). Busca no texto não confirmada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

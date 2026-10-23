@@ -1,0 +1,16 @@
+{
+  "id": "AM-0009",
+  "nome": "Gallica (Bibliothèque nationale de France)",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca digital nacional da França",
+  "via_protocolo": "Aberto, com APIs SRU e Document. A API SRU recusou nosso leitor (403).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 9,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 9 (frentes FH, PA e MO): uso ambos; nível oficial; link ARK ark:/12148/<id>, com /f<n> para a página.; termos de uso Reuso não comercial livre, com o crédito 'Source gallica.bnf.fr / BnF' (secundária); uso comercial é pago.; como buscar SRU com CQL: gallica all, text (OCR), dc.date, dc.language e ocrquality de 0 a 100, com até 50 registros por chamada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

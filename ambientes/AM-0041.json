@@ -1,0 +1,16 @@
+{
+  "id": "AM-0041",
+  "nome": "Google Alertas — entrega por e-mail",
+  "tipo": "outro",
+  "tipo_detalhe": "alerta de busca",
+  "via_protocolo": "A ajuda oficial descreve a entrega por e-mail. Segundo fontes secundárias, também existe um feed RSS, mas ele fica sob /alerts/, que o robots.txt bloqueia. Se é preciso conta Google: a testar (as fontes secundárias divergem).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 41,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 41 (frentes FH, PA e MO): uso monitoramento; nível oficial; link https://support.google.com/websearch/answer/4815696?hl=pt-BR; termos de uso —; como buscar Um alerta por consulta gerada a partir do Termo (termo, variante ou só descritores), em português e com região Brasil, entregue no e-mail do projeto (§5.4). O script lê o e-mail e extrai de cada link o endereço de destino, sem passar pelo redirecionador do Google.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

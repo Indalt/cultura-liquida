@@ -1,0 +1,16 @@
+{
+  "id": "AM-0021",
+  "nome": "BDTD — Biblioteca Digital Brasileira de Teses e Dissertações (IBICT)",
+  "tipo": "repositório de teses",
+  "tipo_detalhe": "agregador de metadados de teses e dissertações",
+  "via_protocolo": "Aberta, sem cadastro. Tem API do VuFind em JSON e RSS 2.0 de qualquer busca.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 21,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 21 (frentes FH, PA e MO): uso ambos; nível oficial; link https://bdtd.ibict.br/vufind/Record/<id> e o handle (link permanente de repositório) da instituição; termos de uso Nenhum limite de uso publicado foi encontrado. Proposta: 1 requisição por segundo, com o robô identificado. Custo zero.; como buscar RSS nosso: rodar cada consulta (termo e variantes, item 6) toda semana, paginar até o total e anotar só os IDs fora das pegadas. Escavação: a mesma paginação completa a cada consulta nova; depois, buscar o texto no repositório de origem.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

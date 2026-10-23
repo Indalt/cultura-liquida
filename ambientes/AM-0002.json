@@ -1,0 +1,16 @@
+{
+  "id": "AM-0002",
+  "nome": "Projeto Resgate Barão do Rio Branco (BN)",
+  "tipo": "outro",
+  "tipo_detalhe": "manuscritos coloniais digitalizados (Arquivo Histórico Ultramarino e outros)",
+  "via_protocolo": "Web gratuita (DocReader).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 2,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 2 (frentes FH, PA e MO): uso escavação; nível oficial; link Código AHU (ex.: AHU_ACL_CU_004, caixa, documento).; termos de uso Não conferido.; como buscar Catálogos por capitania e catálogos temáticos (ex.: 'Fauna, flora e cultura na região do semiárido'), com resumo, data e código AHU de cada documento.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

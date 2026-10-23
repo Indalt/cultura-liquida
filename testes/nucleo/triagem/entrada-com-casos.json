@@ -1,0 +1,24 @@
+{
+  "id": "EN-900001",
+  "canal": "link ou documento trazido por Vicente",
+  "data_entrada": "2026-10-22",
+  "url_ou_arquivo": "https://example.org/materia-sintetica",
+  "estado": "triagem",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "parecer": "exemplo de esquema (K-105): matéria sintética que cita uma bebida de jurema servida a uma menina",
+  "nota": "exemplo de esquema (K-105)"
+}

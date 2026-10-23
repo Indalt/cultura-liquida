@@ -1,0 +1,16 @@
+{
+  "id": "AM-0064",
+  "nome": "Câmara dos Deputados, dados abertos",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "proposições e eventos legislativos federais",
+  "via_protocolo": "Arquivos em lote e API RESTful, em CSV, JSON, XML, XLSX e ODS.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 64,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 64 (lote A): uso monitoramento; nível oficial; link não conferido; termos de uso A página consultada não traz termos.; como buscar Baixar proposições por ano e filtrar localmente. Parâmetro de palavra-chave não confirmado.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

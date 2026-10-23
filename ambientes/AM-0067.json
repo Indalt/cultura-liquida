@@ -1,0 +1,16 @@
+{
+  "id": "AM-0067",
+  "nome": "Fundação Cultural Palmares: certificação quilombola",
+  "tipo": "outro",
+  "tipo_detalhe": "certidões de autodefinição de comunidades quilombolas",
+  "via_protocolo": "Lista de comunidades certificadas numa planilha Google Sheets, atualizada mensalmente, exportável.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 67,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 67 (lote A): uso monitoramento; nível oficial; link https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/certificacao-quilombola; termos de uso não conferido; como buscar Filtrar a planilha por UF e município.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

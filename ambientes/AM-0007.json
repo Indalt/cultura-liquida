@@ -1,0 +1,16 @@
+{
+  "id": "AM-0007",
+  "nome": "Internet Archive",
+  "tipo": "outro",
+  "tipo_detalhe": "arquivo digital de livros e periódicos, incluindo cópias de outras bibliotecas",
+  "via_protocolo": "Aberto; obras com direitos só por empréstimo.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 7,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 7 (frentes FH, PA e MO): uso ambos; nível oficial; link archive.org/details/<identificador> (o padrão de link por página não foi conferido).; termos de uso O IA não reivindica novos direitos sobre o acervo. A página de regras para robôs não foi aberta.; como buscar Advanced Search de metadados (AND, OR, NOT, TO) com saída em JSON, XML, CSV, HTML ou RSS; Full-Text Search sobre o OCR.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

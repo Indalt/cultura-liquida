@@ -1,0 +1,16 @@
+{
+  "id": "AM-0031",
+  "nome": "Redalyc",
+  "tipo": "outro",
+  "tipo_detalhe": "plataforma de revistas de acesso aberto da América Latina",
+  "via_protocolo": "OAI-PMH documentado na página oficial. Não foi testado aqui, porque o endereço é só HTTP e usa um IP.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 31,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 31 (frentes FH, PA e MO): uso escavação; nível oficial; link não conferido; termos de uso não conferidos; como buscar Colheita OAI e filtro local. Até o teste, usar o OpenAlex e a Crossref para os DOIs das revistas da Redalyc.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0043",
+  "nome": "Media Cloud",
+  "tipo": "outro",
+  "tipo_detalhe": "arquivo e índice de notícias",
+  "via_protocolo": "Exige conta (termos de 16/05/2023); a API tem cota padrão de 4.000 pedidos por semana, e alguns métodos aceitam só 2 pedidos por minuto.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 43,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 43 (frentes FH, PA e MO): uso ambos; nível oficial; link https://www.mediacloud.org/documentation/faqs; termos de uso Feito para pesquisa acadêmica, sem fins lucrativos e jornalística; não concede direito sobre o conteúdo de terceiros (mediacloud.org/legal/media-cloud-terms-of-use).; como buscar Busca por termo dentro de coleções geográficas: 'National' e 'State & Local' por país, e coleções por estado (blog de 2020; conferir as do Brasil no Directory). Exporta CSV de URLs.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

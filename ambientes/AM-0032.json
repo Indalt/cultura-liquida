@@ -1,0 +1,16 @@
+{
+  "id": "AM-0032",
+  "nome": "Google Acadêmico",
+  "tipo": "outro",
+  "tipo_detalhe": "buscador acadêmico",
+  "via_protocolo": "Só manual. O robots.txt (arquivo em que o site diz o que robôs podem acessar) proíbe robôs em /scholar. Não há API nem acesso em lote; os alertas chegam por e-mail.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 32,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 32 (frentes FH, PA e MO): uso ambos; nível oficial; link O link da própria obra, nunca o do Google.; termos de uso Respeitar o robots.txt e não raspar o site. Os termos gerais do Google sobre o uso dos alertas não foram conferidos.; como buscar Escavação manual, registrada como Consulta (termo, data, quantos resultados foram vistos, links), dentro da cota humana. RSS nosso: alertas por e-mail na caixa dedicada (§5.4), lidos como dado.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

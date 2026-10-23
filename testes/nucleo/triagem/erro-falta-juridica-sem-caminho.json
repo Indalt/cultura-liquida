@@ -1,0 +1,18 @@
+{
+  "id": "F-900010",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "direito_autoral",
+  "o_que_falta": "licença de uso",
+  "por_que": "caso que reprova (K-105): Falta jurídica sem caminho de liberação",
+  "onde_aparece": [
+    "EN-900001"
+  ],
+  "norma": {
+    "referencia": "Lei 9.610/1998, art. 29, caput",
+    "trecho": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como:",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+    "nivel": "oficial"
+  },
+  "criada_por": "curador (exemplo de esquema, K-105)",
+  "data": "2026-10-22"
+}

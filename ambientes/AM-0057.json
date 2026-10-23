@@ -1,0 +1,16 @@
+{
+  "id": "AM-0057",
+  "nome": "Instituto Moreira Salles — Acervo IMS",
+  "tipo": "outro",
+  "tipo_detalhe": "acervo multimídia (música, fotografia, iconografia, literatura)",
+  "via_protocolo": "Catálogo online com busca; os termos de uso não foram lidos nesta rodada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 57,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 57 (frentes FH, PA e MO): uso escavação; nível oficial; link https://acervos.ims.com.br/; termos de uso —; como buscar Busca por palavra nos catálogos de Música (discos de 78 rotações, segundo fonte secundária) e de Fotografia.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

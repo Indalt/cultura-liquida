@@ -1,0 +1,16 @@
+{
+  "id": "AM-0049",
+  "nome": "Instagram — busca de hashtag (API oficial)",
+  "tipo": "rede social",
+  "tipo_detalhe": "rede social",
+  "via_protocolo": "Só pela API, com o recurso 'Instagram Public Content Access', e no máximo 30 hashtags únicas a cada 7 dias. Fora disso, os termos da Meta proíbem a coleta automática.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 49,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 49 (frentes FH, PA e MO): uso monitoramento; nível oficial; link https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-hashtag-search; termos de uso —; como buscar Hashtags derivadas dos Termos, se Vicente decidir pedir o acesso; senão, só links enviados por pessoas.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

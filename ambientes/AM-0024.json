@@ -1,0 +1,16 @@
+{
+  "id": "AM-0024",
+  "nome": "CAPES — Detalhes da Produção Intelectual Técnica dos programas de pós-graduação (dados abertos)",
+  "tipo": "outro",
+  "tipo_detalhe": "conjunto de dados oficial",
+  "via_protocolo": "Aberta, pela API CKAN.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 24,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 24 (frentes FH, PA e MO): uso escavação; nível oficial; link não conferido; termos de uso Licença do conjunto não conferida.; como buscar Escavação: baixar e filtrar por termos e por subtipo de produto (os subtipos não foram conferidos). RSS nosso: verificação anual.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

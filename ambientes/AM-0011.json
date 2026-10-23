@@ -1,0 +1,16 @@
+{
+  "id": "AM-0011",
+  "nome": "Hemeroteca Digital Catarinense 'João Chrysóstomo Paiva'",
+  "tipo": "hemeroteca",
+  "tipo_detalhe": "hemeroteca estadual (SC)",
+  "via_protocolo": "Aberto.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 11,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 11 (frentes FH, PA e MO): uso escavação; nível oficial; link Não informado.; termos de uso —; como buscar Palavras-chave no conteúdo e listas por título e por cidade.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0020",
+  "nome": "IBGE — Enciclopédia dos Municípios Brasileiros (1957–1964)",
+  "tipo": "outro",
+  "tipo_detalhe": "obra de referência municipal, em 36 volumes organizados por estado",
+  "via_protocolo": "PDFs na Biblioteca do IBGE: o arquivo liv27295_1.pdf respondeu em 15/10 com mais de 10 MB; o catálogo recusou nosso leitor (403).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 20,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 20 (frentes FH, PA e MO): uso escavação; nível secundária; link biblioteca.ibge.gov.br/visualizacao/livros/liv27295_<n>.pdf; termos de uso —; como buscar Por volume e estado; texto não conferido.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0061",
+  "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
+  "tipo": "outro",
+  "tipo_detalhe": "bens registrados, dossiês e inventários",
+  "via_protocolo": "Site WordPress aberto em bcr.iphan.gov.br. A interface de busca não foi examinada nesta rodada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 61,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 61 (lote A): uso ambos; nível oficial; link https://bcr.iphan.gov.br/ (o link permanente por bem não foi conferido); termos de uso Não conferido.; como buscar Navegar no BCR; INRC em inrc.iphan.gov.br. Busca por texto não testada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

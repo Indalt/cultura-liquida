@@ -1,0 +1,43 @@
+{
+  "id": "TE-900001",
+  "conceito": "conceito sintético",
+  "designacoes": [
+    "bebida-exemplo"
+  ],
+  "variantes": [
+    {
+      "forma": "bebida exemplo",
+      "tipo_variacao": "grafia sem hífen",
+      "abonacoes": [
+        "EV-900001"
+      ]
+    },
+    {
+      "forma": "bebida-cxemplo",
+      "tipo_variacao": "forma de OCR"
+    }
+  ],
+  "formas_de_busca": [
+    "bebida-ezemplo"
+  ],
+  "abonacoes": [
+    "EV-900001"
+  ],
+  "estado": "atestado",
+  "relacoes": [],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

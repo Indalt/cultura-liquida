@@ -1,0 +1,16 @@
+{
+  "id": "AM-0027",
+  "nome": "Crossref REST API",
+  "tipo": "outro",
+  "tipo_detalhe": "metadados de obras com DOI",
+  "via_protocolo": "Aberta, sem cadastro. Pôr um e-mail no parâmetro mailto dá acesso ao pool polite, a fila de quem se identifica.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 27,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 27 (frentes FH, PA e MO): uso ambos; nível oficial; link DOI; termos de uso Pool público com limite 5 e concorrência 1; pool polite com limite 10 e concorrência 3. Quase nenhum metadado tem direito autoral; alguns resumos podem ter. Custo zero.; como buscar RSS nosso: novidades pela data de indexação (from-index-date junto com until-index-date). Escavação: paginação por cursor, com até 1.000 linhas por página. Serve também para conferir DOIs.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

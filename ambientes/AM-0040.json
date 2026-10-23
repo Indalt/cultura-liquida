@@ -1,0 +1,16 @@
+{
+  "id": "AM-0040",
+  "nome": "Google Notícias — RSS de busca",
+  "tipo": "outro",
+  "tipo_detalhe": "agregador de notícias",
+  "via_protocolo": "Feed público sem chave, mas o robots.txt de news.google.com não libera /rss, e os termos do Google proíbem o acesso automatizado que contrarie o robots.txt.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 40,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 40 (frentes FH, PA e MO): uso referência; nível oficial; link https://news.google.com/robots.txt; termos de uso https://policies.google.com/terms?hl=pt-BR; como buscar Não automatizar. Se for útil, consulta humana no navegador durante a escavação assistida.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

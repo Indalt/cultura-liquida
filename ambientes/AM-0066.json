@@ -1,0 +1,16 @@
+{
+  "id": "AM-0066",
+  "nome": "FUNAI: geoprocessamento de terras indígenas",
+  "tipo": "outro",
+  "tipo_detalhe": "dados de territórios (terras indígenas, aldeias)",
+  "via_protocolo": "WFS aberto em geoserver.funai.gov.br, com download em shapefile, KML, CSV e XLSX.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 66,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 66 (lote A): uso monitoramento; nível oficial; link https://www.gov.br/funai/pt-br/atuacao/terras-indigenas/geoprocessamento-e-mapas; termos de uso Pode reproduzir citando a fonte. O rodapé do site declara CC BY-ND 3.0 (sem obras derivadas); isso exige atenção ao derivar dados.; como buscar GetFeature com typeName=Funai:tis_poligonais e filtro CQL por UF (uf_sigla). O teto de maxFeatures nos links é 10000.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0006",
+  "nome": "Biodiversity Heritage Library (BHL)",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca digital de literatura de biodiversidade, com periódicos brasileiros históricos (secundária)",
+  "via_protocolo": "Aberto; a API exige chave. O site principal recusou nosso leitor (403).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 6,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 6 (frentes FH, PA e MO): uso ambos; nível oficial; link /page/<id> (secundária: IDs de página persistentes).; termos de uso Metadados em CC0. A API v2 será desligada em 31/12/2026.; como buscar Busca em texto completo no site e na API v3, OAI-PMH e exportação mensal do OCR.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

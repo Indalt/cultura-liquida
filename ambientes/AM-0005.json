@@ -1,0 +1,16 @@
+{
+  "id": "AM-0005",
+  "nome": "Biblioteca Digital Curt Nimuendajú (etnolinguistica.org)",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca digital de línguas e culturas indígenas sul-americanas",
+  "via_protocolo": "Aberto. Respondeu ao nosso leitor.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 5,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 5 (frentes FH, PA e MO): uso ambos; nível oficial; link Página de acesso declarada permanente (ex.: etnolinguistica.org/biblio:abreu-1914-caxinauas).; termos de uso Site em CC BY 3.0, salvo indicação. Fonte secundária diz que os documentos são só para pesquisa e ensino, sem uso comercial; conferir item a item.; como buscar Tags e página de últimos acréscimos. O próprio site avisa que a busca interna tem problemas.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

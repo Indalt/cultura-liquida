@@ -1,0 +1,16 @@
+{
+  "id": "AM-0053",
+  "nome": "Wikipédia em português",
+  "tipo": "outro",
+  "tipo_detalhe": "enciclopédia aberta",
+  "via_protocolo": "API MediaWiki; texto em CC BY-SA 4.0 (e GFDL).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 53,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 53 (frentes FH, PA e MO): uso referência; nível oficial; link https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Direitos_de_autor; termos de uso —; como buscar O verbete serve só para chegar às referências, que são seguidas até a fonte original.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

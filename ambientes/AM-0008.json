@@ -1,0 +1,16 @@
+{
+  "id": "AM-0008",
+  "nome": "HathiTrust",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca digital de bibliotecas universitárias",
+  "via_protocolo": "Busca aberta; leitura limitada por direitos e por país. Recusou nosso leitor (403).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 8,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 8 (frentes FH, PA e MO): uso escavação; nível secundária; link —; termos de uso Obras não americanas de 1898 a 1927 são tratadas como protegidas fora dos EUA. Data API desligado em 07/2024.; como buscar Busca em texto completo (babel.hathitrust.org/cgi/ls?q1=…), que mostra as páginas e as contagens mesmo nos volumes só pesquisáveis.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0060",
+  "nome": "LexML Brasil",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "legislação federal, estadual e municipal",
+  "via_protocolo": "Busca web atrás de verificação anti-robô (Senado). A API SRU não foi testada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 60,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 60 (lote A): uso escavação; nível não conferido; link URN LEX (formato conhecido, não testado); termos de uso não conferido; como buscar lexml.gov.br/busca/search?keyword=... Não foi possível ver os resultados nesta rodada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

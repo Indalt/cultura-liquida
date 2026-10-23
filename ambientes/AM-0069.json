@@ -1,0 +1,16 @@
+{
+  "id": "AM-0069",
+  "nome": "INCRA (RTID quilombola), ISA (Povos Indígenas no Brasil), Museu do Índio",
+  "tipo": "outro",
+  "tipo_detalhe": "territórios quilombolas, estudos e acervos indígenas",
+  "via_protocolo": "Não abertos nesta rodada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 69,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 69 (lote A): uso escavação; nível não conferido; link não conferido; termos de uso não conferido; como buscar Não conferido.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

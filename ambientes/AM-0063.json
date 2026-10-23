@@ -1,0 +1,16 @@
+{
+  "id": "AM-0063",
+  "nome": "Diário Oficial da União via INLABS",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "diário oficial federal",
+  "via_protocolo": "Cadastro com e-mail e senha. Entrega XML e PDF por dia. O XML também sai no dados.gov.br.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 63,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 63 (lote A): uso monitoramento; nível oficial; link não conferido; termos de uso Disclaimer: a versão certificada é a publicada; o XML serve à análise de dados.; como buscar Baixar o pacote diário e filtrar por termo localmente. Não testei os filtros do site.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

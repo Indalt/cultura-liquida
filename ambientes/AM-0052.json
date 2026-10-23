@@ -1,0 +1,16 @@
+{
+  "id": "AM-0052",
+  "nome": "Wikidata (consulta SPARQL)",
+  "tipo": "outro",
+  "tipo_detalhe": "base de conhecimento aberta",
+  "via_protocolo": "query.wikidata.org; dados estruturados, inclusive Lexemas, em CC0. O serviço está mais lento desde 2026-05.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 52,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 52 (frentes FH, PA e MO): uso referência; nível oficial; link https://www.wikidata.org/wiki/Wikidata:Licensing; termos de uso —; como buscar Rótulos, nomes alternativos em português e lexemas de bebidas e insumos; com User-Agent descritivo e um pedido por vez.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

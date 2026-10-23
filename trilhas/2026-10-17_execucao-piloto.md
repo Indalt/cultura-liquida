@@ -102,6 +102,12 @@
 - **Não conferido:** a ISO 30042 na página da ISO (403); a equivalência campo a campo do Termo com TBX e SKOS; as correções A-001 a A-005 não passaram por segunda leitura independente.
 - **Consumo:** 143.833 tokens de agentes (auditor).
 
+## Conversa do cartão K-105 (bloco 3) — 22/10/2026 (quarta)
+
+- **Autorização de Vicente, fala original:** "Autorizo o cartão K-105 (Bloco 3 do brief de execuções: scripts do núcleo). Retome pelo quadro e mova o cartão. Orçamento desta semana (autorização minha; o K-005 calibra depois): o limite é o uso da conta — pare com o estado salvo antes de 50%; o teto provisório de 300 mil tokens de agentes por semana não se aplica nesta semana; o teto de chamadas por agente continua. Na passada do auditor, inclua uma conferência rápida das correções A-001 a A-005 do K-104; o auditor devolve o JSON e o curador valida (insumo 29). Opus 5.5, esforço médio. Uso atual: 37%."
+- **Uso da conta no início:** 37%. Parada (b) desta semana: antes de 50% do uso da conta, com o estado salvo; o `orcamento.py --teto 300000` não se aplica nesta semana (autorização de Vicente).
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (dcff3b0), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 86 · FALHA 0 · PENDENTE 5; cartão movido para Fazendo.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |

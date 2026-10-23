@@ -1,0 +1,16 @@
+{
+  "id": "AM-0003",
+  "nome": "BNDigital — Acervo Digital (BN)",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca digital nacional: obras raras, manuscritos, iconografia, periódicos",
+  "via_protocolo": "Web. O site recusou nosso leitor (403) em 15/10.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 3,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 3 (frentes FH, PA e MO): uso escavação; nível oficial; link bndigital.bn.gov.br/acervodigital (existência confirmada pelo guia oficial; API e OAI-PMH não conferidos).; termos de uso —; como buscar Busca pelo nome no Acervo Digital, segundo o guia da BN. Recursos avançados não conferidos.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

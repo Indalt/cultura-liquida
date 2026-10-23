@@ -1,0 +1,16 @@
+{
+  "id": "AM-0054",
+  "nome": "Museu da Pessoa",
+  "tipo": "outro",
+  "tipo_detalhe": "acervo de histórias de vida (oralidade gravada)",
+  "via_protocolo": "O site respondeu 403 à leitura automática em 15/10/2026: a consulta é humana, no navegador.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 54,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 54 (frentes FH, PA e MO): uso escavação; nível secundária; link https://museudapessoa.org/politica-de-acesso-e-uso/; termos de uso CC BY-NC-SA 4.0 e uso 'exclusivamente para fins culturais e acadêmicos' (vistos em resultado de busca).; como buscar Busca no acervo por palavra, tema e lugar (a conferir na sessão humana); registrar a história, o minuto e o trecho.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

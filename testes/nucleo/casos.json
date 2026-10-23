@@ -1,0 +1,309 @@
+{
+  "habilidade": "scripts do núcleo (K-105, bloco 3)",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "localizar_trecho: trecho exato",
+      "espera": "passa",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "levado em garrafas ao banho-maria, até ganhar a cor de âmbar"
+      ],
+      "criterio": "grau 1,0 = localizado exato (normalizacao-0.1)",
+      "saida_contem": "estado: localizado"
+    },
+    {
+      "nome": "localizar_trecho: semelhança acima do limiar",
+      "espera": "passa",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "levado em garafas ao banho maria, ate ganhar a cor de ambar"
+      ],
+      "criterio": "de 0,9 a 1,0 = localizado por semelhança",
+      "saida_contem": "estado: localizado"
+    },
+    {
+      "nome": "localizar_trecho: abaixo do limiar vira Falta",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "fervido em tachos de cobre durante a noite inteira"
+      ],
+      "criterio": "abaixo de 0,9: Falta 'trecho não verificável por máquina' (código 2)",
+      "saida_contem": "trecho não verificável por máquina"
+    },
+    {
+      "nome": "localizar_trecho: PDF sem texto legível vira Falta",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/pdf-sem-texto.pdf",
+        "--trecho",
+        "qualquer coisa"
+      ],
+      "criterio": "l. 598: PDF sem texto legível vira a Falta",
+      "saida_contem": "sem texto legível"
+    },
+    {
+      "nome": "localizar_trecho: reconferência do Trecho localizado",
+      "espera": "passa",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "conferir",
+        "testes/nucleo/trecho/achado-exato.json",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt"
+      ],
+      "criterio": "relê a mesma captura, compara o hash e relocaliza",
+      "saida_contem": "se sustenta"
+    },
+    {
+      "nome": "localizar_trecho: trecho alterado marcado como localizado",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "conferir",
+        "testes/nucleo/trecho/erro-trecho-alterado.json",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt"
+      ],
+      "criterio": "brief, bloco 3 (validador): trecho alterado não passa como localizado",
+      "saida_contem": "NÃO SE SUSTENTA"
+    },
+    {
+      "nome": "validar_acervo: acervo de teste completo",
+      "espera": "passa",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/acervo-ok"
+      ],
+      "criterio": "esquemas e ligações (Evidência → Trecho → Fonte, Proposição com Evidências, Termo atestado, W, ficha)",
+      "saida_contem": "válido"
+    },
+    {
+      "nome": "validar_acervo: forma de OCR registrada como variante",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-ocr-variante"
+      ],
+      "criterio": "brief, bloco 3 (validador): OCR só em formas_de_busca",
+      "saida_contem": "forma de OCR"
+    },
+    {
+      "nome": "validar_acervo: Termo atestado sem abonação localizada",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-atestado-sem-localizado"
+      ],
+      "criterio": "Termo atestado só com abonação localizada",
+      "saida_contem": "sem abonação localizada"
+    },
+    {
+      "nome": "validar_acervo: W sem a voz de quem pratica",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-w-sem-pratica"
+      ],
+      "criterio": "W só com a voz de quem pratica, pelo papel",
+      "saida_contem": "W sem a voz de quem pratica"
+    },
+    {
+      "nome": "validar_acervo: frase da ficha sem marcação",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-ficha-sem-marca"
+      ],
+      "criterio": "frase factual da ficha com marcação de Proposição",
+      "saida_contem": "frase sem marcação"
+    },
+    {
+      "nome": "validar_acervo: Evidência aponta para Trecho que não existe",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-evidencia-sem-trecho"
+      ],
+      "criterio": "Evidência → Trecho → Fonte",
+      "saida_contem": "não existe"
+    },
+    {
+      "nome": "validar_acervo: colisão de ID",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-colisao"
+      ],
+      "criterio": "valor numeracao_id: o validar_acervo.py reprova colisão",
+      "saida_contem": "colisão de ID"
+    },
+    {
+      "nome": "validar_acervo: o acervo do repositório",
+      "espera": "passa",
+      "comando": [
+        "scripts/validar_acervo.py"
+      ],
+      "criterio": "o que o pre-commit roda: os 69 ambientes semeados validam",
+      "saida_contem": "válido"
+    },
+    {
+      "nome": "calcular_mu_lambda: recálculo bate",
+      "espera": "passa",
+      "comando": [
+        "scripts/calcular_mu_lambda.py",
+        "--raiz",
+        "testes/nucleo/acervo-ok",
+        "--conferir",
+        "--sem-grafo"
+      ],
+      "criterio": "μ e λ por linhagens (mu-lambda-0.1): duas fontes de uma linhagem contam uma",
+      "saida_contem": "recálculo bate"
+    },
+    {
+      "nome": "calcular_mu_lambda: duas fontes da mesma linhagem contadas como duas",
+      "espera": "reprova",
+      "comando": [
+        "scripts/calcular_mu_lambda.py",
+        "--raiz",
+        "testes/nucleo/erro-mesma-linhagem",
+        "--conferir",
+        "--sem-grafo"
+      ],
+      "criterio": "brief, bloco 3 (validador): μ gravado 1 com uma linhagem só",
+      "saida_contem": "NÃO BATE"
+    },
+    {
+      "nome": "triagem_fixa: casos óbvios viram Faltas jurídicas válidas",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-com-casos.json",
+        "--raiz",
+        "testes/nucleo/acervo-ok"
+      ],
+      "criterio": "licença ausente, substância controlada e criança: Faltas com norma e caminho (triagem-fixa-0.1)",
+      "saida_contem": "substancia_controlada"
+    },
+    {
+      "nome": "triagem_fixa: registro sem caso óbvio",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-limpa.json"
+      ],
+      "criterio": "nenhuma Falta quando nenhuma regra casa",
+      "saida_contem": "0 Falta(s)"
+    },
+    {
+      "nome": "triagem_fixa: norma sem trecho não gera Falta",
+      "espera": "reprova",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-com-casos.json",
+        "--normas",
+        "testes/nucleo/triagem/normas-sem-trecho.json"
+      ],
+      "criterio": "brief, bloco 3 (validador): Falta jurídica sem norma não sai",
+      "saida_contem": "RECUSADO"
+    },
+    {
+      "nome": "falta: Falta jurídica sem caminho de liberação",
+      "espera": "reprova",
+      "esquema": "falta",
+      "entrada": "testes/nucleo/triagem/erro-falta-juridica-sem-caminho.json",
+      "criterio": "brief, bloco 3 (validador): Falta jurídica sem caminho; D-020, D-025"
+    },
+    {
+      "nome": "gerar_termo: booleanos e Consulta nova",
+      "espera": "passa",
+      "comando": [
+        "scripts/gerar_termo.py",
+        "--raiz",
+        "testes/nucleo/acervo-ok",
+        "--descritores",
+        "clarificação,garrafa"
+      ],
+      "criterio": "laço termo → booleano → Consulta (termo-0.1)",
+      "saida_contem": "\"tipo\": \"mista\""
+    },
+    {
+      "nome": "gerar_termo: Termo com forma de OCR como variante",
+      "espera": "reprova",
+      "comando": [
+        "scripts/gerar_termo.py",
+        "--raiz",
+        "testes/nucleo/erro-ocr-variante"
+      ],
+      "criterio": "a mesma regra do validar_acervo.py",
+      "saida_contem": "RECUSADO"
+    },
+    {
+      "nome": "sortear_amostra: a amostra bate com a semente",
+      "espera": "passa",
+      "comando": [
+        "scripts/sortear_amostra.py",
+        "--conferir",
+        "testes/nucleo/amostra/amostra-ok.json"
+      ],
+      "criterio": "semente registrada (D-026; amostra-0.1)",
+      "saida_contem": "bate com a semente"
+    },
+    {
+      "nome": "sortear_amostra: itens escolhidos à mão",
+      "espera": "reprova",
+      "comando": [
+        "scripts/sortear_amostra.py",
+        "--conferir",
+        "testes/nucleo/amostra/erro-amostra-sem-semente.json"
+      ],
+      "criterio": "a amostra só vale pelo sorteio",
+      "saida_contem": "NÃO BATE"
+    },
+    {
+      "nome": "semear_ambientes: os 69 ambientes validam e batem com o Anexo E",
+      "espera": "passa",
+      "comando": [
+        "scripts/semear_ambientes.py",
+        "--conferir"
+      ],
+      "criterio": "brief, bloco 3: a contagem bate com a do Anexo E",
+      "saida_contem": "bate e valida"
+    },
+    {
+      "nome": "semear_ambientes: pasta incompleta",
+      "espera": "reprova",
+      "comando": [
+        "scripts/semear_ambientes.py",
+        "--conferir",
+        "--pasta",
+        "testes/nucleo/semear-incompleto"
+      ],
+      "criterio": "contagem diferente do Anexo E reprova",
+      "saida_contem": "Anexo E da Fundação tem 69"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0046",
+  "nome": "YouTube Data API v3",
+  "tipo": "outro",
+  "tipo_detalhe": "plataforma de vídeo (API oficial)",
+  "via_protocolo": "Chave num projeto do Google Cloud; por padrão, 100 buscas por dia, mais 10.000 unidades diárias para os outros métodos.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 46,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 46 (frentes FH, PA e MO): uso ambos; nível oficial; link https://developers.google.com/youtube/v3/determine_quota_cost; termos de uso Dados da API guardados no máximo 30 dias sem atualização; o robots.txt bloqueia /feeds/videos.xml e /results.; como buscar search.list com q (/ para OU, - para NÃO), regionCode=BR, relevanceLanguage=pt e publishedAfter/publishedBefore para janelas antigas; até 50 resultados por página.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

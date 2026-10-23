@@ -1,0 +1,16 @@
+{
+  "id": "AM-0028",
+  "nome": "Embrapa — Alice (Acesso Livre à Informação Científica)",
+  "tipo": "outro",
+  "tipo_detalhe": "repositório institucional de produção científica",
+  "via_protocolo": "Aberta, por OAI-PMH.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 28,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 28 (frentes FH, PA e MO): uso ambos; nível oficial; link http://www.alice.cnptia.embrapa.br/alice/handle/doc/<n>; termos de uso Nenhum limite publicado foi encontrado. Licença: “não informada”. Custo zero.; como buscar Escavação: uma colheita completa e o filtro local por termos e pelos assuntos de cada registro. RSS nosso: colher desde a última data e comparar por ID, porque registros antigos ganham data nova.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

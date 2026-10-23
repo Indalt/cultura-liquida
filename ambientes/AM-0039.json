@@ -1,0 +1,16 @@
+{
+  "id": "AM-0039",
+  "nome": "Repositórios institucionais das universidades (DSpace, TEDE)",
+  "tipo": "outro",
+  "tipo_detalhe": "fonte do texto completo de teses e artigos",
+  "via_protocolo": "Aberta na maioria. Os links vêm da BDTD, do Oasisbr e da CAPES.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 39,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 39 (frentes FH, PA e MO): uso escavação; nível oficial; link handle; termos de uso O direito autoral é do autor. O arquivo fica fora do Git (PA-5).; como buscar Não se busca neles um a um. Usa-se o link do agregador para baixar o texto que o validador confere (item 5).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

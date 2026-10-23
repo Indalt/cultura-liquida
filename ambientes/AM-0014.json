@@ -1,0 +1,16 @@
+{
+  "id": "AM-0014",
+  "nome": "Acervos de jornais comerciais (Estadão, Folha)",
+  "tipo": "outro",
+  "tipo_detalhe": "arquivos de imprensa de empresas jornalísticas",
+  "via_protocolo": "Por assinatura. No Estadão, quem não assina vê partes limitadas depois de se cadastrar (segundo o CRL).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 14,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 14 (frentes FH, PA e MO): uso escavação; nível secundária; link —; termos de uso Conteúdo protegido: só citação curta com a fonte (Lei 9.610, art. 46, III; item 7 do plano).; como buscar Busca por palavra; o Estadão usa um dicionário de grafias antigas (notícia de 2012).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

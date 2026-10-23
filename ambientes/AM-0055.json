@@ -1,0 +1,16 @@
+{
+  "id": "AM-0055",
+  "nome": "CPDOC/FGV — Programa de História Oral",
+  "tipo": "outro",
+  "tipo_detalhe": "acervo de história oral",
+  "via_protocolo": "A maior parte do acervo está aberta, em áudio, transcrição ou audiovisual. Só se abrem as entrevistas autorizadas formalmente pelos entrevistados, e o acesso a documentos exige, em regra, cadastro.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 55,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 55 (frentes FH, PA e MO): uso escavação; nível oficial; link https://cpdoc.fgv.br/acervo/historia-oral; termos de uso Cópias só para uso privado; outros usos, com autorização prévia (cpdoc.fgv.br/termos). A citação curta se apoia na Lei 9.610, art. 46, III.; como buscar Consulta por entrevistado ou por assunto. Parte das transcrições está em PDF para download, o que permite conferir trechos por script.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

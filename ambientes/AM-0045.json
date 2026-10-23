@@ -1,0 +1,16 @@
+{
+  "id": "AM-0045",
+  "nome": "Substack",
+  "tipo": "blog",
+  "tipo_detalhe": "newsletters e blogs",
+  "via_protocolo": "Feed em /feed de cada publicação, segundo a ajuda da Substack vista em resultado de busca (a página respondeu 403 à leitura automática).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 45,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 45 (frentes FH, PA e MO): uso monitoramento; nível secundária; link https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication; termos de uso —; como buscar Monitorar o /feed das publicações que forem descobertas; não foi conferida nenhuma busca geral por API.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

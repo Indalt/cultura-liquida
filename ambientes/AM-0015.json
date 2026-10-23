@@ -1,0 +1,16 @@
+{
+  "id": "AM-0015",
+  "nome": "Arquivo Nacional — SIAN",
+  "tipo": "outro",
+  "tipo_detalhe": "arquivo nacional: fundos, coleções e documentos digitalizados",
+  "via_protocolo": "Cadastro obrigatório ou login gov.br, com aceite de termos. Captcha ao acesso automatizado (15/10).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 15,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 15 (frentes FH, PA e MO): uso escavação; nível oficial; link Código de Referência arquivístico (o link pode exigir login).; termos de uso —; como buscar Pesquisa simples, avançada e multinível (Fundos/Coleções), com o campo Código de Referência.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

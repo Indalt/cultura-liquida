@@ -1,0 +1,14 @@
+{
+  "id": "PC-900002",
+  "nome": "cozimento",
+  "tipo": "calor",
+  "proposicoes": [
+    "PR-900002"
+  ],
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

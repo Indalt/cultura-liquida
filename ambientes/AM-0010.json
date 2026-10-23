@@ -1,0 +1,16 @@
+{
+  "id": "AM-0010",
+  "nome": "Google Livros (Books API)",
+  "tipo": "outro",
+  "tipo_detalhe": "índice de livros com busca no texto",
+  "via_protocolo": "API com chave ou token; leitura conforme os direitos de cada obra.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 10,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 10 (frentes FH, PA e MO): uso escavação; nível oficial; link www.googleapis.com/books/v1/volumes; termos de uso Exige identificador (chave de API); as cotas ficam no console do Google.; como buscar volumes?q=…, com filter=full ou partial e langRestrict=pt; até 40 resultados por chamada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

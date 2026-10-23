@@ -1,0 +1,16 @@
+{
+  "id": "AM-0004",
+  "nome": "Biblioteca Brasiliana Guita e José Mindlin (USP)",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca digital: livros, periódicos, folhetos, manuscritos, imagens",
+  "via_protocolo": "Aberto, com PDF de cada item.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 4,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 4 (frentes FH, PA e MO): uso escavação; nível oficial; link /handle/bbm/<número>; termos de uso Não informados na página do item.; como buscar Busca simples e navegação por autor, assunto, data e coleção. Busca no texto não declarada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

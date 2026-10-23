@@ -1,0 +1,16 @@
+{
+  "id": "AM-0050",
+  "nome": "Meta Content Library (Facebook, Instagram, Threads, Canais do WhatsApp)",
+  "tipo": "outro",
+  "tipo_detalhe": "ferramenta de pesquisa em conteúdo público",
+  "via_protocolo": "Exige vínculo com instituição acadêmica ou organização sem fins lucrativos cuja atividade principal seja a pesquisa; não cobra taxas. O pedido é feito pelo Meta Research Tools Manager.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 50,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 50 (frentes FH, PA e MO): uso escavação; nível oficial; link https://transparency.meta.com/researchtools/meta-content-library/; termos de uso —; como buscar Busca por palavra no conteúdo público, dentro do ambiente seguro da Meta.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

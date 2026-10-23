@@ -1,0 +1,159 @@
+{
+  "versao_regra": "triagem-fixa-0.1",
+  "data": "2026-10-22",
+  "cartao": "K-105 (bloco 3 do brief de execuções)",
+  "descricao": "caso que reprova (K-105): a norma do caso substancia_controlada sem o trecho",
+  "casos": {
+    "licenca_ausente": {
+      "subtipo": "direito_autoral",
+      "o_que_falta": "licença ou autorização de uso do texto, imagem ou áudio de terceiro",
+      "norma": {
+        "referencia": "Lei 9.610/1998, art. 29, caput",
+        "trecho": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como:",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.1"
+      },
+      "apoio": [
+        "C5.2 (citação, Lei 9.610 art. 46, III)",
+        "C5.4 (autor desconhecido, art. 45, II)"
+      ],
+      "guia": "guia-de-liberacao: licença de uso de texto, imagem e áudio de terceiros (Lei 9.610)",
+      "valores_sem_licenca": [
+        "",
+        "não conferido",
+        "ausente",
+        "desconhecida"
+      ]
+    },
+    "dado_pessoal": {
+      "subtipo": "lgpd",
+      "o_que_falta": "base legal para tratar dado de pessoa identificável",
+      "norma": {
+        "referencia": "Lei 13.709/2018 (LGPD), art. 5º, I",
+        "trecho": "I - dado pessoal: informação relacionada a pessoa natural identificada ou identificável;",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.5"
+      },
+      "apoio": [
+        "C5.6 (LGPD art. 7º)"
+      ],
+      "guia": "guia-de-liberacao: termo de consentimento e atendimento ao titular (LGPD)",
+      "consentimento_ausente": [
+        "",
+        "não se aplica",
+        "não conferido"
+      ]
+    },
+    "dado_sensivel": {
+      "subtipo": "dado_sensivel",
+      "o_que_falta": "base legal para dado pessoal sensível",
+      "norma": {
+        "referencia": "Lei 13.709/2018 (LGPD), art. 5º, II",
+        "trecho": "II - dado pessoal sensível: dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural;",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.7"
+      },
+      "apoio": [
+        "C5.8 (LGPD art. 11)"
+      ],
+      "guia": "guia-de-liberacao: termo de consentimento e atendimento ao titular (LGPD)"
+    },
+    "conhecimento_tradicional": {
+      "subtipo": "conhecimento_tradicional",
+      "o_que_falta": "saber se há conhecimento tradicional associado e, se houver, o cadastro e o consentimento prévio informado",
+      "norma": {
+        "referencia": "Lei 13.123/2015, art. 2º, IX",
+        "trecho": "IX - acesso ao conhecimento tradicional associado - pesquisa ou desenvolvimento tecnológico realizado sobre conhecimento tradicional associado ao patrimônio genético que possibilite ou facilite o acesso ao patrimônio genético, ainda que obtido de fontes secundárias tais como feiras, publicações, inventários, filmes, artigos científicos, cadastros e outras formas de sistematização e registro de conhecimentos tradicionais associados;",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.10"
+      },
+      "apoio": [
+        "C5.9 (art. 2º, II)",
+        "C5.11 (art. 9º, origem identificável)",
+        "C5.12 (art. 12, I, cadastro)",
+        "C5.4 (Lei 9.610 art. 45, II)"
+      ],
+      "guia": "guia-de-liberacao: cadastro no SisGen e consentimento prévio informado (Lei 13.123)",
+      "palavras": [
+        "indigena",
+        "quilombola",
+        "comunidade tradicional",
+        "povo tradicional",
+        "povos tradicionais",
+        "terreiro",
+        "paje",
+        "raizeir",
+        "benzedeir",
+        "rezadeir",
+        "curandeir",
+        "erveir",
+        "garrafada",
+        "remedio caseiro",
+        "uso medicinal",
+        "planta medicinal",
+        "propriedade medicinal"
+      ]
+    },
+    "substancia_controlada": {
+      "subtipo": "substancia_controlada",
+      "o_que_falta": "saber se a bebida, o insumo ou o processo envolve substância sob controle especial",
+      "norma": {
+        "referencia": "Lei 11.343/2006, art. 1º, parágrafo único",
+        "trecho": "",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.13"
+      },
+      "apoio": [
+        "C5.14 (Lei 11.343 art. 66, que nomeia a Portaria SVS/MS 344/1998; a Portaria não foi conferida, C5.15)"
+      ],
+      "guia": "guia-de-liberacao: a preparar para substância controlada (fora dos quatro guias da l. 695)",
+      "palavras": [
+        "ayahuasca",
+        "daime",
+        "hoasca",
+        "jurema",
+        "dmt",
+        "folha de coca",
+        "coca",
+        "cannabis",
+        "maconha",
+        "canhamo",
+        "psilocib",
+        "cogumelo",
+        "mescalina",
+        "peiote",
+        "opio",
+        "papoula",
+        "lanca-perfume"
+      ]
+    },
+    "crianca_ou_adolescente": {
+      "subtipo": "imagem_e_voz",
+      "o_que_falta": "autorização para imagem, voz ou nome de criança ou adolescente",
+      "norma": {
+        "referencia": "Lei 8.069/1990 (ECA), art. 17",
+        "trecho": "Art. 17. O direito ao respeito consiste na inviolabilidade da integridade física, psíquica e moral da criança e do adolescente, abrangendo a preservação da imagem, da identidade, da autonomia, dos valores, idéias e crenças, dos espaços e objetos pessoais.",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.16"
+      },
+      "apoio": [
+        "C5.18 (LGPD art. 14, §1º)",
+        "C5.17 (ECA art. 100, parágrafo único, V, apoio)"
+      ],
+      "guia": "guia-de-liberacao: termo de consentimento e atendimento ao titular (LGPD), com o responsável legal",
+      "palavras": [
+        "crianca",
+        "menino",
+        "menina",
+        "adolescente",
+        "menor de idade"
+      ]
+    }
+  }
+}

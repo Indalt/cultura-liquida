@@ -1,0 +1,16 @@
+{
+  "id": "AM-0033",
+  "nome": "Portal de Periódicos CAPES",
+  "tipo": "outro",
+  "tipo_detalhe": "portal de acesso a conteúdo assinado e gratuito",
+  "via_protocolo": "O conteúdo assinado só abre nos IPs das instituições participantes ou pelo login CAFe; o gratuito abre para todos, sem login.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 33,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 33 (frentes FH, PA e MO): uso referência; nível oficial; link DOI da obra; termos de uso Valem as licenças das editoras: não republicar texto além do trecho.; como buscar Uso individual, por quem tem vínculo. O que essa pessoa ler entra como contribuição de pessoa, com trecho e localizador, e vai para a cota humana. Rotinas na nuvem nunca usam credencial pessoal.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

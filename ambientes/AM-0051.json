@@ -1,0 +1,16 @@
+{
+  "id": "AM-0051",
+  "nome": "TikTok",
+  "tipo": "rede social",
+  "tipo_detalhe": "rede social",
+  "via_protocolo": "Os termos proíbem 'usar scripts automatizados para colher informações dos Serviços'. No Brasil, a Research API só aceita estudos sobre a segurança de jovens online.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 51,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 51 (frentes FH, PA e MO): uso referência; nível oficial; link https://developers.tiktok.com/products/research-api/; termos de uso https://www.tiktok.com/legal/page/row/terms-of-service/pt-BR; como buscar Só links enviados por pessoas.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

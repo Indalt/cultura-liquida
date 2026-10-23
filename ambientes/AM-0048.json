@@ -1,0 +1,16 @@
+{
+  "id": "AM-0048",
+  "nome": "Podcast Index API e transcrições no RSS (podcast:transcript)",
+  "tipo": "outro",
+  "tipo_detalhe": "índice aberto de podcasts",
+  "via_protocolo": "Chave e segredo gratuitos, segundo fontes secundárias; o site oficial respondeu 403 à leitura automática.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 48,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 48 (frentes FH, PA e MO): uso ambos; nível secundária; link https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/tags/transcript.md; termos de uso —; como buscar search/byterm?q=.... No RSS do episódio, a etiqueta podcast:transcript aponta a transcrição (texto, HTML, VTT, JSON ou SRT), e com ela o script pode conferir o trecho; essa etiqueta foi conferida na especificação oficial.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

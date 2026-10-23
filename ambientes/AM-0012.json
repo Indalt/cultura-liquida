@@ -1,0 +1,16 @@
+{
+  "id": "AM-0012",
+  "nome": "Arquivo Público Mineiro — Hemeroteca Digital do Triângulo Mineiro e Alto Paranaíba",
+  "tipo": "hemeroteca",
+  "tipo_detalhe": "hemeroteca estadual (MG)",
+  "via_protocolo": "Gratuito, pelo Memorial da Imprensa do SIAAPM.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 12,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 12 (frentes FH, PA e MO): uso escavação; nível oficial; link siaapm.cultura.mg.gov.br/modules/memorial_imprensa/index.php; termos de uso —; como buscar A existência de busca por palavra não é informada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

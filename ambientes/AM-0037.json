@@ -1,0 +1,16 @@
+{
+  "id": "AM-0037",
+  "nome": "ANPUH — Anais dos Simpósios Nacionais de História",
+  "tipo": "outro",
+  "tipo_detalhe": "anais de associação científica",
+  "via_protocolo": "Aberta. A busca é só por título e autor, e não há RSS.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 37,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 37 (frentes FH, PA e MO): uso escavação; nível oficial; link URL do PDF (/uploads/anais-simposios/pdf/...); termos de uso não conferidos; como buscar Escavação: listar por evento, baixar os textos, extrair e buscar localmente. RSS nosso: verificação a cada dois anos.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

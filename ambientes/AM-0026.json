@@ -1,0 +1,16 @@
+{
+  "id": "AM-0026",
+  "nome": "OpenAlex",
+  "tipo": "outro",
+  "tipo_detalhe": "índice aberto mundial da produção científica, com grafo de citações",
+  "via_protocolo": "Por API. Sem chave, US$ 0,10 por dia; com chave grátis, US$ 1 por dia. A paginação por cursor exige chave.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 26,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 26 (frentes FH, PA e MO): uso ambos; nível oficial; link ID do OpenAlex (W…) e DOI; termos de uso Mil buscas custam US$ 1, mil listas com filtro US$ 0,10 e mil PDFs US$ 10. Limite de 10 requisições por segundo sem chave e 30 com chave. Dados em CC0, domínio público (informação de fonte secundária).; como buscar RSS nosso: repetir cada consulta e comparar com as pegadas, porque o filtro por data de criação é pago. Escavação: paginar com cursor e fazer a bola de neve pelas referências e citações (PA-3). Nunca recortar por país ou idioma (PA-4).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

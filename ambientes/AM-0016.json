@@ -1,0 +1,16 @@
+{
+  "id": "AM-0016",
+  "nome": "CNFCP — Acervo Virtual (DocReader Web)",
+  "tipo": "outro",
+  "tipo_detalhe": "acervo do Centro Nacional de Folclore e Cultura Popular: Biblioteca Amadeu Amaral, Museu Edison Carneiro e arquivo",
+  "via_protocolo": "Aberto; respondeu ao nosso leitor.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 16,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 16 (frentes FH, PA e MO): uso escavação; nível oficial; link acervosdigitais.cnfcp.gov.br/AcervoFolclore; termos de uso —; como buscar Termo, com aspas para frase; outros operadores não são descritos.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

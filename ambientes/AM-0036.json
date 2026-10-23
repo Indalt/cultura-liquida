@@ -1,0 +1,16 @@
+{
+  "id": "AM-0036",
+  "nome": "ABA — Anais das Reuniões Brasileiras de Antropologia (RBA)",
+  "tipo": "outro",
+  "tipo_detalhe": "anais de associação científica",
+  "via_protocolo": "Aberta: uma página por edição e PDFs.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 36,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 36 (frentes FH, PA e MO): uso escavação; nível oficial; link URL do trabalho ou do PDF, com a página; termos de uso não conferidos; como buscar Escavação por edição: baixar, extrair o texto (nos PDFs escaneados, o OCR fica marcado como tal) e buscar localmente. RSS nosso: verificação a cada dois anos.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

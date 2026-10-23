@@ -1,0 +1,16 @@
+{
+  "id": "AM-0001",
+  "nome": "Hemeroteca Digital Brasileira (Biblioteca Nacional)",
+  "tipo": "hemeroteca",
+  "tipo_detalhe": "hemeroteca nacional: jornais e revistas digitalizados",
+  "via_protocolo": "Web gratuita (DocReader). Alguns títulos só nos terminais da BN, e PDF só para os títulos sem restrição autoral. Recusou nosso leitor automático (403) em 15/10.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 1,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 1 (frentes FH, PA e MO): uso escavação; nível oficial; link DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (secundária; a BN não declara que é permanente).; termos de uso A BN não licencia imagens. Domínio público por tipo de obra (fascículo: 70 anos após a publicação; artigo assinado: 70 anos após a morte do autor; foto: 70 anos após a divulgação). Download só para uso privativo. Não contornar a proteção anti-robô.; como buscar Abas Periódico, Período e Local, mais um termo. Aspas para frase; + (e), - (não), / (ou) com parênteses; * no início ou no fim; acento indiferente. Mostra contador de ocorrências e as páginas com ocorrência em cada edição.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

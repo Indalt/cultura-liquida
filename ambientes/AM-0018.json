@@ -1,0 +1,16 @@
+{
+  "id": "AM-0018",
+  "nome": "Biblioteca Digital do Iphan",
+  "tipo": "outro",
+  "tipo_detalhe": "repositório institucional: patrimônio material e imaterial, publicações",
+  "via_protocolo": "Aberto; respondeu ao nosso leitor.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 18,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 18 (frentes FH, PA e MO): uso ambos; nível oficial; link /items/<identificador> (permanência não declarada).; termos de uso Conteúdo do site em CC BY-ND 3.0.; como buscar Busca e navegação por data, autor, título e assunto.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

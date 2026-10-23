@@ -1,0 +1,16 @@
+{
+  "id": "AM-0068",
+  "nome": "MAPA: legislação de vinhos e bebidas",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "normas e registro de bebidas",
+  "via_protocolo": "Página aberta em gov.br com PDFs. A consulta de estabelecimentos registrados não foi encontrada nesta rodada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 68,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 68 (lote A): uso referência; nível oficial; link mesma URL; termos de uso não conferido; como buscar Navegar a lista de normas (3 páginas). Link possível: gov.br/agricultura/pt-br/assuntos/defesa-agropecuaria/registros-de-estabelecimentos-e-produtos (não aberto).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0065",
+  "nome": "Senado, dados abertos",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "proposições e legislação federais",
+  "via_protocolo": "Não aberta nesta rodada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 65,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 65 (lote A): uso monitoramento; nível não conferido; link não conferido; termos de uso não conferido; como buscar Não conferido.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

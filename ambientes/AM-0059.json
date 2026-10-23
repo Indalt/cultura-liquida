@@ -1,0 +1,16 @@
+{
+  "id": "AM-0059",
+  "nome": "Querido Diário (API)",
+  "tipo": "documento oficial",
+  "tipo_detalhe": "diários oficiais municipais",
+  "via_protocolo": "API REST aberta, JSON, sem chave. Em 3 de 5 chamadas funcionou. Houve 'Internal Server Error' e 'no available server'. A WebFetch falhou por SSL, só o curl funcionou. Documentação Swagger em api.queridodiario.org.br/docs.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 59,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 59 (lote A): uso ambos; nível oficial; link https://data.queridodiario.ok.org.br/{ibge}/{data}/{hash}.pdf (PDF e .txt por edição); termos de uso Licença não conferida; a página de docs não trouxe texto legível.; como buscar GET /gazettes?querystring=...&territory_ids=...&published_since=...&size=...&excerpt_size=...&number_of_excerpts=.... A busca de texto tem muito ruído, e o total aparece capado em 10000. Convém restringir por município e por data, e usar frases curtas.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

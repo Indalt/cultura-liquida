@@ -1,0 +1,16 @@
+{
+  "id": "AM-0044",
+  "nome": "Feeds próprios de veículos, blogs e portais (por exemplo, a Agência Brasil)",
+  "tipo": "outro",
+  "tipo_detalhe": "feed RSS/Atom",
+  "via_protocolo": "Feed oficial de cada site; robots.txt e termos conferidos um a um. A Agência Brasil oferece RSS (rss.ebc.com.br), e o rodapé atual diz '© Todos os direitos reservados pela EBC'.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 44,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 44 (frentes FH, PA e MO): uso monitoramento; nível oficial; link https://agenciabrasil.ebc.com.br/; termos de uso —; como buscar Quando um resultado do GDELT, do Media Cloud ou dos Alertas aponta para um site com feed, o script descobre o feed e propõe o site como Ambiente.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

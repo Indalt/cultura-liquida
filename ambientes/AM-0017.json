@@ -1,0 +1,16 @@
+{
+  "id": "AM-0017",
+  "nome": "CNFCP — Tesauro de Folclore e Cultura Popular Brasileira",
+  "tipo": "outro",
+  "tipo_detalhe": "vocabulário controlado (tesauro)",
+  "via_protocolo": "cnfcp.gov.br/tesauro recusou nosso leitor (403); o estado on-line não foi conferido.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 17,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 17 (frentes FH, PA e MO): uso referência; nível oficial; link —; termos de uso —; como buscar Navegação por termos (não conferida).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

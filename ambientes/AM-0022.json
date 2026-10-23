@@ -1,0 +1,16 @@
+{
+  "id": "AM-0022",
+  "nome": "Oasisbr (IBICT)",
+  "tipo": "repositório de teses",
+  "tipo_detalhe": "agregador nacional de repositórios (artigos, teses, TCC, anais, livros)",
+  "via_protocolo": "Aberta, com API do VuFind em JSON. Em 15/10/2026 a página inicial pediu verificação de navegador ao robô; a API respondeu.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 22,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 22 (frentes FH, PA e MO): uso ambos; nível oficial; link /vufind/Record/<id> e o handle de origem; termos de uso Nenhum limite publicado foi encontrado. Testar o acesso a partir do GitHub Actions.; como buscar Igual à BDTD, que usa o mesmo software. A faceta de formato separa TCC e anais. Deduplicar com BDTD, Embrapa e LA Referencia por handle, DOI ou título.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

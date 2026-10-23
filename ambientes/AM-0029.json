@@ -1,0 +1,16 @@
+{
+  "id": "AM-0029",
+  "nome": "Embrapa — Infoteca-e (Informação Tecnológica em Agricultura)",
+  "tipo": "outro",
+  "tipo_detalhe": "repositório de publicações técnicas: cartilhas, livros para transferência de tecnologia, programas de rádio e de TV",
+  "via_protocolo": "Aberta, por OAI-PMH. O rodapé do site diz que o conteúdo está sob “Licença Creative Commons”, sem dizer qual.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 29,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 29 (frentes FH, PA e MO): uso ambos; nível oficial; link handle doc/<n>; termos de uso Nenhum limite publicado foi encontrado. Qual licença Creative Commons vale não foi conferido.; como buscar Igual ao Alice. Escavar também os anos de 1900 a 1999.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

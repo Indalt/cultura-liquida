@@ -1,0 +1,16 @@
+{
+  "id": "AM-0047",
+  "nome": "Busca de podcasts da Apple (Search API)",
+  "tipo": "outro",
+  "tipo_detalhe": "diretório de podcasts",
+  "via_protocolo": "Aberta, sem chave citada na página; cerca de 20 chamadas por minuto.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 47,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 47 (frentes FH, PA e MO): uso monitoramento; nível oficial; link https://performance-partners.apple.com/search-api; termos de uso —; como buscar itunes.apple.com/search?term=...&media=podcast. O resultado leva ao RSS de cada podcast, que vira Ambiente.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

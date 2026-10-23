@@ -1,0 +1,13 @@
+#!/bin/sh
+# Gancho de pre-commit do projeto Cultura Líquida (K-105, bloco 3; l. 707).
+# Roda o validar_acervo.py antes de cada commit; acervo inválido não entra.
+# Instalação (uma vez por cópia do repositório): git config core.hooksPath .githooks
+RAIZ="$(git rev-parse --show-toplevel)"
+if [ -x "$RAIZ/.venv/Scripts/python.exe" ]; then PY="$RAIZ/.venv/Scripts/python.exe"
+elif [ -x "$RAIZ/.venv/bin/python" ]; then PY="$RAIZ/.venv/bin/python"
+elif command -v python3 >/dev/null 2>&1; then PY=python3
+else PY=python; fi
+PYTHONUTF8=1 "$PY" "$RAIZ/scripts/validar_acervo.py" || {
+  echo "pre-commit: o validar_acervo.py reprovou; corrija o acervo antes do commit." >&2
+  exit 1
+}

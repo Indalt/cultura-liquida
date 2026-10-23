@@ -1,0 +1,16 @@
+{
+  "id": "AM-0023",
+  "nome": "Catálogo de Teses e Dissertações da CAPES (dados abertos e site)",
+  "tipo": "outro",
+  "tipo_detalhe": "conjunto de dados oficial (CSV e XLSX por ano) e catálogo na web",
+  "via_protocolo": "Aberta, pelo portal CKAN (software de dados abertos), que tem API. O site catalogodeteses.capes.gov.br não documenta API.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 23,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 23 (frentes FH, PA e MO): uso ambos; nível oficial; link ID da produção no CSV e URL do texto completo; o site serve para conferência manual; termos de uso Licença Creative Commons Atribuição. Os arquivos trazem identificadores de pessoas, que não entram no Git (PA-6). Custo zero.; como buscar Escavação: baixar os CSV e filtrar localmente título, resumo e palavras-chave, inclusive com consultas só de descritores (item 11). A API mostrou só 2.000 linhas para 2024, o que parece carga parcial (a conferir). RSS nosso: verificar uma vez por ano se saiu um novo ano-base.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0035",
+  "nome": "Revistas brasileiras em OJS (ex.: Revista de Antropologia, USP)",
+  "tipo": "periódico científico",
+  "tipo_detalhe": "periódicos em Open Journal Systems, o software de revistas usado por muitas universidades",
+  "via_protocolo": "Aberta, com feed Atom e OAI-PMH próprios do software.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 35,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 35 (frentes FH, PA e MO): uso ambos; nível oficial; link DOI ou URL do artigo; termos de uso Nenhum limite publicado foi encontrado; a licença varia por revista.; como buscar RSS nosso: o feed de cada revista-chave (o da Revista de Antropologia trazia 30 entradas). Escavação: o OAI completo da revista, com filtro local.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AM-0062",
+  "nome": "IPHAN: Inventário Nacional de Referências Culturais (INRC)",
+  "tipo": "outro",
+  "tipo_detalhe": "inventário de referências culturais",
+  "via_protocolo": "Site aberto em inrc.iphan.gov.br, mas a busca não foi testada.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 62,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 62 (lote A): uso escavação; nível oficial; link https://inrc.iphan.gov.br/; termos de uso não conferido; como buscar Não testado.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

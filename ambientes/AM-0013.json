@@ -1,0 +1,16 @@
+{
+  "id": "AM-0013",
+  "nome": "Outras hemerotecas estaduais (SP, ES, PI e demais UF)",
+  "tipo": "outro",
+  "tipo_detalhe": "arquivos e bibliotecas estaduais",
+  "via_protocolo": "Variado.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 13,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 13 (frentes FH, PA e MO): uso escavação; nível secundária; link —; termos de uso —; como buscar Levantar UF por UF no Passo 4.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

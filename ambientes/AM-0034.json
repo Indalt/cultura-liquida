@@ -1,0 +1,16 @@
+{
+  "id": "AM-0034",
+  "nome": "Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas",
+  "tipo": "periódico científico",
+  "tipo_detalhe": "periódico-chave (antropologia, arqueologia, história, linguística indígena)",
+  "via_protocolo": "Aberta, na SciELO (conjunto OAI 1981-8122), com feed Atom do último fascículo.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 34,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 34 (frentes FH, PA e MO): uso ambos; nível oficial; link DOI; termos de uso CC BY 4.0; como buscar RSS nosso: o feed da revista. Escavação: o conjunto OAI inteiro e, para a série antiga, a BHL.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

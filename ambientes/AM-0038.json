@@ -1,0 +1,16 @@
+{
+  "id": "AM-0038",
+  "nome": "eduCAPES",
+  "tipo": "outro",
+  "tipo_detalhe": "repositório de recursos educacionais",
+  "via_protocolo": "Aberta, por OAI-PMH.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 38,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 38 (frentes FH, PA e MO): uso ambos; nível oficial; link handle do recurso; termos de uso Nenhum limite publicado foi encontrado.; como buscar Escavação: colheita OAI e filtro por termos. RSS nosso: colheita incremental com data inicial (from).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

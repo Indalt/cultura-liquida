@@ -1,0 +1,16 @@
+{
+  "id": "AM-0025",
+  "nome": "SciELO Brasil",
+  "tipo": "outro",
+  "tipo_detalhe": "biblioteca de periódicos de acesso aberto",
+  "via_protocolo": "Aberta, com OAI-PMH, a API ArticleMeta e um feed Atom por revista. A busca search.scielo.org recusou o robô (HTTP 403).",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 25,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 25 (frentes FH, PA e MO): uso ambos; nível oficial; link DOI e https://www.scielo.br/j/<sigla>/a/<id>; termos de uso Nenhum limite publicado foi encontrado; a licença varia por revista.; como buscar RSS nosso: listar os identificadores processados desde a última data (foram 903 entre 1º e 15/10/2026, inclusive artigos antigos reprocessados) e filtrar localmente pelos termos. Escavação: o conjunto OAI das revistas-chave e a busca no OpenAlex e na Crossref pelos DOI 10.1590 (DOI é o identificador permanente do artigo).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

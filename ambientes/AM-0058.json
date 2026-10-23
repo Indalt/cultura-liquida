@@ -1,0 +1,16 @@
+{
+  "id": "AM-0058",
+  "nome": "Cinemateca Brasileira — Filmografia Brasileira e Banco de Conteúdos Culturais",
+  "tipo": "outro",
+  "tipo_detalhe": "acervo audiovisual",
+  "via_protocolo": "A base Filmografia tem cerca de 56 mil títulos (inclui cinejornais e obras institucionais), e há 6.775 filmes digitais de acesso público. As condições de reprodução são tratadas por atendimento@cinemateca.org.br.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 58,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 58 (frentes FH, PA e MO): uso escavação; nível oficial; link https://cinemateca.org.br/acervo/base-de-dados/; termos de uso —; como buscar Busca na base Filmografia (bases.cinemateca.org.br) por assunto e título; os filmes digitais estão no BCC (bcc.cinemateca.org.br).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}

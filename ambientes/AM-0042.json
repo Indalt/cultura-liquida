@@ -1,0 +1,16 @@
+{
+  "id": "AM-0042",
+  "nome": "GDELT DOC 2.0 API",
+  "tipo": "outro",
+  "tipo_detalhe": "índice global de notícias (API aberta)",
+  "via_protocolo": "Sem chave, mas limita o ritmo de pedidos: no teste de 15/10, dois de três pedidos receberam 429.",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 42,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 42 (frentes FH, PA e MO): uso monitoramento; nível oficial; link https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/; termos de uso Uso livre, inclusive redistribuição, com citação do GDELT e link (gdeltproject.org/about.html).; como buscar Frase entre aspas, OR, sourcelang:por e sourcecountry:BR; mode=artlist, format=rss, maxrecords até 250, timespan dentro de 3 meses. A busca roda sobre a tradução automática em inglês: preferir consultas só de descritores.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+}
