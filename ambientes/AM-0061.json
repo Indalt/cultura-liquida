@@ -3,7 +3,7 @@
   "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
   "tipo": "outro",
   "tipo_detalhe": "bens registrados, dossiês e inventários",
-  "via_protocolo": "Site WordPress aberto em bcr.iphan.gov.br. A interface de busca não foi examinada nesta rodada.",
+  "via_protocolo": "via automática não testada: o nome não resolveu na rede da sessão em 23/10/2026; via humana até o reteste",
   "estado_escavacao": "proposto",
   "estado_monitoramento": "não iniciado",
   "linha_anexo_e": 61,
@@ -12,5 +12,27 @@
     "data": "2026-10-22",
     "execucao": "EX-0006"
   },
-  "nota": "Anexo E, linha 61 (lote A): uso ambos; nível oficial; link https://bcr.iphan.gov.br/ (o link permanente por bem não foi conferido); termos de uso Não conferido.; como buscar Navegar no BCR; INRC em inrc.iphan.gov.br. Busca por texto não testada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+  "nota": "Anexo E, linha 61 (lote A): uso ambos; nível oficial; link https://bcr.iphan.gov.br/ (o link permanente por bem não foi conferido); termos de uso Não conferido.; como buscar Navegar no BCR; INRC em inrc.iphan.gov.br. Busca por texto não testada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4). Ficha de acesso testada em 2026-10-23 pelo rastreador (EX-0016, K-106); trilha em trilhas/2026-10-23_K-106/.",
+  "ficha_de_acesso": {
+    "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
+    "tipo": "outro: bens registrados, dossiês e inventários",
+    "acesso": "não conferido em 23/10/2026: o nome bcr.iphan.gov.br não resolveu a partir da rede da sessão (curl exit 6 'Could not resolve host'; WebFetch 'getaddrinfo ENOTFOUND'). Pelo mapa de 17/10/2026 (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json), o site abria sem cadastro (WordPress com Tainacan); não retestado.",
+    "como_buscar": "não conferido: a busca por texto não foi testada. Hipóteses a testar quando o nome resolver, nenhuma verificada: /?s=<termo> (WordPress); /wp-json/wp/v2/search?search=<termo>&per_page=1; /wp-json/tainacan/v2/items?search=<termo>&perpage=1 (total no cabeçalho X-WP-Total). Até lá, via humana ou a página do bem pelo endereço direto.",
+    "endpoint": "https://bcr.iphan.gov.br/ (hipóteses acima, não conferidas)",
+    "link_permanente": "não conferido. Padrão visto em 17/10 (mapa): https://bcr.iphan.gov.br/bens-culturais/<slug-do-bem>/; o IPHAN não declara que seja permanente.",
+    "texto_integral": "não conferido em 23/10. Pelo mapa de 17/10: dossiê, parecer e atas como páginas de documento do bem.",
+    "termos": "não conferido: os termos de uso do BCR não foram abertos (nem em 17/10).",
+    "robots": "não conferido: https://bcr.iphan.gov.br/robots.txt não pôde ser pedido em 23/10/2026 (nome sem resolução).",
+    "cobertura": "não conferido. Pelo Anexo E e pelo mapa: o registro da cajuína no Livro dos Saberes (15/05/2014; revalidado em 17/06/2025), o dossiê (2009) e o parecer técnico (07/04/2014).",
+    "uso": "ambos",
+    "nivel": "não conferido",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "GET https://bcr.iphan.gov.br/robots.txt, /?s=cajuína, /wp-json/wp/v2/search?search=cajuína&per_page=1 e /wp-json/tainacan/v2/items?search=cajuína&perpage=1&fetch_only=id,title, com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)'; repetição do robots.txt; WebFetch do robots.txt",
+      "resposta": "sem resposta HTTP: curl (6) Could not resolve host: bcr.iphan.gov.br (HTTP 000); WebFetch: getaddrinfo ENOTFOUND bcr.iphan.gov.br",
+      "observacao": "Falha de resolução de nome pela rede da sessão; outros hosts resolveram na mesma sessão. Nenhum pedido chegou ao servidor: não há recusa da fonte. A causa não foi apurada (rede do dia, bloqueio de nome nesta rede ou mudança de endereço). Diagnóstico do curador em 23/10/2026, depois do lote: nslookup bcr.iphan.gov.br no DNS local deu 'Non-existent domain', e no DNS público 8.8.8.8 também não devolveu endereço, enquanto iphan.gov.br resolveu (177.15.66.134): o nome do BCR não existe no DNS nesta data. Em 17/10 abria; se mudou de endereço ou se é falha temporária do IPHAN não foi apurado."
+    },
+    "decisao": "falta: fonte inacessível em 23/10/2026, o nome bcr.iphan.gov.br não existe no DNS (local e 8.8.8.8). Via humana: Vicente procura o BCR pelo portal do IPHAN no navegador; reteste do rastreador com os pedidos do campo teste quando o nome voltar ou o novo endereço for conhecido."
+  },
+  "ultima_visita": "2026-10-23"
 }

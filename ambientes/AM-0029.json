@@ -3,7 +3,7 @@
   "nome": "Embrapa — Infoteca-e (Informação Tecnológica em Agricultura)",
   "tipo": "outro",
   "tipo_detalhe": "repositório de publicações técnicas: cartilhas, livros para transferência de tecnologia, programas de rádio e de TV",
-  "via_protocolo": "Aberta, por OAI-PMH. O rodapé do site diz que o conteúdo está sob “Licença Creative Commons”, sem dizer qual.",
+  "via_protocolo": "OAI-PMH em https://www.infoteca.cnptia.embrapa.br/oai/request (colheita e filtro local); a busca por texto do site é vedada ao robô pelo robots.txt e fica na via humana",
   "estado_escavacao": "proposto",
   "estado_monitoramento": "não iniciado",
   "linha_anexo_e": 29,
@@ -12,5 +12,27 @@
     "data": "2026-10-22",
     "execucao": "EX-0006"
   },
-  "nota": "Anexo E, linha 29 (frentes FH, PA e MO): uso ambos; nível oficial; link handle doc/<n>; termos de uso Nenhum limite publicado foi encontrado. Qual licença Creative Commons vale não foi conferido.; como buscar Igual ao Alice. Escavar também os anos de 1900 a 1999.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+  "nota": "Anexo E, linha 29 (frentes FH, PA e MO): uso ambos; nível oficial; link handle doc/<n>; termos de uso Nenhum limite publicado foi encontrado. Qual licença Creative Commons vale não foi conferido.; como buscar Igual ao Alice. Escavar também os anos de 1900 a 1999.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4). Ficha de acesso testada em 2026-10-23 pelo rastreador (EX-0016, K-106); trilha em trilhas/2026-10-23_K-106/.",
+  "ficha_de_acesso": {
+    "nome": "Embrapa Infoteca-e (Informação Tecnológica em Agricultura)",
+    "tipo": "repositório de publicações técnicas (DSpace 5.6, interface /infoteca/)",
+    "acesso": "Aberto, sem cadastro: página inicial (HTTP 200), página do item 748513 (HTTP 200) e OAI-PMH (HTTP 200, application/xml) em 23/10/2026.",
+    "como_buscar": "A busca por texto do site (/infoteca/simple-search) fica fora da via automática: o robots.txt de 23/10 traz 'Disallow: /discover', '/simple-search', '/browse' e '/retrieve' para todos os robôs, sob o comentário 'Disable access to Discovery search and filters'. O OAI-PMH não filtra por texto (só por conjunto e data): a via automática é colher a lista pelo OAI e filtrar localmente. A busca textual é da via humana.",
+    "endpoint": "OAI-PMH: https://www.infoteca.cnptia.embrapa.br/oai/request (Identify 200; o Identify declara baseURL http://www.infoteca.cnptia.embrapa.br/infoteca-oai/request; /infoteca/oai/request deu 404). Busca humana: https://www.infoteca.cnptia.embrapa.br/infoteca/simple-search?query=<termo>",
+    "link_permanente": "Handle: https://www.infoteca.cnptia.embrapa.br/handle/doc/<n> (item 748513 aberto em 23/10). Identificador OAI: oai:www.infoteca.cnptia.embrapa.br:item/<n>.",
+    "texto_integral": "Parcial, não testado em 23/10: o item 748513 é de acesso aberto (mapa de 17/10); o download não foi pedido, e o robots.txt veda /retrieve.",
+    "termos": "O rodapé da página inicial e da página do item 748513 diz 'licenciado sob a Licença Creative Commons' e liga a http://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0), em 23/10/2026; é o rodapé do site, a confirmar por item. Termos de uso próprios: não conferidos.",
+    "robots": "Aberto em 23/10/2026 (HTTP 200): 'User-agent: *' com Disallow de /discover, /simple-search, /retrieve, /browse, /statistics, /contact, /feedback, /feed, /forgot, /login e /register; sem Disallow de /oai nem de /handle; 'Disallow: /' só para robôs nomeados.",
+    "cobertura": "OAI-PMH ListIdentifiers (oai_dc) em 23/10/2026: completeListSize=59357; earliestDatestamp 2011-04-09T12:36:46Z (data de registro no repositório, não de publicação). Anos de publicação cobertos: não conferidos.",
+    "uso": "ambos",
+    "nivel": "oficial",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "GET https://www.infoteca.cnptia.embrapa.br/oai/request?verb=Identify; .../oai/request?verb=ListIdentifiers&metadataPrefix=oai_dc (só o resumptionToken e a contagem); .../robots.txt; .../ (página inicial); .../handle/doc/748513?locale=en; .../infoteca/oai/request?verb=Identify",
+      "resposta": "Identify: HTTP 200, application/xml, repositoryName Infoteca-e, protocolVersion 2.0; ListIdentifiers: HTTP 200, completeListSize=59357; /infoteca/oai/request: HTTP 404; robots.txt: 200; página inicial: 200; handle/doc/748513: 200",
+      "observacao": "O OAI-PMH do Anexo E, nunca retestado, está confirmado em /oai/request."
+    },
+    "decisao": "aceito como via automática, só por OAI-PMH (colheita e filtro local); a busca por texto fica fora da via automática pelo robots.txt (via humana: Vicente usa a busca do site). Licença do item 748513: CC BY-NC-ND 4.0 pelo rodapé, a confirmar por item."
+  },
+  "ultima_visita": "2026-10-23"
 }

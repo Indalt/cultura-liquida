@@ -1,2 +1,3 @@
 *.pdf binary
 .githooks/* text eol=lf
+acervo/lugares/ibge/*.csv -text

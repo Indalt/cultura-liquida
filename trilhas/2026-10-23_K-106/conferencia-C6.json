@@ -1,0 +1,46 @@
+{
+  "lote": "C6",
+  "data": "2026-10-23",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "chamadas_usadas": 11,
+  "itens": [
+    {
+      "id": "C6.1",
+      "pergunta": "Arquivo oficial (CSV ou XLSX) do bioma predominante por município, com geocódigo: edição, data, URL de download direto, número de municípios interbiomas e versão dos limites de biomas.",
+      "resposta": "O IBGE publica 'Bioma Predominante por Município para Fins Estatísticos', edição 2024, em .csv e .xlsx no diretório de downloads de Geociências, com data 2024-07-01 14:36 na listagem. A publicação diz que são 963 municípios interbiomas e que a tabela usa os limites de biomas de 2019 (1:250 000) e a Malha Municipal 2022. O auditor não baixou as planilhas; a página do produto no ibge.gov.br e a notícia da Agência IBGE deram verificação anti-robô (Cloudflare), não contornada.",
+      "observacao": "Interpretação do auditor: a marcação dividida de indice.md l. 164 e 227 se resolve para o PDF e a listagem, que são oficiais e abriram. Depois do lote, o curador baixou o CSV da URL da listagem (HTTP 200, 209.074 bytes, SHA-256 192dfa72...c75d5) e contou 5.572 linhas de dados, 224 no PI (acervo/lugares/ibge/LEIA-ME.md).",
+      "partes": [
+        {"afirmacao": "Existe publicação oficial do IBGE de 2024 com a lista de bioma predominante por município, com nomes e geocódigos, siglas de UF e o bioma, em .xlsx e .csv.", "citacao": "Os Biomas predominantes por Município para fins estatísticos estão apresentados em lista, no formato de tabela, contendo os nomes e geocódigos dos Municípios existentes na malha municipal brasileira, as siglas das Unidades da Federação e o Bioma que ocorre em predominância em cada Município. [...] A lista foi disponibilizada nos formatos Microsoft Excel (.xlsx) e CSV (.csv)", "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102097.pdf", "nivel": "oficial"},
+        {"afirmacao": "A edição é 2024.", "citacao": "Bioma Predominante por Município para Fins Estatísticos 2024", "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102097.pdf", "nivel": "oficial"},
+        {"afirmacao": "Os arquivos estão no diretório oficial de downloads do IBGE, com data de modificação 2024-07-01 14:36.", "citacao": "href=\"Bioma_Predominante_por_Municipio_2024.csv\" ; href=\"Bioma_Predominante_por_Municipio_2024.xlsx\" ; 'Bioma_Predominante_p..>   2024-07-01 14:36    204K'", "url": "https://geoftp.ibge.gov.br/informacoes_ambientais/estudos_ambientais/biomas/documentos/", "nivel": "oficial"},
+        {"afirmacao": "Municípios interbiomas: 963.", "citacao": "Os demais Municípios do País são Interbiomas. Localizados entre dois ou mais Biomas, eles totalizam 963 Municípios.", "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102097.pdf", "nivel": "oficial"},
+        {"afirmacao": "Limites de biomas do IBGE de 2019, compatíveis com 1:250 000, e Malha Municipal 2022; a revisão de 2025 não aparece no PDF.", "citacao": "Bioma   Limite dos Biomas terrestres do Brasil (IBGE, 2019) ; IBGE. Biomas e sistema costeiro-marinho do Brasil: compatível com a escala 1:250 000. Rio de Janeiro: IBGE, 2019. [...] IBGE. Malha Municipal Digital e Áreas Territoriais 2022", "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102097.pdf", "nivel": "oficial"}
+      ]
+    },
+    {
+      "id": "C6.2",
+      "pergunta": "A API de Localidades do IBGE responde sem erro de certificado? Quantos municípios devolve?",
+      "resposta": "Respondeu HTTP 200 em 23/10/2026, com o certificado aceito (ssl_verify_result=0), sem o erro de 15/10. A contagem exata de municípios não foi feita: as 50.135 ocorrências de \"id\": somam os ids aninhados.",
+      "partes": [
+        {"afirmacao": "O endpoint responde (HTTP 200) e o certificado TLS é aceito.", "citacao": "HTTP 200 ssl_verify=0 (curl -w '%{http_code} %{ssl_verify_result}')", "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios", "nivel": "oficial"},
+        {"afirmacao": "Número de municípios devolvido pela API.", "nivel": "não conferido"}
+      ]
+    },
+    {
+      "id": "C6.3",
+      "pergunta": "No TBX, os termos ficam agrupados por seção de língua (langSec, xml:lang)? No SKOS, prefLabel e altLabel levam etiqueta de língua, com no máximo um prefLabel por língua? O Termo 0.2.0 exporta sem perda?",
+      "resposta": "SKOS conferido: no máximo um skos:prefLabel por etiqueta de língua, e etiquetas diferentes (en, en-US) contam como línguas diferentes. TBX não conferido (teto). Pela leitura do auditor, o Termo 0.2.0 leva a língua à etiqueta do rótulo, mas não marca qual designação é a preferida: com duas designações na mesma língua, ou ambas sem língua (und), a exportação precisaria escolher o prefLabel por regra externa; e o destino de variantes e formas de busca (altLabel ou hiddenLabel) não está dito nem conferido.",
+      "partes": [
+        {"afirmacao": "SKOS: um recurso tem no máximo um skos:prefLabel por etiqueta de língua.", "citacao": "A resource has no more than one value of skos:prefLabel per language tag.", "url": "https://www.w3.org/TR/skos-reference/", "nivel": "oficial"},
+        {"afirmacao": "SKOS: 'en', 'en-US' e 'en-GB' contam como línguas diferentes para essa regra.", "citacao": "because \"en\", \"en-US\" and \"en-GB\" are different language tags", "url": "https://www.w3.org/TR/skos-reference/", "nivel": "oficial"},
+        {"afirmacao": "TBX (ISO 30042): agrupamento por langSec com xml:lang, e o uso de 'und'.", "nivel": "não conferido"}
+      ]
+    }
+  ],
+  "nao_conferido": [
+    "C6.1: o conteúdo da versão XLSX; a página do produto no ibge.gov.br e a notícia da Agência IBGE (Cloudflare 403, não contornado). O CSV foi baixado e contado depois pelo curador.",
+    "C6.2: o número exato de municípios devolvido pela API (o pedido contou ids aninhados).",
+    "C6.3: TBX (langSec, xml:lang e 'und'), por teto de chamadas; o destino SKOS de variantes e formas de busca (altLabel ou hiddenLabel)."
+  ]
+}

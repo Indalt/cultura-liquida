@@ -3,7 +3,7 @@
   "nome": "Hemeroteca Digital Brasileira (Biblioteca Nacional)",
   "tipo": "hemeroteca",
   "tipo_detalhe": "hemeroteca nacional: jornais e revistas digitalizados",
-  "via_protocolo": "Web gratuita (DocReader). Alguns títulos só nos terminais da BN, e PDF só para os títulos sem restrição autoral. Recusou nosso leitor automático (403) em 15/10.",
+  "via_protocolo": "via humana: o leitor automático recebeu 403 com desafio do Cloudflare em 15/10 e em 23/10/2026; nunca se contorna",
   "estado_escavacao": "proposto",
   "estado_monitoramento": "não iniciado",
   "linha_anexo_e": 1,
@@ -12,5 +12,27 @@
     "data": "2026-10-22",
     "execucao": "EX-0006"
   },
-  "nota": "Anexo E, linha 1 (frentes FH, PA e MO): uso escavação; nível oficial; link DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (secundária; a BN não declara que é permanente).; termos de uso A BN não licencia imagens. Domínio público por tipo de obra (fascículo: 70 anos após a publicação; artigo assinado: 70 anos após a morte do autor; foto: 70 anos após a divulgação). Download só para uso privativo. Não contornar a proteção anti-robô.; como buscar Abas Periódico, Período e Local, mais um termo. Aspas para frase; + (e), - (não), / (ou) com parênteses; * no início ou no fim; acento indiferente. Mostra contador de ocorrências e as páginas com ocorrência em cada edição.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+  "nota": "Anexo E, linha 1 (frentes FH, PA e MO): uso escavação; nível oficial; link DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (secundária; a BN não declara que é permanente).; termos de uso A BN não licencia imagens. Domínio público por tipo de obra (fascículo: 70 anos após a publicação; artigo assinado: 70 anos após a morte do autor; foto: 70 anos após a divulgação). Download só para uso privativo. Não contornar a proteção anti-robô.; como buscar Abas Periódico, Período e Local, mais um termo. Aspas para frase; + (e), - (não), / (ou) com parênteses; * no início ou no fim; acento indiferente. Mostra contador de ocorrências e as páginas com ocorrência em cada edição.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4). Ficha de acesso testada em 2026-10-23 pelo rastreador (EX-0016, K-106); trilha em trilhas/2026-10-23_K-106/.",
+  "ficha_de_acesso": {
+    "nome": "Hemeroteca Digital Brasileira (Biblioteca Nacional)",
+    "tipo": "hemeroteca nacional: jornais e revistas digitalizados",
+    "acesso": "Só por pessoa. O leitor automático recebeu 403 em 15/10/2026 (Anexo E) e de novo em 23/10/2026, com desafio de verificação de navegador do Cloudflare. Nunca contornado.",
+    "como_buscar": "Via humana. Pelo Anexo E (catálogo de 15/10; não retestado): abas Periódico, Período e Local, mais um termo; aspas para frase; + (e), - (não), / (ou) com parênteses; * no início ou no fim; acento indiferente; contador de ocorrências por edição.",
+    "endpoint": "https://hemerotecadigital.bn.gov.br/ (via humana; sem endpoint automático)",
+    "link_permanente": "DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (Anexo E; secundária: a BN não declara que seja permanente). Não retestado.",
+    "texto_integral": "não conferido (o leitor foi recusado). Pelo Anexo E: alguns títulos só nos terminais da BN; PDF só para os títulos sem restrição autoral.",
+    "termos": "Pelo Anexo E (não reaberto): a BN não licencia imagens; domínio público por tipo de obra; download só para uso privativo.",
+    "robots": "não conferido: o único pedido permitido foi a página inicial, que respondeu 403.",
+    "cobertura": "não conferido (imprensa histórica, pelo mapa de 17/10; sem total).",
+    "uso": "escavação",
+    "nivel": "não conferido",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "HEAD https://hemerotecadigital.bn.gov.br/ com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)' (um único pedido)",
+      "resposta": "HTTP/1.1 403 Forbidden; Server: cloudflare; Cf-Mitigated: challenge (desafio de verificação de navegador)",
+      "observacao": "Recusa igual à de 15/10. Não se insistiu nem se tentou outro cabeçalho ou caminho."
+    },
+    "decisao": "falta: a Hemeroteca recusou de novo o leitor automático (403, desafio do Cloudflare) em 23/10/2026. Via humana: Vicente faz a busca no navegador, com as traduções de busca humana de ambientes/traducao-consultas.json, e traz o contador de ocorrências e os links das edições."
+  },
+  "ultima_visita": "2026-10-23"
 }

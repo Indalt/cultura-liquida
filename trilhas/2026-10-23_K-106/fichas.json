@@ -1,0 +1,87 @@
+{
+  "nota": "Fichas de acesso das quatro fontes do piloto, testadas em 23/10/2026 pelo rastreador (ficha-de-acesso 0.1.2, K-106), gravadas pelo curador em ambientes/<id>.json (campo ficha_de_acesso) por scripts de trilhas/2026-10-23_K-106/. O texto é o do rastreador, encurtado sem mudar o sentido.",
+  "AM-0061": {
+    "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
+    "tipo": "outro: bens registrados, dossiês e inventários",
+    "acesso": "não conferido em 23/10/2026: o nome bcr.iphan.gov.br não resolveu a partir da rede da sessão (curl exit 6 'Could not resolve host'; WebFetch 'getaddrinfo ENOTFOUND'). Pelo mapa de 17/10/2026 (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json), o site abria sem cadastro (WordPress com Tainacan); não retestado.",
+    "como_buscar": "não conferido: a busca por texto não foi testada. Hipóteses a testar quando o nome resolver, nenhuma verificada: /?s=<termo> (WordPress); /wp-json/wp/v2/search?search=<termo>&per_page=1; /wp-json/tainacan/v2/items?search=<termo>&perpage=1 (total no cabeçalho X-WP-Total). Até lá, via humana ou a página do bem pelo endereço direto.",
+    "endpoint": "https://bcr.iphan.gov.br/ (hipóteses acima, não conferidas)",
+    "link_permanente": "não conferido. Padrão visto em 17/10 (mapa): https://bcr.iphan.gov.br/bens-culturais/<slug-do-bem>/; o IPHAN não declara que seja permanente.",
+    "texto_integral": "não conferido em 23/10. Pelo mapa de 17/10: dossiê, parecer e atas como páginas de documento do bem.",
+    "termos": "não conferido: os termos de uso do BCR não foram abertos (nem em 17/10).",
+    "robots": "não conferido: https://bcr.iphan.gov.br/robots.txt não pôde ser pedido em 23/10/2026 (nome sem resolução).",
+    "cobertura": "não conferido. Pelo Anexo E e pelo mapa: o registro da cajuína no Livro dos Saberes (15/05/2014; revalidado em 17/06/2025), o dossiê (2009) e o parecer técnico (07/04/2014).",
+    "uso": "ambos",
+    "nivel": "não conferido",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "GET https://bcr.iphan.gov.br/robots.txt, /?s=cajuína, /wp-json/wp/v2/search?search=cajuína&per_page=1 e /wp-json/tainacan/v2/items?search=cajuína&perpage=1&fetch_only=id,title, com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)'; repetição do robots.txt; WebFetch do robots.txt",
+      "resposta": "sem resposta HTTP: curl (6) Could not resolve host: bcr.iphan.gov.br (HTTP 000); WebFetch: getaddrinfo ENOTFOUND bcr.iphan.gov.br",
+      "observacao": "Falha de resolução de nome pela rede da sessão; outros hosts resolveram na mesma sessão. Nenhum pedido chegou ao servidor: não há recusa da fonte. A causa não foi apurada (rede do dia, bloqueio de nome nesta rede ou mudança de endereço). Diagnóstico do curador em 23/10/2026, depois do lote: nslookup bcr.iphan.gov.br no DNS local deu 'Non-existent domain', e no DNS público 8.8.8.8 também não devolveu endereço, enquanto iphan.gov.br resolveu (177.15.66.134): o nome do BCR não existe no DNS nesta data. Em 17/10 abria; se mudou de endereço ou se é falha temporária do IPHAN não foi apurado."
+    },
+    "decisao": "falta: fonte inacessível em 23/10/2026, o nome bcr.iphan.gov.br não existe no DNS (local e 8.8.8.8). Via humana: Vicente procura o BCR pelo portal do IPHAN no navegador; reteste do rastreador com os pedidos do campo teste quando o nome voltar ou o novo endereço for conhecido."
+  },
+  "AM-0029": {
+    "nome": "Embrapa Infoteca-e (Informação Tecnológica em Agricultura)",
+    "tipo": "repositório de publicações técnicas (DSpace 5.6, interface /infoteca/)",
+    "acesso": "Aberto, sem cadastro: página inicial (HTTP 200), página do item 748513 (HTTP 200) e OAI-PMH (HTTP 200, application/xml) em 23/10/2026.",
+    "como_buscar": "A busca por texto do site (/infoteca/simple-search) fica fora da via automática: o robots.txt de 23/10 traz 'Disallow: /discover', '/simple-search', '/browse' e '/retrieve' para todos os robôs, sob o comentário 'Disable access to Discovery search and filters'. O OAI-PMH não filtra por texto (só por conjunto e data): a via automática é colher a lista pelo OAI e filtrar localmente. A busca textual é da via humana.",
+    "endpoint": "OAI-PMH: https://www.infoteca.cnptia.embrapa.br/oai/request (Identify 200; o Identify declara baseURL http://www.infoteca.cnptia.embrapa.br/infoteca-oai/request; /infoteca/oai/request deu 404). Busca humana: https://www.infoteca.cnptia.embrapa.br/infoteca/simple-search?query=<termo>",
+    "link_permanente": "Handle: https://www.infoteca.cnptia.embrapa.br/handle/doc/<n> (item 748513 aberto em 23/10). Identificador OAI: oai:www.infoteca.cnptia.embrapa.br:item/<n>.",
+    "texto_integral": "Parcial, não testado em 23/10: o item 748513 é de acesso aberto (mapa de 17/10); o download não foi pedido, e o robots.txt veda /retrieve.",
+    "termos": "O rodapé da página inicial e da página do item 748513 diz 'licenciado sob a Licença Creative Commons' e liga a http://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0), em 23/10/2026; é o rodapé do site, a confirmar por item. Termos de uso próprios: não conferidos.",
+    "robots": "Aberto em 23/10/2026 (HTTP 200): 'User-agent: *' com Disallow de /discover, /simple-search, /retrieve, /browse, /statistics, /contact, /feedback, /feed, /forgot, /login e /register; sem Disallow de /oai nem de /handle; 'Disallow: /' só para robôs nomeados.",
+    "cobertura": "OAI-PMH ListIdentifiers (oai_dc) em 23/10/2026: completeListSize=59357; earliestDatestamp 2011-04-09T12:36:46Z (data de registro no repositório, não de publicação). Anos de publicação cobertos: não conferidos.",
+    "uso": "ambos",
+    "nivel": "oficial",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "GET https://www.infoteca.cnptia.embrapa.br/oai/request?verb=Identify; .../oai/request?verb=ListIdentifiers&metadataPrefix=oai_dc (só o resumptionToken e a contagem); .../robots.txt; .../ (página inicial); .../handle/doc/748513?locale=en; .../infoteca/oai/request?verb=Identify",
+      "resposta": "Identify: HTTP 200, application/xml, repositoryName Infoteca-e, protocolVersion 2.0; ListIdentifiers: HTTP 200, completeListSize=59357; /infoteca/oai/request: HTTP 404; robots.txt: 200; página inicial: 200; handle/doc/748513: 200",
+      "observacao": "O OAI-PMH do Anexo E, nunca retestado, está confirmado em /oai/request."
+    },
+    "decisao": "aceito como via automática, só por OAI-PMH (colheita e filtro local); a busca por texto fica fora da via automática pelo robots.txt (via humana: Vicente usa a busca do site). Licença do item 748513: CC BY-NC-ND 4.0 pelo rodapé, a confirmar por item."
+  },
+  "AM-0021": {
+    "nome": "BDTD: Biblioteca Digital Brasileira de Teses e Dissertações (IBICT)",
+    "tipo": "agregador de metadados de teses e dissertações (VuFind)",
+    "acesso": "Aberto, sem cadastro. API do VuFind v1 em JSON, HTTP 200 em 23/10/2026.",
+    "como_buscar": "API v1: GET /vufind/api/v1/search?lookfor=<consulta>&type=AllFields&limit=0 devolve só o resultCount. Aspas, OR, AND e parênteses aceitos. O lookfor tem de ir em UTF-8 percent-encoded: com acentos em Latin-1 (%FA, %ED) a API devolveu a base inteira (1.167.710), como se a consulta fosse ignorada. O RSS de busca (/vufind/Search/Results?...&view=rss) está sob 'Disallow: /vufind/Search/' no robots.txt e não se usa: a via automática é só a API v1.",
+    "endpoint": "https://bdtd.ibict.br/vufind/api/v1/search?lookfor=<consulta, UTF-8 percent-encoded>&type=AllFields&limit=<n>",
+    "link_permanente": "https://bdtd.ibict.br/vufind/Record/<id> (Anexo E; não reaberto em 23/10) e o handle da instituição, no campo urls do registro.",
+    "texto_integral": "Não: o registro aponta o repositório da instituição (ficha de 15/10; não retestado).",
+    "termos": "não conferido: nenhum limite de uso publicado foi encontrado em 15/10; as páginas não foram reabertas. Proposta: 1 pedido por segundo, com o robô identificado.",
+    "robots": "Aberto em 23/10/2026 (HTTP 200): 'User-agent: *', 'Allow: /', 'Disallow: /vufind/Search/'. A API v1 não está vedada; a busca HTML e o RSS de busca estão.",
+    "cobertura": "1.167.710 registros pela API (lookfor=*:*, limit=0, HTTP 200) em 23/10/2026; eram 1.156.392 em 15/10.",
+    "uso": "ambos",
+    "nivel": "oficial",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
+      "resposta": "HTTP 200 {\"resultCount\":1441,\"status\":\"OK\"}",
+      "observacao": "Uma primeira rodada com codificação Latin-1 devolveu 1167710 (a base inteira) em 6 pedidos, descartados como inválidos. Em 17/10, a busca simples 'cajuína' informou 25."
+    },
+    "decisao": "aceito como via automática (API v1, UTF-8 percent-encoded), sem o RSS de busca, vedado pelo robots.txt"
+  },
+  "AM-0001": {
+    "nome": "Hemeroteca Digital Brasileira (Biblioteca Nacional)",
+    "tipo": "hemeroteca nacional: jornais e revistas digitalizados",
+    "acesso": "Só por pessoa. O leitor automático recebeu 403 em 15/10/2026 (Anexo E) e de novo em 23/10/2026, com desafio de verificação de navegador do Cloudflare. Nunca contornado.",
+    "como_buscar": "Via humana. Pelo Anexo E (catálogo de 15/10; não retestado): abas Periódico, Período e Local, mais um termo; aspas para frase; + (e), - (não), / (ou) com parênteses; * no início ou no fim; acento indiferente; contador de ocorrências por edição.",
+    "endpoint": "https://hemerotecadigital.bn.gov.br/ (via humana; sem endpoint automático)",
+    "link_permanente": "DocReader.aspx?bib=<acervo_parte>&pagfis=<página física> (Anexo E; secundária: a BN não declara que seja permanente). Não retestado.",
+    "texto_integral": "não conferido (o leitor foi recusado). Pelo Anexo E: alguns títulos só nos terminais da BN; PDF só para os títulos sem restrição autoral.",
+    "termos": "Pelo Anexo E (não reaberto): a BN não licencia imagens; domínio público por tipo de obra; download só para uso privativo.",
+    "robots": "não conferido: o único pedido permitido foi a página inicial, que respondeu 403.",
+    "cobertura": "não conferido (imprensa histórica, pelo mapa de 17/10; sem total).",
+    "uso": "escavação",
+    "nivel": "não conferido",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "HEAD https://hemerotecadigital.bn.gov.br/ com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)' (um único pedido)",
+      "resposta": "HTTP/1.1 403 Forbidden; Server: cloudflare; Cf-Mitigated: challenge (desafio de verificação de navegador)",
+      "observacao": "Recusa igual à de 15/10. Não se insistiu nem se tentou outro cabeçalho ou caminho."
+    },
+    "decisao": "falta: a Hemeroteca recusou de novo o leitor automático (403, desafio do Cloudflare) em 23/10/2026. Via humana: Vicente faz a busca no navegador, com as traduções de busca humana de ambientes/traducao-consultas.json, e traz o contador de ocorrências e os links das edições."
+  }
+}

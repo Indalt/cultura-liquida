@@ -53,7 +53,7 @@
           ]
         }
       },
-      "description": "cada designação com a língua quando a fonte a der (insumo 30): no TBX, a designação vai à seção de língua (langSec) da etiqueta; no SKOS, ao rótulo com a etiqueta de língua"
+      "description": "cada designação com a língua quando a fonte a der (insumo 30): no TBX, a designação vai à seção de língua (langSec) da etiqueta; no SKOS, ao rótulo com a etiqueta de língua; a ordem conta, como no gerar_termo.py, que nomeia o Termo pela primeira: na exportação, a primeira designação de cada língua (ou de 'und') vai ao skos:prefLabel e as outras ao altLabel, porque o SKOS aceita no máximo um prefLabel por etiqueta de língua (W3C SKOS Reference, oficial, lote C6.3); o destino das variantes (altLabel) e das formas de busca (hiddenLabel) e a estrutura do TBX não foram conferidos (C6.3)"
     },
     "variantes": {
       "type": "array",
