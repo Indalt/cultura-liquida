@@ -1,0 +1,21 @@
+{
+  "id": "D-041",
+  "data": "2026-10-23",
+  "essencia": "Regras dos insumos 36 e 34. No localizar_trecho.py, as palavras de negação e de sentido contrário têm de bater exatamente, e a tolerância de semelhança vale só para OCR e grafia. Em μ e λ só conta a Evidência com trecho localizado e leitura fiel; a divergente ou não localizada fica visível, como Falta ou pendência, mas fora da conta; cada linhagem conta uma vez, e a que tiver Evidência a favor e divergente vira tensão interna sinalizada, sem pesar dos dois lados. As regras têm versão (D-038) e recalculam por script quando mudam.",
+  "diretriz": "(1) Trecho: no localizar_trecho.py, uma diferença em palavra de negação ou de sentido contrário entre o trecho citado e o texto lido nunca passa por semelhança: essas palavras têm de bater exatamente, e a tolerância de semelhança (o limiar do registro) cobre só a variação de OCR e de grafia. O caso A-010 do auditor no K-105 (um 'nunca' inserido que passava com 0,955 contra o limiar de 0,9) passa a reprovar. (2) μ e λ: só entra na conta a Evidência com trecho localizado (eixo 2) e leitura fiel, sem 'leitura divergente' no eixo 3; a de leitura divergente ou de trecho não localizado fica visível, como Falta ou pendência, fora da conta. Cada linhagem conta uma vez, e a linhagem que tem Evidência a favor e Evidência divergente vira tensão interna sinalizada, sem pesar dos dois lados (caso A-015 do auditor no K-105). (3) As duas regras ganham versão nova no registro de valores provisórios (normalizacao_e_limiar e mu_lambda), que toda decisão automática grava (D-038), e o recálculo é por script quando a regra muda. Como os scripts gravam a versão da regra lida do registro, o registro e os scripts mudam juntos, no K-123, antes do K-106, com os casos A-010 e A-015 entre os que passam e os que reprovam, para que o K-109 (bloco 7) e o K-110 (bloco 8) já rodem com elas. (4) Com isso, a 2ª passada do K-005 não é necessária; o K-005 volta a 'A fazer' só para a 3ª, depois do K-110, que calibra os números com a medida.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-23",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-10-23_K-005/relatorio.md, seção 'Fechamento (23/10/2026)', parte 'Falas originais de Vicente'",
+  "palavras_conferidas": [
+    {
+      "palavra": "trecho exato ok",
+      "sentido_confirmado": "no localizar_trecho.py, as palavras de negação e de sentido contrário têm de bater exatamente; a tolerância de semelhança vale só para OCR e grafia"
+    },
+    {
+      "palavra": "Aprovo",
+      "sentido_confirmado": "aprova a regra de μ e λ como escrita: só conta a Evidência com trecho localizado e leitura fiel; a divergente ou não localizada fica visível, como Falta ou pendência, fora da conta; cada linhagem conta uma vez; a que tiver Evidência a favor e divergente vira tensão interna sinalizada, sem pesar dos dois lados; a regra tem versão e recalcula por script"
+    }
+  ],
+  "substitui": "Muda as regras normalizacao-0.1 e mu-lambda-0.1 do registro de valores provisórios (K-104, K-105): a semelhança deixa de valer para palavra de negação ou de sentido contrário, e μ e λ deixam de contar toda Evidência ativa. Responde aos insumos 34 e 36, que o mapa das três frentes dava ao K-005, e dispensa a 2ª passada dele.",
+  "marcador": "VIGENTE"
+}

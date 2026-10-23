@@ -1,0 +1,37 @@
+{
+  "id": "D-040",
+  "data": "2026-10-23",
+  "essencia": "O ritmo do piloto se mede em pontos percentuais (pp) do limite semanal da conta, como o K-005 propôs, com estes valores: o projeto usa até 60 pp por semana, somadas as três frentes; o desenvolvimento, até 50 pp; o planejamento, o resto; e o projeto não leva a conta acima de 90%. Os limites por conversa sobem: a conversa não para antes do teto, e a guarda passa a ser não perder trabalho, com commit e push a cada lote e a janela de 5 h informada por Vicente ao abrir; acima de 70% dela, só um lote, e a conversa fecha com o estado salvo. No início da operação autônoma (fim do K-113), o teto volta a um valor de manutenção, fixado no K-002. Muda-se só o que está em vigor.",
+  "diretriz": "(1) Unidade e semana: pp do limite semanal da conta (claude.ai/settings/usage), lidos por Vicente; a semana é a da conta, de uma renovação do limite à seguinte. Os tokens de agentes seguem medidos e somados no checklist, como estimativa e teto de cada lote, e deixam de parar a semana. (2) Tetos: o projeto, 60 pp por semana, somadas as três frentes; o desenvolvimento, até 50 pp; o planejamento, o resto, com o teto de agentes por rodada até o K-002; o projeto não leva a conta acima de 90%. (3) Conta da conversa de desenvolvimento: ao abrir, Vicente informa o uso semanal (A0) e o da janela de 5 h. A folga da conversa é H = o menor entre (50 − o que o desenvolvimento já usou na semana), (60 − o que o projeto já usou na semana) e (90 − A0). Antes de cada agente, abre-se o lote se 2 + 1,6 × (tokens dos agentes já rodados na conversa, em centenas de milhares) + 1,6 × (estimativa do lote, em centenas de milhares) ≤ H; os 2 pp são da conversa principal e o 1,6 é o pp por 100 mil tokens de agente, medidos no K-005 e refeitos com as medidas novas. Não há folga de 2× nem margem: a conversa não para antes do teto. Se o lote não couber, é a Parada (b), com o estado salvo, e o bloco retoma na semana seguinte. (4) Guarda, em toda conversa do projeto: commit e push a cada lote; com a janela de 5 h acima de 70% na leitura de Vicente, a conversa faz só um lote e fecha com o estado salvo. Ao fechar, Vicente informa o uso (A1); sem A1, a leitura da abertura seguinte fecha a conversa. O checklist guarda uma linha por conversa (frente, cartão, A0, A1, pp, tokens de agentes e chamadas). (5) Estimativa do lote: a última medida do mesmo agente com a mesma habilidade, tirada dos logs; sem medida, 96.520 tokens, a média dos lotes Sonnet dos logs em 23/10, no lugar de 60 mil. (6) No fim do K-113, quando a operação autônoma começa, o teto volta a um valor de manutenção, que o K-002 fixa. (7) Muda-se só o que está em vigor: o registro de valores provisórios (orcamento e parada_conversa_principal), a seção 0 do brief de execuções e o estado do planejamento, com o AGENTS.md, o quadro e o mapa das três frentes em dia; nada novo em proxima-versao.md nem em insumos por causa desta decisão. O orcamento.py, o executar-brief e o checklist do piloto passam à regra nova no K-123; até lá, a conta se faz pela seção 0 do brief.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-23",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-10-23_K-005/relatorio.md, seção 'Fechamento (23/10/2026)', parte 'Falas originais de Vicente'",
+  "palavras_conferidas": [
+    {
+      "palavra": "60% do máximo de tokens semanais por semana",
+      "sentido_confirmado": "o projeto usa até 60 pp do limite semanal da conta por semana, somadas as três frentes; dentro deles, o desenvolvimento até 50 pp e o planejamento o resto"
+    },
+    {
+      "palavra": "fui aumentando devagar os limites de cada ação",
+      "sentido_confirmado": "os limites por conversa sobem: a conversa não para antes do teto, sem a folga de 2× nem margem"
+    },
+    {
+      "palavra": "trabalho perdido por limites de 5h em 5h",
+      "sentido_confirmado": "a guarda é não perder trabalho na janela de 5 h da conta: commit e push a cada lote; ao abrir, Vicente informa também o uso dessa janela; acima de 70%, só um lote, e a conversa fecha com o estado salvo"
+    },
+    {
+      "palavra": "apenas manutenção",
+      "sentido_confirmado": "no início da operação autônoma (fim do K-113), o teto volta a um valor de manutenção, fixado no K-002"
+    },
+    {
+      "palavra": "basta alterar as regras atuais",
+      "sentido_confirmado": "muda-se só o que está em vigor (registro de valores provisórios, seção 0 do brief, estado do planejamento); nada novo em proxima-versao.md nem em insumos por causa desta decisão"
+    },
+    {
+      "palavra": "ritmo ok",
+      "sentido_confirmado": "aceita o ritmo proposto no K-005 (pp da conta, semana da conta, conta da conversa, estimativas por agente e habilidade), com os valores desta decisão no lugar dos propostos"
+    }
+  ],
+  "substitui": "Substitui o teto provisório de 300 mil tokens de agentes por semana da D-023 (Fundação, l. 511 e 904; brief de execuções, seção 0), a semana de segunda a domingo, a estimativa sem medida de 60 mil e a folga de 2× o maior lote do registro de valores provisórios (orcamento), o limite da conversa dado por Vicente a cada vez (parada_conversa_principal) e a leitura A-13, que deixava o planejamento fora da soma semanal: agora as três frentes somam no teto do projeto. A guarda da D-023 fica: medir e parar antes de acabar, com o estado salvo.",
+  "marcador": "VIGENTE"
+}

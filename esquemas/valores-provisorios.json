@@ -1,8 +1,8 @@
 {
   "$schema": "valores-provisorios.schema.json",
-  "versao": "0.1.0",
-  "data": "2026-10-22",
-  "cartao": "K-104 (bloco 2 do brief de execuções)",
+  "versao": "0.2.0",
+  "data": "2026-10-23",
+  "cartao": "K-104 (bloco 2 do brief de execuções); 0.2.0: K-005, D-040 (orcamento e parada_conversa_principal)",
   "descricao": "Registro único dos valores provisórios ([PROPOSTA]) que a execução usa (brief, bloco 2; Fundação l. 696). Esquemas e scripts leem daqui, sem cópia: os esquemas por $ref (resolvido por scripts/_comum.py), os scripts por carregar_valores(). Pela D-038, a 'estrutura' é fixada e não muda com a calibração; os 'valores' são provisórios e cada um diz a linha da Fundação que o permite, a decisão que o cobre, quem o usa e quando se calibra. Mudar um valor é versão nova deste arquivo e, quando o valor é uma regra, versão nova da regra (o campo versao_regra), que toda decisão automática grava na Execução.",
   "estrutura": {
     "base": "D-038 (estrutura fixada); Fundação §6, l. 620-641",
@@ -458,30 +458,41 @@
       "calibracao": "bloco 10b; K-002"
     },
     "parada_conversa_principal": {
-      "valor": "Vicente lê o uso da conta ao abrir e ao fim de cada bloco; a sessão para no limite que ele indicar, com o estado salvo antes. Somar o consumo da sessão pelo registro dela é 'não conferido'.",
+      "valor": "Ao abrir cada conversa, Vicente informa o uso semanal da conta (A0) e o da janela de 5 h; ao fechar, o uso (A1); sem A1, a leitura da abertura seguinte fecha a conversa. A conversa principal entra na conta da conversa (orcamento: conversa_principal_pp) e não para antes do teto. A guarda é não perder trabalho: commit e push a cada lote; com a janela de 5 h acima de 70% na leitura de Vicente, a conversa faz só um lote e fecha com o estado salvo. O checklist guarda uma linha por conversa (frente, cartão, A0, A1, pp, tokens de agentes e chamadas). Somar o consumo da sessão pelo registro dela é 'não conferido'.",
       "linha_fundacao": "l. 511, 923",
-      "base": "D-023; D-034",
+      "base": "D-023; D-034; D-040",
       "quem_usa": [
-        "curador (executar-brief)"
+        "curador (executar-brief; seção 0 do brief)"
       ],
-      "calibracao": "K-005"
+      "calibracao": "a 3ª passada do K-005, depois do K-110; o teto de manutenção, no K-002 (D-040)"
     },
     "orcamento": {
       "valor": {
+        "versao_regra": "orcamento-0.2",
+        "unidade": "pontos percentuais (pp) do limite semanal da conta, lidos por Vicente em claude.ai/settings/usage",
+        "semana": "a semana da conta, de uma renovação do limite à seguinte",
+        "teto_projeto_pp": 60,
+        "teto_desenvolvimento_pp": 50,
+        "planejamento": "o que sobra do teto do projeto, com o teto de agentes por rodada até o K-002",
+        "linha_conta_pct": 90,
+        "janela_5h_lote_unico_pct": 70,
+        "conversa_principal_pp": 2,
+        "pp_por_100mil_tokens": 1.6,
+        "regra": "Ao abrir, Vicente informa o uso semanal (A0) e o da janela de 5 h. Folga da conversa de desenvolvimento: H = o menor entre (teto_desenvolvimento_pp − o que o desenvolvimento já usou na semana), (teto_projeto_pp − o que o projeto já usou na semana) e (linha_conta_pct − A0). Antes de cada agente, abre-se o lote se conversa_principal_pp + pp_por_100mil_tokens × (tokens dos agentes já rodados na conversa ÷ 100 mil) + pp_por_100mil_tokens × (estimativa do lote ÷ 100 mil) ≤ H, sem folga nem margem: a conversa não para antes do teto. Se não couber, é a Parada (b), com o estado salvo. Commit e push a cada lote; com a janela de 5 h acima de janela_5h_lote_unico_pct, só um lote, e a conversa fecha com o estado salvo.",
+        "estimativa": "a última medida do mesmo agente com a mesma habilidade, tirada dos logs; sem medida, estimativa_sem_medida",
+        "estimativa_sem_medida": 96520,
+        "manutencao": "no fim do K-113 (início da operação autônoma), o teto volta a um valor de manutenção, que o K-002 fixa",
         "teto_semanal": 300000,
-        "semana": "segunda a domingo, pela data do log",
-        "estimativa_sem_medida": 60000,
-        "estimativa": "a última medida do mesmo agente com a mesma habilidade; sem medida, 60 mil",
-        "folga_minima": "2 × o maior lote já medido"
+        "nota_teto_semanal": "os 300 mil tokens de agentes por semana da D-023 não param mais a semana (D-040); a chave fica só porque o orcamento.py a lê até o K-123"
       },
-      "vigente": "o teto de 300 mil por semana é a D-023 (vigente); a semana e a estimativa são [PROPOSTA] (brief, seção 0)",
-      "linha_fundacao": "l. 511 (D-023)",
-      "base": "D-023; D-034",
+      "vigente": "D-040 (23/10/2026): os tetos em pp, a linha da conta, a conta da conversa e a guarda da janela de 5 h. conversa_principal_pp, pp_por_100mil_tokens e estimativa_sem_medida vêm da medida do K-005 (trilhas/planejamento/rodadas/2026-10-23_K-005/) e se refazem com as medidas novas",
+      "linha_fundacao": "l. 511 e 904 (D-023)",
+      "base": "D-023; D-034; D-040",
       "quem_usa": [
-        "scripts/orcamento.py",
-        "curador"
+        "curador (seção 0 do brief)",
+        "scripts/orcamento.py (a conta em pp, a partir do K-123)"
       ],
-      "calibracao": "K-005 (ritmo do piloto); as rodadas de planejamento ficam fora desta soma até o K-002 (A-13)"
+      "calibracao": "conversa_principal_pp e pp_por_100mil_tokens a cada conversa de desenvolvimento medida (calcular_ritmo.py do K-005); a 3ª passada do K-005, depois do K-110; o teto de manutenção, no K-002"
     },
     "estados_busca": {
       "valor": {

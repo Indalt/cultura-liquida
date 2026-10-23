@@ -1,6 +1,6 @@
 # Relatório da rodada K-005 (23/10/2026)
 
-**Cartão:** K-005, "Ritmo do piloto: o teto semanal da execução e a regra de folga calibrados pela medida, com estimativas por agente e habilidade". **Frente:** planejamento de melhorias. **Estado:** em Fazendo desde 23/10/2026; o ritmo está proposto e espera a aceitação de Vicente, porque o destino do cartão é "um ritmo do piloto que Vicente aceite" (quadro).
+**Cartão:** K-005, "Ritmo do piloto: o teto semanal da execução e a regra de folga calibrados pela medida, com estimativas por agente e habilidade". **Frente:** planejamento de melhorias. **Estado:** a 1ª passada fechou em 23/10/2026: Vicente aceitou o ritmo com outros valores (D-040) e decidiu as regras dos insumos 34 e 36 (D-041), o que dispensou a 2ª passada; o K-005 voltou a "A fazer" para a 3ª, depois do K-110. O fechamento está na seção "Fechamento", no fim; as seções até "Próximo" contam a primeira conversa, como estava antes da aceitação.
 **Pedido de Vicente (fala original, para a trilha):** "Rodada de planejamento de melhorias: cartão K-005 (ritmo do piloto) de trilhas/planejamento/quadro.md, com os blocos 1 a 3 medidos. Siga trilhas/planejamento/estado-planejamento.md, sem agentes: use as medidas do checklist do piloto e os usos da conta informados. Quero o ritmo dado em pontos percentuais da conta por semana, com a meta. Opus 5.5, esforço máximo, thinking. Uso atual: 43%."
 **Sessão:** `claude-opus-5-5` (conferido), esforço máximo e thinking, sem ultracode e sem agentes, como Vicente pediu. **Uso da conta:** 43% no início, lido por Vicente; no fim, a informar. **Ordem:** o quadro põe o K-002 antes do K-005, e Vicente pegou o K-005. O K-005 só pede os blocos 1 a 3 medidos (quadro; mapa, seção 8). O que é do K-002 (o teto do planejamento, a IA da operação) entra aqui como suposição dita, e não como decisão.
 
@@ -141,3 +141,47 @@ Nenhum agente, a pedido de Vicente: 0 tokens de agentes, dentro do teto da rodad
 ## Próximo
 
 Vicente aceita o ritmo como está ou muda os números (a meta, o teto do projeto, a linha da conta, a reserva). Com a aceitação, o fechamento faz o que a seção "O que muda" lista, e o K-005 volta a "A fazer" para a 2ª passada. Pela ordem: no planejamento, o K-002 e a 2ª passada do K-005, as duas antes dos cartões que dependem delas (K-113 e K-109); no desenvolvimento, o K-123 e depois o K-106, na próxima semana da conta.
+
+## Fechamento (23/10/2026, conversa sem agentes)
+
+**Pedido de Vicente, em resumo fiel:** fechar o K-005 pela seção "O que muda se Vicente aceitar", sem agentes; registrar a D-040 e a D-041 pela registrar-decisao, com as essências dadas na mensagem e a fala original na trilha da rodada; depois, o K-123 no quadro, antes do K-106; o `AGENTS.md`, o mapa e o estado em dia; o uso da conta no fim; commit e push. **Uso da conta ao abrir, lido por Vicente:** 49% (semanal) e 36% (janela de 5 h). **Sessão:** `claude-opus-5-5` (conferido), esforço máximo, sem agentes.
+
+**Falas originais de Vicente (23/10/2026)**
+- Para a D-040: "Apos as medicoes eu autorizo o uso de até 60% do maximo de tokens semanais por semana para este projeto. podemos assumir que fui aumentando devagar os limites de cada ação para que elas nao parem antes do limite seja antigido. podemos aumentar os limites por sessao desde que nao tenhamos trabalho perdido tb por limites de 5h em 5h em uma sessao. nao precisa criar novo insumo para a proxima versao, basta alterar as regras atuais. ao final do desenvolvimento e inicio da execucao autonoma estes limites podem voltar a ser bem menores porque seria apenas manutencao." Confirmação da essência: "ritmo ok".
+- Para a D-041: "trecho exato ok" (a regra do insumo 36) e "Aprovo" (a regra do insumo 34).
+
+**As decisões** (`trilhas/decisoes/D-040.json` e `D-041.json`, as duas aprovadas por `validar.py decisao`):
+- **D-040:** o ritmo em pontos percentuais (pp) do limite semanal da conta. O projeto usa até 60 pp por semana, somadas as três frentes; o desenvolvimento, até 50; o planejamento, o resto; a conta nunca passa de 90%. A conversa não para antes do teto: sai a folga de 2× e a margem de 1 pp da proposta. A guarda é não perder trabalho: commit e push a cada lote, e a janela de 5 h informada ao abrir; acima de 70% dela, só um lote e a conversa fecha. No fim do K-113, o teto de manutenção do K-002. Muda só o que está em vigor; nada novo em `proxima-versao.md` nem em insumos.
+- **D-041:** no `localizar_trecho.py`, negação e sentido contrário batem exatamente, e a semelhança tolera só OCR e grafia. Em μ e λ só conta a Evidência com trecho localizado e leitura fiel; cada linhagem conta uma vez, e a linhagem com Evidência a favor e divergente vira tensão interna sinalizada, sem pesar dos dois lados. As regras têm versão e recalculam por script.
+- **Duas leituras do curador, ditas a Vicente no fim desta conversa:** o "acima de 70%" da D-040 é o da janela de 5 h, porque a frase vem logo depois dela e a fala fala dos limites de 5 h; e o "sem pesar dos dois lados" da D-041 ficou como está escrito, porque não diz se a linhagem mista pesa num lado só ou em nenhum. O K-123 confirma esse ponto com Vicente antes de gravar o script.
+
+**O que mudou**
+
+| Arquivo | Mudança |
+|---|---|
+| `trilhas/decisoes/D-040.json`, `D-041.json` | as duas decisões |
+| `esquemas/valores-provisorios.json` | versão 0.2.0: `orcamento` (orcamento-0.2: pp, semana da conta, 60 e 50 pp, linha de 90%, janela de 5 h a 70%, 2 pp e 1,6 pp por 100 mil tokens, estimativa sem medida de 96.520, teto de manutenção no K-002) e `parada_conversa_principal`. A chave `teto_semanal` (300 mil) fica, marcada como fora de uso, porque o `orcamento.py` a lê até o K-123 |
+| brief de execuções | o cabeçalho; no quadro de ajustes, a linha das decisões (até a D-041), a do orçamento (D-040, que supera a leitura A-13) e uma linha nova para o trecho e μ e λ (D-041); a seção 0 ("Orçamento") reescrita; a seção 2 com as D-040 e D-041 e a nota na D-023; a camada 2 da seção 3b e a operação depois do bloco 14; a trilha |
+| quadro | o K-005 em "A fazer", depois do K-006, só para a 3ª passada; o K-002 com o teto do planejamento dentro dos 60 pp, o teto de manutenção (D-040) e os insumos 37 e 38; o K-123 novo, antes do K-106 |
+| mapa das três frentes | seção 1 (teto de cada frente; cartões até o K-123); seção 6 (insumos 34 e 36: regra pela D-041, script no K-123); seção 7 (D-040 e D-041; a D-023 com o número substituído); seção 8 (as ordens, com o K-123 e as passadas do K-005) |
+| `AGENTS.md` | D-040 e D-041; a nota na D-023; o passo corrente; o orçamento |
+| estado do planejamento | o K-005, as decisões até a D-041, o consumo e a próxima rodada |
+| `dados-ritmo.json` | a leitura L8 (49%, ao abrir o fechamento) e a meta de 50 pp na tabela 5 |
+
+**O que ficou de fora, de propósito**
+- **`proxima-versao.md` e insumos:** nada novo, pela D-040.
+- **A D-041 no registro e nos scripts:** o `localizar_trecho.py` e o `calcular_mu_lambda.py` gravam em cada saída a versão da regra que leem do registro (`versao_regra`). Subir a versão no registro sem mudar o código daria saída com uma regra que o script não aplica. Os dois mudam juntos no K-123, antes do K-106, e por isso os blocos 7 e 8 já rodam com elas.
+- **O `orcamento.py`, o `executar-brief`, o `curador.md` e o checklist do piloto:** vão ao K-123. Até lá, a conta se faz pela seção 0 do brief, que vale sobre o `executar-brief` (ainda com 300 mil).
+- **A dependência do K-109 na 2ª passada:** não entrou, porque a D-041 dispensou essa passada e o K-123 vem antes do K-106.
+
+**Previsão com a D-040** (estimativa, tabela 5 refeita): com o desenvolvimento a 50 pp por semana, o piloto termina por volta de 19/11/2026, se a conta renovar em 28/10; a faixa vai de 11/11 a 30/11. Os 7 dias da 10a e as esperas por Vicente seguem fora da conta de pp. Nesta semana da conta, o projeto estava em 49 pp ao abrir o fechamento, com todo o uso contado como do projeto; pela D-040, ele pode chegar a 60.
+
+**Checagens, sem IA:** `validar.py decisao` nas duas decisões e `validar.py valores-provisorios` no registro: PASSA; `checar_mapa.py` do K-001: sem problemas (36 cartões, 38 V, 13 atritos); `orcamento.py` segue rodando com o registro novo; `rodar_testes.py` e `procurar_dado_pessoal.py --git` antes do commit (resultado no log).
+
+**Consumo:** nenhum agente (0 tokens de agentes). A primeira conversa do K-005 mediu 6 pp (de 43% a 49%, pela leitura da abertura desta), como o fechamento do K-003; esta conversa abriu em 49% (semanal) e 36% (janela de 5 h), e o fim fica a informar.
+
+**Alcance do fechamento**
+- **Olhado:** a mensagem de Vicente; o relatório e os dados desta rodada; a habilidade registrar-decisao e o esquema de decisão; a D-039 (forma); o registro de valores provisórios e o esquema dele; os usos do registro no `orcamento.py`, no `localizar_trecho.py` e no `calcular_mu_lambda.py` (por `grep`); os casos do `executar-brief`; no brief, o cabeçalho, o quadro de ajustes, a seção 0, a seção 2, a 3b, a operação e a trilha; o quadro; o mapa (seções 1, 6, 7 e 8); o `AGENTS.md`.
+- **Fora:** a web; os agentes; a Fundação, que não muda na execução (D-035); o corpo dos scripts, que o K-123 muda; a conversa em que Vicente confirmou as essências, que não está nesta sessão (vale a mensagem dele, com as falas originais).
+
+**Próximo:** no desenvolvimento, o K-123 (as D-040 e D-041 na ferramenta) e depois o K-106 (bloco 4), quando Vicente autorizar; no planejamento, o K-002 (antes do K-113) e o K-006; o K-005 volta para a 3ª passada depois do K-110. O uso da conta que Vicente der ao abrir a próxima conversa fecha a conta desta.

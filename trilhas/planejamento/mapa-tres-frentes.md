@@ -22,11 +22,11 @@
 | **Memória** | `trilhas/planejamento/` (estado, quadro, este mapa, `proxima-versao.md`); `trilhas/insumos-planejamento.md`; `trilhas/decisoes/`; a Fundação | o brief de execuções e o checklist do piloto (`trilhas/2026-10-17_execucao-piloto.md`); o quadro | os arquivos de estado que as rotinas leem e gravam (Recortes, feed, `ambientes/rotinas.json`, a partir dos blocos 2, 5 e 10a); logs; relatório do dia; o quadro |
 | **Começo de cada sessão ou rotina** | `estado-planejamento.md`, quadro, insumos abertos, decisões do cartão e só as seções da Fundação que o cartão pede | retomada do brief (brief l. 67-73) e, pela D-036, o quadro (A-01) | `git pull` e o relatório calculado (l. 512; bloco 10a) |
 | **Configuração** | Opus 5.5, esforço máximo, ultracode, thinking (`estado-planejamento.md`, passo 1: a do planejamento da v0.2, D-027; a confirmar no K-002) | Opus 5.5 médio, sem ultracode; subagentes Sonnet 5.5 alto, um por vez (D-027); modelos menores só no bloco 12 | camada 1 sem IA; camada 2 com uma habilidade aprovada por vez, em Sonnet 5.5 alto até o bloco 12 (brief l. 123); a IA da operação é o K-002 |
-| **Teto** | 300 mil tokens de agentes por rodada, provisório (D-036; insumo 13) | 300 mil tokens por semana em agentes (D-023, "na operação da fase 1"; brief l. 37) | a mesma guarda da D-023 (l. 511): as rotinas medidas pelo uso da conta, com um teto em execuções por semana a fixar nos blocos 2 e 10b (brief l. 194); o teto das rotinas na nuvem (l. 823) e a IA da operação vão ao K-002 |
+| **Teto** | o que sobra dos 60 pp por semana do projeto (D-040), com 300 mil tokens de agentes por rodada, provisório até o K-002 (D-036; insumo 13) | até 50 pp por semana do limite da conta, dentro dos 60 do projeto (D-040; brief, seção 0); antes, 300 mil tokens por semana em agentes (D-023) | a mesma guarda (D-023, D-040; l. 511): as rotinas medidas pelo uso da conta, com um teto em execuções por semana a fixar nos blocos 2 e 10b (brief l. 194); o teto das rotinas na nuvem (l. 823), a IA da operação e o teto de manutenção do fim do K-113 (D-040) vão ao K-002 |
 | **O que é dela** | as decisões pendentes do §8 e as perguntas do §10 como insumos; as versões da Fundação (D-035); calibrações; IA da operação; gatilho da fase 2; revisão de essencialidade (D-025); o que a amostra acha na ferramenta (D-037) | os blocos 1 a 14 do brief (o 13 é registro, não cartão: D-035), o K-102 e o K-103; depois do piloto, os Passos 3, 6, 7, 8 e 9 e a fase 2 | rotinas das camadas 1 e 2; busca assistida e entrada por link de Vicente; cartões de conflito e de Falta a liberar e o cartão de lista das CLB candidatas (D-039); rodar a amostra que audita a ferramenta (o que ela acha vai ao P); campo de ação sob demanda; medidas (horas, consumo, minutos do Actions) |
-| **Cartões** | K-000 a K-010 | K-100 a K-122 | K-201 (Falta F-0003) |
+| **Cartões** | K-000 a K-010 | K-100 a K-123 | K-201 (Falta F-0003) |
 
-A D-023 fala em "operação da fase 1" antes de a D-036 dar esse nome a uma frente. O brief aplica o teto semanal aos agentes das sessões de trabalho e põe as rotinas na mesma guarda (brief l. 37 e 194). O mapa segue essa leitura, que vai ao K-002 para confirmar (A-13).
+A D-023 fala em "operação da fase 1" antes de a D-036 dar esse nome a uma frente. O brief aplica o teto semanal aos agentes das sessões de trabalho e põe as rotinas na mesma guarda (brief l. 37 e 194). O mapa segue essa leitura, que vai ao K-002 para confirmar (A-13). A D-040 (23/10) mede o teto em pontos percentuais do limite semanal da conta e soma as três frentes, o que supera a leitura A-13: o projeto até 60 pp por semana, o desenvolvimento até 50, o planejamento o resto.
 
 ## 2. Atritos das D-036 e D-037 com o texto em vigor
 
@@ -367,13 +367,13 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 31, User-Agent do projeto não definido | D | K-107 |
 | 32, triagem fixa: listas e normas a calibrar | D; P | K-109 |
 | 33, validar_acervo: papéis da W e frase da ficha | D | K-110 |
-| 34, μ e λ: quais Evidências contam | P; D | K-005 |
+| 34, μ e λ: quais Evidências contam | P; D | K-005 (regra pela D-041); K-123 (no script) |
 | 35, pre-commit em cada cópia | D; O | K-111 |
-| 36, limiar do trecho e linhagem nos dois lados | P; D | K-005 |
+| 36, limiar do trecho e linhagem nos dois lados | P; D | K-005 (regra pela D-041); K-123 (no script) |
 | 37, o planejamento medido em pp da conta (K-005) | P | K-002 |
 | 38, a leitura da conta depende de Vicente (K-005) | P; O | K-002 |
 
-## 7. Decisões D-001 a D-039
+## 7. Decisões D-001 a D-041
 
 | D | Essência curta | Frente | Estado e leitura de hoje | Vira |
 |---|---|---|---|---|
@@ -399,7 +399,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | D-020 | Jurídico de precaução | PDO; D (juridico); O (Faltas viram cartões) | vigente | regra; K-201 |
 | D-021 | GitHub público na conta Indalt; Google só se necessário; fechar no futuro | PDO; P (lugar e visibilidade, insumo 3, item 4) | vigente | regra; K-010 |
 | D-022 | critérios de prática cultural vêm da lei | PDO; D (CLB situada) | vigente | regra; K-104 |
-| D-023 | medir e parar; 300 mil por semana em agentes "na operação da fase 1" | PDO; o brief aplica o teto aos agentes das sessões de trabalho e põe as rotinas na mesma guarda (brief l. 37 e 194); P (calibrar) | vigente; o sentido de "operação" depois da D-036 vai ao K-002 (A-13) | regra; K-002, K-005; V-30 |
+| D-023 | medir e parar; 300 mil por semana em agentes "na operação da fase 1" | PDO; o brief aplica o teto aos agentes das sessões de trabalho e põe as rotinas na mesma guarda (brief l. 37 e 194); P (calibrar) | vigente na guarda; o número foi substituído pela D-040, em pontos da conta, e a leitura A-13 também | regra; K-002, K-005; V-30 |
 | D-024 | legado: só o verificável; nada se apaga | PDO; D (Passo 3) | vigente | regra; K-117 |
 | D-025 | regras "de início" e proporcionais; revisão de essencialidade | PDO; P | vigente | K-009 |
 | D-026 | fase 1 só Vicente e agentes; segunda leitura | PDO | vigente; a amostra se relê pela D-037 | A-04; V-28 |
@@ -416,15 +416,18 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | D-037 | base sem revisão de rotina; Vicente só por conflito ou Falta a liberar; amostra audita a ferramenta; sugestões na fase 2; script de menções | O (cartões de conflito e de Falta; rodar a amostra); D (K-102); P (o que a amostra acha; sugestões, K-008) | vigente; o "substitui" (a cota serve a conflitos, Faltas e auditoria da ferramenta) convive com a diretriz 1 (nada mais chama Vicente): A-04 | K-102, K-201, K-003; A-02 a A-10; V-06, V-07, V-09, V-14, V-24 |
 | D-038 | regra-mãe: a ferramenta decide os itens pela regra, e Vicente decide as regras; os padrões e as leituras do K-003 aprovados; estrutura fixada (estados do modelo, versão da regra em toda decisão automática, quem propõe não aprova com o papel trocável); números provisórios até o K-005; kit e F-0003 no K-114 | PDO; D (blocos 1, 2, 5, 7, 8 e 10); O (cartões, junção); P (calibração, K-005) | vigente, registrada em 22/10 no fechamento do K-003 | K-003, K-005, K-101, K-104, K-114; A-03 a A-06, A-09, A-10; V-37 |
 | D-039 | a CLB pelo termo enquanto ele não for ambíguo, com lugares, grupos e períodos como dados; nenhuma fonte como verdade única, nem a institucional; a valência mede lastro, trecho localizado e voz; no piloto, toda a cajuína que as fontes mostrarem; só CLB de outro termo vira candidata, num único cartão de lista | PDO; D (bloco 2, unidade da ficha e valências; blocos 7, 8 e K-102); O (cartão de lista) | vigente, registrada em 22/10; ajusta o A-09 b e a forma do cartão da D-037 (4) | K-104, K-109, K-110, K-102; A-09; V-20, V-38 |
+| D-040 | o ritmo em pontos percentuais da conta: projeto até 60 pp por semana (três frentes), desenvolvimento até 50, planejamento o resto, conta nunca acima de 90%; a conversa não para antes do teto; a guarda é não perder trabalho (commit e push a cada lote; janela de 5 h informada ao abrir; acima de 70%, só um lote); teto de manutenção do fim do K-113 no K-002; muda só o que está em vigor | PDO; D (seção 0 do brief; K-123); P (K-002, K-005) | vigente, registrada em 23/10 no fechamento do K-005 | regra; K-005, K-123, K-002 |
+| D-041 | no `localizar_trecho.py`, negação e sentido contrário batem exatamente, e a semelhança tolera só OCR e grafia; em μ e λ só conta Evidência com trecho localizado e leitura fiel, cada linhagem uma vez, e a linhagem com Evidência a favor e divergente vira tensão interna sinalizada; regras com versão e recálculo por script | D (K-123; blocos 7 e 8); P (K-005) | vigente, registrada em 23/10 no fechamento do K-005; no registro e nos scripts pelo K-123 | K-123, K-109, K-110; insumos 34 e 36 |
 
 ## 8. Ordem dos cartões e por quê
 
-- **Planejamento:** K-001 (esta rodada) → **K-003** → **K-002** → K-005 → K-006 → K-004 → K-007 → K-010 → K-008 → K-009.
+- **Planejamento:** K-001 (esta rodada) → **K-003** → **K-005** (1ª passada, 23/10, por escolha de Vicente) → **K-002** → K-006 → K-005 (3ª passada) → K-004 → K-007 → K-010 → K-008 → K-009.
   - O K-003 vem antes do bloco 1 porque o bloco 1 muda o `executar-brief` "com o ritual da l. 512" (brief l. 173), que a D-037 relê (A-02), e porque a retomada tem de começar pelo quadro (A-01). Ele acerta o brief, põe no roteiro uma nota de ajuste (rot. l. 17, 101, 120, 176 e 185) e diz o que muda em `.claude/` (curador, avaliador, extrair-evidencia, executar-brief), que o K-101 grava. Leva a Vicente os quatro pontos em aberto: A-04, A-05, A-09 (b) e A-10.
   - O K-002 vem antes do K-113: a operação com IA depende da escolha da IA da operação (D-036, diretriz 4). A configuração, a cadência e o teto do planejamento (A-12, A-13) também valem já para a rodada seguinte.
-  - O K-005 espera medidas: o insumo 4 pede o teto e a regra de folga "calibrados pela medida". Entra depois dos blocos 1 a 3 medidos, ou na primeira Parada (b).
+  - O K-005 espera medidas: o insumo 4 pede o teto e a regra de folga "calibrados pela medida". Entra depois dos blocos 1 a 3 medidos, ou na primeira Parada (b). A 1ª passada (23/10) deu as D-040 e D-041; a 2ª, que traria as regras dos insumos 34 e 36 antes do K-109, ficou dispensada pela D-041; a 3ª vem depois do K-110, quando os blocos 7 e 8 e as horas do bloco 13 trazem medida para os números da D-038 e do registro.
   - O K-004 vem depois do relatório do piloto (K-116): é a D-035 e o destino do insumo 1.
-- **Desenvolvimento:** **K-103** → K-101 → K-104 → K-105 → K-106 → K-107 → K-108 → K-109 → K-110 → **K-102** → K-111 → K-112 → K-113 → K-114 → K-115 → K-116; depois do piloto, K-117 a K-122, a detalhar pelo K-004.
+- **Desenvolvimento:** **K-103** → K-101 → K-104 → K-105 → **K-123** → K-106 → K-107 → K-108 → K-109 → K-110 → **K-102** → K-111 → K-112 → K-113 → K-114 → K-115 → K-116; depois do piloto, K-117 a K-122, a detalhar pelo K-004.
+  - O K-123 vem antes do K-106: o bloco 4 é o primeiro com agentes depois da D-040, e a conta de cada conversa passa a ser feita por script; e o K-109 (bloco 7) e o K-110 (bloco 8) usam o `localizar_trecho.py` e o `calcular_mu_lambda.py`, que têm de rodar com as regras da D-041.
   - O K-103 vem antes do K-101: a D-036 pede que toda sessão termine com insumos novos, num formato fixo, e habilidade nova só carrega em sessão nova (insumo 5). Pronta antes, o bloco 1 a liga no `executar-brief`.
   - O K-102 vem depois do K-110 e antes do K-111: o script compara o texto processado (bloco 7) com o registro de Termos (bloco 4, atestados no bloco 8) e liga a menção no grafo (bloco 8). Entra no harness com um caso que passa e um que reprova em `rodar_testes.py`, como os scripts do bloco 3 (brief l. 228-229); o brief só pede par real para habilidades (l. 311). A posição vem da D-037 ("durante o processamento normal de cada CLB"), que o brief não conhece, e de o harness estar completo quando Vicente aprovar o K-111.
   - Os blocos seguem a ordem do brief (D-035): a 10a depois do bloco 9; a 10b e o bloco 12 depois da aprovação do bloco 9; o bloco 13 é registro desde o K-108.
