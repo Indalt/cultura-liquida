@@ -3,8 +3,9 @@
 EXEMPLO DE ESQUEMA: dados sintéticos, na faixa de IDs 900000-999999 (valor numeracao_id),
 sem fonte real e sem pessoa real. Não contam como par real (brief, bloco 2).
 
-acervo-ok/ passa no validar_acervo.py e no calcular_mu_lambda.py --conferir. Cada erro-*/
-é uma cópia com uma só mudança, que deve reprovar. Rodar de novo regrava tudo:
+acervo-ok/ passa no validar_acervo.py e no calcular_mu_lambda.py --conferir. acervo-d041/ é o
+acervo-ok com os casos da D-041 (K-123, mu-lambda-0.2): a linhagem mista e as Evidências fora da
+conta. Cada erro-*/ é uma cópia com uma só mudança, que deve reprovar. Rodar de novo regrava tudo:
     python testes/nucleo/montar_acervos.py
 """
 from __future__ import annotations
@@ -31,9 +32,9 @@ def fonte(n, deriva=()):
 
 def trecho(n, fo, texto):
     return {"id": f"TR-90000{n}", "fonte": fo, "texto_exato": texto, "antes": "", "depois": "",
-            "localizador": "car. 0-60 do texto normalizado (normalizacao-0.1)", "hash": "0" * 64,
+            "localizador": "car. 0-60 do texto normalizado (normalizacao-0.2)", "hash": "0" * 64,
             "data_conferencia": "2026-10-22", "origem_texto": "fonte", "grau_semelhanca": 1.0,
-            "versao_normalizacao": "normalizacao-0.1", "estado": "localizado", "protecao": PROT,
+            "versao_normalizacao": "normalizacao-0.2", "estado": "localizado", "protecao": PROT,
             "origem_registro": ORIGEM, "nota": NOTA}
 
 
@@ -43,13 +44,14 @@ def evid(n, tr, pr, voz=None, sentido="a favor"):
             "pesquisa": "LU-900001"}, "estado": "conferida", "protecao": PROT, "origem_registro": ORIGEM, "nota": NOTA}
 
 
-def prop(n, evs, mu, lam, estado, detalhe=None, atributo="processo"):
+def prop(n, evs, mu, lam, estado, detalhe=None, atributo="processo", **extra):
     r = {"id": f"PR-90000{n}", "clb": "CL-900001", "atributo": atributo, "valor": f"valor sintético {n}",
          "periodo": {"referido": "2026"}, "evidencias": evs, "mu": mu, "lambda": lam, "estado": estado,
-         "sustenta_aviso_saude_politica": False, "versao_regra": "mu-lambda-0.1", "protecao": PROT,
+         "sustenta_aviso_saude_politica": False, "versao_regra": "mu-lambda-0.2", "protecao": PROT,
          "origem_registro": ORIGEM, "nota": NOTA}
     if detalhe:
         r["estado_detalhe"] = detalhe
+    r.update(extra)
     return r
 
 
@@ -89,7 +91,7 @@ def base() -> dict[str, dict]:
          "proposicoes": ["PR-900002"], "origem_registro": ORIGEM, "nota": NOTA},
         {"id": "AR-900001", "de": "EL-900001", "para": "EL-900002", "tipo": "antecede", "tensao": False,
          "proposicoes": ["PR-900001"], "z": "2026", "w": "F-900001", "mu": 1.0, "lambda": 0.0, "estado": "verdadeiro",
-         "versao_regra": "mu-lambda-0.1", "origem_registro": ORIGEM, "nota": NOTA},
+         "versao_regra": "mu-lambda-0.2", "origem_registro": ORIGEM, "nota": NOTA},
         {"id": "CL-900001", "termo": "TE-900001", "termos": ["TE-900001"],
          "situacoes": [{"lugares": ["LU-900001"], "periodo": "2026", "evidencias": ["EV-900001"]}],
          "criterios": {"identidade_ou_memoria": {"evidencias": ["EV-900001"]}, "reconhecimento_pelo_grupo": {"falta": "F-900001"},
@@ -168,6 +170,50 @@ def main():
     gravar("erro-deriva-ciclo", r)
 
     gravar("erro-colisao", ok, extra={"acervo/fontes/FO-900001-copia.json": ok["FO-900001"]})
+
+    # D-041 (K-123, mu-lambda-0.2): os casos A-009 e A-010 do auditor no K-105
+    d = copy.deepcopy(ok)
+    t = trecho(5, "FO-900002", "o suco nunca era clarificado")
+    t6 = trecho(6, "FO-900003", "o caju era cozido em tacho de cobre")
+    for k in ("hash", "data_conferencia", "grau_semelhanca", "versao_normalizacao"):
+        t6.pop(k)
+    t6.update(estado="não verificável por máquina", falta="F-900002")
+    e9 = evid(9, "TR-900003", "PR-900004")
+    e9["estado"] = "leitura divergente"
+    novos = [
+        t, t6,
+        # PR-900003 (A-010): FO-900001 e FO-900002 são uma linhagem, com Evidência a favor e divergente:
+        # tensão interna, fora de μ e λ → μ = 0, λ = 0, Dct = −1 → paracompleto
+        evid(5, "TR-900001", "PR-900003"), evid(6, "TR-900005", "PR-900003", sentido="divergente"),
+        prop(3, ["EV-900005", "EV-900006"], 0.0, 0.0, "paracompleto", tensao_interna=["FO-900001"]),
+        # PR-900004 (A-009): o trecho não verificável e a leitura divergente ficam fora da conta;
+        # só a EV-900007 conta → μ = 0,5
+        evid(8, "TR-900006", "PR-900004"), e9, evid(7, "TR-900001", "PR-900004"),
+        prop(4, ["EV-900007", "EV-900008", "EV-900009"], 0.5, 0.0, "intermediário",
+             "quase-verdadeiro tendendo ao paracompleto",
+             fora_da_conta={"EV-900008": "trecho não verificável por máquina", "EV-900009": "leitura divergente"}),
+        {"id": "F-900002", "tipo": "trecho_nao_verificavel", "o_que_falta": "trecho não verificável por máquina",
+         "por_que": "semelhança abaixo do limiar (exemplo)", "onde_aparece": ["TR-900006"],
+         "criada_por": "scripts/localizar_trecho.py (normalizacao-0.2)", "data": "2026-10-23", "nota": NOTA},
+    ]
+    d.update({(x.get("id") or x["codigo"]): x for x in novos})
+    gravar("acervo-d041", d)
+
+    r = copy.deepcopy(d)
+    r["PR-900003"].update(mu=0.5, **{"lambda": 0.5}, estado="intermediário",
+                          estado_detalhe="quase-verdadeiro tendendo ao inconsistente")
+    r["PR-900003"].pop("tensao_interna")
+    gravar("erro-linhagem-mista-dois-lados", r)  # como a regra mu-lambda-0.1 contava (A-010)
+
+    r = copy.deepcopy(d)
+    r["PR-900004"].update(mu=1.0, estado="verdadeiro")
+    r["PR-900004"].pop("estado_detalhe")
+    r["PR-900004"].pop("fora_da_conta")
+    gravar("erro-fora-da-conta-contado", r)  # o trecho não verificável e a leitura divergente contados (A-009)
+
+    r = copy.deepcopy(ok)
+    r["PR-900001"]["versao_regra"] = "mu-lambda-0.1"
+    gravar("erro-regra-antiga", r)
     print("acervos de teste montados em", AQUI)
 
 

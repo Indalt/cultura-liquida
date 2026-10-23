@@ -7,7 +7,10 @@ PDF (pypdf) ou do HTML, normaliza, calcula o hash SHA-256 do texto lido e acha o
 exato ou mede a semelhança (difflib.SequenceMatcher.ratio com a melhor janela). Devolve o
 trecho, um pedaço antes e outro depois (seletor de citação da W3C), o localizador e o grau.
 Abaixo do limiar, o estado é "não verificável por máquina" e sai a Falta "trecho não
-verificável por máquina", dita e nunca completada. PDF sem texto legível vira essa Falta;
+verificável por máquina", dita e nunca completada. Pela D-041 (normalizacao-0.2), a semelhança
+tolera só OCR e grafia: se uma palavra de negação ou de sentido contrário (palavras_exatas do
+registro) não bate entre o trecho e a janela achada, o trecho nunca passa por semelhança e sai
+a mesma Falta, com o motivo. PDF sem texto legível vira essa Falta;
 a transcrição por IA entra marcada (--transcricao-ia, com --link-imagem).
 Nunca grava o texto integral no repositório (l. 100): a pasta temporária precisa ficar fora dele.
 
@@ -45,6 +48,7 @@ from _comum import RAIZ, carregar_esquema, carregar_valores, validar_objeto  # n
 REGRA = carregar_valores()["valores"]["normalizacao_e_limiar"]["valor"]
 VERSAO = REGRA["versao_regra"]
 LIMIAR = REGRA["limiar_semelhanca"]
+EXATAS = {p for k in ("negacao", "sentido_contrario") for p in REGRA["palavras_exatas"][k]}
 CONTEXTO = 60  # caracteres de "antes" e "depois" no seletor
 MIN_TEXTO_LEGIVEL = 20  # menos que isso de texto extraído = PDF sem texto legível
 USER_AGENT = "cultura-liquida/0.1 (+https://github.com/Indalt/cultura-liquida)"
@@ -163,6 +167,26 @@ def melhor_janela(texto: str, alvo: str) -> tuple[float, int, int]:
     return melhor
 
 
+def _sem_acento(t: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", t.casefold()) if unicodedata.category(c) != "Mn")
+
+
+_EXATAS_SA = {_sem_acento(p) for p in EXATAS}
+
+
+def palavras_exatas_diferentes(alvo: str, janela: str) -> list[str]:
+    """As palavras de negação e de sentido contrário cuja contagem difere entre o trecho e a
+    janela (sem maiúsculas e sem acentos: a perda de acento é OCR ou grafia; D-041)."""
+    def conta(t: str) -> dict[str, int]:
+        c: dict[str, int] = {}
+        for w in re.findall(r"[^\W\d_]+", _sem_acento(t)):
+            if w in _EXATAS_SA:
+                c[w] = c.get(w, 0) + 1
+        return c
+    a, j = conta(alvo), conta(janela)
+    return sorted(w for w in set(a) | set(j) if a.get(w, 0) != j.get(w, 0))
+
+
 def localizar(texto: str, inicios: list[int], trecho: str) -> dict:
     alvo = normalizar(trecho)
     if not alvo:
@@ -175,7 +199,10 @@ def localizar(texto: str, inicios: list[int], trecho: str) -> dict:
         loc = f"p. {pg} do PDF; " + loc
     r = {"grau_semelhanca": grau, "localizador": loc, "hash": sha256(texto),
          "versao_normalizacao": VERSAO, "data_conferencia": date.today().isoformat()}
-    if grau >= LIMIAR:
+    difere = palavras_exatas_diferentes(alvo, texto[ini:fim]) if grau < 1.0 else []
+    if difere:
+        r["palavras_exatas_diferentes"] = difere
+    if grau >= LIMIAR and not difere:
         r.update(estado="localizado", texto_exato=texto[ini:fim],
                  antes=texto[max(0, ini - CONTEXTO):ini], depois=texto[fim:fim + CONTEXTO])
     else:
@@ -204,7 +231,12 @@ def cmd_localizar(a) -> int:
         motivo = f"{tipo.upper()} sem texto legível por máquina; caminho: transcrição por IA marcada, com o link da imagem"
     else:
         r = localizar(texto, inicios, a.trecho)
-        motivo = f"semelhança {r['grau_semelhanca']} abaixo do limiar {LIMIAR} ({VERSAO})"
+        difere = r.pop("palavras_exatas_diferentes", [])
+        if difere:
+            motivo = (f"palavra de negação ou de sentido contrário diferente da fonte ({', '.join(difere)}): "
+                      f"não passa por semelhança, grau {r['grau_semelhanca']} ({VERSAO}; D-041)")
+        else:
+            motivo = f"semelhança {r['grau_semelhanca']} abaixo do limiar {LIMIAR} ({VERSAO})"
     r["origem_texto"] = origem
     if a.link_imagem:
         r["link_imagem"] = a.link_imagem
@@ -246,7 +278,10 @@ def cmd_conferir(a) -> int:
         problemas.append("hash do texto lido diferente: não é a mesma captura")
     novo = localizar(texto, inicios, reg.get("texto_exato", ""))
     if reg.get("estado") == "localizado":
-        if novo["estado"] != "localizado":
+        if novo.get("palavras_exatas_diferentes"):
+            problemas.append("marcado como localizado, mas palavra de negação ou de sentido contrário difere da fonte: "
+                             + ", ".join(novo["palavras_exatas_diferentes"]) + " (D-041)")
+        elif novo["estado"] != "localizado":
             problemas.append(f"marcado como localizado, mas o grau relido é {novo['grau_semelhanca']} (< {LIMIAR})")
         elif reg.get("grau_semelhanca") == 1.0 and novo["grau_semelhanca"] < 1.0:
             problemas.append(f"marcado como exato (1.0), mas o texto não está literal na fonte (grau {novo['grau_semelhanca']})")

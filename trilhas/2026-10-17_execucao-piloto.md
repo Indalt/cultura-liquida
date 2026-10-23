@@ -2,7 +2,7 @@
 
 **Brief:** `trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md` (aprovado), com o roteiro `trilhas/2026-10-17_caminhos/caminhos.md`. Vale a Fundação, menos nas linhas da seção 6A do brief até a v0.2.1 (D-034).
 **Histórico anterior:** `trilhas/2026-10-16_execucao-v0.2.md` (Fundação v0.2 e rodada de planejamento de 17/10).
-**Orçamento (D-023; brief, seção 0):** 300 mil tokens por semana em agentes; semana de segunda a domingo, pela data do log. Conta antes de cada agente com `scripts/orcamento.py --teto 300000`.
+**Orçamento (D-040; brief, seção 0), desde o K-123:** em pontos percentuais (pp) do limite semanal da conta, que Vicente lê: o projeto até 60 pp por semana (três frentes), o desenvolvimento até 50, o planejamento o resto, a conta nunca acima de 90%. A semana é a da conta (renova às quartas, 23h). Antes de cada agente, `scripts/orcamento.py --a0 <uso ao abrir> --janela <5 h> --agente <a> --habilidade <h> --medidos-conversa <tokens já rodados na conversa>`, que lê a tabela "Semana da conta" no fim deste arquivo e a estimativa nos logs. Acima de 70% na janela de 5 h, só um lote. Commit e push a cada lote. Até o K-105, valia a regra anterior (D-023): 300 mil tokens de agentes por semana, de segunda a domingo, com `orcamento.py --teto 300000`; as seções antigas ficam como estavam.
 
 ## Conversa 1 — bloco 0, aberta em 17/10/2026 (sábado)
 - **Autorização (D-028), fala original de Vicente:** "aprovo o roteiro e o brief de execuções; executar o bloco 0".
@@ -127,6 +127,31 @@
 - **Não conferido:** a Portaria SVS/MS 344/1998; imagem e voz de adulto (CF art. 5º, X; Código Civil art. 20) e o ECA art. 2º; os scripts que leem rede (Wayback e URL) não rodaram contra fonte real, só contra arquivo local; as correções dos achados do K-105 não passaram por nova leitura independente.
 - **Consumo:** 227.477 tokens de agentes (juridico e auditor).
 
+## Conversa do cartão K-123 (as D-040 e D-041 na ferramenta) — 23/10/2026 (sexta)
+
+- **Autorização de Vicente, fala original:** "Autorizo o cartão K-123 (as D-040 e D-041 na ferramenta). Retome pelo quadro e mova o cartão. Registre ao abrir, fechando a conta do fechamento do K-005: uso 51% semanal e 48% na janela de 5 h; a semana da conta renova em 28/10/2026, às 23h; respostas às perguntas do fechamento do K-005: (1) o limite de 70% é da janela de 5 h; (2) ok, como aplicado. Orçamento pela D-040. Opus 5.5, esforço médio. Uso atual: 51% (semanal) e 48% (5 h)."
+- **Uso da conta no início:** 51% (semanal) e 48% (janela de 5 h, abaixo de 70%: sem limite de lotes). A leitura fecha o fechamento do K-005 em 2 pp (49% → 51%). Renovação da semana da conta: 28/10/2026, 23h (dita por Vicente; a semana em curso vai de 21/10 a 28/10).
+- **Respostas às duas leituras do fechamento do K-005:** (1) o "acima de 70%" da D-040 é o da janela de 5 h, confirmado; (2) "sem pesar dos dois lados" da D-041, "ok, como aplicado": o K-123 aplica a leitura literal, em que a linhagem com Evidência a favor e divergente **não pesa em nenhum lado** (nem em μ nem em λ) e fica sinalizada em `tensao_interna`; escolher um lado pediria um critério que a regra não dá, e não julgamos (D-019). A regra tem versão (mu-lambda-0.2): se Vicente quiser outra leitura, muda-se a versão e recalcula-se por script.
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (2f684c2), árvore limpa; `rodar_testes.py`: OK 120 · FALHA 0 · PENDENTE 5; cartão movido para Fazendo. Sem agentes (o cartão é de scripts, como o K-103).
+
+### K-123 — As D-040 e D-041 na ferramenta
+
+| Item | Estado | Consumo (tokens) | Modelo / esforço | Observação |
+|---|---|---|---|---|
+| Registro de valores provisórios 0.3.0 | feito | — | sessão principal | `normalizacao-0.2` (palavras_exatas: negação e sentido contrário, listas provisórias), `mu-lambda-0.2` (conta e linhagem mista), `orcamento` sem a chave `teto_semanal`; `validar.py valores-provisorios`: PASSA |
+| `orcamento.py` em pp (D-040) | feito | — | sessão principal | H = o menor entre (50 − desenvolvimento), (60 − projeto) e (90 − A0); 2 pp + 1,6 pp por 100 mil tokens, lidos do registro; o desenvolvimento já usado pela tabela "Semana da conta" deste checklist; a estimativa pela última medida do agente com a habilidade nos logs (96.520 sem medida); sem a folga de 2×; aviso de um lote só acima de 70% da janela de 5 h; `--frente planejamento` sem o termo do desenvolvimento |
+| Checklist: cabeçalho e tabela "Semana da conta" | feito | — | sessão principal | linhas da semana 21/10–28/10 tiradas da tabela 1 do K-005, mais o fechamento do K-005 (49 → 51, 2 pp) e esta conversa |
+| `executar-brief` 0.1.2 e `curador.md` 0.1.2 | feito | — | sessão principal | a conta em pp, a linha da conversa no checklist, decisões até a D-041; os três casos da conta antiga trocados por seis da conta nova (`testes/orcamento/`) |
+| `localizar_trecho.py` (D-041) | feito | — | sessão principal | palavras de negação e de sentido contrário contadas sem maiúsculas e sem acento entre o trecho e a janela; se diferem, "não verificável por máquina" com a Falta e o motivo, em qualquer grau; `conferir` reprova o Trecho gravado assim. O "nunca" inserido (0,9545) reprova; o "nao" sem acento passa |
+| `calcular_mu_lambda.py` (D-041) | feito | — | sessão principal | só contam Evidências com Trecho localizado e sem "leitura divergente"; as outras em `fora_da_conta`, com o motivo; a linhagem mista em `tensao_interna`, fora de μ e λ; `--conferir` cobra a versão da regra gravada. Esquemas da Proposição e da Aresta 0.2.0 com os dois campos |
+| Casos de teste | feito | — | sessão principal | 9 casos novos no núcleo (4 do trecho, 4 de μ e λ, 1 do acervo) e 6 da conta; acervos `acervo-d041`, `erro-linhagem-mista-dois-lados`, `erro-fora-da-conta-contado`, `erro-regra-antiga` |
+| Brief, seção 0 e quadro de ajustes | feito | — | sessão principal | a conta pelo `orcamento.py` desde o K-123; a D-041 aplicada |
+
+- **Pronto quando:** a conta de cada conversa feita por script (`orcamento.py` com a tabela deste checklist: na abertura, H = 9 pp, o teto do projeto, 60 − 51); os blocos 7 e 8 com as regras da D-041 (normalizacao-0.2 e mu-lambda-0.2); `rodar_testes.py`: OK 132 · FALHA 0 · PENDENTE 5.
+- **Correção de passagem, sem mudar a decisão:** a D-041 troca os números dos achados do auditor no K-105. Em `trilhas/2026-10-22_K-105/achados-auditor.json`, o "nunca" inserido é o **A-015**, e a linhagem nos dois lados é o **A-010**; o trecho não localizado que contava é o A-009. Os casos novos citam os números do arquivo.
+- **Não conferido:** as listas de negação e de sentido contrário (provisórias, para o português das fontes do piloto) não passaram por trecho real; nenhuma segunda leitura independente dos scripts (cartão sem agentes).
+- **Consumo:** nenhum agente (0 tokens de agentes). O uso da conta no fim fica a informar.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -144,3 +169,20 @@
 | Semana | Revisões (h) | Juízo de itens (h) | Busca assistida (h) | Uso da conta antes / depois | Minutos do Actions |
 |---|---|---|---|---|---|
 | 12–18/10 | não informado | — | — | não informado | — |
+
+## Semana da conta (D-040)
+
+Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal da conta ao abrir e ao fechar, lidos por Vicente; sem A1, a leitura da abertura seguinte fecha a conversa (pode misturar uso de fora do projeto). O `orcamento.py` soma a coluna pp da frente "desenvolvimento" na semana da última linha e toma A0 como o uso do projeto, menos as linhas "fora do projeto". As linhas até o K-005 vêm da tabela 1 da rodada K-005 (`trilhas/planejamento/rodadas/2026-10-23_K-005/`).
+
+| Semana da conta | Frente | Cartão | A0 (%) | A1 (%) | pp | Tokens de agentes | Chamadas | Observação |
+|---|---|---|---|---|---|---|---|---|
+| 21/10–28/10/2026 | não atribuído | antes do K-001 | 0 | 4 | 4 | — | — | contado como do projeto, como no K-005 |
+| 21/10–28/10/2026 | planejamento | K-001 | 4 | 12 | 8 | 299.042 | — | Opus 5.5 máximo, ultracode |
+| 21/10–28/10/2026 | planejamento | K-003 | 12 | 23 | 11 | 214.004 | 30 | Opus 5.5 máximo, ultracode |
+| 21/10–28/10/2026 | planejamento | K-003 (fechamento) | 23 | 29 | 6 | 0 | — | Opus 5.5 máximo |
+| 21/10–28/10/2026 | desenvolvimento | K-103, K-101 | 29 | 34 | 5 | 73.464 | 18 | A0 do K-101 em branco: as duas juntas |
+| 21/10–28/10/2026 | desenvolvimento | K-104 | 34 | 37 | 3 | 143.833 | 20 | |
+| 21/10–28/10/2026 | desenvolvimento | K-105 | 37 | 43 | 6 | 227.477 | 31 | |
+| 21/10–28/10/2026 | planejamento | K-005 | 43 | 49 | 6 | 0 | — | Opus 5.5 máximo, sem agentes |
+| 21/10–28/10/2026 | planejamento | K-005 (fechamento) | 49 | 51 | 2 | 0 | — | A1 pela abertura do K-123; janela de 5 h: 36% ao abrir |
+| 21/10–28/10/2026 | desenvolvimento | K-123 | 51 | a informar | a informar | 0 | — | janela de 5 h: 48% ao abrir; renovação em 28/10/2026, 23h |

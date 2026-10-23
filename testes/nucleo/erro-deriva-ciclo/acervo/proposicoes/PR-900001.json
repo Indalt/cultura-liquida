@@ -15,7 +15,7 @@
   "lambda": 0.0,
   "estado": "verdadeiro",
   "sustenta_aviso_saude_politica": false,
-  "versao_regra": "mu-lambda-0.1",
+  "versao_regra": "mu-lambda-0.2",
   "protecao": {
     "licenca": "não conferido",
     "consentimento": "não se aplica",

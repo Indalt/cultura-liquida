@@ -1,0 +1,29 @@
+{
+  "id": "TR-900004",
+  "fonte": "FO-900003",
+  "texto_exato": "a gente sabe o ponto pela cor",
+  "antes": "",
+  "depois": "",
+  "localizador": "car. 0-60 do texto normalizado (normalizacao-0.2)",
+  "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "data_conferencia": "2026-10-22",
+  "origem_texto": "fonte",
+  "grau_semelhanca": 1.0,
+  "versao_normalizacao": "normalizacao-0.2",
+  "estado": "localizado",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

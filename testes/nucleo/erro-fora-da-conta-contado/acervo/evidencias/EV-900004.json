@@ -1,0 +1,31 @@
+{
+  "id": "EV-900004",
+  "trecho": "TR-900004",
+  "proposicao": "PR-900002",
+  "sentido": "a favor",
+  "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "pessoa": "P-900001"
+  },
+  "lugares": {
+    "pratica": "LU-900001",
+    "publicacao": "LU-900001",
+    "pesquisa": "LU-900001"
+  },
+  "estado": "conferida",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

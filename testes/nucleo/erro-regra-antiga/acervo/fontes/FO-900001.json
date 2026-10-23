@@ -1,0 +1,32 @@
+{
+  "id": "FO-900001",
+  "referencia": {
+    "titulo": "Fonte sintética 1",
+    "instituicao": "exemplo de esquema",
+    "ano": 2026,
+    "tipo": "exemplo",
+    "link_permanente": "https://example.org/fonte-1"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2026",
+  "url": "https://example.org/fonte-1",
+  "wayback": "não feita",
+  "data_acesso": "2026-10-22",
+  "perspectiva": "pesquisador",
+  "deriva_de": [],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

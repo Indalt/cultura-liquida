@@ -1,8 +1,8 @@
 {
   "$schema": "valores-provisorios.schema.json",
-  "versao": "0.2.0",
+  "versao": "0.3.0",
   "data": "2026-10-23",
-  "cartao": "K-104 (bloco 2 do brief de execuções); 0.2.0: K-005, D-040 (orcamento e parada_conversa_principal)",
+  "cartao": "K-104 (bloco 2 do brief de execuções); 0.2.0: K-005, D-040 (orcamento e parada_conversa_principal); 0.3.0: K-123, D-041 (normalizacao-0.2 e mu-lambda-0.2) e D-040 no orcamento.py (teto_semanal fora)",
   "descricao": "Registro único dos valores provisórios ([PROPOSTA]) que a execução usa (brief, bloco 2; Fundação l. 696). Esquemas e scripts leem daqui, sem cópia: os esquemas por $ref (resolvido por scripts/_comum.py), os scripts por carregar_valores(). Pela D-038, a 'estrutura' é fixada e não muda com a calibração; os 'valores' são provisórios e cada um diz a linha da Fundação que o permite, a decisão que o cobre, quem o usa e quando se calibra. Mudar um valor é versão nova deste arquivo e, quando o valor é uma regra, versão nova da regra (o campo versao_regra), que toda decisão automática grava na Execução.",
   "estrutura": {
     "base": "D-038 (estrutura fixada); Fundação §6, l. 620-641",
@@ -199,7 +199,7 @@
     },
     "normalizacao_e_limiar": {
       "valor": {
-        "versao_regra": "normalizacao-0.1",
+        "versao_regra": "normalizacao-0.2",
         "normalizacao": [
           "Unicode NFC",
           "hífen de fim de linha com quebra removido (pala-\\nvra → palavra)",
@@ -211,37 +211,75 @@
         "hash": "SHA-256 do texto normalizado, em hexadecimal minúsculo",
         "limiar_semelhanca": 0.9,
         "medida": "razão de semelhança de sequência (difflib.SequenceMatcher.ratio) entre o trecho e a melhor janela do texto lido, ambos normalizados",
-        "regra": "1,0 = localizado exato; de 0,9 a 1,0 = localizado por semelhança; abaixo de 0,9 = Falta 'trecho não verificável por máquina', dita e nunca completada (leitura A-06, D-038)"
+        "regra": "1,0 = localizado exato; de 0,9 a 1,0 = localizado por semelhança, só se as palavras_exatas batem; abaixo de 0,9, ou com uma palavra_exata diferente, = Falta 'trecho não verificável por máquina', dita e nunca completada (leitura A-06, D-038; D-041). A semelhança tolera só OCR e grafia.",
+        "palavras_exatas": {
+          "regra": "Palavras de negação e de sentido contrário têm de bater exatamente entre o trecho citado e a janela achada na fonte: a mesma contagem de cada uma, comparadas sem maiúsculas e sem acentos (a perda de acento é variação de OCR e de grafia, não de sentido). Se uma delas difere, o trecho nunca passa por semelhança: fica 'não verificável por máquina', com a Falta e o motivo dito, qualquer que seja o grau (D-041). No trecho exato (grau 1,0), a regra já está cumprida.",
+          "negacao": [
+            "não",
+            "nao",
+            "nunca",
+            "jamais",
+            "nem",
+            "nenhum",
+            "nenhuma",
+            "nenhuns",
+            "nenhumas",
+            "nada",
+            "ninguém",
+            "tampouco",
+            "sem"
+          ],
+          "sentido_contrario": [
+            "contra",
+            "exceto",
+            "salvo",
+            "senão",
+            "menos",
+            "mas",
+            "porém",
+            "contudo",
+            "todavia",
+            "entretanto",
+            "embora",
+            "raramente",
+            "ex"
+          ],
+          "nota": "listas provisórias, para o português das fontes do piloto (D-017: exemplos não limitam; a lista é a regra que o script aplica e se amplia por versão nova). 'ex' cobre 'ex-produtor'. Calibração: a 3ª passada do K-005, com trechos reais dos blocos 7 e 8."
+        }
       },
       "linha_fundacao": "l. 130, 598",
-      "base": "D-034; D-038 (leitura A-06)",
+      "base": "D-034; D-038 (leitura A-06); D-041",
       "quem_usa": [
         "scripts/localizar_trecho.py (bloco 3)",
         "esquemas/trecho.schema.json"
       ],
-      "calibracao": "bloco 3, com trechos reais (casos que passam e que reprovam); K-005"
+      "calibracao": "bloco 3, com trechos reais (casos que passam e que reprovam); a 3ª passada do K-005 (limiar e listas)",
+      "vigente": "normalizacao-0.2 (23/10/2026, K-123): D-041, negação e sentido contrário batem exatamente. normalizacao-0.1 (22/10, K-105): a normalização e o limiar, sem as palavras exatas"
     },
     "mu_lambda": {
       "valor": {
-        "versao_regra": "mu-lambda-0.1",
+        "versao_regra": "mu-lambda-0.2",
         "linhagem": "componente conexo do grafo de deriva_de entre as Fontes das Evidências; dez textos que copiam o mesmo autor contam como um (l. 116)",
         "saturacao": 2,
-        "formula": "μ = min(1, linhagens a favor / 2); λ = min(1, linhagens divergentes / 2); Dc = μ − λ; Dct = μ + λ − 1",
+        "formula": "μ = min(1, linhagens só a favor / 2); λ = min(1, linhagens só divergentes / 2); Dc = μ − λ; Dct = μ + λ − 1",
         "limites": {
           "certeza": 0.5,
           "contradicao": 0.5
         },
         "estados": "Dc ≥ 0,5 e |Dct| < 0,5 → verdadeiro; Dc ≤ −0,5 e |Dct| < 0,5 → falso; Dct ≥ 0,5 e |Dc| < 0,5 → inconsistente (a tensão, que abre o cartão de conflito; D-037); Dct ≤ −0,5 e |Dc| < 0,5 → paracompleto (Falta); o resto → intermediário, com o nome do quadrante como na Para-analisador de 12 estados (Anexo C, F-12, secundária)",
-        "sem_peso_por_tipo": "nenhum peso por tipo de fonte (l. 116; P27; D-039)"
+        "sem_peso_por_tipo": "nenhum peso por tipo de fonte (l. 116; P27; D-039)",
+        "conta": "Só entra na conta a Evidência ativa (não retirada) com o Trecho 'localizado' (eixo 2) e leitura fiel (eixo 3 diferente de 'leitura divergente'). A de leitura divergente ou de Trecho não localizado fica visível (campo fora_da_conta, com o motivo na saída do script), como Falta ou pendência, fora da conta (D-041).",
+        "linhagem_mista": "Cada linhagem conta uma vez. A linhagem que tem, entre as Evidências que contam, uma a favor e uma divergente vira tensão interna sinalizada (campo tensao_interna, com a Fonte que representa a linhagem) e não pesa em μ nem em λ: sem pesar dos dois lados (D-041; leitura do curador no K-123, que Vicente aceitou 'como aplicado' na abertura do K-123, 23/10/2026)."
       },
       "linha_fundacao": "l. 116-117; Anexo C, F-12 (secundária)",
-      "base": "D-034",
+      "base": "D-034; D-041",
       "quem_usa": [
         "scripts/calcular_mu_lambda.py (bloco 3)",
         "esquemas/proposicao.schema.json",
         "esquemas/aresta.schema.json"
       ],
-      "calibracao": "Passo 7 (grafo 4D), com a fonte primária de Eτ localizada (F-12 'não conferido')"
+      "calibracao": "Passo 7 (grafo 4D), com a fonte primária de Eτ localizada (F-12 'não conferido')",
+      "vigente": "mu-lambda-0.2 (23/10/2026, K-123): D-041, só Evidência localizada e de leitura fiel conta; linhagem mista sinalizada, fora de μ e λ. mu-lambda-0.1 (22/10, K-105): toda Evidência ativa contava, e a linhagem mista contava nos dois lados (achados do auditor no K-105)"
     },
     "prefixos_id": {
       "valor": {
@@ -481,9 +519,7 @@
         "regra": "Ao abrir, Vicente informa o uso semanal (A0) e o da janela de 5 h. Folga da conversa de desenvolvimento: H = o menor entre (teto_desenvolvimento_pp − o que o desenvolvimento já usou na semana), (teto_projeto_pp − o que o projeto já usou na semana) e (linha_conta_pct − A0). Antes de cada agente, abre-se o lote se conversa_principal_pp + pp_por_100mil_tokens × (tokens dos agentes já rodados na conversa ÷ 100 mil) + pp_por_100mil_tokens × (estimativa do lote ÷ 100 mil) ≤ H, sem folga nem margem: a conversa não para antes do teto. Se não couber, é a Parada (b), com o estado salvo. Commit e push a cada lote; com a janela de 5 h acima de janela_5h_lote_unico_pct, só um lote, e a conversa fecha com o estado salvo.",
         "estimativa": "a última medida do mesmo agente com a mesma habilidade, tirada dos logs; sem medida, estimativa_sem_medida",
         "estimativa_sem_medida": 96520,
-        "manutencao": "no fim do K-113 (início da operação autônoma), o teto volta a um valor de manutenção, que o K-002 fixa",
-        "teto_semanal": 300000,
-        "nota_teto_semanal": "os 300 mil tokens de agentes por semana da D-023 não param mais a semana (D-040); a chave fica só porque o orcamento.py a lê até o K-123"
+        "manutencao": "no fim do K-113 (início da operação autônoma), o teto volta a um valor de manutenção, que o K-002 fixa"
       },
       "vigente": "D-040 (23/10/2026): os tetos em pp, a linha da conta, a conta da conversa e a guarda da janela de 5 h. conversa_principal_pp, pp_por_100mil_tokens e estimativa_sem_medida vêm da medida do K-005 (trilhas/planejamento/rodadas/2026-10-23_K-005/) e se refazem com as medidas novas",
       "linha_fundacao": "l. 511 e 904 (D-023)",

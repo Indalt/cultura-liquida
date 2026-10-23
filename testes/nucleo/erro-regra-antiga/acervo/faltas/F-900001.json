@@ -1,0 +1,12 @@
+{
+  "id": "F-900001",
+  "tipo": "compreensao_local_nao_captada",
+  "o_que_falta": "a W do elemento 2",
+  "por_que": "nenhuma voz de quem pratica no exemplo",
+  "onde_aparece": [
+    "EL-900002"
+  ],
+  "criada_por": "curador (exemplo de esquema, K-105)",
+  "data": "2026-10-22",
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

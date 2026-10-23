@@ -3,35 +3,117 @@
  "rodada": "A",
  "casos": [
   {
-   "nome": "conta real da janela 1 antes do C2 (teto de 600 mil da v0.2): pode",
+   "nome": "conta em pp do exemplo do K-105 (D-040): pode",
    "espera": "passa",
    "comando": [
     "scripts/orcamento.py",
-    "--teto",
-    "600000",
-    "--medidos",
-    "81852",
+    "--a0",
+    "37",
+    "--dev-usado",
+    "8",
+    "--projeto-usado",
+    "37",
     "--estimativa",
-    "60000"
+    "96520"
    ],
-   "saida_contem": "folga = 600.000 - 81.852 = 518.148",
-   "criterio": "a mesma conta registrada no checklist em 16/10"
+   "saida_contem": "H = o menor entre teto do desenvolvimento 42,00, teto do projeto 23,00, linha da conta 53,00 = 23,00 pp",
+   "criterio": "D-040: H = o menor entre 50 − 8, 60 − 37 e 90 − 37; 2 + 1,6 × 0,9652 = 3,54 ≤ 23"
   },
   {
-   "nome": "folga menor que 2x o maior lote: parar",
+   "nome": "lote que não cabe no teto do projeto: Parada (b)",
    "espera": "reprova",
    "comando": [
     "scripts/orcamento.py",
-    "--teto",
-    "600000",
-    "--medidos",
-    "300000",
-    "200000",
+    "--a0",
+    "58",
+    "--dev-usado",
+    "20",
+    "--projeto-usado",
+    "58",
     "--estimativa",
-    "60000"
+    "159897"
    ],
-   "saida_contem": "regra 2 falhou",
-   "criterio": "a regra da folga manda parar com o estado salvo"
+   "saida_contem": "PARAR (Parada b)",
+   "criterio": "H = 60 − 58 = 2; 2 + 2,56 > 2: o lote não cabe, sem folga de 2× nem margem"
+  },
+  {
+   "nome": "linha da conta de 90% manda parar, e a janela de 5 h acima de 70% pede um lote só",
+   "espera": "reprova",
+   "comando": [
+    "scripts/orcamento.py",
+    "--a0",
+    "89",
+    "--janela",
+    "75",
+    "--dev-usado",
+    "0",
+    "--projeto-usado",
+    "10",
+    "--estimativa",
+    "31342"
+   ],
+   "saida_contem": "só um lote",
+   "criterio": "D-040: a conta nunca acima de 90% (H = 1); acima de 70% da janela de 5 h, só um lote"
+  },
+  {
+   "nome": "tabela da semana da conta lida do checklist, com os tokens já rodados na conversa",
+   "espera": "passa",
+   "comando": [
+    "scripts/orcamento.py",
+    "--a0",
+    "40",
+    "--checklist",
+    "testes/orcamento/checklist-exemplo.md",
+    "--estimativa",
+    "50000",
+    "--medidos-conversa",
+    "100000",
+    "100000"
+   ],
+   "saida_contem": "desenvolvimento 9,00 pp; fora do projeto 3,00 pp",
+   "criterio": "só a semana da última linha; a linha sem pp não soma; fora do projeto sai do uso do projeto; 2 + 3,2 + 0,8 = 6 ≤ 23"
+  },
+  {
+   "nome": "estimativa pela última medida do mesmo agente com a mesma habilidade",
+   "espera": "passa",
+   "comando": [
+    "scripts/orcamento.py",
+    "--a0",
+    "37",
+    "--dev-usado",
+    "8",
+    "--projeto-usado",
+    "37",
+    "--logs",
+    "testes/orcamento/logs",
+    "--agente",
+    "auditor",
+    "--habilidade",
+    "verificar-fundacao"
+   ],
+   "saida_contem": "159.897 tokens, última medida de auditor/verificar-fundacao",
+   "criterio": "D-040, diretriz 5: a última medida, tirada dos logs; a linha do hook com tokens nulos não conta"
+  },
+  {
+   "nome": "estimativa sem medida: 96.520",
+   "espera": "passa",
+   "comando": [
+    "scripts/orcamento.py",
+    "--a0",
+    "37",
+    "--dev-usado",
+    "8",
+    "--projeto-usado",
+    "37",
+    "--logs",
+    "testes/orcamento/logs",
+    "--agente",
+    "rastreador",
+    "--habilidade",
+    "consulta"
+   ],
+   "saida_contem": "96.520 tokens, rastreador/consulta sem medida",
+   "criterio": "D-040, diretriz 5: sem medida, estimativa_sem_medida do registro"
   },
   {
    "nome": "log real do teste do auditor (Bloco 2.5)",
@@ -50,18 +132,6 @@
    ],
    "saida_contem": "dado pessoal de terceiros",
    "criterio": "registrar_log.py reprova dado pessoal de terceiros"
-  },
-  {
-   "nome": "conta da semana com o teto de 300 mil (seção 0 do brief): pode",
-   "espera": "passa",
-   "comando": [
-    "scripts/orcamento.py",
-    "--teto",
-    "300000",
-    "--estimativa",
-    "60000"
-   ],
-   "criterio": "semana sem agente medido; a estimativa padrão de 60 mil cabe com folga"
   },
   {
    "nome": "log de agente sem alcance é recusado (D-030)",

@@ -1,0 +1,15 @@
+{
+  "trecho": {
+    "grau_semelhanca": 0.9545,
+    "localizador": "car. 75-141 do texto normalizado (normalizacao-0.2)",
+    "hash": "db5a7df4a248e2267d6a291d5e1c89f75302c1652fe49b3cba84638c8bba8d50",
+    "versao_normalizacao": "normalizacao-0.2",
+    "data_conferencia": "2026-10-23",
+    "estado": "localizado",
+    "texto_exato": "o suco do caju nunca era coado em pano, depois clarificado com resina",
+    "antes": "",
+    "depois": "",
+    "origem_texto": "fonte",
+    "nota": "caso A-015 do auditor no K-105 (D-041): um 'nunca' inserido, marcado como localizado por semelhança"
+  }
+}

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "aresta.schema.json",
   "title": "Aresta",
-  "description": "Aresta do §6 (l. 610): a ligação entre dois pontos do grafo, inclusive a de tensão (P29), com as Proposições que a sustentam, Z, W, μ e λ calculados por script. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Aresta do §6 (l. 610): a ligação entre dois pontos do grafo, inclusive a de tensão (P29), com as Proposições que a sustentam, Z, W, μ e λ calculados por script. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. Versão 0.2.0 (23/10/2026, K-123: tensao_interna e fora_da_conta, D-041); 0.1.0 (22/10/2026, K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -70,6 +70,27 @@
     "estado_detalhe": {
       "type": "string",
       "description": "o nome do estado intermediário"
+    },
+    "tensao_interna": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "$ref": "valores-provisorios.json#/valores/prefixos_id/valor/padroes/FO"
+      },
+      "description": "linhagens (pela Fonte que as representa) com Evidência a favor e divergente: tensão interna sinalizada, fora de μ e λ (D-041; mu-lambda-0.2)"
+    },
+    "fora_da_conta": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^EV-[0-9]{4,}$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Evidências visíveis e fora da conta de μ e λ, com o motivo: trecho não localizado ou leitura divergente (D-041; mu-lambda-0.2)"
     },
     "versao_regra": {
       "type": "string",

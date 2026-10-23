@@ -2,9 +2,13 @@
 valor mu_lambda de esquemas/valores-provisorios.json).
 
 Linhagem = componente conexo do grafo de deriva_de entre as Fontes (dez textos que copiam o
-mesmo autor contam como um). Para cada Proposição, as Evidências ativas (não retiradas) dão as
-linhagens a favor e as divergentes, pelas Fontes dos seus Trechos. μ = min(1, a favor / 2);
-λ = min(1, divergentes / 2); Dc = μ − λ; Dct = μ + λ − 1; o estado pelos limites do registro.
+mesmo autor contam como um). Para cada Proposição, só contam as Evidências ativas (não
+retiradas) com o Trecho "localizado" (eixo 2) e leitura fiel (eixo 3 sem "leitura divergente");
+as outras ficam visíveis em fora_da_conta, com o motivo (D-041). Elas dão as linhagens a favor
+e as divergentes, pelas Fontes dos seus Trechos; cada linhagem conta uma vez, e a que tem
+Evidência a favor e divergente é tensão interna sinalizada (tensao_interna) e não pesa em
+nenhum lado (D-041). μ = min(1, só a favor / 2); λ = min(1, só divergentes / 2);
+Dc = μ − λ; Dct = μ + λ − 1; o estado pelos limites do registro.
 Nenhum peso por tipo de fonte (D-039). O estado "inconsistente" é a tensão que abre o cartão de
 conflito (D-037; bloco 5). A Aresta soma as Evidências das suas Proposições. A W não captada
 (uma Falta no lugar da Compreensão local) entra no grafo como "paracompleto".
@@ -14,7 +18,8 @@ insumo × Y processo, com "não observada") e tabela-z.md (Z, os períodos).
 
 Uso:
     python scripts/calcular_mu_lambda.py [--raiz <pasta>] [--gravar] [--conferir] [--sem-grafo]
---gravar   regrava mu, lambda, estado, estado_detalhe e versao_regra nas Proposições e Arestas.
+--gravar   regrava mu, lambda, estado, estado_detalhe, tensao_interna, fora_da_conta e versao_regra
+           nas Proposições e Arestas.
 --conferir compara com o que está gravado; código 1 se algum valor não bate com o recálculo.
 """
 from __future__ import annotations
@@ -78,19 +83,30 @@ def estado(mu: float, lam: float) -> tuple[str, str | None]:
 
 
 def graus(evs: list[str], indice: dict, lin: dict) -> dict:
-    favor, contra = set(), set()
+    favor, contra, fora = set(), set(), {}
     for ev in evs:
         e = indice.get(ev)
         if not e or e.get("retirado"):
             continue
-        fo = indice.get(e.get("trecho"), {}).get("fonte")
+        tr = indice.get(e.get("trecho"), {})
+        if tr.get("estado") != "localizado":
+            fora[ev] = f"trecho {tr.get('estado') or 'sem estado'}"
+            continue
+        if e.get("estado") == "leitura divergente":
+            fora[ev] = "leitura divergente"
+            continue
+        fo = tr.get("fonte")
         if fo not in lin:
+            fora[ev] = "fonte fora do acervo"
             continue
         (favor if e.get("sentido") == "a favor" else contra).add(lin[fo])
+    mista = favor & contra  # tensão interna: não pesa em nenhum lado (D-041)
+    favor, contra = favor - mista, contra - mista
     mu, lam = min(1.0, len(favor) / SAT), min(1.0, len(contra) / SAT)
     est, det = estado(mu, lam)
     return {"mu": round(mu, 4), "lambda": round(lam, 4), "Dc": round(mu - lam, 4), "Dct": round(mu + lam - 1, 4),
-            "estado": est, "estado_detalhe": det, "linhagens_a_favor": len(favor), "linhagens_divergentes": len(contra)}
+            "estado": est, "estado_detalhe": det, "linhagens_a_favor": len(favor), "linhagens_divergentes": len(contra),
+            "tensao_interna": sorted(mista), "fora_da_conta": dict(sorted(fora.items()))}
 
 
 def calcular(indice: dict) -> dict[str, dict]:
@@ -164,15 +180,28 @@ def main() -> int:
         r = indice[i]
         print(f"{i}: μ={g['mu']} λ={g['lambda']} Dc={g['Dc']} Dct={g['Dct']} {g['estado']}"
               f"{' (' + g['estado_detalhe'] + ')' if g['estado_detalhe'] else ''}"
-              f" · linhagens {g['linhagens_a_favor']} a favor, {g['linhagens_divergentes']} divergentes")
+              f" · linhagens {g['linhagens_a_favor']} a favor, {g['linhagens_divergentes']} divergentes"
+              f"{', tensão interna na linhagem de ' + ', '.join(g['tensao_interna']) if g['tensao_interna'] else ''}")
+        for ev, motivo in g["fora_da_conta"].items():
+            print(f"  fora da conta: {ev} ({motivo})")
         if a.conferir:
+            if r.get("versao_regra") != VERSAO:
+                divergencias.append(f"{i}: regra gravada {r.get('versao_regra')!r} ≠ {VERSAO}: recalcular (--gravar)")
             for k in ("mu", "lambda", "estado"):
                 if r.get(k) != g[k]:
+                    divergencias.append(f"{i}: {k} gravado {r.get(k)!r} ≠ recalculado {g[k]!r}")
+            for k in ("tensao_interna", "fora_da_conta"):
+                if (r.get(k) or None) != (g[k] or None):
                     divergencias.append(f"{i}: {k} gravado {r.get(k)!r} ≠ recalculado {g[k]!r}")
             if g["estado_detalhe"] and r.get("estado_detalhe") != g["estado_detalhe"]:
                 divergencias.append(f"{i}: estado_detalhe gravado {r.get('estado_detalhe')!r} ≠ {g['estado_detalhe']!r}")
         if a.gravar:
             r.update(mu=g["mu"], **{"lambda": g["lambda"]}, estado=g["estado"], versao_regra=VERSAO)
+            for k in ("tensao_interna", "fora_da_conta"):
+                if g[k]:
+                    r[k] = g[k]
+                else:
+                    r.pop(k, None)
             if g["estado_detalhe"]:
                 r["estado_detalhe"] = g["estado_detalhe"]
             else:
@@ -181,6 +210,9 @@ def main() -> int:
     tensoes = [i for i, g in res.items() if g["estado"] == "inconsistente"]
     if tensoes:
         print("tensões (abrem cartão de conflito):", ", ".join(sorted(tensoes)))
+    internas = [i for i, g in res.items() if g["tensao_interna"]]
+    if internas:
+        print("tensões internas de linhagem (sinalizadas, fora de μ e λ; D-041):", ", ".join(sorted(internas)))
     if not a.sem_grafo:
         gerar_grafo(raiz, indice, res)
     for d in divergencias:

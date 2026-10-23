@@ -1,0 +1,36 @@
+{
+  "id": "PR-900003",
+  "clb": "CL-900001",
+  "atributo": "processo",
+  "valor": "valor sintético 3",
+  "periodo": {
+    "referido": "2026"
+  },
+  "evidencias": [
+    "EV-900005",
+    "EV-900006"
+  ],
+  "mu": 0.0,
+  "lambda": 0.0,
+  "estado": "paracompleto",
+  "sustenta_aviso_saude_politica": false,
+  "versao_regra": "mu-lambda-0.2",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-105)",
+    "data": "2026-10-22",
+    "execucao": "EX-900001"
+  },
+  "nota": "exemplo de esquema (K-105): dado sintético",
+  "tensao_interna": [
+    "FO-900001"
+  ]
+}

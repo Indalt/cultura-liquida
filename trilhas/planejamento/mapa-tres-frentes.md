@@ -367,9 +367,9 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 31, User-Agent do projeto não definido | D | K-107 |
 | 32, triagem fixa: listas e normas a calibrar | D; P | K-109 |
 | 33, validar_acervo: papéis da W e frase da ficha | D | K-110 |
-| 34, μ e λ: quais Evidências contam | P; D | K-005 (regra pela D-041); K-123 (no script) |
+| 34, μ e λ: quais Evidências contam | P; D | K-005 (regra pela D-041); K-123 (no script, feito em 23/10: mu-lambda-0.2) |
 | 35, pre-commit em cada cópia | D; O | K-111 |
-| 36, limiar do trecho e linhagem nos dois lados | P; D | K-005 (regra pela D-041); K-123 (no script) |
+| 36, limiar do trecho e linhagem nos dois lados | P; D | K-005 (regra pela D-041); K-123 (no script, feito em 23/10: normalizacao-0.2 e mu-lambda-0.2) |
 | 37, o planejamento medido em pp da conta (K-005) | P | K-002 |
 | 38, a leitura da conta depende de Vicente (K-005) | P; O | K-002 |
 

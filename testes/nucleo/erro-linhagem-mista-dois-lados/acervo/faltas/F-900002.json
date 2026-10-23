@@ -1,0 +1,12 @@
+{
+  "id": "F-900002",
+  "tipo": "trecho_nao_verificavel",
+  "o_que_falta": "trecho não verificável por máquina",
+  "por_que": "semelhança abaixo do limiar (exemplo)",
+  "onde_aparece": [
+    "TR-900006"
+  ],
+  "criada_por": "scripts/localizar_trecho.py (normalizacao-0.2)",
+  "data": "2026-10-23",
+  "nota": "exemplo de esquema (K-105): dado sintético"
+}

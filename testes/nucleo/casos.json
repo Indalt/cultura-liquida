@@ -371,6 +371,124 @@
       ],
       "criterio": "achado A-002: null vale como ausente",
       "saida_contem": "licenca_ausente"
+    },
+    {
+      "nome": "localizar_trecho: 'nunca' inserido não passa por semelhança (A-015 do K-105; D-041)",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "o suco do caju nunca era coado em pano, depois clarificado com resina"
+      ],
+      "saida_contem": "palavra de negação ou de sentido contrário diferente da fonte (nunca)",
+      "criterio": "normalizacao-0.2: grau 0,9545 acima do limiar, mas a negação não bate; vira a Falta (código 2)"
+    },
+    {
+      "nome": "localizar_trecho: 'não' sem acento é OCR e passa (D-041)",
+      "espera": "passa",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "conferido pela cor e pelo cheiro, e nao pelo relogio"
+      ],
+      "saida_contem": "estado: localizado",
+      "criterio": "a semelhança tolera OCR e grafia: a negação sem acento é a mesma palavra"
+    },
+    {
+      "nome": "localizar_trecho: 'não' tirado não passa por semelhança (D-041)",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "conferido pela cor e pelo cheiro, e pelo relógio"
+      ],
+      "saida_contem": "(nao)",
+      "criterio": "a negação que some do trecho também tem de bater"
+    },
+    {
+      "nome": "localizar_trecho: reconferência do Trecho com 'nunca' marcado como localizado",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "conferir",
+        "testes/nucleo/trecho/erro-negacao-inserida.json",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt"
+      ],
+      "saida_contem": "NÃO SE SUSTENTA",
+      "criterio": "o Trecho gravado pela regra antiga não se sustenta na regra nova"
+    },
+    {
+      "nome": "calcular_mu_lambda: linhagem mista sinalizada e fora da conta (A-010 do K-105; D-041)",
+      "espera": "passa",
+      "comando": [
+        "scripts/calcular_mu_lambda.py",
+        "--raiz",
+        "testes/nucleo/acervo-d041",
+        "--conferir",
+        "--sem-grafo"
+      ],
+      "saida_contem": "tensões internas de linhagem (sinalizadas, fora de μ e λ; D-041): PR-900003",
+      "criterio": "mu-lambda-0.2: a linhagem com Evidência a favor e divergente não pesa em nenhum lado; o trecho não verificável e a leitura divergente ficam em fora_da_conta"
+    },
+    {
+      "nome": "calcular_mu_lambda: linhagem mista contada nos dois lados",
+      "espera": "reprova",
+      "comando": [
+        "scripts/calcular_mu_lambda.py",
+        "--raiz",
+        "testes/nucleo/erro-linhagem-mista-dois-lados",
+        "--conferir",
+        "--sem-grafo"
+      ],
+      "saida_contem": "tensao_interna gravado None",
+      "criterio": "μ = λ = 0,5, como a mu-lambda-0.1 contava, não bate com o recálculo"
+    },
+    {
+      "nome": "calcular_mu_lambda: trecho não verificável e leitura divergente contados (A-009 do K-105)",
+      "espera": "reprova",
+      "comando": [
+        "scripts/calcular_mu_lambda.py",
+        "--raiz",
+        "testes/nucleo/erro-fora-da-conta-contado",
+        "--conferir",
+        "--sem-grafo"
+      ],
+      "saida_contem": "mu gravado 1.0 ≠ recalculado 0.5",
+      "criterio": "só conta a Evidência com trecho localizado e leitura fiel"
+    },
+    {
+      "nome": "calcular_mu_lambda: Proposição gravada pela regra antiga",
+      "espera": "reprova",
+      "comando": [
+        "scripts/calcular_mu_lambda.py",
+        "--raiz",
+        "testes/nucleo/erro-regra-antiga",
+        "--conferir",
+        "--sem-grafo"
+      ],
+      "saida_contem": "recalcular (--gravar)",
+      "criterio": "D-041: a regra muda, o recálculo é por script; a versão gravada tem de ser a vigente"
+    },
+    {
+      "nome": "validar_acervo: o acervo da D-041 é válido",
+      "espera": "passa",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/acervo-d041"
+      ],
+      "saida_contem": "válido",
+      "criterio": "os campos novos tensao_interna e fora_da_conta passam nos esquemas da Proposição"
     }
   ]
 }

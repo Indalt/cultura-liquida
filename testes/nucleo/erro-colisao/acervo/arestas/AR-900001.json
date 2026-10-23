@@ -12,7 +12,7 @@
   "mu": 1.0,
   "lambda": 0.0,
   "estado": "verdadeiro",
-  "versao_regra": "mu-lambda-0.1",
+  "versao_regra": "mu-lambda-0.2",
   "origem_registro": {
     "criado_por": "curador (exemplo de esquema, K-105)",
     "data": "2026-10-22",
