@@ -11,7 +11,9 @@ Internet Archive, em ritmo baixo, e grava o endereço da cópia na Entrada.
 - Nunca captura sem a triagem do juridico sobre a política de cópias arquivadas (Lei 9.610; l. 740):
   a triagem é feita uma vez, antes da primeira captura, e o `--triagem` aponta o arquivo dela.
 - Barreira que valha para a captura em si deixa o item sem cópia, com a Falta, o porquê e o caminho
-  (D-025); isso é do juridico, não deste script.
+  (D-025). A Falta é do juridico; este script a cumpre: com uma Falta `impedimento_juridico` aberta
+  (caminho não liberado) que aponte `scripts/wayback.py` e não valha só para publicar, nada se
+  captura, e as Entradas ficam com o link permanente (F-0004, triagem de 23/10/2026, K-107).
 
 Uso:
     python scripts/wayback.py --triagem <arquivo da triagem> [--entrada EN-0001,...] [--max 5]
@@ -49,6 +51,17 @@ def barrado(raiz: Path, ambiente: str | None) -> str | None:
     return f"a ficha de {ambiente} registra {m.group(0)!r}" if m else None
 
 
+def falta_que_barra(raiz: Path) -> str | None:
+    """A Falta jurídica aberta que barra a captura em si, se houver."""
+    pasta = raiz / "acervo" / "faltas"
+    for arq in sorted(pasta.glob("*.json")) if pasta.exists() else []:
+        f = carregar_json(arq)
+        if (f.get("tipo") == "impedimento_juridico" and "scripts/wayback.py" in f.get("onde_aparece", [])
+                and f.get("vale_para") != "publicar" and f.get("caminho_de_liberacao", {}).get("estado") != "liberado"):
+            return f["id"]
+    return None
+
+
 def capturar(cli: Cliente, url: str) -> str:
     r = cli.pedir(SPN + url)
     for onde in (r.url, r.headers.get("Content-Location", ""), r.headers.get("Location", ""), r.corpo[:20000]):
@@ -72,6 +85,10 @@ def main() -> int:
     if not tri or not tri.exists():
         print("REPROVA: sem a triagem do juridico sobre a política de cópias arquivadas (Lei 9.610; l. 740)")
         return 1
+    if barra := falta_que_barra(raiz):
+        print(f"BARRADO: a Falta jurídica {barra} está aberta e vale para a captura em si; nada se captura, "
+              "e as Entradas ficam com o link permanente (D-020, D-025)")
+        return 0
     fx = (a.fixtures if a.fixtures.is_absolute() else RAIZ / a.fixtures) if a.fixtures else None
     cli = Cliente(fixtures=fx, intervalo_s=INTERVALO_S)
     ex = Execucao("wayback", f"cópia no Wayback (SPN2 anônimo), triagem {tri.relative_to(RAIZ).as_posix() if tri.is_relative_to(RAIZ) else tri.name}", simular=a.simular)

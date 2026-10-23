@@ -59,3 +59,4 @@ Até o K-112 (bloco 10a), nada roda sozinho: os scripts rodam à mão nas conver
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
 | A fazer | **K-201** Falta F-0003 a liberar: até onde o Git público já é publicação. *Espera o guia da Lei 9.610 (K-109) e a decisão de lugar e visibilidade de Vicente (K-010)* | Falta F-0003, criada pelo juridico em 17/10 (`trilhas/2026-10-17_verificacao/falta-F-0003.json`); D-037, diretriz 1 | a Falta liberada pelo caminho do guia, ou mantida com o porquê; até lá, a custódia do §5.1 |
+| A fazer | **K-202** Falta jurídica a liberar: F-0004 (direito_autoral) | triagem do juridico; D-037, diretriz 1 | a Falta liberada pelo caminho do guia, ou mantida com o porquê |

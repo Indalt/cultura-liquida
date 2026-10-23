@@ -3,7 +3,9 @@
 A chave é o identificador: DOI, handle ou o ID na fonte, nessa ordem (doi:<DOI>, hdl:<handle>,
 <ambiente>:<ID>). Um handle só vale como chave global quando é resolvível no hdl.handle.net, ou
 quando tem prefixo numérico diferente do 123456789 (o prefixo de exemplo do DSpace, que muitos
-repositórios mantêm); senão, a chave é a do ambiente. Quando várias Consultas acham o mesmo item, a
+repositórios mantêm); senão, a chave é a do ambiente com o handle local e o repositório
+(<ambiente>:<host>/handle/<handle>, sem porta nem www.: dois registros da BDTD que apontam para o mesmo
+handle num espelho do repositório são o mesmo item) e, sem handle, o ID na fonte. Quando várias Consultas acham o mesmo item, a
 Entrada é uma só, com todos os Recortes de origem; o rendimento de cada Consulta (itens achados e
 descobertas, isto é, itens que ela achou primeiro) sai das Entradas. A Entrada não guarda autoria
 (l. 596).
@@ -52,6 +54,10 @@ def chave(ambiente: str, id_fonte: str, urls: list[str] = (), doi: str | None = 
         prefixo_h = h.split("/")[0]
         if "hdl.handle.net/" in u or (prefixo_h.replace(".", "").isdigit() and prefixo_h != "123456789"):
             return "hdl:" + h
+    for u in urls:  # handle local: o item é o handle naquele repositório (host sem porta nem www.)
+        if m := RE_HANDLE.search(u):
+            host = urllib.parse.urlsplit(u).hostname or ""
+            return f"{ambiente}:{host.removeprefix('www.')}/handle/{m.group(1)}"
     return f"{ambiente}:{id_fonte}"
 
 

@@ -1,0 +1,28 @@
+{
+  "id": "RC-0006",
+  "ambiente": "AM-0029",
+  "consulta": "CO-0004",
+  "periodo": "todo",
+  "modo": "termo",
+  "cursor": "oai_dc////300",
+  "total_informado": 59357,
+  "total_visto": 300,
+  "saturacao": "não exaurido: 300 de 59357 visto(s)",
+  "erros": [],
+  "proxima_acao": "retomar do cursor 'oai_dc////300' com teto novo",
+  "teto": {
+    "chamadas": 3,
+    "divisoes_janela": 4
+  },
+  "estado": "interrompido por teto",
+  "data": "2026-10-23",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-23",
+    "execucao": "EX-0023",
+    "versao_regra": "recorte-0.1"
+  },
+  "faltas": [
+    "F-0009"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "F-0006",
+  "tipo": "outro",
+  "o_que_falta": "busca interrompida por teto: RC-0003 (AM-0029 × CO-0001, todo)",
+  "por_que": "teto de 3 chamadas da colheita",
+  "onde_aparece": [
+    "RC-0003"
+  ],
+  "criada_por": "scripts/recorte.py (EX-0023)",
+  "data": "2026-10-23"
+}

@@ -30,7 +30,7 @@ def carregar_esquema(nome: str) -> dict:
     são resolvidos na carga e postos no lugar: o registro de valores provisórios é lido
     daqui, sem cópia nos esquemas (brief, bloco 2)."""
     p = Path(nome)
-    if not p.exists():
+    if not p.is_file():
         base = nome if nome.endswith(".schema.json") else f"{nome}.schema.json"
         p = ESQUEMAS / base
     return _embutir(carregar_json(p), None, p.parent)

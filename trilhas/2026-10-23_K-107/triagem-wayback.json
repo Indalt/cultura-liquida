@@ -1,0 +1,23 @@
+{
+  "nota": "Triagem jurídica de precaução da política de cópias arquivadas (scripts/wayback.py), antes da primeira captura (brief, bloco 5; Fundação l. 740). Feita pelo juridico (triagem-juridica 0.1.0, Sonnet 5.5 alto) em 23/10/2026, K-107; o curador gravou as Faltas em acervo/faltas/ sem mudar o texto. Nada aqui autoriza (D-020).",
+  "item": "Política de cópias arquivadas do scripts/wayback.py: pedir ao Save Page Now 2 do Internet Archive (GET anônimo, 1 a cada 30 s, no máximo 5 por rodada) a captura da página pública de cada Entrada, e gravar na Entrada (Git público) só o endereço da cópia. O projeto não baixa nem guarda texto nem PDF.",
+  "degrau": "1 (só Vicente e os agentes; o repositório é público, D-021; F-0003 aberta sobre a publicação)",
+  "perguntas": [
+    {"n": 1, "pergunta": "Direito autoral (Lei 9.610)", "resposta": "dúvida", "porque": "O art. 29 (oficial, lido) exige autorização prévia e expressa para a utilização da obra 'por quaisquer modalidades', com a reprodução parcial ou integral no inciso I. A página de um item traz título, resumo e outros textos de terceiros. Quem copia é o Internet Archive e o projeto guarda só o endereço, mas é o projeto que provoca a captura e divulga o link. Se isso é reprodução pelo projeto a lei não diz, e não há doutrina nem jurisprudência conferidas. Não é modo de fazer (art. 8º, I) nem citação (art. 46, III, não lido como cobertura de página inteira; interpretação não conferida). Domínio público (art. 41) e art. 45, II dependem de cada item. A licença aberta por item não foi conferida. Vira a Falta F-0004, que vale para a captura em si."},
+    {"n": 2, "pergunta": "Conhecimento tradicional (Lei 13.123; Decreto 8.772)", "resposta": "não se aplica", "porque": "A política trata de capturar páginas bibliográficas públicas e gravar um endereço; conhecimento tradicional numa página específica é da triagem do item."},
+    {"n": 3, "pergunta": "Restrição por costume (Convenção de 2003, art. 13, d, ii)", "resposta": "não se aplica", "porque": "A política não trata do conteúdo de nenhuma prática; costume é verificado por item."},
+    {"n": 4, "pergunta": "Dados pessoais (LGPD)", "resposta": "sem dúvida", "porque": "O projeto grava só um endereço, sem nome nem dado pessoal; LGPD não consultada nesta rodada (não conferido); o que o Internet Archive guarda está fora do controle do projeto."},
+    {"n": 5, "pergunta": "Imagem e voz", "resposta": "não se aplica", "porque": "Nenhuma imagem ou voz é objeto da política e o PDF não é buscado; o que o SPN2 captura por padrão como recurso embutido não foi conferido."},
+    {"n": 6, "pergunta": "Crianças e adolescentes", "resposta": "não se aplica", "porque": "Nada é registrado além do endereço."},
+    {"n": 7, "pergunta": "Substância controlada (Portaria SVS/MS 344/1998)", "resposta": "não se aplica", "porque": "A política é de arquivamento de links."},
+    {"n": 8, "pergunta": "Licença de quem contribuiu (degrau 2)", "resposta": "não se aplica", "porque": "No degrau 1 não há contribuição de terceiros; a licença dos autores entra na pergunta 1."}
+  ],
+  "faltas": ["F-0004", "F-0005"],
+  "barra_a_captura": true,
+  "barra_porque": "A dúvida da F-0004 é sobre a própria captura (o projeto provocar uma cópia de obra de terceiro), e não só sobre a publicação do link. Pela precaução (D-020, D-025), cada Entrada fica com o link permanente e sem cópia arquivada até Vicente decidir a regra, com a F-0004 aberta. Isso não é parecer de que a captura seja ilícita. A F-0005 (termos não lidos) é lacuna de conferência, não barreira jurídica.",
+  "conferencias": [
+    {"fato": "Lei 9.610/1998, art. 29, caput e inciso I.", "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm", "nivel": "oficial", "citacao_literal": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como: I - a reprodução parcial ou integral;"},
+    {"fato": "Pedido de exclusão de arquivos de um site do web.archive.org e reclamação de direitos autorais.", "url": "https://help.archive.org/help/how-do-i-request-to-remove-something-from-archive-org/", "nivel": "oficial", "citacao_literal": "If you would like to submit a copyright claim for material found on archive.org, please refer to our Copyright Policy. [...] we do not make any guarantees beforehand about the outcome of a request."},
+    {"fato": "Termos de uso do Internet Archive sobre o Save Page Now e as cópias.", "url": "https://archive.org/about/terms.php", "nivel": "não conferido", "citacao_literal": "(HTTP 200 sem o texto dos termos no HTML devolvido)"}
+  ]
+}

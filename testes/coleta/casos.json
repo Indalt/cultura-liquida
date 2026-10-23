@@ -17,8 +17,8 @@
         "--fixtures",
         "testes/coleta/fixtures/bdtd"
       ],
-      "saida_contem": "percorrido pela busca; visto 10 de 10; 10 Entrada(s) nova(s)",
-      "criterio": "a resposta real de 23/10 (só id e urls, sem autoria) vira um Recorte percorrido e 10 Entradas"
+      "saida_contem": "percorrido pela busca; visto 10 de 10; 8 Entrada(s) nova(s), 2 repetida(s)",
+      "criterio": "a resposta real de 23/10 (só id e urls, sem autoria) vira um Recorte percorrido e 8 Entradas: 2 itens vêm em dois registros da BDTD que apontam para o mesmo handle local num espelho do repositório"
     },
     {
       "nome": "adaptador OAI-PMH: Infoteca-e com resposta gravada e filtro local",
@@ -53,8 +53,8 @@
         "--fixtures",
         "testes/coleta/fixtures/bdtd"
       ],
-      "saida_contem": "71 Entrada(s) nova(s), 9 repetida(s)",
-      "criterio": "os 9 itens de CO-0005 que CO-0003 também acha ficam numa Entrada só, com os dois Recortes (l. 435)"
+      "saida_contem": "69 Entrada(s) nova(s), 11 repetida(s)",
+      "criterio": "os itens de CO-0005 que CO-0003 também acha (e os espelhos do mesmo handle) ficam numa Entrada só, com os dois Recortes (l. 435)"
     },
     {
       "nome": "deduplicação: duplicata forçada em entrada/",
@@ -245,6 +245,22 @@
       ],
       "saida_contem": "sem a triagem do juridico",
       "criterio": "nenhuma captura antes da triagem da política de cópias (Lei 9.610; l. 740)"
+    },
+    {
+      "nome": "Wayback: Falta jurídica aberta barra a captura",
+      "espera": "passa",
+      "comando": [
+        "scripts/wayback.py",
+        "--triagem",
+        "testes/coleta/triagem-teste.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback-barrada",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "BARRADO: a Falta jurídica F-900004",
+      "criterio": "com a Falta da captura aberta (como a F-0004), nada se captura e nenhum pedido sai"
     },
     {
       "nome": "fila: conflito, Falta jurídica e lista das CLB candidatas",

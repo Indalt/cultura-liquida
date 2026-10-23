@@ -1,0 +1,12 @@
+{
+  "id": "F-0005",
+  "tipo": "fonte_inacessivel",
+  "o_que_falta": "Os termos de uso do Internet Archive sobre o Save Page Now e sobre as cópias capturadas, que não foram lidos nesta rodada.",
+  "por_que": "A página dos termos (archive.org/about/terms.php) abriu com código 200, mas o HTML devolvido não trazia o texto dos termos, só o título da página inicial; não houve captcha nem bloqueio, e nada foi contornado. Da página de ajuda abriu-se apenas o trecho sobre remoção: reclamação de direitos autorais pela Política de Direitos Autorais do Internet Archive, e pedido de exclusão de um site do web.archive.org por e-mail, sem garantia de resultado. Sem os termos, não se sabe o que o uso anônimo do serviço pelo projeto aceita ou veda, nem quem responde pela cópia.",
+  "onde_aparece": [
+    "scripts/wayback.py"
+  ],
+  "criada_por": "juridico (triagem-juridica, K-107)",
+  "data": "2026-10-23",
+  "nota": "Resolve-se lendo os termos no navegador (Vicente ou rodada com navegador) e conferindo se o uso do Save Page Now sem chave e o robots.txt do web.archive.org estão em harmonia com eles. Os limites do anônimo no docstring do script seguem de nível secundário."
+}

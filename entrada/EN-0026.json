@@ -1,0 +1,29 @@
+{
+  "id": "EN-0026",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0021",
+  "recortes": [
+    "RC-0002"
+  ],
+  "data_entrada": "2026-10-23",
+  "url_ou_arquivo": "https://repositorio.ufpe.br/handle/123456789/52536",
+  "identificador": "AM-0021:repositorio.ufpe.br/handle/123456789/52536",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-23",
+    "execucao": "EX-0022",
+    "versao_regra": "deduplicacao-0.1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "F-900004",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "direito_autoral",
+  "vale_para": "captura",
+  "o_que_falta": "Saber se pedir ao Internet Archive (Save Page Now 2) que capture a página pública de um item, e guardar na Entrada só o endereço da cópia, é utilização da obra por reprodução, que depende de autorização prévia e expressa do autor (Lei 9.610, art. 29), ou se a reprodução é só do Internet Archive e o projeto não reproduz nada. Falta também a licença de cada item (por exemplo, o rodapé CC BY-NC-ND 4.0 das publicações da Embrapa, não conferido nesta rodada).",
+  "por_que": "O art. 29 exige autorização prévia e expressa para a utilização da obra por quaisquer modalidades, e cita a reprodução parcial ou integral. A página de um item traz título, resumo e outros textos de autoria de terceiros. O projeto não baixa nem guarda o texto, mas é ele quem provoca a captura e depois divulga o endereço da cópia no Git público. Se isso conta como reprodução pelo projeto não está dito na lei e não foi conferido em doutrina ou jurisprudência; na dúvida, Falta (D-020). O art. 46, III, trata de citação na medida justificada e não foi lido nesta rodada como cobertura de cópia de página inteira (interpretação, não conferida). Vale para a captura em si; o simples registro do link permanente na Entrada não é afetado.",
+  "onde_aparece": [
+    "scripts/wayback.py",
+    "entrada/ (campo da cópia arquivada)",
+    "trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md (bloco 5, Antes da primeira captura)"
+  ],
+  "norma": {
+    "referencia": "Lei 9.610/1998, art. 29, caput e inciso I",
+    "trecho": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como: I - a reprodução parcial ou integral;",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-licenca-texto-imagem-audio-lei-9610 (a preparar; o guia ainda não existe)",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico (triagem-juridica, K-107)",
+  "data": "2026-10-23",
+  "nota": "registro de teste (K-107): cópia da F-0004 com id de teste"
+}
