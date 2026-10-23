@@ -44,7 +44,7 @@
 - **Pronto quando** (ajustado pela D-035): as decisões D-033 a D-035 validam; `checar_fundacao.py` passa na v0.2 (0 achados); Anexos A e B intactos; commit e push feitos. Sem agente neste bloco: consumo 0.
 - **Próximo:** bloco 1 (harness e operação), quando Vicente autorizar. A semana de 12 a 18/10 está fechada para agentes; o bloco 1 usa o auditor, então começa na semana de 19/10.
 
-## Conversa do cartão K-103 — 22/10/2026 (quarta)
+## Conversa do cartão K-103 — 22/10/2026 (quinta)
 
 - **Autorização de Vicente:** cartão K-103 (habilidade registrar-melhoria), pela retomada do brief; Opus 5.5, esforço médio; uso da conta informado: 29% no início.
 - **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (51ceee8), árvore limpa; quadro e estado do planejamento lidos; cartão movido para Fazendo e, no fim, para Concluído.
@@ -54,7 +54,7 @@
 - **Não feito:** verificação independente pelo auditor (nenhum agente nesta conversa); a ligação no `executar-brief` e no `curador.md`, que é do K-101.
 - **Consumo:** 0 tokens de agentes.
 
-## Conversa do cartão K-101 (bloco 1) — 22/10/2026 (quarta)
+## Conversa do cartão K-101 (bloco 1) — 22/10/2026 (quinta)
 
 - **Autorização de Vicente:** cartão K-101 (bloco 1 do brief: harness e operação), retomando pelo quadro e parando nas paradas do brief; Opus 5.5, esforço médio; uso da conta: não informado (veio em branco, "__%").
 - **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (cd5e26e), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 32 · FALHA 0 · PENDENTE 9; cartão movido para Fazendo e, no fim, para Concluído.
@@ -79,7 +79,7 @@
 - **Não feito:** nenhuma parada; nada "não conferido" novo além dos dois `robots` e da `cobertura` da Hemeroteca nos exemplos.
 - **Consumo:** 73.464 tokens de agentes (auditor).
 
-## Conversa do cartão K-104 (bloco 2) — 22/10/2026 (quarta)
+## Conversa do cartão K-104 (bloco 2) — 22/10/2026 (quinta)
 
 - **Autorização de Vicente, fala original:** "Autorizo o cartão K-104 (Bloco 2 do brief de execuções: contratos do §6 e valores provisórios). Retome pelo quadro, mova o cartão e pare nas paradas do brief; na parada (c), vale o padrão: a tabela código → nome numa pasta da minha máquina, fora da pasta versionada. Opus 5.5, esforço médio. Uso atual: 34%."
 - **Uso da conta no início:** 34%.
@@ -102,7 +102,7 @@
 - **Não conferido:** a ISO 30042 na página da ISO (403); a equivalência campo a campo do Termo com TBX e SKOS; as correções A-001 a A-005 não passaram por segunda leitura independente.
 - **Consumo:** 143.833 tokens de agentes (auditor).
 
-## Conversa do cartão K-105 (bloco 3) — 22/10/2026 (quarta)
+## Conversa do cartão K-105 (bloco 3) — 22/10/2026 (quinta)
 
 - **Autorização de Vicente, fala original:** "Autorizo o cartão K-105 (Bloco 3 do brief de execuções: scripts do núcleo). Retome pelo quadro e mova o cartão. Orçamento desta semana (autorização minha; o K-005 calibra depois): o limite é o uso da conta — pare com o estado salvo antes de 50%; o teto provisório de 300 mil tokens de agentes por semana não se aplica nesta semana; o teto de chamadas por agente continua. Na passada do auditor, inclua uma conferência rápida das correções A-001 a A-005 do K-104; o auditor devolve o JSON e o curador valida (insumo 29). Opus 5.5, esforço médio. Uso atual: 37%."
 - **Uso da conta no início:** 37%. Parada (b) desta semana: antes de 50% do uso da conta, com o estado salvo; o `orcamento.py --teto 300000` não se aplica nesta semana (autorização de Vicente).

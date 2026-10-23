@@ -1,0 +1,75 @@
+{
+  "descricao": "Dados do cartão K-005 (ritmo do piloto), lidos por calcular_ritmo.py. As leituras do uso da conta são as que Vicente informou (claude.ai/settings/usage, limite semanal da conta), cada uma com a fonte por apontamento; os intervalos dizem que conversas ficaram entre duas leituras. O resto do piloto traz as chamadas de agente que o brief de execuções prevê em cada bloco. Nada aqui é estimativa apresentada como medida: as leituras e os tokens são medidas; as chamadas do resto do piloto são as previsões do brief.",
+  "semana_da_conta": {
+    "renovacao": "não informada; pela fala de Vicente de 21/10/2026 ('tokens renovados. podemos seguir.', estado-planejamento.md, Falas originais), a semana da conta em curso começou em 21/10, quarta-feira (não conferido na página)"
+  },
+  "leituras": [
+    {"id": "L1", "valor": 4, "quando": "21/10/2026, início do K-001", "fonte": "trilhas/planejamento/rodadas/2026-10-21_K-001/relatorio.md, l. 5"},
+    {"id": "L2", "valor": 12, "quando": "22/10/2026, abertura do K-003 (fim do K-001)", "fonte": "trilhas/planejamento/rodadas/2026-10-21_K-001/relatorio.md, l. 5"},
+    {"id": "L3", "valor": 23, "quando": "22/10/2026, abertura da conversa de fechamento do K-003", "fonte": "trilhas/planejamento/rodadas/2026-10-22_K-003/relatorio.md, l. 5"},
+    {"id": "L4", "valor": 29, "quando": "22/10/2026, início do K-103", "fonte": "trilhas/2026-10-17_execucao-piloto.md, conversa do cartão K-103"},
+    {"id": "L5", "valor": 34, "quando": "22/10/2026, início do K-104 (a do início do K-101 veio em branco)", "fonte": "trilhas/2026-10-17_execucao-piloto.md, conversas dos cartões K-101 e K-104"},
+    {"id": "L6", "valor": 37, "quando": "22/10/2026, início do K-105", "fonte": "trilhas/2026-10-17_execucao-piloto.md, conversa do cartão K-105"},
+    {"id": "L7", "valor": 43, "quando": "23/10/2026, início do K-005", "fonte": "mensagem de Vicente que abriu esta rodada"}
+  ],
+  "intervalos": [
+    {"de": "L1", "ate": "L2", "conversas": ["K-001"], "frente": "P", "configuracao": "Opus 5.5, esforço máximo, ultracode", "n_conversas": 1, "tokens_agentes": 299042, "agentes": "auditor no lote C3 e workflow de 3 auditores", "fonte_tokens": "trilhas/logs/2026-10-21_auditor.jsonl, l. 2; trilhas/logs/2026-10-22_curador.jsonl, l. 1"},
+    {"de": "L2", "ate": "L3", "conversas": ["K-003 (rodada e releitura do brief)"], "frente": "P", "configuracao": "Opus 5.5, esforço máximo, ultracode", "n_conversas": 1, "tokens_agentes": 214004, "agentes": "workflow de 2 auditores", "fonte_tokens": "trilhas/logs/2026-10-22_curador.jsonl, l. 2"},
+    {"de": "L3", "ate": "L4", "conversas": ["K-003 (fechamento)"], "frente": "P", "configuracao": "Opus 5.5, esforço máximo", "n_conversas": 1, "tokens_agentes": 0, "agentes": "nenhum", "fonte_tokens": "trilhas/logs/2026-10-22_curador.jsonl, l. 6"},
+    {"de": "L4", "ate": "L5", "conversas": ["K-103", "K-101"], "frente": "D", "configuracao": "Opus 5.5, esforço médio", "n_conversas": 2, "tokens_agentes": 73464, "agentes": "auditor (K-101)", "fonte_tokens": "trilhas/logs/2026-10-22_curador.jsonl, l. 7 e 8"},
+    {"de": "L5", "ate": "L6", "conversas": ["K-104"], "frente": "D", "configuracao": "Opus 5.5, esforço médio", "n_conversas": 1, "tokens_agentes": 143833, "agentes": "auditor", "fonte_tokens": "trilhas/logs/2026-10-22_curador.jsonl, l. 9"},
+    {"de": "L6", "ate": "L7", "conversas": ["K-105"], "frente": "D", "configuracao": "Opus 5.5, esforço médio", "n_conversas": 1, "tokens_agentes": 227477, "agentes": "juridico e auditor", "fonte_tokens": "trilhas/logs/2026-10-22_curador.jsonl, l. 10"}
+  ],
+  "resto_do_piloto": [
+    {"cartao": "K-106", "bloco": "4", "brief": "l. 266", "conversas": [1, 1], "agentes": [
+      {"agente": "rastreador", "habilidade": "ficha-de-acesso", "min": 1, "max": 1},
+      {"agente": "rastreador", "habilidade": "consulta", "min": 0, "max": 1},
+      {"agente": "arquivista", "habilidade": "registrar-termo", "min": 1, "max": 1},
+      {"agente": "auditor", "habilidade": "conferir-fato", "min": 1, "max": 1}]},
+    {"cartao": "K-107", "bloco": "5", "brief": "l. 291", "conversas": [1, 2], "agentes": [
+      {"agente": "auditor", "habilidade": "verificar-fundacao", "min": 1, "max": 1},
+      {"agente": "juridico", "habilidade": "triagem-juridica", "min": 1, "max": 1}]},
+    {"cartao": "K-108", "bloco": "6", "brief": "l. 303", "conversas": [1, 1], "agentes": [
+      {"agente": "rastreador", "habilidade": "consulta", "min": 1, "max": 2}]},
+    {"cartao": "K-109", "bloco": "7", "brief": "l. 314", "conversas": [1, 2], "agentes": [
+      {"agente": "avaliador", "habilidade": "extrair-evidencia", "min": 2, "max": 3},
+      {"agente": "juridico", "habilidade": "conferir-fato", "min": 1, "max": 1},
+      {"agente": "juridico", "habilidade": "triagem-juridica", "min": 1, "max": 1},
+      {"agente": "juridico", "habilidade": "guia-de-liberacao", "min": 3, "max": 4},
+      {"agente": "auditor", "habilidade": "amostra", "proxy": "verificar-fundacao", "min": 1, "max": 2}]},
+    {"cartao": "K-110", "bloco": "8", "brief": "l. 326", "conversas": [1, 2], "agentes": [
+      {"agente": "arquivista", "habilidade": "registrar-termo", "min": 1, "max": 1},
+      {"agente": "arquivista", "habilidade": "montar-ficha", "min": 1, "max": 1},
+      {"agente": "arquivista", "habilidade": "gerar-grafo", "min": 1, "max": 1},
+      {"agente": "juridico", "habilidade": "triagem-juridica", "min": 1, "max": 1},
+      {"agente": "auditor", "habilidade": "amostra", "proxy": "verificar-fundacao", "min": 1, "max": 2},
+      {"agente": "redator", "habilidade": "escrever-secao-fundacao", "min": 0, "max": 1}]},
+    {"cartao": "K-102", "bloco": "entre 8 e 9", "brief": "l. 331-337", "conversas": [1, 1], "agentes": []},
+    {"cartao": "K-111", "bloco": "9", "brief": "l. 344 (a reconstituição é uma conversa nova, l. 343)", "conversas": [2, 2], "agentes": [
+      {"agente": "auditor", "habilidade": "verificar-fundacao", "min": 1, "max": 2}]},
+    {"cartao": "K-112", "bloco": "10a", "brief": "l. 367 (o bloco 10 prevê 4 a 6 chamadas; 10a e 10b repartidas aqui)", "conversas": [2, 3], "agentes": [
+      {"agente": "rastreador", "habilidade": "ficha-de-acesso", "min": 1, "max": 2},
+      {"agente": "auditor", "habilidade": "conferir-fato", "min": 1, "max": 1},
+      {"agente": "redator", "habilidade": "escrever-secao-fundacao", "min": 1, "max": 1}]},
+    {"cartao": "K-113", "bloco": "10b", "brief": "l. 364-366 e 367", "conversas": [1, 2], "agentes": [
+      {"agente": "auditor", "habilidade": "amostra", "proxy": "verificar-fundacao", "min": 1, "max": 2}],
+      "fora_da_conta": "a rotina de teste gasta a cota da assinatura e não tem medida; entra pela leitura de Vicente antes e depois dela"},
+    {"cartao": "K-114", "bloco": "11", "brief": "l. 378", "conversas": [1, 1], "agentes": [
+      {"agente": "campo-de-acao", "habilidade": "kit-fonte-primaria", "min": 1, "max": 2}]},
+    {"cartao": "K-115", "bloco": "12", "brief": "l. 388", "conversas": [1, 2], "agentes": [
+      {"agente": "vários", "habilidade": "pares reais por modelo", "proxy": "media_sonnet", "min": 9, "max": 13},
+      {"agente": "auditor", "habilidade": "verificar-fundacao", "min": 1, "max": 2}],
+      "fora_da_conta": "as rodadas em Haiku 5.5 devem custar menos por token que as em Sonnet; o fator não foi medido"},
+    {"cartao": "K-116", "bloco": "14", "brief": "l. 404-405 (sem a v0.3, D-035)", "conversas": [1, 1], "agentes": [
+      {"agente": "redator", "habilidade": "escrever-secao-fundacao", "min": 1, "max": 2},
+      {"agente": "auditor", "habilidade": "verificar-fundacao", "min": 1, "max": 2}]}
+  ],
+  "metas_testadas": [25, 35, 45],
+  "calendario": {
+    "proxima_renovacao_suposta": "2026-10-28",
+    "nota": "suposição para dar datas: a semana da conta renova às quartas, como em 21/10; Vicente confirma na página",
+    "semanas_de_espera": 1,
+    "espera": "os 7 dias seguidos de relatório do dia da 10a (K-112): um cartão por vez (D-035), e o desenvolvimento espera; as esperas por Vicente (aprovação do harness no bloco 9, revisão do kit no bloco 11) e o K-002 antes do K-113 não entram"
+  },
+  "regra_antiga": {"teto_tokens_semana": 300000, "fonte": "brief de execuções, seção 0; D-023; esquemas/valores-provisorios.json, orcamento"}
+}
