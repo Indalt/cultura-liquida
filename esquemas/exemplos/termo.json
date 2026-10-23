@@ -2,7 +2,9 @@
   "id": "TE-900001",
   "conceito": "bebida não alcoólica do suco clarificado do caju, cozido na garrafa (a definição se constrói das abonações; esta é provisória do exemplo)",
   "designacoes": [
-    "cajuína"
+    {
+      "forma": "cajuína"
+    }
   ],
   "variantes": [],
   "formas_de_busca": [

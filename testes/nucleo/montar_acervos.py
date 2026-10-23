@@ -68,7 +68,7 @@ def base() -> dict[str, dict]:
         prop(1, ["EV-900001", "EV-900002", "EV-900003"], 1.0, 0.0, "verdadeiro"),
         # PR-900002: uma linhagem → μ = 0,5; Dc = 0,5; Dct = -0,5 → intermediário
         prop(2, ["EV-900004"], 0.5, 0.0, "intermediário", "quase-verdadeiro tendendo ao paracompleto", "ponto"),
-        {"id": "TE-900001", "conceito": "conceito sintético", "designacoes": ["bebida-exemplo"],
+        {"id": "TE-900001", "conceito": "conceito sintético", "designacoes": [{"forma": "bebida-exemplo"}],
          "variantes": [{"forma": "bebida exemplo", "tipo_variacao": "grafia sem hífen", "abonacoes": ["EV-900001"]}],
          "formas_de_busca": ["bebida-ezemplo"], "abonacoes": ["EV-900001"], "estado": "atestado",
          "relacoes": [], "protecao": PROT, "origem_registro": ORIGEM, "nota": NOTA},

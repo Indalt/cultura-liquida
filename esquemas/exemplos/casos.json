@@ -31,6 +31,27 @@
       "criterio": "o contrato recusa: atestado sem abonação"
     },
     {
+      "nome": "termo: designação e variante com a língua e de onde ela veio (insumo 30)",
+      "espera": "passa",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/termo-lingua.json",
+      "criterio": "insumo 30: a língua da designação, quando a fonte a der, vai com a referência da fonte (TBX langSec; SKOS etiqueta de língua)"
+    },
+    {
+      "nome": "termo: língua sem a fonte (insumo 30)",
+      "espera": "reprova",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/erro-termo-lingua-sem-fonte.json",
+      "criterio": "princípio 1: a língua não se infere; com lingua, lingua_fonte é obrigatória"
+    },
+    {
+      "nome": "termo: designação como texto solto (formato 0.1.0)",
+      "espera": "reprova",
+      "esquema": "termo",
+      "entrada": "esquemas/exemplos/erro-termo-designacao-texto.json",
+      "criterio": "termo 0.2.0 (insumo 30): cada designação é um objeto com a forma"
+    },
+    {
       "nome": "proposicao: exemplo que passa (dado real)",
       "espera": "passa",
       "esquema": "proposicao",

@@ -1,5 +1,6 @@
 """Do Termo, os booleanos, o glossário e os links; fecha o laço termo → booleano → Consulta
-nova (bloco 3; princípio 2, l. 103-105). Regra termo-0.1.
+nova (bloco 3; princípio 2, l. 103-105). Regra termo-0.2 (K-106, insumo 30: a designação é
+um objeto com a forma e, quando a fonte a der, a língua; o booleano não muda).
 
 Para cada Termo ativo (acervo/termos/*.json, ou os arquivos dados):
   - booleanos em sintaxe genérica: as designações, as variantes e as formas de busca, entre
@@ -30,12 +31,20 @@ from _acervo import carregar_acervo, prefixo, proximo_id  # noqa: E402
 from _comum import RAIZ, carregar_esquema, carregar_json, validar_objeto  # noqa: E402
 from validar_acervo import checar_termo  # noqa: E402
 
-VERSAO = "termo-0.1"
+VERSAO = "termo-0.2"
+
+
+def designacoes(t: dict) -> list[str]:
+    return [d["forma"] for d in t.get("designacoes", [])]
+
+
+def rotulo(d: dict) -> str:
+    return f"{d['forma']} ({d['lingua']})" if d.get("lingua") else d["forma"]
 
 
 def formas(t: dict) -> list[str]:
     vistos, saida = set(), []
-    for f in t.get("designacoes", []) + [v["forma"] for v in t.get("variantes", [])] + t.get("formas_de_busca", []):
+    for f in designacoes(t) + [v["forma"] for v in t.get("variantes", [])] + t.get("formas_de_busca", []):
         if f.casefold() not in vistos:
             vistos.add(f.casefold())
             saida.append(f)
@@ -53,14 +62,15 @@ def booleanos(t: dict, descritores: list[str]) -> list[str]:
 
 def glossario(termos: list[dict], raiz: Path) -> str:
     ln = [f"# Glossário (gerado por scripts/gerar_termo.py; {VERSAO})", ""]
-    for t in sorted(termos, key=lambda x: x["designacoes"][0].casefold()):
-        ln += [f"## {t['designacoes'][0]} ({t['id']}, {t['estado']})", "", t["conceito"], ""]
-        if len(t["designacoes"]) > 1:
-            ln.append(f"- **Designações:** {', '.join(t['designacoes'])}")
+    for t in sorted(termos, key=lambda x: designacoes(x)[0].casefold()):
+        ln += [f"## {designacoes(t)[0]} ({t['id']}, {t['estado']})", "", t["conceito"], ""]
+        if len(t["designacoes"]) > 1 or t["designacoes"][0].get("lingua"):
+            ln.append(f"- **Designações:** {', '.join(rotulo(d) for d in t['designacoes'])}")
         for v in t.get("variantes", []):
             extra = "; ".join(x for x in [", ".join(v.get("lugares", [])), v.get("periodo", ""),
                                            ", ".join(v.get("abonacoes", []))] if x)
-            ln.append(f"- **Variante:** {v['forma']} ({v['tipo_variacao']}{'; ' + extra if extra else ''})")
+            lingua = f"; {v['lingua']}" if v.get("lingua") else ""
+            ln.append(f"- **Variante:** {v['forma']} ({v['tipo_variacao']}{lingua}{'; ' + extra if extra else ''})")
         if t.get("formas_de_busca"):
             ln.append(f"- **Formas de busca (só no booleano):** {', '.join(t['formas_de_busca'])}")
         if t.get("abonacoes"):
@@ -101,9 +111,9 @@ def main() -> int:
         t["booleanos"] = booleanos(t, descr)
         cid = proximo_id("CO", ids)
         ids.add(cid)
-        consulta = {"id": cid, "nome": f"{t['designacoes'][0]}{' + descritores' if descr else ''} ({t['id']})",
+        consulta = {"id": cid, "nome": f"{designacoes(t)[0]}{' + descritores' if descr else ''} ({t['id']})",
                     "tipo": "mista" if descr else "termo", "termos": [t["id"]],
-                    "variantes": [f for f in formas(t) if f not in t["designacoes"]], "descritores": descr,
+                    "variantes": [f for f in formas(t) if f not in designacoes(t)], "descritores": descr,
                     "traducao": f"ambientes/traducao-consultas.json#{cid}",
                     "origem_registro": {"criado_por": "scripts/gerar_termo.py", "data": date.today().isoformat(),
                                         "execucao": a.execucao, "versao_regra": VERSAO},

@@ -2,7 +2,9 @@
   "id": "TE-900001",
   "conceito": "conceito sintético",
   "designacoes": [
-    "bebida-exemplo"
+    {
+      "forma": "bebida-exemplo"
+    }
   ],
   "variantes": [
     {

@@ -1,0 +1,20 @@
+{
+  "id": "TE-900002",
+  "conceito": "bebida não alcoólica do suco clarificado do caju, cozido na garrafa (a definição se constrói das abonações; esta é provisória do exemplo)",
+  "designacoes": [
+    {
+      "forma": "bebida-exemplo",
+      "lingua": "pt-BR"
+    }
+  ],
+  "variantes": [],
+  "formas_de_busca": [],
+  "abonacoes": [],
+  "estado": "candidato",
+  "nota": "caso que reprova (insumo 30): língua sem dizer de onde veio",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-106)",
+    "data": "2026-10-23",
+    "execucao": "EX-900001"
+  }
+}

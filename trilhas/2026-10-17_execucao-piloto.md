@@ -150,7 +150,16 @@
 - **Pronto quando:** a conta de cada conversa feita por script (`orcamento.py` com a tabela deste checklist: na abertura, H = 9 pp, o teto do projeto, 60 − 51); os blocos 7 e 8 com as regras da D-041 (normalizacao-0.2 e mu-lambda-0.2); `rodar_testes.py`: OK 132 · FALHA 0 · PENDENTE 5.
 - **Correção de passagem, sem mudar a decisão:** a D-041 troca os números dos achados do auditor no K-105. Em `trilhas/2026-10-22_K-105/achados-auditor.json`, o "nunca" inserido é o **A-015**, e a linhagem nos dois lados é o **A-010**; o trecho não localizado que contava é o A-009. Os casos novos citam os números do arquivo.
 - **Não conferido:** as listas de negação e de sentido contrário (provisórias, para o português das fontes do piloto) não passaram por trecho real; nenhuma segunda leitura independente dos scripts (cartão sem agentes).
-- **Consumo:** nenhum agente (0 tokens de agentes). O uso da conta no fim fica a informar.
+- **Consumo:** nenhum agente (0 tokens de agentes). Uso da conta no fim: 53%, pela abertura do K-106 (2 pp).
+
+## Conversa do cartão K-106 (bloco 4) — 23/10/2026 (sexta)
+
+- **Autorização de Vicente, fala original:** "Autorizo o cartão K-106 (Bloco 4: fichas de acesso, Termos e Consultas do caju), com o insumo 30. Retome pelo quadro e mova o cartão. Orçamento pela D-040 (até 60% nesta semana da conta, que renova em 28/10, às 23h). Opus 5.5, esforço médio. Uso atual: 53% (semanal) e 58% (5 h)."
+- **Uso da conta no início:** 53% (semanal) e 58% (janela de 5 h, abaixo de 70%: sem limite de lotes). A leitura fecha o K-123 em 2 pp (51% → 53%). H = 7 pp (o teto do projeto, 60 − 53; o desenvolvimento leva 16 pp na semana).
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (14415a9), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 132 · FALHA 0 · PENDENTE 5; cartão movido para Fazendo.
+- **Ordem dos lotes, para caber em H:** o Termo com a língua (insumo 30) e os Termos candidatos primeiro (arquivista), as Consultas geradas por script dos Termos, e um só lote do rastreador para as fichas e o teste das Consultas; o auditor por último, no nível da tabela do IBGE e na equivalência com TBX e SKOS (insumo 30). Conta prévia (`orcamento.py`, estimativas sem medida de 96.520 para rastreador e arquivista; auditor/conferir-fato, 31.342): os quatro lotes separados dariam 7,12 pp, acima de H.
+
+### Bloco 4 — Fichas de acesso, Termos e Consultas do caju
 
 ## Consumo semanal de agentes (D-023)
 
@@ -185,4 +194,5 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | desenvolvimento | K-105 | 37 | 43 | 6 | 227.477 | 31 | |
 | 21/10–28/10/2026 | planejamento | K-005 | 43 | 49 | 6 | 0 | — | Opus 5.5 máximo, sem agentes |
 | 21/10–28/10/2026 | planejamento | K-005 (fechamento) | 49 | 51 | 2 | 0 | — | A1 pela abertura do K-123; janela de 5 h: 36% ao abrir |
-| 21/10–28/10/2026 | desenvolvimento | K-123 | 51 | a informar | a informar | 0 | — | janela de 5 h: 48% ao abrir; renovação em 28/10/2026, 23h |
+| 21/10–28/10/2026 | desenvolvimento | K-123 | 51 | 53 | 2 | 0 | — | janela de 5 h: 48% ao abrir; A1 pela abertura do K-106; renovação em 28/10/2026, 23h |
+| 21/10–28/10/2026 | desenvolvimento | K-106 | 53 | a informar | a informar | 0 | — | janela de 5 h: 58% ao abrir; Opus 5.5 médio |
