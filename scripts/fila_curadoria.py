@@ -20,6 +20,9 @@ operação, sem pedir aprovação.
   que não está mais inconsistente, ou se há dois cartões abertos para o mesmo item.
 A ação de Vicente num cartão vira Execução com executor "pessoa" e fecha o cartão (à mão, na fase 1).
 A saída da quarentena não passa por aqui: é a regra, pelo portão (A-05, D-038).
+Só `--abrir-cartoes` grava (o quadro) e por isso deixa Execução com o alcance no log (D-030); o resto é
+relatório de leitura, como o `pegadas.py`, o `relatorio_dia.py` e o `deduplicar.py`, que não gravam
+registro e não abrem Execução.
 
 Uso:
     python scripts/fila_curadoria.py [--execucao EX-0020 | --data AAAA-MM-DD] [--saida <relatorio.md>]
@@ -35,6 +38,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_json, carregar_valores  # noqa: E402
+from _coleta import Execucao  # noqa: E402
 
 VERSAO = "fila-curadoria-0.1"
 LIMITE = carregar_valores()["valores"]["fila_curadoria"]["valor"]["cartoes_por_semana"]
@@ -167,6 +171,14 @@ def main() -> int:
     if a.abrir_cartoes and linhas_novas:
         texto = texto[:i1] + "".join(x + "\n" for x in linhas_novas) + texto[i1:]
         quadro.write_text(texto, encoding="utf-8")
+        ex = Execucao("fila-curadoria", f"fila de curadoria: cartões da frente de operação ({alvo})")
+        ex.acoes.append("scripts/fila_curadoria.py --abrir-cartoes")
+        ex.resultados += [x.split("|")[2].strip() for x in linhas_novas]
+        ex.saidas.append(quadro.relative_to(RAIZ).as_posix() if quadro.is_relative_to(RAIZ) else quadro.name)
+        ex.olhado += [f"{len(props)} Proposição(ões), {len(registros(raiz, 'acervo/faltas'))} Falta(s) e as CLB do acervo",
+                      f"{len(linhas)} cartão(ões) da frente de operação"]
+        ex.fora.append("as Faltas e os cartões fora do acervo (a F-0003, na trilha, tem o K-201)")
+        print(f"log: {ex.gravar_log()}")
         lista = next((it for it in novos if it["tipo"] == "lista"), None) or next((it for it in itens if it["tipo"] == "lista"), None)
         if lista:
             arq = raiz / "trilhas" / "planejamento" / "clb-candidatas.md"

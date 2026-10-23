@@ -54,15 +54,15 @@ def matriz(raiz: Path) -> tuple[list[dict], list[str]]:
     for am, c in sorted(cfg.items()):
         for co in cons:
             doam = [r for r in rcs if r.get("ambiente") == am and r.get("consulta") == co]
-            if any(r["estado"] in FINAIS for r in doam):
+            if not doam:
+                motivo = f"via humana (modo assistido): {c.get('motivo', '')}" if c.get("adaptador") == "assistido" else "não rodado"
+                vacuos.append(f"{am} × {co}: {motivo}")
                 continue
-            if c.get("adaptador") == "assistido" and not doam:
-                motivo = f"via humana (modo assistido): {c.get('motivo', '')}"
-            elif not doam:
-                motivo = "não rodado"
-            else:
-                motivo = "; ".join(f"{r['id']} {r['estado']} ({r.get('proxima_acao', '')})" for r in doam)
-            vacuos.append(f"{am} × {co}: {motivo}")
+            # cada janela vale por si (l. 416, 432): a dividida é coberta pelas metades, e toda outra sem pegada é vácuo (A-004)
+            for r in doam:
+                if r["estado"] in FINAIS or str(r.get("saturacao", "")).startswith("saturada:"):
+                    continue
+                vacuos.append(f"{am} × {co} ({r.get('periodo', 'todo')}): {r['id']} {r['estado']} ({r.get('proxima_acao', '')})")
     return rcs, vacuos
 
 

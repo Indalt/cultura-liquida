@@ -1,3 +1,54 @@
 {
-  "nota": "registro de teste (K-107), sintético: só para o teste do wayback.py; a triagem real é a do juridico, na trilha do K-107"
+  "nota": "registro de teste (K-107), sintético: só para o teste do wayback.py; a triagem real é trilhas/2026-10-23_K-107/triagem-wayback.json",
+  "item": "política de cópias arquivadas do scripts/wayback.py (teste)",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 2,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 3,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 4,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 5,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 6,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 7,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    },
+    {
+      "n": 8,
+      "pergunta": "teste",
+      "resposta": "não se aplica",
+      "porque": "registro de teste (K-107), sintético"
+    }
+  ]
 }

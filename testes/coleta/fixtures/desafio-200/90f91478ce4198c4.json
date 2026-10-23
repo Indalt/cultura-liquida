@@ -1,0 +1,6 @@
+{
+  "url": "https://antirobo.example/vufind/api/v1/search?lookfor=%28%22processamento%20do%20ped%C3%BAnculo%22%20OR%20descastanhamento%29&type=AllFields&limit=100&page=1&field%5B%5D=id&field%5B%5D=urls",
+  "status": 200,
+  "headers": {},
+  "corpo": "<html><title>Just a moment...</title>registro de teste (K-107), sintético</html>"
+}

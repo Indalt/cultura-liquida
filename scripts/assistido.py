@@ -67,6 +67,8 @@ def conferir(f: dict) -> list[str]:
                 erros.append(f"página {p.get('pagina')}, item {i}: sem link permanente")
             if not str(it.get("localizador", "")).strip():
                 erros.append(f"página {p.get('pagina')}, item {i}: sem localizador")
+            if any(c.isspace() for c in str(it.get("id_na_fonte", "")).strip()):
+                erros.append(f"página {p.get('pagina')}, item {i}: id_na_fonte com espaço (use o código da fonte, ou deixe vazio para usar o link)")
     return erros
 
 

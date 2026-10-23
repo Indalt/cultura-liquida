@@ -2,8 +2,8 @@
 
 Mesmo fluxo das outras Entradas: uma Entrada por item (deduplicação pelo DOI ou handle do link, e,
 sem eles, pelo próprio link), em `entrada/`, com canal, data, origem e "pessoa" como executor, e o
-localizador (onde, no item, está o que se trouxe). Documento: só o nome do arquivo, que fica fora da
-pasta versionada (texto integral fora do Git, l. 100); nunca o conteúdo.
+localizador (onde, no item, está o que se trouxe). Documento: só o nome do arquivo e a soma SHA-256 do
+conteúdo (a chave da deduplicação), e o arquivo fica fora da pasta versionada (texto integral fora do Git, l. 100); nunca o conteúdo.
 Reprova (código 1, nada gravado) sem localizador, ou sem link nem arquivo.
 
 Uso:
@@ -14,6 +14,7 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import sys
 from pathlib import Path
 
@@ -50,7 +51,14 @@ def main() -> int:
         for e in erros:
             print("    -", e)
         return 1
-    alvo = a.url or f"arquivo: {Path(a.arquivo).name} (fora da pasta versionada)"
+    if a.arquivo:
+        doc = Path(a.arquivo)
+        if not doc.is_file():
+            print(f"REPROVA: o arquivo {doc.name} não existe na máquina; nada gravado.")
+            return 1
+        soma = hashlib.sha256(doc.read_bytes()).hexdigest()
+    # o documento se identifica pelo conteúdo, não pelo nome: dois arquivos homônimos são dois itens (A-008)
+    alvo = a.url or f"arquivo: {Path(a.arquivo).name} (sha256 {soma}; fora da pasta versionada)"
     ex = Execucao("entrada-link", f"{CANAL}: {alvo}", simular=a.simular)
     ind = deduplicar.Indice(raiz)
     ident = None

@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 43 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 49 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -377,6 +377,12 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 41, UTF-8, RSS vedado e OAI da Infoteca-e | D | K-107 |
 | 42, designação preferida e TBX não conferido | D | K-122 |
 | 43, custo da retomada de agente | P; D | K-005 |
+| 44, limite da fonte e filtro de período não conferidos | D | K-108 |
+| 45, tipos de Falta de busca no contrato | D; P | a definir pelo planejamento |
+| 46, Execução descartada sem marca no log | D | a definir pelo planejamento |
+| 47, estado do Ambiente não segue os Recortes | D | K-108 |
+| 48, teto de chamadas por janela dividida | D | K-108 |
+| 49, retirada, proteção e limites na coleta | D | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-041
 

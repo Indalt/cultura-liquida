@@ -41,7 +41,10 @@ def pagina(cliente, cfg: dict, ambiente: str, consulta: str, periodo: str, curso
     r = cliente.pedir(url_pagina(cfg, consulta, periodo, p))
     if r.status != 200:
         raise RuntimeError(f"HTTP {r.status} na página {p}")
-    dados = r.json()
+    try:
+        dados = r.json()
+    except ValueError as e:
+        raise RuntimeError(f"resposta não é JSON na página {p}: {e}") from e
     if dados.get("status") != "OK":
         raise RuntimeError(f"status {dados.get('status')!r} na página {p}")
     total = int(dados.get("resultCount", 0))

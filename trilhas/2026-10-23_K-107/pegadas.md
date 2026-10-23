@@ -22,11 +22,11 @@ Gerada por `scripts/pegadas.py` (pegadas-0.1) das Execuções e dos Recortes; to
 - AM-0021 × CO-0001: não rodado
 - AM-0021 × CO-0002: não rodado
 - AM-0021 × CO-0004: não rodado
-- AM-0029 × CO-0001: RC-0003 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
-- AM-0029 × CO-0002: RC-0004 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
-- AM-0029 × CO-0003: RC-0005 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
-- AM-0029 × CO-0004: RC-0006 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
-- AM-0029 × CO-0005: RC-0007 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
+- AM-0029 × CO-0001 (todo): RC-0003 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
+- AM-0029 × CO-0002 (todo): RC-0004 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
+- AM-0029 × CO-0003 (todo): RC-0005 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
+- AM-0029 × CO-0004 (todo): RC-0006 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
+- AM-0029 × CO-0005 (todo): RC-0007 interrompido por teto (retomar do cursor 'oai_dc////300' com teto novo)
 - AM-0061 × CO-0001: via humana (modo assistido): bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar
 - AM-0061 × CO-0002: via humana (modo assistido): bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar
 - AM-0061 × CO-0003: via humana (modo assistido): bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar

@@ -23,7 +23,9 @@ Código 0 = rodou; 1 = sem triagem ou erro de uso.
 from __future__ import annotations
 
 import argparse
+import json
 import re
+import urllib.parse
 import sys
 from pathlib import Path
 
@@ -38,17 +40,44 @@ BARREIRAS = re.compile(r"\b403\b|captcha|cloudflare|verificação de navegador",
 RE_COPIA = re.compile(r"/web/(\d{14})/")
 
 
-def barrado(raiz: Path, ambiente: str | None) -> str | None:
-    """O motivo, se a ficha do ambiente registra 403, captcha ou verificação de navegador."""
-    if not ambiente:
-        return None
+def triagem_valida(tri: Path | None) -> bool:
+    """A triagem do juridico sobre esta política: JSON com o item que cita o wayback.py e as oito perguntas (A-010)."""
+    if not tri or not tri.is_file():
+        return False
+    try:
+        t = carregar_json(tri)
+    except Exception:
+        return False
+    return "wayback.py" in str(t.get("item", "")) and len(t.get("perguntas", [])) == 8
+
+
+def _ficha(raiz: Path, ambiente: str) -> dict:
     arq = raiz / "ambientes" / f"{ambiente}.json"
-    if not arq.exists():
-        return None
-    ficha = carregar_json(arq).get("ficha_de_acesso", {})
+    return carregar_json(arq).get("ficha_de_acesso", {}) if arq.exists() else {}
+
+
+def _motivo(ficha: dict) -> str | None:
     texto = " ".join(str(ficha.get(k, "")) for k in ("acesso", "robots", "como_buscar", "decisao"))
     m = BARREIRAS.search(texto)
-    return f"a ficha de {ambiente} registra {m.group(0)!r}" if m else None
+    return m.group(0) if m else None
+
+
+def barrado(raiz: Path, ambiente: str | None, url: str = "") -> str | None:
+    """O motivo, se a ficha do ambiente registra 403, captcha ou verificação de navegador; sem ambiente,
+    pelo host do link, contra os hosts das fichas com barreira (A-012)."""
+    if ambiente and (m := _motivo(_ficha(raiz, ambiente))):
+        return f"a ficha de {ambiente} registra {m!r}"
+    host = (urllib.parse.urlsplit(url).hostname or "").removeprefix("www.")
+    if not host:
+        return None
+    for arq in sorted((raiz / "ambientes").glob("AM-*.json")) if (raiz / "ambientes").exists() else []:
+        ficha = carregar_json(arq).get("ficha_de_acesso", {})
+        if (m := _motivo(ficha)) and host in {(urllib.parse.urlsplit(u).hostname or "").removeprefix("www.")
+                                              for u in re.findall(r"https?://[^\s)<>\"']+", json.dumps(
+                                                  [ficha.get(k, "") for k in ("endpoint", "link_permanente", "acesso", "como_buscar")],
+                                                  ensure_ascii=False))}:  # só os campos de via, não o robô nem as notas
+            return f"o link é do host de {arq.stem}, cuja ficha registra {m!r}"
+    return None
 
 
 def falta_que_barra(raiz: Path) -> str | None:
@@ -64,6 +93,8 @@ def falta_que_barra(raiz: Path) -> str | None:
 
 def capturar(cli: Cliente, url: str) -> str:
     r = cli.pedir(SPN + url)
+    if not 200 <= r.status < 300:  # 429 ou 5xx nunca viram cópia (A-011)
+        raise RuntimeError(f"HTTP {r.status}: o SPN2 não fez a cópia")
     for onde in (r.url, r.headers.get("Content-Location", ""), r.headers.get("Location", ""), r.corpo[:20000]):
         m = RE_COPIA.search(onde or "")
         if m:
@@ -82,8 +113,9 @@ def main() -> int:
     a = ap.parse_args()
     raiz = a.raiz if a.raiz.is_absolute() else RAIZ / a.raiz
     tri = (a.triagem if a.triagem.is_absolute() else RAIZ / a.triagem) if a.triagem else None
-    if not tri or not tri.exists():
-        print("REPROVA: sem a triagem do juridico sobre a política de cópias arquivadas (Lei 9.610; l. 740)")
+    if not triagem_valida(tri):
+        print("REPROVA: sem a triagem do juridico sobre a política de cópias arquivadas (Lei 9.610; l. 740): "
+              "o arquivo tem de ser a triagem do wayback.py, com as oito perguntas")
         return 1
     if barra := falta_que_barra(raiz):
         print(f"BARRADO: a Falta jurídica {barra} está aberta e vale para a captura em si; nada se captura, "
@@ -107,7 +139,7 @@ def main() -> int:
         if feitas >= a.max:
             ex.fora.append(f"{len(entradas) - feitas - puladas} Entrada(s) sem cópia além do máximo de {a.max} por rodada")
             break
-        if motivo := barrado(raiz, e.get("ambiente")):
+        if motivo := barrado(raiz, e.get("ambiente"), e["url_ou_arquivo"]):
             puladas += 1
             ex.fora.append(f"{e['id']}: não captura: {motivo}; fica o link permanente (l. 419)")
             continue

@@ -2,45 +2,170 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "falta.schema.json",
   "title": "Falta",
-  "description": "Registro de primeira classe do que falta (plano, item 1). Uma Falta é dita, nunca completada: não traz valor inferido. A Falta jurídica traz sempre o porquê (norma citada) e o caminho de liberação (D-020, D-025).",
+  "description": "Registro de primeira classe do que falta (plano, item 1). Uma Falta é dita, nunca completada: não traz valor inferido. A Falta jurídica traz sempre o porquê (norma citada) e o caminho de liberação (D-020, D-025). O campo vale_para (K-107, 23/10/2026) diz se a Falta jurídica barra a captura em si ou só a publicação.",
   "type": "object",
-  "required": ["id", "tipo", "o_que_falta", "por_que", "onde_aparece", "criada_por", "data"],
+  "required": [
+    "id",
+    "tipo",
+    "o_que_falta",
+    "por_que",
+    "onde_aparece",
+    "criada_por",
+    "data"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^F-[0-9]{4,}$"},
-    "tipo": {"enum": ["compreensao_local_nao_captada", "impedimento_juridico", "fonte_inacessivel", "trecho_nao_verificavel", "outro"]},
-    "subtipo_juridico": {"enum": ["direito_autoral", "conhecimento_tradicional", "lgpd", "dado_sensivel", "imagem_e_voz", "substancia_controlada", "restricao_por_costume", "outro"]},
-    "o_que_falta": {"type": "string", "minLength": 1},
-    "por_que": {"type": "string", "minLength": 1},
-    "onde_aparece": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "id": {
+      "type": "string",
+      "pattern": "^F-[0-9]{4,}$"
+    },
+    "tipo": {
+      "enum": [
+        "compreensao_local_nao_captada",
+        "impedimento_juridico",
+        "fonte_inacessivel",
+        "trecho_nao_verificavel",
+        "outro"
+      ]
+    },
+    "subtipo_juridico": {
+      "enum": [
+        "direito_autoral",
+        "conhecimento_tradicional",
+        "lgpd",
+        "dado_sensivel",
+        "imagem_e_voz",
+        "substancia_controlada",
+        "restricao_por_costume",
+        "outro"
+      ]
+    },
+    "o_que_falta": {
+      "type": "string",
+      "minLength": 1
+    },
+    "por_que": {
+      "type": "string",
+      "minLength": 1
+    },
+    "onde_aparece": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "norma": {
       "type": "object",
-      "required": ["referencia", "trecho", "url", "nivel"],
+      "required": [
+        "referencia",
+        "trecho",
+        "url",
+        "nivel"
+      ],
       "properties": {
-        "referencia": {"type": "string", "minLength": 1},
-        "trecho": {"type": "string", "minLength": 1},
-        "url": {"type": "string", "pattern": "^https?://\\S+"},
-        "nivel": {"enum": ["oficial", "secundária", "não conferido"]}
+        "referencia": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trecho": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://\\S+"
+        },
+        "nivel": {
+          "enum": [
+            "oficial",
+            "secundária",
+            "não conferido"
+          ]
+        }
       }
     },
     "caminho_de_liberacao": {
       "type": "object",
-      "required": ["guia", "estado"],
+      "required": [
+        "guia",
+        "estado"
+      ],
       "properties": {
-        "guia": {"type": "string", "minLength": 1, "description": "ID ou caminho do guia de liberação."},
-        "estado": {"enum": ["não iniciado", "em andamento", "liberado"]},
-        "data_estado": {"type": "string"},
-        "comprovante": {"type": "string"}
+        "guia": {
+          "type": "string",
+          "minLength": 1,
+          "description": "ID ou caminho do guia de liberação."
+        },
+        "estado": {
+          "enum": [
+            "não iniciado",
+            "em andamento",
+            "liberado"
+          ]
+        },
+        "data_estado": {
+          "type": "string"
+        },
+        "comprovante": {
+          "type": "string"
+        }
       }
     },
-    "criada_por": {"type": "string", "minLength": 1},
-    "data": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
-    "nota": {"type": "string"}
+    "criada_por": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "nota": {
+      "type": "string"
+    },
+    "vale_para": {
+      "enum": [
+        "captura",
+        "publicar"
+      ],
+      "description": "a quem a Falta jurídica barra: 'captura' (a cópia em si; o wayback.py não captura) ou 'publicar' (só a publicação; o cartão espera a decisão de publicar, K-010, e não chama Vicente antes dela; D-032). Sem o campo, vale para tudo (K-107)."
+    }
   },
   "allOf": [
     {
-      "if": {"properties": {"tipo": {"const": "impedimento_juridico"}}, "required": ["tipo"]},
-      "then": {"required": ["subtipo_juridico", "norma", "caminho_de_liberacao"]}
+      "if": {
+        "properties": {
+          "tipo": {
+            "const": "impedimento_juridico"
+          }
+        },
+        "required": [
+          "tipo"
+        ]
+      },
+      "then": {
+        "required": [
+          "subtipo_juridico",
+          "norma",
+          "caminho_de_liberacao"
+        ]
+      }
     },
-    {"not": {"anyOf": [{"required": ["valor"]}, {"required": ["valor_inferido"]}]}}
+    {
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "valor"
+            ]
+          },
+          {
+            "required": [
+              "valor_inferido"
+            ]
+          }
+        ]
+      }
+    }
   ]
 }

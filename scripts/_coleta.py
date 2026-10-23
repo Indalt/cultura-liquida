@@ -94,6 +94,8 @@ class Cliente:
         if base not in self._robots:
             rp = urllib.robotparser.RobotFileParser()
             r = self._bruto("GET", base + "/robots.txt")
+            if any(s in r.corpo[:4000].lower() for s in SINAIS_ANTIROBO):
+                raise BloqueioAntiRobo(f"HTTP {r.status} no robots.txt de {base}: proteção anti-robô, não se contorna")
             if r.status >= 400:
                 rp.parse([])  # sem robots.txt (404): tudo permitido, como manda o protocolo
                 rp.allow_all = r.status in (404, 410)
@@ -108,8 +110,10 @@ class Cliente:
             raise BloqueioRobos(f"robots.txt veda {url}")
         r = self._bruto(metodo, url, dados)
         baixo = r.corpo[:4000].lower()
-        if r.status == 403 or any(s in baixo for s in SINAIS_ANTIROBO) and r.status >= 400:
+        if r.status == 403 or any(s in baixo for s in SINAIS_ANTIROBO):  # também o desafio entregue com 200 (A-001)
             raise BloqueioAntiRobo(f"HTTP {r.status} em {url}: proteção anti-robô, não se contorna")
+        if r.url != url and not self.permitido(r.url):  # o destino do redirecionamento também passa pelo robots.txt
+            raise BloqueioRobos(f"robots.txt veda o destino do redirecionamento {r.url}")
         return r
 
 

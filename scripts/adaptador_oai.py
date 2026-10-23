@@ -38,7 +38,10 @@ def pagina(cliente, cfg: dict, ambiente: str, cursor) -> dict:
     r = cliente.pedir(url_pagina(cfg, cursor))
     if r.status != 200:
         raise RuntimeError(f"HTTP {r.status} no cursor {cursor!r}")
-    raiz = ET.fromstring(r.corpo.encode("utf-8"))
+    try:
+        raiz = ET.fromstring(r.corpo.encode("utf-8"))
+    except ET.ParseError as e:
+        raise RuntimeError(f"resposta não é XML no cursor {cursor!r}: {e}") from e
     erro = raiz.find("oai:error", NS)
     if erro is not None:
         if erro.get("code") == "noRecordsMatch":

@@ -1,0 +1,21 @@
+{
+  "ambiente": "AM-0021",
+  "consulta": "CO-0005",
+  "modo": "descritores",
+  "cursor": null,
+  "erros": [],
+  "data": "2026-10-23",
+  "nota": "registro de teste (K-107), sintético",
+  "origem_registro": {
+    "criado_por": "curador (teste, K-107)",
+    "data": "2026-10-23",
+    "execucao": "EX-900001"
+  },
+  "id": "RC-900001",
+  "periodo": "todo",
+  "total_informado": 10,
+  "total_visto": 0,
+  "estado": "aberto",
+  "saturacao": "saturada: 10 acima do limite da fonte (5); janela dividida",
+  "proxima_acao": "valem as metades"
+}

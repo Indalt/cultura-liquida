@@ -107,6 +107,64 @@
       "criterio": "saturada sem divisão sobrando: estado 'interrompido por teto' e a Falta (l. 427)"
     },
     {
+      "nome": "Recorte: teto de chamadas salva o cursor e cria a Falta",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--teto-chamadas",
+        "1",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-teto",
+        "--fixtures",
+        "testes/coleta/fixtures/teto"
+      ],
+      "saida_contem": "interrompido por teto; visto 5 de 10",
+      "criterio": "com página de 5 e teto 1, o Recorte para com o cursor na página 2 e a Falta 'busca interrompida por teto' (l. 427; achado A-016)"
+    },
+    {
+      "nome": "Recorte: com teto bastante, a mesma busca acaba",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--teto-chamadas",
+        "2",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-teto",
+        "--fixtures",
+        "testes/coleta/fixtures/teto"
+      ],
+      "saida_contem": "percorrido pela busca; visto 10 de 10",
+      "criterio": "duas páginas de 5 percorrem o total"
+    },
+    {
+      "nome": "cliente: desafio anti-robô entregue com HTTP 200",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-desafio-200",
+        "--fixtures",
+        "testes/coleta/fixtures/desafio-200"
+      ],
+      "saida_contem": "proteção anti-robô, não se contorna",
+      "criterio": "a página de desafio com 200 para o Recorte como o 403 (achado A-001)"
+    },
+    {
       "nome": "cliente: robots.txt que veda não se contorna",
       "espera": "passa",
       "comando": [
@@ -229,8 +287,8 @@
         "--fixtures",
         "testes/coleta/fixtures/wayback"
       ],
-      "saida_contem": "a ficha de AM-0001 registra",
-      "criterio": "a Entrada da BDTD ganha a cópia; a da Hemeroteca (ficha com 403) fica com o link permanente (l. 419)"
+      "saida_contem": "EN-0001: cópia https://web.archive.org/web/20261023120000/",
+      "criterio": "a Entrada da BDTD ganha a cópia (a Entrada da Hemeroteca, com 403 na ficha, é pulada: caso seguinte)"
     },
     {
       "nome": "Wayback: sem a triagem do juridico",
@@ -245,6 +303,38 @@
       ],
       "saida_contem": "sem a triagem do juridico",
       "criterio": "nenhuma captura antes da triagem da política de cópias (Lei 9.610; l. 740)"
+    },
+    {
+      "nome": "Wayback: Entrada de ambiente com 403 na ficha é pulada",
+      "espera": "passa",
+      "comando": [
+        "scripts/wayback.py",
+        "--triagem",
+        "testes/coleta/triagem-teste.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "EN-0002: não captura: a ficha de AM-0001 registra",
+      "criterio": "fica o link permanente (l. 419)"
+    },
+    {
+      "nome": "Wayback: arquivo qualquer no lugar da triagem",
+      "espera": "reprova",
+      "comando": [
+        "scripts/wayback.py",
+        "--triagem",
+        "testes/coleta/LEIA-ME.md",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "sem a triagem do juridico",
+      "criterio": "só a triagem do wayback.py, com as oito perguntas (achado A-010)"
     },
     {
       "nome": "Wayback: Falta jurídica aberta barra a captura",
@@ -291,15 +381,15 @@
       "criterio": "o cartão aberto sem a tensão reprova"
     },
     {
-      "nome": "pegadas: matriz e vácuos do acervo de teste",
+      "nome": "pegadas: a metade interrompida da janela dividida é vácuo",
       "espera": "passa",
       "comando": [
         "scripts/pegadas.py",
         "--raiz",
-        "testes/coleta/raiz"
+        "testes/coleta/raiz-pegadas"
       ],
-      "saida_contem": "vácuo(s)",
-      "criterio": "a matriz sai mesmo sem Recorte, com os vácuos de busca ditos"
+      "saida_contem": "AM-0021 × CO-0005 (1964-2026): RC-900003 interrompido por teto",
+      "criterio": "a janela dividida não é vácuo, a metade feita é pegada e a interrompida aparece como vácuo (l. 416, 432; achado A-004)"
     },
     {
       "nome": "relatório do dia: roda no acervo real",

@@ -1,0 +1,38 @@
+{
+  "arquivo": "scripts da coleta do K-107 (_coleta, adaptador_vufind, adaptador_oai, recorte, deduplicar, assistido, entrada_link, wayback, fila_curadoria, pegadas, relatorio_dia), esquemas/entrada.schema.json, testes/coleta/casos.json",
+  "commit": "f8265bd",
+  "data": "2026-10-23",
+  "verificador": "auditor (claude-sonnet-5-5, alto), segunda leitura do código, EX-0024",
+  "olhar": "mecanico",
+  "nota": "Resumo dos 16 achados confirmados por script ou grep e das 10 suspeitas do auditor, com o estado depois das correções do curador. Os comandos e as saídas de cada confirmação estão no log do auditor (trilhas/logs/2026-10-23_auditor.jsonl, EX-0024, resultado e decisões) e no relatório da conversa.",
+  "achados": [
+    {"id": "A-001", "descricao": "_coleta.py: o desafio anti-robô entregue com HTTP 200 passava, e o JSON ou XML ilegível derrubava a rodada sem fechar o Recorte", "estado": "corrigido", "correcao_curador": "o desafio vale em qualquer status, também no robots.txt; resposta ilegível vira erro da fonte; caso novo 'desafio anti-robô entregue com HTTP 200'"},
+    {"id": "A-002", "descricao": "recorte.py: uma página sem total apagava o total informado antes", "estado": "corrigido", "correcao_curador": "anotar_pagina só troca o total quando a página o traz"},
+    {"id": "A-003", "descricao": "recorte.py e assistido.py: 'percorrido pela busca' com menos vistos que o total informado", "estado": "corrigido", "correcao_curador": "a lista que acaba antes do total fica 'em curso', com a próxima ação de repetir a passada; não é pegada"},
+    {"id": "A-004", "descricao": "pegadas.py: o par ambiente × Consulta com uma metade da janela feita escondia a outra, interrompida", "estado": "corrigido", "correcao_curador": "o vácuo é por Recorte; a janela dividida é coberta pelas metades; caso novo com raiz-pegadas"},
+    {"id": "A-005", "descricao": "deduplicar.py: prefixo local curto do DSpace (1, 2...) virava handle global e fundia itens de repositórios diferentes", "estado": "corrigido", "correcao_curador": "handle global só no hdl.handle.net ou com prefixo do Handle System (com ponto ou de 4 algarismos ou mais), fora o 123456789"},
+    {"id": "A-006", "descricao": "deduplicar.py: o DOI levava a query e o fragmento do link", "estado": "corrigido", "correcao_curador": "o DOI para em ?, # e espaço"},
+    {"id": "A-007", "descricao": "entrada_link.py com --ambiente duplicava a Entrada que o Recorte já criara para o mesmo link", "estado": "corrigido", "correcao_curador": "Indice.achar procura também pelo link, com ou sem chave"},
+    {"id": "A-008", "descricao": "entrada_link.py: dois documentos homônimos viravam uma Entrada só", "estado": "corrigido", "correcao_curador": "o documento se identifica pela soma SHA-256 do conteúdo; arquivo inexistente reprova"},
+    {"id": "A-009", "descricao": "assistido.py: id_na_fonte com espaço derrubava o registro pela metade", "estado": "corrigido", "correcao_curador": "a conferência do formulário reprova id_na_fonte com espaço antes de gravar"},
+    {"id": "A-010", "descricao": "wayback.py: qualquer arquivo servia de triagem", "estado": "corrigido", "correcao_curador": "a triagem tem de citar o wayback.py e ter as oito perguntas; caso novo que reprova com o LEIA-ME"},
+    {"id": "A-011", "descricao": "wayback.py: um 429 ou 5xx com um link de snapshot no corpo virava cópia", "estado": "corrigido", "correcao_curador": "só resposta 2xx vira cópia"},
+    {"id": "A-012", "descricao": "wayback.py: Entrada sem ambiente, de host com 403 na ficha, não era barrada", "estado": "corrigido", "correcao_curador": "sem ambiente, o host do link se compara aos hosts dos campos de via das fichas com barreira"},
+    {"id": "A-013", "descricao": "o campo vale_para, lido pelo wayback.py e pela fila, não estava em nenhum contrato", "estado": "corrigido", "correcao_curador": "vale_para (captura ou publicar) entrou no contrato da Falta"},
+    {"id": "A-014", "descricao": "deduplicar, fila_curadoria, pegadas e relatorio_dia não gravam log com alcance", "estado": "corrigido em parte", "correcao_curador": "a fila grava Execução com alcance quando abre cartões; os outros três são relatórios de leitura, sem registro gravado, e o docstring da fila o diz; a abertura do K-202, antes da correção, ficou sem log (dita no checklist)"},
+    {"id": "A-015", "descricao": "três casos passariam por engano (pegadas, relatório do dia, Wayback)", "estado": "corrigido em parte", "correcao_curador": "pegadas e Wayback com saída que só aparece no comportamento certo; o do relatório do dia segue no acervo real, como prova de que roda"},
+    {"id": "A-016", "descricao": "nenhum caso de teto de chamadas", "estado": "corrigido", "correcao_curador": "dois casos: teto 1 com página de 5 (interrompido, cursor e Falta) e teto 2 (percorrido)"}
+  ],
+  "suspeitas": [
+    {"id": "S-01", "descricao": "o redirecionamento não passava pelo robots.txt", "estado": "corrigido", "correcao_curador": "o destino do redirecionamento passa pelo robots.txt (o pedido já saiu; o resultado não se usa)"},
+    {"id": "S-02", "descricao": "robots.txt com desafio lido como robots", "estado": "corrigido", "correcao_curador": "o desafio no robots.txt para como anti-robô"},
+    {"id": "S-03", "descricao": "cada metade da janela recebe o teto inteiro de chamadas", "estado": "aberto", "correcao_curador": "insumo do K-107"},
+    {"id": "S-04", "descricao": "--periodo com um ano só quebra", "estado": "aberto", "correcao_curador": "o formato é AAAA-AAAA, dito no uso"},
+    {"id": "S-05", "descricao": "Entrada retirada não guarda o identificador, e uma coleta nova recria o item", "estado": "aberto", "correcao_curador": "insumo do K-107"},
+    {"id": "S-06", "descricao": "o wayback.py não olha a proteção da Entrada nem o limite diário do anônimo", "estado": "aberto", "correcao_curador": "a captura está barrada pela F-0004; insumo do K-107"},
+    {"id": "S-07", "descricao": "a regex de barreira é mais estreita que o vocabulário das fichas", "estado": "aberto", "correcao_curador": "sem efeito hoje (só a Hemeroteca tem barreira e é pega); fica no insumo da proteção"},
+    {"id": "S-08", "descricao": "429 e 5xx viravam Falta 'fonte inacessível' e via humana", "estado": "corrigido", "correcao_curador": "erro da fonte fica no Recorte com a próxima ação de repetir, sem Falta"},
+    {"id": "S-09", "descricao": "a ação de Vicente num cartão ainda não vira Execução por script", "estado": "aberto", "correcao_curador": "na fase 1, à mão, como o docstring diz"},
+    {"id": "S-10", "descricao": "a retomada pelo cursor não foi conferida por script", "estado": "aberto", "correcao_curador": "o caso de teto mostra o cursor salvo; a retomada real é do bloco 6"}
+  ]
+}

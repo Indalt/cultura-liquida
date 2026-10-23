@@ -1,0 +1,24 @@
+{
+  "ambiente": "AM-0021",
+  "consulta": "CO-0005",
+  "modo": "descritores",
+  "cursor": 2,
+  "erros": [],
+  "data": "2026-10-23",
+  "nota": "registro de teste (K-107), sintético",
+  "origem_registro": {
+    "criado_por": "curador (teste, K-107)",
+    "data": "2026-10-23",
+    "execucao": "EX-900001"
+  },
+  "id": "RC-900003",
+  "periodo": "1964-2026",
+  "total_informado": 5,
+  "total_visto": 2,
+  "estado": "interrompido por teto",
+  "faltas": [
+    "F-900001"
+  ],
+  "saturacao": "não exaurido",
+  "proxima_acao": "retomar do cursor 2"
+}

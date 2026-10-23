@@ -2,7 +2,7 @@
 
 A chave é o identificador: DOI, handle ou o ID na fonte, nessa ordem (doi:<DOI>, hdl:<handle>,
 <ambiente>:<ID>). Um handle só vale como chave global quando é resolvível no hdl.handle.net, ou
-quando tem prefixo numérico diferente do 123456789 (o prefixo de exemplo do DSpace, que muitos
+quando tem prefixo do Handle System (com ponto, como 20.500.12733, ou de 4 algarismos ou mais), diferente do 123456789 (o prefixo de exemplo do DSpace, que muitos
 repositórios mantêm); senão, a chave é a do ambiente com o handle local e o repositório
 (<ambiente>:<host>/handle/<handle>, sem porta nem www.: dois registros da BDTD que apontam para o mesmo
 handle num espelho do repositório são o mesmo item) e, sem handle, o ID na fonte. Quando várias Consultas acham o mesmo item, a
@@ -35,7 +35,7 @@ PROTECAO_PADRAO = {
     "precisao_lugar": "não se aplica", "dado_sensivel": False, "crianca_ou_adolescente": False,
     "pedido_de_retirada": "nenhum",
 }
-RE_DOI = re.compile(r"(10\.\d{4,9}/\S+)", re.I)
+RE_DOI = re.compile(r"(10\.\d{4,9}/[^\s?#]+)", re.I)  # sem a query nem o fragmento do link (A-006)
 RE_HANDLE = re.compile(r"(?:hdl\.handle\.net/|/handle/)([^/?#\s]+/[^/?#\s]+)")
 
 
@@ -52,7 +52,8 @@ def chave(ambiente: str, id_fonte: str, urls: list[str] = (), doi: str | None = 
             continue
         h = m.group(1)
         prefixo_h = h.split("/")[0]
-        if "hdl.handle.net/" in u or (prefixo_h.replace(".", "").isdigit() and prefixo_h != "123456789"):
+        global_ = prefixo_h.replace(".", "").isdigit() and ("." in prefixo_h or len(prefixo_h) >= 4) and prefixo_h != "123456789"
+        if "hdl.handle.net/" in u or global_:  # prefixos curtos (1, 2...) são locais do DSpace (A-005)
             return "hdl:" + h
     for u in urls:  # handle local: o item é o handle naquele repositório (host sem porta nem www.)
         if m := RE_HANDLE.search(u):
@@ -93,9 +94,7 @@ class Indice:
     def achar(self, identificador: str | None, url: str) -> tuple[Path, dict] | None:
         if identificador and identificador in self.por_chave:
             return self.por_chave[identificador]
-        if not identificador:
-            return self.por_url.get(normalizar_url(url))
-        return None
+        return self.por_url.get(normalizar_url(url))  # o mesmo link é o mesmo item, com ou sem chave (A-007)
 
 
 def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, origem: dict,

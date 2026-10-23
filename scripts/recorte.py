@@ -150,7 +150,8 @@ def traducao(raiz: Path, co: str, ambiente: str) -> dict:
 
 # --- estado --------------------------------------------------------------------------------------
 def anotar_pagina(r: dict, total, vistos: int, proximo, data: str) -> None:
-    r["total_informado"] = total
+    if total is not None or r.get("total_informado") is None:  # página sem total não apaga o já informado (A-002)
+        r["total_informado"] = total
     r["total_visto"] = r.get("total_visto", 0) + vistos
     r["cursor"] = proximo
     r["estado"] = "em curso"
@@ -162,9 +163,16 @@ def anotar_pagina(r: dict, total, vistos: int, proximo, data: str) -> None:
         r.pop("explicacao_total_visto", None)
 
 
-def fechar(reg: Registro, r: dict, *, acabou: bool, teto_estourado: str | None, erro: str | None) -> None:
+def fechar(reg: Registro, r: dict, *, acabou: bool, teto_estourado: str | None, erro: str | None,
+           passageiro: bool = False) -> None:
     faltas = list(r.get("faltas", []))
-    if erro:
+    if erro and passageiro:  # HTTP 429, 5xx, resposta ilegível: não é barreira, repete-se (S-08)
+        r["erros"] = r.get("erros", []) + [erro]
+        r["proxima_acao"] = f"repetir mais tarde do cursor {r['cursor']!r}: erro da fonte, não barreira"
+        r["saturacao"] = f"não exaurido: {r['total_visto']} visto(s) até o erro"
+        if r["estado"] == "em curso" and r["cursor"] is None:
+            r["estado"] = "aberto"
+    elif erro:
         r["erros"] = r.get("erros", []) + [erro]
         r["proxima_acao"] = "via humana: busca assistida de Vicente (scripts/assistido.py); a via automática não se contorna"
         r["saturacao"] = f"não exaurido: {r['total_visto']} visto(s) até o erro"
@@ -185,6 +193,10 @@ def fechar(reg: Registro, r: dict, *, acabou: bool, teto_estourado: str | None, 
             r["proxima_acao"] = "repetir no monitoramento; o total não se conhece"
             faltas.append(reg.falta("outro", f"total desconhecido: {r['id']} ({r['ambiente']} × {r['consulta']})",
                                     "a fonte não informou o total da consulta", [r["id"]]))
+        elif r["total_visto"] < r["total_informado"]:  # a lista acabou antes do total: não é pegada (A-003)
+            r["estado"] = "em curso"
+            r["saturacao"] = f"não exaurido: a lista acabou com {r['total_visto']} de {r['total_informado']} visto(s)"
+            r["proxima_acao"] = "repetir a passada do começo: a fonte entregou menos que o total informado"
         else:
             r["estado"] = "percorrido pela busca"
             r["saturacao"] = (f"exaurido: {r['total_visto']} de {r['total_informado']} visto(s), passada completa e não saturada")
@@ -233,7 +245,7 @@ def rodar_busca(reg, cli, mod, cfg, ambiente, co, periodo, teto, resumo) -> None
             p = mod.pagina(cli, cfg, ambiente, consulta, periodo, r["cursor"])
         except (BloqueioRobos, BloqueioAntiRobo, RuntimeError) as e:
             reg.ex.erros.append(f"{r['id']}: {e}")
-            fechar(reg, r, acabou=False, teto_estourado=None, erro=str(e))
+            fechar(reg, r, acabou=False, teto_estourado=None, erro=str(e), passageiro=isinstance(e, RuntimeError))
             break
         pags += 1
         if p["saturada"] and r["total_visto"] == 0:
@@ -287,7 +299,7 @@ def rodar_colheita(reg, cli, mod, cfg, ambiente, cos, teto, resumo) -> None:
         except (BloqueioRobos, BloqueioAntiRobo, RuntimeError) as e:
             reg.ex.erros.append(f"{ambiente}: {e}")
             for r, *_ in alvos:
-                fechar(reg, r, acabou=False, teto_estourado=None, erro=str(e))
+                fechar(reg, r, acabou=False, teto_estourado=None, erro=str(e), passageiro=isinstance(e, RuntimeError))
             break
         pags += 1
         cursor = p["proximo"]
