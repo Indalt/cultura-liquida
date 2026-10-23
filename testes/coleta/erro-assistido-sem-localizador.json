@@ -1,0 +1,29 @@
+{
+  "ambiente": "AM-0001",
+  "consulta": "CO-0002",
+  "periodo": "todo",
+  "sintaxe": "(cajuína/cajuina)",
+  "data": "2026-10-23",
+  "total_informado": 3,
+  "terminou": true,
+  "paginas": [
+    {
+      "pagina": 1,
+      "link_permanente": "",
+      "resultados_vistos": 3,
+      "itens": [
+        {
+          "link_permanente": "https://memoria.bn.gov.br/exemplo-teste/item-1",
+          "id_na_fonte": "teste-1",
+          "localizador": "página 1, coluna 2"
+        },
+        {
+          "link_permanente": "https://memoria.bn.gov.br/exemplo-teste/item-2",
+          "id_na_fonte": "teste-2",
+          "localizador": ""
+        }
+      ]
+    }
+  ],
+  "observacoes": "registro de teste (K-107), sintético"
+}

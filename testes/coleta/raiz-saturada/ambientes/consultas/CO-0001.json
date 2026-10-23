@@ -1,0 +1,21 @@
+{
+  "id": "CO-0001",
+  "nome": "caju (TE-0001)",
+  "tipo": "termo",
+  "termos": [
+    "TE-0001"
+  ],
+  "variantes": [
+    "cajú",
+    "ca-ju"
+  ],
+  "descritores": [],
+  "traducao": "ambientes/traducao-consultas.json#CO-0001",
+  "origem_registro": {
+    "criado_por": "scripts/gerar_termo.py",
+    "data": "2026-10-23",
+    "execucao": "EX-0015",
+    "versao_regra": "termo-0.2"
+  },
+  "nota": "proposta gerada do Termo pelo laço termo → booleano → Consulta; booleano: (\"caju\" OR \"cajú\" OR \"ca-ju\")"
+}

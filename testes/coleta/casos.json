@@ -1,0 +1,298 @@
+{
+  "habilidade": "scripts da coleta (K-107, bloco 5)",
+  "rodada": "A",
+  "casos": [
+    {
+      "nome": "adaptador VuFind: BDTD com resposta gravada",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/bdtd"
+      ],
+      "saida_contem": "percorrido pela busca; visto 10 de 10; 10 Entrada(s) nova(s)",
+      "criterio": "a resposta real de 23/10 (só id e urls, sem autoria) vira um Recorte percorrido e 10 Entradas"
+    },
+    {
+      "nome": "adaptador OAI-PMH: Infoteca-e com resposta gravada e filtro local",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0029",
+        "--consulta",
+        "CO-0001,CO-0002",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/oai"
+      ],
+      "saida_contem": "colhido 19 de 19; 4 Entrada(s) nova(s)",
+      "criterio": "uma colheita para duas Consultas; o filtro local acha os 4 registros de caju (página real recortada a 19 registros, sem autoria nem descrição)"
+    },
+    {
+      "nome": "deduplicação: um item achado por duas Consultas vira uma Entrada",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005,CO-0003",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/bdtd"
+      ],
+      "saida_contem": "71 Entrada(s) nova(s), 9 repetida(s)",
+      "criterio": "os 9 itens de CO-0005 que CO-0003 também acha ficam numa Entrada só, com os dois Recortes (l. 435)"
+    },
+    {
+      "nome": "deduplicação: duplicata forçada em entrada/",
+      "espera": "reprova",
+      "comando": [
+        "scripts/deduplicar.py",
+        "--conferir",
+        "--raiz",
+        "testes/coleta/raiz-duplicata"
+      ],
+      "saida_contem": "1 duplicata(s)",
+      "criterio": "duas Entradas com o mesmo identificador reprovam"
+    },
+    {
+      "nome": "Recorte: resposta saturada divide a janela",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-saturada",
+        "--fixtures",
+        "testes/coleta/fixtures/saturada"
+      ],
+      "saida_contem": "saturada, dividida em 1900-1963 e 1964-2026",
+      "criterio": "com limite da fonte 5, o total 10 divide a janela; só os Recortes divididos contam como pegada (l. 432)"
+    },
+    {
+      "nome": "Recorte: sem divisão possível, teto e Falta",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--teto-divisoes",
+        "0",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-saturada",
+        "--fixtures",
+        "testes/coleta/fixtures/saturada"
+      ],
+      "saida_contem": "busca interrompida por teto",
+      "criterio": "saturada sem divisão sobrando: estado 'interrompido por teto' e a Falta (l. 427)"
+    },
+    {
+      "nome": "cliente: robots.txt que veda não se contorna",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-robots",
+        "--fixtures",
+        "testes/coleta/fixtures/robots"
+      ],
+      "saida_contem": "fonte inacessível pela via automática",
+      "criterio": "o pedido não sai; o Recorte guarda o erro e nasce a Falta 'fonte inacessível'"
+    },
+    {
+      "nome": "cliente: 403 com desafio anti-robô não se contorna",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-403",
+        "--fixtures",
+        "testes/coleta/fixtures/antirobo"
+      ],
+      "saida_contem": "proteção anti-robô, não se contorna",
+      "criterio": "um 403 com desafio para o Recorte, vira Falta e via humana (l. 419)"
+    },
+    {
+      "nome": "modo assistido: formulário preenchido vira Recorte e Entradas",
+      "espera": "passa",
+      "comando": [
+        "scripts/assistido.py",
+        "registrar",
+        "testes/coleta/assistido-ok.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz"
+      ],
+      "saida_contem": "percorrido pela busca; 2 Entrada(s) nova(s)",
+      "criterio": "a busca de Vicente, com link permanente por página e localizador, executor pessoa"
+    },
+    {
+      "nome": "modo assistido: item sem localizador e página sem link",
+      "espera": "reprova",
+      "comando": [
+        "scripts/assistido.py",
+        "registrar",
+        "testes/coleta/erro-assistido-sem-localizador.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz"
+      ],
+      "saida_contem": "sem localizador",
+      "criterio": "nada se grava sem link permanente e localizador (l. 429)"
+    },
+    {
+      "nome": "entrada por link: link com handle e localizador",
+      "espera": "passa",
+      "comando": [
+        "scripts/entrada_link.py",
+        "--url",
+        "https://hdl.handle.net/20.500.12733/1641178",
+        "--localizador",
+        "resumo",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz"
+      ],
+      "saida_contem": "Entrada nova, canal link ou documento trazido por Vicente",
+      "criterio": "o link de Vicente entra pelo mesmo fluxo, com canal, data, origem e localizador (§5.4; D-035)"
+    },
+    {
+      "nome": "entrada por link: sem localizador",
+      "espera": "reprova",
+      "comando": [
+        "scripts/entrada_link.py",
+        "--url",
+        "https://hdl.handle.net/20.500.12733/1641178",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz"
+      ],
+      "saida_contem": "sem localizador",
+      "criterio": "o registro exige o localizador (l. 449)"
+    },
+    {
+      "nome": "entrada por link: item que já tem Entrada",
+      "espera": "passa",
+      "comando": [
+        "scripts/entrada_link.py",
+        "--url",
+        "https://hdl.handle.net/20.500.12733/1641178",
+        "--localizador",
+        "resumo",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-duplicata"
+      ],
+      "saida_contem": "o item já tem Entrada",
+      "criterio": "uma Entrada por item também no canal de Vicente"
+    },
+    {
+      "nome": "Wayback: captura com resposta gravada e ficha com 403 pulada",
+      "espera": "passa",
+      "comando": [
+        "scripts/wayback.py",
+        "--triagem",
+        "testes/coleta/triagem-teste.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "a ficha de AM-0001 registra",
+      "criterio": "a Entrada da BDTD ganha a cópia; a da Hemeroteca (ficha com 403) fica com o link permanente (l. 419)"
+    },
+    {
+      "nome": "Wayback: sem a triagem do juridico",
+      "espera": "reprova",
+      "comando": [
+        "scripts/wayback.py",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "sem a triagem do juridico",
+      "criterio": "nenhuma captura antes da triagem da política de cópias (Lei 9.610; l. 740)"
+    },
+    {
+      "nome": "fila: conflito, Falta jurídica e lista das CLB candidatas",
+      "espera": "passa",
+      "comando": [
+        "scripts/fila_curadoria.py",
+        "--raiz",
+        "testes/coleta/raiz-fila",
+        "--quadro",
+        "testes/coleta/quadro-fila.md",
+        "--conferir"
+      ],
+      "saida_contem": "4 cartão(ões) novo(s); fila 2 de 15",
+      "criterio": "PR inconsistente e Falta a liberar chamam Vicente; a Falta só de publicar (cartão à espera do K-010) e a lista não; o K-201 à espera não conta"
+    },
+    {
+      "nome": "fila: cartão de conflito para Proposição que não está inconsistente",
+      "espera": "reprova",
+      "comando": [
+        "scripts/fila_curadoria.py",
+        "--raiz",
+        "testes/coleta/raiz-fila",
+        "--quadro",
+        "testes/coleta/quadro-fila-errado.md",
+        "--conferir"
+      ],
+      "saida_contem": "não está inconsistente",
+      "criterio": "o cartão aberto sem a tensão reprova"
+    },
+    {
+      "nome": "pegadas: matriz e vácuos do acervo de teste",
+      "espera": "passa",
+      "comando": [
+        "scripts/pegadas.py",
+        "--raiz",
+        "testes/coleta/raiz"
+      ],
+      "saida_contem": "vácuo(s)",
+      "criterio": "a matriz sai mesmo sem Recorte, com os vácuos de busca ditos"
+    },
+    {
+      "nome": "relatório do dia: roda no acervo real",
+      "espera": "passa",
+      "comando": [
+        "scripts/relatorio_dia.py"
+      ],
+      "saida_contem": "relatorio-dia-0.1",
+      "criterio": "o relatório calculado abre a conversa (l. 512)"
+    }
+  ]
+}

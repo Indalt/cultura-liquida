@@ -1,0 +1,35 @@
+{
+  "id": "TE-0002",
+  "conceito": "PROVISÓRIO, a confirmar nas abonações: a bebida cajuína, nomeada no bem 'Produção tradicional e práticas socioculturais associadas à cajuína no Piauí' (Livro dos Saberes do IPHAN; registro em 15/05/2014, revalidação em 17/06/2025), ligada ao processamento do pedúnculo do caju e oferecida em garrafa como gesto de acolhimento.",
+  "designacoes": [
+    {
+      "forma": "cajuína"
+    }
+  ],
+  "variantes": [],
+  "formas_de_busca": [
+    "cajuina",
+    "caju-ína",
+    "cajuí-na",
+    "ca-juína",
+    "cajuyna"
+  ],
+  "abonacoes": [],
+  "estado": "candidato",
+  "relacoes": [
+    {
+      "tipo": "relacionado",
+      "termo": "TE-0001"
+    }
+  ],
+  "nota": "Candidato do piloto (D-031). O conceito vem de trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json: registro_iphan.situacao (nome do bem, livro, datas; nível oficial, página do BCR aberta em 17/10/2026), registro_iphan.fatos[0].citacao (o gesto de acolhimento), ambientes[3].por_que_serve e primeiras_fontes[1].por_que. As citações do BCR vieram de leitor de página, não do PDF (erros[5] do mapa): ficam em quarentena até a abonação. Formas de busca por família (l. 433): cajuina (acentos; a BDTD deu o mesmo total sem acento, o que só mostra que a busca ignora o acento), caju-ína, cajuí-na, ca-juína (hífen de quebra de linha), cajuyna (y/i); hipóteses que só ficam se renderem ocorrências. Sem língua: nenhuma citação do mapa a dá (insumo 30).",
+  "origem_registro": {
+    "criado_por": "arquivista (registrar-termo 0.1.1, K-106)",
+    "data": "2026-10-23",
+    "execucao": "EX-0014"
+  },
+  "booleanos": [
+    "(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+    "(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+  ]
+}

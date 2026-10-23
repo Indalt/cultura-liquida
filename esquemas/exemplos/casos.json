@@ -150,6 +150,20 @@
       "criterio": "o contrato recusa: quarentena sem o selo"
     },
     {
+      "nome": "entrada: item coletado com o identificador e dois Recortes (K-107)",
+      "espera": "passa",
+      "esquema": "entrada",
+      "entrada": "esquemas/exemplos/entrada-coletada.json",
+      "criterio": "uma Entrada por item, com os Recortes de origem e a chave da deduplicação (l. 435)"
+    },
+    {
+      "nome": "entrada: item coletado sem o identificador (K-107)",
+      "espera": "reprova",
+      "esquema": "entrada",
+      "entrada": "esquemas/exemplos/erro-entrada-sem-identificador.json",
+      "criterio": "o contrato recusa: sem a chave da deduplicação, a Entrada não se confere"
+    },
+    {
       "nome": "trecho: exemplo que passa (dado real)",
       "espera": "passa",
       "esquema": "trecho",

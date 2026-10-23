@@ -1,0 +1,28 @@
+{
+  "id": "EN-900003",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-900002",
+  "recortes": [
+    "RC-900001",
+    "RC-900002"
+  ],
+  "data_entrada": "2026-10-23",
+  "url_ou_arquivo": "https://bdtd.ibict.br/vufind/Record/EXEMPLO_0001",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "exemplo de esquema que reprova: item coletado sem o identificador da deduplicação",
+  "origem_registro": {
+    "criado_por": "curador (exemplo de esquema, K-107)",
+    "data": "2026-10-23",
+    "execucao": "EX-900001"
+  }
+}

@@ -1,7 +1,8 @@
 """Funções comuns aos scripts do núcleo (bloco 3): leitura do acervo, índice por ID,
 esquema de cada prefixo e o próximo ID da faixa do gravador.
 
-Layout (esquemas/valores-provisorios.json, valor "layout"): ambientes/<id>.json,
+Layout (esquemas/valores-provisorios.json, valor "layout"; ambientes/adaptadores.json é configuração
+dos adaptadores, K-107): ambientes/<id>.json,
 ambientes/consultas/, ambientes/recortes/, entrada/, acervo/<tipo>/. As pastas nascem
 no passo em que entram (l. 723): pasta ausente não é erro.
 """
@@ -42,7 +43,7 @@ def arquivos_acervo(raiz: Path = RAIZ) -> list[Path]:
         pasta = raiz / nome
         if pasta.exists():
             saida += sorted(p for p in pasta.rglob("*.json")
-                            if p.name not in ("traducao-consultas.json", "rotinas.json"))
+                            if p.name not in ("traducao-consultas.json", "rotinas.json", "adaptadores.json"))
     return saida
 
 

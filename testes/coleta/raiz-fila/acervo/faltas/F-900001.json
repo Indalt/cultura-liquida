@@ -1,0 +1,10 @@
+{
+  "id": "F-900001",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "direito_autoral",
+  "caminho_de_liberacao": {
+    "guia": "teste",
+    "estado": "não iniciado"
+  },
+  "nota": "registro de teste (K-107), sintético"
+}

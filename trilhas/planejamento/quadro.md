@@ -27,7 +27,7 @@ Lógica kanban: **A fazer → Fazendo → Concluído**. Cada sessão pega **um**
 
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
-| A fazer | **K-107** Bloco 5: adaptadores, Recorte, deduplicação, modo assistido, entrada por link, Wayback. Parada (c): chave do Internet Archive; padrão: sem chave, no ritmo anônimo | brief, bloco 5 | cada adaptador testado e numa rodada real curta; o `relatorio_dia.py` rodando |
+| Fazendo (23/10/2026) | **K-107** Bloco 5: adaptadores, Recorte, deduplicação, modo assistido, entrada por link, Wayback. Parada (c): chave do Internet Archive; padrão: sem chave, no ritmo anônimo | brief, bloco 5 | cada adaptador testado e numa rodada real curta; o `relatorio_dia.py` rodando |
 | A fazer | **K-108** Bloco 6: primeira coleta real. A medição de horas e consumo (bloco 13) começa aqui e segue como registro, não como cartão (D-035) | brief, blocos 6 e 13 | todo Recorte com estado válido; o que não se exauriu, como Falta com o motivo |
 | A fazer | **K-109** Bloco 7: do bruto à Evidência, com triagem jurídica e guias | brief, bloco 7 | o `validar_acervo.py` passando; cada dúvida jurídica como Falta com norma e caminho |
 | A fazer | **K-110** Bloco 8: Termos, ficha, grafo, Educação e wiki local | brief, bloco 8 | a ficha aceita pelo validador; μ e λ batendo com o recálculo; o wiki abrindo na máquina, fora do Git |

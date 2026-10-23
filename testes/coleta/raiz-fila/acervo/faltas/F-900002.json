@@ -1,0 +1,11 @@
+{
+  "id": "F-900002",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "direito_autoral",
+  "vale_para": "publicar",
+  "caminho_de_liberacao": {
+    "guia": "teste",
+    "estado": "não iniciado"
+  },
+  "nota": "registro de teste (K-107), sintético"
+}
