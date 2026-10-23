@@ -1,9 +1,9 @@
 # Relatório de testes
 
-Gerado por `scripts/rodar_testes.py` em 2026-10-22T23:31:38-03:00.
+Gerado por `scripts/rodar_testes.py` em 2026-10-22T23:49:11-03:00.
 Validador: `jsonschema` se instalado (.venv), senão o validador mínimo de `scripts/_comum.py`. Python: 3.12.10.
 
-**Totais:** OK: 112 · FALHA: 0 · PENDENTE: 5.
+**Totais:** OK: 120 · FALHA: 0 · PENDENTE: 5.
 
 "OK (reprovou como esperado)" = o caso com erro foi recusado pelo validador, como deve ser.
 
@@ -103,7 +103,7 @@ Validador: `jsonschema` se instalado (.venv), senão o validador mínimo de `scr
 |---|---|---|---|---|
 | insumo 22 no formato fixo | passa | passa | OK |  |
 | insumo explorado na sessão e com campo inventado | reprova | reprova | OK (reprovou como esperado) | (raiz): Additional properties are not allowed ('solucao_aplicada' was unexpected); sem_explorar: True was expected |
-| o script daria o número seguinte e as duas linhas | passa | passa | OK |     mapa-tres-frentes.md, seção 6: / 32, o script do mapa lê a 6A do brief por linhas fixas (exemplo da registrar-melhoria) / P; D / K-006 / |
+| o script daria o número seguinte e as duas linhas | passa | passa | OK |     mapa-tres-frentes.md, seção 6: / 37, o script do mapa lê a 6A do brief por linhas fixas (exemplo da registrar-melhoria) / P; D / K-006 / |
 | texto de insumo já anotado é recusado | reprova | reprova | OK (reprovou como esperado) |     - insumo: o mesmo texto já está anotado em trilhas/insumos-planejamento.md |
 | insumo com e-mail de terceiro é recusado | reprova | reprova | OK (reprovou como esperado) |     - dado pessoal de terceiros: e-mail: [dado pessoal omitido] |
 
@@ -177,6 +177,8 @@ Validador: `jsonschema` se instalado (.venv), senão o validador mínimo de `scr
 | pessoa: nome no registro | reprova | reprova | OK (reprovou como esperado) | (raiz): Additional properties are not allowed ('nome' was unexpected) |
 | valores-provisorios: o registro real passa | passa | passa | OK |  |
 | valores-provisorios: valor sem a linha da Fundação que o permite | reprova | reprova | OK (reprovou como esperado) | valores/lote_maquina: 'linha_fundacao' is a required property |
+| pessoa: retirada só com o código (exemplo de esquema) | passa | passa | OK |  |
+| pessoa: retirada ainda com conteúdo | reprova | reprova | OK (reprovou como esperado) | (raiz): 'papeis' is not one of ['codigo', 'retirado', 'fundido_em', 'origem_registro', 'nota'] |
 
 ### scripts do núcleo (K-105, bloco 3) (rodada B)
 
@@ -188,18 +190,18 @@ Validador: `jsonschema` se instalado (.venv), senão o validador mínimo de `scr
 | localizar_trecho: PDF sem texto legível vira Falta | reprova | reprova | OK (reprovou como esperado) | estado: não verificável por máquina · grau None · limiar 0.9 · normalizacao-0.1 |
 | localizar_trecho: reconferência do Trecho localizado | passa | passa | OK | o Trecho se sustenta: localizado, grau 1.0, hash igual |
 | localizar_trecho: trecho alterado marcado como localizado | reprova | reprova | OK (reprovou como esperado) | NÃO SE SUSTENTA: marcado como exato (1.0), mas o texto não está literal na fonte (grau 0.9016) |
-| validar_acervo: acervo de teste completo | passa | passa | OK | acervo-0.1: 25 registros; válido |
-| validar_acervo: forma de OCR registrada como variante | reprova | reprova | OK (reprovou como esperado) | acervo-0.1: 25 registros; 1 erro(s) |
-| validar_acervo: Termo atestado sem abonação localizada | reprova | reprova | OK (reprovou como esperado) | acervo-0.1: 25 registros; 1 erro(s) |
-| validar_acervo: W sem a voz de quem pratica | reprova | reprova | OK (reprovou como esperado) | acervo-0.1: 25 registros; 1 erro(s) |
-| validar_acervo: frase da ficha sem marcação | reprova | reprova | OK (reprovou como esperado) | acervo-0.1: 25 registros; 1 erro(s) |
-| validar_acervo: Evidência aponta para Trecho que não existe | reprova | reprova | OK (reprovou como esperado) | acervo-0.1: 25 registros; 2 erro(s) |
-| validar_acervo: colisão de ID | reprova | reprova | OK (reprovou como esperado) | acervo-0.1: 25 registros; 1 erro(s) |
-| validar_acervo: o acervo do repositório | passa | passa | OK | acervo-0.1: 69 registros; válido |
+| validar_acervo: acervo de teste completo | passa | passa | OK | acervo-0.2: 25 registros; válido |
+| validar_acervo: forma de OCR registrada como variante | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: Termo atestado sem abonação localizada | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: W sem a voz de quem pratica | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: frase da ficha sem marcação | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: Evidência aponta para Trecho que não existe | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 2 erro(s) |
+| validar_acervo: colisão de ID | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: o acervo do repositório | passa | passa | OK | acervo-0.2: 69 registros; válido |
 | calcular_mu_lambda: recálculo bate | passa | passa | OK | mu-lambda-0.1: 3 registros calculados; recálculo bate |
 | calcular_mu_lambda: duas fontes da mesma linhagem contadas como duas | reprova | reprova | OK (reprovou como esperado) | mu-lambda-0.1: 3 registros calculados; 6 divergência(s) |
-| triagem_fixa: casos óbvios viram Faltas jurídicas válidas | passa | passa | OK | triagem-fixa-0.1: 1 registro(s), 3 Falta(s) jurídica(s) |
-| triagem_fixa: registro sem caso óbvio | passa | passa | OK | triagem-fixa-0.1: 1 registro(s), 0 Falta(s) jurídica(s) |
+| triagem_fixa: casos óbvios viram Faltas jurídicas válidas | passa | passa | OK | triagem-fixa-0.2: 1 registro(s), 3 Falta(s) jurídica(s) |
+| triagem_fixa: registro sem caso óbvio | passa | passa | OK | triagem-fixa-0.2: 1 registro(s), 0 Falta(s) jurídica(s) |
 | triagem_fixa: norma sem trecho não gera Falta | reprova | reprova | OK (reprovou como esperado) | RECUSADO: o caso substancia_controlada tem norma incompleta (trecho); Falta jurídica sem norma não sai |
 | falta: Falta jurídica sem caminho de liberação | reprova | reprova | OK (reprovou como esperado) | (raiz): 'caminho_de_liberacao' is a required property |
 | gerar_termo: booleanos e Consulta nova | passa | passa | OK | termo-0.1: 1 Termo(s) |
@@ -208,3 +210,9 @@ Validador: `jsonschema` se instalado (.venv), senão o validador mínimo de `scr
 | sortear_amostra: itens escolhidos à mão | reprova | reprova | OK (reprovou como esperado) | NÃO BATE: a semente 20261022 sobre o universo gravado dá ['AR-900001', 'CL-900001', 'CP-900001', 'EV-900001', 'EV-900003', 'EV-900004', 'F-900001', 'FO-900002', 'IN-900001', 'P-900001', 'PC-900002', ' |
 | semear_ambientes: os 69 ambientes validam e batem com o Anexo E | passa | passa | OK | 69 ambientes; Anexo E: 69; bate e valida |
 | semear_ambientes: pasta incompleta | reprova | reprova | OK (reprovou como esperado) | 1 ambientes; Anexo E: 69; 1 erro(s) |
+| localizar_trecho: trecho vazio | reprova | reprova | OK (reprovou como esperado) | trecho vazio: nada a localizar |
+| validar_acervo: marca no meio da frase | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: fato depois de comentário na mesma linha | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| validar_acervo: ciclo em deriva_de | reprova | reprova | OK (reprovou como esperado) | acervo-0.2: 25 registros; 1 erro(s) |
+| triagem_fixa: 'cocada' não é substância controlada | passa | passa | OK | triagem-fixa-0.2: 1 registro(s), 0 Falta(s) jurídica(s) |
+| triagem_fixa: licença null vira licença ausente | passa | passa | OK | triagem-fixa-0.2: 1 registro(s), 1 Falta(s) jurídica(s) |

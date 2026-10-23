@@ -304,6 +304,73 @@
       ],
       "criterio": "contagem diferente do Anexo E reprova",
       "saida_contem": "Anexo E da Fundação tem 69"
+    },
+    {
+      "nome": "localizar_trecho: trecho vazio",
+      "espera": "reprova",
+      "comando": [
+        "scripts/localizar_trecho.py",
+        "localizar",
+        "--fonte",
+        "testes/nucleo/trecho/fonte-exemplo.txt",
+        "--trecho",
+        "   "
+      ],
+      "criterio": "achado A-001 do K-105: trecho vazio não é localizado",
+      "saida_contem": "trecho vazio"
+    },
+    {
+      "nome": "validar_acervo: marca no meio da frase",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-ficha-marca-no-meio"
+      ],
+      "criterio": "achado A-003: a marca vai ao fim da frase",
+      "saida_contem": "frase sem marcação"
+    },
+    {
+      "nome": "validar_acervo: fato depois de comentário na mesma linha",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-ficha-fato-apos-comentario"
+      ],
+      "criterio": "achado A-005",
+      "saida_contem": "frase sem marcação"
+    },
+    {
+      "nome": "validar_acervo: ciclo em deriva_de",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/nucleo/erro-deriva-ciclo"
+      ],
+      "criterio": "achado A-014: deriva_de sem ciclo",
+      "saida_contem": "ciclo em deriva_de"
+    },
+    {
+      "nome": "triagem_fixa: 'cocada' não é substância controlada",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-cocada.json"
+      ],
+      "criterio": "achado A-011: palavra inteira (triagem-fixa-0.2)",
+      "saida_contem": "0 Falta(s)"
+    },
+    {
+      "nome": "triagem_fixa: licença null vira licença ausente",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-licenca-null.json"
+      ],
+      "criterio": "achado A-002: null vale como ausente",
+      "saida_contem": "licenca_ausente"
     }
   ]
 }

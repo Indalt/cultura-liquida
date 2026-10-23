@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import unicodedata
 from datetime import date
@@ -38,6 +39,13 @@ def sem_acento(t: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", t.casefold()) if unicodedata.category(c) != "Mn")
 
 
+def casa(palavra: str, texto: str) -> bool:
+    """Palavra inteira; com '*' no fim, radical (ex.: 'raizeir*' casa raizeiro e raizeira)."""
+    radical = palavra.endswith("*")
+    p = re.escape(sem_acento(palavra.rstrip("*")))
+    return re.search(r"\b" + p + ("" if radical else r"\b"), texto) is not None
+
+
 def norma_ok(n: dict) -> list[str]:
     falta = [k for k in ("referencia", "trecho", "url", "nivel") if not n.get(k)]
     if n.get("nivel") == "não conferido":
@@ -48,7 +56,7 @@ def norma_ok(n: dict) -> list[str]:
 def casos_do_registro(r: dict, regras: dict) -> list[tuple[str, str]]:
     """Lista (caso, por que) para um registro."""
     c = regras["casos"]
-    prot = r.get("protecao") or {}
+    prot = {k: ("" if v is None else v) for k, v in (r.get("protecao") or {}).items()}  # null vale como ausente
     corpo = [(cam, t) for cam, t in textos(r) if not cam.startswith("/origem_registro")]
     texto = sem_acento(" ".join(t for _, t in corpo))
     achou = []
@@ -63,7 +71,7 @@ def casos_do_registro(r: dict, regras: dict) -> list[tuple[str, str]]:
     if prot.get("dado_sensivel") is True:
         achou.append(("dado_sensivel", "protecao.dado_sensivel = true"))
     for caso in ("conhecimento_tradicional", "substancia_controlada", "crianca_ou_adolescente"):
-        palavras = sorted({p for p in c[caso]["palavras"] if f" {sem_acento(p)}" in f" {texto}"})
+        palavras = sorted({p for p in c[caso]["palavras"] if casa(p, texto)})
         motivo = []
         if palavras:
             motivo.append(f"palavras da regra: {', '.join(palavras)}")

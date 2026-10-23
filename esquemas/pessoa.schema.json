@@ -2,16 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "pessoa.schema.json",
   "title": "Pessoa e papéis",
-  "description": "Pessoa do §6 (l. 615): no Git, só o código opaco e os papéis; a tabela código → nome fica fora da pasta versionada (valores-provisorios: tabela_codigo_nome). Nenhum campo de nome, contato ou perfil (additionalProperties: false). Versão 0.1.0 (22/10/2026, K-104).",
+  "description": "Pessoa do §6 (l. 615): no Git, só o código opaco e os papéis; a tabela código → nome fica fora da pasta versionada (valores-provisorios: tabela_codigo_nome). Nenhum campo de nome, contato ou perfil (additionalProperties: false). Versão 0.1.0 (22/10/2026, K-104). Retirada (l. 585; achado K104-A-001 da segunda leitura do K-105): com retirado = true, só codigo, origem e fundido_em, sem o conteúdo.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "codigo",
-    "papeis",
-    "forma_atribuicao",
-    "nivel_colaborador",
-    "consentimento",
-    "protecao",
     "origem_registro"
   ],
   "properties": {
@@ -74,5 +69,39 @@
     "nota": {
       "type": "string"
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retirado": {
+            "const": true
+          }
+        },
+        "required": [
+          "retirado"
+        ]
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "codigo",
+            "retirado",
+            "fundido_em",
+            "origem_registro",
+            "nota"
+          ]
+        }
+      },
+      "else": {
+        "required": [
+          "papeis",
+          "forma_atribuicao",
+          "nivel_colaborador",
+          "consentimento",
+          "protecao"
+        ]
+      }
+    }
+  ]
 }

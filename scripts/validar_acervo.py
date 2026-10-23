@@ -1,4 +1,4 @@
-"""Valida o acervo inteiro: os esquemas e as ligações (bloco 3; l. 707). Regra acervo-0.1.
+"""Valida o acervo inteiro: os esquemas e as ligações (bloco 3; l. 707). Regra acervo-0.2 (0.1 + achados A-003 a A-005, A-012 e A-014 do auditor no K-105).
 
 Confere, em ambientes/, entrada/ e acervo/ (pasta ausente não é erro; l. 723):
   1. cada registro no esquema do seu prefixo (esquemas/<tipo>.schema.json);
@@ -14,8 +14,9 @@ Confere, em ambientes/, entrada/ e acervo/ (pasta ausente não é erro; l. 723):
   8. nenhum dado pessoal (procurar_dado_pessoal.achar) nos registros;
   9. nas fichas (acervo/fichas/*.md), toda frase factual com a marcação de Proposição
      ([PR-nnnn] ao fim da frase; valor marcacao_frase_proposicao), apontando para uma
-     Proposição que existe. Ficam fora: títulos, comentários e as seções Fontes, Como
-     citar e Faltas. O formato da ficha se fecha no bloco 8 (montar-ficha).
+     Proposição que existe. Ficam fora: títulos, comentários e as seções de título exato
+     Fontes, Como citar e Faltas. O formato da ficha se fecha no bloco 8 (montar-ficha);
+  10. deriva_de sem auto-referência e sem ciclo.
 A Falta sem valor e a Falta jurídica com norma e caminho são do falta.schema.json (item 1).
 
 Uso:
@@ -35,9 +36,9 @@ from _acervo import ESQUEMA_POR_PREFIXO, RE_ID, carregar_acervo, faixas, prefixo
 from _comum import RAIZ, carregar_esquema, carregar_valores, validar_objeto  # noqa: E402
 from procurar_dado_pessoal import achar  # noqa: E402
 
-VERSAO = "acervo-0.1"
+VERSAO = "acervo-0.2"
 PAPEIS_DE_QUEM_PRATICA = {"detentor ou mestre", "quem ensinou", "comunidade, coletivo ou sujeito de direitos"}
-RE_OCR = re.compile(r"\bocr\b|truncad|erro de (digitação|leitura|reconhecimento)", re.I)
+RE_OCR = re.compile(r"\bocr\b|truncad|erro de (digitação|leitura|reconhecimento|transcrição|digitalização)", re.I)
 RE_REF = re.compile(r"^[A-Z]{1,2}-[0-9]{4,}$")
 SECOES_FORA = ("fontes", "como citar", "faltas")
 
@@ -60,24 +61,49 @@ def checar_termo(t: dict) -> list[str]:
 
 def checar_ficha(arq: Path, indice: dict, padrao: str) -> list[str]:
     erros, secao, em_comentario = [], "", False
-    marca = re.compile(padrao)
+    fim = re.compile(f"({padrao})[.!?]?$")  # a marca ao fim da frase, antes ou depois do ponto
     for n, linha in enumerate(arq.read_text(encoding="utf-8").splitlines(), 1):
         s = linha.strip()
-        if em_comentario or s.startswith("<!--"):
-            em_comentario = "-->" not in s
-            continue
+        if em_comentario or "<!--" in s:
+            antes, _, resto = s.partition("<!--") if not em_comentario else ("", "", s)
+            em_comentario = "-->" not in resto
+            s = (antes + " " + (resto.split("-->", 1)[1] if "-->" in resto else "")).strip()
+            if not s:
+                continue
         if s.startswith("#"):
             secao = s.lstrip("#").strip().casefold()
             continue
-        if not s or secao.startswith(SECOES_FORA) or re.fullmatch(r"\|?[\s:|-]+\|?", s):
+        if not s or secao in SECOES_FORA or re.fullmatch(r"\|?[\s:|-]+\|?", s):
             continue
         s = re.sub(r"^([-*>]|\d+\.)\s+", "", s)
         for pr in re.findall(r"PR-[0-9]{4,}", s):
             if pr not in indice:
                 erros.append(f"l. {n}: {pr} não existe no acervo")
         for frase in re.split(r"(?<=[.!?])\s+(?!\[PR-)", s):
-            if frase.strip() and not marca.search(frase):
+            if frase.strip() and not fim.search(frase.strip()):
                 erros.append(f"l. {n}: frase sem marcação de Proposição: {frase[:80]!r}")
+    return erros
+
+
+def checar_deriva(indice: dict, rel) -> list[str]:
+    """deriva_de sem auto-referência e sem ciclo (busca em profundidade)."""
+    erros, cor = [], {}
+    viz = {i: [d for d in r.get("deriva_de", []) if d in indice] for i, r in indice.items() if prefixo(i) == "FO"}
+
+    def visita(i, pilha):
+        cor[i] = 1
+        for d in viz.get(i, []):
+            if d == i:
+                erros.append(f"{rel(i)}: deriva de si mesma")
+            elif cor.get(d) == 1:
+                erros.append(f"{rel(i)}: ciclo em deriva_de ({' → '.join(pilha[pilha.index(d):] + [i, d])})")
+            elif d not in cor:
+                visita(d, pilha + [i])
+        cor[i] = 2
+
+    for i in sorted(viz):
+        if i not in cor:
+            visita(i, [])
     return erros
 
 
@@ -132,6 +158,7 @@ def validar(raiz: Path) -> list[str]:
                 return bool(papeis & PAPEIS_DE_QUEM_PRATICA)
             if not any(pratica(indice.get(ev, {})) for ev in r.get("evidencias", [])):
                 erros.append(f"{rel(id_)}: W sem a voz de quem pratica (papéis: {', '.join(sorted(PAPEIS_DE_QUEM_PRATICA))})")
+    erros += checar_deriva(indice, rel)
     fichas = raiz / "acervo" / "fichas"
     if fichas.exists():
         padrao = carregar_valores()["valores"]["marcacao_frase_proposicao"]["valor"]["padrao"]

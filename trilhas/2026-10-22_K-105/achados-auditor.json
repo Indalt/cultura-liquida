@@ -1,0 +1,334 @@
+{
+ "arquivo": "scripts do núcleo (K-105) e esquemas (A-001 a A-005 do K-104)",
+ "commit": "b2c3ffa",
+ "data": "2026-10-22",
+ "verificador": "auditor (claude-sonnet-5-5, alto)",
+ "olhar": "mecanico",
+ "achados": [
+  {
+   "id": "A-001",
+   "tipo": "outro",
+   "descricao": "localizar_trecho: trecho vazio ou só de espaços é dado como 'localizado' com grau 1.0 e código 0, porque normalizar() dá '' e melhor_janela() faz texto.find('') = 0 e devolve (1.0, 0, 0). Um trecho vazio passaria como Trecho localizado.",
+   "linha": 136,
+   "trecho": "i = texto.find(alvo)  /  if i >= 0: return 1.0, i, i + len(alvo)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "localizar_trecho.py localizar --fonte b2.txt --trecho '' (e '   ') em pasta temporária; scratchpad/t2.py",
+    "saida": "B2 trecho vazio: código 0, estado: localizado · grau 1.0; B2b só espaços: código 0, localizado · grau 1.0"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "localizar() recusa trecho vazio (caso novo no testes/nucleo/casos.json)"
+  },
+  {
+   "id": "A-002",
+   "tipo": "outro",
+   "descricao": "triagem_fixa: registro com protecao.licenca = null (JSON null) derruba o script com AttributeError em vez de gerar a Falta 'licença ausente'. O mesmo padrão .get(..., '').strip() vale para consentimento (l. 218). Registro sem o objeto protecao passa (cai em licença ausente).",
+   "linha": 212,
+   "trecho": "if prot.get(\"licenca\", \"\").strip() in c[\"licenca_ausente\"][\"valores_sem_licenca\"]:",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "triagem_fixa.py d3.json com {id:EN-0002, protecao:{licenca:null}}; scratchpad/t3.py",
+    "saida": "D3 licenca null: código 1, AttributeError: 'NoneType' object has no attribute 'strip'"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "protecao com null vale como ausente (caso novo)"
+  },
+  {
+   "id": "A-003",
+   "tipo": "outro",
+   "descricao": "validar_acervo (checar_ficha): a marcação [PR-nnnn] é aceita em qualquer ponto da frase (marca.search), não só ao fim como diz o brief l. 248 e o valor marcacao_frase_proposicao ('ao fim da frase'). Ficha com 'A cajuina [PR-900001] e clarificada com gelatina.' valida.",
+   "linha": 79,
+   "trecho": "if frase.strip() and not marca.search(frase):",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "validar_acervo.py --raiz <cópia de testes/nucleo/acervo-ok com a ficha trocada>; scratchpad/t3.py",
+    "saida": "C c1b marca no meio da frase -> (0, 'acervo-0.1: 25 registros; válido')"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "a marca tem de estar ao fim da frase, antes ou depois do ponto (acervo-0.2; caso novo)"
+  },
+  {
+   "id": "A-004",
+   "tipo": "outro",
+   "descricao": "validar_acervo (checar_ficha): toda seção cujo título começa com 'fontes', 'como citar' ou 'faltas' fica isenta; uma seção chamada 'Fontes historicas do caju' com frase factual sem marcação valida. A isenção é por prefixo do título, não pela seção exata.",
+   "linha": 72,
+   "trecho": "if not s or secao.startswith(SECOES_FORA) or re.fullmatch(...)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "ficha com '## Fontes historicas do caju' + 'O caju era coado em pano.' em cópia de acervo-ok; scratchpad/t3.py",
+    "saida": "C c1c secao Fontes historicas do caju -> (0, 'acervo-0.1: 25 registros; válido'); a seção 'Faltas' com fato também fica isenta por desenho (l. 42)"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "isenção só para as seções de título exato Fontes, Como citar e Faltas"
+  },
+  {
+   "id": "A-005",
+   "tipo": "outro",
+   "descricao": "validar_acervo (checar_ficha): linha que começa com comentário HTML é ignorada inteira, inclusive o texto factual depois do '-->' na mesma linha ('<!-- n --> O caju era coado em pano.' valida sem marcação).",
+   "linha": 66,
+   "trecho": "if em_comentario or s.startswith(\"<!--\"):",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "ficha com comentário e frase factual na mesma linha; scratchpad/t3.py",
+    "saida": "C c1d comentario antes do fato na mesma linha -> (0, 'acervo-0.1: 25 registros; válido')"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "o texto fora do comentário na mesma linha é conferido (caso novo)"
+  },
+  {
+   "id": "A-006",
+   "tipo": "outro",
+   "descricao": "gerar_termo: designação com aspas duplas não é escapada no booleano, que sai com aspas desbalanceadas.",
+   "linha": 46,
+   "trecho": "grupo = \" OR \".join(f'\"{f}\"' for f in formas(t))",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "gerar_termo.py <termo com designacao: caju \"amarelo\"> --raiz <cópia>; scratchpad/t3.py",
+    "saida": "E1: código 0, TE-900001: (\"caju \"amarelo\"\" OR \"bebida exemplo\" OR \"bebida-ezemplo\")"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "aspas internas escapadas no booleano"
+  },
+  {
+   "id": "A-007",
+   "tipo": "outro",
+   "descricao": "gerar_termo: com --gravar e arquivos de Termo passados na linha de comando, o glossario.md é sobrescrito só com esses Termos; os demais Termos do acervo somem do glossário. Sem argumentos, o glossário sai completo.",
+   "linha": 124,
+   "trecho": "(raiz / \"acervo\" / \"termos\" / \"glossario.md\").write_text(glossario([t for t, _ in termos], raiz) + \"\\n\", ...)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "acervo com TE-900001 e TE-900002; gerar_termo.py TE-900001.json --raiz <cópia> --gravar; contar '## ' no glossario.md; scratchpad/t3.py",
+    "saida": "E2 glossario (1 arquivo passado, 2 Termos no acervo): secoes 1"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "o glossário é sempre do acervo inteiro"
+  },
+  {
+   "id": "A-008",
+   "tipo": "ausencia",
+   "descricao": "Falta jurídica com norma de nível 'não conferido' (e URL e trecho preenchidos) passa no validar_acervo: os erros ficam idênticos aos da linha de base. A recusa de norma 'não conferido' existe só dentro do triagem_fixa.py (norma_ok, l. 198-202, testada: D1 recusa com código 1); uma Falta gravada à mão ou por outro agente com essa norma não é barrada pelo validador. Já 'sem norma', 'sem caminho_de_liberacao', trecho vazio, URL não http e campo extra 'valor' reprovam no esquema.",
+   "linha": null,
+   "trecho": "ERRO acervo\\faltas\\F-0001.json (só as 3 referências EN-900001, as mesmas da linha de base)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "triagem_fixa.py --gravar em cópia; editar F-0001.norma.nivel='não conferido'; validar_acervo.py --raiz <cópia> e comparar com a linha de base; scratchpad/t3.py",
+    "saida": "C2 norma nivel nao conferido -> mesmos 3 ERRO de EN-900001 da linha de base, nenhum erro sobre a norma"
+   },
+   "estado": "confirmado",
+   "correcao_curador": "não corrigido: a Falta pode citar norma 'não conferido' (fato não conferido não para; AGENTS.md); a recusa fica só no triagem_fixa, que gera Faltas por regra"
+  },
+  {
+   "id": "A-009",
+   "tipo": "outro",
+   "descricao": "calcular_mu_lambda: o estado do Trecho não entra no cálculo. Duas Evidências a favor de fontes independentes cujos Trechos estão 'não verificável por máquina' dão μ=1.0 e a Proposição 'verdadeiro'. O brief l. 250 e a regra não dizem que Trecho abaixo do limiar conta ou não; é uma lacuna a decidir, não um desvio do texto.",
+   "linha": 86,
+   "trecho": "fo = indice.get(e.get(\"trecho\"), {}).get(\"fonte\")  # sem checar estado == localizado",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "calcular_mu_lambda.py --raiz <acervo de teste com 2 FO independentes, TR com estado 'não verificável por máquina', 2 EV a favor>; scratchpad/t2.py",
+    "saida": "A3: PR-0001: μ=1.0 λ=0.0 Dc=1.0 Dct=0.0 verdadeiro · linhagens 2 a favor, 0 divergentes"
+   },
+   "estado": "confirmado",
+   "correcao_curador": "não corrigido: lacuna da regra mu_lambda, vai ao insumo 34 (K-005)"
+  },
+  {
+   "id": "A-010",
+   "tipo": "outro",
+   "descricao": "calcular_mu_lambda: uma linhagem com uma Evidência a favor e outra divergente conta nos dois lados (μ=0.5 e λ=0.5, Dc=0, Dct=0, 'intermediário'). A regra mu_lambda não diz como tratar a mesma linhagem nos dois lados; o script não sinaliza o caso. O sentido que não é 'a favor' conta como divergente (l. 89); o esquema da Evidência só admite 'a favor' e 'divergente'. A cadeia deriva_de A→B→C com 3 Evidências a favor deu 1 linhagem (μ=0.5) e com uma quarta fonte independente deu 2 (μ=1.0): passou.",
+   "linha": 89,
+   "trecho": "(favor if e.get(\"sentido\") == \"a favor\" else contra).add(lin[fo])",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "FO-0002 deriva_de FO-0001; EV a favor em TR de FO-0001 e EV 'contra'/'diverge' em TR de FO-0002; scratchpad/t2.py",
+    "saida": "A2: PR-0001: μ=0.5 λ=0.5 Dc=0.0 Dct=0.0 intermediário (quase-verdadeiro tendendo ao inconsistente); A1: PR-0001 μ=0.5 (1 linhagem), PR-0002 μ=1.0 (2 linhagens)"
+   },
+   "estado": "confirmado",
+   "correcao_curador": "não corrigido: lacuna da regra mu_lambda (mesma linhagem nos dois lados), vai ao insumo 34"
+  },
+  {
+   "id": "A-011",
+   "tipo": "outro",
+   "descricao": "triagem_fixa: as palavras da regra casam por prefixo (' palavra' dentro de ' texto'), então 'coca' sinaliza 'cocada'; o registro 'vendia cocada na feira' gera Falta de substância controlada (Lei 11.343/2006). Também 'indigenazzz', 'ayahuascazzz' e 'criancazzz' sinalizam. As listas são provisórias, mas o casamento por prefixo está no código.",
+   "linha": 223,
+   "trecho": "palavras = sorted({p for p in c[caso][\"palavras\"] if f\" {sem_acento(p)}\" in f\" {texto}\"})",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "triagem_fixa.py d7.json com nota 'vendia cocada na feira' e licenca CC-BY 4.0",
+    "saida": "EN-0006: substancia_controlada → F-0001 (substancia_controlada; Lei 11.343/2006, art. 1º, parágrafo único)"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "palavra inteira; '*' marca radical (triagem-fixa-0.2; caso novo com 'cocada')"
+  },
+  {
+   "id": "A-012",
+   "tipo": "outro",
+   "descricao": "validar_acervo (checar_termo): a forma de OCR é detectada por uma expressão sobre tipo_variacao ('ocr', 'truncad', 'erro de digitação|leitura|reconhecimento'); uma variante com tipo_variacao 'erro de transcrição' é aceita pelo gerar_termo (código 0). A regra só vale para quem rotula a variação com essas palavras.",
+   "linha": 40,
+   "trecho": "RE_OCR = re.compile(r\"\\bocr\\b|truncad|erro de (digitação|leitura|reconhecimento)\", re.I)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "gerar_termo.py <termo com variante {forma:caju1na, tipo_variacao:'erro de transcrição'}>; scratchpad/t3.py",
+    "saida": "E1b: código 0, termo-0.1: 1 Termo(s)"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "RE_OCR inclui erro de transcrição e de digitalização (acervo-0.2)"
+  },
+  {
+   "id": "A-013",
+   "tipo": "outro",
+   "descricao": "sortear_amostra: o corte é a data (dia) da última amostra e o filtro é 'd <= corte'. Registro criado no mesmo dia da amostra anterior, depois dela, fica fora do universo; registro sem data também fica fora depois do primeiro corte. Segunda rodada no mesmo dia: 0 de 0 sorteados.",
+   "linha": 199,
+   "trecho": "if corte and (not d or d <= corte):",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "sortear_amostra.py --gravar; criar TR-0100 (data de hoje) e TR-0101 (sem data); sortear de novo; scratchpad/t3.py",
+    "saida": "F5 TR-0100 no universo? False; TR-0101? False; corte 2026-10-22. F1 segunda rodada: 0 de 0 sorteados"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "o universo exclui os IDs do universo das amostras anteriores, sem corte por data (amostra-0.2; conferido: 2ª rodada sobre o mesmo acervo dá 0 de 0)"
+  },
+  {
+   "id": "A-014",
+   "tipo": "ausencia",
+   "descricao": "validar_acervo não valida o grafo deriva_de: Fonte que deriva de si mesma e ciclo FO-900001↔FO-900002 validam (código 0). O calcular_mu_lambda tolera os dois casos sem erro (A4 do teste). Só reprova deriva_de que aponta para ID de outro tipo (pelo padrão do esquema).",
+   "linha": null,
+   "trecho": "(sem checagem de deriva_de em validar_acervo.py)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "FO-900001.deriva_de=['FO-900001']; e ['FO-900002'] com FO-900002 derivando de FO-900001; validar_acervo.py --raiz <cópia>; scratchpad/t3.py",
+    "saida": "C3 si mesma -> (0, válido); C3b ciclo -> (0, válido); C3c deriva de TR-900001 -> (1, deriva_de/0: 'TR-900001' does not match '^FO-[0-9]{4,}$')"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "validar_acervo reprova auto-referência e ciclo em deriva_de (caso novo)"
+  },
+  {
+   "id": "A-015",
+   "tipo": "outro",
+   "descricao": "localizar_trecho: pela regra versionada (limiar 0.9 de difflib.ratio) um trecho com uma palavra de sentido contrário inserida ('nunca') contra a fonte fica 'localizado' por semelhança, grau 0.9552, código 0. Duas palavras trocadas (0.8939) caem abaixo e geram a Falta (válida no falta.schema). É consequência do valor do registro, não de bug do código.",
+   "linha": 175,
+   "trecho": "if grau >= LIMIAR:",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "fonte 'o suco do caju era coado...' x trecho 'o suco do caju nunca era coado...'; scratchpad/t2.py",
+    "saida": "B3b: código 0, localizado · grau 0.9552; B3c: código 2, não verificável por máquina · grau 0.8939"
+   },
+   "estado": "confirmado",
+   "correcao_curador": "não corrigido: consequência do limiar 0,9 do registro; insumo 36 (K-005)"
+  },
+  {
+   "id": "A-016",
+   "tipo": "outro",
+   "descricao": "localizar_trecho: sem --id-falta (e sem --id), a Falta emitida sai com o ID 'F-0000', que valida no falta.schema mas está fora de todas as faixas de numeracao_id (conversa começa em 1).",
+   "linha": 225,
+   "trecho": "saida[\"falta\"] = falta_trecho(a.id_falta or \"F-0000\", a.id or a.fonte, motivo)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "localizar_trecho.py localizar com trecho ausente, sem --id-falta; validar_objeto(falta, esquema falta); scratchpad/t2.py",
+    "saida": "B4 Falta no falta.schema: [] ; id F-0000"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "sem --id-falta, a Falta leva o próximo ID da faixa da conversa"
+  },
+  {
+   "id": "A-017",
+   "tipo": "outro",
+   "descricao": "localizar_trecho: a normalização remove o hífen de fim de linha também entre dígitos (\\w inclui número): 'Entre 1990-' quebra '2000' vira '19902000', e o trecho 'Entre 1990-2000 houve safra.' sai 'localizado' por semelhança 0.9818, não exato. O caso de palavra ('pala-' / 'vra' → 'palavra') passou com grau 1.0.",
+   "linha": 55,
+   "trecho": "t = re.sub(r\"(\\w)-[ \\t]*\\r?\\n[ \\t]*(\\w)\", r\"\\1\\2\", t)",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "localizar_trecho.py localizar com fonte 'Entre 1990-<quebra>2000 houve safra.'; scratchpad/t2.py",
+    "saida": "B1b: código 0, localizado · grau 0.9818; B1 palavra: localizado · grau 1.0"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "o hífen de fim de linha só se remove entre letras"
+  },
+  {
+   "id": "A-018",
+   "tipo": "outro",
+   "descricao": "Depois da minha chamada ao rodar_testes.py, o git status mostrava trilhas/insumos-planejamento.md e trilhas/planejamento/mapa-tres-frentes.md modificados (o status inicial da sessão estava limpo). As datas de gravação dos dois arquivos são 23:32:51, com 7 ms de diferença, e nenhum comando meu nomeia esses arquivos; não foi possível atribuir a modificação ao rodar_testes.py ou a outra sessão.",
+   "linha": null,
+   "trecho": "M trilhas/insumos-planejamento.md; M trilhas/planejamento/mapa-tres-frentes.md",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "git status --short; git diff --stat; ls -l --time-style=full-iso",
+    "saida": "2 files changed, 9 insertions(+), 1 deletion(-); mtime 2026-10-22 23:32:51.47 e 23:32:51.48"
+   },
+   "estado": "nao_confirmado",
+   "correcao_curador": "explicado pelo curador: os dois arquivos foram gravados pelo scripts/registrar_melhoria.py às 23:32 (insumos 32 a 35), enquanto o auditor rodava"
+  },
+  {
+   "id": "K104-A-001",
+   "tipo": "outro",
+   "descricao": "A-001 do K-104 (retirado sem conteúdo): 17 dos 18 contratos com a propriedade 'retirado' têm condição citando 'retirado' e aceitam o registro mínimo retirado (id, retirado, origem_registro, nota). A Pessoa (chave 'codigo') não tem a condição e reprova o registro retirado mínimo: 'papeis' is a required property.",
+   "linha": null,
+   "trecho": "('pessoa', \"(raiz): 'papeis' is a required property\")",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "para cada esquemas/*.schema.json com properties.retirado, validar registro mínimo retirado com carregar_esquema + validar_objeto; scratchpad/k104.py",
+    "saida": "A-001 contratos com retirado: 18; reprovado em: [('pessoa', \"(raiz): 'papeis' is a required property\")]; com condição: 17 contratos (sem pessoa)"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "pessoa.schema.json com a condição de retirada (exemplos pessoa-retirada e erro-pessoa-retirada)"
+  },
+  {
+   "id": "K104-A-002",
+   "tipo": "outro",
+   "descricao": "A-002 do K-104: 'protecao' está em required do contrato Pessoa.",
+   "linha": null,
+   "trecho": "pessoa: protecao em required? True",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "scratchpad/k104.py (required e properties de pessoa.schema.json)",
+    "saida": "A-002 pessoa: protecao em required? True ; propriedade? True"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "K104-A-003",
+   "tipo": "outro",
+   "descricao": "A-003 do K-104: os dez contratos (ambiente, aresta, consulta, elemento, insumo-x, processo, proposicao, recorte, termo, transformacao) têm hoje a propriedade 'protecao'; nenhum dos dez a tem em required (a obrigatoriedade 'nos que tocam por natureza' não se aplica a nenhum deles).",
+   "linha": null,
+   "trecho": "dez contratos sem propriedade protecao: []",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "scratchpad/k104.py",
+    "saida": "A-003 dez contratos sem propriedade protecao: []; destes, com protecao em required: []"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "K104-A-004",
+   "tipo": "outro",
+   "descricao": "A-004 do K-104: a cadeia 'não calculado' ainda aparece em esquemas/proposicao.schema.json (e em nenhum outro arquivo de esquemas/, inclusive valores-provisorios.json). Não li o contexto: pode ser descrição e não valor do eixo 4. proposicao e aresta não têm 'enum' direto em properties.estado (enum: None) e exigem só id e origem_registro; a condição 'com estado exige μ, λ e versão da regra' não foi testada.",
+   "linha": null,
+   "trecho": "esquemas\\proposicao.schema.json contém 'não calculado'",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "varrer esquemas/*.json e *.schema.json pela cadeia; scratchpad/k104.py",
+    "saida": "A-004 arquivos com o valor nao calculado: ['esquemas\\proposicao.schema.json']; enum estado: None (proposicao e aresta); required: ['id','origem_registro']"
+   },
+   "estado": "corrigido",
+   "correcao_curador": "conferido pelo curador: a cadeia está só na description, que diz que o eixo 4 não tem esse valor (l. 5 de proposicao.schema.json)"
+  },
+  {
+   "id": "K104-A-005",
+   "tipo": "outro",
+   "descricao": "A-005 do K-104: 'estado_detalhe' existe hoje na Aresta e na Proposição.",
+   "linha": null,
+   "trecho": "aresta tem estado_detalhe: True ; proposicao: True",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "scratchpad/k104.py",
+    "saida": "A-005 aresta tem estado_detalhe: True ; proposicao: True"
+   },
+   "estado": "corrigido"
+  }
+ ],
+ "resumo": {
+  "testes": "rodar_testes.py: OK 112, FALHA 0, PENDENTE 5. validar_acervo.py no repositório: 69 registros, válido. semear_ambientes.py --conferir: 69 ambientes, Anexo E 69, bate e valida. Pre-commit roda e dá 0. Bateria própria em pasta temporária fora do repositório (ver o relato do auditor no log).",
+  "quebras": 17,
+  "k104": "A-002, A-003 e A-005 corrigidos; A-001 confirmado só para a Pessoa (17 de 18 contratos corrigidos); A-004 nao_confirmado (a cadeia 'não calculado' persiste em proposicao.schema.json, contexto não lido). Quebras 10, 15 e 17 são de regra ou de desenho (valor do registro ou lacuna não decidida), não de código; A-018 não confirmado.",
+  "curador": "13 achados novos e 2 do K-104 corrigidos no mesmo cartão; A-008, A-009, A-010 e A-015 ficam como regra a decidir (insumos 34 e 36); A-018 explicado"
+ }
+}

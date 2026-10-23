@@ -108,6 +108,25 @@
 - **Uso da conta no início:** 37%. Parada (b) desta semana: antes de 50% do uso da conta, com o estado salvo; o `orcamento.py --teto 300000` não se aplica nesta semana (autorização de Vicente).
 - **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (dcff3b0), árvore limpa; `Indalt/cultura-liquida` público; `rodar_testes.py`: OK 86 · FALHA 0 · PENDENTE 5; cartão movido para Fazendo.
 
+### Bloco 3 — Scripts do núcleo
+
+| Item | Estado | Consumo (tokens) | Modelo / esforço | Observação |
+|---|---|---|---|---|
+| Juridico, normas da triagem fixa (lote C5) | feito | 67.580 (12 chamadas) | Sonnet 5.5 alto | Sem conta do `orcamento.py` nesta semana (autorização de Vicente). 18 itens, 17 oficiais (planalto.gov.br) e a Portaria SVS/MS 344/1998 não conferida (503 e 404). Pistas corrigidas: o art. 66 da Lei 11.343 nomeia a Portaria; o art. 2º, IX, da Lei 13.123 inclui fontes secundárias. O agente não validou (heredoc); o curador gravou com Write e validou: PASSA (`trilhas/2026-10-22_K-105/conferencia-C5.json`) |
+| `localizar_trecho.py` | feito | — | sessão principal | normalizacao-0.1 do registro, SHA-256 do texto lido, seletor W3C (exato, antes, depois), localizador com página do PDF (pypdf), Falta abaixo do limiar e no PDF sem texto, transcrição por IA marcada, Wayback (`id_`), pasta temporária recusada dentro do repositório; `conferir` relê e compara hash e grau |
+| `validar_acervo.py` e pre-commit | feito | — | sessão principal | acervo-0.2: esquema por prefixo, colisão e faixa de ID, referências, Evidência → Trecho → Fonte, Proposição com Evidência, Termo atestado com abonação localizada, OCR fora das variantes, W pela voz de quem pratica, dado pessoal, frase da ficha com [PR-nnnn] ao fim, deriva_de sem ciclo. Gancho em `.githooks/pre-commit` (`git config core.hooksPath .githooks`), testado reprovando e passando |
+| `triagem_fixa.py` | feito | — | sessão principal | triagem-fixa-0.2 em `esquemas/triagem-fixa.json`: seis casos com a norma do C5 e o guia; norma incompleta ou "não conferido" não gera Falta |
+| `calcular_mu_lambda.py` | feito | — | sessão principal | mu-lambda-0.1: linhagens por união de deriva_de, μ, λ, Dc, Dct, estado e quadrante intermediário; `--conferir`, `--gravar`; gera `grafo/` (nós, arestas, X×Y com "não observada", Z); W não captada = paracompleto |
+| `gerar_termo.py` | feito | — | sessão principal | termo-0.1: booleanos, glossário do acervo inteiro e a Consulta nova proposta (válida no contrato) |
+| `sortear_amostra.py` | feito | — | sessão principal | amostra-0.2: semente registrada, 15 itens do registro, universo sem o que já esteve em amostra, marcados lidos todos fora da amostra; `--conferir` |
+| `semear_ambientes.py` | feito | — | sessão principal | 69 ambientes em `ambientes/` (AM-0001 a AM-0069), "proposto", Execução EX-0006; a contagem bate com o Anexo E (69) |
+| Auditor, verificador de outro harness e K-104 | feito | 159.897 (19 chamadas) | Sonnet 5.5 alto | 18 achados (`trilhas/2026-10-22_K-105/achados-auditor.json`): 13 corrigidos no cartão com 6 casos novos; A-008, A-009, A-010 e A-015 são regra a decidir (insumos 34 e 36); A-018 explicado (o `registrar_melhoria.py` do curador). K-104: A-002, A-003 e A-005 corrigidos; A-001 persistia na Pessoa e foi corrigido agora; A-004 conferido pelo curador (só na descrição). O curador validou o JSON: PASSA |
+
+- **Pronto quando:** cada script com caso que passa e que reprova (`testes/nucleo/casos.json`, 32 casos); `procurar_dado_pessoal.py` sem achado; os 69 ambientes validam e batem com o Anexo E; o pre-commit roda (bloqueou um registro inválido de teste e passou o acervo real). `rodar_testes.py`: OK 120 · FALHA 0 · PENDENTE 5.
+- **Insumos novos:** 32 (listas e normas da triagem fixa; K-109), 33 (papéis da W e frase da ficha; K-110), 34 (quais Evidências contam em μ e λ; K-005), 35 (pre-commit em cada cópia; K-111), 36 (limiar do trecho e linhagem nos dois lados; K-005).
+- **Não conferido:** a Portaria SVS/MS 344/1998; imagem e voz de adulto (CF art. 5º, X; Código Civil art. 20) e o ECA art. 2º; os scripts que leem rede (Wayback e URL) não rodaram contra fonte real, só contra arquivo local; as correções dos achados do K-105 não passaram por nova leitura independente.
+- **Consumo:** 227.477 tokens de agentes (juridico e auditor).
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -117,6 +136,8 @@
 | 19–25/10 | K-103, desenvolvimento (os agentes do K-001 e do K-003 estão no estado do planejamento) | 0 (nenhum agente) | — | 0 |
 | 19–25/10 | K-101, auditor (olhar mecânico do harness) | 73.464 | 18 | 73.464 |
 | 19–25/10 | K-104, auditor (contratos do §6 e lote C4) | 143.833 | 20 | 217.297 |
+| 19–25/10 | K-105, juridico (lote C5) | 67.580 | 12 | 284.877 |
+| 19–25/10 | K-105, auditor (scripts do núcleo e K-104) | 159.897 | 19 | 444.774 (teto de 300 mil suspenso nesta semana por Vicente) |
 
 ## Horas de Vicente e uso da conta (bloco 13; medição desde o bloco 6)
 

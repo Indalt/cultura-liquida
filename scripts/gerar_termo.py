@@ -43,7 +43,7 @@ def formas(t: dict) -> list[str]:
 
 
 def booleanos(t: dict, descritores: list[str]) -> list[str]:
-    grupo = " OR ".join(f'"{f}"' for f in formas(t))
+    grupo = " OR ".join('"' + f.replace('"', '\\"') + '"' for f in formas(t))  # aspas internas escapadas
     grupo = f"({grupo})"
     saida = [grupo]
     if descritores:
@@ -121,7 +121,9 @@ def main() -> int:
             (pc / f"{cid}.json").write_text(json.dumps(consulta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if a.gravar and termos:
         (raiz / "acervo" / "termos").mkdir(parents=True, exist_ok=True)
-        (raiz / "acervo" / "termos" / "glossario.md").write_text(glossario([t for t, _ in termos], raiz) + "\n", encoding="utf-8")
+        gerados = {t["id"]: t for t, _ in termos}  # o glossário é sempre do acervo inteiro (achado A-007)
+        todos = {i: r for i, r in indice.items() if prefixo(i) == "TE" and not r.get("retirado")} | gerados
+        (raiz / "acervo" / "termos" / "glossario.md").write_text(glossario(list(todos.values()), raiz) + "\n", encoding="utf-8")
     print(f"{VERSAO}: {len(termos)} Termo(s)")
     return 0
 

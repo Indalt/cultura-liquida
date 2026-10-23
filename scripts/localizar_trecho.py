@@ -39,6 +39,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _acervo import carregar_acervo, proximo_id  # noqa: E402
 from _comum import RAIZ, carregar_esquema, carregar_valores, validar_objeto  # noqa: E402
 
 REGRA = carregar_valores()["valores"]["normalizacao_e_limiar"]["valor"]
@@ -52,7 +53,7 @@ USER_AGENT = "cultura-liquida/0.1 (+https://github.com/Indalt/cultura-liquida)"
 def normalizar(t: str) -> str:
     """A regra normalizacao-0.1, na ordem do registro."""
     t = unicodedata.normalize("NFC", t)
-    t = re.sub(r"(\w)-[ \t]*\r?\n[ \t]*(\w)", r"\1\2", t)  # hífen de fim de linha com quebra
+    t = re.sub(r"([^\W\d_])-[ \t]*\r?\n[ \t]*([^\W\d_])", r"\1\2", t)  # hífen de fim de linha entre letras
     t = re.sub(r"\s+", " ", t)
     t = t.translate(str.maketrans({"“": '"', "”": '"', "„": '"', "«": '"', "»": '"',
                                    "‘": "'", "’": "'", "‚": "'", "´": "'"}))
@@ -164,6 +165,8 @@ def melhor_janela(texto: str, alvo: str) -> tuple[float, int, int]:
 
 def localizar(texto: str, inicios: list[int], trecho: str) -> dict:
     alvo = normalizar(trecho)
+    if not alvo:
+        raise SystemExit("trecho vazio: nada a localizar")
     grau, ini, fim = melhor_janela(texto, alvo)
     grau = round(grau, 4)
     loc = f"car. {ini}-{fim} do texto normalizado ({VERSAO})"
@@ -222,7 +225,7 @@ def cmd_localizar(a) -> int:
             print("Trecho não valida:", "; ".join(erros), file=sys.stderr)
             return 1
     if r["estado"] != "localizado":
-        saida["falta"] = falta_trecho(a.id_falta or "F-0000", a.id or a.fonte, motivo)
+        saida["falta"] = falta_trecho(a.id_falta or proximo_id("F", carregar_acervo(RAIZ)[0]), a.id or a.fonte, motivo)
     js = json.dumps(saida, ensure_ascii=False, indent=2)
     if a.saida:
         Path(a.saida).write_text(js + "\n", encoding="utf-8")

@@ -159,6 +159,14 @@ def main():
     r["EV-900001"]["trecho"] = "TR-900099"
     gravar("erro-evidencia-sem-trecho", r)
 
+    # achados do auditor no K-105: marca no meio da frase (A-003), fato após comentário (A-005), ciclo (A-014)
+    gravar("erro-ficha-marca-no-meio", ok, FICHA.replace("O suco é coado em pano e clarificado [PR-900001].",
+                                                        "O suco [PR-900001] é coado em pano e clarificado."))
+    gravar("erro-ficha-fato-apos-comentario", ok, FICHA.replace("## Faltas", "<!-- nota --> O caju era coado em pano.\n\n## Faltas"))
+    r = copy.deepcopy(ok)
+    r["FO-900001"]["deriva_de"] = ["FO-900002"]  # FO-900002 já deriva de FO-900001
+    gravar("erro-deriva-ciclo", r)
+
     gravar("erro-colisao", ok, extra={"acervo/fontes/FO-900001-copia.json": ok["FO-900001"]})
     print("acervos de teste montados em", AQUI)
 

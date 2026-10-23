@@ -281,6 +281,20 @@
       "esquema": "valores-provisorios",
       "entrada": "esquemas/exemplos/erro-valores-provisorios.json",
       "criterio": "cada valor diz a linha da Fundação"
+    },
+    {
+      "nome": "pessoa: retirada só com o código (exemplo de esquema)",
+      "espera": "passa",
+      "esquema": "pessoa",
+      "entrada": "esquemas/exemplos/pessoa-retirada.json",
+      "criterio": "l. 585; K104-A-001 conferido no K-105"
+    },
+    {
+      "nome": "pessoa: retirada ainda com conteúdo",
+      "espera": "reprova",
+      "esquema": "pessoa",
+      "entrada": "esquemas/exemplos/erro-pessoa-retirada.json",
+      "criterio": "l. 585: sem o conteúdo"
     }
   ]
 }
