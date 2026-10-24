@@ -16,7 +16,10 @@ Confere, em ambientes/, entrada/ e acervo/ (pasta ausente não é erro; l. 723):
      ([PR-nnnn] ao fim da frase; valor marcacao_frase_proposicao), apontando para uma
      Proposição que existe. Ficam fora: títulos, comentários e as seções de título exato
      Fontes, Como citar e Faltas. O formato da ficha se fecha no bloco 8 (montar-ficha);
-  10. deriva_de sem auto-referência e sem ciclo.
+  10. deriva_de sem auto-referência e sem ciclo;
+  11. as pegadas (ambientes/pegadas/RC-nnnn.jsonl; D-045): cada linha no esquema da pegada, num
+      Recorte que existe, sem dado pessoal; o EN-nnnn que só uma pegada guarda conta como registro
+      existente nas referências (o item fora do escopo pela regra não se apaga).
 A Falta sem valor e a Falta jurídica com norma e caminho são do falta.schema.json (item 1).
 
 Uso:
@@ -35,8 +38,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _acervo import ESQUEMA_POR_PREFIXO, RE_ID, carregar_acervo, faixas, prefixo, textos  # noqa: E402
 from _comum import RAIZ, carregar_esquema, carregar_valores, validar_objeto  # noqa: E402
 from procurar_dado_pessoal import achar  # noqa: E402
+from guarda import PASTA as PASTA_PEGADAS, ler as ler_pegadas  # noqa: E402
 
-VERSAO = "acervo-0.2"
+VERSAO = "acervo-0.3"
 PAPEIS_DE_QUEM_PRATICA = {"detentor ou mestre", "quem ensinou", "comunidade, coletivo ou sujeito de direitos"}
 RE_OCR = re.compile(r"\bocr\b|truncad|erro de (digitação|leitura|reconhecimento|transcrição|digitalização)", re.I)
 RE_REF = re.compile(r"^[A-Z]{1,2}-[0-9]{4,}$")
@@ -107,12 +111,39 @@ def checar_deriva(indice: dict, rel) -> list[str]:
     return erros
 
 
+def checar_pegadas(raiz: Path, indice: dict) -> tuple[set[str], list[str]]:
+    """Item 11: as linhas das pegadas e os EN-nnnn que elas guardam."""
+    pasta, ens, erros = raiz / PASTA_PEGADAS, set(), []
+    if not pasta.exists():
+        return ens, erros
+    esq = carregar_esquema("pegada")
+    for arq in sorted(pasta.glob("*.jsonl")):
+        rel = arq.relative_to(raiz)
+        if arq.stem not in indice:
+            erros.append(f"{rel}: pegadas de um Recorte que não existe ({arq.stem})")
+        try:
+            linhas = ler_pegadas(arq)
+        except ValueError as e:
+            erros.append(f"{rel}: linha ilegível ({e})")
+            continue
+        for n, p in enumerate(linhas, 1):
+            erros += [f"{rel}:{n}: {e}" for e in validar_objeto(p, esq)]
+            for cam, txt in textos(p):
+                for _, tipo, _s in achar(txt):
+                    erros.append(f"{rel}:{n}: {cam}: dado pessoal ({tipo})")
+            if p.get("entrada"):
+                ens.add(p["entrada"])
+    return ens, erros
+
+
 def validar(raiz: Path) -> list[str]:
     indice, onde, erros = carregar_acervo(raiz)
     rel = lambda i: str(onde[i][0].relative_to(raiz))  # noqa: E731
     exemplos = faixas()["exemplos de esquema"]
     real = raiz.resolve() == RAIZ.resolve()
     esquemas: dict[str, dict] = {}
+    ens_pegada, erros_peg = checar_pegadas(raiz, indice)
+    erros += erros_peg
     for id_, arqs in onde.items():
         if len(arqs) > 1:
             erros.append(f"colisão de ID {id_}: {', '.join(str(a.relative_to(raiz)) for a in arqs)}")
@@ -129,7 +160,7 @@ def validar(raiz: Path) -> list[str]:
         for cam, txt in textos(r):
             if cam.endswith("/nota"):
                 continue
-            if RE_REF.match(txt) and txt != id_ and not txt.startswith("EX-") and txt not in indice:
+            if RE_REF.match(txt) and txt != id_ and not txt.startswith("EX-") and txt not in indice and txt not in ens_pegada:
                 erros.append(f"{rel(id_)}: {cam} aponta para {txt}, que não existe")
             for _, tipo, _s in achar(txt):
                 erros.append(f"{rel(id_)}: {cam}: dado pessoal ({tipo})")

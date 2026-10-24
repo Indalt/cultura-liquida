@@ -1,0 +1,17 @@
+{
+  "id": "D-045",
+  "data": "2026-10-24",
+  "essencia": "A guarda das Entradas em escala se resolve no sub-cartão K-108b, fora da numeração, antes do K-109: três camadas (a pegada compacta de todo item visto; a Entrada de trabalho só do que passa na pré-triagem ou fica em quarentena; o bruto fora do Git), pré-triagem por regra e sem IA na coleta, um arquivo por Recorte, alarme de tamanho e migração das Entradas atuais sem refundar.",
+  "diretriz": "(1) Camadas: a pegada, sempre, uma linha compacta por item (ID na fonte, link, data, hash do registro de metadados da fonte, estado da triagem e motivo); a Entrada de trabalho, só do que passa na pré-triagem ou fica em quarentena; o bruto completo fora do Git (a fonte o guarda e o Recorte o refaz; cache local fora da pasta versionada durante o processamento). O hash do texto lido fica para a extração (K-109). (2) Pré-triagem por regra, sem IA, na coleta: segue o item que traz no título ou no resumo o termo (formas) ou os descritores do processo da Consulta (P3); o resto fica só como pegada 'fora do escopo pela regra', com a versão da regra; nunca se apaga (princípio 10) e a pegada reabre se a regra mudar. Título e resumo servem à regra e não vão ao Git na pegada, que leva só o motivo; na Entrada que passa, o título vai como metadado (padrão da F-0003) e o resumo só como citação curta. (3) Um arquivo de pegadas por Recorte, uma linha por item. (4) O relatório do dia mede o tamanho e a contagem e avisa acima de 20 mil arquivos ou 200 MB (valores provisórios); as pegadas de Recortes fechados há muito podem ser comprimidas. (5) Migração sem refundar: as 1.723 Entradas atuais passam pela pré-triagem por script; as que não passam viram pegada 'fora do escopo pela regra' com o mesmo EN-nnnn; confere-se por script a contagem antes e depois, os IDs, o validar_acervo e a deduplicação. (6) Casos que passam e que reprovam; recorte.py, deduplicar.py, validar_acervo.py e relatorio_dia.py ajustados. Se a conta ou a janela de 5 h não permitirem, para-se com o estado salvo e a próxima conversa retoma pelo quadro.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-24",
+  "fala_original_ref": "trilhas/2026-10-24_K-108/falas-vicente.md, seções 'Pedido de retomada' (item 4) e 'Confirmação das essências devolvidas' (D-045, a a c)",
+  "palavras_conferidas": [
+    {"palavra": "K-108b", "sentido_confirmado": "sub-cartão do K-108, fora da numeração dos cartões, antes do K-109 (o que se chamaria K-125)"},
+    {"palavra": "título ou resumo", "sentido_confirmado": "lidos para a regra; não vão ao Git na pegada; na Entrada que passa, o título vai como metadado e o resumo só como citação curta"},
+    {"palavra": "hash", "sentido_confirmado": "na pegada, a soma do registro de metadados da fonte, não do documento"},
+    {"palavra": "mesmos IDs", "sentido_confirmado": "as Entradas que não passam viram pegada 'fora do escopo pela regra' e guardam o EN-nnnn"}
+  ],
+  "substitui": "Muda o bloco 5 do brief (uma Entrada por item achado em entrada/) para as três camadas, com a pré-triagem por regra na coleta; o número 15 do lote de máquina e a triagem do avaliador (bloco 7) seguem como estão.",
+  "marcador": "VIGENTE"
+}

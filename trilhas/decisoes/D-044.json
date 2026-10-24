@@ -1,0 +1,16 @@
+{
+  "id": "D-044",
+  "data": "2026-10-24",
+  "essencia": "Fonte que hoje está na via humana por bloqueio de robô pode passar a um adaptador quando o juridico confere que os termos de uso não proíbem acesso automatizado e um teste mostra um host oficial do mesmo serviço sem desafio. Usar esse host não é contorno: não se resolve desafio, não se esconde que é robô e se para no primeiro desafio. É regra de precaução de Vicente, não garantia jurídica. Vicente faz pela via humana só o que sobrar.",
+  "diretriz": "(1) Para cada fonte na via humana por bloqueio de robô (hoje, a Hemeroteca Digital, AM-0001): o juridico confere, com as regras da D-042, os termos de uso (proibição expressa de acesso automatizado) e se o host sem desafio é do mesmo serviço sob a mesma proteção; depois, um teste do adaptador. (2) Se os termos não proibirem e o teste passar, o host oficial do mesmo serviço que não apresenta desafio pode ser usado, com o robô identificado, no máximo 1 pedido por segundo, sem tocar em captcha (como o do DocReader) e parando no primeiro desafio, que vira erro registrado e volta o item à via humana. (3) Se os termos proibirem, ou se aparecer desafio, a fonte segue na via humana, com o formulário e o roteiro de tela (ordem dos Recortes do mais curto ao mais longo, divisão por década acima de 50 ocorrências, valor provisório, e sessões de até 1 h, com 'não terminou' e o cursor). (4) Não muda o BCR (AM-0061), que está na via humana porque o endereço não resolve. (5) Esta regra lê de novo, para o caso descrito, a leitura do wayback.py de que ler por outro caminho o que um host barra é contornar: o host oficial do mesmo serviço sem desafio, nas condições acima, não é outro caminho em volta da barreira.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-24",
+  "fala_original_ref": "trilhas/2026-10-24_K-108/falas-vicente.md, seções 'Pedido de retomada' (item 1) e 'Confirmação das essências devolvidas' (itens 1 a 3)",
+  "palavras_conferidas": [
+    {"palavra": "automaticamente", "sentido_confirmado": "por adaptador (script), com robô identificado e sem pessoa na rodada; a via humana fica para o que sobrar"},
+    {"palavra": "buscas como o exemplo da hemeroteca", "sentido_confirmado": "toda fonte na via humana por bloqueio de robô, cada uma com a conferência do juridico e um teste; não o BCR, cujo endereço não resolve"},
+    {"palavra": "não é contorno", "sentido_confirmado": "não se resolve desafio, não se esconde que é robô e se para no primeiro desafio; regra de precaução de Vicente, não garantia jurídica"}
+  ],
+  "substitui": "Muda, só para as fontes na via humana por bloqueio de robô que passem nas condições acima, a via humana registrada nas fichas de acesso do K-106 (AM-0001) e no bloco 6 do brief (Recorte assistido real na Hemeroteca); a regra de nunca contornar proteção anti-robô continua vigente.",
+  "marcador": "VIGENTE"
+}

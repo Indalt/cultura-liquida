@@ -3,8 +3,12 @@ estado a cada página (cursor, total informado e visto, saturação, erros, pró
 
 - O adaptador vem de `ambientes/adaptadores.json` (uma linha por ambiente; l. 430). "assistido" não
   roda aqui: é a busca de Vicente, registrada por `scripts/assistido.py` (l. 429).
-- Cada item achado vai à Entrada pela deduplicação (`deduplicar.py`): uma Entrada por item, com os
-  Recortes de origem (l. 435).
+- **Pré-triagem por regra, na coleta** (D-045; `pretriagem.py`): todo item achado deixa a sua pegada
+  no arquivo do Recorte (`ambientes/pegadas/RC-nnnn.jsonl`, uma linha por item; `guarda.py`). Segue
+  para a Entrada (`deduplicar.py`: uma por item, com os Recortes de origem; l. 435) o item que já é
+  Entrada ou que traz no título ou no resumo uma forma ou um descritor da Consulta; o resto fica só
+  como pegada, "fora do escopo pela regra", com a versão da regra, e reabre com o mesmo EN-nnnn, se
+  tinha um, quando seguir.
 - **Resposta saturada** (o total passa do limite da fonte): divide a janela do período em duas e
   repete; só a passada completa e não saturada conta como pegada. Ao estourar o teto de chamadas ou
   de divisões, salva o estado e registra a Falta "busca interrompida por teto" (l. 427, 432).
@@ -43,9 +47,10 @@ from _coleta import BloqueioAntiRobo, BloqueioRobos, Cliente, Execucao, gravar_j
 import adaptador_oai  # noqa: E402
 import adaptador_vufind  # noqa: E402
 import deduplicar  # noqa: E402
+import pretriagem  # noqa: E402
 from gerar_termo import formas  # noqa: E402
 
-VERSAO = "recorte-0.2"
+VERSAO = "recorte-0.3"
 ADAPTADORES = {m.PROTOCOLO: m for m in (adaptador_vufind, adaptador_oai)}
 INICIO_PERIODO = 1900  # desde 1900 (propósito; §0)
 FINAIS = ("percorrido pela busca", "lido por inteiro")
@@ -83,6 +88,7 @@ class Registro:
                 self.recortes[r["id"]] = r
         self.faltas_ids = ids_usados(raiz, "F")
         self.indice = deduplicar.Indice(raiz)
+        self.fora = 0  # itens que ficaram só como pegada, fora do escopo pela regra (D-045)
 
     def salvar(self, r: dict) -> None:
         erros = validar_objeto(r, carregar_esquema("recorte"))
@@ -217,14 +223,39 @@ def fechar(reg: Registro, r: dict, *, acabou: bool, teto_estourado: str | None, 
 
 # --- rodadas -------------------------------------------------------------------------------------
 def entradas(reg: Registro, r: dict, itens: list[dict]) -> tuple[int, int]:
+    """Pegada de cada item e Entrada do que segue na pré-triagem. Devolve (novas, repetidas); os que
+    ficam só como pegada contam em reg.fora."""
     novas = repetidas = 0
+    peg = reg.indice.pegadas
     for it in itens:
-        _, nova = deduplicar.registrar(
-            reg.indice, identificador=it["identificador"], url=it["url"], canal="monitoramento e escavação",
-            origem=reg.ex.origem("scripts/recorte.py", deduplicar.VERSAO), ambiente=r["ambiente"],
-            recorte=r["id"], gravar=reg.gravar)
+        ja = reg.indice.achar(it["identificador"], it["url"])
+        if ja:
+            tri = {"estado": pretriagem.SEGUE, "motivo": f"já é Entrada ({ja[1]['id']})", "versao_regra": pretriagem.VERSAO}
+        else:
+            tri = pretriagem.avaliar(reg.raiz, it.get("titulo"), it.get("resumo"), [r["consulta"]])
+        en = peg.en_por_identificador.get(it["identificador"])
+        nova = False
+        if tri["estado"] == pretriagem.SEGUE:
+            extra = {} if ja else {"titulo": " ".join((it.get("titulo") or "").split()), "ano": it.get("ano"),
+                                   "pretriagem": {k: tri[k] for k in ("estado", "motivo", "versao_regra")},
+                                   "citacao_resumo": tri.get("citacao")}
+            en, nova = deduplicar.registrar(
+                reg.indice, identificador=it["identificador"], url=it["url"], canal="monitoramento e escavação",
+                origem=reg.ex.origem("scripts/recorte.py", deduplicar.VERSAO), ambiente=r["ambiente"],
+                recorte=r["id"], gravar=reg.gravar, id_=en, extra=extra)
+        else:
+            reg.fora += 1
+        linha = {"id_fonte": str(it.get("id_fonte") or it["identificador"]).replace(" ", "_"), "identificador": it["identificador"],
+                 "link": it["url"], "data": date.today().isoformat(), "hash": it.get("hash"),
+                 "triagem": tri["estado"], "motivo": tri["motivo"], "versao_regra": tri["versao_regra"]}
+        if en:
+            linha["entrada"] = en
+        if peg.acrescentar(r["id"], linha, gravar=reg.gravar):
+            saida = f"ambientes/pegadas/{r['id']}.jsonl"
+            if saida not in reg.ex.saidas:
+                reg.ex.saidas.append(saida)
         novas += nova
-        repetidas += not nova
+        repetidas += not nova and tri["estado"] == pretriagem.SEGUE
     return novas, repetidas
 
 
@@ -381,6 +412,8 @@ def main() -> int:
         for i, co in enumerate(cos):
             restam -= rodar_busca(reg, cli, mod, cfg, a.ambiente, co, a.periodo, teto, resumo, -(-restam // (len(cos) - i)))
     ex.resultados = resumo + ex.resultados
+    if reg.fora:
+        ex.resultados.append(f"{reg.fora} item(ns) só como pegada: {pretriagem.FORA} ({pretriagem.VERSAO})")
     ex.olhado.append(f"{cli.pedidos} pedido(s) HTTP, robots.txt incluído, robô identificado, 1 por segundo")
     for d in reg.indice.duplicatas:
         ex.erros.append(f"duplicata em entrada/: {d}")

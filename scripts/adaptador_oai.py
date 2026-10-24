@@ -3,7 +3,8 @@ a Infoteca-e, AM-0029, cuja busca por texto o robots.txt veda ao robô).
 
 O OAI-PMH não busca por texto: a colheita traz a lista inteira (ListRecords, oai_dc, página a página
 pelo resumptionToken), e o filtro das Consultas é local, nos campos título, assunto e descrição,
-que ficam só na memória (o texto não vai ao Git). Uma colheita serve a todas as Consultas da rodada.
+que ficam só na memória (o texto não vai ao Git). O título e a descrição vão também, em separado, à
+pré-triagem por regra (D-045; `pretriagem.py`); o hash é a soma SHA-256 do registro como a fonte o deu. Uma colheita serve a todas as Consultas da rodada.
 O total informado é o completeListSize da lista, e o total visto, os registros colhidos.
 Registros apagados (status="deleted") contam como vistos e não geram Entrada.
 
@@ -12,6 +13,7 @@ casa(texto, consulta) → a Consulta acha o registro?
 """
 from __future__ import annotations
 
+import hashlib
 import re
 import unicodedata
 import urllib.parse
@@ -63,6 +65,10 @@ def pagina(cliente, cfg: dict, ambiente: str, cursor) -> dict:
             "identificador": chave(ambiente, id_fonte, urls),
             "url": next((u for u in urls if "/handle/" in u), urls[0] if urls else cfg["registro"].replace("<id>", id_fonte.split("/")[-1])),
             "texto": " ".join(campo("title") + campo("subject") + campo("description")),
+            "titulo": " ".join(campo("title")),
+            "resumo": " ".join(campo("description")),
+            "ano": min((d[:4] for d in campo("date") if d[:4].isdigit()), default=None),
+            "hash": hashlib.sha256(ET.tostring(rec, encoding="unicode").encode("utf-8")).hexdigest(),
         })
     tok = raiz.find(".//oai:ListRecords/oai:resumptionToken", NS)
     total = int(tok.get("completeListSize")) if tok is not None and tok.get("completeListSize") else None

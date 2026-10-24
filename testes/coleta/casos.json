@@ -35,8 +35,26 @@
         "--fixtures",
         "testes/coleta/fixtures/oai"
       ],
-      "saida_contem": "colhido 19 de 19; 4 Entrada(s) nova(s)",
-      "criterio": "uma colheita para duas Consultas; o filtro local acha os 4 registros de caju (página real recortada a 19 registros, sem autoria nem descrição)"
+      "saida_contem": "colhido 19 de 19; 3 Entrada(s) nova(s)",
+      "criterio": "uma colheita para duas Consultas; o filtro local acha os 4 registros de caju (página real recortada a 19 registros, sem autoria nem descrição); desde o K-108b, 3 seguem pela pré-triagem (forma no título) e 1, que só tinha caju no assunto, fica como pegada (D-045)"
+    },
+    {
+      "nome": "pré-triagem: item com o termo só no assunto fica só como pegada, fora do escopo pela regra",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0029",
+        "--consulta",
+        "CO-0001,CO-0002",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/oai"
+      ],
+      "saida_contem": "1 item(ns) só como pegada: fora do escopo pela regra (pretriagem-0.1)",
+      "criterio": "a regra lê só o título e o resumo (D-045, item 2): o registro com caju só no assunto não vira Entrada e deixa a pegada com o motivo e a versão da regra"
     },
     {
       "nome": "deduplicação: um item achado por duas Consultas vira uma Entrada",

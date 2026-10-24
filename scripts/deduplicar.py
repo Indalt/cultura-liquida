@@ -10,6 +10,11 @@ Entrada é uma só, com todos os Recortes de origem; o rendimento de cada Consul
 descobertas, isto é, itens que ela achou primeiro) sai das Entradas. A Entrada não guarda autoria
 (l. 596).
 
+Depois do K-108b (D-045), o item que não segue na pré-triagem fica só como pegada
+(`ambientes/pegadas/`): os EN-nnnn que as pegadas guardam contam como usados (um ID nunca se
+reaproveita), e o item que reabre volta com o mesmo EN-nnnn. `--conferir` reprova também a pegada que
+aponta para uma Entrada de outro identificador e a Entrada de trabalho sem a pegada do seu Recorte.
+
 Uso como biblioteca (recorte.py, assistido.py, entrada_link.py): chave(), Indice, registrar().
 Uso como script:
     python scripts/deduplicar.py --conferir [--raiz <pasta>]   # reprova (código 1) se houver duplicata
@@ -28,8 +33,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_esquema, carregar_json, validar_objeto  # noqa: E402
 from _acervo import proximo_id  # noqa: E402
 from _coleta import gravar_json  # noqa: E402
+from guarda import Pegadas  # noqa: E402
 
-VERSAO = "deduplicacao-0.1"
+VERSAO = "deduplicacao-0.2"
 PROTECAO_PADRAO = {
     "licenca": "não conferido", "consentimento": "não se aplica", "restricao_comunitaria": "nenhuma conhecida",
     "precisao_lugar": "não se aplica", "dado_sensivel": False, "crianca_ou_adolescente": False,
@@ -78,6 +84,8 @@ class Indice:
         if self.pasta.exists():
             for arq in sorted(self.pasta.glob("*.json")):
                 self._por(arq, carregar_json(arq))
+        self.pegadas = Pegadas(raiz)
+        self.ids |= self.pegadas.ens  # o EN-nnnn de um item que ficou só como pegada não se reaproveita
 
     def _por(self, arq: Path, e: dict) -> None:
         self.ids.add(e["id"])
@@ -99,9 +107,12 @@ class Indice:
 
 def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, origem: dict,
               ambiente: str | None = None, recorte: str | None = None, localizador: str | None = None,
-              nota: str | None = None, gravar: bool = True) -> tuple[str, bool]:
+              nota: str | None = None, gravar: bool = True, id_: str | None = None,
+              extra: dict | None = None) -> tuple[str, bool]:
     """Grava a Entrada do item ou acrescenta o Recorte à que já existe. Devolve (id, nova?).
-    Sem identificador (link trazido sem DOI, handle nem ambiente), a chave é o próprio link."""
+    Sem identificador (link trazido sem DOI, handle nem ambiente), a chave é o próprio link.
+    `id_` reabre um item com o EN-nnnn que a pegada guardava; `extra` traz o título, o ano, a
+    pré-triagem e a citação curta do resumo (D-045)."""
     if achada := ind.achar(identificador, url):
         arq, e = achada
         if recorte and recorte not in e.setdefault("recortes", []):
@@ -109,7 +120,7 @@ def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, o
             if gravar:
                 gravar_json(arq, e)
         return e["id"], False
-    e = {"id": proximo_id("EN", ind.ids), "canal": canal}
+    e = {"id": id_ or proximo_id("EN", ind.ids), "canal": canal}
     if ambiente:
         e["ambiente"] = ambiente
     if recorte:
@@ -119,6 +130,9 @@ def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, o
         e["identificador"] = identificador
     if localizador:
         e["localizador"] = localizador
+    for k, v in (extra or {}).items():
+        if v not in (None, ""):
+            e[k] = v
     e.update(estado="bruto", sustenta_aviso_saude_politica=False, protecao=dict(PROTECAO_PADRAO))
     e["nota"] = nota or ("a marca de aviso, saúde ou política é posta na triagem (bloco 7); "
                          "licença e proteção a conferir na triagem")
@@ -151,6 +165,29 @@ def rendimento(raiz: Path) -> dict[str, dict[str, int]]:
     return saida
 
 
+def conferir_pegadas(ind: Indice) -> list[str]:
+    """A pegada e a Entrada contam a mesma história: o EN-nnnn de um identificador é sempre o mesmo, e
+    a Entrada de trabalho com Recortes tem a pegada de cada um deles (quando o Recorte já tem pegadas)."""
+    erros, en_de = [], {}
+    for rc, linhas in ind.pegadas.por_recorte.items():
+        for p in linhas:
+            en = p.get("entrada")
+            if not en:
+                continue
+            if en_de.setdefault(en, p["identificador"]) != p["identificador"]:
+                erros.append(f"{en} em pegadas de dois identificadores ({en_de[en]} e {p['identificador']})")
+            e = ind.por_chave.get(p["identificador"])
+            if e and e[1]["id"] != en:
+                erros.append(f"pegada de {p['identificador']} em {rc} aponta {en}, e a Entrada é {e[1]['id']}")
+            if p["triagem"] == "segue" and not e:
+                erros.append(f"pegada 'segue' de {p['identificador']} em {rc} sem a Entrada {en}")
+    for k, (_, e) in ind.por_chave.items():
+        for rc in e.get("recortes", []):
+            if rc in ind.pegadas.por_recorte and not ind.pegadas.tem(rc, k):
+                erros.append(f"{e['id']} sem pegada em {rc}")
+    return erros
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--raiz", type=Path, default=RAIZ)
@@ -162,11 +199,12 @@ def main() -> int:
     if a.rendimento:
         for c, d in sorted(rendimento(raiz).items()):
             print(f"{c}: {d['itens']} itens, {d['descobertas']} descobertas")
-    for d in ind.duplicatas:
+    for d in ind.duplicatas + conferir_pegadas(ind):
         print("DUPLICATA", d)
     print(f"{VERSAO}: {len(ind.por_chave)} Entradas com identificador; "
           f"{'sem duplicata' if not ind.duplicatas else f'{len(ind.duplicatas)} duplicata(s)'}")
-    return 1 if a.conferir and ind.duplicatas else 0
+    print(f"{VERSAO}: {ind.pegadas.total()} pegada(s) em {len(ind.pegadas.por_recorte)} Recorte(s)")
+    return 1 if a.conferir and (ind.duplicatas or conferir_pegadas(ind)) else 0
 
 
 if __name__ == "__main__":

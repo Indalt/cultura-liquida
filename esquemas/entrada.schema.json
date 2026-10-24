@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "entrada.schema.json",
   "title": "Entrada",
-  "description": "Entrada do §6 (l. 596): cada item que chega, por qualquer canal, uma só por item. Na fase 1, só os canais do §5.4 da fase 1 (D-026, D-035). Toda fonte nasce aqui, candidata (D-039). Em quarentena, o selo PENDENTE_JULGAMENTO, o motivo e a versão da regra (padrão A-05, D-038). A marca de aviso, saúde ou política é posta na triagem. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. A chave da deduplicação é o identificador do item (DOI, handle ou o ID na fonte, nessa ordem; l. 435): uma Entrada por identificador. O localizador diz onde, no item, está o que se trouxe (página, seção, minuto), no canal de link ou documento trazido por Vicente e na busca assistida (l. 429, 449). Versão 0.2.0 (23/10/2026, K-107): identificador e localizador; a 0.1.0 é de 22/10/2026 (K-104).",
+  "description": "Entrada do §6 (l. 596): cada item que chega, por qualquer canal, uma só por item. Na fase 1, só os canais do §5.4 da fase 1 (D-026, D-035). Toda fonte nasce aqui, candidata (D-039). Em quarentena, o selo PENDENTE_JULGAMENTO, o motivo e a versão da regra (padrão A-05, D-038). A marca de aviso, saúde ou política é posta na triagem. Os campos de origem (l. 587) sempre; os de proteção (l. 586) obrigatórios nos contratos que tocam pessoa, comunidade ou texto de terceiro por natureza e permitidos em todos, para o registro que os tocar. Retirada (l. 585): com retirado = true, só id, origem e fundido_em, sem o conteúdo. Nenhum campo a mais (additionalProperties: false). Valores provisórios por $ref a esquemas/valores-provisorios.json. A chave da deduplicação é o identificador do item (DOI, handle ou o ID na fonte, nessa ordem; l. 435): uma Entrada por identificador. O localizador diz onde, no item, está o que se trouxe (página, seção, minuto), no canal de link ou documento trazido por Vicente e na busca assistida (l. 429, 449). Versão 0.3.0 (24/10/2026, K-108b): título, ano, pré-triagem e citação curta do resumo, só na Entrada de trabalho (D-045); o item que não segue fica só como pegada (pegada.schema.json). 0.2.0 (23/10/2026, K-107): identificador e localizador; a 0.1.0 é de 22/10/2026 (K-104).",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -50,6 +50,33 @@
     },
     "wayback": {
       "type": "string"
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "o título do item na fonte, como metadado (padrão da F-0003; D-045)"
+    },
+    "ano": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$",
+      "description": "o ano de publicação no registro da fonte"
+    },
+    "pretriagem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["estado", "motivo", "versao_regra"],
+      "description": "a pré-triagem por regra, sem IA, na coleta (D-045, item 2; scripts/pretriagem.py)",
+      "properties": {
+        "estado": {"const": "segue"},
+        "motivo": {"type": "string", "minLength": 5},
+        "versao_regra": {"type": "string", "pattern": "^pretriagem-[0-9]+\\.[0-9]+$"}
+      }
+    },
+    "citacao_resumo": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "description": "citação curta do resumo, em volta da ocorrência que fez o item seguir; origem: url_ou_arquivo (padrão da F-0003; D-045)"
     },
     "pessoa": {
       "type": "object",

@@ -605,6 +605,20 @@
         "todos os scripts e agentes a partir do bloco 3"
       ],
       "calibracao": "K-004 (próxima versão da Fundação)"
+    },
+    "guarda_alarme": {
+      "valor": {
+        "arquivos": 20000,
+        "mb": 200,
+        "regra": "O relatorio_dia.py conta os arquivos e soma o tamanho do que o Git versiona ou vai versionar e avisa acima de um dos dois; as pegadas de Recortes fechados há muito podem ser comprimidas."
+      },
+      "linha_fundacao": "l. 435, 473",
+      "base": "D-045 (item 4)",
+      "quem_usa": [
+        "scripts/guarda.py (K-108b)",
+        "scripts/relatorio_dia.py (K-108b)"
+      ],
+      "calibracao": "K-005, com o crescimento medido nas rotinas"
     }
   }
 }

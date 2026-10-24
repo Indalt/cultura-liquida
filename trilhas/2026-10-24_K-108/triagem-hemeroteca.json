@@ -1,0 +1,35 @@
+{
+  "nota": "Saída do juridico (triagem-juridica 0.2.0, D-042 e D-044), K-108: os termos de uso da Hemeroteca Digital e o teste do host sem desafio, antes do adaptador da AM-0001. Gravada pelo curador; o conteúdo é o do agente, resumido nas listas longas. Log em trilhas/logs/2026-10-24_juridico.jsonl. Nota do curador: o agente se identificou com um agente de usuário próprio (com o e-mail do responsável), não com o do adaptador do projeto (CulturaLiquida-coleta/0.1); fica dito, sem efeito na conclusão.",
+  "termos": {
+    "proibicao_expressa": null,
+    "trecho": "Nenhuma proibição expressa de acesso automatizado foi encontrada no alcance. A página oficial da BN sobre publicações seriadas trata de reprodução de imagem e de direitos autorais: \"A Biblioteca Nacional possui somente o acervo de publicações seriadas, não havendo propriedade sobre os direitos autorais (morais e patrimoniais) da coleção.\"",
+    "url": "https://www.gov.br/bn/pt-br/atuacao/colecoes-e-servicos-aos-leitores/publicacoes-seriadas",
+    "nivel": "oficial (página aberta, HTTP 200); a ausência de proibição vale só para o texto lido",
+    "olhado": ["gov.br/bn, publicações seriadas (aberta)", "gov.br/pt-br/termos-de-uso (termo geral do portal; aberto)", "uma busca na web (secundária): nenhum termo próprio da HDB", "não abertos: os termos dentro de hemerotecadigital.bn.gov.br e memoria.bn.gov.br, que barraram o pedido"]
+  },
+  "mesmo_servico": {
+    "resposta": null,
+    "evidencias": [
+      {"o_que": "a página oficial da BN linka o acervo em memoria.bn.br (hdb/periodico.aspx e DocReader), não em memoria.bn.gov.br", "url": "https://www.gov.br/bn/pt-br/atuacao/colecoes-e-servicos-aos-leitores/publicacoes-seriadas", "nivel": "oficial"},
+      {"o_que": "memoria.bn.gov.br/hdb/periodico.aspx: 403 'Request forbidden by administrative rules', sem Server nem Cf-*", "url": "https://memoria.bn.gov.br/hdb/periodico.aspx", "nivel": "observado em 24/10/2026, ~14h41 UTC"},
+      {"o_que": "hemerotecadigital.bn.gov.br/: 403 com desafio do Cloudflare (Cf-Mitigated: challenge); não tocado", "url": "https://hemerotecadigital.bn.gov.br/", "nivel": "observado"},
+      {"o_que": "memoria.bn.br/robots.txt: sem conexão em 2 tentativas", "url": "http://memoria.bn.br/robots.txt", "nivel": "observado"}
+    ]
+  },
+  "robots": [
+    {"host": "memoria.bn.gov.br", "status": 403, "conteudo_resumo": "bloqueio de borda ('Request forbidden by administrative rules'), sem regra de robots.txt"},
+    {"host": "hemerotecadigital.bn.gov.br", "status": 404, "conteudo_resumo": "sem robots.txt publicado; a página inicial dá desafio"},
+    {"host": "memoria.bn.br", "status": null, "conteudo_resumo": "sem conexão; não conferido"}
+  ],
+  "triagem": {
+    "resultado": "sem Falta pela regra",
+    "porque": "o ato (buscar, localizar, linkar, citação curta, sem cópia de imagem nem de página) não gera Falta pela D-042; nenhuma proibição expressa achada no alcance. Mas o portão da D-044 não passou: o pedido identificado levou 403 em memoria.bn.gov.br e desafio em hemerotecadigital.bn.gov.br, e não se mostrou que os dois são o mesmo serviço. Pela D-044 (3), a AM-0001 segue na via humana. Nada foi contornado.",
+    "faltas": []
+  },
+  "nao_conferido": [
+    "os termos de uso próprios da Hemeroteca Digital (os dois hosts barraram o robô)",
+    "o PDF oficial do tutorial da HDB (só o resumo de busca, secundário)",
+    "se memoria.bn.gov.br, memoria.bn.br e hemerotecadigital.bn.gov.br são o mesmo serviço sob a mesma proteção",
+    "a causa da diferença entre o teste de Vicente (200) e o do juridico (403): agente de usuário, IP ou hora"
+  ]
+}
