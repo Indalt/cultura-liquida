@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A bioenergia em Guiné-Bissau : uma alternativa na melhoria de renda e desenvolvimento regional",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e 6 milhões indiretos. A Guiné-Bissau enfrenta problema da pobreza extrema e economia baseada na monocultura de caju. Os gastos com combustível fóssil em 2015 representaram 30% de total das importações do país, contribuindo…"
 }

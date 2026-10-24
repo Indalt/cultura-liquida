@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Coleção de espécies frutíferas exóticas nas condições de Manaus, AM.",
+  "ano": "1998",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Avaliacao do comportamento das especies frutiferas exoticas (abrico, acerolo ata, cagaita, caju, cambuca, canistel, carambola, caja, dovialis, flacourtia, fruta-pao, graviola, goiaba, goiaba italiana, jaca, jambo…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O direito à creche no município do Rio de Janeiro: desdobramentos da lei 12.796/2013 na dinâmica de famílias das classes populares",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…on the impacts of Law No. 12,796/2013 on the daily lives of working-class families living in the neighborhood of Caju, in the city of Rio de Janeiro, particularly those with children aged 0 to 3 enrolled in municipal public daycare…"
 }

@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Características tecnológicas da cultura do cajueiro.",
+  "ano": "1989",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…29,60% daquela produção . As perspectivas de aumento da participação do Brasil, na produção mundial de castanha de caju, são promissoras, em função dos incentivos à instalação de novos plantios e das dificuldades dos países africanos…"
 }

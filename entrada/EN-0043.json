@@ -29,5 +29,12 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Controle da antracnose pós-colheita do mamão com leveduras killer",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

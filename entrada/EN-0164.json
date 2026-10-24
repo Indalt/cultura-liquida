@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Extrato de folhas de caju (Anacardium Occidentale l.) e de cajuí (Anacardium Microcarpum d.): prospecção fitoquímica, atividade antioxidante, antimicrobiana e anti-inflamatória, in vitro e in vivo",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0032",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A novidade somos nós mesmos: a espacialização identitária do produto turístico gastronômico nordestino brasileiro",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajuína' no resumo (CO-0002)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(caranguejada), Ceará couscous, Ceará fish stew (moqueca), Ceará rapadura (sugarcane candy), Maria Isabel rice, cajuína, capote, Campo Maior sun-dried beef, Piauí paçoca, cuxá rice, Maranhão fish stew (peixada maranhense), tiquira,…"
 }

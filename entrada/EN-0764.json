@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Composição da comunidade de vespas e abelhas solitárias em vegetação de restinga de Sergipe",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…influence nesting and assembly composition in restinga vegetation from Reserva Particular do Patrimônio Natural do Caju (RPPN). We used trap-nests and evaluations were conducted monthly over two years. We collected 735 nests from 4 bee…"
 }

@@ -30,5 +30,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Contribuição ao estudo da fermentação alcoólica do suco de caju (anacardium occidentale l) para produção de aguardente.",
+  "ano": "1991",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

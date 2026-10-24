@@ -28,5 +28,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização de farinha de mandioca (Manihot esculenta Crantz) com concentrado protéico de folhas de mandioca obtido por precipitação isoelétrica",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…caso das culturas de subsistência, entre as quais se destaca a mandioca (Manihot esculenta Crantz), que, durante a colheita, tem toda a sua parte aérea desprezada no campo. As folhas dessa maniva contém importantes nutrientes que poderiam…"
 }

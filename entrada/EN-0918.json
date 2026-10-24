@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estudo fitoquímico e antifúngico extratos de plantas contra Microsporum canis e cândida Spp. Isolado de cães",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Peschiera affinis (Müll.Arg.) Miers e Calotropis procera, o decocto da Mangifera indica, o líquido da castanha de caju e seus constituintes ácido anacárdico, cardol e cardanol (Anacardium occidentale) e os óleos essenciais de…"
 }

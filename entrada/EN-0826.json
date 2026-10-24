@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "DE QUINTAIS, SÍTIOS E FAZENDAS: POR UMA ETNOGRAFIA DA CAJUCULTURA DE ALTOS, PIAUÍ",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "O programa de reestruturação da modernização da cadeia produtiva do caju foi iniciado, no Brasil, desde 2003 pelas ações da Fundação Banco do Brasil (FBB), e de seus parceiros, visando a…"
 }

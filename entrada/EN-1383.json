@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Considerações sobre a fruticultura brasileira, com ênfase no Nordeste.",
+  "ano": "1994",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…que tem proporcionado um rápido crescimento da fruticultura tropical: primeiro lugar na produção do abacaxi, banana, caju, coco, mamão, maracujá e melão. Outras vantagens do Nordeste e a maior proximidade dos mercados importadores (Europa…"
 }

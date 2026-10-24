@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Fruticultura Tropical: capacitação e experiências de sucesso.",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…fruteiras nativas, banana, abacate, goiaba, pitayas, abacaxi, manga, mamão, graviola, pêssego, açaí, cacau, caju, melão e melancia. As experiências de sucesso, o potencial de aumento da demanda dos mercados interno e externo, a…"
 }

@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Viabilidade e potencial do kefir liofilizado de castanhas na elaboração de uma bebida vegetal fermentada: um estudo de estabilidade e análise sensorial.",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…bactérias láticas e leveduras do kefir liofilizado de extratos hidrossolúveis de castanha do Brasil e castanha de caju, além de seu potencial na elaboração de uma bebida vegetal fermentada estável e da análise sensorial de ambos os…"
 }

@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito do consumo de castanhas brasileiras (Bertholetia excelsa H.B.K. e Anacardium occidentale L.) em marcadores da saúde intestinal e inflamatórios de mulheres com excesso de peso",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…melhor controle do peso corporal. Entretanto, a castanha-do- brasil (Bertholletia excelsa H.B.K) e a castanha de caju, (Anacardium occidentale L.), ambas nativas brasileiras, estão entre as menos estudadas. Além disso, as evidências…"
 }

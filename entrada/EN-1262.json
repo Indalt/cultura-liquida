@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Diagnóstico setorial da agroindústria de polpa de fruta na região Nordeste.",
+  "ano": "1999",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…um levantamento do estado da arte da produção de polpa produzida nesta região e coletou amostras de polpas de cajá, caju e acerola para avaliação microbiológica, microscópica e físico-química. O mecanismo utilizado para a obtenção destas…"
 }

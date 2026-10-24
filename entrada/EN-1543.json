@@ -29,5 +29,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0032",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "O efeito de cinco doses de cajuína em indivíduos destreinados submetidos a uma corrida até a exaustão",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajuína' no título (CO-0002)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização ecotoxicológica de lodo gerado em estação de tratamento de água",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…composições (0:1; 1:1; 1:2; 1:3 e 2:1 de lodo/bagaço), inoculadas com cada uma das linhagens dos fungos (P. sajor-caju e P. ostreatus) incubados por 12 dias. Após, avaliou-se o pH; condutividade elétrica, umidade, análises químicas de…"
 }

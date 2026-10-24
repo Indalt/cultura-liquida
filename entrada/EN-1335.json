@@ -25,5 +25,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Manual de interpretação de trilhas: explorando os conceitos de ecologia e conservação de floresta na Reserva do Caju.",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Método para estimar a oferta de lenha na substituição de copa em cajueiros.",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…como uma alternativa que possibilita o aumento da produtividade e a melhoria da qualidade dos produtos do caju, além de facilitar o manejo e a colheita dos frutos pela redução do porte das plantas. A tecnologia, desenvolvida…"
 }

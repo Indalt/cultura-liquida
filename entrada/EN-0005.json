@@ -36,5 +36,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20240912130521/http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/10986"
+  "wayback": "https://web.archive.org/web/20240912130521/http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/10986",
+  "titulo": "Estudo de caracterização e isotermas de sorção do bagaço do pseudofruto do caju, enriquecido para ração animal.",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0005)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

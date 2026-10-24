@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O mundo do cajulino.",
+  "ano": "1993",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…o Centro Nacional de Pesquisa de Agroindustria Tropical - CNPAT em substituicao ao Centro Nacional de Pesquisa de Caju - CNPCa. Com essa nova sigla, aumentam nossos compromissos com a sociedade brasileira, na medida que acrescentamos…"
 }

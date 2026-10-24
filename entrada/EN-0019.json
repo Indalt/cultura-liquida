@@ -36,5 +36,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20210302121057/http://www.repositorio.ufc.br/handle/riufc/22809"
+  "wayback": "https://web.archive.org/web/20210302121057/http://www.repositorio.ufc.br/handle/riufc/22809",
+  "titulo": "Aplicação pré-colheita de ácido giberélico no metabolismo antioxidante em pedúnculos de clones de cajueiro-anão",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

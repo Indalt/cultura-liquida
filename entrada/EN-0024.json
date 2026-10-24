@@ -35,5 +35,12 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Qualidade de brócolis e caju submetidos a atmosferas hiperbáricas",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

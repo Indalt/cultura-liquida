@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "OBTENÇÃO E CARACTERIZAÇÃO DE MICROCÁPSULAS DE ÓLEO DE PEQUI EM MATRIZ DE GOMA DE CAJUEIRO E GELATINA POR COACERVAÇÃO COMPLEXA",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…à tradicional matriz de revestimento goma arábica/gelatina, considerando a representatividade da cultura do caju no Brasil, especialmente no Nordeste, e as possíveis vantagens socioeconômicas geradas pela utilização deste…"
 }

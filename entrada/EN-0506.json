@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Desenvolvimento de resina novolac derivada do líquido da casca da castanha de caju para aplicação em revestimentos anticorrosivos",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

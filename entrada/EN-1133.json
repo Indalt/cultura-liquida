@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliação química e sensorial de café Catuaí amarelo fermentado pelo processamento por via seca com inoculação de leveduras",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…com Saccharomyces cerevisiae 0543 B obteve a pontuação mais alta no teste de xícara, com notas de banana e caju. O tratamento com Candida parapsilosis CCMA 0544 mostrou bons resultados para ambos os métodos utilizados."
 }

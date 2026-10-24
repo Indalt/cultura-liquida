@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O potencial da cajucultura nas savanas tropicais.",
+  "ano": "2001",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…nos cerrados;Atuacao da Embrapa Agroindustria Tropical nos cerrados;Oportunidades para a industrializacao do caju nas savanas tropicais."
 }

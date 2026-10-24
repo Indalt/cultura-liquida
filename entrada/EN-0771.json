@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "[en] ORGANIZATION AND SCHOOL ENVIRONMENT OF A FULL-TIME SPORTS-ORIENTED SCHOOL: THE OLYMPIC EXPERIMENTAL GYMNASIUM IN RIO DE JANEIRO",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da rede. Desenvolvemos um estudo de caso sobre a implementação do programa em uma das unidades, localizada no bairro Caju. Realizamos entrevistas com técnicos responsáveis pelo programa nos órgãos municipais e instituições que…"
 }

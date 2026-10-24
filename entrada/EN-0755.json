@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Potencial de técnicas microscópica, sorológica, molecular e de imagem de fluorescência da clorofila na detecção de Lasiodiplodia theobromae associado ao cajueiro",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "A agroindústria do caju constitui-se em importante atividade econômica do Nordeste brasileiro, estando associada à geração de divisas ao…"
 }

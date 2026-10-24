@@ -37,5 +37,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20240910203110/https://repositorio.ufpb.br/jspui/handle/tede/8800"
+  "wayback": "https://web.archive.org/web/20240910203110/https://repositorio.ufpb.br/jspui/handle/tede/8800",
+  "titulo": "Avaliação in vitro do potencial prebiótico do subproduto do do processamento do pedúnculo do caju(Anacardium occidentale L.) frente à Lactobacillus spp.",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0005)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

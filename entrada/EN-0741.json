@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Fontes de crescimento das principais culturas do Rio Grande do Norte, 1981-92",
+  "ano": "1996",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…área cultivada e valor da produção, a saber: abacaxi, algodão arbóreo, algodão herbáceo, arroz, banana, batata-doce, caju, cana-de-açúcar, coco-da-baía, feijão, mandioca, manga, melão, milho, sisal e sorgo. Constatou-se que a produção das…"
 }

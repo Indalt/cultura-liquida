@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Eventos públicos e privados : a elaboração de políticas culturais voltadas para a realização da festa",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…format. To understand the organizational structure of these two events we make a comparative analysis with the Pre-Caju, event that is promoted by the private initiative in partnership with agencies of the State and the City of Aracaju."
 }

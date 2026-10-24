@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Ações e políticas do Estado e da sociedade acerca da geração de renda na Reserva Extrativista Marinha de Soure/Marajó-PA",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…between employment and income is established by means of analysis of the variables collected from field research in Caju-Una, Céu and the Pesqueiro village, the three communities inside the reserve area, the Soure RESEX. Such variables,…"
 }

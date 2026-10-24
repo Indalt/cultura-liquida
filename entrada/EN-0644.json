@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Avaliação do consumo da castanha de caju (Anacardium Occidentale L.) e seu óleo sobre marcadores do estresse oxidativo, função endotelial e expressão de genes em adultos com excesso de peso",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

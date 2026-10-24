@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Direito de permanecer: turismo de base comunitária e desenvolvimento endógeno na Ilha de Marajó - Pará - Brasil",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…presente tese analisa o turismo de base comunitária na ilha do Marajó, protagonizado pelas comunidades litorâneas do Caju-una, Céu e Pesqueiro, do município de Soure, que fazem parte da Reserva Extrativista Marinha de Soure, na busca de…"
 }

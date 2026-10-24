@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Biodegradação de vinhaça proveniente do processo industrial de cana-de-açúcar por fungos",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da vinhaça três linhagens de fungos ascomicetos e cinco de basidiomicetos sendo que o basidiomiceto Pleurotus sajor-caju CCB 020 se destacou dos demais. A descoloração foi concomitante com o aumento das atividades de lacase e manganês…"
 }

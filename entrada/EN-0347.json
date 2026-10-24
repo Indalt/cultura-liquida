@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A interação do cajueiro (Anacardium occidentale L.) com o fungo Lasiodiplodia theobromae reprograma a expressão de proteínas no caule, sítio de infecção do patógeno.",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "No Brasil, a indústria do caju é uma das principais fontes de renda e trabalho no campo e representa a maior parcela da economia na região…"
 }

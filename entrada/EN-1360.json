@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Situação atual e perspectivas da cajucultura brasileira.",
+  "ano": "1990",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'processamento do pedúnculo' no resumo (CO-0005)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…uma ociosidade da ca- pacidade instalada. Para a fabricação de sucos e doces, existem 8 unidades de processamento do pedúnculo que processam 53.000 t, ou somente 6% da produção brasileira de pedúnculo. Atualmente, a área colhida…"
 }

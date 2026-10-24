@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estimativa da transpiração de cajueiros na Baixada Cuiabana",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…obtidas poderão auxiliar na elaboração de estratégias de manejo que possibilitem obter uma produção adequada de caju quanto às exigências ambientais, promovendo o incentivo da atividade frutícola na região."
 }

@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise do potencial biotecnológico de leveduras para produção de biomassa em extrato de resíduos agroindustriais",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…a produção de biomassa destas leveduras utilizando resíduos agroindustriais. O cultivo foi realizado em suco de caju bruto ou clarificado e em hidrolisado de cabeça de camarão. A levedura mais apropriada foi selecionada para…"
 }

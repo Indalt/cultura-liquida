@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Potencial de coprodutos de frutas tropicais como recursos circulares para promover a viabilidade probiótica de Lactobacillus em bioprocessamentos e a modulação da microbiota intestinal",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…avaliar o potencial de utilização de coprodutos do processamento de frutas, acerola (Malphigia glabra L., CACE), caju (Anacardium occidentale L., CCAS) e goiaba (Psidium guayaba L., CGUA) como meios para multiplicação (fermentação) e…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desempenho, metabolismo e emissão de metano de bovinos Nelore em terminação recebendo óleos funcionais em substituição ou combinação com monensina sódica na dieta",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…animal. Neste sentido, objetivou-se neste trabalho, avaliar o uso de princípios ativos extraídos dos óleos de caju e mamona como moduladores da fermentação ruminal alternativos à monensina sódica. Foram realizados seis…"
 }

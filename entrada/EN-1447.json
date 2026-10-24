@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "MANEJO da florada do cajueiro-anão: programa 16: Nordeste/Vale do Jequitinhonha.",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…produção e controlar o oídio, principal doença dessa cultura. Para contribuir com o desenvolvimento do cultivo do caju, a Embrapa disponibilizou clones de genética superior, incremento na produção e qualidade dos frutos, por meio do…"
 }

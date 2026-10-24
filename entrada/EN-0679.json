@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Eletrooxidação de resíduos reais como estratégia simultânea para produção de compostos de alto valor agregado: ácidos carboxílicos e hidrogênio verde",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…no caso, a água de lavagem de uma máquina de lavar roupa, e um resíduo industrial, o líquido da casca da castanha de caju, em produtos de valor agregado, como ácidos carboxílicos, enquanto simultaneamente cogera hidrogênio verde. Neste…"
 }

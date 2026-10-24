@@ -28,5 +28,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Sistemas agroflorestais em Santa Maria do Pará: características socioeconômicas, adoção e composição florística.",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…comercial e voltadas para a autoconsumação. O coco (Coccus nucifera L.), a pimenta-do-reino (Piper nigrum L.), o caju (Anacardium ocidentale L.) e o cupuaçu (Theobroma grandiflorum Chum.) são as frutíferas mais cultivadas, juntamente…"
 }

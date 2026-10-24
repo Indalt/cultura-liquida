@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização morfológica e isoenzimática do cajueiro (Anacardium occidentale L.), tipos comum e anão precoce, por meio de técnicas multivariadas",
+  "ano": "1991",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…dos acessos do Banco Ativo de Germoplasma de cajueiros (Anacardium occidentale L.) do Centro Nacional de Pesquisa de Caju /EMBRAPA, localizado no município de Pacajus-CE, com ênfase para as diferenças entre os tipos comum e anão precoce.…"
 }

@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Incremento de Producao, Renda Adicional e de Icms com Uso de ...",
+  "ano": "1998",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(sementes e mudas) e metodos de manejo integrado de pragas e doencas. As culturas escolhidas foram: Arroz, Caju, Feijao, Mandioca, Maracuja, Milho e Tomate. A coleta de dados da area colhida, producao e produtividade foi feita…"
 }

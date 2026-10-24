@@ -28,5 +28,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento e caracterização de filme compósito e sua aplicação na conservação de frutas do maracujazeiro – amarelo (passiflora edulis sims f. Flavicarpa)",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…destacado da planta. Característico do fruto climatérico, o maracujá apresenta vida útil curta, com problemas pós-colheita, sendo o murchamento e a susceptibilidade ao ataque de microrganismos como os fungos, alguns deles. Mediante a…"
 }

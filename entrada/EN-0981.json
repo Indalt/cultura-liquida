@@ -31,5 +31,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Morfologia e proliferação celular do epitélio intestinal de leitões lactentes alimentados com dietas contendo óleos funcionais",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Este estudo teve como objetivo explorar o uso de óleos funcionais (FO) de mamona e casca de caju em leitões durante o aleitamento, com ênfase na morfometria e proliferação celular intestinal. Foram utilizadas 40…"
 }

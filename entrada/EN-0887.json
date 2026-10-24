@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise de sulfitos em sucos de frutas e estimativa de seu consumo por escolares",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foram os néctares ou sucos de frutas, o açúcar refinado, as batatas fritas congeladas, o coco ralado, o suco de caju e as frutas secas e cristalizadas. Considerando os limites máximos permitidos (LMP) pela legislação brasileira, o…"
 }

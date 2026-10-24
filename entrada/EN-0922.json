@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização física e socioambiental da microbacia hidrográfica do Riacho Namorado no município de São João do Cariri-PB.",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…sorgo; aptidão restrita para o feijão, algodão herbáceo e mandioca; inaptidão para os cultivos de: abacaxi, banana, caju, cana-de-açucar, mamona, milho, sisal; e nenhuma aptidão moderada para qualquer tipo de cultivo."
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análises biométricas e quimiométricas relacionadas a longevidade e vigor de sementes de cajueiro Anacardium occidentale L.",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…negativa com todos os fatores biométricos, a cromatografia apontou para uma composição de lipídios de amêndoa de caju com elevada concentração de ácido cis-9-oleico (+60%) e correlação entre emergência e teores de ácido esteárico. Por…"
 }

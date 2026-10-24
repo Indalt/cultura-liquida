@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Biodegradação e toxicidade de corantes têxteis e efluentes da Estação de Tratamento de Águas Residuárias de Americana, SP",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…quanto à capacidade de degradação a bactéria Acinetobacter johnsonii, os fungos basidiomicetos Pleurotus sajor-caju e Pleurotus ostreatus, várias espécies de cianobactérias e também material da planta raiz-forte contendo alto teor…"
 }

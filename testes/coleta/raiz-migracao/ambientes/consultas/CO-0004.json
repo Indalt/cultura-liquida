@@ -1,0 +1,29 @@
+{
+  "id": "CO-0004",
+  "nome": "cajuína + descritores (TE-0002)",
+  "tipo": "mista",
+  "termos": [
+    "TE-0002"
+  ],
+  "variantes": [
+    "cajuina",
+    "caju-ína",
+    "cajuí-na",
+    "ca-juína",
+    "cajuyna"
+  ],
+  "descritores": [
+    "processamento do pedúnculo",
+    "etapas de produção",
+    "colheita",
+    "descastanhamento"
+  ],
+  "traducao": "ambientes/traducao-consultas.json#CO-0004",
+  "origem_registro": {
+    "criado_por": "scripts/gerar_termo.py",
+    "data": "2026-10-23",
+    "execucao": "EX-0015",
+    "versao_regra": "termo-0.2"
+  },
+  "nota": "proposta gerada do Termo pelo laço termo → booleano → Consulta; booleano: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+}

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização e classificação de solos sob o cultivo de cajueiro em Serra do Mel-RN",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…do Mel, localizado na região semiárida do estado do Rio Grande do Norte, apresenta grande relevância na produção de caju, sobretudo em sistemas de sequeiro. Fundado na década de 1970, o município foi dividido em agrovilas, quando foi…"
 }

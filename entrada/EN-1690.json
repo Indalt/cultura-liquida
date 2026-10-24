@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito de biodefensivos no controle da traça-das-castanhas do cajueiro.",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…nos frutos (castanhas), podendo causar elevados prejuízos ao destruir completamente a amêndoa da castanha-de-caju. Apesar de sua importância, existem poucos defensivos registrados para seu controle no Ministério da Agricultura e…"
 }

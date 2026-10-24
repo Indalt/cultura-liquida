@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Extratos de resíduos agroindustriais para o controle de fungos fitopatogênicos",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foi avaliar o potencial de extratos de resíduos agroindustriais de abacate, uva, café, manga, abacaxi, maracujá e caju na inibição do crescimento micelial in vitro dos fungos Fusarium pallidoroseum, Colletotrichum dematium, Rhizoctonia…"
 }

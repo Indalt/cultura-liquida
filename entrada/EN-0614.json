@@ -32,5 +32,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Produção de cogumelos comestíveis e fenol-oxidases de Pleurotus sajor-caju e Lentinula edodes em resíduos lignocelulósicos",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

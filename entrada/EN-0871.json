@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise da pegada hídrica no perímetro irrigado de são gonçalo, localizado no sertão paraibano.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…um calendário agrícola para a região, sendo selecionadas algumas culturas como a manga, o coco, a goiaba, o caju, a banana, a graviola, o maracujá e a acerola, entre outras como opções de cultivos. Portanto, podemos afirmar que o…"
 }

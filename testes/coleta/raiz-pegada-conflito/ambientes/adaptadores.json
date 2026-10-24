@@ -1,0 +1,24 @@
+{
+  "nota": "Um adaptador por protocolo, não por fonte (Fundação l. 430): um ambiente novo com protocolo conhecido entra com uma linha aqui. Vias e endpoints das fichas de acesso testadas em 23/10/2026 (K-106). 'limite_fonte' é o maior número de resultados que a fonte entrega numa consulta; null quando a ficha não o conhece (sem ele, a resposta saturada não se detecta pelo total). Versão 0.1.0 (23/10/2026, K-107).",
+  "AM-0021": {
+    "adaptador": "vufind",
+    "base": "https://bdtd.ibict.br/vufind/api/v1/search",
+    "registro": "https://bdtd.ibict.br/vufind/Record/<id>",
+    "pagina": 5,
+    "limite_fonte": null
+  },
+  "AM-0029": {
+    "adaptador": "oai-pmh",
+    "base": "https://www.infoteca.cnptia.embrapa.br/oai/request",
+    "registro": "https://www.infoteca.cnptia.embrapa.br/handle/doc/<id>",
+    "metadataPrefix": "oai_dc"
+  },
+  "AM-0001": {
+    "adaptador": "assistido",
+    "motivo": "403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página"
+  },
+  "AM-0061": {
+    "adaptador": "assistido",
+    "motivo": "bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar"
+  }
+}

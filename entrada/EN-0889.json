@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Degradação de tocos de Eucalyptus grandis por fungos",
+  "ano": "2003",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…spp.. Para tal, foram utilizadas cinco espécies de fungos, Lentinula edodes (Berk.) Pegler, Pleurotus sajor caju (Fr.) Singer, Polyporus guiannensis Mont., Pycnoporus sangüineus e Ganoderma applanatum (Pers.) Pat., testados em…"
 }

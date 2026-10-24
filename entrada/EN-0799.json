@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análises químicas, térmicas e de emissões de pellets de resíduos de biomassas agrícolas do nordeste brasileiro",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…residual para três das principais culturas agrícolas do nordeste brasileiro, sendo elas; o coco verde, a castanha de caju e cana de açúcar. A metodologia utilizada foi a densificação manual da biomassa para produção de pellets e em…"
 }

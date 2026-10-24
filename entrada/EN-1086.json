@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "ATIVIDADE LEISHMANICIDA DE TRITERPENOS ISOLADOS DA Musa paradisiaca E DO ÁCIDO ANACÁRDICO E SEUS DERIVADOS CONTRA Leishmania infantum chagasi",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…style=\"\"><font face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\">Líquido da Casca da Castanha do Caju e três derivados sintéticos. A atividade contra as</span></font></div><div style=\"\"><font face=\"Arial,…"
 }

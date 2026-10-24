@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desempenho agronômico de clones de cajueiro em Santana do Matos, RN.",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Serra de Santana, situada no Polo de cajucultura das Serras Centrais, é um importante centro de produção de caju do estado do Rio Grande do Norte. Essa microrregião responde por quase um quarto da produção de castanhas do estado.…"
 }

@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Ocorrência de rotavírus, adenovírus, norovírus e vírus da hepatite A em estações de tratamento de esgoto no Rio de Janeiro e avaliação de metodologias de recuperação viral em lodo de esgoto",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e filtros anaeróbios) e aeróbio (lodo ativado de aeração prolongada) e em uma ETE urbana de grande porte (Alegria, Caju) que utiliza processo de lodo ativado convencional. Os resultados demonstraram que os efluentes hospitalares são…"
 }

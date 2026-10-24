@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Tempos pandêmicos de Covid-19 : implicações ao trabalho profissional de assistentes sociais nas equipes regionais de atendimento multidisciplinar do tribunal de justiça do estado do Paraná",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…sociais compunham os setores técnicos. Na maioria, coexistem modalidades de contrato, no exercício da mesma função (CAJU). Parte expressiva dos sujeitos submeteram-se a excesso na carga horária de trabalho, tendo em vista o atendimento…"
 }

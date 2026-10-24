@@ -29,5 +29,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Aplicação de revestimentos formulados com alginato de sódio e extratos hidroalcoólicos de subprodutos de frutas fermentados com bactérias láticas para o controle de antracnose em mangas e goiabas",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…por BAL para controle de antracnose em manga cv. Palmer e goiaba cv. Paluma. Para isso, subprodutos de acerola, caju, manga e uva foram coletados em indústrias de processamento de polpas de frutas, esterilizados, liofilizados e…"
 }

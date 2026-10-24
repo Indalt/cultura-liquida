@@ -330,6 +330,34 @@
       "esquema": "pessoa",
       "entrada": "esquemas/exemplos/erro-pessoa-retirada.json",
       "criterio": "l. 585: sem o conteúdo"
+    },
+    {
+      "nome": "pegada: item que segue, com a Entrada",
+      "espera": "passa",
+      "esquema": "pegada",
+      "entrada": "esquemas/exemplos/pegada.json",
+      "criterio": "D-045: ID na fonte, link, data, hash, estado da triagem, motivo e versão da regra"
+    },
+    {
+      "nome": "pegada: item fora do escopo pela regra, sem Entrada",
+      "espera": "passa",
+      "esquema": "pegada",
+      "entrada": "esquemas/exemplos/pegada-fora.json",
+      "criterio": "D-045, item 2: o resto fica só como pegada, com a versão da regra"
+    },
+    {
+      "nome": "pegada: com o título",
+      "espera": "reprova",
+      "esquema": "pegada",
+      "entrada": "esquemas/exemplos/erro-pegada-com-titulo.json",
+      "criterio": "D-045, a: título e resumo servem à regra e não vão ao Git na pegada"
+    },
+    {
+      "nome": "pegada: 'segue' sem a Entrada",
+      "espera": "reprova",
+      "esquema": "pegada",
+      "entrada": "esquemas/exemplos/erro-pegada-segue-sem-entrada.json",
+      "criterio": "o item que segue tem a sua Entrada de trabalho"
     }
   ]
 }

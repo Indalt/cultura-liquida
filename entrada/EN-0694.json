@@ -32,5 +32,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Estudo das interações polifenol-proteína e das reações de escurecimento não-enzimático para o processamento de cajuína",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajuína' no título (CO-0002)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

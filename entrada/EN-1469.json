@@ -25,5 +25,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Contribuição do consumidor para o desenvolvimento de novos sabores de suco tropical: estudo de caso com caju.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

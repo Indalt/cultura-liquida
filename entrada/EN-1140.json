@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliação do efeito sinérgico no Fator de Proteção Solar de emulsões contendo filtros químicos e matérias primas vegetais",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…communis), o extrato de Pouteria sapota, o Mamey e o extrato de Anarcadium occidentale, popularmente conhecido como Caju, que possui uma mistura de compostos fenólicos (ácidos anacárdicos, os cardanóis e os cardóis), que podem aumentar o…"
 }

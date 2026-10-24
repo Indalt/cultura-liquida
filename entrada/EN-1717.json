@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Obtenção de enzimas para a indústria de alimentos.",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…económicos para que sua produção em larga escala seja viável (VIEIRA et ai., 2001). , O líquido da castanha de caju (LCC), possui como constituintes fundamentais Acido Anacárdico (ACN), Cardo! (CD) e o Cardanol (CDN) que após o…"
 }

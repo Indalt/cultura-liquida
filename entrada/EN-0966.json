@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Fitogênicos : uma alternativa para o controle da coccidiose aviária",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…que a salinomicina em combinação à mistura comercial de óleos funcionais (líquido da casca de castanha de caju e óleo de mamona) mostrou efeito sinérgico no desempenho e na modulação da microbiota intestinal de frangos de corte…"
 }

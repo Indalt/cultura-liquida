@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Residuos Solidos Industriais: Caracterizacao e Gestao. o Caso do Estado do Ceara",
+  "ano": "2004",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…automotores; industriais texteis; siderurgicas; industrias de alimentos (beneficiamento de arroz, castanha-de-caju, frutos tropicais e bebidas); industrias de açucar, alcool e aguardente; industrias moveleira; industrias de…"
 }

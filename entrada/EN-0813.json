@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Biodiversidade e composição de alimentos: dados nutricionais de frutas nativas subutilizadas da flora brasileira",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…compiladas com maiores teores. A vitamina C destacam camu-camu com pele (1888,2 mg/100 g), mangaba (332 mg/100 g) e caju-do-cerrado (294 mg/ 100 g). A análise das publicações levantadas revelou lacunas nas informações metodológicas…"
 }

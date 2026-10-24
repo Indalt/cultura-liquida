@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Efeito do consumo da amêndoa da castanha de caju associado à atividade de educação nutricional nas concentrações plasmáticas de cobre e zinco em adolescentes com obesidade",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

@@ -30,5 +30,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Carotenoides, valor de vitamina A e outras determinações fisicas, quimicas e sensoriais de suco de caju e maracuja",
+  "ano": "1978",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

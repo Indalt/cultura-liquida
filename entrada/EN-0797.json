@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Baixo Jauaperi: da farmacopeia ao sistema de saúde – um estudo etnobotânico em comunidades ribeirinhas",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foi identificado um papel secundário para as plantas exóticas cultivadas. As três plantas exóticas mais salientes, o caju, o boldo e a laranjeira, respectivamente, contemplam principalmente doenças gástricas e intestinais, que parecem ser…"
 }

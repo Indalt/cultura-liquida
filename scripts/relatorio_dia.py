@@ -6,7 +6,8 @@ Calcula, sem IA: as Entradas novas do dia (por canal e ambiente) e o total; os R
 as Faltas (abertas e novas do dia); a fila de curadoria (cartões que esperam Vicente, contra 15 por
 semana); as propostas das rotinas à espera de junção, com o resultado do portão (ramificações
 `claude/`; A-10, D-038); a Matriz de Pegadas e Vácuos (vácuos de busca); o consumo da semana da conta
-(tabela do checklist do piloto; D-040). Vácuos por região e período do conhecimento são do grafo
+(tabela do checklist do piloto; D-040); a guarda das Entradas (D-045): as pegadas por estado da
+pré-triagem e o alarme de tamanho (arquivos e MB do que o Git versiona, contra `guarda_alarme`). Vácuos por região e período do conhecimento são do grafo
 (bloco 8): aqui, só o que a coleta mostra.
 
 Uso:
@@ -25,9 +26,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_json  # noqa: E402
 import fila_curadoria  # noqa: E402
 import orcamento  # noqa: E402
+import guarda  # noqa: E402
 import pegadas  # noqa: E402
 
-VERSAO = "relatorio-dia-0.1"
+VERSAO = "relatorio-dia-0.2"
 
 
 def ramificacoes_claude(raiz: Path) -> list[str]:
@@ -59,6 +61,14 @@ def main() -> int:
     if ents:
         ls.append("- por estado (todas): " + ", ".join(f"{k} {v}" for k, v in sorted(estados.items())))
         ls.append(f"- sem cópia no Wayback: {sum(1 for e in ents if not e.get('wayback') and str(e.get('url_ou_arquivo', '')).startswith('http'))}")
+    peg = guarda.Pegadas(raiz)
+    tri = Counter(p["triagem"] for v in peg.por_recorte.values() for p in v)
+    m = guarda.medir(raiz)
+    ls += ["", f"## Guarda das Entradas (D-045): {peg.total()} pegada(s) em {len(peg.por_recorte)} Recorte(s)",
+           "- por pré-triagem: " + (", ".join(f"{k} {v}" for k, v in sorted(tri.items())) or "nenhuma"),
+           f"- hoje: {sum(1 for v in peg.por_recorte.values() for p in v if p['data'] == hoje)} pegada(s) nova(s)",
+           f"- tamanho: {m['arquivos']} arquivos, {m['mb']} MB (alarme acima de {m['limite']['arquivos']} arquivos ou {m['limite']['mb']} MB)"]
+    ls += [f"- **ALARME:** {av}; as pegadas de Recortes fechados há muito podem ser comprimidas (D-045, item 4)" for av in m["avisos"]]
     ls += ["", f"## Recortes: {len(rcs)}"]
     ls += [f"- {k}: {v}" for k, v in sorted(Counter(r["estado"] for r in rcs).items())] or ["- nenhum"]
     ls += ["", f"## Faltas no acervo: {len(faltas)} ({sum(1 for f in faltas if f.get('data') == hoje)} nova(s) hoje)"]

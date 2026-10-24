@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Proposta de Elaboração e Mediação de uma Trilha Interpretativa no jardim da Casa da Descoberta, o Centro de Divulgação da Ciência da Universidade Federal Fluminense. Ensino de Ciências da Natureza",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…florístico, onde identificamos 18 espécies: Abricó de Macaco, Aroeira, Abacateiro, Acerola, Biribiri, Cajá, Cajú, Flamboyant, Goiaba, Grumixama, Jambo, Manga, Olho de Pavão, Palmeira Imperial, Pau Brasil, Pau Ferro, Pau Mulato e…"
 }

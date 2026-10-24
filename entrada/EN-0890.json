@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização do cajuzinho-do-cerrado (Anacardium humile): aspectos físicos-químicos e funcionais",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…used, but still little explored economically. Its fruit is popularly known as cajuzinho-do-cerrado, cajuí, caju-dwarf and cashew-do-campo. The cajuzinho is divided and found in two parts: peduncle and the real fruit (nut or…"
 }

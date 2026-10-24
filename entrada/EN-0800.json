@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Intoxicações por frutos em ruminantes no Brasil e análises da ingestão de pseudofrutos de Anacardium occidentale em vacas em lactação.",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…as alterações ocasionadas pela ingestão de pseudofrutos de Anacardium occidentale, popularmente conhecido como caju, em vacas em período de lactação. O estudo foi dividido em dois capítulos que abordaram os principais frutos e…"
 }

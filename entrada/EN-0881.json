@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A internacionalização de empresas cearenses: um estudo sobre os canais utilizados",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ou de canais de distribuição estabelecidos, que atuam em segmentos onde a produção local é forte (castanha de caju e lagosta). Neste caso, o processo não foi gradual como previsto nos modelos teóricos. Ainda dentre as principais…"
 }

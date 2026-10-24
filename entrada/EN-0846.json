@@ -31,5 +31,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Aerogéis de nanocelulose funcionalizados para absorção seletiva de solventes orgânicos.",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…entre todas as propriedades testadas e foi utilizado como modelo para a celulose bacteriana de permeado de suco de caju (CBP) e a celulose de eucalipto (CE). Os aerogéis de CBP oxidado e silanizado (CBPOXNS) e de CE oxidado e silanizado…"
 }

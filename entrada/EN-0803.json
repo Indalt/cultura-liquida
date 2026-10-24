@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Expectativas de famílias das classes populares sobre o direito à Educação Infantil em uma creche de favela",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…of a group of families, especially the right of early childhood education at a public daycare, situated in Caju, Rio de Janeiro city. The wish of this search, beyond the questions which took me into it, was produced by my own…"
 }

@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Ocorrência e manejo de lepidópteros fitófagos associados ao cajueiro no município de Jacaraú, Paraíba.",
+  "ano": "2026",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "A cajucultura no município de Jacaraú é uma atividade que se concentra no processamento artesanal de castanha-de-caju, onde 600 famílias trabalham diretamente nessa produção, em um negócio que movimenta em torno de 3,5 milhões anuais…"
 }

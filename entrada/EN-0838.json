@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliação do ciclo de vida da produção de celulose bacteriana em diferentes meios de cultivo.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…alternativos, sendo duas rotas utilizando o melaço de soja (MS) como meio de cultura e a outra utilizando suco de caju suplementado. Diante disso, utilizou-se a metodologia de ACV, conforme as normas NBR ISO 14040 e 14044 para…"
 }

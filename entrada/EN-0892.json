@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estratégias operacionais para o incremento da metanização em estado sólido de resíduos orgânicos urbanos com vistas ao aproveitamento energético do biogás",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…operational strategies for optimizing a SSAD process, a semi-industrial scale system was built and researched at the Caju’s Waste Transhipment Unit, in the City of Rio de Janeiro. This system is equipped with SSAD reactors integrated with…"
 }

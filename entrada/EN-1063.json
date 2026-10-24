@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeitos do consumo de oleaginosas sobre os níveis de adiponectina e interleucina-6 em adultos e idosos com diabetes tipo 2",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…diária de 30g de oleaginosas (7,5 g de nozes, 7,5 g de castanha do Brasil, 7,5 g de amêndoas e 7,5 g de castanha de caju). Os dois grupos foram seguidos durante 12 semanas, com consultas individuais mensais e avaliação laboratorial…"
 }

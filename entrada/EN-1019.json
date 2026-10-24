@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "ESTUDO FITOQUÍMICO E ANTIFÚNGICO DE EXTRATOS DE PLANTAS CONTRA Microsporum canis E Candida spp. ISOLADOS DE CÃES.",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\">da Mangifera indica, o líquido da castanha de caju e seus constituintes ácido anacárdico,</span></font></div><div style=\"\"><font face=\"Arial, Verdana\"><span…"
 }

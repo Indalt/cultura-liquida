@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Óleo funcional na dieta de vacas leiteiras",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…os efeitos da inclusão de óleo funcional composto de ácido anacárdico, cardol e cardanol (óleo da castanha de cajú) e ácido ricinoleico (óleo de mamona) na dieta de vacas em lactação sobre consumo, digestibilidade aparente total da…"
 }

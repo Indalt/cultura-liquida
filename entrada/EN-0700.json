@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Enriquecimento nutricional de farelos de espécies oleaginosas do cerrado e farinha de Araruta (Maranta Arundinacea) tratadas com os fungos Pleurotus Ostreatus e Pleurotus Sajor-Caju visando a elaboração de um produto para alimentação humana",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

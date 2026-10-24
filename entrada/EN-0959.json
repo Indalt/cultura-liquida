@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Valorização de resíduos lignocelulósicos da biomassa regional com potencial para obtenção de compósitos poliméricos",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…O primeiro envolveu a modificação de partículas lignocelulósicas, utilizando o líquido da casca da castanha de caju (LCC) como fonte de cardanol, tendo por objetivo o incremento da degradabilidade de compósitos de polipropileno (PP)…"
 }

@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Alguns aspectos econômicos da cultura do cajueiro no Piauí.",
+  "ano": "1996",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Producao de castanha de caju no Piaui; Estrutura fundiaria das principais regioes produtoras; Alternativas para recuperacao e expansao da…"
 }

@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produtividade de castanha e infestação da traça-da-castanha Anacampsis phytomiella Busck (Lepidoptera: Gelechiidae) em cajueiro-anão, Pacajus - CE.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…é praga-chave da cultura do cajueiro, pois se alimenta do seu principal produto, a amêndoa da castanha-de-caju. O trabalho teve como objetivo avaliar clones comerciais e progênies quanto às variáveis produtividade, peso médio…"
 }

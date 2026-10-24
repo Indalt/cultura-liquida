@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Atividade fotoprotetora in vitro de espécies medicinais da caantiga pernambucana e incorporação em gel dermatológico",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(Baraúna) obteve o maior conteúdo de compostos fenólicos. Em relação aos taninos Anacardium occidentale (Caju Roxo) apresentou o melhor resultado. No doseamento de flavonoides e cumarinas as espécies que se destacaram foram…"
 }

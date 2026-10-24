@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "ZONEAMENTO agroecológico do Município de Porto Grande/AP: relatório final.",
+  "ano": "2000",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…culturas indicadas; abacate; abacaxi; abobora; acerola; açaí; algodão; araçá; agrião; arroz; banana; cacau; café; caju; cana-de-açúcar; citrus; coqueiro; cupuaçu; dendezeiro; feijão caupi; mandioca; milho; pimenta-do-reino; guaraná;…"
 }

@@ -32,5 +32,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Análises estruturais e atividades biológicas de exopolissacarídeo extraído do fungo comestível pleurotus Sajor-Caju e de seu derivado sulfatado quimicamente",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

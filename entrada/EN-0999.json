@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Interações entre população humana e sauim-de-coleira (Saguinus bicolor) no uso de recursos em quintais nos fragmentos florestais urbanos de Manaus",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…sp (banana) 14,11%, Malpighia sp (acerola) 9,31%, Inga sp (ingá) 9,31%, Persea sp (abacate) 7,51% e Annarcadium sp (caju) 6,01% and 54% shared between human population and bare-face tamarin. In this context understand this relationship…"
 }

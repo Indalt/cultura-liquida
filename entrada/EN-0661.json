@@ -30,5 +30,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Utilização da cinza do tegumento da castanha de caju, como fonte de fósforo para as culturas do feijão-de-corda Vigna unguiculata (L.) Walp milho (Zea mays L.) e sorgo Sorghum bicolor (L.) Moench",
+  "ano": "1985",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

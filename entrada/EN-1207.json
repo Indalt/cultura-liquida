@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Doses de suplemento e aditivos na recria de tourinhos Nelore em pastagem e seu impacto na terminação em confinamento",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…avaliou o efeito da substituição da virginiamicina (VM) por óleos funcionais (OF) a base de mamona e castanha de caju, na recria (Exp. 1) de tourinhos da raça Nelore mantidos em pastagens de Brachiaria brizantha cv Marandu no período…"
 }

@@ -31,5 +31,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito prebiótico de subprodutos do processamento de frutas tropicais em sistemas de fermentação in vitro",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…teve por objetivo avaliar o potencial prebiótico de subprodutos do processamento da acerola (Malpighia glabra L.), caju (Anacardium occidentale L.) e goiaba (Psidium guajava L.) em sistemas de fermentação in vitro. Em um primeiro…"
 }

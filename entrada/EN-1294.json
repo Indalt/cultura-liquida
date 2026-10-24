@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Cajuína: como produzir com qualidade.",
+  "ano": "2004",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…cajuina; Turvação; Sedimentação após a estocagem prolongada; Falta de coloração característica; Cajuína sem gosto de caju; Cuidados e requisitos necessários com o recinto de processamento; Equipamentos básicos necessários."
 }

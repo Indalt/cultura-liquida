@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeitos dos ácidos anacárdicos no sistema respiratório de camundongos submetidos à instilação intranasal de partículas resultantes da combustão de diesel",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Os ácidos anacárdicos (AAs) provenientes do líquido da casca da castanha de caju têm propriedades antioxidantes e anti-inflamatórias. Seus efeitos são bem estabelecidos em vários sistemas in vitro,…"
 }

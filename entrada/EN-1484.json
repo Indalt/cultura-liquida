@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Quantificação e caracterização fitoquímica de castanhas de cajueiro-anão infestadas por Anacampsis phytomiella.",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de cajueiro-anão sadios e infestados pela traçada-castanha. A análise química do líquido da casca da castanha-de-caju foi realizada em cromatografia líquida de alta eficiência (CLAE). O delineamento experimental foi o inteiramente…"
 }

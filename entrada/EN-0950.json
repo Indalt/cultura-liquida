@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Aplicação de algoritmos de Machine Learning para Classificação da Cobertura da Terra a partir de série temporal de imagem landsat 8: estudo de caso do Parque Natural dos Tarrafes de Cacheu, Guiné-Bissau",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…estabilidade geral, com flutuações ligadas a ciclos sazonais, pressões antrópicas e práticas locais, como plantio de caju e arroz."
 }

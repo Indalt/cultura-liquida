@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Salinidade da água de irrigação na produção de fitomassa e acumulação de nutrientes no cajueiro anão precoce.",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…como objetivo avaliar os efeitos de diferentes níveis de salinidade da água de irrigação na fase de frutificação do caju na fitomassa e teores de nitrogênio, fósforo, potássio, cloreto e sódio da raiz, porta-enxertos, enxerto, ramos e…"
 }

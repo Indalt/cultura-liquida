@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Processo da escolarização na Guiné-Bissau : estudo sobre os fenômenos que impactam o acesso e a permanência das meninas no sistema educativo na região de Bafatá",
+  "ano": "2026",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…sobre as meninas, reduzindo o tempo destinado aos estudos e ao descanso. A pesquisa evidenciou que a campanha de caju influencia diretamente a evasão escolar, sobretudo no último trimestre letivo, período em que muitas famílias…"
 }

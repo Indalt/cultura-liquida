@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização, compostos bioativos e potencial antioxidante de subprodutos do processamento de frutas no submédio do Vale do São Francisco.",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Também foram avaliado o s subprodutos advindos do refinamento de polpas pré-processadas foram: ameixa, cacau, cajá, caju, cupuaçu, graviola, jenipapo, mamão, maracujá, morango, tamarindo, e umbu. Para graviola e tamarindo, os subprodutos…"
 }

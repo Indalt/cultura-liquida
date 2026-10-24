@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Adesivo natural à base de cardanol modificado com nanopartículas de sílicas para produção de painéis MDP",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…menores taxas de emissão de formaldeído. Sendo assim, o cardanol obtido a partir do líquido da casca de castanha de caju, proveniente do cajueiro, é considerada uma fonte renovável aromática promissora dos fenóis derivados do petróleo,…"
 }

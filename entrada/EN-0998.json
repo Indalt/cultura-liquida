@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Concepções de professores expressas nos conteúdos e nas metodologias propostas para o ensino e aprendizagem da matemática na 1ª e 2ª etapas da Educação de Jovens e Adultos em escolas municipais de Cuiabá-MT",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…a Matemática na 1ª e 2ª Etapas da EJA, em duas escolas municipais de Cuiabá-MT, doravante denominadas Escola Caju e Escola Bocaiúva. Como instrumentos de coleta de dados, utilizamos questionários, análise documental e entrevistas.…"
 }

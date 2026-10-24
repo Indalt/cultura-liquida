@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Síntese e caracterização de membranas biopoliméricas microfiltrantes, à base de quitosana, para uso no processo de obtenção de cajuína",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…no processo de obtenção da cajuína. A cajuína é uma bebida tipicamente do nordeste brasileiro, obtida do caju (Anacardium occidentale L.) através da clarificação e filtração do suco, cujo processo de filtração ainda é…"
 }

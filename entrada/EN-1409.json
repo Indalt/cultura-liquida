@@ -25,5 +25,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Avaliação dos parâmetros de processo no descascamento químico do pedúnculo de caju.",
+  "ano": "1988",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

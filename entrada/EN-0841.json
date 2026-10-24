@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Compostos fenólicos em pedúnculos de clones de cajueiro e a relação com a adstringência e suas subqualidades.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…cajueiro, e por meio de quimiometria, correlaciona-los buscando os possíveis marcadores químicos da adstringência do caju. Foram analisados pedúnculos de nove clones da safra 2017. A análise sensorial foi baseada em uma análise descritiva…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "[en] FABRICATION AND CHARACTERIZATION OF EPOXY RESIN/LUFFA CYLINDRICA COMPOSITE MATERIALS",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…biobaseadas obtidas a partir de óleo de soja epoxidado e cardanol epoxidado (proveniente da casca de castanha de caju) e fibras lignocelulósicas de bucha (Luffa cylindrica) como reforço. Os efeitos estruturais, morfológicos e térmicos…"
 }

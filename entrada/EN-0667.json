@@ -32,5 +32,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "O oitavo do cipó e o desafio da ação cooperativa de agricultores familiares : um estudo de caso sobre os empreendimentos econômicos e solidários das cadeias produtivas do mel e do caju, no terriotio do Vale do Guaribas, PI",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

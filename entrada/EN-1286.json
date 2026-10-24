@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Solos cultivados com cajueiro no Ceará e áreas potenciais para a cultura.",
+  "ano": "1992",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Os solos culivados com cajueiro faram identificados atraves de estudos pedologico das areas produtoras de caju do Ceara. Dados de producao de castanha, complementados com visitas aos pomares decajueiro, indicaram a existencia…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produção, extração e estabilidade de enzimas lignocelulolíticas para uso em degradação em compostos poluentes",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…as enzimas lignocelulolíticas como lacase, peroxidase e manganês peroxidase, sintetizadas pelos fungos P. sajor-caju CCB 020, P. ostreatus e P. albidus CCB 068, cultivados em vinhaça e/ou bagaço de cana-de-açúcar umedecidos com…"
 }

@@ -36,5 +36,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20210304094457/http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/4104"
+  "wayback": "https://web.archive.org/web/20210304094457/http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/4104",
+  "titulo": "Processamento do pedúnculo do caju em avançado estádio de maturação: desidratação osmótica e secagem para elaboração de passas de caju.",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0005)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

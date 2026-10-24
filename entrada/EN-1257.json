@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Diretrizes para a recuperação da cajucultura do Nordeste.",
+  "ano": "1991",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Agrope- cuária do Ceará, Empresa de Assistência Técnica e Extensão Rural do Cea- rá, Centro Nacional de Pesquisa de Caju da EMBRAPA e Companhia de Produtos Alimentícios do Nordeste - COPAN, os autores apresentam a to- dos os segmentos…"
 }

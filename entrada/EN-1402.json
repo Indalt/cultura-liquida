@@ -25,5 +25,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Hambúrguer vegetal de fibra de caju e proteína texturizada de soja: obtenção e avaliação de viabilidade econômica da produção.",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

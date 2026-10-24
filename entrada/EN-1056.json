@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Eficácia de óleos essenciais de Mentha spp. no controle de bactérias patogênicas em sucos de frutas",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…controle de bactérias patogênicas (E. coli, L. monocytogenes e Salmonella Enteritidis) em sucos de frutas (abacaxi, caju, goiaba e manga). Foram determinadas as Concentrações Inibitórias Mínimas (CIM) de cada óleo essencial frente ao…"
 }

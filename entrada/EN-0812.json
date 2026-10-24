@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Saberes e práticas de clientes no cuidado com feridas: implicações para a enfermagem",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…feridas incluíram o uso do saião em forma de pasta para colocar sobre a ferida para drenagem da secreção, a casca de caju e a casca da aroeira em forma de chá para banhar a ferida e auxiliar na cicatrização. Além disso, a fé e os hábitos…"
 }

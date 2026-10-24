@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Saberes tradicionais quilombolas e interface com agrobiodiversidade em Chapada dos Guimarães/MT - Brasil",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(batata doce), Fabaceae (amendoim), Apiáceae (cenoura, coentro), Euphorbiaceae (mandioca), Anacardiaceae (manga, caju), Myrtaceae (goiaba), Rutaceae (limão, laranja), Passifloraceae (maracujá), Lauraceae (abacate), Malpighiaceae…"
 }

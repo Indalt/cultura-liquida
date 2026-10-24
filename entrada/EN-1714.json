@@ -25,5 +25,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Avaliação microbiológica de produtos vegetais análogos à carne elaborados com fibra de pedúnculo de caju.",
+  "ano": "2026",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

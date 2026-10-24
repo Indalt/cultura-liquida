@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Relação solo, clima e uso agrícola no território do Rio Grande do Norte",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…espécie. A partir desse raciocínio, partimos da análise de três culturas praticadas no estado: abacaxi, banana e caju, escolhidas pela importância econômica de cada uma no território potiguar e pelas suas diferenciações técnicas…"
 }

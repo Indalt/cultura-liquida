@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito protetor de coprodutos do processamento de frutas tropicais em cepas probióticas Lactobacillus após liofilização e armazenamento",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…estudo avaliou o efeito protetor de coprodutos do processamento das frutas tropicais acerola (Malpighia glabra L.), caju (Anacardium occidentale L.) e goiaba (Psidium guayaba L.) sobre as cepas probióticas (Lactobacillus paracasei L-10,…"
 }

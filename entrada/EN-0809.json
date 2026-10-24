@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise enzimática de fungos lignocelulolíticos cultivados em vinhaça e bagaço de cana-de-açúcar",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e produção de celulases e ligninases em meios específicos. Estas linhagens, três espécies e Pleurotus: P. sajor-caju, P. ostreatoroseus e P. ostreatus, e Trichoderma reesei foram cultivadas em bagaço pré-tratado com 2% H2SO4, 1,5%…"
 }

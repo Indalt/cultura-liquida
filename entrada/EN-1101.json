@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Influência da população da espécie exótica Terminalia catappa L. (Amendoeira) sobre espécies nativas numa área da Restinga, domínio Tropical Atlântico, Salvador, Bahia",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…casa de vegetação, e o acompanhamento do crescimento de mudas de três espécies nativas, Anacardium occidentale L. (caju), Inga capitata Desv. (ingá) e Schinus terebinthifolia Raddi. (aroeira), sob a relação dos fatores presença ou…"
 }

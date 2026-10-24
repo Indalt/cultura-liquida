@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Sobrevivência e desenvolvimento vegetativo de plantas de cajueiro-anão, clone ‘BRS 226’, em cultivo de sequeiro com uso de hidrogel.",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de grande importância socioeconômica para a região Nordeste do Brasil, maior produtora nacional de castanha-de-caju. O objetivo desta pesquisa foi verificar o efeito do uso de polímero de hidrogel na sobrevivência e no desenvolvi-…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Teatro e cidadania: experiência de formação integral de jovens e adolescentes e o teatro/educação na Casa da Juventude Pe. Burnier entre 2011-2014",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…experience of the researcher, as an educator in Theater/education and Citizenship, at Casa da Juventude Fr. Burnier (CAJU), in Goiânia-GO, from 2011 to 2014, was instrumental for this research. CAJU was a non-profit civil organization…"
 }

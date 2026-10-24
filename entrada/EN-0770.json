@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Determinação da difusividade térmica (e sua incerteza) para produtos acondicionados em recipientes cilíndricos durante seu aquecimento: experimentação, otimização e simulação.",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da transferência de calor durante o processo de aquecimento de produtos (ágar gel, purê de tomate e polpa de caju) no estado pastoso, por meio da determinação de sua difusividade térmica aparente, considerando que a condução seja…"
 }

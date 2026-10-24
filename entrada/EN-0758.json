@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliação da degradação do polietileno contendo aditivo pró-degradante em diferentes meios de exposição",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…sobre as amostras de HDPE/LLDPE aditivadas. Testes de biosorção de metais por fungos do gênero Pleorotus sajor-caju, além do teste fitotoxicidade avaliando a germinação e crescimento das plantas, foram realizados sobre o aditivo…"
 }

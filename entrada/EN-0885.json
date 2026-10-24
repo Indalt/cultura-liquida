@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Iogurte de leite de soja adicionado de leite de vaca e sua aceitabilidade em vários sabores",
+  "ano": "1986",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…figo, salada-de-frutas (mamão, banana, abacaxi, pêra e suco de maracujá), maracujá, pêssego, morango, ameixa, caju, coco e goiaba; (3) Avaliação do efeito da polpa de morango e leite de coco no iogurte de leite de soja e estudo da…"
 }

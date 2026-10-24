@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise das condições térmicas em praças públicas e sua relação com a população idosa praticantes de exercícios físicos na cidade de João Pessoa/PB",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e investigação foram definidos 03 pontos experimentais (Refúgio de Vida Silvestre: Mata do Buraquinho; Praça do Caju e Praça Alcides Carneiro) para o monitoramento dos dados climatológicos. A coleta dos dados ocorreu através de…"
 }

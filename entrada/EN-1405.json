@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Sobrevivência e crescimento inicial de espécies arbóreo-arbustivas nativas brasileiras para recuperação de paisagem degradada no cerrado mineiro.",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(cedro), Dimorphandra mollis (faveira-wilson), Handroanthus chrysanthus (ipê-mulato), Handroanthus chrysanthus (caju), Samanea tubulosa (sete-cascas) e Prunus sp. (ameixa). Após dois anos do plantio, não ocorreram grandes diferenças…"
 }

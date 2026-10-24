@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Cultivo do cajueiro anão (Anacardium occidentale L.) nas regionais de Andradina e Jales do estado de São Paulo: tratos culturais, custos e mercados",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foram levantados a partir da aplicação de questionário e de planilhas, de modo a conhecer o perfil do produtor de caju e caracterizar todo o processo produtivo, desde o preparo do solo até a comercialização da fruta (in natura e/ou…"
 }

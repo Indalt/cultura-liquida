@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito do consumo de castanhas brasileiras sobre a composição corporal, função endotelial e estresse oxidativo de mulheres em risco cardiometabólico",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de uma mistura de amêndoas de castanhas brasileiras (castanha-do-Pará, Bertholletia excelsa H.B.K e castanha de caju, Anacardium occidentale L.) associado a uma dieta com restrição calórica sobre a composição corporal, função…"
 }

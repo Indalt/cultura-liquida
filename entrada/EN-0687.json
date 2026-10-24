@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Plásticos em ecossistemas costeiros e análise da co-gaseificação como alternativa para mitigação de seu impacto ambiental",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…bem como não foram identificados estudos envolvendo a gaseificação de plásticos juntamente com casca de castanha-de-caju, biomassa complementar que foi empregada nos ensaios. No primeiro capítulo dessa dissertação, empregamos a…"
 }

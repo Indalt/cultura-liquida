@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Filmes antioxidantes comestíveis de celulose bacteriana e hidrolisado de gelatina de pele de pescado.",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ser obtida pela bioconversão de nutrientes presentes em resíduos ou subprodutos da agroindústria, como o suco de caju, após cultivo de linhagensda espécie Komagaetaibacter Xylinus. Peptídeos antioxidantes destacam-se como uma das…"
 }

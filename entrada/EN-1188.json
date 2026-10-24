@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Cinética da gaseificação com CO2 de resíduos sólidos da indústria alimentícia",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…analisar as características de gaseificação dos resíduos da borra de café (BC), semente da goiaba (SG) e bagaço de caju (BCJ) em atmosferas de N2 (pirólise) e CO2 (gaseificação) além de observar a cinética do processo. Os materiais…"
 }

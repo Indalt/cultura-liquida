@@ -29,5 +29,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0032",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "CULTURA, REGIONALIDADE E CONSUMO: UM ESTUDO DA INFLUÊNCIA DOS SIGNIFICADOS CULTURAIS DA CAJUÍNA DO PIAUÍ SOBRE A DECISÃO DE COMPRA DOS CONSUMIDORES DA REGIÃO",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajuína' no título (CO-0002)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

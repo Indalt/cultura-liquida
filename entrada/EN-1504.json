@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "ZONEAMENTO agroecológico do Nordeste do Brasil: diagnóstico e prognóstico.",
+  "ano": "2000",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…doce, feijão comum, feijão macassar, mandioca, milho, soja, sorgo, abacaxi, algodão arbóreo, banana, café conilon, caju, cana-de-açúcar, citros, coco, mamona e sisal. Pretende-se, com este novo enfoque, orientar melhor as ações de…"
 }

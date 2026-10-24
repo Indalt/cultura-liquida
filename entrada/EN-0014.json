@@ -35,5 +35,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20260123145003/http://www.repositorio.ufc.br/handle/riufc/8481"
+  "wayback": "https://web.archive.org/web/20260123145003/http://www.repositorio.ufc.br/handle/riufc/8481",
+  "titulo": "Identificação de QTLs candidatos associados à qualidade pós-colheita do pedúnculo de caju.",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Efeitos de combinações entre o ácido anacárdico derivado da casca da castanha do caju (Anacardium occidentale) e o óleo de açaí (Euterpe oleracea Mart.), livres ou nanoestruturados, no tratamento de células de câncer de pele não melanoma, in vitro",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

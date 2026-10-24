@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "CajuNutriMeat: um alimento funcional isento de glúten como alternativa para dieta humana",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…valor agronômico. O objetivo principal do presente trabalho consiste no aproveitamento do bagaço do pedúnculo do caju (A. occidentale) suplementado com as espécies Pisum sativum (PS) e Manihot esculenta Crantz (ME), para elaboração de…"
 }

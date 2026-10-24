@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise estatística espacial de áreas de susceptibilidade à ocorrência de leptospirose, usando geoprocessamento, no município do Rio de Janeiro-RJ, 2007-2017",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e oeste como mais vulneráveis a incidência, com identificação de aglomerado de alto risco composto pelos bairros Caju, Manguinhos e Guaratiba e identificou as variáveis coleta de lixo adequada e Índice de desenvolvimento social como…"
 }

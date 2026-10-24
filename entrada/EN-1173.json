@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento de dispositivo para treinamento dos músculos do assoalho pélvico por manufatura aditiva",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da saúde. Para o desenvolvimento conceitual e parametrização do dispositivo adotou-se a bioinspiração no caju e no canal vaginal, sendo utilizados recursos como o escaneamento 3D e imagens de TC para obtenção dos contornos,…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Padronização e implementação do uso de armadilhas de oviposição nas ações de monitoramento do mosquito Aedes aegypti (Diptera: Culicidae) no município de Natal, RN",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…bairros de Natal (Tirol e Quintas). Também foram realizados testes de atratividade de infusões de capim, folhas de caju, feno e água (controle) em laboratório e campo. Em laboratório os testes foram feitos com 100 fêmeas de A. aegypti…"
 }

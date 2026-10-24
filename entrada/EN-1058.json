@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Conhecimento botânico local de plantas medicinais em uma comunidade rural no Agreste da Paraíba (Nordeste do Brasil)",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…atual a Lippia alba (Mill.) N.E.Br. (Erva cidreira) (VUatual= 0,73) e o valor potencial Anacardium occidentale L. (Caju-roxo) (VUpotencial= 0,55). A planta mais versátil foi a Mentha x piperita L (Hortelã da folha miúda) (IR = 2)…"
 }

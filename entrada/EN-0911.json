@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Características físicas e químicas e potencial antioxidante dos frutos de 15 cultivares de bananeiras",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Nanicão, Caru-Verde, Caru-Roxa, Caipira, Prata, Prata-Anã, Maçã, Mysore, Pacovan, Terrinha, Marmelo, Prata-Graúda e Caju. Foram colhidos quatro cachos por cultivar, na fase pré-climatérica (casca do fruto verde), sendo utilizados seis…"
 }

@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Sistema de produção para manejo do cajueiro comum e recuperação de pomares improdutivos.",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Adubação química Poda de formação; Poda de manutenção; Coroamento; Cobertura morta; Controle fitossanitário; Colheita e pós-colheita; Indicadores de colheita Classificação; Embalagem; Armazenamento refrigerado; Pedúnculo para a…"
 }

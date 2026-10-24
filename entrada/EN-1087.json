@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento de biosubstratos transparentes para a aplicação em diodos orgânicos emissores de luz flexíveis.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Biopolímeros obtidos a partir da polpa da cebola (Allium cepa L.) e das gomas de gelana e caju foram empregados como biosubstratos para a fabricação de diodos orgânicos emissores de luz flexíveis (FOLEDs). Os…"
 }

@@ -1,0 +1,21 @@
+{
+  "id": "CO-0005",
+  "nome": "só descritores do processamento do pedúnculo (de TE-0001 e TE-0002)",
+  "tipo": "só descritores",
+  "termos": [
+    "TE-0001",
+    "TE-0002"
+  ],
+  "variantes": [],
+  "descritores": [
+    "processamento do pedúnculo",
+    "descastanhamento"
+  ],
+  "traducao": "ambientes/traducao-consultas.json#CO-0005",
+  "origem_registro": {
+    "criado_por": "curador (K-106)",
+    "data": "2026-10-23",
+    "execucao": "EX-0015"
+  },
+  "nota": "Consulta só por descritores, para achar textos que descrevem o fazer sem nomear a bebida (brief, bloco 4). Os termos citados são os de cujas fontes os descritores saíram (trilhas/2026-10-23_K-106/descritores.json, processuais, campo fatos[3] do mapa web-cajuina-fontes.json); a busca não usa as designações. Booleano genérico: (\"processamento do pedúnculo\" OR descastanhamento). 'colheita' e 'etapas de produção' ficaram fora desta Consulta, por serem amplos sem o termo (saturação); seguem nas mistas CO-0003 e CO-0004."
+}

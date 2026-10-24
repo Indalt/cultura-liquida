@@ -512,8 +512,59 @@
       "comando": [
         "scripts/relatorio_dia.py"
       ],
-      "saida_contem": "relatorio-dia-0.1",
+      "saida_contem": "relatorio-dia-0.2",
       "criterio": "o relatório calculado abre a conversa (l. 512)"
+    },
+    {
+      "nome": "migração: as Entradas passam ao formato do K-108b sem refundar",
+      "espera": "passa",
+      "comando": [
+        "scripts/migrar_entradas.py",
+        "--em-copia",
+        "--raiz",
+        "testes/coleta/raiz-migracao",
+        "--cache",
+        "testes/coleta/cache-migracao"
+      ],
+      "saida_contem": "conferência: 3 EN-nnnn antes e 3 depois (Entradas 2 + só em pegada 1); validar_acervo e deduplicação OK",
+      "criterio": "D-045, item 5: a com caju no título segue, a sem termo fica só como pegada com o mesmo EN-nnnn, a sem metadados segue; contagem, IDs, validar_acervo e deduplicação conferidos (numa cópia)"
+    },
+    {
+      "nome": "deduplicação: pegada que aponta para outra Entrada do mesmo identificador",
+      "espera": "reprova",
+      "comando": [
+        "scripts/deduplicar.py",
+        "--conferir",
+        "--raiz",
+        "testes/coleta/raiz-pegada-conflito"
+      ],
+      "saida_contem": "aponta EN-0002, e a Entrada é EN-0001",
+      "criterio": "a pegada e a Entrada contam a mesma história (D-045)"
+    },
+    {
+      "nome": "validar_acervo: pegadas de um Recorte que não existe",
+      "espera": "reprova",
+      "comando": [
+        "scripts/validar_acervo.py",
+        "--raiz",
+        "testes/coleta/raiz-pegada-conflito"
+      ],
+      "saida_contem": "pegadas de um Recorte que não existe (RC-0099)",
+      "criterio": "D-045, item 3: um arquivo por Recorte, de um Recorte que existe"
+    },
+    {
+      "nome": "guarda: alarme acima do limite de arquivos",
+      "espera": "passa",
+      "comando": [
+        "scripts/guarda.py",
+        "--medir",
+        "--raiz",
+        "testes/coleta/raiz-migracao",
+        "--limite-arquivos",
+        "2"
+      ],
+      "saida_contem": "ALARME",
+      "criterio": "D-045, item 4: o relatório mede e avisa acima do limite (aqui forçado a 2)"
     }
   ]
 }

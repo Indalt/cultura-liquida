@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Hortaliça como comprar, conservar e consumir: pimenta caiena.",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Pimenta caiena. Como comprar. Como conservar. Como consumir. Dicas. Salada de brócolis picante com castanha e caju. Sanduíche aberto para o café da manhã. ODS 2, ODS 12."
 }

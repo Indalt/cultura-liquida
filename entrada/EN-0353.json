@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Desenvolvimento de bebida vegetal à base de amêndoa de castanha de caju (Anacardium occidentale L.), arroz (Oryza sativa L.) e ameixa (Prunus domestica L.)",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

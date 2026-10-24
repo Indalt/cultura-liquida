@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Resolução de problema por macacos-prego selvagens (Sapajus libidinosus) de duas populações com diferentes repertórios de uso de ferramentas",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Vista (FBV) são proficientes no uso de percutores durante o processamento de cocos-de-palmeiras e frutos secos de caju. Apesar de quase uma década de observação sistemática nesta população, não foi observado o uso de outras ferramentas…"
 }

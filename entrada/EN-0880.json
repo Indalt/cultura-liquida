@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Um modelo de tomada de decisão para desenvolvimento de coproduto industrial na agricultura",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(CE), considerando as principais lavouras da região em um raio de até 300 km. Os resultados indicaram a castanha de caju, no município de Bela Cruz, e o milho, em Boa Viagem, como as alternativas mais promissoras para o desenvolvimento…"
 }

@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Grau de infestação da traça-da-castanha em clones de cajueiro-anão consorciados com fruteiras.",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…porque ataca o fruto (castanha), causando elevados prejuízos por destruir completamente a amêndoa da castanha de caju. O principal sintoma de ataque é a presença de um furo localizado na parte distal da castanha e é conhecido pelo…"
 }

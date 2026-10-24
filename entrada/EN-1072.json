@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produção de enzimas lignocelulolíticas e de bioetanol a partir de resíduos da palha de carnaúba (Copernicia prunifera) pré-tratados",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de indução da produção de enzimas lignocelulolíticas ao se comparar com outros resíduos lignocelulósicos, como coco, caju e cana-de-açúcar, pré-tratados pelo mesmo método. A otimização da produção de enzimas lignocelulolíticas permitiu a…"
 }

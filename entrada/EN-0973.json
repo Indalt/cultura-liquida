@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Controle de formigas cortadeiras (Hymenoptera: Formicidae) com produtos naturais",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Ricinus communis L. (mamona), Azadirachta indica Juss (nim), Theobroma cacao L. (cacau), Anacardium occidentale L. (caju) e dos extratos de Anacardium occidentale no controle de formigas cortadeiras, utilizando como alvo a espécie Atta…"
 }

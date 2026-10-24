@@ -1,0 +1,222 @@
+{
+  "nota": "Tradução de cada Consulta (ambientes/consultas/) para a sintaxe de cada fonte do piloto, testada e datada pelo rastreador em 2026-10-23 (EX-0016, K-106; brief, bloco 4; Fundação l. 426). Um pedido por fonte e Consulta, só o total informado (limit=0), nada coletado; robô identificado (CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)). Seis pedidos da BDTD mandados antes em Latin-1 devolveram a base inteira (1.167.710) e foram descartados como inválidos (trilha: trilhas/2026-10-23_K-106/).",
+  "regra": "termo-0.2",
+  "CO-0001": {
+    "AM-0021": {
+      "sintaxe": "VuFind AllFields: (\"caju\" OR \"cajú\" OR \"ca-ju\")",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29",
+      "data": "2026-10-23",
+      "resposta": "HTTP 200 {\"resultCount\":1306,\"status\":\"OK\"}",
+      "total_informado": 1306,
+      "perda": "nenhuma de sintaxe (aspas, OR, parênteses aceitos)",
+      "estado": "testada"
+    },
+    "AM-0029": {
+      "pedido": "não feito: o robots.txt veda /simple-search e /discover ao robô; o OAI-PMH não busca por texto",
+      "data": "2026-10-23",
+      "resposta": "não aplicável",
+      "total_informado": "não informado",
+      "perda": "a consulta inteira na via automática: colher o OAI-PMH (59.357 registros em 23/10) e filtrar localmente; a sintaxe dada é a da busca humana",
+      "estado": "não testada: via humana para a busca por texto",
+      "sintaxe": "busca humana: caju OR cajú OR \"ca-ju\""
+    },
+    "AM-0061": {
+      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
+      "pedido": "não feito",
+      "data": "2026-10-23",
+      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
+      "total_informado": "não informado",
+      "perda": "não conferida",
+      "estado": "não testada (falta: reteste)"
+    },
+    "AM-0001": {
+      "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
+      "data": "2026-10-23",
+      "resposta": "não testada: via humana (403 em 23/10/2026)",
+      "total_informado": "não informado",
+      "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
+      "estado": "não testada: via humana",
+      "sintaxe": "(caju/\"ca-ju\") (acento indiferente: cajú já coberto)"
+    }
+  },
+  "CO-0002": {
+    "AM-0021": {
+      "sintaxe": "VuFind AllFields: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
+      "data": "2026-10-23",
+      "resposta": "HTTP 200 {\"resultCount\":1441,\"status\":\"OK\"}",
+      "total_informado": 1441,
+      "perda": "nenhuma de sintaxe; o total sobe pelas formas de hífen (ver variantes)",
+      "estado": "testada",
+      "variantes": {
+        "cajuína": {
+          "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%22caju%C3%ADna%22",
+          "total_informado": 25
+        },
+        "cajuina": {
+          "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%22cajuina%22",
+          "total_informado": 25
+        },
+        "caju-ína": {
+          "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%22caju-%C3%ADna%22",
+          "total_informado": 0
+        },
+        "cajuí-na": {
+          "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%22caju%C3%AD-na%22",
+          "total_informado": 1305
+        },
+        "ca-juína": {
+          "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%22ca-ju%C3%ADna%22",
+          "total_informado": 128
+        },
+        "cajuyna": {
+          "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%22cajuyna%22",
+          "total_informado": 0
+        }
+      },
+      "uso": "Para usar na BDTD: a mesma Consulta sem as formas de hífen de quebra de linha, que são de texto lido por OCR e não de metadado digitado; no teste variante por variante de 23/10, \"cajuí-na\" deu 1305 (quase o total de \"caju\", 1306) e \"ca-juína\" 128, contra 25 de \"cajuína\". As formas continuam no Termo e nas fontes de OCR; o ruído fica anotado, sem apagar (insumo novo sobre a regra das formas por tipo de ambiente)."
+    },
+    "AM-0029": {
+      "pedido": "não feito: o robots.txt veda /simple-search e /discover ao robô; o OAI-PMH não busca por texto",
+      "data": "2026-10-23",
+      "resposta": "não aplicável",
+      "total_informado": "não informado",
+      "perda": "a consulta inteira na via automática: colher o OAI-PMH (59.357 registros em 23/10) e filtrar localmente; a sintaxe dada é a da busca humana",
+      "estado": "não testada: via humana para a busca por texto",
+      "sintaxe": "busca humana: cajuína OR cajuina OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR cajuyna"
+    },
+    "AM-0061": {
+      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
+      "pedido": "não feito",
+      "data": "2026-10-23",
+      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
+      "total_informado": "não informado",
+      "perda": "não conferida",
+      "estado": "não testada (falta: reteste)"
+    },
+    "AM-0001": {
+      "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
+      "data": "2026-10-23",
+      "resposta": "não testada: via humana (403 em 23/10/2026)",
+      "total_informado": "não informado",
+      "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
+      "estado": "não testada: via humana",
+      "sintaxe": "(cajuína/\"caju-ína\"/\"cajuí-na\"/\"ca-juína\"/cajuyna) (acento indiferente: cajuina já coberta)"
+    }
+  },
+  "CO-0003": {
+    "AM-0021": {
+      "sintaxe": "VuFind AllFields: (\"caju\" OR \"cajú\" OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29+AND+%28%22processamento+do+ped%C3%BAnculo%22+OR+%22etapas+de+produ%C3%A7%C3%A3o%22+OR+colheita+OR+descastanhamento%29",
+      "data": "2026-10-23",
+      "resposta": "HTTP 200 {\"resultCount\":80,\"status\":\"OK\"}",
+      "total_informado": 80,
+      "perda": "nenhuma de sintaxe (AND aceito)",
+      "estado": "testada"
+    },
+    "AM-0029": {
+      "pedido": "não feito: o robots.txt veda /simple-search e /discover ao robô; o OAI-PMH não busca por texto",
+      "data": "2026-10-23",
+      "resposta": "não aplicável",
+      "total_informado": "não informado",
+      "perda": "a consulta inteira na via automática: colher o OAI-PMH (59.357 registros em 23/10) e filtrar localmente; a sintaxe dada é a da busca humana",
+      "estado": "não testada: via humana para a busca por texto",
+      "sintaxe": "busca humana: (caju OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+    },
+    "AM-0061": {
+      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
+      "pedido": "não feito",
+      "data": "2026-10-23",
+      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
+      "total_informado": "não informado",
+      "perda": "não conferida",
+      "estado": "não testada (falta: reteste)"
+    },
+    "AM-0001": {
+      "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
+      "data": "2026-10-23",
+      "resposta": "não testada: via humana (403 em 23/10/2026)",
+      "total_informado": "não informado",
+      "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
+      "estado": "não testada: via humana",
+      "sintaxe": "(caju/\"ca-ju\")+(\"processamento do pedúnculo\"/\"etapas de produção\"/colheita/descastanhamento)"
+    }
+  },
+  "CO-0004": {
+    "AM-0021": {
+      "sintaxe": "VuFind AllFields: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29+AND+%28%22processamento+do+ped%C3%BAnculo%22+OR+%22etapas+de+produ%C3%A7%C3%A3o%22+OR+colheita+OR+descastanhamento%29",
+      "data": "2026-10-23",
+      "resposta": "HTTP 200 {\"resultCount\":83,\"status\":\"OK\"}",
+      "total_informado": 83,
+      "perda": "nenhuma de sintaxe (AND aceito); as formas de hífen pesam como em CO-0002",
+      "estado": "testada",
+      "uso": "Para usar na BDTD: a mesma Consulta sem as formas de hífen de quebra de linha, que são de texto lido por OCR e não de metadado digitado; no teste variante por variante de 23/10, \"cajuí-na\" deu 1305 (quase o total de \"caju\", 1306) e \"ca-juína\" 128, contra 25 de \"cajuína\". As formas continuam no Termo e nas fontes de OCR; o ruído fica anotado, sem apagar (insumo novo sobre a regra das formas por tipo de ambiente)."
+    },
+    "AM-0029": {
+      "pedido": "não feito: o robots.txt veda /simple-search e /discover ao robô; o OAI-PMH não busca por texto",
+      "data": "2026-10-23",
+      "resposta": "não aplicável",
+      "total_informado": "não informado",
+      "perda": "a consulta inteira na via automática: colher o OAI-PMH (59.357 registros em 23/10) e filtrar localmente; a sintaxe dada é a da busca humana",
+      "estado": "não testada: via humana para a busca por texto",
+      "sintaxe": "busca humana: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+    },
+    "AM-0061": {
+      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
+      "pedido": "não feito",
+      "data": "2026-10-23",
+      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
+      "total_informado": "não informado",
+      "perda": "não conferida",
+      "estado": "não testada (falta: reteste)"
+    },
+    "AM-0001": {
+      "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
+      "data": "2026-10-23",
+      "resposta": "não testada: via humana (403 em 23/10/2026)",
+      "total_informado": "não informado",
+      "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
+      "estado": "não testada: via humana",
+      "sintaxe": "(cajuína/\"caju-ína\"/\"cajuí-na\"/\"ca-juína\"/cajuyna)+(\"processamento do pedúnculo\"/\"etapas de produção\"/colheita/descastanhamento)"
+    }
+  },
+  "CO-0005": {
+    "AM-0021": {
+      "sintaxe": "VuFind AllFields: (\"processamento do pedúnculo\" OR descastanhamento)",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22processamento+do+ped%C3%BAnculo%22+OR+descastanhamento%29",
+      "data": "2026-10-23",
+      "resposta": "HTTP 200 {\"resultCount\":10,\"status\":\"OK\"}",
+      "total_informado": 10,
+      "perda": "nenhuma de sintaxe",
+      "estado": "testada"
+    },
+    "AM-0029": {
+      "pedido": "não feito: o robots.txt veda /simple-search e /discover ao robô; o OAI-PMH não busca por texto",
+      "data": "2026-10-23",
+      "resposta": "não aplicável",
+      "total_informado": "não informado",
+      "perda": "a consulta inteira na via automática: colher o OAI-PMH (59.357 registros em 23/10) e filtrar localmente; a sintaxe dada é a da busca humana",
+      "estado": "não testada: via humana para a busca por texto",
+      "sintaxe": "busca humana: \"processamento do pedúnculo\" OR descastanhamento (caso de controle: o item 748513, 'Processamento do pedúnculo do caju: cajuína')"
+    },
+    "AM-0061": {
+      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
+      "pedido": "não feito",
+      "data": "2026-10-23",
+      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
+      "total_informado": "não informado",
+      "perda": "não conferida",
+      "estado": "não testada (falta: reteste)"
+    },
+    "AM-0001": {
+      "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
+      "data": "2026-10-23",
+      "resposta": "não testada: via humana (403 em 23/10/2026)",
+      "total_informado": "não informado",
+      "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
+      "estado": "não testada: via humana",
+      "sintaxe": "\"processamento do pedúnculo\"/descastanhamento"
+    }
+  }
+}

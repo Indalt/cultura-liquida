@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Aspectos sensoriais, nutricionais e tecnológicos do desenvolvimento de suco misto tropical pressurizado",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…melhores características funcionais. O objetivo da tese foi desenvolver suco misto tropical pressurizado à base de caju com baixo teor de açúcar adicionado utilizando os aspectos sensoriais, nutricionais e tecnológicos como norteadores…"
 }

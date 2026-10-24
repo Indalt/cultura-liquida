@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Resíduos madeireiros urbanos como matéria prima para a produção de combustíveis sólidos compactados",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…primas para produção de briquetes com fins energéticos. Os RMOU foram coletados na estação de transferência do Caju pertencente à Companhia Municipal de Limpeza Urbana (COMLURB) no município do Rio de Janeiro (RJ) e a maravalha de…"
 }

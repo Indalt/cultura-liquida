@@ -33,5 +33,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização e avaliação da qualidade das castanhas e amêndoas de baru in natura e torradas utilizando diferentes tipos de embalagens",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…tanto na forma in natura quanto torrada. Verificam-se poucas pesquisas no que diz respeito à conservação pós-colheita como temperaturas de torrefação e armazenamento, além do tipo de embalagem adequada a ser utilizada. Sendo assim,…"
 }

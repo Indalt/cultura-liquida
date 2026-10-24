@@ -32,5 +32,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Caracterização mecanica da castanha de caju (Anacardium ocidentale L.) para fins de beneficiamento e desenvolvimento de decorticador de cilindros rotativos",
+  "ano": "2005",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

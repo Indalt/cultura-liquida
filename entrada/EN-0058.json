@@ -33,5 +33,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Comportamento reológico, estabilidade física, qualidade microbiológica e compostos bioativos do suco misto de frutas tropicais homogeneizado a alta pressão",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…um aumento progressivo de demanda, sobretudo pela presença de compostos bioativos benéficos à saúde. A Acerola, o Caju e o Melão destacam-se pela riqueza em vitamina C e outros nutrientes, compostos funcionais e também por serem…"
 }

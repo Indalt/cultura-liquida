@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Expressão de enzimas de Pleurotus spp. e descoloração do corante azul índigo",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(SMS) os destacam na biorremediação. O objetivo deste trabalho é avaliar a produção de ligninases por P. sajor-caju e P. ostreatus em fermentação submersa (SmF) e em fermentação sólida (SSF) e aplicar estas na descoloração e…"
 }

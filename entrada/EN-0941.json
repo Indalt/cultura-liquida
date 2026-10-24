@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Alimentação, sensibilidade e preferência ao gosto doce na quimioterapia para o câncer de mama",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…artificiais, doces caseiros e chocolate), sensibilidade à sacarose e concentração preferida de sacarose em suco de caju. Em T1 foi também aplicada uma entrevista a partir de roteiro semi estruturado. Os resultados da etapa quantitativa…"
 }

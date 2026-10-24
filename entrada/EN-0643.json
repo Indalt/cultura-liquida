@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Permeabilidade intestinal, adiposidade e inflamação de baixo grau em pessoas com excesso de peso: análises transversal e longitudinal do estudo castanhas brasileiras",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…que avaliou-se o efeito de uma restrição calórica (- 500 kcal/dia) e o consumo de castanhas brasileiras (Castanha de Caju, Castanha do Brasil) e do óleo de castanha do Brasil em individuos com excesso de peso. Realizou-se a avaliação…"
 }

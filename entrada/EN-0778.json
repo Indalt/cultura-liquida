@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A influência da ambidestria na qualidade e no desempenho dos serviços prestados pelo perito contábil ao tribunal de justiça do estado do Paraná",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…carried out, and data collected through the application of questionnaires to 585 accounting experts registered with CAJU/TJPR, of which the sample calculated at 174, returned 86 responses. Data analysis was carried out using the…"
 }

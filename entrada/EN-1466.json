@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "VANTAGENS do cultivo do cajueiro-anão consorciado com pimenta: programa 14: Nordeste/Vale do Jequitinhonha.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "O Prosa Rural desta semana ensina como funciona o plantio consorciado de caju com pimenta. O ouvinte conhecerá as vantagens do cultivo consorciado e saberá como aproveitar a pimenta tabasco para…"
 }

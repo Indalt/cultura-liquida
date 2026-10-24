@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Identificação de madeiras nativas por DNA Barcode",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de madeira. As madeiras estudadas foram: amarelão (Aspidosperma vargasii), araracanga (Aspidosperma desmanthum), caju-açu (Anacardium giganteum), cedro (Cedrela odorata), cerejeira (Amburana acreana), cumaru (Dypterix odorata),…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Semente de Mongura (Pachira aquatica): avaliação do potencial bioativo, antitumoral e tecnológico",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de apoptose. Os biscoitos foram formulados com diferentes proporções de sementes de monguba e farinha da castanha de caju substituindo a farinha de trigo (M100%, M75%, M50% e M25%) e analisados quanto ao perfil físico-químico, capacidade…"
 }

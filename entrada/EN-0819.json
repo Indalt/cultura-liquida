@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento de aditivos bifuncionais derivados do cardanol hidrogenado para aplicação em mistura diesel/biodiesel",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…antioxidante e lubricidade, em que se encontra um subproduto da indústria de processamento da castanhado-caju, o cardanol, que está presente no Líquido da Castanha-do-Caju (LCC). No presente estudo objetivou-se avaliar o…"
 }

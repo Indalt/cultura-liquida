@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito do praziquantel no desempenho cognitivo de crianças infectadas pelo S.mansoni em área rural do vale do Jequitinhonha, Minas gerais",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Minas Gerais. Two hundred and one (201) children from 6 to 10 years oldparticipated in this study, all living in Caju and Sao Pedro do Jequitinhonha, ruraldistricts Jequitinhonha municipality. Data was gathered in 2 phases. On the…"
 }

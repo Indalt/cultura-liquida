@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Comunidade Voadeira e a gestão do território",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…plantio, foi criar a Associação de Moradores e Pequenos Produtores do Distrito de Voadeira e produzir derivados de caju, planta abundante na região. Apesar da importância histórica para a região, por ter sido caminho para Cuiabá e sede…"
 }

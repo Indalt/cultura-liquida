@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Pedúnculos de clones de cajueiro-anão da região de Cruz CE para consumo in natura e/ou processamento.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…os melhores clones destinados ao consumo in natura e/ou processamento. As variáveis analisadas foram: massa total do caju (MT), massa do pedúnculo (MP), massa da castanha (MC), diâmetro apical, diâmetro basal, comprimento, firmeza, pH,…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Resina benzoxazinas e compósitos preparados a partir de fenóis provenientes de fontes renováveis",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…síntese de dois monômeros de benzoxazina baseados em fenóis de origem natural, o cardanol, derivado da indústria do caju e o piceid, proveniente de resíduos sólidos da indústria vinícola. Ainda, foi investigada a influência da adição da…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Palco de disputas e disputas pelo palco no \"país do forró\"",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…in which the forró artist tries to make his music present on big event stages financed by the state, as the Forró Caju; and a wider one that sometimes crosses even the passing of the years, connected to sensory disputes, to…"
 }

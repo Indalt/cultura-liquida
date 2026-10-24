@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A Estrategia de Internacionalizacao: Uma Analise do Setor de Cajucultura do Estado do Ceara",
+  "ano": "2001",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ao setor, destacam-se a analise dos mecanismos relacionais entre produtores e beneficiadores de castanha de caju, as razoes da baixa efetividade dos mecanismo associativos e as razoes da pouca expressividade dos programas…"
 }

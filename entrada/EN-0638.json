@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento e avaliação de eficácia de formulações fotoprotetoras para a pele oleosa contendo extrato de Anacardium occidentale",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…cosméticos adequados e que proporcionem benefícios específicos a esse tipo de pele. Nesse contexto, o extrato de caju (Anacardium occidentale), devido a sua rica composição, apresenta propriedades que podem promover benefícios para os…"
 }

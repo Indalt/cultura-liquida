@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização química e enzimática de cogumelos medicinais",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…one more source of income. The objectives of this work were to evaluate the chemical composition of Pleurotus sajor-caju and A. blazei fruiting bodies cultivated in different nitrogen contents with 0,65%; 0,85%; 1,30%; 1,75% and 2,20%…"
 }

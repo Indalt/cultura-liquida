@@ -1,0 +1,24 @@
+{
+  "id": "CO-0002",
+  "nome": "cajuína (TE-0002)",
+  "tipo": "termo",
+  "termos": [
+    "TE-0002"
+  ],
+  "variantes": [
+    "cajuina",
+    "caju-ína",
+    "cajuí-na",
+    "ca-juína",
+    "cajuyna"
+  ],
+  "descritores": [],
+  "traducao": "ambientes/traducao-consultas.json#CO-0002",
+  "origem_registro": {
+    "criado_por": "scripts/gerar_termo.py",
+    "data": "2026-10-23",
+    "execucao": "EX-0015",
+    "versao_regra": "termo-0.2"
+  },
+  "nota": "proposta gerada do Termo pelo laço termo → booleano → Consulta; booleano: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")"
+}

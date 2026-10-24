@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Sistema automático de aquisição de dados para ensaio triaxial",
+  "ano": "1988",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…tests, the results of these being presented in a report type format. The material tested was a soft clay of the Caju District close to Guanabara Bay and sampled under a failed sanitary fill. Test results are analised in the ligth of…"
 }

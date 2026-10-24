@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estresse hídrico em diferentes fases fenológicas do cajueiro anão precoce no segundo ano de produção.",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de pedúnculo, diâmetros basal e apical do pedúnculo, peso fresco do pedúnculo e da castanha, peso fresco do caju e matéria seca do pedúnculo). O diâmetro caulinar aumentou linearmente com a redução do deficit hídrico nas duas…"
 }

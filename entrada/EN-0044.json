@@ -32,5 +32,12 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Mucorales causadores de podridões pós-colheita de frutos e hortaliças em mercados do Recife",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

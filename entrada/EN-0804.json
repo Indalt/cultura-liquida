@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estudo da viabilidade produtiva na obtenção de enriquecidos proteicos para ração animal a partir de resíduos de fruta.",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…resíduos agroindustriais do processamento de frutas, com estudos de casos com os resíduos do abacaxi, pedúnculo do caju e maracujá visando a produção de suplemento proteico animal, a logística de distribuição e a minimização dos custos…"
 }

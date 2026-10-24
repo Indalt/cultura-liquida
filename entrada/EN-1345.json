@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Recomendações para produção, plantio e manutenção de mudas de cajueiro.",
+  "ano": "1995",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "O CNPAT não recomenda a utilização da castanha na implantação de pomares de caju porque as plantas obtidas serão diferentes entre si no que se refere a altura da planta, tamanho, forma e paladar do…"
 }

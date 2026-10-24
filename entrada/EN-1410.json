@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Cultivo do cajueiro anão precoce.",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…irrigado; Irrigação; Tratos culturais; Podas; Consorciação; Controle de plantas daninhas; Pragas e doenças; Colheita e pós-colheita; Gestão ambiental; Comercialização; Coeficientes técnicos. 2. ed., rev. e atual."
 }

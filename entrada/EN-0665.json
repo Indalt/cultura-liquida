@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Efeito da suplementação na ração de Drosophila Melanogaster (Meigem, 1830) com o fungo Pleurotus Citrinopileatus (singer, 1942) e Lentinus Sajor-Caju (fr.) Fr. e a sua relação com a reprodução de moscas das frutas.",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

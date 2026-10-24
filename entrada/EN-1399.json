@@ -26,5 +26,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Fisiologia e tecnologia pós-colheita do pedúnculo do cajueiro.",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

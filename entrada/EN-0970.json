@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Holopothrips Hood, 1914 (Thysanoptera: Phlaeothripidae) : relações filogenéticas e diversidade",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foram coletadas causando danos em plantas cultivadas: Holopothrips ananasi em abacaxi, e Holopothrips fulvus em caju, e uma nova espécie descrita neste trabalho é referida como praga em feijoa. Apesar do interesse ecológico do hábito…"
 }

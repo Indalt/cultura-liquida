@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise da reinfecção pelo Schistosoma mansoni entre escolares com idade de 5 a 15 anos em área endêmica Vale do Jequitinhonha MG",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…with S. mansoni and residents in the municipality of Ponto dos Volantes, and the communities of Palha, Astraluta, Caju and Córrego São João, all of which are endemic areas for schistosomiasis. At baseline, all subjects were treated…"
 }

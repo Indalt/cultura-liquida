@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Resposta aguda ao consumo de um mix de castanhas sobre a percepção de fome e saciedade, homeostase metabólica e estresse oxidativo em indivíduos com excesso de peso",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…na dieta pode ser uma estratégia útil no controle da obesidade. Nuts, grupo no qual estão inseridas a castanha-de-caju e a castanha-do- pará, são frutos secos, com elevado teor de gorduras insaturadas, fibras, vitaminas, minerais e…"
 }

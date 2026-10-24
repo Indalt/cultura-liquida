@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estratégias de tratamentos e aplicações para a água produzida utilizando um efluente sintético",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…A água produzida sintética foi utilizada como fonte suplementar de carbono ao utilizar os resíduos de coco, caju, carnaúba e cana de açúcar, além de sementes de moringa, para sintetizar ramnolipídeos a partir da Pseudomonas…"
 }

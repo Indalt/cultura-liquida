@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Reflorestamento e recuperação de áreas degradadas na bacia hidrográfica do Tarumã-Açu e sua contribuição na redução dos gases efeito estufa.",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de 20 anos. A metodologia adotada é a observação participante, com análise de 500 mudas de espécies frutíferas de caju (anacardium ocidentale), 500 de ingá (ingá edulis), 500 de buriti (mauritia flexuosa) e 500 mudas de açaí (euterpe…"
 }

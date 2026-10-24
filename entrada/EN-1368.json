@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "CAJUEIRO anão: recomendações de cultivo.",
+  "ano": "1998",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Abertura e preparo de cova; Adubação da cova; Plantio; Podas; Irrigação; Adubação de cobertura; Pragas e doenças; Colheita; Produção. Técnico responsável: Lúcio Flavo Lopes Vasconcelos."
 }

@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Interações tritróficas entre moscas-das-frutas, suas plantas hospedeiras e seus parasitoides das regiões Nordeste e Sudeste do Estado do Pará",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…camu camu (Myrciaria dubia)para o Estado do Pará (ToméAçu); de mosca-das-frutas (espécie A. Obliqua) em frutos de caju no Estado do Pará (Tomé-Açu e Marabá); moscas-das-frutas (espécies A. Obliqua e A. Distincta) em manga no Estado do…"
 }

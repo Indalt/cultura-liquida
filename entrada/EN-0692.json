@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O desenvolvimento na Guiné-Bissau e os problemas ambientais: contexto e atuação local no caso do Parque Natural das Lagoas de Cufada",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…executada pelo governo após a independência em 1973 e a política de incentivo a produção de cultivo de caju em 1980. Ambos, por meio de políticas governamentais, estão na base de problemas de degradações ambientais. A…"
 }

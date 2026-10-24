@@ -31,5 +31,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento de procedimento analítico para determinação da concentração total e bioacessibilidade de B, Cu, Mg, Mn e Zn em castanhas.",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de pesquisa visou à avaliação da bioacessibilidade de nutrientes minerais (B, Cu, Mg, Mn e Zn) de castanha-de-caju e castanha-do-Pará. As amostras de castanhas, o material de referência certificado (SRM) e os brancos analíticos…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produção e caracterização de biossurfactantes obtidos por linhagens de Bacillus sp. isoladas de estações de tratamento de águas residuais e de solo de manguezais (Ceará - Brasil)",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e de solo de manguezal. Dentre os meios de cultivo testados, avaliou-se a utilização de meios sintéticos e suco de caju clarificado, um substrato não convencional, proveniente das indústrias do processamento do caju. A escolha do suco…"
 }

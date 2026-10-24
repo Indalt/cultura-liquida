@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliacao Microbiologica de Sucos de Frutas In Natura Comercializados em Cantina de Escola Privada",
+  "ano": "2005",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…coli e de Samonella sp. Para isto, foram obtidas cinco diferentes amostras de sucos de frutas in natura de caju, goiaba, maracuja, tamarindo e manga e todos recem-preparados. Apos a analise dos resultados foi observado que…"
 }

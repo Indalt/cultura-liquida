@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise da variação na concentração dos ácidos clorogênicos diante de diferentes tratamentos pós-coleta",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(CLUE-EM/EM). Na primeira fase do estudo, foram coletadas folhas de cada espécie selecionada para o estudo (Caju - Anacardium occidentale L.; Graviola - Annona muricata L.; Pata-de-Vaca - Bauhinia variegata L.; Limão - Citrus…"
 }

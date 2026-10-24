@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Espécies frutíferas nativas dos cerrados de Goiás: caracterização e influências do clima e dos solos",
+  "ano": "1999",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…savanna) with potential for economic exploration. Studied fruit trees were: araticum (Annona crassíflora Mart.), caju-arbóreo-do-cerrado (Anacardium othonianum Rizz.), cagaita (Eugenia dysenterica D.C.), mangaba (Hancomia speciosa…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Distribuição espacial e temporal do fitoplâncton da Baía de Guanabara (RJ) definida por estratégias funcionais",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…samples montly from April 2016 to April 2017, distributed in six stations: entrada, Urca, central canal, interior, Caju and Paquetá. The Guanabara Bay shows a spatial heterogeneity, with environments impacted by the influence of the…"
 }

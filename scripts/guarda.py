@@ -16,7 +16,7 @@ permitida pela D-045 e não está feita: o alarme diz quando ela passa a valer a
 
 Uso como biblioteca: Pegadas, indice_pegadas(), medir().
 Uso como script:
-    python scripts/guarda.py --medir [--raiz <pasta>]      # contagem, tamanho e alarme
+    python scripts/guarda.py --medir [--raiz <pasta>] [--limite-arquivos N] [--limite-mb M]   # contagem, tamanho e alarme
 """
 from __future__ import annotations
 
@@ -86,9 +86,9 @@ class Pegadas:
         return sum(len(v) for v in self.por_recorte.values())
 
 
-def medir(raiz: Path = RAIZ) -> dict:
+def medir(raiz: Path = RAIZ, limite: dict | None = None) -> dict:
     """Arquivos e MB do que o Git versiona ou vai versionar, contra o alarme do registro."""
-    lim = carregar_valores()["valores"]["guarda_alarme"]["valor"]
+    lim = dict(carregar_valores()["valores"]["guarda_alarme"]["valor"], **(limite or {}))
     try:
         saida = subprocess.run(["git", "ls-files", "-co", "--exclude-standard", "-z"], cwd=raiz,
                                capture_output=True, check=True).stdout.decode("utf-8")
@@ -113,9 +113,12 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--medir", action="store_true")
     ap.add_argument("--raiz", type=Path, default=RAIZ)
+    ap.add_argument("--limite-arquivos", type=int)
+    ap.add_argument("--limite-mb", type=float)
     a = ap.parse_args()
     raiz = a.raiz if a.raiz.is_absolute() else RAIZ / a.raiz
-    m = medir(raiz)
+    lim = {k: v for k, v in (("arquivos", a.limite_arquivos), ("mb", a.limite_mb)) if v is not None}
+    m = medir(raiz, lim)
     peg = Pegadas(raiz)
     print(f"{VERSAO}: {m['arquivos']} arquivos, {m['mb']} MB (alarme: {m['limite']['arquivos']} arquivos ou {m['limite']['mb']} MB); "
           f"{peg.total()} pegada(s) em {len(peg.por_recorte)} Recorte(s)")

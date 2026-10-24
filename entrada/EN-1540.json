@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Manual de adubação e calagem para o Estado da Bahia.",
+  "ano": "1989",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de sequeiro, arroz irrigado, banana, banana irrigada, batata-doce, batatinha, beringela, beterraba, cacau, cafe, caju, cana-de-acucar, cebola irrigada, cenoura, chuchu, citrus, citrus irrigado, coco, couve-flor, cravo-da-india, dende,…"
 }

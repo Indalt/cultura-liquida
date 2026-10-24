@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Percepção dos impactos socioeconômicos e ambientais dos parques eólicos em áreas agrícolas: estudo de caso do município de Serra do Mel-RN",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de parques eólicos em áreas agrícolas. A pesquisa foi realizada no município de Serra do Mel, maior produtor de caju e também o maior em capacidade outorgada de energia eólica do Estado do Rio Grande do Norte. Os métodos utilizados…"
 }

@@ -26,5 +26,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Qualidade industrial e estimativa de receita de castanhas de cajueiro submetidas a diferentes tratamentos pós-colheita.",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

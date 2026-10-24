@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estudos metabolômicos de compostos orgânicos voláteis (covs) associados à resistência de clones de cajueiro tipo anão precoce frente ao ataque de diferentes fitopatógenos.",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…hexanoato de etila, 3-metil-pentanoato de etila, &#945;-pineno, &#946;-pineno foram identificados nas castanhas de caju como os compostos que possivelmente contribuem para a maior resistência dos clones ?CCP76?, ?BRS226? e ?BRS265? em…"
 }

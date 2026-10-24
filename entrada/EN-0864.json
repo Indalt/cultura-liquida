@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produção de pectinases fúngicas a partir do extrato aquoso da algaroba (Prosopis juliflora (SW) DC)",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…os extratos de algaroba a 10% (lote 2018) e 1% (lote 2023). O suco de maçã apresentou SST de 16,1 ºBrix e o suco de caju 6,0 ºBrix. Em relação à produção de pectinases, os resultados indicam que Aspergillus sp. NA01, no quarto dia,…"
 }

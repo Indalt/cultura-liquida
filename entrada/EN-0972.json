@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Purificação e caracterização bioquímica de tanases produzidas pelo fungo filamentoso Aspergillus phoenicis",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e caracterizando-as bioquimicamente. Os maiores níveis enzimáticos em FSS foram obtidos utilizando-se folhas de caju e chá verde como fonte de carbono umedecidas com solução de sais Khanna (1:1, m/v), a 30ºC por 6 dias e em FSbm…"
 }

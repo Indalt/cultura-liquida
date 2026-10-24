@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análogos vegetais de queijos: análise microbiológica, resistência a antimicrobianos, aspectos legais e nível de conhecimento do consumidor",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Escherichia coli, além de bolores e leveduras, em 13 amostras de análogos vegetais de queijo à base de castanha de caju. As bactérias foram identificadas na técnica de MALDI-TOF MS e, as bactérias ácido láticas (BAL) presentes nestas…"
 }

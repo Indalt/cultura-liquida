@@ -32,5 +32,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Produção de Pleurotus sajor-caju em bagaço de cana-de-açúcar lavado e o uso de aditivos visando sua conservação \"in natura\".",
+  "ano": "2003",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

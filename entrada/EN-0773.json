@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Atividade Antimicrobiana dos Meis Produzidos por Apis mellifera e Abelhas sem Ferrão Nativas do Brasil",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…a todas as amostras de mel. As amostras de mel de Apis mellifera que apresentaram atividade bactericida foram caju, romã e cana, nenhuma das amostras de mel de A. mellifera afetou o fungo T. rubrum. Os meis de Nannotrigona…"
 }

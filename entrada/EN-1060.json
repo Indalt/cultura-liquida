@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Processamento de bebida gaseificada a partir do soro de leite caprino",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…finalidade de avaliar sua vida-de-prateleira. Realizados seis tratamentos: Controle, Guaraná, Laranja, Limão, Uva e Caju. A estabilidade foi avaliada periodicamente por análises microbiológicas e físico-químicas, posteriormente, análise…"
 }

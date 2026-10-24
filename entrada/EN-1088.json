@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Sensibilização a alérgenos inalatórios e alimentares em crianças e adolescentes brasileiros atópicos pela mensuração in vitro de IGE específica - proteínas totais e componentes : Projeto Alergia II",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…americana; Ascaris lumbricoides; ovo; leite de vaca; peixe; trigo; milho; amendoim; soja; camarão, castanha de caju, e castanhas. Na dependência da positividade de IgE específica (SIgE) às proteínas totais dos alérgenos (>0,1…"
 }

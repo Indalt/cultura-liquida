@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Óleos essenciais e monensina em suplementos múltiplos para bovinos de corte em pastejo no período das águas",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da inclusão de um blend comercial de óleos essenciais (composto por óleo de copaíba, óleo de casca de castanha de caju e óleo de mamona) e monensina sobre os parâmetros nutricionais de bovinos de corte em pastejo (Urochloa brizantha…"
 }

@@ -29,5 +29,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Levantamento de leveduras ocorridas em frutos maduros  sua posição sistemática",
+  "ano": "1954",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…neste levantamento, atingindo a 40,5% sôbre as demais. Dessa percentagem 13,04% pertence a uva, um valor igual ao caju e o resto para os demais frutos. As apiculadas são leveduras de fermentação baixa e que fazem fermentar…"
 }

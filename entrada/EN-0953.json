@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Internacionalização e agricultura: a fruticultura tropical no Rio Grande do Norte no contexto da mundialização",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…fruticultura tropical, no contexto da mundialização. Nosso recorte analítico são os cultivos do melão, castanha de caju e a banana, com intuito de abarcar diferentes segmentos produtivos da fruticultura. Nesse sentindo, partimos do…"
 }

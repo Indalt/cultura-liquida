@@ -25,5 +25,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Extração da pectina do bagaço do caju: caracterização físico-química e lignocelulósica da fração insolúvel.",
+  "ano": "2026",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

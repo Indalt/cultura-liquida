@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização de extratos solúveis com atividade descorante provenientes de dois fungos lignolíticos e determinação da estrutura primária parcial de um dos genes relacionados",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de diferentes gêneros e espécies fúngicas, dentre elas duas espécies do gênero Lentinus: L. tigrinus e L. sajor-caju. Os resultados obtidos indicam que os extratos solúveis destes dois fungos indicam potencial para aplicação…"
 }

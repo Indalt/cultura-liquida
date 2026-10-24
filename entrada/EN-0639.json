@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliação da citotoxicidade, genotoxicidade e dos efeitos protetores do extrato de Anacardium occidentale L. in vitro",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…V-79 O teste de sobrevivência celular avaliou a citotoxicidade de diferentes concentrações do extrato da casca do caju (5, 1, 2, 3, 4, 5 e 6 µg/mL de meio de cultura) e permitiu a escolha de três (5 µg/mL, 1 µg/mL e 2 µg/mL de meio de…"
 }

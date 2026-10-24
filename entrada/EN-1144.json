@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Microbiota ruminal de novilhos mantidos a pasto, suplementados com quitosana e digestibilidade in vitro de diferentes dietas para ruminantes",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de quitosana na dieta e avaliar o efeito da adição de aditivos (monensina (MON); líquido da casca da castanha de caju (LCC); quitosana (Q) e ácido ricinoléico (AR) sobre a digestibilidade in vitro dos nutrientes para ruminantes. Para…"
 }

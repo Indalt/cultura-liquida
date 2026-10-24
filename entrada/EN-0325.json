@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "As praças da gestão Sandoval Cajú na “Cidade Sorriso”: Maceió, Alagoas, 1961-1964",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

@@ -29,5 +29,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Plantas medicinais e saúde bucal: uma abordagem etnobotânica em comunidades quilombolas do agreste paraibano",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…abscesses, tooth brushing, tooth eruption e thrush. The most frequently mentioned were Anacardium occidentale L.(Caju roxo), Ziziphus joazeiro Mart (Juá), Erythrina velutina Willd (Mulungu) and Myracrodruon urundeuva (Engl.) Fr. All…"
 }

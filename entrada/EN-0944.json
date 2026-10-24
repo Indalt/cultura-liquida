@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Utilização de pigmentante natural e extrato vegetal na dieta de poedeiras comerciais",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(Bixa orellana L. ) e oleoresina de páprica (Capsicum annum) e o uso de um aditivo fitogênico a base de óleo de caju, óleo de mamona e óleo de copaíba, sobre o desempenho produtivo, qualidade do ovo, e o efeito na estocagem, em…"
 }

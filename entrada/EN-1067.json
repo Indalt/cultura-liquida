@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produção de álcool a partir do extrato aquoso da polpa de frutas produzidas em diferentes regiões do Brasil",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…O objetivo deste trabalho foi analisar o teor de açúcares de sete frutas encontradas no país: acerola, caju, cupuaçu, jamelão, maracujá, mangas Palmer e Tommy, a fim de escolher as que tivessem melhores condições para a…"
 }

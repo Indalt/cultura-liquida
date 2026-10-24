@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Utilização da folha da bananeira como substrato para o cultivo de cogumelos comestíveis (Pleurotus spp.)",
+  "ano": "1994",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…química dos corpos de frutificação. As espécies Pleurotus sp. \"Florida\", Pleurotus ostreatoroseus e Pleurotus sajor-caju foram inoculadas em grãos de trigo e após colonização foram semeados nos seguintes substratos macerados e…"
 }

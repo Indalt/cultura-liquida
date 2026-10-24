@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Consumo alimentar cearense: índice glicêmico e carga glicêmica de alimentos regionais e impacto potencial no risco de doenças crônicas não transmissíveis",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…determinou-se uma lista de 31 alimentos consumidos, cujo IG era desconhecido: coalhada, água de coco, ata, cajá, caju, goiaba, graviola, maracujá, sapoti, tamarindo, vitamina de banana com aveia, chuchu, macaxeira, baião de dois,…"
 }

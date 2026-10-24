@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Uma Proposta de Um Plano de Negocio: Um Estudo de Caso da Copacaju",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de Pesquisa Agropecuária (EMBRAPA), tem incentivado a criação e remodelação de minifábricas de castanha de caju para aumentar a produção e incentivar os pequenos produtores do nordeste do Brasil. As citadas entidades estão…"
 }

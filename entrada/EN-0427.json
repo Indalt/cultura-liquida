@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "A ocupação Vila dos Sonhos entre memórias e esquecimentos",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "La recherche vise à présenter l'occupation Vila dos Sonhos - Complexo do Caju, Rio de Janeiro/RJ. L'occupation a été établie sur le site de l'un des premiers hôpitaux d'isolement du Brésil,…"
 }

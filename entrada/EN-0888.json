@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Síntese e avaliação de derivados tetraidroacridínicos planejados a partir dos lipídeos fenólicos do LCC como ligantes multialvo para a Doença de Alzheimer",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Com essa motivação, descrevemos os primeiros LMAD sustentáveis, derivados do líquido da casca de castanha de caju (LCC) – resíduo alimentar barato com propriedades anti-inflamatórias. Aplicamos uma combinação das estruturas dos…"
 }

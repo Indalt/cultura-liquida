@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Reação de clones comerciais de cajueiro anão à antracnose e ao mofo preto.",
+  "ano": "1997",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "A expansao da cultura do cajueiro depende, fundamentalmente, da adocao de modernas tecnicas de producao, colheita e utilizacao de seus produtos. Evidentemente, o uso de clones de cajueiro anao representa um consenso generalizado…"
 }

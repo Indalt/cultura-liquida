@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Zoneamentos territoriais mensais de áreas brasileiras mais favoráveis ao desenvolvimento de Bactrocera carambolae.",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ciclo de vida e geração de número de descendentes. Os cultivos hospedeiros da praga aqui considerados foram acerola, caju, carambola, goiaba, manga, pitanga, laranja, tangerina e tomate. Com base na análise dos resultados dos zoneamentos…"
 }

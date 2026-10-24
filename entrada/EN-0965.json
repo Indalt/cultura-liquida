@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O que dizem os curumins-alunos mendonças do amarelão sobre a escola: elementos para pensar o sucesso e o fracasso escolar",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…o que pode comprometer todo o desenvolvimento escolar. As crianças convivem com a cultura da quebra de castanha de caju e alguns já trabalham para ajudar seus pais. São crianças inteligentes que têm sonhos de ser jogadores de futebol,…"
 }

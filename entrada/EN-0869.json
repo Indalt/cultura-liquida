@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Transformações no trabalho gerencial no contexto de reestruturação organizacional: estudo de caso numa indústria cearense",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de reestruturação produtiva. O campo escolhido para a pesquisa é uma indústria cearense exportadora de amêndoas de caju, com mais de 50 anos de atuação no mercado, atualmente passando por um processo de reestruturação. Surge assim, a…"
 }

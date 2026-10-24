@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "CAJUEIRO anão para o Semiárido nordestino: programa 18: Nordeste/Vale do Jequitinhonha.",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…semelhantes. Além de ser bastante produtivo, o BRS 226 é de pequeno porte, o que proporciona a colheita manual do caju na planta. Dessa forma, o pedúnculo ou maçã do caju pode ser aproveitado em diversas agroindústrias ou no mercado de…"
 }

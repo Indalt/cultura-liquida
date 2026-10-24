@@ -1,0 +1,10 @@
+{
+  "id_fonte": "X-1",
+  "identificador": "AM-0021:exemplo.org/handle/1/1",
+  "link": "https://exemplo.org/handle/1/1",
+  "data": "2026-10-24",
+  "hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "triagem": "fora do escopo pela regra",
+  "motivo": "fora do escopo pela regra: nenhuma forma nem descritor de CO-0001 no título nem no resumo",
+  "versao_regra": "pretriagem-0.1"
+}

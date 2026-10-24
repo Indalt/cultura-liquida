@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "SemiáridoShow: catálogo de tecnologias, produtos e serviços 2023.",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Jabuticaba laminada. Embrapa Agroindústria Tropical: Clone de cajueiro-anão brs 555; Fibra de pedúnculo de caju desidratada em estufa para uso alimentício; Processo de obtenção de uma bebida de amêndoa de castanha-de-caju; MDF…"
 }

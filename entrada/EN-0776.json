@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Acesso e utilização dos serviços de saúde de atenção primária em população rural do município de Jequitinhonha, Minas Gerais",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Foram realizadas entrevistas com todos os 190 indivíduos com 18 anos ou mais de idade residentes no povoado do Caju para obter informações socioeconômicas, demográficas e sobre as necessidades de saúde, acesso e utilização dos…"
 }

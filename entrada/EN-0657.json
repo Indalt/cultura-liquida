@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Mix de óleos de cravo, mamona e caju e composto microencapsulado de eugenol, timol e vanilina na suplementação de bovinos terminados em pastagem de aveia e azevém : desempenho e qualidade da carne",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

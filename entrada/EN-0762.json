@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O uso do território pela cajucultura em Serra do Mel/RN",
+  "ano": "2026",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…o projeto também possibilitou a geração de renda para as famílias assentadas, por meio da produção de castanha-de-caju e do cultivo de culturas de subsistência. Dessa forma, a iniciativa contribuiu não apenas para a ocupação planejada…"
 }

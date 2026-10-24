@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Concentração e quantidade de macronutrientes em cajueiro (Anacardium occidentale L.) anão precoce",
+  "ano": "1991",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Plantas de caju (Anacardium occidentale L.) anão precoce, foram cultivadas em casa de vegetação, empregando-se quartzo moído como…"
 }

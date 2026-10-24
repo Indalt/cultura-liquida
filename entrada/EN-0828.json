@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Produção de celulases por Aspergillus fumigatus através da fermentação em estado sólido e recuperação e purificação por extração micelar em duas fases aquosas",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(2G)), que não gere competição por terra cultivável, tais como bagaço de cana-de-açúcar, fibra coco e o pedúnculo de caju. A hidrólise enzimática é etapa importante na produção de etanol 2G. Entretanto, o custo de produção das celulases…"
 }

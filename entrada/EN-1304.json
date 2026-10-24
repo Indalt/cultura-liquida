@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Diagnóstico tecnológico e qualitativo das unidades produtoras de polpa do estado do Piauí.",
+  "ano": "1999",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…que contemplaram a aplicação de um questionário aos produtores e a coleta de amostras de polpa de acerola, cajá e caju, para avaliação da qualidade química, físico-química e microbiológica."
 }

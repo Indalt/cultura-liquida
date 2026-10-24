@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Cultivo de fungos basidiomicetos visando aumento na degradabilidade de forrageiras para ruminantes",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…do gênero Pleurotus. Outrossim, extrato enzimático, nas concentrações de 2, 4 e 6 mL, produzido pelo fungo P. sajor-caju CCB 020 crescido em vinhaça, durante 6º, 12º e 18º dias, foram aplicados às mesmas forrageiras. As avaliações das…"
 }

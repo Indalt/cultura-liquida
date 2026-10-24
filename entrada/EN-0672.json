@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Estudo fitoquímico e avaliação da toxicidade e do efeito antiinflamatório do extrato da casca de castanha de cajú (Anacardium occientale) no modelo de artrite aguda e crônica em ratos",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

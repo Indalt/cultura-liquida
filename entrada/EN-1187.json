@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Influência do consumo de castanhas brasileiras sobre o peso corporal, apetite, resposta glicêmica e marcadores inflamatórios em mulheres com excesso de peso",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Assim, o presente estudo avaliou os efeitos do consumo de 45 g de CB (15g de castanha-do-brasil + 30g de castanha de caju) sobre a perda de peso, apetite, resposta glicêmica e inflamação, em mulheres adultas com excesso de peso em risco…"
 }

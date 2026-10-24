@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Diversidade genética em populações naturais de Anacardium occidentale L. e Anacardium humile A.St.-Hil",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…L. e A. humile A. St. -Hil. são frutíferas pertencentes à família Anacardiaceae conhecidas, respectivamente, como caju e cajuí. Essas espécies apresentam ampla diversidade morfológica, com frutos e pseudofrutos apresentando formatos,…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Fatores associados à Síndrome Metabólica em área rural de Minas Gerais",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…based study was carried out to identify the factors associated with a metabolic syndrome in Virgem das Graças and Caju, respectively, in rural areas of the City Ponto dos Volantes and Jequitinhonha, both of which are located in…"
 }

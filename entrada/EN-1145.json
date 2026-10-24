@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Síntese, caracterização e atividade biológica de ligantes e complexos de cobre (II) baseados no cardanol para o controle de mosquitos (diptera - culicidae)",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…faz do cardanol alquil fenol um dos constituintes mais importantes e promissores da indústria de castanha de caju e da sua cadeia produtiva. O cardanol foi extraído, destilado, hidrogenado e realizadas as sínteses dos seguintes…"
 }

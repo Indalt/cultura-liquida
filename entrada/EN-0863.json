@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento de néctares mistos de frutas tropicais adicionados de Ginkgo biloba e Panax ginseng",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…aos produtos de frutas. Diante do exposto, o presente trabalho objetivou a elaboração de néctares mistos à base de caju, manga e acerola, adicionados de extratos de Ginkgo biloba e Panax ginseng e a mistura dos dois extratos, além de…"
 }

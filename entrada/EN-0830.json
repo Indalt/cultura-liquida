@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Fatores de Risco para Osteoporose,Com Enfase nos Nutricionais, em Trabalhadoras de Uma Industria de",
+  "ano": "2003",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…pensou-se em investigar fatores de risco envolvidos na genese dessa doença, em trabalhadores de uma Industria de Caju da cidade d Fortaleza - Ceara. Foram avaliads 25 mulheres em formaçao do pico de massa ossea, atraves da aplicaçao…"
 }

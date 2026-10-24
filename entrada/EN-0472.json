@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "Desenvolvimento de mistura em pó para o preparo de bebida à base de amêndoa da castanha-de-cajú e pólen apícola de Apis mellifera",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

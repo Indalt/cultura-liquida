@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Influência da adição de subproduto de fruta em produto de soja potencialmente probiótico tipo frozen yogurt sobre o bioenriquecimento com riboflavina",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…RAM). Paralelamente, foi avaliada a capacidade dessas cepas em fermentar os subprodutos de uva (Vitis spp.) e de caju (Anacardium occidentale L.). De acordo com os resultados de produção de riboflavina em RAM e de fermentação dos…"
 }

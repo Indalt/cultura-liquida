@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Recomendações técnicas para o cultivo do cajueiro anão-precoce na Região Meio-Norte do Brasil.",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "O objetivo desta publicação é orientar os produtores de caju sobre as tecnologias disponíveis para a exploração econômica da cajucultura nos diferentes ecossistemas da região…"
 }

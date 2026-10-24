@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Inovação no arranjo produtivo local de fruticultura irrigada de Pernambuco",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…As culturas produtivas identificadas neste estudo foram manga, uva, banana, coco, goiaba, acerola, maracujá e caju. Pela a análise fatorial, os resultados demonstram que 16 variáveis representativas são condensadas em quatro…"
 }

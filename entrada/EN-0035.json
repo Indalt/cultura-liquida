@@ -34,5 +34,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Comportamento enzimático de quatro fungos lignocelulolíticos crescidos em bagaço e palha de cana-de-açúcar e expostos a duas concentrações de nitrogênio, visando à produção de etanol",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…comportamento destes organismos perante situação de estresse nutricional. Os fungos utilizados foram Pleurotus sajor caju, Phanerochaete chrysosporium, Trichoderma reesei e Aspergillus niger, selecionados em trabalhos anteriores. Estes…"
 }

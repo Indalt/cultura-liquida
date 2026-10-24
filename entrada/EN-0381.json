@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Propriedades antioxidantes de clones do pedúnculo de Anacardium occidentale L.: feito sobre a lipoperoxidação e enzimas participantes do sistema antioxidante de defesa do organismo animal",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…transmissíveis tais como: cardiovasculares, câncer, aterosclerose, entre outras. Considerando a elevada produção de caju em território brasileiro e a possibilidade da existência de compostos com potencial antioxidante no pedúnculo de…"
 }

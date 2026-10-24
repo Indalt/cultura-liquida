@@ -1,0 +1,38 @@
+{
+  "id": "AM-0021",
+  "nome": "BDTD — Biblioteca Digital Brasileira de Teses e Dissertações (IBICT)",
+  "tipo": "repositório de teses",
+  "tipo_detalhe": "agregador de metadados de teses e dissertações",
+  "via_protocolo": "API VuFind v1 em JSON (https://bdtd.ibict.br/vufind/api/v1/search), lookfor em UTF-8 percent-encoded; o RSS de busca é vedado pelo robots.txt",
+  "estado_escavacao": "proposto",
+  "estado_monitoramento": "não iniciado",
+  "linha_anexo_e": 21,
+  "origem_registro": {
+    "criado_por": "scripts/semear_ambientes.py",
+    "data": "2026-10-22",
+    "execucao": "EX-0006"
+  },
+  "nota": "Anexo E, linha 21 (frentes FH, PA e MO): uso ambos; nível oficial; link https://bdtd.ibict.br/vufind/Record/<id> e o handle (link permanente de repositório) da instituição; termos de uso Nenhum limite de uso publicado foi encontrado. Proposta: 1 requisição por segundo, com o robô identificado. Custo zero.; como buscar RSS nosso: rodar cada consulta (termo e variantes, item 6) toda semana, paginar até o total e anotar só os IDs fora das pegadas. Escavação: a mesma paginação completa a cada consulta nova; depois, buscar o texto no repositório de origem.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4). Ficha de acesso testada em 2026-10-23 pelo rastreador (EX-0016, K-106); trilha em trilhas/2026-10-23_K-106/.",
+  "ficha_de_acesso": {
+    "nome": "BDTD: Biblioteca Digital Brasileira de Teses e Dissertações (IBICT)",
+    "tipo": "agregador de metadados de teses e dissertações (VuFind)",
+    "acesso": "Aberto, sem cadastro. API do VuFind v1 em JSON, HTTP 200 em 23/10/2026.",
+    "como_buscar": "API v1: GET /vufind/api/v1/search?lookfor=<consulta>&type=AllFields&limit=0 devolve só o resultCount. Aspas, OR, AND e parênteses aceitos. O lookfor tem de ir em UTF-8 percent-encoded: com acentos em Latin-1 (%FA, %ED) a API devolveu a base inteira (1.167.710), como se a consulta fosse ignorada. O RSS de busca (/vufind/Search/Results?...&view=rss) está sob 'Disallow: /vufind/Search/' no robots.txt e não se usa: a via automática é só a API v1.",
+    "endpoint": "https://bdtd.ibict.br/vufind/api/v1/search?lookfor=<consulta, UTF-8 percent-encoded>&type=AllFields&limit=<n>",
+    "link_permanente": "https://bdtd.ibict.br/vufind/Record/<id> (Anexo E; não reaberto em 23/10) e o handle da instituição, no campo urls do registro.",
+    "texto_integral": "Não: o registro aponta o repositório da instituição (ficha de 15/10; não retestado).",
+    "termos": "não conferido: nenhum limite de uso publicado foi encontrado em 15/10; as páginas não foram reabertas. Proposta: 1 pedido por segundo, com o robô identificado.",
+    "robots": "Aberto em 23/10/2026 (HTTP 200): 'User-agent: *', 'Allow: /', 'Disallow: /vufind/Search/'. A API v1 não está vedada; a busca HTML e o RSS de busca estão.",
+    "cobertura": "1.167.710 registros pela API (lookfor=*:*, limit=0, HTTP 200) em 23/10/2026; eram 1.156.392 em 15/10.",
+    "uso": "ambos",
+    "nivel": "oficial",
+    "teste": {
+      "data": "2026-10-23",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
+      "resposta": "HTTP 200 {\"resultCount\":1441,\"status\":\"OK\"}",
+      "observacao": "Uma primeira rodada com codificação Latin-1 devolveu 1167710 (a base inteira) em 6 pedidos, descartados como inválidos. Em 17/10, a busca simples 'cajuína' informou 25."
+    },
+    "decisao": "aceito como via automática (API v1, UTF-8 percent-encoded), sem o RSS de busca, vedado pelo robots.txt"
+  },
+  "ultima_visita": "2026-10-23"
+}

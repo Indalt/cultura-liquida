@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Agrobiodiversidade, conhecimentos e práticas tradicionais sobre plantas alimentícias na comunidade quilombola do Jacarequara, Santa Luzia do Pará, Nordeste Paraense",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…açaí, a banana (Musa paradisiaca L.), a mandioca/macaxeira (Manihot esculenta Crantz), o coco (Cocos nucifera L.), o caju (Anacardium occidentale L.), a acerola (Malpighia glabra L.), a bacaba (Oenocarpus bacaba Mart.) e a laranja (Citrus…"
 }

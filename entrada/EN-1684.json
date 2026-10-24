@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Flutuação do inóculo nas epidemias de oídio do cajueiro-anão.",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Epidemias de oídio são frequentes na maioria das regiões produtoras de caju (Anacardium occidentale L.), e a presença de hospedeiro suscetível, o clima e o inóculo do fungo favorecem o…"
 }

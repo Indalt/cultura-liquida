@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Eficácia de óleos essenciais de Mentha spp. no controle de leveduras deteriorantes em sucos de frutas",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…albicans, C. tropicalis, Pichia anomala e Saccharomyces cerevisiae) em caldo Sabouraud dextrose (CSD) e em sucos de caju, goiaba, manga e abacaxi durante 72 h de armazenamento refrigerado. Os efeitos da incorporação de uma dose efetiva…"
 }

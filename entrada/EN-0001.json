@@ -37,5 +37,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20251123122625/http://www.repositorio.ufc.br/handle/riufc/46923"
+  "wayback": "https://web.archive.org/web/20251123122625/http://www.repositorio.ufc.br/handle/riufc/46923",
+  "titulo": "Liofilização de extrato fenólico do coproduto do processamento do pedúnculo do caju.",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0005)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

@@ -34,5 +34,13 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Análise de variância para dados de tonalidade de cor: um caso de dados circulares",
+  "ano": "2004",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…na área de tecnologia de alimentos e, que teve como objetivo, avaliar a conservação de cogumelos i>Pleurotus sajor-caju frescos quanto à qualidade e à durabilidade, quando submetidos a quatro diferentes tratamentos usuais na conservação…"
 }

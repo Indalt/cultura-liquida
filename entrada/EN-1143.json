@@ -27,5 +27,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Desenvolvimento de método analítico para determinação de selênio em castanhas do cerrado por espectrometria de absorção atômica com geração de hidreto",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(Se) em amostras de castanhas de bacuri (Platonia insignis), baru (Dipteryx alata), bocaiuva (Acrocomia aculeata) e caju (Anacardium occidentale, L.) empregando geração de hidreto acoplada à espectrometria de absorção atômica (HG AAS)…"
 }

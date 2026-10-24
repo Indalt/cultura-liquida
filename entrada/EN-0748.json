@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Subsídios à gestão da Reserva Extrativista Marinha de Soure-Marajó-Pará: uma análise dos problemas e conflitos socioambientais",
+  "ano": "2012",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…socioeconômico dos pescadores artesanais, cuja amostra foi composta por um total de 116 famílias nas comunidades de Caju-Una, Céu, Pesqueiro, Barra Velha e Araruna, todas localizadas na RESEX de Soure-PA. Levantaram-se os problemas…"
 }

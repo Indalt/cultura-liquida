@@ -33,5 +33,12 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "titulo": "ESTUDO DOS EFEITOS DO CONSUMO DE AMÊNDOAS DE CASTANHAS DE CAJU (Anacardium occidentale L.) ASSADAS ASSOCIADO A ATIVIDADES DE EDUCAÇÃO NUTRICIONAL NA COMPOSIÇÃO CORPORAL, ESTRESSE OXIDATIVO E PARÂMETROS ANTROPOMÉTRICOS DE ADOLESCENTES COM OBESIDADE",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
   }
 }

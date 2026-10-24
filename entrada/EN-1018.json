@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Avaliação da atividade antioxidante, mutagênica e antimutagênica de polpas de frutas",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…cerebelo e hipocampo de ratos Wistar. Quando ensaiadas em altas concentrações (5, 10, 15 % p/v) as polpas de açaí, caju, kiwi e morango mostraram atividade mutagênica, a qual apresentou correlação positiva com carotenóides (r = 0,793, p…"
 }

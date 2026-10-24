@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Peixes comerciais do Tocantins.",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ou lobó. Cachorra ou cachorra-verdadeira. Cachorra-facão. Sardinha. Caranha ou pirapitinga. Piranha-preta. Piranha-caju, piranha-queixo-de-burro ou piranha-vermelha. Piau-voador. Piau-pirco ou sardinha-de-água-doce. Piau-flamengo ou…"
 }

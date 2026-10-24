@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Fontes e mecanismos de resistência de clones de cajueiro-anão à traça-da-castanha.",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…pragas, destacando-se a traça-da-castanha (Anacampis phytomiella), praga-chave dos frutos verdadeiros (castanha de caju). Os prejuízos causados pelo controle químico, atualmente único método utilizado para manejo desta espécie, revelam…"
 }

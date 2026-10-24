@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Secagem de resíduo do pseudofruto do cajueiro para produção de farinhas.",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…como vitaminas, fibras e minerais, entre outros. Para tanto, foi realizada a secagem dos resíduos do pseudofruto de caju em quatro diferentes temperaturas (40, 50, 60 e 70oC) em estufa de circulação de ar, caracterizando-se tanto a…"
 }

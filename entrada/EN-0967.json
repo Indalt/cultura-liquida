@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Caracterização de análogos vegetais de queijos produzidos e comercializados na europa e no brasil",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Os Análogos Vegetais de Queijos (AVQ) são produtos fermentados a partir de matrizes vegetais como castanha de caju, soja, amêndoas, macadâmia entre outras oleaginosas, com adição ou não de culturas iniciadoras como as bactérias…"
 }

@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Origens, condições de trabalho e redes sociais: o caso de três empreendimentos econômicos solidários",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de catadores (Associação A), cooperativa de costureiras (Cooperativa B) e cooperativa de produtores de castanha de caju (Cooperativa C). Como método, utilizou-se entrevistas semiestruturadas, análise de redes sociais e a técnica netmap.…"
 }

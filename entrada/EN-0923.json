@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Ecofisiologia de cajueiro anão precoce sob estresse salino e ácido salicílico na fase pós-enxertia.",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "A salinidade da água de irrigação pode restringir a produção de caju no semiárido brasileiro. No entanto, a adoção de estratégias de cultivo, como a aplicação de ácido salicílico pode…"
 }

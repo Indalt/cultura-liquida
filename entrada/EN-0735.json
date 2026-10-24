@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Cultivo de cogumelos comestíveis do gênero Pleurotus spp em resíduos agroindustriais",
+  "ano": "1999",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…as condições de um cultivo comercial, onde avaliou-se a produtividade dos substratos. As espécies Pleurotus sajor-caju e Pleurotus ostreatus, adquiridas de produtor comercial de sementes, foram usadas para a inoculação de nove…"
 }

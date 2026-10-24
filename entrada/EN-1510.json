@@ -25,5 +25,10 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
+  },
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "sem registro de metadados na fonte: a regra não decide sem texto",
+    "versao_regra": "pretriagem-0.1"
   }
 }

@@ -28,5 +28,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Relatório de atividades 1994-1995: avanços tecnológicos na agroindústria tropical.",
+  "ano": "1997",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da Embrapa e pleno exercício do SEP-Sistema Embrapa de planejamento. A diversificação dos produtos pesquisados -caju, acerola, graviola, ata, sapoti, manga-a introdução de nova linhas de pesquisa, como a pós-colheita e a…"
 }

@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "As cooperativas populares e seus desafios, limites e possibilidades: casos de cooperativas da cidade do Rio de Janeiro",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…estamos nos referindo a cinco cooperativas populares da cidade do Rio de Janeiro, que atuam nas comunidades do Caju, Andaraí, Ilha do Governador, Mangueira e Morro dos Macacos, em Vila Isabel. Uma importante descoberta feita nesta…"
 }

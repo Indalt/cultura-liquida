@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Potencial de geração de biogás a partir de resíduos agroindustriais de frutas",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…avaliar o potencial de geração de metano de resíduos de frutas (casca de maracujá, bagaço de laranja e bagaço de caju) secos, hidrolisados e ensilados e determinar parâmetros cinéticos para o scale up. O potencial bioquímico de metano…"
 }

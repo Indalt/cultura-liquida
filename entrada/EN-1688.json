@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Pesquisa avalia potencial nutritivo de subprodutos agroindustriais.",
+  "ano": "2002",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…potenial nutritivo, o uso de silagens á base de subprodutos resultantes do processamento do abacaxi, acerolae caju surge como alternativa rentável na dieta de bovinos e caprinos leiteiros e de ovinos e bovinos confinados."
 }

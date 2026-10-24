@@ -37,5 +37,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20231003104658/http://www.repositorio.ufc.br/handle/riufc/14907"
+  "wayback": "https://web.archive.org/web/20231003104658/http://www.repositorio.ufc.br/handle/riufc/14907",
+  "titulo": "Uso do bagaço de caju como fertilizante em pomar de cajueiro estabelecido",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0005)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

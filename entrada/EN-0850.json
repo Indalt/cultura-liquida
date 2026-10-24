@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Gestão territorial de unidades de conservação no litoral sergipano",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Environmental Protected Area (APA) Morro do Urubu, in Aracaju, and Private Natural Heritage Reserves (RPPN) of Caju in Itaporanga D'Ajuda, in terms of progress and challenges of governance. The analysis of the management of these…"
 }

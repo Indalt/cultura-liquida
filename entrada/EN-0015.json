@@ -36,5 +36,12 @@
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
   },
-  "wayback": "https://web.archive.org/web/20211026150408/http://www.repositorio.ufc.br/handle/riufc/52846"
+  "wayback": "https://web.archive.org/web/20211026150408/http://www.repositorio.ufc.br/handle/riufc/52846",
+  "titulo": "Antecipação do ponto de colheita do caju CCP 76 visando ao beneficiamento da amêndoa e pedúnculo imaturo",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  }
 }

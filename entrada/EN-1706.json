@@ -26,5 +26,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0036",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Colheita e pós-colheita.",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…transformado em bebidas e alimentos, o que representa uma oportunidade a mais para a diversificação do negócio do caju. Além dos requisitos mínimos de qualidade, que são comuns para todas as frutas frescas, o mercado exige uniformidade…"
 }

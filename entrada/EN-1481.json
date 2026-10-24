@@ -25,5 +25,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0030",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Diversidade genética e desempenho agronômico de híbridos de cajueiro: recursos para o melhoramento genético.",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…CCP 76, Embrapa 51, BRS 226 e BRS 253, os quais foram desenvolvidos pelo Programa de Melhoramento Genético de Caju da Embrapa Agroindústria Tropical, que buscou disponibilizar aos produtores clones de cajueiro mais produtivos, de…"
 }

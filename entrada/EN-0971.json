@@ -30,5 +30,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Efeito da inclusão de nitrato na dieta sobre a fermentação ruminal, a emissão de metano entérico e o desempenho de ovinos",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…nitrato encapsulado) e Nitrato + CNSL (dieta basal com 4,51% nitrato encapsulado com liquido de casca de castanha de caju). Foi utilizado um período de adaptação de 28 dias e posteriormente dois períodos experimentais de 32 dias, sendo…"
 }

@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "O gerenciamento de impressão no processo de nomeação do perito contábil no Paraná: uma análise a partir da dramaturgia goffmaniana",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…based on the criteria of the New CPC/2015. The data search took place in three stages: document search on CAJU-TJPR website, which had 508 records analyzed; interviews with nine experts and three judges, in order to understand…"
 }

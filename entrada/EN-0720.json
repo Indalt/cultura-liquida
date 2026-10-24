@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Descontaminação de castanhas utilizando tecnologias físicas.",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(PFBP), na eliminação do fungo Aspergillus flavus e degradação da Aflatoxina B1 em solução aquosa e em castanhas de caju e do Pará. Inicialmente, A. flavus foi artificialmente inoculado em castanhas de Caju e do Pará que foram tratadas…"
 }

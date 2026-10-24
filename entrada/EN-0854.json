@@ -32,5 +32,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Bioestratigrafia e paleoecologia de foraminíferos da Bacia de Barreirinhas, cretácio, margem equatorial brasileira",
+  "ano": "2011",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…analisados abrangem os andares Albiano superior ao Campaniano superior com registro geológico inserido nos grupos Caju (Albiano - Cenomaniano) e Humberto de Campos (Turoniano - Maastrichtiano). Através dos dados bioestratigráficos…"
 }

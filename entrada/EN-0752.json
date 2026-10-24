@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "Estudo Filogenético, Biológico e Morfológico de isolados de Angiostrongylus cantonensis provenientes de diferentes áreas geográficas do Brasil",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…relacionado com os haplótipos da China (ac6) e do Japão (ac7). Dois isolados brasileiros de A. cantonensis, Olinda e Caju (haplótipos ac8 e ac9, respectivamente) relatados no presente estudo, tiveram sua biologia e morfologia…"
 }

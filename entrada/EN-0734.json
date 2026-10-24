@@ -33,5 +33,13 @@
     "data": "2026-10-24",
     "execucao": "EX-0029",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "titulo": "YNAYARA COLARES DE LIMA",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…para o país e, principalmente, para o Nordeste, a Embrapa Agroindústria Tropical conta com o Banco de Germoplasma do Caju, o qual é composto por mais de 600 acessos diferentes. A fim de se ter um maior conhecimento da variabilidade…"
 }
