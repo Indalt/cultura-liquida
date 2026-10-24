@@ -1,0 +1,29 @@
+{
+  "id": "EN-1699",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0029",
+  "recortes": [
+    "RC-0003"
+  ],
+  "data_entrada": "2026-10-24",
+  "url_ou_arquivo": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1174039",
+  "identificador": "AM-0029:infoteca.cnptia.embrapa.br/handle/doc/1174039",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-24",
+    "execucao": "EX-0036",
+    "versao_regra": "deduplicacao-0.1"
+  }
+}

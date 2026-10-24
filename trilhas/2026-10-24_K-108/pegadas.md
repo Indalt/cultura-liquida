@@ -22,25 +22,20 @@ Gerada por `scripts/pegadas.py` (pegadas-0.1) das Execuções e dos Recortes; to
 | RC-0015 | AM-0021 | CO-0002 | todo | termo | aberto | 1000 / 1441 | não | EX-0032 (2026-10-24) |
 | RC-0002 | AM-0021 | CO-0003 | todo | termo | percorrido pela busca | 80 / 80 | sim | EX-0029 (2026-10-24) |
 | RC-0024 | AM-0021 | CO-0004 | todo | termo | percorrido pela busca | 83 / 83 | sim | EX-0032 (2026-10-24) |
-| RC-0001 | AM-0021 | CO-0005 | todo | descritores | percorrido pela busca | 10 / 10 | sim | EX-0022 (2026-10-23) |
-| RC-0003 | AM-0029 | CO-0001 | todo | termo | em curso | 52400 / 59365 | não | EX-0031 (2026-10-24) |
-| RC-0004 | AM-0029 | CO-0002 | todo | termo | em curso | 52400 / 59365 | não | EX-0031 (2026-10-24) |
-| RC-0005 | AM-0029 | CO-0003 | todo | termo | em curso | 52400 / 59365 | não | EX-0031 (2026-10-24) |
-| RC-0006 | AM-0029 | CO-0004 | todo | termo | em curso | 52400 / 59365 | não | EX-0031 (2026-10-24) |
-| RC-0007 | AM-0029 | CO-0005 | todo | descritores | em curso | 52400 / 59365 | não | EX-0031 (2026-10-24) |
+| RC-0001 | AM-0021 | CO-0005 | todo | descritores | percorrido pela busca | 10 / 10 | sim | EX-0035 (2026-10-24) |
+| RC-0003 | AM-0029 | CO-0001 | todo | termo | percorrido pela busca | 59365 / 59365 | sim | EX-0036 (2026-10-24) |
+| RC-0004 | AM-0029 | CO-0002 | todo | termo | percorrido pela busca | 59365 / 59365 | sim | EX-0036 (2026-10-24) |
+| RC-0005 | AM-0029 | CO-0003 | todo | termo | percorrido pela busca | 59365 / 59365 | sim | EX-0036 (2026-10-24) |
+| RC-0006 | AM-0029 | CO-0004 | todo | termo | percorrido pela busca | 59365 / 59365 | sim | EX-0036 (2026-10-24) |
+| RC-0007 | AM-0029 | CO-0005 | todo | descritores | percorrido pela busca | 59365 / 59365 | sim | EX-0036 (2026-10-24) |
 
-## Vácuos de busca (15)
+## Vácuos de busca (10)
 
 - AM-0001 × CO-0001: via humana (modo assistido): 403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página
 - AM-0001 × CO-0002: via humana (modo assistido): 403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página
 - AM-0001 × CO-0003: via humana (modo assistido): 403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página
 - AM-0001 × CO-0004: via humana (modo assistido): 403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página
 - AM-0001 × CO-0005: via humana (modo assistido): 403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página
-- AM-0029 × CO-0001 (todo): RC-0003 em curso (repetir mais tarde do cursor 'oai_dc////52400': erro da fonte, não barreira)
-- AM-0029 × CO-0002 (todo): RC-0004 em curso (repetir mais tarde do cursor 'oai_dc////52400': erro da fonte, não barreira)
-- AM-0029 × CO-0003 (todo): RC-0005 em curso (repetir mais tarde do cursor 'oai_dc////52400': erro da fonte, não barreira)
-- AM-0029 × CO-0004 (todo): RC-0006 em curso (repetir mais tarde do cursor 'oai_dc////52400': erro da fonte, não barreira)
-- AM-0029 × CO-0005 (todo): RC-0007 em curso (repetir mais tarde do cursor 'oai_dc////52400': erro da fonte, não barreira)
 - AM-0061 × CO-0001: via humana (modo assistido): bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar
 - AM-0061 × CO-0002: via humana (modo assistido): bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar
 - AM-0061 × CO-0003: via humana (modo assistido): bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar

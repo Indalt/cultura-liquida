@@ -144,7 +144,7 @@
         "testes/coleta/fixtures/repetida"
       ],
       "saida_contem": "interrompido por teto; visto 10 de 12",
-      "criterio": "total 12 em páginas de 5, e a página 3 repete a 2 (como a BDTD depois do item 1.300 em 24/10/2026): a página não conta, e sem divisão sobrando o Recorte fica interrompido com a Falta; antes, contava 15 de 12 e dava 'percorrido' (K-108)"
+      "criterio": "total 12 em páginas de 5, e a página 3 repete a 2 (como a BDTD depois do item 1.000 em 24/10/2026): a página não conta, e sem divisão sobrando o Recorte fica interrompido com a Falta; antes, contava 15 de 12 e dava 'percorrido' (K-108)"
     },
     {
       "nome": "Recorte: teto de chamadas salva o cursor e cria a Falta",

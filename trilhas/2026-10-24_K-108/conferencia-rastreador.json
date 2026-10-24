@@ -1,0 +1,38 @@
+{
+  "nota": "Saída do rastreador (habilidade consulta), K-108, bloco 6: conferência independente dos totais e da saturação dos Recortes RC-0001 a RC-0024, gravada pelo curador sem edição do conteúdo (só a URL de CO-0002 resumida como no original). Nível: oficial (respostas da API e do OAI-PMH, 24/10/2026). Log em trilhas/logs/2026-10-24_rastreador.jsonl.",
+  "conferencias": [
+    {"recorte": "RC-0008", "total_gravado": 1306, "total_reconferido": 1306, "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29", "data": "2026-10-24", "confere": true, "nota": "HTTP 200, resultCount 1306. Local: filhas RC-0009 (1) + RC-0010 (1305) = 1306. RC-0010 = RC-0011 (41) + RC-0012 (1264) = 1305. RC-0012 = RC-0013 (338) + RC-0014 (926) = 1264. As folhas de CO-0001 somam 1+41+338+926 = 1306, igual ao total de 'todo'."},
+    {"recorte": "RC-0015", "total_gravado": 1441, "total_reconferido": 1441, "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29", "data": "2026-10-24", "confere": true, "nota": "HTTP 200, resultCount 1441. Local: RC-0016 (1) + RC-0017 (1440) = 1441. RC-0017 = RC-0018 (45) + RC-0019 (1395). RC-0019 = RC-0020 (365) + RC-0021 (1030). RC-0021 = RC-0022 (632) + RC-0023 (398). As folhas de CO-0002 somam 1+45+365+632+398 = 1441."},
+    {"recorte": "RC-0010", "total_gravado": 1305, "total_reconferido": null, "pedido": "local", "data": "2026-10-24", "confere": true, "nota": "Soma local das filhas RC-0011 + RC-0012 = 1305. Não reconferido na fonte."},
+    {"recorte": "RC-0012", "total_gravado": 1264, "total_reconferido": null, "pedido": "local", "data": "2026-10-24", "confere": true, "nota": "Soma local das filhas RC-0013 + RC-0014 = 1264. Não reconferido na fonte."},
+    {"recorte": "RC-0017", "total_gravado": 1440, "total_reconferido": null, "pedido": "local", "data": "2026-10-24", "confere": true, "nota": "Soma local das filhas RC-0018 + RC-0019 = 1440. Não reconferido na fonte."},
+    {"recorte": "RC-0019", "total_gravado": 1395, "total_reconferido": null, "pedido": "local", "data": "2026-10-24", "confere": true, "nota": "Soma local das filhas RC-0020 + RC-0021 = 1395. Não reconferido na fonte."},
+    {"recorte": "RC-0021", "total_gravado": 1030, "total_reconferido": null, "pedido": "local", "data": "2026-10-24", "confere": true, "nota": "Soma local das filhas RC-0022 (632) + RC-0023 (398) = 1030. A filha 2020-2026 foi reconferida na fonte (ver RC-0023)."},
+    {"recorte": "RC-0014", "total_gravado": 926, "total_reconferido": 926, "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<CO-0001 como acima>&filter%5B%5D=publishDate%3A%5B2012%20TO%202026%5D", "data": "2026-10-24", "confere": true, "nota": "HTTP 200, resultCount 926. Folha, passada completa 926 de 926. Está a 74 itens do teto de 1.000 (ver propostas)."},
+    {"recorte": "RC-0023", "total_gravado": 398, "total_reconferido": 398, "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<CO-0002 como acima>&filter%5B%5D=publishDate%3A%5B2020%20TO%202026%5D", "data": "2026-10-24", "confere": true, "nota": "HTTP 200, resultCount 398. Folha, 398 de 398."},
+    {"recorte": "RC-0001 a RC-0024 (estado e saturação)", "total_gravado": null, "total_reconferido": null, "pedido": "local", "data": "2026-10-24", "confere": true, "nota": "Os 12 Recortes 'percorrido pela busca' (RC-0001, 0002, 0009, 0011, 0013, 0014, 0016, 0018, 0020, 0022, 0023, 0024) têm total_visto igual ao total_informado. Os 7 pais saturados estão 'aberto' e dizem que não contam como pegada. RC-0003 a RC-0007 (Infoteca-e) estão 'em curso' com 52.400 de 59.365 vistos e o erro HTTP 500 no cursor 'oai_dc////52400'."}
+  ],
+  "paginacao_bdtd": {
+    "pedido": ["GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=100&page=N&field[]=id&lookfor=<CO-0002 URL-encoded>, com N = 9, 10, 11, 13 e 14 (cada um HTTP 200, resultCount 1441, 100 ids)"],
+    "resultado": "As páginas 10, 11, 13 e 14 devolveram a mesma lista de 100 ids (primeiro PUC_GO_5bb4380cf312368cde0b963c83bb547f, último UECE-0_f3266bdc0fae495bf641976277bfd719; 100 em comum nos pares 10x11, 11x13 e 13x14). A página 9 é diferente (primeiro UFMG_54f7c9fcb2cd8ebdcaa9c6f035544272, último UERJ_d4e622b9c5ce56916dc0e9ca5824711d; nenhum dos ids de borda da página 10 aparece nela). A API entrega páginas distintas até a 10 (itens 1 a 1.000) e repete a página 10 da 11 em diante, mesmo com 1.441 informados. Isso confirma o teto de 1.000 itens e a leitura do script (página 11 repete a anterior). A página 14 igual à 13, vista pelo curador, é verdade, mas a repetição começa na página 11, não depois do item 1.300. Não pedi a página 12.",
+    "nivel": "oficial (resposta da API)"
+  },
+  "infoteca": {
+    "pedido": ["GET https://www.infoteca.cnptia.embrapa.br/robots.txt", "GET https://www.infoteca.cnptia.embrapa.br/oai/request?verb=ListRecords&resumptionToken=oai_dc////52400"],
+    "status": "robots.txt: devolveu o conteúdo do arquivo, que é o robots.txt padrão do DSpace; o código HTTP literal não foi visto (a linha do -w ficou fora do head -40), então o 2xx é inferido do corpo. As regras vistas (primeiras 40 linhas) vedam /discover, /simple-search, /retrieve, /browse, /statistics, /contact, /feedback, /feed, /forgot, /login e /register ao agente '*', e não vedam /oai. O resto do arquivo não foi lido. ListRecords no cursor oai_dc////52400: HTTP 200, 227.550 bytes, responseDate 2026-10-24T05:44:02Z, com registros e resumptionToken seguinte. Não paginei adiante. O HTTP 500 do curador por volta das 02h40 não se repetiu; o erro foi transitório da fonte.",
+    "completeListSize": 59365
+  },
+  "propostas_de_divisao": [
+    {"recorte": "RC-0014", "proposta": "Dividir antes de a janela encher: 2012-2019 e 2020-2026 para CO-0001, a mesma divisão que o RC-0021 já usa para CO-0002.", "porque": "926 de 1.000 possíveis, com 74 de folga. Qualquer repetição de monitoramento que some mais de 74 itens satura a janela. Dividir agora evita um novo Recorte aberto."},
+    {"recorte": "RC-0008, RC-0010, RC-0012, RC-0015, RC-0017, RC-0019, RC-0021", "proposta": "Nenhuma divisão nova.", "porque": "Todas as folhas têm menos de 1.000 e foram percorridas por inteiro; a soma local bate com a reconferência na fonte."},
+    {"recorte": "RC-0003 a RC-0007", "proposta": "Retomar do cursor oai_dc////52400, pois a fonte respondeu 200; em seguida filtrar localmente por Consulta. Se o 500 voltar, registrar de novo como erro da fonte e retomar mais tarde. Com 5xx no robots.txt, não pedir mais nada ao host.", "porque": "O ListRecords no cursor que dava erro respondeu 200 com completeListSize 59.365, igual ao total gravado. Restam 6.965 registros."}
+  ],
+  "nao_conferido": [
+    "Se a união dos ids das folhas de cada Consulta dá exatamente o total (sem duplicata entre janelas): conferida só a soma dos totais.",
+    "Totais na fonte das janelas folha 1900-1963, 1964-1995, 1996-2011 e 2012-2019 (CO-0002), e das folhas de CO-0001 além de 2012-2026.",
+    "Que a página 10 contém exatamente os itens 901 a 1.000; a página 12 não foi pedida.",
+    "Código HTTP literal do robots.txt da Infoteca-e e as linhas além da 40; a página seguinte do ListRecords.",
+    "Os campos 'faltas' de RC-0003 a RC-0007 e de RC-0022.",
+    "Nenhuma checagem do conteúdo das Entradas."
+  ]
+}

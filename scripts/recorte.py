@@ -8,7 +8,7 @@ estado a cada página (cursor, total informado e visto, saturação, erros, pró
 - **Resposta saturada** (o total passa do limite da fonte): divide a janela do período em duas e
   repete; só a passada completa e não saturada conta como pegada. Ao estourar o teto de chamadas ou
   de divisões, salva o estado e registra a Falta "busca interrompida por teto" (l. 427, 432).
-- **Página repetida** (a fonte devolve de novo a página anterior, como a BDTD depois do item 1.300 em
+- **Página repetida** (a fonte devolve de novo a página anterior, como a BDTD depois do item 1.000 em
   24/10/2026): a página não conta, e a resposta é tratada como saturada, porque a fonte não entrega
   tudo o que informa; divide-se a janela, e só os Recortes divididos contam como pegada.
 - **O teto de chamadas vale para a rodada inteira** (insumo 48): as Consultas da rodada repartem o

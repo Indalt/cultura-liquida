@@ -4,19 +4,19 @@
   "consulta": "CO-0003",
   "periodo": "todo",
   "modo": "termo",
-  "cursor": "oai_dc////52400",
+  "cursor": null,
   "total_informado": 59365,
-  "total_visto": 52400,
-  "saturacao": "não exaurido: 52400 visto(s) até o erro",
+  "total_visto": 59365,
+  "saturacao": "exaurido: 59365 de 59365 visto(s), passada completa e não saturada",
   "erros": [
     "HTTP 500 no cursor 'oai_dc////52400'"
   ],
-  "proxima_acao": "repetir mais tarde do cursor 'oai_dc////52400': erro da fonte, não barreira",
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
-    "chamadas": 700,
+    "chamadas": 120,
     "divisoes_janela": 4
   },
-  "estado": "em curso",
+  "estado": "percorrido pela busca",
   "data": "2026-10-24",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
