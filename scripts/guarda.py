@@ -45,20 +45,22 @@ class Pegadas:
     def __init__(self, raiz: Path = RAIZ):
         self.pasta = raiz / PASTA
         self.por_recorte: dict[str, list[dict]] = {}
+        self.ids_por_recorte: dict[str, set[str]] = {}  # A-004: busca constante, não linear
         self.en_por_identificador: dict[str, str] = {}
         self.ens: set[str] = set()
         self.esquema = carregar_esquema("pegada")
         if self.pasta.exists():
             for arq in sorted(self.pasta.glob("RC-*.jsonl")):
                 self.por_recorte[arq.stem] = ler(arq)
-        for linhas in self.por_recorte.values():
+        for rc, linhas in self.por_recorte.items():
+            self.ids_por_recorte[rc] = {p["identificador"] for p in linhas}
             for p in linhas:
                 if p.get("entrada"):
                     self.ens.add(p["entrada"])
                     self.en_por_identificador.setdefault(p["identificador"], p["entrada"])
 
     def tem(self, recorte: str, identificador: str) -> bool:
-        return any(p["identificador"] == identificador for p in self.por_recorte.get(recorte, []))
+        return identificador in self.ids_por_recorte.get(recorte, set())
 
     def acrescentar(self, recorte: str, linha: dict, gravar: bool = True) -> bool:
         """Grava a linha do item no arquivo do Recorte (uma por identificador). Devolve se era nova."""
@@ -68,6 +70,7 @@ class Pegadas:
         if self.tem(recorte, linha["identificador"]):
             return False
         self.por_recorte.setdefault(recorte, []).append(linha)
+        self.ids_por_recorte.setdefault(recorte, set()).add(linha["identificador"])
         if linha.get("entrada"):
             self.ens.add(linha["entrada"])
             self.en_por_identificador.setdefault(linha["identificador"], linha["entrada"])
@@ -76,6 +79,24 @@ class Pegadas:
             with (self.pasta / f"{recorte}.jsonl").open("a", encoding="utf-8", newline="\n") as f:
                 f.write(json.dumps(linha, ensure_ascii=False) + "\n")
         return True
+
+    def ligar(self, identificador: str, en: str, gravar: bool = True) -> list[str]:
+        """Põe o EN-nnnn nas pegadas do identificador que ainda não o têm (o item que ficou fora num
+        Recorte e seguiu por outra Consulta; S-001). A triagem de cada Recorte não muda."""
+        mudados = []
+        for rc, linhas in self.por_recorte.items():
+            if identificador not in self.ids_por_recorte.get(rc, set()):
+                continue
+            for p in linhas:
+                if p["identificador"] == identificador and not p.get("entrada"):
+                    p["entrada"] = en
+                    mudados.append(rc)
+        self.ens.add(en)
+        self.en_por_identificador.setdefault(identificador, en)
+        if gravar:
+            for rc in dict.fromkeys(mudados):
+                self.reescrever(rc)
+        return mudados
 
     def reescrever(self, recorte: str) -> None:
         self.pasta.mkdir(parents=True, exist_ok=True)

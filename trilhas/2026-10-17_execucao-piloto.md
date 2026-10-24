@@ -240,6 +240,8 @@
 - [x] **Casos:** quatro de esquema (pegada que segue e fora passam; com título e "segue" sem Entrada reprovam) e quatro de script (a migração numa cópia passa com a conferência; a pegada que aponta outra Entrada reprova na deduplicação; pegadas de Recorte inexistente reprovam no validador; o alarme acima do limite), mais o do OAI-PMH com o item só no assunto como pegada. `rodar_testes.py`: OK 187 · FALHA 0 · PENDENTE 5.
 - **Não feito:** a compressão das pegadas de Recortes fechados (a D-045 a permite; o alarme diz quando, insumo 59).
 - **Insumos novos:** 58 (cajueiro, cajucultura e derivados como LCC e cardanol ficam fora da pré-triagem, porque o Termo do caju não os lista: 228 das 721 pegadas têm "caju" dentro de outra palavra) e 59 (uma pegada por Recorte de origem, inclusive nos pais saturados: 9.782 linhas para 1.723 itens).
+- [x] **Lote 3, segunda leitura (auditor):** verificar-fundacao, olhar mecânico no código (**78.858 tokens, 16 chamadas**, Sonnet 5.5 alto; conta antes: 6,02 ≤ 12 pp), em `trilhas/2026-10-24_K-108b/achados-auditor.json`. A migração foi conferida por script contra o commit anterior: 1.723 EN-nnnn, 0 perdidos, 0 Recorte sem pegada, 0 wayback perdido. **4 achados, todos corrigidos:** A-001 (o `registrar` com um EN-nnnn de outro item sobrescreveria a Entrada: agora reprova), A-002 (a cópia do teste ficava na pasta temporária: agora se apaga, sem `.git`, `.venv` e `legado/`), A-003 (a reabertura pela mudança de regra só estava escrita: `scripts/reavaliar_pegadas.py`, com o mesmo EN-nnnn e o wayback de volta), A-004 (busca linear nas pegadas: conjunto por Recorte). Corrigidas também as suspeitas S-001 (o EN do item que segue por outra Consulta vai às pegadas dele nos outros Recortes) e S-002 (a contagem dos itens fora). S-003 a S-006 ficam ditas, sem defeito confirmado. Dois casos novos (reabertura que passa; EN de outro item que reprova). `rodar_testes.py`: OK 189 · FALHA 0 · PENDENTE 5; `validar_acervo.py`: 1.118 registros, válido; `deduplicar.py --conferir`: sem duplicata, 9.782 pegadas.
+- **K-108b fechado:** os seis itens da D-045 feitos, menos a compressão das pegadas, que a D-045 permite e o alarme dirá quando fazer (insumo 59). Consumo do cartão: auditor, 78.858 tokens.
 
 ## Consumo semanal de agentes (D-023)
 
@@ -258,6 +260,7 @@
 | 19–25/10 | K-124, juridico (parecer prévio, EX-0026) | 82.949 | 24 | 1.031.859 |
 | 19–25/10 | K-108, rastreador (conferência dos Recortes) | 51.898 | 8 | 1.083.757 |
 | 19–25/10 | K-108, juridico (termos da Hemeroteca e teste da D-044) | 57.057 | 8 | 1.140.814 |
+| 19–25/10 | K-108b, auditor (segunda leitura do código) | 78.858 | 16 | 1.219.672 |
 
 ## Horas de Vicente e uso da conta (bloco 13; medição desde o bloco 6)
 
@@ -285,4 +288,4 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | desenvolvimento | K-107 | 61 | 70 | 9 | 240.436 | 24 | janela de 5 h: 2% ao abrir; Opus 5.5 médio; teto de 60 pp do projeto suspenso nesta semana por Vicente (fica o do desenvolvimento e a linha de 90%); estimativa da conta 5,8 pp ; A1 pela abertura do K-124, que inclui a conversa do parecer prévio do juridico para o K-124 (EX-0026, lançado na linha do K-124) |
 | 21/10–28/10/2026 | desenvolvimento | K-124 | 70 | 73 | 3 | 82.949 | 24 | janela de 5 h: 26% ao abrir; Opus 5.5 médio; sem agentes nesta conversa; os tokens são do parecer prévio do juridico (EX-0026), feito antes, numa conversa cujos pp estão nos 9 do K-107; A1 pela abertura do K-108 |
 | 21/10–28/10/2026 | desenvolvimento | K-108 | 73 | 78 | 5 | 51.898 | 8 | janela de 5 h: 39% ao abrir; A1 pela retomada do K-108; Opus 5.5 médio; tetos do projeto e do desenvolvimento suspensos para o K-108 por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |
-| 21/10–28/10/2026 | desenvolvimento | K-108 (retomada) e K-108b | 78 | a informar | a informar | 57.057 | 8 | janela de 5 h: 20% ao abrir; Opus 5.5 médio; tetos do projeto e do desenvolvimento seguem suspensos por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |
+| 21/10–28/10/2026 | desenvolvimento | K-108 (retomada) e K-108b | 78 | a informar | a informar | 135.915 | 24 | janela de 5 h: 20% ao abrir; Opus 5.5 médio; tetos do projeto e do desenvolvimento seguem suspensos por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |

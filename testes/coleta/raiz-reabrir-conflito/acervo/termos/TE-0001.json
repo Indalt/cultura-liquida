@@ -1,0 +1,32 @@
+{
+  "id": "TE-0001",
+  "conceito": "PROVISÓRIO, a confirmar nas abonações: o caju como insumo, cujo pedúnculo é processado em cajuína (título da Embrapa, Documentos 123, 'Processamento do pedúnculo do caju: cajuína'); o termo é amplo e deve cobrir também outros produtos do pedúnculo (sucos clarificados, doces em calda, rapadura de caju, bebidas fermentadas de caju), a delimitar a partir das fontes.",
+  "designacoes": [
+    {
+      "forma": "caju"
+    }
+  ],
+  "variantes": [],
+  "formas_de_busca": [
+    "cajú",
+    "ca-ju"
+  ],
+  "abonacoes": [],
+  "estado": "candidato",
+  "relacoes": [
+    {
+      "tipo": "relacionado",
+      "termo": "TE-0002"
+    }
+  ],
+  "nota": "Candidato do piloto (D-031). O conceito vem de trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json: fatos[3].afirmacao e primeiras_fontes[1].por_que (título e ligação insumo-processo-bebida da Embrapa; nível oficial) e fatos[4].afirmacao (títulos de outros documentos da Embrapa sobre o pedúnculo, vistos só em resultado de busca; nível secundária). Que 'caju' é termo agrícola amplo vem do brief, bloco 4. A relação 'relacionado' com TE-0002 vem do título da Embrapa. Formas de busca por família (l. 433): cajú (acentos), ca-ju (hífen de quebra de linha); hipóteses que só ficam se renderem ocorrências. Sem língua: nenhuma citação do mapa a dá (insumo 30).",
+  "origem_registro": {
+    "criado_por": "arquivista (registrar-termo 0.1.1, K-106)",
+    "data": "2026-10-23",
+    "execucao": "EX-0014"
+  },
+  "booleanos": [
+    "(\"caju\" OR \"cajú\" OR \"ca-ju\")",
+    "(\"caju\" OR \"cajú\" OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+  ]
+}

@@ -120,6 +120,9 @@ def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, o
             if gravar:
                 gravar_json(arq, e)
         return e["id"], False
+    em_entrada = id_ and any(e["id"] == id_ for _, e in ind.por_chave.values())
+    if id_ and (em_entrada or (id_ in ind.ids and ind.pegadas.en_por_identificador.get(identificador or "") != id_)):
+        raise ValueError(f"{id_} já é de outro item: só se reabre com o EN-nnnn da pegada do mesmo identificador (A-001)")
     e = {"id": id_ or proximo_id("EN", ind.ids), "canal": canal}
     if ambiente:
         e["ambiente"] = ambiente

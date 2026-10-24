@@ -1,0 +1,18 @@
+{
+  "nota": "Segunda leitura do K-108b pelo auditor (verificar-fundacao, olhar mecânico aplicado ao código), commits 3652939 e aa5ddca; resumida pelo curador sem mudar o sentido. Log em trilhas/logs/2026-10-24_auditor.jsonl. Correções no commit seguinte (coluna 'correcao').",
+  "achados": [
+    {"id": "A-001", "arquivo": "scripts/deduplicar.py", "o_que": "registrar(id_=...) não conferia se o EN-nnnn já era de outro item e sobrescreveria a Entrada", "prova": "registrar com id_='EN-0001' para outro identificador devolveu ('EN-0001', True)", "gravidade": "média", "correcao": "feita: ValueError quando o EN é Entrada de outro item ou não é o da pegada do mesmo identificador; caso que reprova (raiz-reabrir-conflito)"},
+    {"id": "A-002", "arquivo": "scripts/migrar_entradas.py", "o_que": "--em-copia deixava a cópia na pasta temporária e copiaria .git, .venv e legado/", "prova": "sem rmtree; 5 pastas migracao-* no TEMP", "gravidade": "baixa", "correcao": "feita: TemporaryDirectory e ignore de .git, .venv e legado; as pastas antigas apagadas"},
+    {"id": "A-003", "arquivo": "scripts/pretriagem.py", "o_que": "a reabertura da pegada pela mudança de regra (D-045, item 2) estava só nos docstrings", "prova": "grep 'reabr' só em comentários", "gravidade": "média", "correcao": "feita: scripts/reavaliar_pegadas.py, com o mesmo EN-nnnn e o wayback de volta; caso que passa (raiz-reabrir)"},
+    {"id": "A-004", "arquivo": "scripts/guarda.py", "o_que": "Pegadas.tem() linear, custo quadrático por Recorte", "prova": "4.000 itens num Recorte em 1,2 s", "gravidade": "baixa", "correcao": "feita: conjunto de identificadores por Recorte"}
+  ],
+  "suspeitas": [
+    {"id": "S-001", "o_que": "item fora num Recorte e que segue por outra Consulta ficava com a pegada do primeiro sem o EN", "correcao": "feita: Pegadas.ligar põe o EN nas pegadas do mesmo identificador, sem mudar a triagem de cada Recorte"},
+    {"id": "S-002", "o_que": "reg.fora contava o item repetido duas vezes", "correcao": "feita: conta só quando a pegada é nova"},
+    {"id": "S-003", "o_que": "citacao() em texto normalizado; sem defeito visto (máximo real 240)", "correcao": "nenhuma"},
+    {"id": "S-004", "o_que": "o filtro do adaptador OAI lê a Consulta mista como forma E descritor, e a pré-triagem como forma OU descritor", "correcao": "nenhuma: filtro grosso da colheita e regra fina da D-045; fica dito"},
+    {"id": "S-005", "o_que": "conferir_pegadas pode dar falso positivo com dois identificadores do mesmo link", "correcao": "nenhuma: não confirmada"},
+    {"id": "S-006", "o_que": "lacunas nos casos novos (wayback na migração; alarme só pela palavra)", "correcao": "em parte: o caso da reabertura leva o wayback; a preservação na migração foi conferida nos dados reais pelo auditor"}
+  ],
+  "conferido_sem_achado": ["migração: 1.723 EN antes; 1.002 em entrada/ e 721 só em pegada; 0 perdidos; 0 Recortes sem pegada; 0 wayback perdido; 0 divergência de identificador ou link", "nenhum título ou resumo na pegada; citação na Entrada até 240; sem autoria nos adaptadores e no cache; cache fora do Git", "um arquivo por Recorte; hash nulo só nos 2 itens sem registro, dito no motivo"]
+}

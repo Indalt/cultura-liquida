@@ -243,14 +243,15 @@ def entradas(reg: Registro, r: dict, itens: list[dict]) -> tuple[int, int]:
                 reg.indice, identificador=it["identificador"], url=it["url"], canal="monitoramento e escavação",
                 origem=reg.ex.origem("scripts/recorte.py", deduplicar.VERSAO), ambiente=r["ambiente"],
                 recorte=r["id"], gravar=reg.gravar, id_=en, extra=extra)
-        else:
-            reg.fora += 1
+            if nova:
+                peg.ligar(it["identificador"], en, gravar=reg.gravar)
         linha = {"id_fonte": str(it.get("id_fonte") or it["identificador"]).replace(" ", "_"), "identificador": it["identificador"],
                  "link": it["url"], "data": date.today().isoformat(), "hash": it.get("hash"),
                  "triagem": tri["estado"], "motivo": tri["motivo"], "versao_regra": tri["versao_regra"]}
         if en:
             linha["entrada"] = en
         if peg.acrescentar(r["id"], linha, gravar=reg.gravar):
+            reg.fora += tri["estado"] == pretriagem.FORA  # uma vez por item no Recorte (S-002)
             saida = f"ambientes/pegadas/{r['id']}.jsonl"
             if saida not in reg.ex.saidas:
                 reg.ex.saidas.append(saida)

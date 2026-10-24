@@ -47,9 +47,10 @@ def main() -> int:
     ap.add_argument("--entrada-ref", default="K-108b, migração das Entradas sem refundar (D-045, item 5)")
     a = ap.parse_args()
     raiz = a.raiz if a.raiz.is_absolute() else RAIZ / a.raiz
-    if a.em_copia:
-        copia = Path(tempfile.mkdtemp(prefix="migracao-")) / "raiz"
-        shutil.copytree(raiz, copia)
+    if a.em_copia:  # cópia que se apaga no fim, sem .git, .venv e legado/ (A-002)
+        tmp = tempfile.TemporaryDirectory(prefix="migracao-")
+        copia = Path(tmp.name) / "raiz"
+        shutil.copytree(raiz, copia, ignore=shutil.ignore_patterns(".git", ".venv", "legado"))
         raiz = copia
     if a.cache and not a.cache.is_absolute():
         a.cache = RAIZ / a.cache / "metadados"

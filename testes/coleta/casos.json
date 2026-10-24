@@ -565,6 +565,34 @@
       ],
       "saida_contem": "ALARME",
       "criterio": "D-045, item 4: o relatório mede e avisa acima do limite (aqui forçado a 2)"
+    },
+    {
+      "nome": "reabertura: a pegada fora de uma regra antiga volta a Entrada com o mesmo EN-nnnn",
+      "espera": "passa",
+      "comando": [
+        "scripts/reavaliar_pegadas.py",
+        "--em-copia",
+        "--raiz",
+        "testes/coleta/raiz-reabrir",
+        "--cache",
+        "testes/coleta/cache-reabrir"
+      ],
+      "saida_contem": "EN-0009 reaberta em RC-0001: forma 'caju' no título (CO-0001)",
+      "criterio": "D-045, item 2: a pegada reabre se a regra mudar (achado A-003 do K-108b), numa cópia"
+    },
+    {
+      "nome": "reabertura: o EN-nnnn da pegada já é Entrada de outro item",
+      "espera": "reprova",
+      "comando": [
+        "scripts/reavaliar_pegadas.py",
+        "--em-copia",
+        "--raiz",
+        "testes/coleta/raiz-reabrir-conflito",
+        "--cache",
+        "testes/coleta/cache-reabrir"
+      ],
+      "saida_contem": "já é de outro item",
+      "criterio": "achado A-001 do K-108b: o registro não sobrescreve a Entrada de outro identificador"
     }
   ]
 }
