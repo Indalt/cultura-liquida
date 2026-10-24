@@ -4,7 +4,17 @@
   "ambiente": "AM-0021",
   "recortes": [
     "RC-0001",
-    "RC-0002"
+    "RC-0002",
+    "RC-0008",
+    "RC-0010",
+    "RC-0012",
+    "RC-0014",
+    "RC-0015",
+    "RC-0017",
+    "RC-0019",
+    "RC-0021",
+    "RC-0022",
+    "RC-0024"
   ],
   "data_entrada": "2026-10-23",
   "url_ou_arquivo": "http://www.repositorio.ufc.br/handle/riufc/14907",
@@ -26,5 +36,6 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "wayback": "https://web.archive.org/web/20231003104658/http://www.repositorio.ufc.br/handle/riufc/14907"
 }

@@ -8,6 +8,12 @@ estado a cada página (cursor, total informado e visto, saturação, erros, pró
 - **Resposta saturada** (o total passa do limite da fonte): divide a janela do período em duas e
   repete; só a passada completa e não saturada conta como pegada. Ao estourar o teto de chamadas ou
   de divisões, salva o estado e registra a Falta "busca interrompida por teto" (l. 427, 432).
+- **Página repetida** (a fonte devolve de novo a página anterior, como a BDTD depois do item 1.300 em
+  24/10/2026): a página não conta, e a resposta é tratada como saturada, porque a fonte não entrega
+  tudo o que informa; divide-se a janela, e só os Recortes divididos contam como pegada.
+- **O teto de chamadas vale para a rodada inteira** (insumo 48): as Consultas da rodada repartem o
+  teto, e cada janela dividida recebe a metade do que sobrou (a primeira, arredondado para cima; a
+  segunda, o que a primeira não usou), nunca o teto inteiro.
 - **Total desconhecido** (a fonte não informa): a Falta "total desconhecido", e o Recorte nunca
   fica "percorrido pela busca" (contrato do Recorte).
 - **robots.txt ou proteção anti-robô:** nunca se contorna; o Recorte guarda o erro, a próxima ação
@@ -39,7 +45,7 @@ import adaptador_vufind  # noqa: E402
 import deduplicar  # noqa: E402
 from gerar_termo import formas  # noqa: E402
 
-VERSAO = "recorte-0.1"
+VERSAO = "recorte-0.2"
 ADAPTADORES = {m.PROTOCOLO: m for m in (adaptador_vufind, adaptador_oai)}
 INICIO_PERIODO = 1900  # desde 1900 (propósito; §0)
 FINAIS = ("percorrido pela busca", "lido por inteiro")
@@ -231,15 +237,17 @@ def dividir(periodo: str, cfg: dict) -> tuple[str, str] | None:
     return f"{a}-{m}", f"{m + 1}-{b}"
 
 
-def rodar_busca(reg, cli, mod, cfg, ambiente, co, periodo, teto, resumo) -> None:
+def rodar_busca(reg, cli, mod, cfg, ambiente, co, periodo, teto, resumo, cota: int) -> int:
+    """Roda uma janela com a cota de chamadas que lhe coube da rodada; devolve as chamadas usadas."""
     c = carregar_consulta(reg.raiz, co)
     consulta = mod.lookfor(traducao(reg.raiz, co, ambiente))
     r = reg.recorte(ambiente, co, periodo, modo_da(c), teto)
     reg.ex.recortes.add(r["id"])
     pags = novas = rep = 0
+    anteriores: set = set()
     while True:
-        if pags >= teto["chamadas"]:
-            fechar(reg, r, acabou=False, teto_estourado=f"teto de {teto['chamadas']} chamadas da rodada", erro=None)
+        if pags >= cota:
+            fechar(reg, r, acabou=False, teto_estourado=f"teto de {teto['chamadas']} chamadas da rodada (cota desta janela: {cota})", erro=None)
             break
         try:
             p = mod.pagina(cli, cfg, ambiente, consulta, periodo, r["cursor"])
@@ -248,19 +256,27 @@ def rodar_busca(reg, cli, mod, cfg, ambiente, co, periodo, teto, resumo) -> None
             fechar(reg, r, acabou=False, teto_estourado=None, erro=str(e), passageiro=isinstance(e, RuntimeError))
             break
         pags += 1
-        if p["saturada"] and r["total_visto"] == 0:
+        ids = {it.get("id_fonte") or it["identificador"] for it in p["itens"]}
+        repetida = bool(ids) and ids <= anteriores
+        anteriores = ids
+        if (p["saturada"] and r["total_visto"] == 0) or repetida:
             partes = dividir(periodo, cfg)
+            motivo = (f"a página {pags} repete a anterior: a fonte não entrega além de {r['total_visto']} de {p['total_informado']}"
+                      if repetida else f"{p['total_informado']} acima do limite da fonte ({cfg.get('limite_fonte')})")
+            if repetida:
+                r["erros"] = r.get("erros", []) + [motivo]
             if partes and teto.get("divisoes_janela", 0) > 0:
                 r.update(total_informado=p["total_informado"], estado="aberto",
-                         saturacao=f"saturada: {p['total_informado']} acima do limite da fonte ({cfg.get('limite_fonte')}); janela dividida em {partes[0]} e {partes[1]}",
+                         saturacao=f"saturada: {motivo}; janela dividida em {partes[0]} e {partes[1]}",
                          proxima_acao="não conta como pegada: valem os Recortes da janela dividida")
                 reg.salvar(r)
                 resumo.append(f"{r['id']} {ambiente} {co} {periodo}: saturada, dividida em {partes[0]} e {partes[1]}")
                 filho = dict(teto, divisoes_janela=teto["divisoes_janela"] - 1)
-                for parte in partes:
-                    rodar_busca(reg, cli, mod, cfg, ambiente, co, parte, filho, resumo)
-                return
-            fechar(reg, r, acabou=False, teto_estourado=f"resposta saturada e teto de divisões da janela ({teto.get('divisoes_janela', 0)}) esgotado", erro=None)
+                resto = cota - pags
+                usado = rodar_busca(reg, cli, mod, cfg, ambiente, co, partes[0], filho, resumo, (resto + 1) // 2)
+                usado += rodar_busca(reg, cli, mod, cfg, ambiente, co, partes[1], filho, resumo, resto - usado)
+                return pags + usado
+            fechar(reg, r, acabou=False, teto_estourado=f"resposta saturada ({motivo}) e teto de divisões da janela ({teto.get('divisoes_janela', 0)}) esgotado", erro=None)
             break
         anotar_pagina(r, p["total_informado"], len(p["itens"]), p["proximo"], date.today().isoformat())
         n, k = entradas(reg, r, p["itens"])
@@ -275,6 +291,7 @@ def rodar_busca(reg, cli, mod, cfg, ambiente, co, periodo, teto, resumo) -> None
     if r["estado"] not in FINAIS:
         reg.ex.fora.append(f"{r['id']}: {r['proxima_acao']}")
     resumo.append(f"{r['id']} {ambiente} {co} {periodo}: {r['estado']}; visto {r['total_visto']} de {r['total_informado']}; {novas} Entrada(s) nova(s), {rep} repetida(s)")
+    return pags
 
 
 def rodar_colheita(reg, cli, mod, cfg, ambiente, cos, teto, resumo) -> None:
@@ -360,8 +377,9 @@ def main() -> int:
     if mod.TIPO == "colheita":
         rodar_colheita(reg, cli, mod, cfg, a.ambiente, cos, teto, resumo)
     else:
-        for co in cos:
-            rodar_busca(reg, cli, mod, cfg, a.ambiente, co, a.periodo, teto, resumo)
+        restam = a.teto_chamadas
+        for i, co in enumerate(cos):
+            restam -= rodar_busca(reg, cli, mod, cfg, a.ambiente, co, a.periodo, teto, resumo, -(-restam // (len(cos) - i)))
     ex.resultados = resumo + ex.resultados
     ex.olhado.append(f"{cli.pedidos} pedido(s) HTTP, robots.txt incluído, robô identificado, 1 por segundo")
     for d in reg.indice.duplicatas:

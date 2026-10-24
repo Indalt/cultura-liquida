@@ -1,0 +1,37 @@
+{
+  "id": "EN-0648",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0021",
+  "recortes": [
+    "RC-0008",
+    "RC-0010",
+    "RC-0012",
+    "RC-0014",
+    "RC-0015",
+    "RC-0017",
+    "RC-0019",
+    "RC-0021",
+    "RC-0023"
+  ],
+  "data_entrada": "2026-10-24",
+  "url_ou_arquivo": "https://riufma.ufma.br/handle/tede/5141",
+  "identificador": "AM-0021:riufma.ufma.br/handle/tede/5141",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-24",
+    "execucao": "EX-0029",
+    "versao_regra": "deduplicacao-0.1"
+  }
+}

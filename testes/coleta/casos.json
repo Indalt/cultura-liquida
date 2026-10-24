@@ -107,6 +107,46 @@
       "criterio": "saturada sem divisão sobrando: estado 'interrompido por teto' e a Falta (l. 427)"
     },
     {
+      "nome": "Recorte: o teto de chamadas vale para a rodada inteira, dividido entre as janelas",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--teto-chamadas",
+        "2",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-saturada",
+        "--fixtures",
+        "testes/coleta/fixtures/saturada"
+      ],
+      "saida_contem": "RC-0003 AM-0021 CO-0005 1964-2026: interrompido por teto",
+      "criterio": "teto 2: a janela inteira usa 1 chamada, a primeira metade usa a outra e a segunda fica sem cota, com a Falta; antes, cada metade recebia o teto inteiro (insumo 48)"
+    },
+    {
+      "nome": "Recorte: página repetida pela fonte não conta e trata a resposta como saturada",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--teto-divisoes",
+        "0",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-repetida",
+        "--fixtures",
+        "testes/coleta/fixtures/repetida"
+      ],
+      "saida_contem": "interrompido por teto; visto 10 de 12",
+      "criterio": "total 12 em páginas de 5, e a página 3 repete a 2 (como a BDTD depois do item 1.300 em 24/10/2026): a página não conta, e sem divisão sobrando o Recorte fica interrompido com a Falta; antes, contava 15 de 12 e dava 'percorrido' (K-108)"
+    },
+    {
       "nome": "Recorte: teto de chamadas salva o cursor e cria a Falta",
       "espera": "passa",
       "comando": [
@@ -181,6 +221,24 @@
       ],
       "saida_contem": "fonte inacessível pela via automática",
       "criterio": "o pedido não sai; o Recorte guarda o erro e nasce a Falta 'fonte inacessível'"
+    },
+    {
+      "nome": "cliente: robots.txt com HTTP 500 é erro da fonte, não barreira",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0021",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-robots",
+        "--fixtures",
+        "testes/coleta/fixtures/robots-500"
+      ],
+      "saida_contem": "erro da fonte, nada pedido além dele",
+      "criterio": "o robots.txt com 5xx não se guarda como veto: nada se pede além dele, o Recorte fica para repetir mais tarde, sem a Falta 'fonte inacessível' nem a via humana (como a Infoteca-e em 24/10/2026; K-108)"
     },
     {
       "nome": "cliente: 403 com desafio anti-robô não se contorna",

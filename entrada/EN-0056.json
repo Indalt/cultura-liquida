@@ -3,7 +3,11 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0021",
   "recortes": [
-    "RC-0002"
+    "RC-0002",
+    "RC-0008",
+    "RC-0009",
+    "RC-0016",
+    "RC-0024"
   ],
   "data_entrada": "2026-10-23",
   "url_ou_arquivo": "https://bdtd.ibict.br/vufind/Record/USP_c599b87cfdb8be2b577fda6116f8996c",

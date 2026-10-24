@@ -1,0 +1,31 @@
+{
+  "id": "EN-1178",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0021",
+  "recortes": [
+    "RC-0014",
+    "RC-0021",
+    "RC-0023"
+  ],
+  "data_entrada": "2026-10-24",
+  "url_ou_arquivo": "https://bdtd.ibict.br/vufind/Record/UFMT_a81844b7282500dbfca41b4d7b97c94e",
+  "identificador": "AM-0021:UFMT_a81844b7282500dbfca41b4d7b97c94e",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-24",
+    "execucao": "EX-0029",
+    "versao_regra": "deduplicacao-0.1"
+  }
+}

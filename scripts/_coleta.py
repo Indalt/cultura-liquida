@@ -96,6 +96,8 @@ class Cliente:
             r = self._bruto("GET", base + "/robots.txt")
             if any(s in r.corpo[:4000].lower() for s in SINAIS_ANTIROBO):
                 raise BloqueioAntiRobo(f"HTTP {r.status} no robots.txt de {base}: proteção anti-robô, não se contorna")
+            if r.status >= 500 or r.status == 429:  # erro da fonte, não regra: repete-se mais tarde, sem guardar (K-108)
+                raise RuntimeError(f"HTTP {r.status} no robots.txt de {base}: erro da fonte, nada pedido além dele")
             if r.status >= 400:
                 rp.parse([])  # sem robots.txt (404): tudo permitido, como manda o protocolo
                 rp.allow_all = r.status in (404, 410)

@@ -1,0 +1,25 @@
+{
+  "id": "RC-0020",
+  "ambiente": "AM-0021",
+  "consulta": "CO-0002",
+  "periodo": "1996-2011",
+  "modo": "termo",
+  "cursor": null,
+  "total_informado": 365,
+  "total_visto": 365,
+  "saturacao": "exaurido: 365 de 365 visto(s), passada completa e não saturada",
+  "erros": [],
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
+  "teto": {
+    "chamadas": 120,
+    "divisoes_janela": 1
+  },
+  "estado": "percorrido pela busca",
+  "data": "2026-10-24",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-24",
+    "execucao": "EX-0032",
+    "versao_regra": "recorte-0.2"
+  }
+}

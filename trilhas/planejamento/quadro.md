@@ -27,7 +27,7 @@ Lógica kanban: **A fazer → Fazendo → Concluído**. Cada sessão pega **um**
 
 | Coluna | Cartão | Origem | Destino |
 |---|---|---|---|
-| A fazer | **K-108** Bloco 6: primeira coleta real. A medição de horas e consumo (bloco 13) começa aqui e segue como registro, não como cartão (D-035) | brief, blocos 6 e 13 | todo Recorte com estado válido; o que não se exauriu, como Falta com o motivo |
+| Fazendo | **K-108** Bloco 6: primeira coleta real. A medição de horas e consumo (bloco 13) começa aqui e segue como registro, não como cartão (D-035) | brief, blocos 6 e 13 | todo Recorte com estado válido; o que não se exauriu, como Falta com o motivo |
 | A fazer | **K-109** Bloco 7: do bruto à Evidência, com triagem jurídica e guias | brief, bloco 7 | o `validar_acervo.py` passando; cada dúvida jurídica como Falta com norma e caminho |
 | A fazer | **K-110** Bloco 8: Termos, ficha, grafo, Educação e wiki local | brief, bloco 8 | a ficha aceita pelo validador; μ e λ batendo com o recálculo; o wiki abrindo na máquina, fora do Git |
 | A fazer | **K-102** Script de menções incidentais. *Depois do K-110, antes do K-111* | D-037, D-039 | menções a outras CLB viram ligação no grafo e linha no cartão de lista das CLB candidatas, de baixa prioridade |

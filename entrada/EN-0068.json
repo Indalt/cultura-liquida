@@ -3,7 +3,11 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0021",
   "recortes": [
-    "RC-0002"
+    "RC-0002",
+    "RC-0014",
+    "RC-0021",
+    "RC-0024",
+    "RC-0022"
   ],
   "data_entrada": "2026-10-23",
   "url_ou_arquivo": "https://rima.ufrrj.br/jspui/handle/20.500.14407/11068",

@@ -4,7 +4,16 @@
   "ambiente": "AM-0021",
   "recortes": [
     "RC-0001",
-    "RC-0002"
+    "RC-0002",
+    "RC-0008",
+    "RC-0010",
+    "RC-0012",
+    "RC-0013",
+    "RC-0015",
+    "RC-0017",
+    "RC-0019",
+    "RC-0020",
+    "RC-0024"
   ],
   "data_entrada": "2026-10-23",
   "url_ou_arquivo": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/4104",
@@ -26,5 +35,6 @@
     "data": "2026-10-23",
     "execucao": "EX-0022",
     "versao_regra": "deduplicacao-0.1"
-  }
+  },
+  "wayback": "https://web.archive.org/web/20210304094457/http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/4104"
 }

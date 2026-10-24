@@ -3,7 +3,10 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0021",
   "recortes": [
-    "RC-0002"
+    "RC-0002",
+    "RC-0013",
+    "RC-0020",
+    "RC-0024"
   ],
   "data_entrada": "2026-10-23",
   "url_ou_arquivo": "https://ri.uea.edu.br/handle/riuea/2094",

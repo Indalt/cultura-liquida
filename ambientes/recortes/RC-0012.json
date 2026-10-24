@@ -1,0 +1,27 @@
+{
+  "id": "RC-0012",
+  "ambiente": "AM-0021",
+  "consulta": "CO-0001",
+  "periodo": "1996-2026",
+  "modo": "termo",
+  "cursor": 11,
+  "total_informado": 1264,
+  "total_visto": 1000,
+  "saturacao": "saturada: a página 11 repete a anterior: a fonte não entrega além de 1000 de 1264; janela dividida em 1996-2011 e 2012-2026",
+  "erros": [
+    "a página 11 repete a anterior: a fonte não entrega além de 1000 de 1264"
+  ],
+  "proxima_acao": "não conta como pegada: valem os Recortes da janela dividida",
+  "teto": {
+    "chamadas": 100,
+    "divisoes_janela": 2
+  },
+  "estado": "aberto",
+  "data": "2026-10-24",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-10-24",
+    "execucao": "EX-0029",
+    "versao_regra": "recorte-0.2"
+  }
+}

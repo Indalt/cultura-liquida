@@ -1,0 +1,12 @@
+{
+  "id": "F-0012",
+  "tipo": "outro",
+  "o_que_falta": "sem cópia arquivada: o Wayback não tem captura da página do item (consulta de 2026-10-24)",
+  "por_que": "No piloto, o wayback.py só registra a captura que já existe e não pede captura nova (D-043; a captura nova é cópia além da citação e barra agora, F-0004). A Availability API não achou captura. Fica o link permanente; o trecho, o hash e a data vêm no Trecho do §6. A captura nova volta no K-010.",
+  "onde_aparece": [
+    "entrada/EN-0004.json"
+  ],
+  "criada_por": "scripts/wayback.py (wayback-0.2)",
+  "data": "2026-10-24",
+  "nota": "Execução EX-0034; dita, nunca completada (D-018)."
+}

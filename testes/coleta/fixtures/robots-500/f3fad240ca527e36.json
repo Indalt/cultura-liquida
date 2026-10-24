@@ -1,0 +1,6 @@
+{
+ "url": "https://robos-vedados.example/robots.txt",
+ "status": 500,
+ "headers": {},
+ "corpo": "Internal Server Error"
+}
