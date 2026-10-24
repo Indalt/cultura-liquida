@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 49 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 53 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -383,8 +383,12 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 47, estado do Ambiente não segue os Recortes | D | K-108 |
 | 48, teto de chamadas por janela dividida | D | K-108 |
 | 49, retirada, proteção e limites na coleta | D | a definir pelo planejamento |
+| 50, Wayback na Fundação depois da D-043 | P | K-004 |
+| 51, Availability API sem rodada real | D | K-108 |
+| 52, termos de uso sem campo na ficha | D | a definir pelo planejamento |
+| 53, listas da substância sem medida | D; P | K-005 |
 
-## 7. Decisões D-001 a D-041
+## 7. Decisões D-001 a D-043
 
 | D | Essência curta | Frente | Estado e leitura de hoje | Vira |
 |---|---|---|---|---|
@@ -429,6 +433,8 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | D-039 | a CLB pelo termo enquanto ele não for ambíguo, com lugares, grupos e períodos como dados; nenhuma fonte como verdade única, nem a institucional; a valência mede lastro, trecho localizado e voz; no piloto, toda a cajuína que as fontes mostrarem; só CLB de outro termo vira candidata, num único cartão de lista | PDO; D (bloco 2, unidade da ficha e valências; blocos 7, 8 e K-102); O (cartão de lista) | vigente, registrada em 22/10; ajusta o A-09 b e a forma do cartão da D-037 (4) | K-104, K-109, K-110, K-102; A-09; V-20, V-38 |
 | D-040 | o ritmo em pontos percentuais da conta: projeto até 60 pp por semana (três frentes), desenvolvimento até 50, planejamento o resto, conta nunca acima de 90%; a conversa não para antes do teto; a guarda é não perder trabalho (commit e push a cada lote; janela de 5 h informada ao abrir; acima de 70%, só um lote); teto de manutenção do fim do K-113 no K-002; muda só o que está em vigor | PDO; D (seção 0 do brief; K-123); P (K-002, K-005) | vigente, registrada em 23/10 no fechamento do K-005 | regra; K-005, K-123, K-002 |
 | D-041 | no `localizar_trecho.py`, negação e sentido contrário batem exatamente, e a semelhança tolera só OCR e grafia; em μ e λ só conta Evidência com trecho localizado e leitura fiel, cada linhagem uma vez, e a linhagem com Evidência a favor e divergente vira tensão interna sinalizada; regras com versão e recálculo por script | D (K-123; blocos 7 e 8); P (K-005) | vigente, registrada em 23/10 no fechamento do K-005; no registro e nos scripts pelo K-123 | K-123, K-109, K-110; insumos 34 e 36 |
+| D-042 | o juridico reflete antes de agir; ler, localizar e linkar informação pública e acessível, e citar trecho curto com autor e origem, não gera Falta (regra de Vicente, não parecer de licitude); cada Falta jurídica diz se barra agora ou só a publicação; a triagem fixa calibrada (insumo 32) | D (K-124; blocos 6 e 7); O (cartões de Falta jurídica) | vigente, registrada em 24/10 no K-124 | K-124, K-109; insumo 32 |
+| D-043 | no piloto, o Wayback só com a captura que já existe, a Falta "sem cópia arquivada" e a proteção da Entrada antes de consultar; a captura nova volta no K-010; o padrão da F-0003 para o Git público | D (K-124; bloco 5); P (K-010); O (K-202 fechado) | vigente, registrada em 24/10 no K-124 | K-124, K-010, K-201, K-202; insumo 49 |
 
 ## 8. Ordem dos cartões e por quê
 

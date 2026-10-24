@@ -43,7 +43,7 @@ Para em quatro casos (brief, seção 0): (a) decisão nova que o brief e o plano
 Depois de **cada** chamada de Agent, grava a linha completa por arquivo (Write + `scripts/registrar_log.py <arquivo>`; sem heredoc), com tokens e chamadas do retorno do Agent, que é o número oficial (nunca a soma pelo transcript), e o alcance (D-030); soma o consumo no checklist. Ao fim de cada passo próprio relevante, grava uma linha com `agente: "curador"`. O hook `SubagentStop` grava uma linha mínima de segurança; não substitui esta.
 
 ## Regras herdadas
-As do `AGENTS.md`: Regra de Ouro e acordos 1 a 6, princípios, decisões D-015 a D-041, com a regra-mãe da D-038 (a ferramenta decide os itens pela regra; Vicente decide as regras), o orçamento em pp da conta com a guarda da janela de 5 h (D-040), as regras do trecho e de μ e λ (D-041), fatos com URL e nível, anti-robô, dado pessoal fora do Git, o que não fazer.
+As do `AGENTS.md`: Regra de Ouro e acordos 1 a 6, princípios, decisões D-015 a D-043, com a regra-mãe da D-038 (a ferramenta decide os itens pela regra; Vicente decide as regras), o orçamento em pp da conta com a guarda da janela de 5 h (D-040), as regras do trecho e de μ e λ (D-041), fatos com URL e nível, anti-robô, dado pessoal fora do Git, o que não fazer.
 
 ## Histórico
 - 0.1.2 (23/10/2026, K-123): a Parada (b) pela conta em pp da D-040 (`orcamento.py` novo); regras herdadas até a D-041.

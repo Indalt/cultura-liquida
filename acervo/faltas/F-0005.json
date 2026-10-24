@@ -8,5 +8,5 @@
   ],
   "criada_por": "juridico (triagem-juridica, K-107)",
   "data": "2026-10-23",
-  "nota": "Resolve-se lendo os termos no navegador (Vicente ou rodada com navegador) e conferindo se o uso do Save Page Now sem chave e o robots.txt do web.archive.org estão em harmonia com eles. Os limites do anônimo no docstring do script seguem de nível secundário."
+  "nota": "Resolve-se lendo os termos no navegador (Vicente ou rodada com navegador) e conferindo se o uso do Save Page Now sem chave e o robots.txt do web.archive.org estão em harmonia com eles. Os limites do anônimo no docstring do script seguem de nível secundário. K-124 (24/10/2026, D-043): continua aberta, ligada à F-0004; pesa sobre a captura nova, que volta no K-010. A consulta à Availability API do wayback.py também é uso do serviço, e os termos seguem não lidos (fora do alcance do K-124)."
 }

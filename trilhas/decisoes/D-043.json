@@ -1,0 +1,15 @@
+{
+  "id": "D-043",
+  "data": "2026-10-24",
+  "essencia": "No piloto, o Wayback só registra a captura que já existe; nenhuma captura nova é pedida. A fonte sem captura fica com link, trecho, hash e data, e uma Falta 'sem cópia arquivada', dita. A captura nova volta no K-010. Para o repositório público vale o padrão da F-0003: links, localizadores, citações curtas, fatos e metadados.",
+  "diretriz": "(1) Wayback: o wayback.py não pede captura nova ao Save Page Now; só consulta e registra na Entrada a captura que já existir. A fonte sem captura fica com o link, o trecho, o hash e a data (o Trecho do §6 já tem hash e data_conferencia) e uma Falta 'sem cópia arquivada', dita. A captura nova volta no K-010. A F-0004 e a F-0005 continuam abertas (a captura nova é cópia além da citação e barra agora; os termos do Internet Archive seguem não lidos), e o cartão K-202 fecha com esse porquê: a Falta fica mantida, sem caminho a seguir no piloto. (2) Antes de consultar ou registrar uma captura, o wayback.py olha a proteção da Entrada (restrição comunitária, dado sensível, criança ou adolescente, pedido de retirada, retirada) e pula a que tiver alguma (insumo 49). (3) Padrão da F-0003, aceito: vão ao Git público links, localizadores, citações curtas com autor e origem, fatos e metadados; resumos e texto de página só como citação curta; o que estiver marcado como conhecimento tradicional em detalhe espera numa pasta local, fora da pasta versionada, até o K-010; dado pessoal, nunca (salvo o nome do autor citado, D-042). A F-0003 continua aberta (K-201): o padrão orienta a ferramenta até a decisão de lugar e visibilidade do K-010.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-24",
+  "fala_original_ref": "trilhas/2026-10-24_K-124/relatorio.md, seção 'Falas originais de Vicente' ('C: só a captura existente'); parecer em trilhas/2026-10-24_K-124/parecer-juridico.md (EX-0026), itens 3 e 5",
+  "palavras_conferidas": [
+    {"palavra": "C", "sentido_confirmado": "a terceira opção do Wayback: só a captura que já existe; nenhuma captura nova no piloto"},
+    {"palavra": "aceito o padrão", "sentido_confirmado": "o padrão da F-0003 orienta o que vai ao Git público; a F-0003 não se fecha por isso"}
+  ],
+  "substitui": "Muda a l. 509 da Fundação v0.2 e o bloco 5 do brief de execuções (cópia de cada item no Wayback pelo Save Page Now) só no piloto, até o K-010; a captura nova não é descartada, volta no K-010. Responde ao insumo 49 na parte da proteção da Entrada.",
+  "marcador": "VIGENTE"
+}

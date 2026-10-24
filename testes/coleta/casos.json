@@ -275,7 +275,7 @@
       "criterio": "uma Entrada por item também no canal de Vicente"
     },
     {
-      "nome": "Wayback: captura com resposta gravada e ficha com 403 pulada",
+      "nome": "Wayback: captura existente registrada, sem pedir captura nova (D-043)",
       "espera": "passa",
       "comando": [
         "scripts/wayback.py",
@@ -287,8 +287,8 @@
         "--fixtures",
         "testes/coleta/fixtures/wayback"
       ],
-      "saida_contem": "EN-0001: cópia https://web.archive.org/web/20261023120000/",
-      "criterio": "a Entrada da BDTD ganha a cópia (a Entrada da Hemeroteca, com 403 na ficha, é pulada: caso seguinte)"
+      "saida_contem": "EN-0001: captura existente https://web.archive.org/web/20261023120000/",
+      "criterio": "a Entrada da BDTD ganha o endereço da captura que já existe, pela Availability API; nenhum pedido ao Save Page Now (wayback-0.2, K-124)"
     },
     {
       "nome": "Wayback: sem a triagem do juridico",
@@ -317,7 +317,7 @@
         "--fixtures",
         "testes/coleta/fixtures/wayback"
       ],
-      "saida_contem": "EN-0002: não captura: a ficha de AM-0001 registra",
+      "saida_contem": "EN-0002: não consulta: a ficha de AM-0001 registra",
       "criterio": "fica o link permanente (l. 419)"
     },
     {
@@ -337,7 +337,7 @@
       "criterio": "só a triagem do wayback.py, com as oito perguntas (achado A-010)"
     },
     {
-      "nome": "Wayback: Falta jurídica aberta barra a captura",
+      "nome": "Wayback: Falta jurídica aberta que vale agora barra a consulta",
       "espera": "passa",
       "comando": [
         "scripts/wayback.py",
@@ -350,7 +350,46 @@
         "testes/coleta/fixtures/wayback"
       ],
       "saida_contem": "BARRADO: a Falta jurídica F-900004",
-      "criterio": "com a Falta da captura aberta (como a F-0004), nada se captura e nenhum pedido sai"
+      "criterio": "com uma Falta jurídica aberta que aponte o wayback.py e valha agora ('captura', o nome antigo, é lido como 'agora'), nada se consulta e nenhum pedido sai"
+    },
+    {
+      "nome": "Wayback: sem captura existente, Falta 'sem cópia arquivada' dita",
+      "espera": "passa",
+      "comando": [
+        "scripts/wayback.py",
+        "--triagem",
+        "testes/coleta/triagem-teste.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "EN-0003: sem cópia arquivada → F-",
+      "criterio": "D-043: a fonte sem captura fica com o link e uma Falta 'sem cópia arquivada'; a captura nova volta no K-010"
+    },
+    {
+      "nome": "Wayback: a proteção da Entrada barra a consulta (insumo 49)",
+      "espera": "passa",
+      "comando": [
+        "scripts/wayback.py",
+        "--triagem",
+        "testes/coleta/triagem-teste.json",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz-wayback",
+        "--fixtures",
+        "testes/coleta/fixtures/wayback"
+      ],
+      "saida_contem": "EN-0004: não consulta: proteção da Entrada (dado sensível)",
+      "criterio": "insumo 49: dado sensível, restrição comunitária, criança ou adolescente e retirada pulam a consulta"
+    },
+    {
+      "nome": "Wayback: Falta 'sem cópia arquivada' completada com a cópia inferida",
+      "espera": "reprova",
+      "esquema": "falta",
+      "entrada": "testes/coleta/erro-falta-sem-copia-completada.json",
+      "criterio": "D-018 e D-043: a Falta é dita, nunca completada"
     },
     {
       "nome": "fila: conflito, Falta jurídica e lista das CLB candidatas",

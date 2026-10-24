@@ -1,12 +1,92 @@
 {
-  "versao_regra": "triagem-fixa-0.2",
-  "data": "2026-10-22",
-  "cartao": "K-105 (bloco 3 do brief de execuções)",
-  "descricao": "Regras fixas do Jurídico para os casos óbvios (Fundação l. 695; brief, bloco 3), lidas por scripts/triagem_fixa.py. As normas vêm do lote C5 (juridico, conferir-fato), com nível; as listas de palavras são provisórias e se calibram com o piloto (insumo do K-105). Regra de precaução: o script cria Faltas e nunca autoriza (D-020); o caminho de liberação aponta o guia da habilidade guia-de-liberacao. Mudar uma lista ou uma norma é versão nova da regra. Versão 0.2 (K-105, achado A-011 do auditor): palavra inteira; '*' no fim marca radical.",
+  "versao_regra": "triagem-fixa-0.3",
+  "data": "2026-10-24",
+  "cartao": "K-124 (D-042; antes: K-105, bloco 3 do brief de execuções)",
+  "descricao": "Regras fixas do Jurídico para os casos óbvios (Fundação l. 695; brief, bloco 3), lidas por scripts/triagem_fixa.py. Regra de precaução: o script cria Faltas e nunca autoriza (D-020); o caminho de liberação aponta o guia da habilidade guia-de-liberacao. Mudar uma lista ou uma norma é versão nova da regra. Versão 0.2 (K-105, A-011): palavra inteira; '*' no fim marca radical. Versão 0.3 (K-124, D-042, insumo 32, parecer EX-0026): a regra da informação pública e acessível (ler, localizar, linkar e citar trecho curto com autor e origem não gera Falta; é regra de Vicente, não parecer de licitude); o ato da triagem ('ler', o padrão; 'copiar', cópia além da citação; 'publicar'), e cada caso só vale para os atos que lista; vale_para em cada Falta ('agora' ou 'publicar'); a cópia além da citação como caso próprio, que barra agora; a licença ausente só diante de cópia ou de publicação, e só para a publicação; o autor citado (pessoa com papel 'autor') fora do caso dado pessoal; o conhecimento tradicional só para a publicação, com a nota do art. 9º; a substância controlada reduzida às substâncias e às plantas da Lista E (Portaria 344, secundária), barrando agora só quando o registro traz também o modo de obter ou de preparar (Lei 11.343, art. 33); ayahuasca e jurema como dúvida. Sem caso, a saída diz 'sem Falta pela regra'.",
+  "atos": {
+    "ler": "ler, localizar, linkar e citar trecho curto com autor e origem (o padrão da coleta)",
+    "copiar": "guardar cópia além da citação curta (página inteira, documento, imagem, áudio)",
+    "publicar": "publicar o item (K-010; até lá, o Git público segue o padrão da F-0003, D-043)"
+  },
+  "regra_publica": {
+    "decisao": "D-042, item 1",
+    "texto": "Ler, localizar e linkar informação pública e acessível, e citar trecho curto com autor e origem, não gera Falta. O nome do autor citado não é dado pessoal a barrar; o dado de acesso público segue a LGPD, art. 7º, §3º. É regra de precaução de Vicente, não parecer de licitude.",
+    "apoio": [
+      {
+        "referencia": "Lei 9.610/1998, art. 46, III",
+        "trecho": "III - a citação em livros, jornais, revistas ou qualquer outro meio de comunicação, de passagens de qualquer obra, para fins de estudo, crítica ou polêmica, na medida justificada para o fim a atingir, indicando-se o nome do autor e a origem da obra;",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.2"
+      },
+      {
+        "referencia": "Lei 9.610/1998, art. 46, VIII",
+        "trecho": "VIII - a reprodução, em quaisquer obras, de pequenos trechos de obras preexistentes, de qualquer natureza, ou de obra integral, quando de artes plásticas, sempre que a reprodução em si não seja o objetivo principal da obra nova e que não prejudique a exploração normal da obra reproduzida nem cause um prejuízo injustificado aos legítimos interesses dos autores.",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-1"
+      },
+      {
+        "referencia": "Lei 13.709/2018 (LGPD), art. 7º, §3º",
+        "trecho": "§ 3º O tratamento de dados pessoais cujo acesso é público deve considerar a finalidade, a boa-fé e o interesse público que justificaram sua disponibilização.",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-1"
+      }
+    ]
+  },
+  "fora_do_script": {
+    "proibicao_expressa": "A proibição expressa nos termos de uso ou no robots.txt barra agora (D-042), mas não é caso deste script: o robots.txt é cumprido pelo scripts/_coleta.py em cada pedido, e os termos de uso, pela ficha de acesso do ambiente (habilidade ficha-de-acesso)."
+  },
+  "normas_conferidas": {
+    "imagem_e_voz": [
+      {
+        "referencia": "Constituição Federal, art. 5º, X",
+        "trecho": "X - são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação;",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-4"
+      },
+      {
+        "referencia": "Código Civil (Lei 10.406/2002), art. 20",
+        "trecho": "Art. 20. Salvo se autorizadas, ou se necessárias à administração da justiça ou à manutenção da ordem pública, a divulgação de escritos, a transmissão da palavra, ou a publicação, a exposição ou a utilização da imagem de uma pessoa poderão ser proibidas, a seu requerimento e sem prejuízo da indenização que couber, se lhe atingirem a honra, a boa fama ou a respeitabilidade, ou se se destinarem a fins comerciais.",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-4",
+        "nota": "o fim do artigo ('ou se se destinarem a fins comerciais') vem da citação do parecer; a ADI 4815 (afasta a autorização prévia para biografia e mantém a reparação posterior) só por resumo de busca, secundária, fora do alcance do K-124"
+      }
+    ]
+  },
   "casos": {
+    "copia_alem_da_citacao": {
+      "subtipo": "direito_autoral",
+      "vale_para": "agora",
+      "atos": [
+        "copiar"
+      ],
+      "o_que_falta": "autorização ou licença para guardar cópia além da citação curta de obra protegida",
+      "norma": {
+        "referencia": "Lei 9.610/1998, art. 29, caput e inciso I",
+        "trecho": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como: I - a reprodução parcial ou integral;",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.1"
+      },
+      "apoio": [
+        "F-0004 (a captura de página inteira, relida no K-124)",
+        "D-042, item 2"
+      ],
+      "guia": "guia-de-liberacao: licença de uso de texto, imagem e áudio de terceiros (Lei 9.610)",
+      "valores_sem_licenca": [
+        "",
+        "não conferido",
+        "ausente",
+        "desconhecida"
+      ]
+    },
     "licenca_ausente": {
       "subtipo": "direito_autoral",
-      "o_que_falta": "licença ou autorização de uso do texto, imagem ou áudio de terceiro",
+      "o_que_falta": "licença ou autorização de uso do texto, imagem ou áudio de terceiro, para publicar",
       "norma": {
         "referencia": "Lei 9.610/1998, art. 29, caput",
         "trecho": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como:",
@@ -16,7 +96,8 @@
       },
       "apoio": [
         "C5.2 (citação, Lei 9.610 art. 46, III)",
-        "C5.4 (autor desconhecido, art. 45, II)"
+        "C5.4 (autor desconhecido, art. 45, II)",
+        "D-042, item 2: a licença ausente só vale diante de cópia ou de publicação, e barra só a publicação"
       ],
       "guia": "guia-de-liberacao: licença de uso de texto, imagem e áudio de terceiros (Lei 9.610)",
       "valores_sem_licenca": [
@@ -24,6 +105,11 @@
         "não conferido",
         "ausente",
         "desconhecida"
+      ],
+      "vale_para": "publicar",
+      "atos": [
+        "copiar",
+        "publicar"
       ]
     },
     "dado_pessoal": {
@@ -37,13 +123,20 @@
         "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.5"
       },
       "apoio": [
-        "C5.6 (LGPD art. 7º)"
+        "C5.6 (LGPD art. 7º)",
+        "LGPD art. 7º, §3º (acesso público; regra_publica)",
+        "CF art. 5º, X, e Código Civil art. 20 (normas_conferidas.imagem_e_voz)",
+        "D-042, item 1: o nome do autor citado não é dado pessoal a barrar"
       ],
       "guia": "guia-de-liberacao: termo de consentimento e atendimento ao titular (LGPD)",
       "consentimento_ausente": [
         "",
         "não se aplica",
         "não conferido"
+      ],
+      "vale_para": "agora",
+      "papeis_fora": [
+        "autor*"
       ]
     },
     "dado_sensivel": {
@@ -59,19 +152,21 @@
       "apoio": [
         "C5.8 (LGPD art. 11)"
       ],
-      "guia": "guia-de-liberacao: termo de consentimento e atendimento ao titular (LGPD)"
+      "guia": "guia-de-liberacao: termo de consentimento e atendimento ao titular (LGPD)",
+      "vale_para": "agora"
     },
     "conhecimento_tradicional": {
       "subtipo": "conhecimento_tradicional",
       "o_que_falta": "saber se há conhecimento tradicional associado e, se houver, o cadastro e o consentimento prévio informado",
       "norma": {
-        "referencia": "Lei 13.123/2015, art. 2º, IX",
-        "trecho": "IX - acesso ao conhecimento tradicional associado - pesquisa ou desenvolvimento tecnológico realizado sobre conhecimento tradicional associado ao patrimônio genético que possibilite ou facilite o acesso ao patrimônio genético, ainda que obtido de fontes secundárias tais como feiras, publicações, inventários, filmes, artigos científicos, cadastros e outras formas de sistematização e registro de conhecimentos tradicionais associados;",
+        "referencia": "Lei 13.123/2015, art. 12, §2º",
+        "trecho": "§ 2º O cadastramento deverá ser realizado previamente à remessa, ou ao requerimento de qualquer direito de propriedade intelectual, ou à comercialização do produto intermediário, ou à divulgação dos resultados, finais ou parciais, em meios científicos ou de comunicação, ou à notificação de produto acabado ou material reprodutivo desenvolvido em decorrência do acesso.",
         "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
         "nivel": "oficial",
-        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.10"
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-2"
       },
       "apoio": [
+        "C5.10 (art. 2º, IX: acesso, ainda que de fontes secundárias como publicações)",
         "C5.9 (art. 2º, II)",
         "C5.11 (art. 9º, origem identificável)",
         "C5.12 (art. 12, I, cadastro)",
@@ -96,40 +191,101 @@
         "uso medicinal",
         "planta medicinal",
         "propriedade medicinal"
-      ]
+      ],
+      "vale_para": "publicar",
+      "nota": "Art. 9º da Lei 13.123 (oficial): 'O acesso ao conhecimento tradicional associado de origem identificável está condicionado à obtenção do consentimento prévio informado.' Com origem identificável, o detalhe não se aprofunda e espera numa pasta local, fora da pasta versionada, até o K-010 (D-042; D-043, padrão da F-0003). Se o trabalho do projeto é 'acesso' é interpretação não conferida."
     },
     "substancia_controlada": {
       "subtipo": "substancia_controlada",
-      "o_que_falta": "saber se a bebida, o insumo ou o processo envolve substância sob controle especial",
+      "vale_para": "publicar",
+      "vale_para_com_modo": "agora",
+      "o_que_falta": "saber se a bebida, o insumo ou o processo envolve substância ou planta sob controle especial; com o modo de obter ou de preparar no registro, esse detalhe não se guarda",
       "norma": {
-        "referencia": "Lei 11.343/2006, art. 1º, parágrafo único",
-        "trecho": "Parágrafo único. Para fins desta Lei, consideram-se como drogas as substâncias ou os produtos capazes de causar dependência, assim especificados em lei ou relacionados em listas atualizadas periodicamente pelo Poder Executivo da União.",
+        "referencia": "Lei 11.343/2006, art. 33, caput",
+        "trecho": "Art. 33. Importar, exportar, remeter, preparar, produzir, fabricar, adquirir, vender, expor à venda, oferecer, ter em depósito, transportar, trazer consigo, guardar, prescrever, ministrar, entregar a consumo ou fornecer drogas, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar:",
         "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
         "nivel": "oficial",
-        "conferencia": "trilhas/2026-10-22_K-105/conferencia-C5.json#C5.13"
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-2"
       },
       "apoio": [
-        "C5.14 (Lei 11.343 art. 66, que nomeia a Portaria SVS/MS 344/1998; a Portaria não foi conferida, C5.15)"
+        "C5.13 (Lei 11.343 art. 1º, parágrafo único: drogas são as listadas)",
+        "Lei 11.343 art. 33, §2º ('Induzir, instigar ou auxiliar alguém ao uso indevido de droga', oficial; ADI 4274 só por resumo de busca, secundária)",
+        "Portaria SVS/MS 344/1998, Lista E (6 plantas) e Lista F2 (DMT, psilocibina, psilocina, mescalina, LSD): secundária, cópia de 2022 em https://www.saude.pr.gov.br/sites/default/arquivos_restritos/files/documento/2022-07/portaria_ms_ndeg344-1998_-_aprova_o_regulamento_tecnico_sobre_substancias_e_medicamentos_sujeitos_a_controle_especial.pdf; a lista oficial e atual (RDC da Anvisa) não foi conferida"
+      ],
+      "guia": "guia-de-liberacao: a preparar para substância controlada (fora dos quatro guias da l. 695)",
+      "palavras": [
+        "dmt",
+        "dimetiltriptamina",
+        "psilocib*",
+        "psilocin*",
+        "mescalina",
+        "lsd",
+        "lisergida",
+        "cannabis",
+        "maconha",
+        "claviceps paspali",
+        "datura suaveolens",
+        "datura suaveolans",
+        "erythroxylum coca",
+        "erytroxylum coca",
+        "folha de coca",
+        "lophophora",
+        "peiote",
+        "peyote",
+        "prestonia amazonica",
+        "haemadictyon amazonicum"
+      ],
+      "palavras_modo": [
+        "prepar*",
+        "receita",
+        "extracao",
+        "extrair",
+        "extraid*",
+        "cultivo",
+        "cultivar",
+        "plantio",
+        "colheita",
+        "como obter",
+        "obtencao",
+        "dosagem",
+        "dose*"
+      ]
+    },
+    "substancia_duvida": {
+      "subtipo": "substancia_controlada",
+      "vale_para": "publicar",
+      "vale_para_com_modo": "agora",
+      "o_que_falta": "dúvida, não controle certo: saber se a bebida ou o insumo contém substância das listas (o DMT está na Lista F2 da Portaria 344, secundária); ayahuasca e jurema não aparecem pelo nome nas listas",
+      "norma": {
+        "referencia": "Lei 11.343/2006, art. 2º, caput",
+        "trecho": "Art. 2º Ficam proibidas, em todo o território nacional, as drogas, bem como o plantio, a cultura, a colheita e a exploração de vegetais e substratos dos quais possam ser extraídas ou produzidas drogas, ressalvada a hipótese de autorização legal ou regulamentar, bem como o que estabelece a Convenção de Viena, das Nações Unidas, sobre Substâncias Psicotrópicas, de 1971, a respeito de plantas de uso estritamente ritualístico-religioso.",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "nivel": "oficial",
+        "conferencia": "trilhas/2026-10-24_K-124/parecer-juridico.md#item-2"
+      },
+      "apoio": [
+        "Lei 11.343 art. 33 (o modo de obter ou de preparar barra agora)",
+        "Resolução CONAD 1/2010: não conferida, fora do alcance do K-124"
       ],
       "guia": "guia-de-liberacao: a preparar para substância controlada (fora dos quatro guias da l. 695)",
       "palavras": [
         "ayahuasca",
-        "daime",
-        "hoasca",
-        "jurema",
-        "dmt",
-        "folha de coca",
-        "coca",
-        "cannabis",
-        "maconha",
-        "canhamo",
-        "psilocib*",
-        "cogumelo",
-        "mescalina",
-        "peiote",
-        "opio",
-        "papoula",
-        "lanca-perfume"
+        "jurema"
+      ],
+      "palavras_modo": [
+        "prepar*",
+        "receita",
+        "extracao",
+        "extrair",
+        "extraid*",
+        "cultivo",
+        "cultivar",
+        "plantio",
+        "colheita",
+        "como obter",
+        "obtencao",
+        "dosagem",
+        "dose*"
       ]
     },
     "crianca_ou_adolescente": {
@@ -153,7 +309,8 @@
         "menina",
         "adolescente",
         "menor de idade"
-      ]
+      ],
+      "vale_para": "agora"
     }
   }
 }

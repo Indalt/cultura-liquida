@@ -1,0 +1,24 @@
+{
+  "id": "F-9003",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "conhecimento_tradicional",
+  "vale_para": "publicar",
+  "o_que_falta": "o cadastro no SisGen, se a atividade for acesso, e o consentimento prévio informado da comunidade detentora, antes de publicar o uso da bebida descrito no trecho",
+  "por_que": "O trecho atribui um uso medicinal da bebida a uma comunidade quilombola nomeada (origem identificável), sem consentimento registrado. A Lei 13.123 vale mesmo para o publicado (art. 2º, IX), e o cadastro vem antes da divulgação (art. 12, §2º): a Falta barra a publicação. Art. 9º da Lei 13.123 (oficial): 'O acesso ao conhecimento tradicional associado de origem identificável está condicionado à obtenção do consentimento prévio informado.' Com origem identificável, o detalhe não se aprofunda e espera numa pasta local, fora da pasta versionada, até o K-010 (D-042; D-043, padrão da F-0003). Se o trabalho do projeto é 'acesso' é interpretação não conferida.",
+  "onde_aparece": [
+    "entrada EN-900014 (teste, K-124)"
+  ],
+  "norma": {
+    "referencia": "Lei 13.123/2015, art. 12, §2º",
+    "trecho": "§ 2º O cadastramento deverá ser realizado previamente à remessa, ou ao requerimento de qualquer direito de propriedade intelectual, ou à comercialização do produto intermediário, ou à divulgação dos resultados, finais ou parciais, em meios científicos ou de comunicação, ou à notificação de produto acabado ou material reprodutivo desenvolvido em decorrência do acesso.",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13123.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-sisgen-cadastro-de-acesso",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico (triagem-juridica 0.2.0, caso de exemplo)",
+  "data": "2026-10-24",
+  "nota": "Caso de exemplo do K-124, sem pessoa real. Não chama Vicente antes da decisão de publicar (K-010)."
+}

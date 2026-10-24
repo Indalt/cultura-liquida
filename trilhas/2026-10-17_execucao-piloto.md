@@ -185,6 +185,26 @@
 - **Não conferido:** os termos de uso do Internet Archive (F-0005) e a documentação oficial do SPN2; o limite de resultados da BDTD e o filtro de período do VuFind na fonte real (insumo 44); o comportamento sob redirecionamento real; o DocReader da Hemeroteca como host de link permanente (a ficha só registra hemerotecadigital.bn.gov.br). Insumos novos: 44 a 49.
 - **Consumo:** 240.436 tokens de agentes em 24 chamadas (juridico, auditor). Estimativa pela conta da D-040 (não é medida): 2 + 1,6 × 2,404 = 5,8 pp; o uso da conta no fim fica a informar.
 
+## Conversa do cartão K-124 (o juridico calibrado antes da coleta) — 24/10/2026 (sábado)
+
+- **Pedido de Vicente:** criar e executar o cartão K-124 no desenvolvimento, antes do K-108, sem agentes: o parecer do juridico já feito (EX-0026, `trilhas/logs/2026-10-24_juridico.jsonl`, linha 2), com o qual concorda sem objeções; as seis regras já ajustadas ao parecer; registrar as decisões pela `registrar-decisao`; aplicar no harness, com versões novas e casos; fora do alcance, como o parecer disse, a Portaria 344 oficial e atual, as ADI 4815 e 4274, a Resolução CONAD 1/2010 e os termos do Internet Archive. Falas originais em `trilhas/2026-10-24_K-124/relatorio.md`.
+- **Uso da conta no início:** 70% (semanal) e 26% (janela de 5 h). A leitura fecha o K-107 em 9 pp (61% → 70%), com a conversa do parecer prévio dentro. Desenvolvimento na semana: 33 pp de 50; folga H = o menor entre 50 − 33 = 17 e 90 − 70 = 20 → 17 pp. Sem agentes nesta conversa: só os 2 pp da conversa principal na conta.
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (47854f1); `rodar_testes.py` OK 162 · FALHA 0 · PENDENTE 5; `relatorio_dia.py` rodado; o cartão K-124 criado em Fazendo, antes do K-108.
+
+### K-124 — O juridico calibrado antes da coleta
+
+- [x] **Parecer e decisões:** o parecer do juridico guardado sem edição em `trilhas/2026-10-24_K-124/parecer-juridico.md` (tirado do transcript do agente; trechos de lei oficiais, Portaria 344 e ADI secundárias). **D-042** (a informação pública e acessível como regra de precaução de Vicente; agora ou só a publicação; a triagem fixa; a reflexão antes da ação) e **D-043** (o Wayback só com a captura existente, a proteção da Entrada, o padrão da F-0003), em `trilhas/decisoes/`, válidas no esquema.
+- [x] **Contrato:** `esquemas/falta.schema.json` com o `vale_para` "agora" (o "captura" do K-107 fica aceito como nome antigo, lido como "agora").
+- [x] **Harness:** `.claude/agents/juridico.md` 0.2.0 (a reflexão e a regra; "sem Falta pela regra" não é autorização); `triagem-juridica` 0.2.0 (a regra, os seis passos dentro das oito perguntas, o `vale_para`, CF art. 5º, X, e CC art. 20 conferidos, a substância pela Lista E com ayahuasca e jurema como dúvida; casos C, a F-0004 relida, e D, link e citação com o autor; Falta de conhecimento tradicional só para publicar; `vale_para` fora do contrato reprova); `guia-de-liberacao` 0.1.1 (o passo 0, pelo `vale_para`). O guia de substância controlada continua "a preparar" (nenhuma Falta de substância nasceu).
+- [x] **Triagem fixa 0.3** (`esquemas/triagem-fixa.json`, `scripts/triagem_fixa.py`): o ato (`--ato ler|copiar|publicar`, padrão ler); a cópia além da citação (agora); a licença ausente só em copiar e publicar (só publicar); o autor citado fora do dado pessoal; o conhecimento tradicional com a norma do art. 12, §2º, e a nota do art. 9º (só publicar); a substância reduzida às substâncias e às plantas da Lista E, com o modo de obter ou de preparar levando a "agora"; ayahuasca e jurema como dúvida (Lei 11.343, art. 2º); a regra pública e as normas de imagem e voz no arquivo; a proibição expressa dita como cumprida fora do script (robots.txt pelo `_coleta.py`, termos pela ficha); "sem Falta pela regra" na saída; `--portao` (código 1 se algo barra o ato agora). Seis casos novos em `testes/nucleo/` (dois passam, quatro reprovam no portão) e três ajustados.
+- [x] **Wayback 0.2** (`scripts/wayback.py`): sem pedido ao Save Page Now; a Availability API para a captura que já existe; sem captura, a Falta "sem cópia arquivada" (uma por Entrada, nunca repetida); a proteção da Entrada antes de consultar (insumo 49); a ficha com 403 continua pulada; com uma Falta jurídica aberta que aponte o script e valha agora, nada se consulta. Fixtures sintéticas trocadas; três casos novos (sem captura, proteção, Falta completada) e três ajustados. **Nenhuma rodada real** (fica para o K-108; insumo 51).
+- [x] **F-0004 relida e K-202 fechado:** a F-0004 com `vale_para` "agora" e o pedido de captura nova, não o `wayback.py`, em `onde_aparece`, com a releitura pelos seis passos na nota; a F-0005 com a nota da D-043; o K-202 em Concluído como "mantida com o porquê". `fila_curadoria.py --conferir`: fila 0 de 15.
+- [x] **Plano em dia:** `AGENTS.md`, o brief de execuções (quadro de ajustes, seção 2, nota no bloco 5, trilha), o mapa das três frentes (seção 7), o `curador.md` e o estado do planejamento.
+- **Resultado:** `rodar_testes.py`: OK 175 · FALHA 0 · PENDENTE 5; `validar_acervo.py`: 173 registros, válido.
+- **Não conferido (fora do alcance, como o parecer disse):** a Portaria 344 oficial e atual (a lista usada é a cópia de 2022, secundária); os acórdãos das ADI 4815 e 4274 (só resumo de busca); a Resolução CONAD 1/2010; os termos do Internet Archive (F-0005); a documentação oficial da Availability API e a resposta real dela. O fim do art. 20 do Código Civil ("ou se se destinarem a fins comerciais") vem da citação do parecer, porque a extração do agente cortou a linha.
+- **Insumos novos:** 50 (a Fundação e o brief com a D-043; K-004), 51 (a Availability API sem rodada real; K-108), 52 (os termos de uso sem campo na ficha), 53 (as listas da substância sem medida; K-005). Os insumos 32 e 49 ficaram atendidos em parte: a regra e as normas do 32, a proteção do 49; o resto deles segue aberto.
+- **Consumo:** nenhum agente nesta conversa (0 tokens). O parecer prévio (EX-0026, 82.949 tokens, 24 chamadas) foi feito antes, numa conversa cujos pp estão nos 9 do K-107; os tokens entram na linha do K-124. O uso da conta no fim fica a informar.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -199,6 +219,7 @@
 | 19–25/10 | K-106, arquivista, rastreador e auditor (bloco 4; teto pela D-040) | 263.700 | 33 | 708.474 |
 | 19–25/10 | K-107, juridico (triagem da política de cópias) | 46.107 | 9 | 754.581 |
 | 19–25/10 | K-107, auditor (segunda leitura do código) | 194.329 | 15 | 948.910 |
+| 19–25/10 | K-124, juridico (parecer prévio, EX-0026) | 82.949 | 24 | 1.031.859 |
 
 ## Horas de Vicente e uso da conta (bloco 13; medição desde o bloco 6)
 
@@ -223,4 +244,5 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | planejamento | K-005 (fechamento) | 49 | 51 | 2 | 0 | — | A1 pela abertura do K-123; janela de 5 h: 36% ao abrir |
 | 21/10–28/10/2026 | desenvolvimento | K-123 | 51 | 53 | 2 | 0 | — | janela de 5 h: 48% ao abrir; A1 pela abertura do K-106; renovação em 28/10/2026, 23h |
 | 21/10–28/10/2026 | desenvolvimento | K-106 | 53 | 61 | 8 | 263.700 | 33 | janela de 5 h: 58% ao abrir; Opus 5.5 médio; estimativa da conta 6,2 pp; A1 pela abertura do K-107 |
-| 21/10–28/10/2026 | desenvolvimento | K-107 | 61 | a informar | a informar | 240.436 | 24 | janela de 5 h: 2% ao abrir; Opus 5.5 médio; teto de 60 pp do projeto suspenso nesta semana por Vicente (fica o do desenvolvimento e a linha de 90%); estimativa da conta 5,8 pp |
+| 21/10–28/10/2026 | desenvolvimento | K-107 | 61 | 70 | 9 | 240.436 | 24 | janela de 5 h: 2% ao abrir; Opus 5.5 médio; teto de 60 pp do projeto suspenso nesta semana por Vicente (fica o do desenvolvimento e a linha de 90%); estimativa da conta 5,8 pp ; A1 pela abertura do K-124, que inclui a conversa do parecer prévio do juridico para o K-124 (EX-0026, lançado na linha do K-124) |
+| 21/10–28/10/2026 | desenvolvimento | K-124 | 70 | a informar | a informar | 82.949 | 24 | janela de 5 h: 26% ao abrir; Opus 5.5 médio; sem agentes nesta conversa; os tokens são do parecer prévio do juridico (EX-0026), feito antes, numa conversa cujos pp estão nos 9 do K-107 |

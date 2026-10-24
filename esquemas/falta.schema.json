@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "falta.schema.json",
   "title": "Falta",
-  "description": "Registro de primeira classe do que falta (plano, item 1). Uma Falta é dita, nunca completada: não traz valor inferido. A Falta jurídica traz sempre o porquê (norma citada) e o caminho de liberação (D-020, D-025). O campo vale_para (K-107, 23/10/2026) diz se a Falta jurídica barra a captura em si ou só a publicação.",
+  "description": "Registro de primeira classe do que falta (plano, item 1). Uma Falta é dita, nunca completada: não traz valor inferido. A Falta jurídica traz sempre o porquê (norma citada) e o caminho de liberação (D-020, D-025). O campo vale_para (K-107, 23/10/2026; valor \"agora\" no K-124, 24/10/2026, D-042) diz se a Falta jurídica barra o ato já ou só a publicação.",
   "type": "object",
   "required": [
     "id",
@@ -125,10 +125,11 @@
     },
     "vale_para": {
       "enum": [
-        "captura",
-        "publicar"
+        "agora",
+        "publicar",
+        "captura"
       ],
-      "description": "a quem a Falta jurídica barra: 'captura' (a cópia em si; o wayback.py não captura) ou 'publicar' (só a publicação; o cartão espera a decisão de publicar, K-010, e não chama Vicente antes dela; D-032). Sem o campo, vale para tudo (K-107)."
+      "description": "a quem a Falta jurídica barra (D-042): 'agora' (o ato já, na coleta e no que se grava: proibição expressa de acesso, cópia além da citação, dado pessoal, modo de obter ou de preparar substância controlada) ou 'publicar' (só a publicação: conhecimento tradicional associado, licença ausente; o cartão espera a decisão de publicar, K-010, e não chama Vicente antes dela; D-032). 'captura' é o nome antigo (K-107) de 'agora' para a cópia em si, aceito para os registros antigos e lido como 'agora'. Sem o campo, vale para tudo."
     }
   },
   "allOf": [

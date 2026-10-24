@@ -5,7 +5,7 @@ description: Prepara um guia de liberação assistido para uma Falta jurídica d
 
 # guia-de-liberacao
 
-**Versão do harness:** 0.1.0 · **Quem usa:** juridico · **Rodada:** A
+**Versão do harness:** 0.1.1 · **Quem usa:** juridico · **Rodada:** A
 
 ## Objetivo
 Barrar não basta (D-025): toda Falta jurídica traz o porquê e um caminho de liberação. O guia orienta e prepara; **Vicente decide, assina e protocola**.
@@ -19,6 +19,7 @@ Barrar não basta (D-025): toda Falta jurídica traz o porquê e um caminho de l
 - **Saída:** objeto JSON válido em `esquemas/guia-liberacao.schema.json`: `por_que_barrado` (explicação simples + norma + trecho literal + URL + nível), `o_que_destravaria`, `quem_pode_fazer` (com nível), `passos` (n, o que fazer, onde, como preencher, nível, URL), `documentos`, `exige_profissional`, `limites`, `estado`, `nao_conferido`, `versao`, `data`.
 
 ## Passos
+0. Leia o `vale_para` da Falta (D-042): a que barra **agora** pede o guia antes do ato (a coleta ou a cópia ficam paradas até a liberação); a que barra **só a publicação** pode esperar a decisão de publicar (K-010) e não chama Vicente antes dela (D-032). Pergunta fechada "sem Falta pela regra" não tem guia.
 1. Parta das normas já conferidas no projeto (C1, Anexo C); só confira de novo se faltar (habilidade `conferir-fato`, com teto).
 2. Escreva o porquê em português simples, seguido do trecho literal e da URL.
 3. Liste o que destravaria (cadastro, consentimento, licença, parecer, consulta).
@@ -53,4 +54,5 @@ Não autoriza, não protocola, não preenche cadastro em nome de Vicente, não d
 - Validador: `scripts/validar.py guia-liberacao`.
 
 ## Histórico
+- 0.1.1 (24/10/2026, K-124): o passo 0, pelo `vale_para` da Falta (agora ou só a publicação; D-042).
 - 0.1.0 (16/10/2026): primeira versão, com o caso SisGen do C1.

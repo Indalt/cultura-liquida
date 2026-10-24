@@ -205,7 +205,7 @@
         "--raiz",
         "testes/nucleo/acervo-ok"
       ],
-      "criterio": "licença ausente, substância controlada e criança: Faltas com norma e caminho (triagem-fixa-0.1)",
+      "criterio": "substância (jurema, como dúvida) e criança: Faltas com norma, caminho e vale_para (triagem-fixa-0.3; antes, 0.1)",
       "saida_contem": "substancia_controlada"
     },
     {
@@ -215,8 +215,8 @@
         "scripts/triagem_fixa.py",
         "testes/nucleo/triagem/entrada-limpa.json"
       ],
-      "criterio": "nenhuma Falta quando nenhuma regra casa",
-      "saida_contem": "0 Falta(s)"
+      "criterio": "nenhuma Falta quando nenhuma regra casa, dito no log (D-042)",
+      "saida_contem": "sem Falta pela regra triagem-fixa-0.3"
     },
     {
       "nome": "triagem_fixa: norma sem trecho não gera Falta",
@@ -367,10 +367,82 @@
       "espera": "passa",
       "comando": [
         "scripts/triagem_fixa.py",
-        "testes/nucleo/triagem/entrada-licenca-null.json"
+        "testes/nucleo/triagem/entrada-licenca-null.json",
+        "--ato",
+        "publicar"
       ],
-      "criterio": "achado A-002: null vale como ausente",
+      "criterio": "achado A-002: null vale como ausente; a licença ausente só vale diante de cópia ou de publicação (D-042)",
       "saida_contem": "licenca_ausente"
+    },
+    {
+      "nome": "triagem_fixa: link e citação curta com o autor citado, sem Falta pela regra",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-citacao-autor.json",
+        "--portao"
+      ],
+      "saida_contem": "sem Falta pela regra",
+      "criterio": "D-042, item 1: ler, localizar, linkar e citar trecho curto com autor e origem não gera Falta; o nome do autor citado (papel 'autor') não é dado pessoal a barrar; licença não conferida não pesa no ato ler"
+    },
+    {
+      "nome": "triagem_fixa: cópia da página inteira barra agora",
+      "espera": "reprova",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-copia-pagina.json",
+        "--ato",
+        "copiar",
+        "--portao"
+      ],
+      "saida_contem": "copia_alem_da_citacao",
+      "criterio": "D-042, item 2: cópia além da citação de obra protegida barra agora (Lei 9.610, art. 29, I)"
+    },
+    {
+      "nome": "triagem_fixa: quem ensinou, sem consentimento, barra agora",
+      "espera": "reprova",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-quem-ensinou.json",
+        "--portao"
+      ],
+      "saida_contem": "dado_pessoal",
+      "criterio": "D-042, item 2: dado pessoal barra agora; só o autor citado fica fora"
+    },
+    {
+      "nome": "triagem_fixa: receita detalhada de substância listada barra agora",
+      "espera": "reprova",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-receita-substancia.json",
+        "--portao"
+      ],
+      "saida_contem": "vale para agora",
+      "criterio": "D-042, item 2: na substância controlada, só o modo de obter ou de preparar barra agora (Lei 11.343, art. 33)"
+    },
+    {
+      "nome": "triagem_fixa: conhecimento tradicional de origem identificável não barra a leitura",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-ct-identificavel.json",
+        "--portao"
+      ],
+      "saida_contem": "só para a publicação, ditas",
+      "criterio": "D-042, item 2: o conhecimento tradicional barra só a publicação; a Falta fica dita, com a nota do art. 9º"
+    },
+    {
+      "nome": "triagem_fixa: conhecimento tradicional de origem identificável, sem consentimento, barra a publicação",
+      "espera": "reprova",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-ct-identificavel.json",
+        "--ato",
+        "publicar",
+        "--portao"
+      ],
+      "saida_contem": "conhecimento_tradicional",
+      "criterio": "D-042, item 2: no ato publicar, a Falta de conhecimento tradicional (Lei 13.123, art. 12, §2º, e art. 9º) barra"
     },
     {
       "nome": "localizar_trecho: 'nunca' inserido não passa por semelhança (A-015 do K-105; D-041)",

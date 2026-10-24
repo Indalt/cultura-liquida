@@ -2,17 +2,65 @@
   "habilidade": "triagem-juridica",
   "rodada": "A",
   "casos": [
-    {"nome": "caso A: dado sensível → Falta (norma não conferida, dita como tal)", "espera": "passa", "esquema": "falta",
-     "entrada": ".claude/skills/triagem-juridica/exemplos/falta-dado-sensivel.json",
-     "criterio": "Falta jurídica com subtipo, norma (nível 'não conferido' declarado) e caminho de liberação"},
-    {"nome": "caso B: conhecimento tradicional de origem identificável → Falta", "espera": "passa", "esquema": "falta",
-     "entrada": ".claude/skills/triagem-juridica/exemplos/falta-conhecimento-tradicional.json",
-     "criterio": "norma oficial com trecho literal (C1) e caminho = guia SisGen"},
-    {"nome": "Falta jurídica sem caminho de liberação", "espera": "reprova", "esquema": "falta",
-     "entrada": ".claude/skills/triagem-juridica/exemplos/erro-falta-juridica-sem-caminho.json",
-     "criterio": "D-025: barreira jurídica sem caminho deve ser recusada"},
-    {"nome": "Falta completada por inferência", "espera": "reprova", "esquema": "falta",
-     "entrada": ".claude/skills/triagem-juridica/exemplos/erro-falta-completada.json",
-     "criterio": "D-018: a Falta é dita, nunca completada"}
+    {
+      "nome": "caso A: dado sensível → Falta (norma não conferida, dita como tal)",
+      "espera": "passa",
+      "esquema": "falta",
+      "entrada": ".claude/skills/triagem-juridica/exemplos/falta-dado-sensivel.json",
+      "criterio": "Falta jurídica com subtipo, norma (nível 'não conferido' declarado) e caminho de liberação"
+    },
+    {
+      "nome": "caso B: conhecimento tradicional de origem identificável → Falta",
+      "espera": "passa",
+      "esquema": "falta",
+      "entrada": ".claude/skills/triagem-juridica/exemplos/falta-conhecimento-tradicional.json",
+      "criterio": "norma oficial com trecho literal (C1) e caminho = guia SisGen"
+    },
+    {
+      "nome": "Falta jurídica sem caminho de liberação",
+      "espera": "reprova",
+      "esquema": "falta",
+      "entrada": ".claude/skills/triagem-juridica/exemplos/erro-falta-juridica-sem-caminho.json",
+      "criterio": "D-025: barreira jurídica sem caminho deve ser recusada"
+    },
+    {
+      "nome": "Falta completada por inferência",
+      "espera": "reprova",
+      "esquema": "falta",
+      "entrada": ".claude/skills/triagem-juridica/exemplos/erro-falta-completada.json",
+      "criterio": "D-018: a Falta é dita, nunca completada"
+    },
+    {
+      "nome": "caso C: a F-0004 relida pelo roteiro (cópia além da citação, barra agora)",
+      "espera": "passa",
+      "esquema": "falta",
+      "entrada": "acervo/faltas/F-0004.json",
+      "criterio": "D-042 e D-043: vale_para 'agora', norma oficial (Lei 9.610, art. 29, I) e caminho; a captura nova fora do wayback.py"
+    },
+    {
+      "nome": "caso D: link e citação curta com o autor citado, sem Falta pela regra",
+      "espera": "passa",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "testes/nucleo/triagem/entrada-citacao-autor.json",
+        "--portao"
+      ],
+      "saida_contem": "sem Falta pela regra",
+      "criterio": "D-042, item 1: ler, linkar e citar trecho curto com autor e origem não gera Falta"
+    },
+    {
+      "nome": "conhecimento tradicional de origem identificável, só para publicar, com a nota do art. 9º",
+      "espera": "passa",
+      "esquema": "falta",
+      "entrada": ".claude/skills/triagem-juridica/exemplos/falta-ct-so-publicar.json",
+      "criterio": "D-042, item 2: barra só a publicação; o detalhe espera na pasta local"
+    },
+    {
+      "nome": "vale_para fora do contrato",
+      "espera": "reprova",
+      "esquema": "falta",
+      "entrada": ".claude/skills/triagem-juridica/exemplos/erro-vale-para-fora.json",
+      "criterio": "D-042: só 'agora' ou 'publicar' (e 'captura', o nome antigo)"
+    }
   ]
 }

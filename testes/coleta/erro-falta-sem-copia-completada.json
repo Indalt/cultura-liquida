@@ -1,0 +1,12 @@
+{
+  "id": "F-900010",
+  "tipo": "outro",
+  "o_que_falta": "sem cópia arquivada: o Wayback não tem captura da página do item (consulta de 2026-10-24)",
+  "por_que": "exemplo que reprova (K-124): a Falta traz uma cópia inferida",
+  "onde_aparece": [
+    "entrada/EN-0003.json"
+  ],
+  "criada_por": "curador (teste, K-124)",
+  "data": "2026-10-24",
+  "valor_inferido": "https://web.archive.org/web/2026/https://hdl.handle.net/20.500.12733/9999999"
+}

@@ -2,11 +2,11 @@
   "id": "F-0004",
   "tipo": "impedimento_juridico",
   "subtipo_juridico": "direito_autoral",
-  "vale_para": "captura",
+  "vale_para": "agora",
   "o_que_falta": "Saber se pedir ao Internet Archive (Save Page Now 2) que capture a página pública de um item, e guardar na Entrada só o endereço da cópia, é utilização da obra por reprodução, que depende de autorização prévia e expressa do autor (Lei 9.610, art. 29), ou se a reprodução é só do Internet Archive e o projeto não reproduz nada. Falta também a licença de cada item (por exemplo, o rodapé CC BY-NC-ND 4.0 das publicações da Embrapa, não conferido nesta rodada).",
   "por_que": "O art. 29 exige autorização prévia e expressa para a utilização da obra por quaisquer modalidades, e cita a reprodução parcial ou integral. A página de um item traz título, resumo e outros textos de autoria de terceiros. O projeto não baixa nem guarda o texto, mas é ele quem provoca a captura e depois divulga o endereço da cópia no Git público. Se isso conta como reprodução pelo projeto não está dito na lei e não foi conferido em doutrina ou jurisprudência; na dúvida, Falta (D-020). O art. 46, III, trata de citação na medida justificada e não foi lido nesta rodada como cobertura de cópia de página inteira (interpretação, não conferida). Vale para a captura em si; o simples registro do link permanente na Entrada não é afetado.",
   "onde_aparece": [
-    "scripts/wayback.py",
+    "pedido de captura nova ao Save Page Now (fora do scripts/wayback.py desde o K-124, D-043; volta no K-010)",
     "entrada/ (campo da cópia arquivada)",
     "trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md (bloco 5, Antes da primeira captura)"
   ],
@@ -22,5 +22,5 @@
   },
   "criada_por": "juridico (triagem-juridica, K-107)",
   "data": "2026-10-23",
-  "nota": "Enquanto a Falta estiver aberta, a Entrada fica só com o link permanente e sem cópia. O que destravaria, para Vicente decidir (nada aqui autoriza): (a) uma regra que limite a captura às Entradas cuja página traga licença aberta que permita copiar, com a licença registrada na Entrada; (b) autorização do titular; (c) consulta a profissional habilitado, porque a pergunta jurídica (cópia pedida a terceiro) é de interpretação. F-0003 trata da publicação no repositório público e continua aberta."
+  "nota": "Enquanto a Falta estiver aberta, a Entrada fica só com o link permanente e sem cópia. O que destravaria, para Vicente decidir (nada aqui autoriza): (a) uma regra que limite a captura às Entradas cuja página traga licença aberta que permita copiar, com a licença registrada na Entrada; (b) autorização do titular; (c) consulta a profissional habilitado, porque a pergunta jurídica (cópia pedida a terceiro) é de interpretação. F-0003 trata da publicação no repositório público e continua aberta. Relida no K-124 (24/10/2026) pela reflexão antes da ação (D-042): o ato é pedir a cópia da página inteira (o que vamos fazer); a página é pública e acessível, o que não basta (pública e acessível); Lei 9.610, art. 29, I, oficial (norma); a cópia vai além da citação curta, que é o que a regra deixa sem Falta (o ato bate na norma); barra agora, não só a publicação (vale_para 'agora', antes 'captura', o nome antigo); há um jeito sem Falta: registrar só a captura que já existe (D-043). A Falta continua aberta; o cartão K-202 fechou como 'mantida com o porquê': no piloto não se pede captura nova, e a captura nova volta no K-010. A F-0005 segue ligada a ela."
 }
