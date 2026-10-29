@@ -1,0 +1,29 @@
+{
+  "id": "TR-0011",
+  "fonte": "FO-0004",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 7 do PDF; car. 6771-6887 do texto normalizado (normalizacao-0.2)",
+  "hash": "0f148ab019ee312cd922c054ddf686ee572b26bec246d2b50a1336ba0012585e",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Entretanto, a cajuína é geralmente processada em pequenas unidades rudimentares, que têm pouco controle do processo.",
+  "antes": "adstringência, o que prejudica a aceitação do suco de caju. ",
+  "depois": " Com isso, o tratamento térmico é frequentemente muito sever",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

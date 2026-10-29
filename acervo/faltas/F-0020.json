@@ -1,0 +1,11 @@
+{
+  "id": "F-0020",
+  "tipo": "outro",
+  "o_que_falta": "critério de prática cultural ainda não avaliado (D-022)",
+  "por_que": "Os quatro critérios (identidade ou memória, reconhecimento pelo grupo, transmissão entre gerações, recriação) se avaliam na montagem da ficha (bloco 8, montar-ficha), com as Evidências do bloco 7; até lá, Falta dita.",
+  "onde_aparece": [
+    "acervo/clb/CL-0001.json"
+  ],
+  "criada_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+  "data": "2026-10-29"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "FO-0009",
+  "referencia": {
+    "titulo": "Processamento do pedúnculo do caju: cajuína",
+    "instituicao": "Embrapa Agroindústria Tropical (Fortaleza, CE)",
+    "ano": "2009",
+    "tipo": "manual (publicação técnica, ISSN 1677-1915)",
+    "link_permanente": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/748513"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2009",
+  "url": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/748513",
+  "wayback": "sem cópia arquivada",
+  "data_acesso": "2026-10-29",
+  "perspectiva": "instituição",
+  "deriva_de": [],
+  "entrada": "EN-1315",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: http://www.infoteca.cnptia.embrapa.br/bitstream/doc/748513/1/Doc123.pdf (pdf); de onde a fonte diz que tira a informação: Instrução Normativa nº 1, de 7/1/2000, do MAPA (definição do produto)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

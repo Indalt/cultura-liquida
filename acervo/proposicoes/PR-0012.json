@@ -1,0 +1,20 @@
+{
+  "id": "PR-0012",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "definição oficial do suco de caju clarificado: bebida não fermentada e não diluída do pedúnculo",
+  "periodo": {
+    "referido": "IN nº 1, de 7/1/2000"
+  },
+  "evidencias": [
+    "EV-0020"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

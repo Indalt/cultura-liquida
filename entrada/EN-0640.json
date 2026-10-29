@@ -16,7 +16,7 @@
   "data_entrada": "2026-10-24",
   "url_ou_arquivo": "https://repositorio.ufrn.br/jspui/handle/123456789/22219",
   "identificador": "AM-0021:repositorio.ufrn.br/handle/123456789/22219",
-  "estado": "bruto",
+  "estado": "quarentena",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -27,7 +27,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem Triagem do bloco 7 (K109-L1, EX-0046, valencias-0.1).",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",
@@ -41,5 +41,22 @@
     "motivo": "forma 'caju' no resumo (CO-0001)",
     "versao_regra": "pretriagem-0.1"
   },
-  "citacao_resumo": "…do produto final. Desta forma, o presente trabalho teve como objetivo remover os taninos condensados do suco de caju através do processo de troca iônica para se obter o suco de caju clarificado (cajuína). Para tal, foram utilizadas…"
+  "citacao_resumo": "…do produto final. Desta forma, o presente trabalho teve como objetivo remover os taninos condensados do suco de caju através do processo de troca iônica para se obter o suco de caju clarificado (cajuína). Para tal, foram utilizadas…",
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 0,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+      "trecho_localizado",
+      "voz"
+    ]
+  },
+  "selo": "PENDENTE_JULGAMENTO",
+  "motivo_quarentena": "o repositório da UFRN (DSpace 7) devolveu só uma página vazia ao robô; sem texto, não há trecho localizável nem voz identificável (lastro 2 pelo handle)",
+  "gera": {
+    "fontes": [
+      "FO-0012"
+    ]
+  }
 }

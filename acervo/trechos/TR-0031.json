@@ -1,0 +1,29 @@
+{
+  "id": "TR-0031",
+  "fonte": "FO-0010",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 5 do PDF; car. 2395-2510 do texto normalizado (normalizacao-0.2)",
+  "hash": "22682c87e2a4a9ca20fde08b3325375aa6f20f6efbe04f0c459459a402a5b3f9",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste brasileiro na época do descobrimento do Brasil.",
+  "antes": " pelos piauienses por ser refrescante e sem teor alcoólico. ",
+  "depois": " Porém, foi mais especificamente no Piauí que esta bebida to",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

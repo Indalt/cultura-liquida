@@ -9,8 +9,8 @@
   "data_entrada": "2026-10-24",
   "url_ou_arquivo": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/915205",
   "identificador": "AM-0029:infoteca.cnptia.embrapa.br/handle/doc/915205",
-  "estado": "bruto",
-  "sustenta_aviso_saude_politica": false,
+  "estado": "extraído",
+  "sustenta_aviso_saude_politica": true,
   "protecao": {
     "licenca": "não conferido",
     "consentimento": "não se aplica",
@@ -20,7 +20,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem Triagem do bloco 7 (K109-L1, EX-0046, valencias-0.1).",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",
@@ -34,5 +34,24 @@
     "motivo": "forma 'caju' no resumo (CO-0001)",
     "versao_regra": "pretriagem-0.1"
   },
-  "citacao_resumo": "…Piauí; Conhecimento tecnológico; Recomendações técnicas para o cultivo do cajueiro no Estado do Piauí; Produção de caju; Industrialização do pedúnculo; Armazenamento da produção de cajuína."
+  "citacao_resumo": "…Piauí; Conhecimento tecnológico; Recomendações técnicas para o cultivo do cajueiro no Estado do Piauí; Produção de caju; Industrialização do pedúnculo; Armazenamento da produção de cajuína.",
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+  },
+  "gera": {
+    "fontes": [
+      "FO-0010"
+    ],
+    "trechos": [
+      "TR-0031",
+      "TR-0032",
+      "TR-0033",
+      "TR-0034",
+      "TR-0035"
+    ]
+  }
 }

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0017",
+  "clb": "CL-0001",
+  "atributo": "nomes e variantes",
+  "valor": "o suco de caju clarificado, ou cajuína, é bebida não fermentada e não diluída do pedúnculo",
+  "periodo": {
+    "referido": "IN nº 1, de 7/1/2000"
+  },
+  "evidencias": [
+    "EV-0028"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

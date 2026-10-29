@@ -1,0 +1,12 @@
+{
+  "id": "F-0023",
+  "tipo": "outro",
+  "o_que_falta": "lugar da publicação não dito na fonte",
+  "por_que": "A Evidência pede o lugar da prática, da publicação e da pesquisa (§6); quando a fonte não o diz, fica a Falta, dita e nunca completada por inferência (D-018).",
+  "onde_aparece": [
+    "acervo/evidencias/EV-0043.json",
+    "acervo/evidencias/EV-0044.json"
+  ],
+  "criada_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+  "data": "2026-10-29"
+}

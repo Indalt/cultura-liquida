@@ -1,0 +1,32 @@
+{
+  "id": "EV-0031",
+  "trecho": "TR-0031",
+  "proposicao": "PR-0019",
+  "sentido": "a favor",
+  "voz": {
+    "tipo": "autor",
+    "papel": "autor do documento (Embrapa)"
+  },
+  "lugares": {
+    "pratica": "LU-0010",
+    "publicacao": "LU-0007",
+    "pesquisa": "F-0022"
+  },
+  "estado": "não conferida",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  },
+  "criterio_pratica_cultural": "identidade ou memória"
+}

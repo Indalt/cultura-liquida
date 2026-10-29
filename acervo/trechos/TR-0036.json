@@ -1,0 +1,29 @@
+{
+  "id": "TR-0036",
+  "fonte": "FO-0011",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 773-1049 do texto normalizado (normalizacao-0.2)",
+  "hash": "f65f9c5a6edf951eabedee12ae54ed39dcdae772af6abf4910c06f388386f53b",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A cajuína, muito tradicional no Nordeste brasileiro, é obtida a partir de suco de caju puro, clarificado, sem adição de açúcar e conservantes e é uma forma consagrada de aproveitar o pedúnculo do caju, que é muito perecível após a retirada da planta e a separação da castanha.",
+  "antes": " Fortaleza: Embrapa Agroindústria Tropical, 2015. Conteúdo: ",
+  "depois": " A região semiárida apresenta clima seco e quente, caracteri",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

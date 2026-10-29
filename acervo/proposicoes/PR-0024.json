@@ -1,0 +1,20 @@
+{
+  "id": "PR-0024",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "modo de fazer e práticas socioculturais associadas à cajuína são bens culturais, surgidos com os rituais de hospitalidade das famílias proprietárias de terras do Piauí",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0040"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

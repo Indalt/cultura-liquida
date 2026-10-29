@@ -1,0 +1,20 @@
+{
+  "id": "PR-0026",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "cajuína processada separada por coloração do pseudofruto e sem separação, resultando em quatro tipos",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0043"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0018",
+  "fonte": "FO-0006",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 1 do PDF; car. 705-972 do texto normalizado (normalizacao-0.2)",
+  "hash": "a65db2eae245a31bc4e60f82190e246708d9ac43fd4960f38d9c87273a7830b1",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "foi descoberto pelos nativos destas terras, que o utilizavam das mais diversas formas, seja como fruto (in natura), seja como suco extraído por prensagem manual ou como bebida fermentada (o caoi ou caoim), a qual era utilizada em comemorações e em ocasiões especiais.",
+  "antes": "cidentale L.), frutífera originária do Nordeste brasileiro, ",
+  "depois": " O caju é composto da castanha, o verdadeiro fruto, e do ped",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0013",
+  "fonte": "FO-0005",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 10 do PDF; car. 5720-5904 do texto normalizado (normalizacao-0.2)",
+  "hash": "7bee0640f85df4bf60e1f6d5493cfac0d38dd3ad6ef0249930dd307e59646f1f",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O suco fresco clarificado, engarrafado e cozido em banhomaria, dá origem à cajuína, bebida refrescante, não alcóolica, sem aditivos químicos incorporados e com açúcares do próprio suco",
+  "antes": "o na fabricação dos mais diversos tipos de doces e bebidas. ",
+  "depois": ", tendo um sabor e uma coloração semelhante ao suco de maçã ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

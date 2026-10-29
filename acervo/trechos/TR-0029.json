@@ -1,0 +1,29 @@
+{
+  "id": "TR-0029",
+  "fonte": "FO-0009",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 5 do PDF; car. 3637-3830 do texto normalizado (normalizacao-0.2)",
+  "hash": "c6d20cd86a82430362c636182401a0518c0e5a91962b7a07b98f335ca92252e1",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Este manual tem como objetivo atender à demanda de pequenos e médios produtores de caju na elaboração simplificada da cajuína como uma alternativa econômica de agregar valor a sua matéria-prima",
+  "antes": "e de sua dimensão, ou seja, as Boas Práticas de Fabricação. ",
+  "depois": ", por meio da adoção de processos tecnológicos compatíveis c",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

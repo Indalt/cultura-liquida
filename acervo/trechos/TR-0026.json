@@ -1,0 +1,29 @@
+{
+  "id": "TR-0026",
+  "fonte": "FO-0008",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 10 do PDF; car. 8517-8764 do texto normalizado (normalizacao-0.2)",
+  "hash": "14679faf2eb274d89ba6c1ea1a38c6be5539c030c975ad7f29b49bf8b9464e8a",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Para cada tipo de pedúnculo utilizado, o produto obtido é diferente em relação ao seu teor natural em açúcares e vitaminas, enfim, a variedade de caju utilizada para a extração do suco é fator determinante para a qualidade final da cajuína obtida.",
+  "antes": "dos no mercado quantas são as variedades de caju plantadas. ",
+  "depois": " Um outro aspecto que deve ser observado na qualidade da caj",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

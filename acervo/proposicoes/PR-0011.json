@@ -1,0 +1,20 @@
+{
+  "id": "PR-0011",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "caju descoberto pelos nativos: fruto in natura, suco por prensagem manual ou bebida fermentada (caoi ou caoim) em comemorações",
+  "periodo": {
+    "referido": "não dito na fonte (tempo dos nativos)"
+  },
+  "evidencias": [
+    "EV-0018"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

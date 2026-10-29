@@ -1,0 +1,24 @@
+{
+  "id": "PR-0005",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "suco fresco que passa por clarificação e cozimento em banho-maria",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0006",
+    "EV-0008",
+    "EV-0016",
+    "EV-0027",
+    "EV-0034"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

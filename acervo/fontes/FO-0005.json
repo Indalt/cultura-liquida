@@ -1,0 +1,33 @@
+{
+  "id": "FO-0005",
+  "referencia": {
+    "titulo": "Cajuína",
+    "instituicao": "Embrapa Informação Tecnológica (Brasília, DF), com Embrapa Agroindústria Tropical",
+    "ano": "2007",
+    "tipo": "livro (manual)",
+    "link_permanente": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/110278"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2007",
+  "url": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/110278",
+  "wayback": "sem cópia arquivada",
+  "data_acesso": "2026-10-29",
+  "perspectiva": "instituição",
+  "deriva_de": [],
+  "entrada": "EN-0078",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: http://www.infoteca.cnptia.embrapa.br/bitstream/doc/110278/1/00081350.pdf (pdf)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

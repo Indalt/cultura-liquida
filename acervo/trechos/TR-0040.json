@@ -1,0 +1,29 @@
+{
+  "id": "TR-0040",
+  "fonte": "FO-0014",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 30 do PDF; car. 35908-36088 do texto normalizado (normalizacao-0.2)",
+  "hash": "7529e7217208e68577ced9773d2bad8dfe7fd3dc829552ba9cd941dc6663f6b3",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O modo de fazer e as práticas socioculturais associadas à cajuína são bens culturais que surgem junto com os rituais de hospitalidade das famílias proprietárias de terras no Piauí.",
+  "antes": "de e os laços existentes entre as famílias produtoras.[...] ",
+  "depois": "[...] A cajuína alçou mercados externos ao Piauí, e ao mesmo",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

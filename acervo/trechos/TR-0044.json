@@ -1,0 +1,29 @@
+{
+  "id": "TR-0044",
+  "fonte": "FO-0015",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 1531-1659 do texto normalizado (normalizacao-0.2)",
+  "hash": "4e8d5a8d65037d7f2df78446ebb2fe0f2abbf0e60317d723db3a1dbcbc5f14a5",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "o presente estudo realizou a caracterização físico-química dos pseudofrutos mais adequados de cajus para elaboraração de cajuína",
+  "antes": "nais e sensoriais da cajuína e da água de coco em pó (ACP), ",
+  "depois": ", estabeleceu parâmetros de padronização no processamento de",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

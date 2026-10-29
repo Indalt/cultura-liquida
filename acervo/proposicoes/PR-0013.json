@@ -1,0 +1,20 @@
+{
+  "id": "PR-0013",
+  "clb": "CL-0001",
+  "atributo": "recipiente",
+  "valor": "garrafas de 500 mL lavadas e esterilizadas, enchidas com suco a 70-80 ºC, para formar vácuo",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0022"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

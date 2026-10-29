@@ -1,0 +1,29 @@
+{
+  "id": "TR-0008",
+  "fonte": "FO-0003",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 18 do PDF; car. 32482-32627 do texto normalizado (normalizacao-0.2)",
+  "hash": "b6ef5afe15249e931dd7d1c8779f1a1f8e9bcac61d4b0072f0e5f907c71563a9",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Posterior ao envase a mesma deve ser devidamente fechada, e as garrafas levadas ao banho maria para esterilização e obtenção de coloração típica.",
+  "antes": "e ser aquecida para sua pasteurização, e envasada a quente. ",
+  "depois": " Segundo Damasceno (2007), o escurecimento da cajuína não é ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

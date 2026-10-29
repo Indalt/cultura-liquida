@@ -1,0 +1,29 @@
+{
+  "id": "TR-0016",
+  "fonte": "FO-0005",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 33 do PDF; car. 33964-34221 do texto normalizado (normalizacao-0.2)",
+  "hash": "7bee0640f85df4bf60e1f6d5493cfac0d38dd3ad6ef0249930dd307e59646f1f",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "As garrafas, devidamente fechadas são submetidas a tratamento térmico em banho-maria, para promover uma esterilização comercial no produto e, como conseqüência, a caramelização dos açúcares e a obtenção da coloração amarelo âmbar, característica da cajuína.",
+  "antes": "dor do tipo passa-não-passa (gabarito). T ratamento térmico ",
+  "depois": " Colocam-se então as garrafas, ainda quentes, no banho-maria",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

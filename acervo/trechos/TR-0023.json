@@ -1,0 +1,29 @@
+{
+  "id": "TR-0023",
+  "fonte": "FO-0007",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 2 do PDF; car. 1993-2152 do texto normalizado (normalizacao-0.2)",
+  "hash": "7ea7e83dfb222e8ab8ad90cb5ae211b8c53cb51ced232a09d182276066582f34",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A importância social da cultura do caju é caracterizada pela geração de emprego e renda para a população rural do Piauí, principalmente durante a estação seca.",
+  "antes": "s e em início de apodrecimento sejam devidamente retirados. ",
+  "depois": " O maior ganho econômico do caju deve-se à amêndoa obtida do",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

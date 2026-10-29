@@ -1,0 +1,38 @@
+{
+  "id": "CL-0001",
+  "termo": "TE-0002",
+  "termos": [
+    "TE-0002"
+  ],
+  "situacoes": [],
+  "criterios": {
+    "identidade_ou_memoria": {
+      "falta": "F-0020"
+    },
+    "reconhecimento_pelo_grupo": {
+      "falta": "F-0020"
+    },
+    "transmissao_entre_geracoes": {
+      "falta": "F-0020"
+    },
+    "recriacao": {
+      "falta": "F-0020"
+    }
+  },
+  "estado": "ficha em montagem",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a CLB do caso-piloto (D-031), identificada pelo termo (D-039); nasce para ligar as Proposições do bloco 7; as situações e os critérios entram no bloco 8",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

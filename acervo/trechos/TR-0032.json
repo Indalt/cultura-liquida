@@ -1,0 +1,29 @@
+{
+  "id": "TR-0032",
+  "fonte": "FO-0010",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 13 do PDF; car. 11638-11890 do texto normalizado (normalizacao-0.2)",
+  "hash": "22682c87e2a4a9ca20fde08b3325375aa6f20f6efbe04f0c459459a402a5b3f9",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Quando os portugueses chegaram ao Brasil, já encontraram a cajuína, uma bebida desenvolvida artesanalmente pelos indígenas, que habitavam a região Nordeste, usada para comemorar as vitórias nas grandes batalhas que travavam pelo domínio dos cajueirais.",
+  "antes": "cajuína, doces de diversos tipos e para consumo de mesa. 15 ",
+  "depois": " No entanto, foi no Estado do Piauí que a cajuína entrou num",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

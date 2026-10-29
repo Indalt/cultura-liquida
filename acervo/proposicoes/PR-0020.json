@@ -1,0 +1,20 @@
+{
+  "id": "PR-0020",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "bebida artesanal indígena já encontrada pelos portugueses, usada para comemorar vitórias",
+  "periodo": {
+    "referido": "chegada dos portugueses ao Brasil"
+  },
+  "evidencias": [
+    "EV-0032"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

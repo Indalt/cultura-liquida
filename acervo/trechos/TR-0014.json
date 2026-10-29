@@ -1,0 +1,29 @@
+{
+  "id": "TR-0014",
+  "fonte": "FO-0005",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 11 do PDF; car. 6336-6598 do texto normalizado (normalizacao-0.2)",
+  "hash": "7bee0640f85df4bf60e1f6d5493cfac0d38dd3ad6ef0249930dd307e59646f1f",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Nas regiões produtoras de caju, principalmente nos estados do Piauí, Ceará e Rio Grande do Norte, a cajuína é um produto muito apreciado pelo seu sabor bastante característico e pelo aspecto de uma bebida refrescante que deve ser consumida de preferência gelada.",
+  "antes": "ção é de aproximadamente 10 milhões de garrafas anualmente. ",
+  "depois": " Há um grande potencial de exploração de mercado desse produ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

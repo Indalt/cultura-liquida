@@ -1,0 +1,33 @@
+{
+  "id": "FO-0001",
+  "referencia": {
+    "titulo": "Efeitos agudos da cajuína em marcadores biológicos, perceptivos e no desempenho de corredores submetidos a um time trial simulado: um estudo randomizado, cruzado e duplo-cego controlado por placebo",
+    "instituicao": "Universidade Federal do Ceará, Programa de Pós-Graduação em Biotecnologia (Campus Sobral)",
+    "ano": "2021",
+    "tipo": "dissertação",
+    "link_permanente": "http://www.repositorio.ufc.br/handle/riufc/58951"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2021",
+  "url": "http://www.repositorio.ufc.br/handle/riufc/58951",
+  "wayback": "sem cópia arquivada",
+  "data_acesso": "2026-10-29",
+  "perspectiva": "academia",
+  "deriva_de": [],
+  "entrada": "EN-1155",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: http://repositorio.ufc.br/bitstream/riufc/58951/1/2021_dis_ljfsjunior.pdf (pdf); de onde a fonte diz que tira a informação: cita Silva Neto e Abreu (2007) para as etapas de produção; o trecho 3 é do resumo da própria dissertação",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

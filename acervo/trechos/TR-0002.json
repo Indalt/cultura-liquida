@@ -1,0 +1,29 @@
+{
+  "id": "TR-0002",
+  "fonte": "FO-0001",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 21 do PDF; car. 30718-30842 do texto normalizado (normalizacao-0.2)",
+  "hash": "398a76a3ff047c48abfb51d531b9b674bc658c3cf17442fa248294da12c44e24",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A Cajuína é uma bebida leve com sabor característico, que não possui álcool, fermento e aditivos químicos em sua composição.",
+  "antes": "). 2.4 Cajuína e seus possíveis efeitos no exercício físico ",
+  "depois": " Além disso, consiste em um suco fresco engarrafado, clarifi",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

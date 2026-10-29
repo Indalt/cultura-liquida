@@ -1,0 +1,29 @@
+{
+  "id": "TR-0034",
+  "fonte": "FO-0010",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 80 do PDF; car. 93565-93804 do texto normalizado (normalizacao-0.2)",
+  "hash": "22682c87e2a4a9ca20fde08b3325375aa6f20f6efbe04f0c459459a402a5b3f9",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A cajuína é o suco do caju puro, clarificado, sem adição de açúcar e conservantes, acondicionado em garrafas que são colocadas por um período de cozimento em banho-maria para o líquido adquirir uma coloração âmbar e um sabor característico",
+  "antes": ", Brasília e principalmente na região Nordeste (Figura 22). ",
+  "depois": ", resultante da caramelização dos açúcares do próprio suco. ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

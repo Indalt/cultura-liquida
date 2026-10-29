@@ -1,0 +1,29 @@
+{
+  "id": "TR-0020",
+  "fonte": "FO-0006",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 1 do PDF; car. 2243-2436 do texto normalizado (normalizacao-0.2)",
+  "hash": "a65db2eae245a31bc4e60f82190e246708d9ac43fd4960f38d9c87273a7830b1",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "De acordo com a Instrução Normativa no 1, de 7 de janeiro de 2000, do Ministério da Agricultura, Pecuária e Abastecimento(1) o suco de caju clarificado é uma bebida não fermentada e não diluída",
+  "antes": "oncentração de habitantes nordestinos. Definição do Produto ",
+  "depois": ", obtida da parte comestível do pedúnculo do caju (Anacardiu",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

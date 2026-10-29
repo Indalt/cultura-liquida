@@ -1,0 +1,21 @@
+{
+  "id": "PR-0021",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "no Piauí a cajuína entrou em estágio de desenvolvimento e virou a bebida tradicional dos piauienses",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0033",
+    "EV-0042"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}

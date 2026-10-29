@@ -1,0 +1,29 @@
+{
+  "id": "TR-0004",
+  "fonte": "FO-0002",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 16 do PDF; car. 20160-20314 do texto normalizado (normalizacao-0.2)",
+  "hash": "768824e4c513b8891677fc9a4e1c926151dfffee29501c0a811f5e8abb282dff",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A cajuína é uma bebida obtida a partir do suco clarificado da maça do caju, apresenta um sabor levemente adstringente e tem um aroma característico único.",
+  "antes": "o em humanos, é a cajuína (Abreu, 2007; Lima et al., 2007). ",
+  "depois": " Sua coloração varia entre incolor e um amarelo translúcido,",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0035",
+  "fonte": "FO-0010",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 79 do PDF; car. 91223-91342 do texto normalizado (normalizacao-0.2)",
+  "hash": "22682c87e2a4a9ca20fde08b3325375aa6f20f6efbe04f0c459459a402a5b3f9",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A palavra do idioma tupi acá-iu, que aportuguesada deu origem ao nome de caju, é conhecida desde o tempo dos indígenas.",
+  "antes": "ará, Rio Grande do Norte e Pernambuco. 85 Origem da cajuína ",
+  "depois": " Quando os colonizadores aqui chegaram já encontraram o caju",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0009",
+  "fonte": "FO-0003",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 18 do PDF; car. 31913-32040 do texto normalizado (normalizacao-0.2)",
+  "hash": "b6ef5afe15249e931dd7d1c8779f1a1f8e9bcac61d4b0072f0e5f907c71563a9",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Segundo os autores, a clarificação do suco de caju tem como principal objetivo a remoção de substâncias causadoras de turbidez.",
+  "antes": "ficação, até as etapas finais de rotulagem e armazenamento. ",
+  "depois": " O processo consiste na adição de solução aquosa de gelatina",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PR-0001",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "bebida refrescante do suco da maçã do caju clarificado e esterilizado no interior do recipiente",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0001",
+    "EV-0004",
+    "EV-0010"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0046"
+  }
+}
