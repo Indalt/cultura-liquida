@@ -1,0 +1,27 @@
+{
+  "id": "CO-0006",
+  "nome": "caju + descritores (TE-0001)",
+  "tipo": "mista",
+  "termos": [
+    "TE-0001"
+  ],
+  "variantes": [
+    "acá-iu",
+    "cajú",
+    "ca-ju"
+  ],
+  "descritores": [
+    "clarificação",
+    "banho-maria",
+    "filtragem",
+    "esterilização"
+  ],
+  "traducao": "ambientes/traducao-consultas.json#CO-0006",
+  "origem_registro": {
+    "criado_por": "scripts/gerar_termo.py",
+    "data": "2026-10-29",
+    "execucao": "EX-0070",
+    "versao_regra": "termo-0.2"
+  },
+  "nota": "proposta gerada do Termo pelo laço termo → booleano → Consulta; booleano: (\"caju\" OR \"acá-iu\" OR \"cajú\" OR \"ca-ju\") AND (clarificação OR banho-maria OR filtragem OR esterilização)"
+}

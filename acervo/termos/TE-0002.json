@@ -1,12 +1,21 @@
 {
   "id": "TE-0002",
-  "conceito": "PROVISÓRIO, a confirmar nas abonações: a bebida cajuína, nomeada no bem 'Produção tradicional e práticas socioculturais associadas à cajuína no Piauí' (Livro dos Saberes do IPHAN; registro em 15/05/2014, revalidação em 17/06/2025), ligada ao processamento do pedúnculo do caju e oferecida em garrafa como gesto de acolhimento.",
+  "conceito": "Bebida obtida do suco clarificado do pedúnculo (a 'maçã' ou pseudofruto) do caju, esterilizada no interior do recipiente: as fontes a descrevem como não fermentada e não diluída (EV-0028), engarrafada e cozida em banho-maria até tomar cor âmbar, sem açúcar adicionado nem conservantes (EV-0034; EV-0001). É dita muito tradicional no Nordeste (EV-0036) e, no Piauí, aparece ligada aos rituais de hospitalidade das famílias proprietárias de terras (EV-0084), e quem a faz a diz 'própria do Piauí' e que 'nos representa' (EV-0192). Conceito montado só das abonações; a descrição varia entre as fontes (por exemplo, a fonte técnica dá 'sem adição de açúcar', outras falam em 'açúcares do próprio suco'): as variações ficam como dado.",
   "designacoes": [
     {
       "forma": "cajuína"
     }
   ],
-  "variantes": [],
+  "variantes": [
+    {
+      "forma": "suco de caju clarificado",
+      "tipo_variacao": "sinônimo técnico (registro técnico-normativo, nome do produto em norma citada pelas fontes)",
+      "abonacoes": [
+        "EV-0028",
+        "EV-0051"
+      ]
+    }
+  ],
   "formas_de_busca": [
     "cajuina",
     "caju-ína",
@@ -14,22 +23,31 @@
     "ca-juína",
     "cajuyna"
   ],
-  "abonacoes": [],
-  "estado": "candidato",
+  "abonacoes": [
+    "EV-0001",
+    "EV-0034",
+    "EV-0028",
+    "EV-0036",
+    "EV-0084",
+    "EV-0409",
+    "EV-0192",
+    "EV-0051"
+  ],
+  "estado": "atestado",
   "relacoes": [
     {
       "tipo": "relacionado",
       "termo": "TE-0001"
     }
   ],
-  "nota": "Candidato do piloto (D-031). O conceito vem de trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json: registro_iphan.situacao (nome do bem, livro, datas; nível oficial, página do BCR aberta em 17/10/2026), registro_iphan.fatos[0].citacao (o gesto de acolhimento), ambientes[3].por_que_serve e primeiras_fontes[1].por_que. As citações do BCR vieram de leitor de página, não do PDF (erros[5] do mapa): ficam em quarentena até a abonação. Formas de busca por família (l. 433): cajuina (acentos; a BDTD deu o mesmo total sem acento, o que só mostra que a busca ignora o acento), caju-ína, cajuí-na, ca-juína (hífen de quebra de linha), cajuyna (y/i); hipóteses que só ficam se renderem ocorrências. Sem língua: nenhuma citação do mapa a dá (insumo 30).",
+  "nota": "Atestado em 29/10/2026 (K-110) por oito abonações de Trecho localizado, de oito Fontes (FO-0001, FO-0009, FO-0010, FO-0011, FO-0020, FO-0032, FO-0033, FO-0034). Falas de quem pratica: EV-0409 (detentor ou mestre, FO-0034) e EV-0192 (comunidade, FO-0033). As Evidências ainda estão 'não conferida' (exceto EV-0001 e EV-0034); a abonação vale pelo Trecho localizado. EV-0004 (mesma ideia, FO-0002) não entra: leitura divergente. Variante: 'suco de caju clarificado' vem ligada a 'cajuína' por 'ou'/'também conhecido como' (EV-0028, EV-0051); a Evidência EV-0020 liga o nome a uma instrução normativa citada pela fonte. Nomes de outras bebidas do caju (vinho de caju, mocororó) NÃO são variantes: são outra CLB (D-039), a tratar no K-102. Sem língua: nenhuma fonte a dá (insumo 30). As formas de busca (cajuina, caju-ína, cajuí-na, ca-juína, cajuyna) ficam só no booleano; nenhuma foi vista como variante nas fontes lidas.",
   "origem_registro": {
     "criado_por": "arquivista (registrar-termo 0.1.1, K-106)",
     "data": "2026-10-23",
     "execucao": "EX-0014"
   },
   "booleanos": [
-    "(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
-    "(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+    "(\"cajuína\" OR \"suco de caju clarificado\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+    "(\"cajuína\" OR \"suco de caju clarificado\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (clarificação OR banho-maria OR filtragem OR esterilização)"
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "id": "CO-0007",
+  "nome": "cajuína + descritores (TE-0002)",
+  "tipo": "mista",
+  "termos": [
+    "TE-0002"
+  ],
+  "variantes": [
+    "suco de caju clarificado",
+    "cajuina",
+    "caju-ína",
+    "cajuí-na",
+    "ca-juína",
+    "cajuyna"
+  ],
+  "descritores": [
+    "clarificação",
+    "banho-maria",
+    "filtragem",
+    "esterilização"
+  ],
+  "traducao": "ambientes/traducao-consultas.json#CO-0007",
+  "origem_registro": {
+    "criado_por": "scripts/gerar_termo.py",
+    "data": "2026-10-29",
+    "execucao": "EX-0070",
+    "versao_regra": "termo-0.2"
+  },
+  "nota": "proposta gerada do Termo pelo laço termo → booleano → Consulta; booleano: (\"cajuína\" OR \"suco de caju clarificado\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (clarificação OR banho-maria OR filtragem OR esterilização)"
+}

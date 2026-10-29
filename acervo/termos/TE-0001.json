@@ -1,32 +1,50 @@
 {
   "id": "TE-0001",
-  "conceito": "PROVISÓRIO, a confirmar nas abonações: o caju como insumo, cujo pedúnculo é processado em cajuína (título da Embrapa, Documentos 123, 'Processamento do pedúnculo do caju: cajuína'); o termo é amplo e deve cobrir também outros produtos do pedúnculo (sucos clarificados, doces em calda, rapadura de caju, bebidas fermentadas de caju), a delimitar a partir das fontes.",
+  "conceito": "O caju (Anacardium occidentale): do pedúnculo, pseudofruto carnoso e suculento (EV-0066), fazem-se sucos, doces, geleias, cajuína e refrigerante (EV-0050); a cajuína é dita forma consagrada de aproveitar o pedúnculo (EV-0036); o mesmo fruto dá a castanha, beneficiada em amêndoas (EV-0045). O nome vem do tupi acá-iu, conhecido desde o tempo dos indígenas (EV-0035). Nas fontes do Piauí, o caju ideal para a cajuína é o mais doce, evitando-se o 'caju clonado' (EV-0171), e as produtoras contam que passaram a plantar pé de caju nos quintais quando viram que a cajuína era boa (EV-0318). Conceito montado só das abonações; o termo é amplo e cobre insumo de várias bebidas e produtos.",
   "designacoes": [
     {
       "forma": "caju"
     }
   ],
-  "variantes": [],
+  "variantes": [
+    {
+      "forma": "acá-iu",
+      "tipo_variacao": "forma de origem (étimo tupi dado pela fonte)",
+      "periodo": "conhecida desde o tempo dos indígenas (EV-0035)",
+      "abonacoes": [
+        "EV-0035"
+      ]
+    }
+  ],
   "formas_de_busca": [
     "cajú",
     "ca-ju"
   ],
-  "abonacoes": [],
-  "estado": "candidato",
+  "abonacoes": [
+    "EV-0035",
+    "EV-0066",
+    "EV-0050",
+    "EV-0036",
+    "EV-0171",
+    "EV-0318",
+    "EV-0045",
+    "EV-0028"
+  ],
+  "estado": "atestado",
   "relacoes": [
     {
       "tipo": "relacionado",
       "termo": "TE-0002"
     }
   ],
-  "nota": "Candidato do piloto (D-031). O conceito vem de trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json: fatos[3].afirmacao e primeiras_fontes[1].por_que (título e ligação insumo-processo-bebida da Embrapa; nível oficial) e fatos[4].afirmacao (títulos de outros documentos da Embrapa sobre o pedúnculo, vistos só em resultado de busca; nível secundária). Que 'caju' é termo agrícola amplo vem do brief, bloco 4. A relação 'relacionado' com TE-0002 vem do título da Embrapa. Formas de busca por família (l. 433): cajú (acentos), ca-ju (hífen de quebra de linha); hipóteses que só ficam se renderem ocorrências. Sem língua: nenhuma citação do mapa a dá (insumo 30).",
+  "nota": "Atestado em 29/10/2026 (K-110) por oito abonações de Trecho localizado, de oito Fontes (FO-0010, FO-0027, FO-0019, FO-0011, FO-0032, FO-0034, FO-0017, FO-0009). Fala de quem pratica: EV-0318 (detentor ou mestre, FO-0034, sem pessoa identificada). EV-0035 e EV-0034 estão 'conferida'; as demais, 'não conferida', e a abonação vale pelo Trecho localizado. Variante 'acá-iu': a fonte diz 'idioma tupi' mas não dá etiqueta de língua; fica sem língua (insumo 30). 'Pedúnculo', 'pseudofruto' e 'maçã do caju' nomeiam a parte comestível, não são variantes de 'caju'; 'cajueiro' é a planta, sem Termo próprio por ora (a definir). Formas de busca (cajú, ca-ju) ficam só no booleano.",
   "origem_registro": {
     "criado_por": "arquivista (registrar-termo 0.1.1, K-106)",
     "data": "2026-10-23",
     "execucao": "EX-0014"
   },
   "booleanos": [
-    "(\"caju\" OR \"cajú\" OR \"ca-ju\")",
-    "(\"caju\" OR \"cajú\" OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
+    "(\"caju\" OR \"acá-iu\" OR \"cajú\" OR \"ca-ju\")",
+    "(\"caju\" OR \"acá-iu\" OR \"cajú\" OR \"ca-ju\") AND (clarificação OR banho-maria OR filtragem OR esterilização)"
   ]
 }
