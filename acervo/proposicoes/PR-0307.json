@@ -1,0 +1,20 @@
+{
+  "id": "PR-0307",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "a cajuína não pode ter água nem ar, e o caju não pode ser lavado",
+  "periodo": {
+    "referido": "29/10/2008"
+  },
+  "evidencias": [
+    "EV-0347"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0347",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "a padronização com caju clonado pode fazer preterir cajuais nativos, com impacto sobre a biodiversidade local",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0428"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

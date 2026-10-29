@@ -1,0 +1,20 @@
+{
+  "id": "PR-0361",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "exigências de agências nacionais como a ANVISA tendem a excluir pequenos produtores do mercado legalizado",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0443"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

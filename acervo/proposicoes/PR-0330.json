@@ -1,0 +1,20 @@
+{
+  "id": "PR-0330",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "estudos do SEBRAE, da universidade e de produtores maiores sugerem água clorada, prédios azulejados e pessoal uniformizado, tidos por radicais pelos produtores tradicionais",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0399"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0454",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 69 do PDF; car. 189079-189250 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "os assentados que entrevistamos, o papel do homem e da mulher na produção são um pouco mais equilibrados, cabendo por vezes ainda maior responsabilidade e crédito ao homem",
+  "antes": ". Vídeo. Teresina, out. 2008. 69 ",
+  "depois": ".87 A produção da cajuína, atualmente, atrai homens por apre",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

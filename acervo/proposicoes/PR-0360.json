@@ -1,0 +1,20 @@
+{
+  "id": "PR-0360",
+  "clb": "CL-0001",
+  "atributo": "salvaguarda",
+  "valor": "sugestão do dossiê: melhorar a infraestrutura dos locais de produção em vez de substituir a água do caju como agente de limpeza",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0442"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

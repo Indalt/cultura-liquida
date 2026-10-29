@@ -1,0 +1,20 @@
+{
+  "id": "PR-0341",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "uma indústria de doces e cajuína de Inhumas (a maior do Piauí) chega a 500 mil garrafas por ano e consome 30% dos pedúnculos do município, segundo o dossiê; outras fontes dão outros números",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0420"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

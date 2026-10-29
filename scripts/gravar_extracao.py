@@ -22,11 +22,14 @@ só por rótulo local (`voz.rotulo_pessoa`, ex.: "V01"); o nome fica no arquivo 
 avaliador grava fora do Git (`--pessoas`). O script dá o código opaco P-nnnn (o mesmo nome reaproveita
 o código), grava a Pessoa em `acervo/pessoas/` só com código e papéis, e a tabela código → nome na
 pasta privada (`CL_PRIVADO` ou o caminho padrão do registro), nunca no repositório. Um Trecho cujo
-texto exato traz um nome da tabela reprova; no "antes" e no "depois", o contexto é cortado no nome.
+texto exato traz um nome da tabela reprova; no "antes" e no "depois", o contexto é cortado no nome
+e também num tratamento seguido de nome próprio ("Dona", "D.", "seu", "tia"...), que pega a pessoa
+que a fonte nomeia sem falar (sem rótulo). `--recortar-contextos` aplica o corte aos Trechos já
+gravados (o contexto é só seletor de citação: o hash e o localizador não mudam).
 
 Uso:
     python scripts/gravar_extracao.py <saida-do-avaliador.json> --execucao EX-nnnn [--simular]
-        [--raiz <pasta>] [--manifestos <pasta>] [--pessoas <rótulos fora do Git>] [--privado <pasta>]
+        [--raiz <pasta>] [--manifestos <pasta>] [--pessoas <rótulos fora do Git> ...] [--privado <pasta>]
 `--execucao` é a Execução do avaliador (o log dele, gravado antes pelo curador).
 Código 0 = gravou (ou simulou) sem erro; 1 = algum registro reprova (nada se grava).
 """
@@ -36,6 +39,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import unicodedata
 from datetime import date
@@ -89,6 +93,10 @@ def formas_do_nome(info: dict) -> list[str]:
     return [f for f in [info.get("nome"), *info.get("outras_formas", [])] if f and len(f.strip()) >= 4]
 
 
+RE_TRATAMENTO = re.compile(r"(?<!\w)(Dona|D\.|Seu|seu|Sr\.?|Sra\.?|Dr\.?|Dra\.?|Mestre|Tia|tia|Tio|tio|Vó|vó|Vovó|Padre|Frei)"
+                           r"\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+")
+
+
 def cortar_nome(contexto: str, formas: list[str], lado: str) -> str:
     """Corta o "antes" depois do último nome achado e o "depois" antes do primeiro (o contexto é só seletor)."""
     for f in formas:
@@ -96,7 +104,24 @@ def cortar_nome(contexto: str, formas: list[str], lado: str) -> str:
         k = baixo.rfind(f.lower()) if lado == "antes" else baixo.find(f.lower())
         if k >= 0:
             contexto = contexto[k + len(f):] if lado == "antes" else contexto[:k]
+    achados = list(RE_TRATAMENTO.finditer(contexto))
+    if achados:
+        contexto = contexto[achados[-1].end():] if lado == "antes" else contexto[:achados[0].start()]
     return contexto
+
+
+def recortar_contextos(raiz: Path, formas: list[str], simular: bool) -> list[str]:
+    """Aplica o corte aos Trechos já gravados; devolve os que mudaram."""
+    mudados = []
+    for arq in sorted((raiz / "acervo" / "trechos").glob("TR-*.json")):
+        reg = json.loads(arq.read_text(encoding="utf-8"))
+        novo = {**reg, "antes": cortar_nome(reg.get("antes", ""), formas, "antes"),
+                "depois": cortar_nome(reg.get("depois", ""), formas, "depois")}
+        if novo != reg:
+            mudados.append(reg["id"])
+            if not simular:
+                arq.write_text(json.dumps(novo, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return mudados
 
 
 class Gravador:
@@ -331,23 +356,33 @@ class Gravador:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("saida")
-    ap.add_argument("--execucao", required=True)
+    ap.add_argument("saida", nargs="?")
+    ap.add_argument("--recortar-contextos", action="store_true",
+                    help="corta nomes no antes e no depois dos Trechos já gravados (sem saída do avaliador)")
+    ap.add_argument("--execucao")
     ap.add_argument("--simular", action="store_true")
     ap.add_argument("--raiz", type=Path, default=RAIZ, help="raiz do acervo (testes)")
     ap.add_argument("--manifestos", type=Path, help="pasta dos manifestos do ler_fonte.py (padrão: a pasta temporária)")
-    ap.add_argument("--pessoas", type=Path, help="rótulos locais → nome, gravados pelo avaliador fora do Git")
+    ap.add_argument("--pessoas", type=Path, nargs="+", default=[],
+                    help="rótulos locais → nome, gravados pelo avaliador fora do Git (vários lotes: os rótulos se somam)")
     ap.add_argument("--privado", type=Path, help="pasta da tabela código → nome (padrão: CL_PRIVADO ou o caminho do registro)")
     a = ap.parse_args()
     rotulos = {}
-    if a.pessoas:
-        if not fora_do_repositorio(a.pessoas):
+    for arq in a.pessoas:
+        if not fora_do_repositorio(arq):
             print("REPROVA: o arquivo de rótulos de pessoas está dentro do repositório; nada gravado.")
             return 1
-        rotulos = json.loads(a.pessoas.read_text(encoding="utf-8"))
+        rotulos.update(json.loads(arq.read_text(encoding="utf-8")))
     if a.privado and not fora_do_repositorio(a.privado):
         print("REPROVA: a pasta privada está dentro do repositório; nada gravado.")
         return 1
+    if a.recortar_contextos:
+        g = Gravador(a.execucao or "EX-0000", a.raiz, rotulos, a.privado)
+        mud = recortar_contextos(a.raiz, g.formas, a.simular)
+        print(f"{len(mud)} Trecho(s) com o contexto cortado{' (simulado)' if a.simular else ''}: {', '.join(mud)}")
+        return 0
+    if not (a.saida and a.execucao):
+        ap.error("a saída do avaliador e --execucao")
     saida = json.loads(Path(a.saida).read_text(encoding="utf-8"))
     manifestos: dict[str, dict] = {}
     for m in sorted((a.manifestos or pasta_temporaria()).glob("lote-*.json")):

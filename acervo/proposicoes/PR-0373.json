@@ -1,0 +1,20 @@
+{
+  "id": "PR-0373",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "a mãe serviu cajuína em taças, numa bandeja, ao governador do Rio de Janeiro em visita, ordenando que um coronel a servisse",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0457"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

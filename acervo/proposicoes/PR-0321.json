@@ -1,0 +1,20 @@
+{
+  "id": "PR-0321",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "uma barra de cola em cada vasilhame da água do caju já moída, para cortar sem criar pó",
+  "periodo": {
+    "referido": "29/10/2008"
+  },
+  "evidencias": [
+    "EV-0389"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0355",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "a Cajuína do Piauí deve receber selo de qualidade SEBRAE se produzida nos termos da Identificação Geográfica, processo em andamento em 2009",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0436"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

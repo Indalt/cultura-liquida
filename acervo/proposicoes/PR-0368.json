@@ -1,0 +1,20 @@
+{
+  "id": "PR-0368",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "nas casas de famílias abastadas da infância da entrevistada, as senhoras todas faziam cajuína, e a mãe fazia tradicionalmente",
+  "periodo": {
+    "referido": "out. 2008"
+  },
+  "evidencias": [
+    "EV-0452"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

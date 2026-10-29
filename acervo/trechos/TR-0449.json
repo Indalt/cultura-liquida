@@ -1,0 +1,29 @@
+{
+  "id": "TR-0449",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 63 do PDF; car. 173111-173222 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "existe uma grande possibilidade de a cajuína não ser ainda disseminada na cidade de Teresina como é hoje em dia",
+  "antes": "e, no período de 1901 e 1902, quando o romance foi escrito, ",
+  "depois": ". No entanto, percebemos inúmeras facetas da cultura do Piau",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

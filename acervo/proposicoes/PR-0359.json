@@ -1,0 +1,20 @@
+{
+  "id": "PR-0359",
+  "clb": "CL-0001",
+  "atributo": "salvaguarda",
+  "valor": "sugestão do dossiê: fomentar a pequena produção, nos assentamentos e na agricultura familiar, contra a monopolização por grandes capitais",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0441"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0405",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 178 do PDF; car. 478292-478461 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A partir dessa redinha da farinhada, que consiste em um pano de saco de açúcar em formato de rede de dormir de aproximadamente 50 cm, amarrado entre dois paus ou árvores",
+  "antes": ", Água Branca, 11/05/09). ",
+  "depois": ", a massa do caju é espremida e o suco aparado em uma vasilh",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

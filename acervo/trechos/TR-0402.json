@@ -1,0 +1,29 @@
+{
+  "id": "TR-0402",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 176 do PDF; car. 475046-475185 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "financiou experimentos em laboratório, de forma a demonstrar ser possível a produção da cajuína a partir de frutos lavados em água corrente",
+  "antes": "pagar para provar aos produtores que estes estavam errados: ",
+  "depois": " e convencê-los a adequarem seu método. Apenas aqueles produ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

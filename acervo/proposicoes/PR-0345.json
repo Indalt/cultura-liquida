@@ -1,0 +1,20 @@
+{
+  "id": "PR-0345",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "os produtores se orgulham de consumidores virem de longe, de Teresina ao interior, porque só gostam da cajuína daquele produtor",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0425"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

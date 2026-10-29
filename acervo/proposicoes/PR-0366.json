@@ -1,0 +1,20 @@
+{
+  "id": "PR-0366",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "a cajuína não aparece em três obras da literatura piauiense (início do século, anos 1960 e 1980), indício de difusão tardia",
+  "periodo": {
+    "referido": "início do século XX a 1980"
+  },
+  "evidencias": [
+    "EV-0450"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

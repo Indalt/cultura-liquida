@@ -1,0 +1,20 @@
+{
+  "id": "PR-0320",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "com a cola de sapateiro, que dava gosto forte, filtrava-se muitas vezes para tirar o gosto",
+  "periodo": {
+    "referido": "23/10/2008"
+  },
+  "evidencias": [
+    "EV-0388"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

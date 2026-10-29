@@ -1,0 +1,20 @@
+{
+  "id": "PR-0362",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "a partir da década de 1970 as referências à cajuína proliferam em catálogos de turismo (Piauí e Ceará), livros de culinária e reedições da literatura memorialista",
+  "periodo": {
+    "referido": "a partir de 1970"
+  },
+  "evidencias": [
+    "EV-0445"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

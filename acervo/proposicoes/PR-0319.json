@@ -1,0 +1,20 @@
+{
+  "id": "PR-0319",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "um técnico da EMATER diz que a cola de sapateiro foi condenada pela ANVISA como cancerígena, informação não confirmada pela química da UFPI",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0385"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

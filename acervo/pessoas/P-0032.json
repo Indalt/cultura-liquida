@@ -1,0 +1,24 @@
+{
+  "codigo": "P-0032",
+  "papeis": [
+    "detentor ou mestre"
+  ],
+  "forma_atribuicao": "nome",
+  "nivel_colaborador": "identificado",
+  "nota": "pessoa nomeada na fonte; no Git, só o código e os papéis (a tabela código → nome fica fora do repositório)",
+  "consentimento": "não se aplica (fala publicada em fonte de terceiro; o projeto não colheu a fala)",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

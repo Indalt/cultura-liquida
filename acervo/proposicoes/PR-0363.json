@@ -1,0 +1,20 @@
+{
+  "id": "PR-0363",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "um ex-secretário de cultura garante que uma tia-avó fazia cajuína desde bem antes de ele nascer",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0447"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

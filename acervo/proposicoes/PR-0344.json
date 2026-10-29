@@ -1,0 +1,20 @@
+{
+  "id": "PR-0344",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "os \"novos atores\" aprenderam a fazer cajuína tardiamente, por cursos do SEBRAE",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0423"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

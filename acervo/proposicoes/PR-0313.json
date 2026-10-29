@@ -1,0 +1,21 @@
+{
+  "id": "PR-0313",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "o modo tradicional admite muita criatividade e inovação, mesmo entre os produtores mais antigos",
+  "periodo": {
+    "referido": "16/10/2008"
+  },
+  "evidencias": [
+    "EV-0365",
+    "EV-0366"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

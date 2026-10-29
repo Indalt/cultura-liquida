@@ -1,0 +1,20 @@
+{
+  "id": "PR-0336",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "os homens (filhos, companheiros, parentes) fazem os serviços pesados, como a moagem e o carregamento dos tambores de água quente",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0414"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

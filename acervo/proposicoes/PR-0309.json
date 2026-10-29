@@ -1,0 +1,20 @@
+{
+  "id": "PR-0309",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "depois da chuva não se usa o caju nos primeiros dias, porque a cajuína fica aguada",
+  "periodo": {
+    "referido": "nov. 2008"
+  },
+  "evidencias": [
+    "EV-0352"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

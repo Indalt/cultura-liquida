@@ -1,0 +1,20 @@
+{
+  "id": "PR-0329",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "os critérios de asseio das produtoras tradicionais são distantes dos que a indústria e a ANVISA reconheceriam",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0398"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

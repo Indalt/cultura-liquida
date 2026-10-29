@@ -1,0 +1,20 @@
+{
+  "id": "PR-0312",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "a cajuína é bebida não fermentada e não alcoólica: o modo de fazer descarta a fermentação e introduz o corte, a filtragem, o engarrafamento e a fervura em banho-maria",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0362"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

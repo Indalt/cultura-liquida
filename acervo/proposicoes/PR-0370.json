@@ -1,0 +1,20 @@
+{
+  "id": "PR-0370",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "entre os assentados entrevistados, o papel do homem e da mulher na produção é mais equilibrado, às vezes com maior responsabilidade e crédito ao homem",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0454"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

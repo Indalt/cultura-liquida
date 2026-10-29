@@ -1,0 +1,31 @@
+{
+  "id": "EV-0436",
+  "trecho": "TR-0436",
+  "proposicao": "PR-0355",
+  "sentido": "a favor",
+  "voz": {
+    "tipo": "autor",
+    "papel": "equipe do dossiê de registro"
+  },
+  "lugares": {
+    "pratica": "LU-0023",
+    "publicacao": "LU-0032",
+    "pesquisa": "LU-0033"
+  },
+  "estado": "não conferida",
+  "sustenta_aviso_saude_politica": true,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

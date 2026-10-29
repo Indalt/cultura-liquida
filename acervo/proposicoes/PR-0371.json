@@ -1,0 +1,20 @@
+{
+  "id": "PR-0371",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "filhos dão continuidade aos trabalhos de cajuína originados pelas mães, e alguns profissionalizam a atividade",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0455"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

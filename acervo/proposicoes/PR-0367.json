@@ -1,0 +1,20 @@
+{
+  "id": "PR-0367",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "a mulher prendada, produtora de cajuína, é valorizada por trabalho duro e capacidade gerencial no abastecimento da família, mais do que por refinamento",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0451"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

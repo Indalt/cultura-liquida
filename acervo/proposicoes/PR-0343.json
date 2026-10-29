@@ -1,0 +1,20 @@
+{
+  "id": "PR-0343",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "os \"novos atores\": aposentados (funcionários públicos, profissionais liberais) que entraram na produção depois de aposentados, com lógica racional moderna",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0422"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

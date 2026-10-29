@@ -1,0 +1,20 @@
+{
+  "id": "PR-0369",
+  "clb": "CL-0001",
+  "atributo": "nomes e variantes",
+  "valor": "mutirão de trabalho compartilhado é chamado localmente de adjunto, entre assentados",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0453"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}

@@ -141,6 +141,21 @@
       ],
       "saida_contem": "dentro do repositório",
       "criterio": "a tabela de nomes nunca fica na pasta versionada"
+    },
+    {
+      "nome": "gravar_extracao --recortar-contextos: tratamento seguido de nome no 'depois' é cortado (K-110)",
+      "espera": "passa",
+      "comando": [
+        "scripts/gravar_extracao.py",
+        "--recortar-contextos",
+        "--simular",
+        "--raiz",
+        "testes/extracao/raiz-contexto",
+        "--privado",
+        "testes/extracao/privado-vazio"
+      ],
+      "saida_contem": "1 Trecho(s) com o contexto cortado (simulado): TR-0001",
+      "criterio": "a pessoa que a fonte nomeia sem falar não fica no contexto do Trecho"
     }
   ]
 }

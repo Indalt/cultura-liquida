@@ -1,0 +1,20 @@
+{
+  "id": "PR-0305",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "a safra e a produção coincidem com os meses mais secos e com o descanso das roças de subsistência, antes do plantio que depende das chuvas",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0343"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0068"
+  }
+}
