@@ -116,6 +116,7 @@ def main() -> int:
     ap.add_argument("--url", action="append", default=[], help="ROTULO=URL de item ainda sem Entrada")
     ap.add_argument("--max-mb", type=int, default=60)
     ap.add_argument("--apagar", help="apaga os arquivos do lote dado")
+    ap.add_argument("--fixtures", type=Path, help="respostas gravadas (testes, sem rede)")
     a = ap.parse_args()
     pasta = pasta_temporaria()
     if a.apagar:
@@ -141,8 +142,8 @@ def main() -> int:
     for u in a.url:
         rot, _, url = u.partition("=")
         alvos.append((rot, url))
-    ex = Execucao("script", f"K-109, bloco 7: leitura das Fontes do lote {a.rotulo} ({VERSAO})")
-    cli = Cliente()
+    ex = Execucao("script", f"K-109, bloco 7: leitura das Fontes do lote {a.rotulo} ({VERSAO})", simular=bool(a.fixtures))
+    cli = Cliente(fixtures=a.fixtures)
     itens = [ler(cli, rot, url, pasta, a.max_mb) for rot, url in alvos]
     (pasta / f"lote-{a.rotulo}.json").write_text(json.dumps(
         {"lote": a.rotulo, "versao": VERSAO, "execucao": ex.id, "itens": itens}, ensure_ascii=False, indent=2),
@@ -155,7 +156,7 @@ def main() -> int:
     ex.fora = [f"{i['id']}: {i['erro']}" for i in itens if i["erro"]] + [
         f"{cli.pedidos} pedidos HTTP no total, robots.txt incluídos; o texto integral não entra no Git"]
     ex.erros = [f"{i['id']}: {i['erro']}" for i in sem]
-    print(ex.gravar_log())
+    print(ex.gravar_log() if not a.fixtures else "teste com respostas gravadas: log não gravado")
     for i in itens:
         print(f"{i['id']}\t{i['tipo']}\t{i['paginas']} p.\t{i['caracteres']} car.\t{i['erro'] or ''}")
     print(f"manifesto: {pasta / ('lote-' + a.rotulo + '.json')}")

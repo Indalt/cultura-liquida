@@ -1,0 +1,1 @@
+{"url": "https://bloqueado.exemplo.br/robots.txt", "status": 200, "headers": {}, "corpo": "User-agent: *\nDisallow: /\n"}

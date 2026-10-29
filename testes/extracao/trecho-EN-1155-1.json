@@ -1,0 +1,14 @@
+{
+  "trecho": {
+    "grau_semelhanca": 1.0,
+    "localizador": "p. 15 do PDF; car. 16812-16992 do texto normalizado (normalizacao-0.2)",
+    "hash": "398a76a3ff047c48abfb51d531b9b674bc658c3cf17442fa248294da12c44e24",
+    "versao_normalizacao": "normalizacao-0.2",
+    "data_conferencia": "2026-10-29",
+    "estado": "localizado",
+    "texto_exato": "A cajuína é uma bebida refrescante obtida por meio do suco da maç ã do caju clarificado e esterilizado no interior do recipiente e parece ser um dos sucos mais populares no Brasil.",
+    "antes": "íveis de neutrófilos e a contagem de leucócitos em repouso. ",
+    "depois": " Esse produto apresenta bom teor de vitamina C, carotenóide ",
+    "origem_texto": "fonte"
+  }
+}

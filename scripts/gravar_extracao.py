@@ -20,6 +20,7 @@ Confere o hash do Trecho contra o manifesto do `ler_fonte.py` e roda o esquema d
 
 Uso:
     python scripts/gravar_extracao.py <saida-do-avaliador.json> --execucao EX-nnnn [--simular]
+        [--raiz <pasta>] [--manifestos <pasta>]
 `--execucao` é a Execução do avaliador (o log dele, gravado antes pelo curador).
 Código 0 = gravou (ou simulou) sem erro; 1 = algum registro reprova (nada se grava).
 """
@@ -64,8 +65,9 @@ def tabela_ibge() -> dict[tuple[str, str], str]:
 
 
 class Gravador:
-    def __init__(self, execucao: str):
-        self.indice, _, erros = carregar_acervo(RAIZ)
+    def __init__(self, execucao: str, raiz: Path = RAIZ):
+        self.raiz = raiz
+        self.indice, _, erros = carregar_acervo(raiz)
         if erros:
             raise SystemExit("acervo ilegível: " + "; ".join(erros))
         self.ids = set(self.indice)
@@ -150,7 +152,7 @@ class Gravador:
         props: dict[str, str] = {}
         for item in saida["entradas"]:
             en_id = item["entrada"]
-            en = dict(carregar_json(RAIZ / "entrada" / f"{en_id}.json"))
+            en = dict(carregar_json(self.raiz / "entrada" / f"{en_id}.json"))
             prot = en["protecao"]
             man = manifestos.get(en_id, {})
             fo = item.get("fonte") or {}
@@ -243,10 +245,10 @@ class Gravador:
         feitos = []
         for i, reg in self.novos.items():
             pref = i.split("-")[0]
-            arq = RAIZ / ("entrada" if pref == "EN" else f"acervo/{PASTA[pref]}") / f"{i}.json"
+            arq = self.raiz / ("entrada" if pref == "EN" else f"acervo/{PASTA[pref]}") / f"{i}.json"
             arq.parent.mkdir(parents=True, exist_ok=True)
             arq.write_text(json.dumps(reg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            feitos.append(arq.relative_to(RAIZ).as_posix())
+            feitos.append(arq.relative_to(self.raiz).as_posix())
         return feitos
 
 
@@ -255,14 +257,16 @@ def main() -> int:
     ap.add_argument("saida")
     ap.add_argument("--execucao", required=True)
     ap.add_argument("--simular", action="store_true")
+    ap.add_argument("--raiz", type=Path, default=RAIZ, help="raiz do acervo (testes)")
+    ap.add_argument("--manifestos", type=Path, help="pasta dos manifestos do ler_fonte.py (padrão: a pasta temporária)")
     a = ap.parse_args()
     saida = json.loads(Path(a.saida).read_text(encoding="utf-8"))
     manifestos: dict[str, dict] = {}
-    for m in sorted(pasta_temporaria().glob("lote-*.json")):
+    for m in sorted((a.manifestos or pasta_temporaria()).glob("lote-*.json")):
         for it in json.loads(m.read_text(encoding="utf-8"))["itens"]:
             if it.get("caracteres") or it["id"] not in manifestos:
                 manifestos[it["id"]] = it
-    g = Gravador(a.execucao)
+    g = Gravador(a.execucao, a.raiz)
     erros = g.gravar_lote(saida, manifestos)
     if erros:
         print("REPROVA (nada gravado):", *erros, sep="\n  ")

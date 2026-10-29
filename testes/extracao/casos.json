@@ -1,0 +1,26 @@
+{
+  "habilidade": "leitura e gravação do bloco 7 (K-109)",
+  "rodada": "A",
+  "casos": [
+    {"nome": "ler_fonte: página sem PDF vira texto da página; host vedado pelo robots.txt fica sem texto", "espera": "reprova",
+     "comando": ["scripts/ler_fonte.py", "--rotulo", "TESTE-K109", "--url", "X1=https://repositorio.exemplo.br/handle/123/1", "--url", "X2=https://bloqueado.exemplo.br/handle/1", "--fixtures", "testes/extracao/fixtures"],
+     "saida_contem": "robots.txt veda https://bloqueado.exemplo.br/handle/1",
+     "criterio": "o item vedado não é lido (código 2, dito no manifesto); o outro vira texto da página"},
+    {"nome": "ler_fonte: apaga os arquivos do lote de teste", "espera": "passa",
+     "comando": ["scripts/ler_fonte.py", "--apagar", "TESTE-K109"],
+     "saida_contem": "apagado(s) da pasta temporária",
+     "criterio": "o texto integral não fica na pasta temporária depois do lote"},
+    {"nome": "gravar_extracao: saída do avaliador com trecho do script e hash igual ao do manifesto", "espera": "passa",
+     "comando": ["scripts/gravar_extracao.py", "testes/extracao/saida-ok.json", "--execucao", "EX-0046", "--simular", "--raiz", "testes/extracao/raiz", "--manifestos", "testes/extracao/manifesto-ok"],
+     "saida_contem": "registros: CL 1, EN 1, EV 1, F 3, FO 1, LU 1, PR 1, TR 1",
+     "criterio": "Fonte, Trecho, Evidência, Proposição, Lugar, a CLB e as Faltas de lugar nascem válidos"},
+    {"nome": "gravar_extracao: sentido fora do contrato da Evidência", "espera": "reprova",
+     "comando": ["scripts/gravar_extracao.py", "testes/extracao/erro-saida-sentido.json", "--execucao", "EX-0046", "--simular", "--raiz", "testes/extracao/raiz", "--manifestos", "testes/extracao/manifesto-ok"],
+     "saida_contem": "REPROVA",
+     "criterio": "nada se grava quando um registro não passa no esquema"},
+    {"nome": "gravar_extracao: hash do Trecho diferente do texto lido", "espera": "reprova",
+     "comando": ["scripts/gravar_extracao.py", "testes/extracao/saida-ok.json", "--execucao", "EX-0046", "--simular", "--raiz", "testes/extracao/raiz", "--manifestos", "testes/extracao/manifesto-outro"],
+     "saida_contem": "hash do Trecho",
+     "criterio": "o Trecho tem de vir da mesma leitura da Fonte"}
+  ]
+}
