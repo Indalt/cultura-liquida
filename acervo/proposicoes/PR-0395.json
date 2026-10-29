@@ -1,0 +1,20 @@
+{
+  "id": "PR-0395",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "os assentados têm a noção de que a cajuína era coisa de rico, a que só tiveram acesso como empregados ou depois de conquistar terra em assentamentos",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0485"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

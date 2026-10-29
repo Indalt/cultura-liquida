@@ -1,0 +1,20 @@
+{
+  "id": "PR-0400",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "os frutos só estavam disponíveis aos proprietários que plantassem cajueiros, o que excluiu os demais da cajuína até a expansão dos cajueiros por políticas públicas de incentivo agrícola",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0490"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0417",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "na produção de Água Branca, quem fazia a cajuína eram os empregados e agregados (\"nós\"), embora a dona fosse a proprietária",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0510"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

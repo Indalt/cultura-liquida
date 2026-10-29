@@ -1,0 +1,29 @@
+{
+  "id": "TR-0499",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 89 do PDF; car. 246824-247037 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Mas estes tinham que defendê-las constantemente, durante a safra da fruta, tanto de povos aparentados, quanto dos Caetés e Tabajaras, como dos Tapuias do sertão que desciam o litoral para travar as guerras do caju",
+  "antes": " o Rio Grande do Norte, sob o domínio geral dos Potyguaras. ",
+  "depois": ". Entre essa riqueza de informações apontadas por Fernades, ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

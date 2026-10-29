@@ -1,0 +1,20 @@
+{
+  "id": "PR-0391",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "ser prendada implica ter aprendido as artes por um investimento de ensino que confere distinção social, com saberes transmitidos em determinado estamento",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0481"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

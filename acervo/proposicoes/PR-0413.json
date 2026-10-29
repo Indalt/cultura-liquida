@@ -1,0 +1,20 @@
+{
+  "id": "PR-0413",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "a primeira produtora de cajuína em Água Branca era dona de uma ampla chácara, à entrada da cidade",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0506"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0390",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "entre as produtoras tratadas como elite há também senhoras do interior, em casas simples, de classe média baixa",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0479"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

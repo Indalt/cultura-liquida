@@ -1,0 +1,20 @@
+{
+  "id": "PR-0407",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "os povos do litoral defendiam os cajueirais na safra contra outros povos que desciam o litoral e travavam as guerras do caju",
+  "periodo": {
+    "referido": "séculos XVI e XVII (relatos)"
+  },
+  "evidencias": [
+    "EV-0499"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

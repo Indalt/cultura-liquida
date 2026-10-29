@@ -1,0 +1,20 @@
+{
+  "id": "PR-0420",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "o \"outro bloco\" (massa mestiça dos despossuídos) só agora passa a conhecer, consumir e produzir cajuína, forma civilizada de antecessoras como o vinho de caju e o mocororó",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0513"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

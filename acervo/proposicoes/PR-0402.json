@@ -1,0 +1,20 @@
+{
+  "id": "PR-0402",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "a cajuína é relativa novidade histórica, que viceja nos espaços civilizados, e a bebida fermentada (vinho curtido ao sol, mocororó dos Tremembés) ficou nos cantos recônditos",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0494"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0379",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "a cajuína era elemento de distinção social, servida em taças de cristal e bandejas de prata em casamentos e aniversários",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0468"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

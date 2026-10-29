@@ -1,0 +1,29 @@
+{
+  "id": "TR-0514",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 123 do PDF; car. 343977-344220 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O sentido da cajuína, para esse segmento da sociedade piauiense, que se inseriu na modernidade através desses processos foi apontado como emblemático da estabilidade e segurança representadas pela família extensiva, simbolizada pela mulher/mãe",
+  "antes": "imação intensificou a necessidade por rituais de distinção. ",
+  "depois": ", afastando-se do tempo dos conflitos e guerras (estado de n",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

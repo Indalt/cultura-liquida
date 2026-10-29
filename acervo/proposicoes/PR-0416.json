@@ -1,0 +1,20 @@
+{
+  "id": "PR-0416",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "na produção de Água Branca o empregado era o moedor de caju, o trabalhador braçal",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0509"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

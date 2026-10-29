@@ -1,0 +1,29 @@
+{
+  "id": "TR-0471",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 0.9955,
+  "localizador": "p. 30 do PDF; car. 77447-77558 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "s condições necessárias à produção da cajuína como, por exemplo, a propriedade de terra onde houvesse cajueiros",
+  "antes": "sociais que faziam a cajuína. Surgiram respostas relativas à",
+  "depois": ",32 o poder de compra de garrafas de vidro e capacidade de f",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

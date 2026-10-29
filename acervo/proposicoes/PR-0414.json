@@ -1,0 +1,20 @@
+{
+  "id": "PR-0414",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "a primeira produtora de cajuína de Água Branca aprendeu a arte com a cunhada",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0507"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

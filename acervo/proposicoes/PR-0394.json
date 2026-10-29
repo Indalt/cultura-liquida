@@ -1,0 +1,20 @@
+{
+  "id": "PR-0394",
+  "clb": "CL-0001",
+  "atributo": "lugar",
+  "valor": "a área de influência Centro-Sul do Piauí é a de maior consumo e produção de cajuína",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0484"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

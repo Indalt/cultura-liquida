@@ -1,0 +1,22 @@
+{
+  "id": "PR-0401",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "o dossiê acredita haver ascendência das beberagens feitas à base de caju, como o vinho de caju, em relação à cajuína",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0491",
+    "EV-0492",
+    "EV-0493"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

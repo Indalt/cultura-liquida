@@ -1,0 +1,20 @@
+{
+  "id": "PR-0412",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "o uso de beberagens de caju nas danças rituais dos Tremembés persiste até hoje no Ceará e no Rio Grande do Norte",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0505"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TR-0467",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 29 do PDF; car. 74749-74904 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A questão da elite como detentora inicial da tradição e do saber a respeito do modo de fazer a cajuína se apresentou nos discursos de algumas entrevistadas",
+  "antes": "nhoras da alta sociedade , poderiam ser bem mais definidas. ",
+  "depois": ", como Dona ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

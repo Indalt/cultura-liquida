@@ -1,0 +1,196 @@
+{
+ "lote": "K110-A5",
+ "nota": "Evidências do dossiê (EN-1725) sobre outra CLB, separadas pelo curador em 29/10/2026 (D-039): o vinho de caju e o mocororó. Os trechos estão localizados (arquivos na pasta temporária, fora do Git); não entram como Proposições da cajuína (CL-0001). Vão ao K-102 (menções incidentais) e ao cartão de lista das CLB candidatas.",
+ "evidencias": [
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-31.json",
+   "estado_trecho": "localizado",
+   "chave": "processo e modo de fazer|vinho de caju (outra CLB): espreme-se o caju, adoça-se com rapadura ou açúcar e ferve-se",
+   "atributo": "processo e modo de fazer",
+   "valor": "vinho de caju (outra CLB): espreme-se o caju, adoça-se com rapadura ou açúcar e ferve-se",
+   "periodo_referido": "sem data (lembrança)",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "papel": "detentor ou mestre",
+    "rotulo_pessoa": "V35"
+   },
+   "lugares": {
+    "pratica": "Parnaíba (PI)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false,
+   "ancora_w": true
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-32.json",
+   "estado_trecho": "localizado",
+   "chave": "processo e modo de fazer|vinho de caju (outra CLB): do recipiente de lata vai para a garrafa, tapada e posta no sol para curtir",
+   "atributo": "processo e modo de fazer",
+   "valor": "vinho de caju (outra CLB): do recipiente de lata vai para a garrafa, tapada e posta no sol para curtir",
+   "periodo_referido": "sem data (lembrança)",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "papel": "detentor ou mestre",
+    "rotulo_pessoa": "V35"
+   },
+   "lugares": {
+    "pratica": "Parnaíba (PI)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false,
+   "ancora_w": true
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-33.json",
+   "estado_trecho": "localizado",
+   "chave": "uso e consumo|vinho de caju (outra CLB): embebeda quem não tem o costume de beber",
+   "atributo": "uso e consumo",
+   "valor": "vinho de caju (outra CLB): embebeda quem não tem o costume de beber",
+   "periodo_referido": "sem data (lembrança)",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "papel": "detentor ou mestre",
+    "rotulo_pessoa": "V35"
+   },
+   "lugares": {
+    "pratica": "Parnaíba (PI)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false,
+   "ancora_w": true
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-34.json",
+   "estado_trecho": "localizado",
+   "chave": "transmissão|a mãe da entrevistada fazia muito vinho de caju (outra CLB); ela mesma não fez",
+   "atributo": "transmissão",
+   "valor": "a mãe da entrevistada fazia muito vinho de caju (outra CLB); ela mesma não fez",
+   "periodo_referido": "sem data (lembrança)",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "papel": "detentor ou mestre",
+    "rotulo_pessoa": "V35"
+   },
+   "lugares": {
+    "pratica": "Parnaíba (PI)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": "transmissão entre gerações",
+   "sustenta_aviso_saude_politica": false,
+   "ancora_w": true
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-35.json",
+   "estado_trecho": "localizado",
+   "chave": "processo e modo de fazer|vinho de caju (outra CLB): a mãe apertava o caju, coava e deixava pendurado em galhos de árvore",
+   "atributo": "processo e modo de fazer",
+   "valor": "vinho de caju (outra CLB): a mãe apertava o caju, coava e deixava pendurado em galhos de árvore",
+   "periodo_referido": "infância da entrevistada, sem data",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "papel": "detentor ou mestre"
+   },
+   "lugares": {
+    "pratica": "Beneditinos (PI); fala em Altos (PI)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false,
+   "ancora_w": true
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-36.json",
+   "estado_trecho": "localizado",
+   "chave": "época|vinho de caju (outra CLB): fica pronto em 24 dias, três ciclos de 8 dias",
+   "atributo": "época",
+   "valor": "vinho de caju (outra CLB): fica pronto em 24 dias, três ciclos de 8 dias",
+   "periodo_referido": "infância da entrevistada, sem data",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "pessoa citada em fala direta",
+    "papel": "detentor ou mestre"
+   },
+   "lugares": {
+    "pratica": "Beneditinos (PI); fala em Altos (PI)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false,
+   "ancora_w": true
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-39.json",
+   "estado_trecho": "localizado",
+   "chave": "uso e consumo|vinho de caju (outra CLB): em 1587 se relatava que o gentio fazia vinho do sumo do caju, de bom cheiro e saboroso, com que se embebedava",
+   "atributo": "uso e consumo",
+   "valor": "vinho de caju (outra CLB): em 1587 se relatava que o gentio fazia vinho do sumo do caju, de bom cheiro e saboroso, com que se embebedava",
+   "periodo_referido": "1587",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "autor",
+    "papel": "autor citado no dossiê"
+   },
+   "lugares": {
+    "pratica": "litoral do Brasil (local não detalhado no trecho)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-40.json",
+   "estado_trecho": "localizado",
+   "chave": "processo e modo de fazer|vinho de caju (outra CLB): em 1663 se relatava que espremiam o caju em vasos e o deixavam ferver e fermentar até ficar com a substância do vinho",
+   "atributo": "processo e modo de fazer",
+   "valor": "vinho de caju (outra CLB): em 1663 se relatava que espremiam o caju em vasos e o deixavam ferver e fermentar até ficar com a substância do vinho",
+   "periodo_referido": "1663",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "autor",
+    "papel": "autor citado no dossiê"
+   },
+   "lugares": {
+    "pratica": "litoral do Brasil (local não detalhado no trecho)",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": null,
+   "sustenta_aviso_saude_politica": false
+  },
+  {
+   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-47.json",
+   "estado_trecho": "localizado",
+   "chave": "uso e consumo|os Tremembés utilizam beberagens feitas a partir do caju em suas danças rituais (outra CLB: mocororó)",
+   "atributo": "uso e consumo",
+   "valor": "os Tremembés utilizam beberagens feitas a partir do caju em suas danças rituais (outra CLB: mocororó)",
+   "periodo_referido": "séc. XVII e até hoje",
+   "sentido": "a favor",
+   "voz": {
+    "tipo": "autor",
+    "papel": "equipe do dossiê de registro"
+   },
+   "lugares": {
+    "pratica": "Delta do Parnaíba, Ceará e Rio Grande do Norte",
+    "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+    "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+   },
+   "criterio_pratica_cultural": "identidade ou memória",
+   "sustenta_aviso_saude_politica": false
+  }
+ ]
+}

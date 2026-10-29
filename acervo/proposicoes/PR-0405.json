@@ -1,0 +1,20 @@
+{
+  "id": "PR-0405",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "uma senhora de Altos, cuja mãe fazia vinho de caju, entrou na história da cajuína depois de casar e vir morar no lugar",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0497"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

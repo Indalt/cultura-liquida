@@ -1,0 +1,20 @@
+{
+  "id": "PR-0388",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "a qualidade da cajuína de cada família produtora é emblema da família e fortalece a identidade do grupo",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0477"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

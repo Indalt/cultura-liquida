@@ -1,0 +1,29 @@
+{
+  "id": "TR-0500",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 90 do PDF; car. 248419-248615 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "aplicou uma metodologia laboratorial de pasteurização à bebida, e passou a vendê-la com o intuito de levantar fundos para a aquisição de vacinas que protegessem os pobres do Ceará contra a varíola",
+  "antes": "século passado, quando o farma- 90 cêutico, Rodolfo Teófilo ",
+  "depois": ". Podemos entrever, nessa história, diversos elementos da si",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

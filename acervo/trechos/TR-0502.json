@@ -1,0 +1,29 @@
+{
+  "id": "TR-0502",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 90 do PDF; car. 249791-249960 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Emblemas da cajuína cristalina transmitem o senso de pertencimento a um mundo civilizado, afastado dos tempos de indiscriminada selvageria que formaram a sociedade local",
+  "antes": "erviço público ou em profissões liberais em outros Estados. ",
+  "depois": ". Um símbolo da transformação dos tempos em que mamelucos ar",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

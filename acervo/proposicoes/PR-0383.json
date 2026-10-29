@@ -1,0 +1,20 @@
+{
+  "id": "PR-0383",
+  "clb": "CL-0001",
+  "atributo": "recipiente",
+  "valor": "produzir cajuína exigia poder de compra de garrafas de vidro e capacidade de financiar o trabalho",
+  "periodo": {
+    "referido": "não datado"
+  },
+  "evidencias": [
+    "EV-0472"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}

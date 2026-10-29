@@ -1,0 +1,20 @@
+{
+  "id": "PR-0411",
+  "clb": "CL-0001",
+  "atributo": "lugar",
+  "valor": "o Delta do Parnaíba, onde viviam os Tremembés, é região possivelmente originária do caju",
+  "periodo": {
+    "referido": "séc. XVII (expedição de guerra)"
+  },
+  "evidencias": [
+    "EV-0504"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0069"
+  }
+}
