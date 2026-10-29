@@ -5,14 +5,14 @@
   "sentido": "a favor",
   "voz": {
     "tipo": "autor",
-    "papel": "autor da dissertação (cita Santos et al., 2020)"
+    "papel": "autor da dissertação"
   },
   "lugares": {
     "pratica": "LU-0002",
     "publicacao": "LU-0001",
     "pesquisa": "F-0022"
   },
-  "estado": "não conferida",
+  "estado": "leitura divergente",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -28,5 +28,6 @@
     "data": "2026-10-29",
     "execucao": "EX-0046"
   },
-  "criterio_pratica_cultural": "reconhecimento pelo grupo"
+  "criterio_pratica_cultural": "reconhecimento pelo grupo",
+  "nota": "Segunda leitura do auditor (K-109, itens marcados, 29/10/2026). A2: a voz atribuía a frase a Santos et al. (2020), que fecham a frase anterior e a seguinte, não esta; a voz foi corrigida para o autor da dissertação; a leitura fica 'divergente' até a próxima conferência."
 }

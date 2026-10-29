@@ -1,0 +1,319 @@
+{
+ "itens": [
+  {
+   "id": "EV-0001",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0001 (EN-1155, p. 15): localizado, grau 1.0, hash igual. PR-0001 repete o trecho; a frase também está na p. 20 do PDF, e o localizador cita a primeira ocorrência (bate com o antes)."
+  },
+  {
+   "id": "EV-0002",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0002 (EN-1155, p. 21): localizado, grau 1.0, hash igual. PR-0002 (bebida leve, sem álcool, fermento e aditivos químicos) diz o que o trecho diz."
+  },
+  {
+   "id": "EV-0003",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0003 (EN-1155, p. 8, Resumo): localizado, grau 1.0, hash igual. PR-0003 mantém os quatro constituintes. Ressalva (A4): o trecho diz bom teor de (qualificativo sem quantidade) e a PR escreve só com; tira, não acrescenta. Voz, lugares e período batem."
+  },
+  {
+   "id": "EV-0004",
+   "trecho_se_sustenta": true,
+   "eixo3": "leitura divergente",
+   "porque": "TR-0004 (EN-1543, p. 16): localizado, grau 1.0, hash igual. Mas a PR-0001 diz refrescante e esterilizado no interior do recipiente, e o trecho só diz suco clarificado, sabor adstringente, aroma característico. O sentido a favor vale em parte (A1)."
+  },
+  {
+   "id": "EV-0005",
+   "trecho_se_sustenta": true,
+   "eixo3": "leitura divergente",
+   "porque": "TR-0005 (EN-1543, p. 16): localizado, grau 1.0, hash igual. PR-0004 e critério reconhecimento pelo grupo batem. Divergência só na voz: o papel diz cita Santos et al., 2020, mas a frase do trecho não traz citação (Santos 2020 fecha a frase anterior e a seguinte) (A2)."
+  },
+  {
+   "id": "EV-0006",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0006 (EN-1543, p. 18): localizado, grau 1.0, hash igual. PR-0005 repete o trecho."
+  },
+  {
+   "id": "EV-0031",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0031 (EN-1369, p. 5): localizado, grau 1.0, hash igual. PR-0019, período referido e lugar (Nordeste brasileiro, LU-0010) conferem."
+  },
+  {
+   "id": "EV-0032",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0032 (EN-1369, p. 13): localizado, grau 1.0, hash igual. PR-0020 fiel; as batalhas pelo domínio dos cajueirais ficam fora, sem inverter sentido. Lugar LU-0011 bate."
+  },
+  {
+   "id": "EV-0033",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0033 (EN-1369, p. 13): localizado, grau 1.0, hash igual. PR-0021 fiel; lugar Piauí (LU-0008) bate."
+  },
+  {
+   "id": "EV-0034",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0034 (EN-1369, p. 80): localizado, grau 1.0, hash igual. PR-0005 suporta clarificação e banho-maria. Ressalvas (A5): o trecho diz suco do caju puro, não fresco; LU-0012 (Piauí) vem do capítulo, não do trecho."
+  },
+  {
+   "id": "EV-0035",
+   "trecho_se_sustenta": true,
+   "eixo3": "conferida",
+   "porque": "TR-0035 (EN-1369, p. 79): localizado, grau 1.0, hash igual. PR-0022 fiel. O termo explicado é caju (o insumo), não cajuína; a PR diz isso."
+  }
+ ],
+ "marca": [
+  {
+   "item": "EN-1155",
+   "veredito": "mantém",
+   "porque": "Dissertação sobre efeitos agudos da cajuína em marcadores biológicos e desempenho: saúde na fonte."
+  },
+  {
+   "item": "EN-1543",
+   "veredito": "mantém",
+   "porque": "Dissertação sobre efeito de cinco doses em corrida; a p. 16 traz benefícios nutricionais e composição antioxidante (EN-1543.txt, l. 16). As três Evidências extraídas (EV-0004 a 0006) não sustentam saúde e ficam sem marca; a composição da p. 16 não foi extraída (escolha do avaliador, não falha de marca)."
+  },
+  {
+   "item": "EN-1369",
+   "veredito": "mantém",
+   "porque": "Documento técnico para indicação geográfica de procedência: política na fonte. As Evidências extraídas (origem, reconhecimento, modo de fazer, etimologia) não sustentam política em si. Zona cinzenta para a regra do curador: EV-0033 (bebida tradicional do Piauí) pode alimentar o dossiê da IG; não a marquei."
+  },
+  {
+   "item": "EV-0003",
+   "veredito": "mantém",
+   "porque": "Composição (vitamina C, carotenoides, fenólicos, carboidratos, bom teor) num texto sobre efeitos no exercício: saúde ou aviso."
+  },
+  {
+   "item": "PR-0003",
+   "veredito": "mantém",
+   "porque": "Atributo composição; só a EV-0003 a sustenta."
+  },
+  {
+   "item": "EV-0002",
+   "veredito": "falta marcar",
+   "porque": "TR-0002 diz que não possui álcool, fermento e aditivos químicos em sua composição (EN-1155, p. 21, sob 2.4 Cajuína e seus possíveis efeitos no exercício físico): composição relevante ao consumo, mesma classe da EV-0003; está com false. Recomendo marcar EV-0002 e PR-0002 (a PR tem também EV-0013 e EV-0017, de outras Entradas, que não li). Critério exato é do curador (A3)."
+  },
+  {
+   "item": "EV-0001",
+   "veredito": "mantém",
+   "porque": "Descritiva; sem marca está certo."
+  },
+  {
+   "item": "EV-0004",
+   "veredito": "mantém",
+   "porque": "Cor, sabor e aroma; sem marca está certo."
+  },
+  {
+   "item": "EV-0005",
+   "veredito": "mantém",
+   "porque": "Reconhecimento cultural; sem marca está certo."
+  },
+  {
+   "item": "EV-0006",
+   "veredito": "mantém",
+   "porque": "Modo de fazer; sem marca está certo."
+  },
+  {
+   "item": "EV-0031",
+   "veredito": "mantém",
+   "porque": "Origem histórica; sem marca está certo."
+  },
+  {
+   "item": "EV-0032",
+   "veredito": "mantém",
+   "porque": "Uso cultural; sem marca está certo."
+  },
+  {
+   "item": "EV-0033",
+   "veredito": "mantém",
+   "porque": "Reconhecimento (ver zona cinzenta em EN-1369); sem marca."
+  },
+  {
+   "item": "EV-0034",
+   "veredito": "mantém",
+   "porque": "O trecho diz sem adição de açúcar e conservantes (composição), mas a PR-0005 não leva essa parte; a marca segue o que a PR sustenta."
+  },
+  {
+   "item": "EV-0035",
+   "veredito": "mantém",
+   "porque": "Etimologia; sem marca está certo."
+  }
+ ],
+ "achados": [
+  {
+   "id": "A1",
+   "tipo": "outro",
+   "descricao": "EV-0004 (a favor) liga TR-0004 à PR-0001, cujo valor traz refrescante e esterilizado no interior do recipiente; o trecho não os diz.",
+   "linha": 16,
+   "trecho": "A cajuína é uma bebida obtida a partir do suco clarificado da maça do caju, apresenta um sabor levemente adstringente e tem um aroma característico único.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n -E refrescante|esterilizado acervo/trechos/TR-0004.json; grep -n valor acervo/proposicoes/PR-0001.json",
+    "saida": "TR-0004: nenhuma das duas palavras; PR-0001: bebida refrescante do suco da maçã do caju clarificado e esterilizado no interior do recipiente"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A2",
+   "tipo": "outro",
+   "descricao": "EV-0005, voz.papel diz cita Santos et al., 2020, mas a frase do trecho (ícone cultural) não tem citação; Santos 2020 fecha a frase anterior e a seguinte.",
+   "linha": 16,
+   "trecho": "Com status de patrimônio nacional, a cajuína é um ícone cultural nos estados do Piauí, Rio Grande do Norte e Ceará. Seu reconhecimento comercial tem sido notável, [...] seus benefícios nutricionais (Santos et al., 2020).",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n Com status de patrim Temp/cultura-liquida/fontes/EN-1543.txt",
+    "saida": "l. 16 (p. 16): Santos et al., 2020 antes de Com status e depois de benefícios nutricionais; nenhuma entre ícone cultural e Ceará."
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A3",
+   "tipo": "outro",
+   "descricao": "EV-0002 e PR-0002 sem marca, embora afirmem ausência de álcool e aditivos na composição (mesma classe da EV-0003, marcada).",
+   "linha": 21,
+   "trecho": "A Cajuína é uma bebida leve com sabor característico, que não possui álcool, fermento e aditivos químicos em sua composição.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n sustenta_aviso_saude_politica acervo/evidencias/EV-0002.json acervo/evidencias/EV-0003.json acervo/proposicoes/PR-0002.json",
+    "saida": "EV-0002: false; EV-0003: true; PR-0002: false"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A4",
+   "tipo": "outro",
+   "descricao": "PR-0003 tira o qualificativo bom teor de do TR-0003; item marcado por saúde, convém dizer bom teor (sem quantidade na fonte).",
+   "linha": 8,
+   "trecho": "A cajuína é um suco processado do caju que apresenta-se com bom teor de vitamina C, c arotenóides, compostos fenólicos e carboidratos em sua composição.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n bom teor acervo/trechos/TR-0003.json; grep -n valor acervo/proposicoes/PR-0003.json",
+    "saida": "TR-0003: bom teor de vitamina C; PR-0003: suco processado do caju com vitamina C, carotenoides, compostos fenólicos e carboidratos"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A5",
+   "tipo": "outro",
+   "descricao": "EV-0034/PR-0005: o trecho diz suco do caju puro, a PR diz suco fresco; LU-0012 (Piauí) vem do capítulo, não do trecho, em vez de F-0021 (lugar da prática não dito).",
+   "linha": 80,
+   "trecho": "A cajuína é o suco do caju puro, clarificado, sem adição de açúcar e conservantes, acondicionado em garrafas que são colocadas por um período de cozimento em banho-maria",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n valor acervo/proposicoes/PR-0005.json; grep -n nome_na_fonte acervo/lugares/LU-0012.json",
+    "saida": "PR-0005: suco fresco que passa por clarificação e cozimento em banho-maria; LU-0012: Piauí (capítulo Cajuína do Piauí; o trecho não nomeia o lugar)"
+   },
+   "estado": "confirmado"
+  }
+ ],
+ "alcance": {
+  "olhado": [
+   "entrada/EN-1155.json, EN-1543.json, EN-1369.json inteiras",
+   "acervo/fontes/FO-0001, FO-0002, FO-0010 (campo entrada confere)",
+   "acervo/trechos TR-0001 a 0006 e TR-0031 a 0035 (11 Trechos: todos os de FO-0001, FO-0002 e FO-0010)",
+   "acervo/evidencias EV-0001 a 0006 e EV-0031 a 0035 (11, varredura de todo o diretório por Trecho)",
+   "acervo/proposicoes PR-0001 a 0005 e PR-0019 a 0022; acervo/lugares LU-0001, 0002, 0007, 0008, 0010, 0011, 0012; acervo/faltas F-0021 e F-0022",
+   "scripts/localizar_trecho.py conferir nos 11 Trechos contra os bytes em Temp/cultura-liquida/fontes (EN-1155, EN-1543, EN-1369): 11 de 11 localizado, grau 1.0, hash igual",
+   "contexto nos EN-nnnn.txt por grep -n e recorte de cerca de 350 caracteres; páginas pelo marcador de página do texto",
+   "scripts/procurar_dado_pessoal.py nos 11 Trechos: 0 ocorrências; leitura de antes e depois: só autores citados (Abreu, Lima, Santos, Silva Neto)"
+  ],
+  "fora": [
+   "Evidências e Proposições de outras Entradas (EV-0008, 0010, 0013, 0016, 0017, 0027, 0042) que compartilham PR-0001, 0002, 0005 e 0021: não lidas",
+   "Os PDFs inteiros: a aderência ao PDF foi dada pelo localizar_trecho, não por leitura própria",
+   "Texto fora dos trechos extraídos (p. 16 de EN-1543, p. 5 de EN-1369) só para a marca",
+   "Sem web; licenças, Faltas e proteção das Entradas não revistas (não pedido)"
+  ]
+ },
+ "log": {
+  "agente": "auditor",
+  "habilidade": "conferir-fato",
+  "versao_harness": "0.1.1",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "K-109, bloco 7: itens marcados (EN-1155, EN-1543, EN-1369, EV-0003, PR-0003) e seus Trechos, Evidências e Proposições",
+  "acoes": [
+   "Listei por grep os arquivos marcados e os Trechos de FO-0001, FO-0002 e FO-0010",
+   "Li 11 Trechos, 11 Evidências, 9 Proposições, 7 Lugares e as Faltas F-0021 e F-0022",
+   "Rodei scripts/localizar_trecho.py conferir nos 11 Trechos contra os PDFs em Temp",
+   "Li contexto nos EN-nnnn.txt por grep -n e recorte; conferi páginas pelo marcador",
+   "Rodei scripts/procurar_dado_pessoal.py nos 11 Trechos",
+   "Validei o relatório de achados com scripts/validar.py achado-verificacao"
+  ],
+  "resultados": [
+   "Trecho se sustenta: 11 de 11",
+   "Eixo 3: 9 conferidas (EV-0003 e EV-0034 com ressalva), 2 leituras divergentes (EV-0004, EV-0005)",
+   "Marca: 3 Entradas, EV-0003 e PR-0003 mantêm; 1 falta marcar (EV-0002, com PR-0002); nenhuma sobra",
+   "Dado pessoal: 0",
+   "5 achados confirmados, todos de baixa gravidade"
+  ],
+  "decisoes": [
+   {
+    "item": "A1 EV-0004",
+    "decisao": "aceito",
+    "motivo": "trecho não traz refrescante nem esterilizado no interior do recipiente"
+   },
+   {
+    "item": "A2 EV-0005 voz",
+    "decisao": "aceito",
+    "motivo": "frase sem citação própria"
+   },
+   {
+    "item": "A3 EV-0002 e PR-0002 marca",
+    "decisao": "aceito",
+    "motivo": "composição sem álcool e aditivos, mesma classe da EV-0003; critério do curador"
+   },
+   {
+    "item": "A4 PR-0003",
+    "decisao": "aceito",
+    "motivo": "perde bom teor"
+   },
+   {
+    "item": "A5 EV-0034",
+    "decisao": "aceito",
+    "motivo": "fresco e LU-0012 fora do trecho"
+   },
+   {
+    "item": "EN-1369 EV-0033 zona cinzenta",
+    "decisao": "descartado",
+    "motivo": "não é aviso, saúde ou política em si; regra do curador"
+   },
+   {
+    "item": "Evidências de outras Entradas sobre PR-0001, 0002, 0005, 0021",
+    "decisao": "falta",
+    "motivo": "fora do pedido"
+   },
+   {
+    "item": "duracao_s",
+    "decisao": "falta",
+    "motivo": "não medida; o curador preenche"
+   }
+  ],
+  "duracao_s": 0,
+  "erros": [
+   "duracao_s não medida"
+  ],
+  "alcance": {
+   "olhado": [
+    "entrada/EN-1155.json, EN-1543.json, EN-1369.json inteiras",
+    "acervo/fontes/FO-0001, FO-0002, FO-0010 (campo entrada confere)",
+    "acervo/trechos TR-0001 a 0006 e TR-0031 a 0035 (11 Trechos: todos os de FO-0001, FO-0002 e FO-0010)",
+    "acervo/evidencias EV-0001 a 0006 e EV-0031 a 0035 (11, varredura de todo o diretório por Trecho)",
+    "acervo/proposicoes PR-0001 a 0005 e PR-0019 a 0022; acervo/lugares LU-0001, 0002, 0007, 0008, 0010, 0011, 0012; acervo/faltas F-0021 e F-0022",
+    "scripts/localizar_trecho.py conferir nos 11 Trechos contra os bytes em Temp/cultura-liquida/fontes (EN-1155, EN-1543, EN-1369): 11 de 11 localizado, grau 1.0, hash igual",
+    "contexto nos EN-nnnn.txt por grep -n e recorte de cerca de 350 caracteres; páginas pelo marcador de página do texto",
+    "scripts/procurar_dado_pessoal.py nos 11 Trechos: 0 ocorrências; leitura de antes e depois: só autores citados (Abreu, Lima, Santos, Silva Neto)"
+   ],
+   "fora": [
+    "Evidências e Proposições de outras Entradas (EV-0008, 0010, 0013, 0016, 0017, 0027, 0042) que compartilham PR-0001, 0002, 0005 e 0021: não lidas",
+    "Os PDFs inteiros: a aderência ao PDF foi dada pelo localizar_trecho, não por leitura própria",
+    "Texto fora dos trechos extraídos (p. 16 de EN-1543, p. 5 de EN-1369) só para a marca",
+    "Sem web; licenças, Faltas e proteção das Entradas não revistas (não pedido)"
+   ]
+  }
+ }
+}

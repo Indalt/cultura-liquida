@@ -12,7 +12,7 @@
     "publicacao": "LU-0007",
     "pesquisa": "F-0022"
   },
-  "estado": "não conferida",
+  "estado": "conferida",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -28,5 +28,6 @@
     "data": "2026-10-29",
     "execucao": "EX-0046"
   },
-  "criterio_pratica_cultural": "reconhecimento pelo grupo"
+  "criterio_pratica_cultural": "reconhecimento pelo grupo",
+  "nota": "Segunda leitura do auditor (K-109, itens marcados, 29/10/2026)."
 }

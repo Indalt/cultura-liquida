@@ -2,7 +2,7 @@
   "id": "PR-0003",
   "clb": "CL-0001",
   "atributo": "composição",
-  "valor": "suco processado do caju com vitamina C, carotenoides, compostos fenólicos e carboidratos",
+  "valor": "suco processado do caju com bom teor de vitamina C, carotenoides, compostos fenólicos e carboidratos",
   "periodo": {
     "referido": "não dito na fonte"
   },
@@ -16,5 +16,6 @@
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
     "data": "2026-10-29",
     "execucao": "EX-0046"
-  }
+  },
+  "nota": "A4 da segunda leitura (K-109): o valor recuperou 'bom teor de', que o trecho diz."
 }

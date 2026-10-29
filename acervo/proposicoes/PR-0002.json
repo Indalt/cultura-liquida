@@ -13,10 +13,11 @@
   ],
   "mu": null,
   "lambda": null,
-  "sustenta_aviso_saude_politica": false,
+  "sustenta_aviso_saude_politica": true,
   "origem_registro": {
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
     "data": "2026-10-29",
     "execucao": "EX-0046"
-  }
+  },
+  "nota": "Marcada pela A3 da segunda leitura (K-109)."
 }

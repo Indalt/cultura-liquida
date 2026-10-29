@@ -12,7 +12,7 @@
     "publicacao": "LU-0001",
     "pesquisa": "F-0022"
   },
-  "estado": "não conferida",
+  "estado": "conferida",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -27,5 +27,6 @@
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
     "data": "2026-10-29",
     "execucao": "EX-0046"
-  }
+  },
+  "nota": "Segunda leitura do auditor (K-109, itens marcados, 29/10/2026)."
 }
