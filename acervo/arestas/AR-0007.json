@@ -1,0 +1,31 @@
+{
+  "id": "AR-0007",
+  "de": "EL-0013",
+  "para": "EL-0034",
+  "tipo": "sequência de etapas",
+  "tensao": false,
+  "proposicoes": [
+    "PR-0160"
+  ],
+  "z": "2019-2024 (trabalho de campo recente)",
+  "w": "F-0030",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "mu": 0.5,
+  "lambda": 0.0,
+  "estado": "intermediário",
+  "versao_regra": "mu-lambda-0.2",
+  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
+}

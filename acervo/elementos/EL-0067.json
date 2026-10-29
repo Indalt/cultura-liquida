@@ -1,0 +1,32 @@
+{
+  "id": "EL-0067",
+  "clb": "CL-0001",
+  "x": [
+    "IN-0001"
+  ],
+  "y": [
+    "PC-0007"
+  ],
+  "z": "2008-2014 (trabalho de campo e dossiê)",
+  "w": "CP-0001",
+  "proposicoes": [
+    "PR-0065",
+    "PR-0086",
+    "PR-0268",
+    "PR-0307"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

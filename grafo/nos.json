@@ -1,0 +1,1265 @@
+{
+  "gerado_por": "scripts/calcular_mu_lambda.py",
+  "versao_regra": "mu-lambda-0.2",
+  "nos": [
+    {
+      "id": "EL-0001",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0309"
+      ]
+    },
+    {
+      "id": "EL-0002",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0261"
+      ]
+    },
+    {
+      "id": "EL-0003",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0087",
+        "PR-0342"
+      ]
+    },
+    {
+      "id": "EL-0004",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "CP-0002",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0184"
+      ]
+    },
+    {
+      "id": "EL-0005",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "CP-0004",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0215"
+      ]
+    },
+    {
+      "id": "EL-0006",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "F-0030",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0173",
+        "PR-0209"
+      ]
+    },
+    {
+      "id": "EL-0007",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0001"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0042",
+        "PR-0049"
+      ]
+    },
+    {
+      "id": "EL-0008",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0258",
+        "PR-0259"
+      ]
+    },
+    {
+      "id": "EL-0009",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0293"
+      ]
+    },
+    {
+      "id": "EL-0010",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "décadas de 1970-1980",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0265"
+      ]
+    },
+    {
+      "id": "EL-0011",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0088",
+        "PR-0089",
+        "PR-0090",
+        "PR-0091",
+        "PR-0302",
+        "PR-0303",
+        "PR-0338",
+        "PR-0339",
+        "PR-0340",
+        "PR-0342"
+      ]
+    },
+    {
+      "id": "EL-0012",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "CP-0002",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0185"
+      ]
+    },
+    {
+      "id": "EL-0013",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "F-0030",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0156",
+        "PR-0160",
+        "PR-0173"
+      ]
+    },
+    {
+      "id": "EL-0014",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0002"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0042"
+      ]
+    },
+    {
+      "id": "EL-0015",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "final do século XIX",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0247",
+        "PR-0297"
+      ]
+    },
+    {
+      "id": "EL-0016",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "final do século XIX",
+      "w": "F-0027",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0235"
+      ]
+    },
+    {
+      "id": "EL-0017",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0258"
+      ]
+    },
+    {
+      "id": "EL-0018",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0260"
+      ]
+    },
+    {
+      "id": "EL-0019",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0293"
+      ]
+    },
+    {
+      "id": "EL-0020",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "décadas de 1970-1980",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0265"
+      ]
+    },
+    {
+      "id": "EL-0021",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0320",
+        "PR-0321"
+      ]
+    },
+    {
+      "id": "EL-0022",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0269"
+      ]
+    },
+    {
+      "id": "EL-0023",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0009",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0128"
+      ]
+    },
+    {
+      "id": "EL-0024",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0009",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0323"
+      ]
+    },
+    {
+      "id": "EL-0025",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0009",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0325"
+      ]
+    },
+    {
+      "id": "EL-0026",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0317"
+      ]
+    },
+    {
+      "id": "EL-0027",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0318"
+      ]
+    },
+    {
+      "id": "EL-0028",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0092",
+        "PR-0093",
+        "PR-0129",
+        "PR-0131",
+        "PR-0312",
+        "PR-0342"
+      ]
+    },
+    {
+      "id": "EL-0029",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0002",
+        "IN-0003",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0222"
+      ]
+    },
+    {
+      "id": "EL-0030",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0319"
+      ]
+    },
+    {
+      "id": "EL-0031",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0094"
+      ]
+    },
+    {
+      "id": "EL-0032",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "CP-0002",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0170"
+      ]
+    },
+    {
+      "id": "EL-0033",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "CP-0002",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0195"
+      ]
+    },
+    {
+      "id": "EL-0034",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "F-0030",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0160"
+      ]
+    },
+    {
+      "id": "EL-0035",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0002",
+        "IN-0003",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "não datado",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0058"
+      ]
+    },
+    {
+      "id": "EL-0036",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0001",
+        "PR-0005",
+        "PR-0042",
+        "PR-0043"
+      ]
+    },
+    {
+      "id": "EL-0037",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0010"
+      ]
+    },
+    {
+      "id": "EL-0038",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0003"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0006"
+      ]
+    },
+    {
+      "id": "EL-0039",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "final do século XIX",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0297"
+      ]
+    },
+    {
+      "id": "EL-0040",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0259",
+        "PR-0273",
+        "PR-0275"
+      ]
+    },
+    {
+      "id": "EL-0041",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0266"
+      ]
+    },
+    {
+      "id": "EL-0042",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "F-0028",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0276"
+      ]
+    },
+    {
+      "id": "EL-0043",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "décadas de 1970-1980",
+      "w": "CP-0002",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0237"
+      ]
+    },
+    {
+      "id": "EL-0044",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "décadas de 1970-1980",
+      "w": "CP-0005",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0236"
+      ]
+    },
+    {
+      "id": "EL-0045",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "décadas de 1970-1980",
+      "w": "CP-0006",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0265"
+      ]
+    },
+    {
+      "id": "EL-0046",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0270"
+      ]
+    },
+    {
+      "id": "EL-0047",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0003"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0320"
+      ]
+    },
+    {
+      "id": "EL-0048",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0009",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0334"
+      ]
+    },
+    {
+      "id": "EL-0049",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0335"
+      ]
+    },
+    {
+      "id": "EL-0050",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0095",
+        "PR-0096",
+        "PR-0097",
+        "PR-0099",
+        "PR-0116",
+        "PR-0140",
+        "PR-0331",
+        "PR-0342",
+        "PR-0397"
+      ]
+    },
+    {
+      "id": "EL-0051",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0002"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0302"
+      ]
+    },
+    {
+      "id": "EL-0052",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0002",
+        "IN-0003",
+        "IN-0004"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0222"
+      ]
+    },
+    {
+      "id": "EL-0053",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0004"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0042",
+        "PR-0059"
+      ]
+    },
+    {
+      "id": "EL-0054",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0005"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0293"
+      ]
+    },
+    {
+      "id": "EL-0055",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0005"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "F-0028",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0277",
+        "PR-0278"
+      ]
+    },
+    {
+      "id": "EL-0056",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0005"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0100",
+        "PR-0101",
+        "PR-0102",
+        "PR-0286",
+        "PR-0328",
+        "PR-0333",
+        "PR-0342"
+      ]
+    },
+    {
+      "id": "EL-0057",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0005"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "F-0030",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0159",
+        "PR-0174",
+        "PR-0175",
+        "PR-0176"
+      ]
+    },
+    {
+      "id": "EL-0058",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0005"
+      ],
+      "z": "não datado",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0384"
+      ]
+    },
+    {
+      "id": "EL-0059",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0005"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0013",
+        "PR-0041",
+        "PR-0042",
+        "PR-0059",
+        "PR-0383"
+      ]
+    },
+    {
+      "id": "EL-0060",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "F-0028",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0278"
+      ]
+    },
+    {
+      "id": "EL-0061",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0271"
+      ]
+    },
+    {
+      "id": "EL-0062",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0010",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0317"
+      ]
+    },
+    {
+      "id": "EL-0063",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0103",
+        "PR-0104",
+        "PR-0117",
+        "PR-0118",
+        "PR-0131",
+        "PR-0132",
+        "PR-0133",
+        "PR-0134",
+        "PR-0223",
+        "PR-0315",
+        "PR-0316",
+        "PR-0342"
+      ]
+    },
+    {
+      "id": "EL-0064",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "CP-0002",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0180"
+      ]
+    },
+    {
+      "id": "EL-0065",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "2019-2024 (trabalho de campo recente)",
+      "w": "F-0030",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0160"
+      ]
+    },
+    {
+      "id": "EL-0066",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0006"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0005",
+        "PR-0042",
+        "PR-0043",
+        "PR-0059"
+      ]
+    },
+    {
+      "id": "EL-0067",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0007"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "CP-0001",
+      "w_estado": "captada",
+      "proposicoes": [
+        "PR-0065",
+        "PR-0086",
+        "PR-0268",
+        "PR-0307"
+      ]
+    },
+    {
+      "id": "EL-0068",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0007"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0127",
+        "PR-0140",
+        "PR-0263",
+        "PR-0326",
+        "PR-0327",
+        "PR-0328",
+        "PR-0330",
+        "PR-0331",
+        "PR-0332"
+      ]
+    },
+    {
+      "id": "EL-0069",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001",
+        "IN-0005"
+      ],
+      "y": [
+        "PC-0008"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0295"
+      ]
+    },
+    {
+      "id": "EL-0070",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0009"
+      ],
+      "z": "décadas de 1920-1960",
+      "w": "F-0028",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0119",
+        "PR-0279"
+      ]
+    },
+    {
+      "id": "EL-0071",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0009"
+      ],
+      "z": "2008-2014 (trabalho de campo e dossiê)",
+      "w": "F-0029",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0231",
+        "PR-0284"
+      ]
+    },
+    {
+      "id": "EL-0072",
+      "clb": "CL-0001",
+      "x": [
+        "IN-0001"
+      ],
+      "y": [
+        "PC-0009"
+      ],
+      "z": "não datado",
+      "w": "F-0031",
+      "w_estado": "paracompleto",
+      "proposicoes": [
+        "PR-0062"
+      ]
+    }
+  ]
+}

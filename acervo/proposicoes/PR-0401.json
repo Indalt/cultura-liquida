@@ -11,12 +11,17 @@
     "EV-0492",
     "EV-0493"
   ],
-  "mu": null,
-  "lambda": null,
+  "mu": 0.0,
+  "lambda": 0.0,
   "sustenta_aviso_saude_politica": false,
   "origem_registro": {
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
     "data": "2026-10-29",
     "execucao": "EX-0069"
-  }
+  },
+  "estado": "paracompleto",
+  "versao_regra": "mu-lambda-0.2",
+  "tensao_interna": [
+    "FO-0034"
+  ]
 }

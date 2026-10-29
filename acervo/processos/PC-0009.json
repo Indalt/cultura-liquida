@@ -1,0 +1,26 @@
+{
+  "id": "PC-0009",
+  "nome": "vender e fazer circular a cajuína",
+  "tipo": "circulação",
+  "proposicoes": [
+    "PR-0062",
+    "PR-0119",
+    "PR-0231",
+    "PR-0279",
+    "PR-0284"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "CP-0008",
+  "designacao_local": "a cajuína",
+  "lugar": "LU-0041",
+  "comunidade": "pessoas detentor ou mestre, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "década de 1980 em diante; meados do século XX; 2009-2010; 2008-2009",
+  "evidencias": [
+    "EV-0317",
+    "EV-0318",
+    "EV-0350",
+    "EV-0431"
+  ],
+  "atestada_pratica_comum": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 4 fala(s) de quem pratica, lugar na fonte: Monsenhor Gil, PI. A tradução vem depois da W (D-018) e não foi feita nesta chamada. Nenhuma fonte lida mostra a prática como comum só neste lugar: atestada_pratica_comum falso."
+}

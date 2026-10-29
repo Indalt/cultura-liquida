@@ -1,0 +1,31 @@
+{
+  "id": "AR-0005",
+  "de": "EL-0010",
+  "para": "EL-0020",
+  "tipo": "sequência de etapas",
+  "tensao": false,
+  "proposicoes": [
+    "PR-0265"
+  ],
+  "z": "décadas de 1970-1980",
+  "w": "CP-0006",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "mu": 0.5,
+  "lambda": 0.0,
+  "estado": "intermediário",
+  "versao_regra": "mu-lambda-0.2",
+  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
+}

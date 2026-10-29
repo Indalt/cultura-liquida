@@ -1,0 +1,47 @@
+{
+  "id": "PC-0004",
+  "nome": "filtrar o suco cortado",
+  "tipo": "filtração",
+  "proposicoes": [
+    "PR-0042",
+    "PR-0059",
+    "PR-0095",
+    "PR-0096",
+    "PR-0097",
+    "PR-0099",
+    "PR-0116",
+    "PR-0140",
+    "PR-0222",
+    "PR-0236",
+    "PR-0237",
+    "PR-0259",
+    "PR-0265",
+    "PR-0266",
+    "PR-0270",
+    "PR-0273",
+    "PR-0275",
+    "PR-0276",
+    "PR-0297",
+    "PR-0302",
+    "PR-0320",
+    "PR-0331",
+    "PR-0334",
+    "PR-0335",
+    "PR-0342",
+    "PR-0397"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

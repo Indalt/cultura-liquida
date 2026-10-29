@@ -1,0 +1,40 @@
+{
+  "id": "PC-0002",
+  "nome": "esmagar, moer e prensar o caju",
+  "tipo": "extração do suco",
+  "proposicoes": [
+    "PR-0088",
+    "PR-0089",
+    "PR-0090",
+    "PR-0091",
+    "PR-0156",
+    "PR-0160",
+    "PR-0173",
+    "PR-0185",
+    "PR-0258",
+    "PR-0259",
+    "PR-0265",
+    "PR-0293",
+    "PR-0302",
+    "PR-0303",
+    "PR-0338",
+    "PR-0339",
+    "PR-0340",
+    "PR-0342",
+    "PR-0042"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "EL-0010",
+  "clb": "CL-0001",
+  "x": [
+    "IN-0001"
+  ],
+  "y": [
+    "PC-0002"
+  ],
+  "z": "décadas de 1970-1980",
+  "w": "CP-0006",
+  "proposicoes": [
+    "PR-0265"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

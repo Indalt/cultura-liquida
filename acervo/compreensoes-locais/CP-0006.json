@@ -1,0 +1,33 @@
+{
+  "id": "CP-0006",
+  "designacao_local": "o corte (cortar a água do caju); a bebida é a cajuína",
+  "lugar": "LU-0037",
+  "comunidade": "pessoas detentor ou mestre e quem ensinou, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "meados do século XX; final do século XIX; por volta de 1942; meados do século XX (tia falecida em 1988)",
+  "evidencias": [
+    "EV-0283",
+    "EV-0300",
+    "EV-0301",
+    "EV-0302",
+    "EV-0332",
+    "EV-0333",
+    "EV-0353",
+    "EV-0360"
+  ],
+  "atestada_pratica_comum": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 8 fala(s) de quem pratica, lugar na fonte: Amarante, PI. A tradução vem depois da W (D-018) e não foi feita nesta chamada. Nenhuma fonte lida mostra a prática como comum só neste lugar: atestada_pratica_comum falso."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "CP-0001",
+  "designacao_local": "o corte (cortar a água do caju); a bebida é a cajuína",
+  "lugar": "LU-0007",
+  "comunidade": "pessoas detentor ou mestre e quem ensinou, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "2008; décadas de 1930 a 1950; década de 1940-1950; 29/10/2008",
+  "evidencias": [
+    "EV-0089",
+    "EV-0101",
+    "EV-0288",
+    "EV-0289",
+    "EV-0291",
+    "EV-0293",
+    "EV-0294",
+    "EV-0295",
+    "EV-0303",
+    "EV-0304",
+    "EV-0305",
+    "EV-0306",
+    "EV-0307",
+    "EV-0308",
+    "EV-0310",
+    "EV-0347",
+    "EV-0348",
+    "EV-0352",
+    "EV-0387",
+    "EV-0388",
+    "EV-0389",
+    "EV-0415",
+    "EV-0430",
+    "EV-0432",
+    "EV-0452",
+    "EV-0457",
+    "EV-0473"
+  ],
+  "atestada_pratica_comum": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 27 fala(s) de quem pratica, lugar na fonte: Teresina, PI. A tradução vem depois da W (D-018) e não foi feita nesta chamada. Nenhuma fonte lida mostra a prática como comum só neste lugar: atestada_pratica_comum falso."
+}

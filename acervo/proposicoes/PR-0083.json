@@ -10,12 +10,14 @@
     "EV-0109",
     "EV-0460"
   ],
-  "mu": null,
-  "lambda": null,
+  "mu": 1.0,
+  "lambda": 0.0,
   "sustenta_aviso_saude_politica": false,
   "origem_registro": {
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
     "data": "2026-10-29",
     "execucao": "EX-0066"
-  }
+  },
+  "estado": "verdadeiro",
+  "versao_regra": "mu-lambda-0.2"
 }

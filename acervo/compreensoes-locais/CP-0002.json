@@ -1,0 +1,50 @@
+{
+  "id": "CP-0002",
+  "designacao_local": "o corte (cortar a água do caju); a bebida é a cajuína",
+  "lugar": "LU-0023",
+  "comunidade": "pessoas comunidade, coletivo ou sujeito de direitos e detentor ou mestre, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "2022-2024; atual (relato de 2024); não informado; 2019-2020",
+  "evidencias": [
+    "EV-0092",
+    "EV-0102",
+    "EV-0176",
+    "EV-0192",
+    "EV-0193",
+    "EV-0194",
+    "EV-0195",
+    "EV-0196",
+    "EV-0197",
+    "EV-0199",
+    "EV-0209",
+    "EV-0210",
+    "EV-0211",
+    "EV-0212",
+    "EV-0213",
+    "EV-0214",
+    "EV-0215",
+    "EV-0216",
+    "EV-0217",
+    "EV-0224",
+    "EV-0225",
+    "EV-0241",
+    "EV-0251",
+    "EV-0270",
+    "EV-0274"
+  ],
+  "atestada_pratica_comum": true,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 23 fala(s) de quem pratica, lugar na fonte: Piauí (PI). A tradução vem depois da W (D-018) e não foi feita nesta chamada. atestada_pratica_comum pelas PR-0147 (produz-se de modo tradicional em todo o estado) e PR-0220 (consome-se em praticamente todo o Piauí), cujas Evidências entram na lista sem serem falas."
+}

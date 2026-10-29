@@ -11,13 +11,15 @@
     "EV-0013",
     "EV-0017"
   ],
-  "mu": null,
-  "lambda": null,
+  "mu": 1.0,
+  "lambda": 0.0,
   "sustenta_aviso_saude_politica": true,
   "origem_registro": {
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
     "data": "2026-10-29",
     "execucao": "EX-0046"
   },
-  "nota": "Marcada pela A3 da segunda leitura (K-109)."
+  "nota": "Marcada pela A3 da segunda leitura (K-109).",
+  "estado": "verdadeiro",
+  "versao_regra": "mu-lambda-0.2"
 }

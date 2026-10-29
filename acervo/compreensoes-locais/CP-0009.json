@@ -1,0 +1,36 @@
+{
+  "id": "CP-0009",
+  "designacao_local": "o corte (cortar a água do caju); a bebida é a cajuína",
+  "lugar": "LU-0042",
+  "comunidade": "pessoas detentor ou mestre e quem ensinou, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "07/12/2008; anos 2000; 16/10/2008; meados do século XX",
+  "evidencias": [
+    "EV-0320",
+    "EV-0323",
+    "EV-0324",
+    "EV-0349",
+    "EV-0356",
+    "EV-0365",
+    "EV-0391",
+    "EV-0392",
+    "EV-0393",
+    "EV-0409",
+    "EV-0497"
+  ],
+  "atestada_pratica_comum": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 11 fala(s) de quem pratica, lugar na fonte: Altos, PI. A tradução vem depois da W (D-018) e não foi feita nesta chamada. Nenhuma fonte lida mostra a prática como comum só neste lugar: atestada_pratica_comum falso."
+}

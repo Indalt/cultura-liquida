@@ -1,0 +1,41 @@
+{
+  "id": "PC-0005",
+  "nome": "envasar e tampar",
+  "tipo": "envase",
+  "proposicoes": [
+    "PR-0013",
+    "PR-0041",
+    "PR-0042",
+    "PR-0059",
+    "PR-0100",
+    "PR-0101",
+    "PR-0102",
+    "PR-0159",
+    "PR-0174",
+    "PR-0175",
+    "PR-0176",
+    "PR-0277",
+    "PR-0278",
+    "PR-0286",
+    "PR-0293",
+    "PR-0328",
+    "PR-0333",
+    "PR-0342",
+    "PR-0383",
+    "PR-0384"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

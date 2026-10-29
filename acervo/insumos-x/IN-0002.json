@@ -1,0 +1,25 @@
+{
+  "id": "IN-0002",
+  "nome": "resina do cajueiro",
+  "tipo": "agente de clarificação",
+  "proposicoes": [
+    "PR-0058",
+    "PR-0222",
+    "PR-0302"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "falta_status": "F-0026"
+}

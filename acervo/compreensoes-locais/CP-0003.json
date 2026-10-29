@@ -1,0 +1,27 @@
+{
+  "id": "CP-0003",
+  "designacao_local": "a cajuína",
+  "lugar": "LU-0028",
+  "comunidade": "pessoas detentor ou mestre, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "ao longo do tempo (não datado); juventude da produtora",
+  "evidencias": [
+    "EV-0095",
+    "EV-0096"
+  ],
+  "atestada_pratica_comum": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 2 fala(s) de quem pratica, lugar na fonte: Barras, PI. A tradução vem depois da W (D-018) e não foi feita nesta chamada. Nenhuma fonte lida mostra a prática como comum só neste lugar: atestada_pratica_comum falso."
+}

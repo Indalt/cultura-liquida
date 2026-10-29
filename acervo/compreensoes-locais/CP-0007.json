@@ -1,0 +1,26 @@
+{
+  "id": "CP-0007",
+  "designacao_local": "a cajuína",
+  "lugar": "LU-0040",
+  "comunidade": "pessoas detentor ou mestre, em fala direta publicada (sem nome, código opaco na tabela de Pessoas)",
+  "periodo": "nov. 2008",
+  "evidencias": [
+    "EV-0351"
+  ],
+  "atestada_pratica_comum": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "nota": "W ancorada em 1 fala(s) de quem pratica, lugar na fonte: Simplício Mendes, PI. A tradução vem depois da W (D-018) e não foi feita nesta chamada. Nenhuma fonte lida mostra a prática como comum só neste lugar: atestada_pratica_comum falso."
+}

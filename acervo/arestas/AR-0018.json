@@ -1,0 +1,37 @@
+{
+  "id": "AR-0018",
+  "de": "EL-0067",
+  "para": "EL-0011",
+  "tipo": "restrição do procedimento (interdição da água no caju)",
+  "tensao": true,
+  "proposicoes": [
+    "PR-0065",
+    "PR-0086",
+    "PR-0268",
+    "PR-0307"
+  ],
+  "z": "2008-2014 (trabalho de campo e dossiê)",
+  "w": "F-0029",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "mu": 0.0,
+  "lambda": 0.0,
+  "estado": "paracompleto",
+  "versao_regra": "mu-lambda-0.2",
+  "tensao_interna": [
+    "FO-0032",
+    "FO-0034"
+  ]
+}

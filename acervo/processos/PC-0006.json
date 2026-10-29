@@ -1,0 +1,42 @@
+{
+  "id": "PC-0006",
+  "nome": "cozinhar em banho-maria (tratamento térmico)",
+  "tipo": "tratamento térmico",
+  "proposicoes": [
+    "PR-0005",
+    "PR-0042",
+    "PR-0043",
+    "PR-0059",
+    "PR-0103",
+    "PR-0104",
+    "PR-0117",
+    "PR-0118",
+    "PR-0131",
+    "PR-0132",
+    "PR-0133",
+    "PR-0134",
+    "PR-0160",
+    "PR-0180",
+    "PR-0223",
+    "PR-0271",
+    "PR-0278",
+    "PR-0315",
+    "PR-0316",
+    "PR-0317",
+    "PR-0342"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

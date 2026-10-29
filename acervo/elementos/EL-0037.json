@@ -1,0 +1,30 @@
+{
+  "id": "EL-0037",
+  "clb": "CL-0001",
+  "x": [
+    "IN-0001",
+    "IN-0003"
+  ],
+  "y": [
+    "PC-0003"
+  ],
+  "z": "não datado",
+  "w": "F-0031",
+  "proposicoes": [
+    "PR-0010"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}

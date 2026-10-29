@@ -1,0 +1,19 @@
+{
+  "id": "F-0031",
+  "tipo": "compreensao_local_nao_captada",
+  "o_que_falta": "A compreensão local (W) de quem pratica, no período «não datado», para os Elementos do grafo da cajuína (CL-0001) cujas Proposições não têm fala de quem pratica.",
+  "por_que": "As Proposições desses Elementos vêm de autor, equipe de dossiê ou instituição; nenhuma fala de detentor, mestre ou comunidade as sustenta. O grafo mostra a W como paracompleta e não a completa por inferência (D-018).",
+  "onde_aparece": [
+    "EL-0007",
+    "EL-0014",
+    "EL-0036",
+    "EL-0037",
+    "EL-0038",
+    "EL-0053",
+    "EL-0059",
+    "EL-0066",
+    "EL-0072"
+  ],
+  "criada_por": "arquivista (EX-0071)",
+  "data": "2026-10-29"
+}

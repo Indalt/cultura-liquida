@@ -9,12 +9,15 @@
   "evidencias": [
     "EV-0283"
   ],
-  "mu": null,
-  "lambda": null,
+  "mu": 0.5,
+  "lambda": 0.0,
   "sustenta_aviso_saude_politica": false,
   "origem_registro": {
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
     "data": "2026-10-29",
     "execucao": "EX-0067"
-  }
+  },
+  "estado": "intermediário",
+  "versao_regra": "mu-lambda-0.2",
+  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
 }

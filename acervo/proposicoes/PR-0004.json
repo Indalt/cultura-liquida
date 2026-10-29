@@ -9,12 +9,17 @@
   "evidencias": [
     "EV-0005"
   ],
-  "mu": null,
-  "lambda": null,
+  "mu": 0.0,
+  "lambda": 0.0,
   "sustenta_aviso_saude_politica": false,
   "origem_registro": {
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
     "data": "2026-10-29",
     "execucao": "EX-0046"
+  },
+  "estado": "paracompleto",
+  "versao_regra": "mu-lambda-0.2",
+  "fora_da_conta": {
+    "EV-0005": "leitura divergente"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "id": "IN-0003",
+  "nome": "cola de sapateiro",
+  "tipo": "agente de clarificação",
+  "proposicoes": [
+    "PR-0010",
+    "PR-0058",
+    "PR-0094",
+    "PR-0195",
+    "PR-0222",
+    "PR-0260",
+    "PR-0265",
+    "PR-0293",
+    "PR-0317",
+    "PR-0319",
+    "PR-0320",
+    "PR-0321",
+    "PR-0323"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  },
+  "falta_status": "F-0026"
+}

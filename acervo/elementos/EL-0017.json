@@ -1,0 +1,29 @@
+{
+  "id": "EL-0017",
+  "clb": "CL-0001",
+  "x": [
+    "IN-0001"
+  ],
+  "y": [
+    "PC-0003"
+  ],
+  "z": "décadas de 1920-1960",
+  "w": "CP-0001",
+  "proposicoes": [
+    "PR-0258"
+  ],
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "UF",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "arquivista (gerar-grafo 0.1.0)",
+    "data": "2026-10-29",
+    "execucao": "EX-0071"
+  }
+}
