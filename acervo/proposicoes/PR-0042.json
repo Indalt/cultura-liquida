@@ -1,0 +1,20 @@
+{
+  "id": "PR-0042",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "fluxograma de produção de cajuína: pré-tratamento, desintegração, extração, clarificação, sedimentação, filtração, enchimento, fechamento, tratamento térmico, resfriamento, rotulagem e armazenagem",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0060"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

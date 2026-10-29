@@ -1,0 +1,20 @@
+{
+  "id": "PR-0046",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "cajuína citada entre os produtos principais do caju, ao lado de amêndoa, suco, vinho, doces e rapadura",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0064"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

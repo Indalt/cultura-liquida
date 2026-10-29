@@ -1,0 +1,20 @@
+{
+  "id": "PR-0029",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "fábricas que, além da castanha de caju, exploram o pedúnculo para produzir cajuína",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0046"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

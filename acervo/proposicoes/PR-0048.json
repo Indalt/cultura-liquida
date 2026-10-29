@@ -1,0 +1,20 @@
+{
+  "id": "PR-0048",
+  "clb": "CL-0001",
+  "atributo": "composição",
+  "valor": "pedúnculo de caju: pseudofruto carnoso, suculento, de ótimo aroma, com altos teores de ácido ascórbico e compostos fenólicos",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0066"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

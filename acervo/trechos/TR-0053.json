@@ -1,0 +1,29 @@
+{
+  "id": "TR-0053",
+  "fonte": "FO-0020",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 6 do PDF; car. 3558-3733 do texto normalizado (normalizacao-0.2)",
+  "hash": "13a60a653281b4495d9e01d0697efbddbd0ac6f9a5fa88ed860cc66a53027c57",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "o presente trabalho destinou-se a verificar os efeitos da adição de suco de caju clarificado (cajuína) no processo, na composição química e propriedades sensoriais da kombucha",
+  "antes": "mposição química e características sensoriais. Dessa forma, ",
+  "depois": ". Foram elaborados três tratamentos com adição de cajuína: T",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

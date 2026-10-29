@@ -1,0 +1,20 @@
+{
+  "id": "PR-0034",
+  "clb": "CL-0001",
+  "atributo": "nomes e variantes",
+  "valor": "suco clarificado de caju, também conhecido como cajuína: bebida não fermentada, não concentrada, obtida do pseudofruto (parte comestível do caju) por processo tecnológico adequado",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0051"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

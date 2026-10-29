@@ -1,0 +1,29 @@
+{
+  "id": "TR-0050",
+  "fonte": "FO-0019",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 1629-1794 do texto normalizado (normalizacao-0.2)",
+  "hash": "b0957b72e1748bbcd76ae8b3046aaa0bce3a59386368ddd4c4091aee8ac8afcf",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O pedúnculo do caju é utilizado como matéria prima pela indústria de beneficiamento de caju. Com o pedúnculo são feitos sucos, doces, geleias, cajuína e refrigerante",
+  "antes": "aju, além da extração do líquido da castanha de caju (LCC). ",
+  "depois": ". Contudo, a indústria de beneficiamento de caju não consegu",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

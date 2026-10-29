@@ -1,0 +1,29 @@
+{
+  "id": "TR-0047",
+  "fonte": "FO-0017",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 40 do PDF; car. 75646-75752 do texto normalizado (normalizacao-0.2)",
+  "hash": "d48ea68da3f37b40ce23d629fbab15049efe91756bd0cd7fddac711aac883c99",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "A amêndoa e suco (cajuína) beneficiada têm como destino os países da Europa e os Estados Unidos da América",
+  "antes": "édia anual de 1,8% (2.287,98 TM/ano) da sua produção total. ",
+  "depois": ". A tabela 7 , mostra em tonelada e percentual (%) o benefic",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "LU-0022",
+  "nivel": "outro",
+  "nome_na_fonte": "Nordeste",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  },
+  "nota": "nome como a fonte o diz, sem ligação à tabela do IBGE (não casou como 'Município, UF' nem como UF); nada inferido"
+}

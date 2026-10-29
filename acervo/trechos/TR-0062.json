@@ -1,0 +1,29 @@
+{
+  "id": "TR-0062",
+  "fonte": "FO-0022",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 1 do PDF; car. 1669-1823 do texto normalizado (normalizacao-0.2)",
+  "hash": "964c2dae6b0f78c0a84ec46b073c8cdb754ccab34f01fe0fb62f174f57eb3919",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Nas regiões brasileiras produtoras de caju, a cajuína é um produto muito apreciado pelo seu sabor bastante característico e é normalmente consumida gelada",
+  "antes": "tivos químicos incorporados e com açúcares do próprio suco. ",
+  "depois": ". O caju é composto da castanha, o verdadeiro fruto, e do pe",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

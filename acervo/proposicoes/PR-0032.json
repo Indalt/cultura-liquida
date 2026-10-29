@@ -1,0 +1,20 @@
+{
+  "id": "PR-0032",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "pedúnculo ainda pouco explorado na Guiné-Bissau (mais de 95% jogado fora, segundo fonte citada); além do suco (cajuína), serve para doces e outros alimentos",
+  "periodo": {
+    "referido": "não dito na fonte (fonte citada de 2016)"
+  },
+  "evidencias": [
+    "EV-0049"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

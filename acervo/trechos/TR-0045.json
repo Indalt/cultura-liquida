@@ -1,0 +1,29 @@
+{
+  "id": "TR-0045",
+  "fonte": "FO-0017",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 39 do PDF; car. 71834-72005 do texto normalizado (normalizacao-0.2)",
+  "hash": "d48ea68da3f37b40ce23d629fbab15049efe91756bd0cd7fddac711aac883c99",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "beneficiamento local de castanha de caju (CCC) e derivados em amêndoas e suco (cajuína), utilizando-se de técnicas semi mecanizadas e artesanal aprendida com os holandeses",
+  "antes": " nstalação Titina Silá, era uma mini fábrica destinada a 37 ",
+  "depois": ". Os produtos (ACC e cajuína) gerados por esse sistema produ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

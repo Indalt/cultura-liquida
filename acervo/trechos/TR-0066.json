@@ -1,0 +1,29 @@
+{
+  "id": "TR-0066",
+  "fonte": "FO-0027",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 1211-1347 do texto normalizado (normalizacao-0.2)",
+  "hash": "6fc054315e555276e38679ccfea3b0c612ef4d883db458e2a45b67b81a88a5f7",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O pedúnculo de caju é um pseudofruto carnoso, suculento, de ótimo aroma, apresenta altos teores de ácido ascórbico e compostos fenólicos",
+  "antes": "tmosphere Qualidade Quality Quitosana Radiação gama Resumo: ",
+  "depois": ". Apesar da condição nutricional, a vida útil e a comerciali",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

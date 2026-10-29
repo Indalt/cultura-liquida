@@ -1,0 +1,29 @@
+{
+  "id": "TR-0048",
+  "fonte": "FO-0017",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 200 do PDF; car. 443185-443276 do texto normalizado (normalizacao-0.2)",
+  "hash": "d48ea68da3f37b40ce23d629fbab15049efe91756bd0cd7fddac711aac883c99",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "não existe mercado ao nível doméstico para os produtos (ACC e cajuína) beneficiados no país",
+  "antes": "car que por esse motivo (elevados preços de ACC guineense), ",
+  "depois": ", uma vez que o preço é proibitivo d evido à baixíssima rend",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

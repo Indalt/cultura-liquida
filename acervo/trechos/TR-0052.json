@@ -1,0 +1,29 @@
+{
+  "id": "TR-0052",
+  "fonte": "FO-0020",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 25 do PDF; car. 46490-46725 do texto normalizado (normalizacao-0.2)",
+  "hash": "13a60a653281b4495d9e01d0697efbddbd0ac6f9a5fa88ed860cc66a53027c57",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Não é permitido a adição de açúcares, gás carbônico ou corante amarelo em sua composição (BRASIL, 2018). Os parâmetros físico -químicos que caracterizam a bebida são determinados pela Instrução Normativa nº 37, de 1º de outubro de 2018",
+  "antes": "estível do caju) por meio de processo tecnológico adequado. ",
+  "depois": ", e são apresentados na Tabela 2. Tabela 2 - Parâmetros físi",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

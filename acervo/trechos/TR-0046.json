@@ -1,0 +1,29 @@
+{
+  "id": "TR-0046",
+  "fonte": "FO-0017",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 163 do PDF; car. 355556-355636 do texto normalizado (normalizacao-0.2)",
+  "hash": "d48ea68da3f37b40ce23d629fbab15049efe91756bd0cd7fddac711aac883c99",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "existe fábricas que também atuam na explor ação do pedúnculo, produzindo cajuína",
+  "antes": "das e embaladas para a venda. Além da 161 castanha de caju, ",
+  "depois": ". Contudo, de acordo com o diretor do centro de promoção de ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

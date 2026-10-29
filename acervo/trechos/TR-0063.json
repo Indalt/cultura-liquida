@@ -1,0 +1,29 @@
+{
+  "id": "TR-0063",
+  "fonte": "FO-0022",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 2 do PDF; car. 2580-2823 do texto normalizado (normalizacao-0.2)",
+  "hash": "964c2dae6b0f78c0a84ec46b073c8cdb754ccab34f01fe0fb62f174f57eb3919",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "adaptados das condições tradicionais de produção da cajuína brasileira para a realidade moçambicana, e que permite obter um produto com boas características sensoriais e estabilidade de aproximadamente 60 dias estocados em temperatura ambiente",
+  "antes": "aixo de polpa, e suco de caju clarificado, isento de polpa, ",
+  "depois": ". Parcialmente clarificado(1) Clarificado(2) Sensoriais Cor ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

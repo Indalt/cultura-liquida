@@ -1,0 +1,29 @@
+{
+  "id": "TR-0070",
+  "fonte": "FO-0030",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 20 do PDF; car. 26812-26956 do texto normalizado (normalizacao-0.2)",
+  "hash": "7b592bbef80f95f77685ddc5b2df2fe2688ee2dd0803007e1f785b3d7a7408ec",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O pedœnculo entªo Ø consumido fresco ou processado em mais diversos produtos como: suco, polpa, conservas, vinho, vinagre, refrigerantes e doces",
+  "antes": "tura e a castanha Ø normalmente descartada pelo consumidor. ",
+  "depois": " conferindo assim mais valor à safra de caju (Berry e Sargen",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

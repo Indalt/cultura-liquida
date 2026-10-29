@@ -5,7 +5,15 @@
   "por_que": "A Evidência pede o lugar da prática, da publicação e da pesquisa (§6); quando a fonte não o diz, fica a Falta, dita e nunca completada por inferência (D-018).",
   "onde_aparece": [
     "acervo/evidencias/EV-0043.json",
-    "acervo/evidencias/EV-0044.json"
+    "acervo/evidencias/EV-0044.json",
+    "acervo/evidencias/EV-0050.json",
+    "acervo/evidencias/EV-0056.json",
+    "acervo/evidencias/EV-0057.json",
+    "acervo/evidencias/EV-0058.json",
+    "acervo/evidencias/EV-0059.json",
+    "acervo/evidencias/EV-0060.json",
+    "acervo/evidencias/EV-0064.json",
+    "acervo/evidencias/EV-0066.json"
   ],
   "criada_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
   "data": "2026-10-29"

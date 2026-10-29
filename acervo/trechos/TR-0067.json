@@ -1,0 +1,29 @@
+{
+  "id": "TR-0067",
+  "fonte": "FO-0028",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 7 do PDF; car. 3684-3822 do texto normalizado (normalizacao-0.2)",
+  "hash": "0b0302396219cec3f4ca4db1baa0835c228c8f5e64087e0a6b96143de19c3385",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Deve ser colhido totalmente maduro e por ser altamente perecível, tecnologias pré -colheita podem auxiliar na sua conservação pós-colheita",
+  "antes": " econômica e social de grande expressão na região Nordeste. ",
+  "depois": ", mantendo a firmeza e prolongando a vida útil. Um dos probl",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

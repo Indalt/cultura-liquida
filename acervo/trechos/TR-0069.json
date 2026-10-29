@@ -1,0 +1,29 @@
+{
+  "id": "TR-0069",
+  "fonte": "FO-0029",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 8 do PDF; car. 3920-4054 do texto normalizado (normalizacao-0.2)",
+  "hash": "08f7eab2ca13f8cd6ccf2e6ba7c4fb686813553bb0795c01dceabfc184f2b030",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "desenvolver bebidas mistas a partir da polpa do pedúnculo do cajueiro imaturo com polpas do pedúnculo do cajueiro maduro, cajá e manga",
+  "antes": "iciadas pelo método convencional e de congelamento prévio e ",
+  "depois": ", com características sensoriais satisfatórias. O experiment",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

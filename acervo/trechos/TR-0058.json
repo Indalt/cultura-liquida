@@ -1,0 +1,29 @@
+{
+  "id": "TR-0058",
+  "fonte": "FO-0021",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 43 do PDF; car. 49593-49717 do texto normalizado (normalizacao-0.2)",
+  "hash": "e8a86d36f26bcf8e69d68e39335f9f76db1829f0865fe1c9c54db53ea0b9513e",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Para clarificar o suco de caju, utiliza-se, em média, 2,5 ml de uma solu - ção de gelatina a 10% p/p para cada litro de suco",
+  "antes": " ou aço inox, mas nunca de ferro. Clarificação/sedimentação ",
+  "depois": ", o qual deve estar todo acondicionado num recipiente grande",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

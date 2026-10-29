@@ -1,0 +1,29 @@
+{
+  "id": "TR-0061",
+  "fonte": "FO-0022",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 1 do PDF; car. 1471-1667 do texto normalizado (normalizacao-0.2)",
+  "hash": "964c2dae6b0f78c0a84ec46b073c8cdb754ccab34f01fe0fb62f174f57eb3919",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "No Brasil, o suco de caju clarificado, engarrafado e cozido em banho-maria dá origem à cajuína, bebida refrescante, não alcoólica, sem aditivos químicos incorporados e com açúcares do próprio suco",
+  "antes": "iabilizando a sua comercialização mesmo em curtos períodos. ",
+  "depois": ". Nas regiões brasileiras produtoras de caju, a cajuína é um",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

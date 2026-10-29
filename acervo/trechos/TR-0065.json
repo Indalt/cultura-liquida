@@ -1,0 +1,29 @@
+{
+  "id": "TR-0065",
+  "fonte": "FO-0024",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 2 do PDF; car. 764-939 do texto normalizado (normalizacao-0.2)",
+  "hash": "258fff7510012c0e725d85e2d556da67b3501f02be00ed7935596185d862ba76",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "oferecendo uma gama de produtos que podem ser explorados comercialmente, como a amêndoa de castanha-de-caju (ACC), o pedúnculo do caju, a cajuína, a madeira resultante da poda",
+  "antes": "o Nordeste, devido à elevada im - portância socioeconômica, ",
+  "depois": " e o líquido prove - niente do processamento da castanha de ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

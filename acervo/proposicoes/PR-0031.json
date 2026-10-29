@@ -1,0 +1,20 @@
+{
+  "id": "PR-0031",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "sem mercado doméstico para os produtos (amêndoa e cajuína) beneficiados no país",
+  "periodo": {
+    "referido": "não dito na fonte"
+  },
+  "evidencias": [
+    "EV-0048"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}

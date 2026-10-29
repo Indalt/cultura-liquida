@@ -11,7 +11,7 @@
   "data_entrada": "2026-10-24",
   "url_ou_arquivo": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/944150",
   "identificador": "AM-0029:infoteca.cnptia.embrapa.br/handle/doc/944150",
-  "estado": "bruto",
+  "estado": "quarentena",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -22,7 +22,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem Triagem do bloco 7 (K109-L2, EX-0050, valencias-0.1).",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",
@@ -36,5 +36,21 @@
     "motivo": "forma 'caju' no resumo (CO-0001)",
     "versao_regra": "pretriagem-0.1"
   },
-  "citacao_resumo": "…da Embrapa e pleno exercício do SEP-Sistema Embrapa de planejamento. A diversificação dos produtos pesquisados -caju, acerola, graviola, ata, sapoti, manga-a introdução de nova linhas de pesquisa, como a pós-colheita e a…"
+  "citacao_resumo": "…da Embrapa e pleno exercício do SEP-Sistema Embrapa de planejamento. A diversificação dos produtos pesquisados -caju, acerola, graviola, ata, sapoti, manga-a introdução de nova linhas de pesquisa, como a pós-colheita e a…",
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+      "trecho_localizado"
+    ]
+  },
+  "selo": "PENDENTE_JULGAMENTO",
+  "motivo_quarentena": "critério em falta: trecho_localizado (0): PDF de imagem sem camada de texto; a saída é por OCR, caminho a decidir pela regra, não por este agente",
+  "gera": {
+    "fontes": [
+      "FO-0025"
+    ]
+  }
 }

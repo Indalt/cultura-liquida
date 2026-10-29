@@ -1,0 +1,1129 @@
+{
+ "lote": "K109-L2",
+ "entradas": [
+  {
+   "entrada": "EN-0957",
+   "estado": "quarentena",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+     "trecho_localizado"
+    ]
+   },
+   "motivo_quarentena": "critério em falta: trecho_localizado (0): sem texto da fonte para o script localizar; só há a citação do resumo na Entrada, que não é texto lido da fonte",
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Síntese e caracterização de membranas biopoliméricas microfiltrantes, à base de quitosana, para uso no processo de obtenção de cajuína",
+    "tipo_documento": "não conferido (sem texto)",
+    "ano": 2009,
+    "instituicao": "UFRN (pelo endereço do repositório)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "não lido",
+    "deriva_de": ""
+   },
+   "evidencias": [],
+   "nao_conferido": [
+    "Texto não lido: a página do repositório da UFRN (DSpace) só devolve a palavra DSpace e não há PDF; só se tem a citação do resumo na Entrada (que cita a cajuína como bebida típica do nordeste, obtida por clarificação e filtração do suco)."
+   ]
+  },
+  {
+   "entrada": "EN-0036",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Análise da cadeia produtiva da castanha de caju com ênfase no beneficiamento e comercialização da amêndoa na Guiné-Bissau",
+    "tipo_documento": "dissertação",
+    "ano": 2018,
+    "instituicao": "Universidade Federal Rural de Pernambuco, Programa de Pós-Graduação em Administração e Desenvolvimento Rural",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": "análise documental e entrevistas com dirigentes do setor de caju da Guiné-Bissau (segundo o texto)"
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0036-1.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|beneficiamento local de castanha de caju e derivados (amêndoas e suco, cajuína), com técnicas semimecanizadas e artesanal aprendida com os holandeses",
+     "atributo": "processo e modo de fazer",
+     "valor": "beneficiamento local de castanha de caju e derivados (amêndoas e suco, cajuína), com técnicas semimecanizadas e artesanal aprendida com os holandeses",
+     "periodo_referido": "não dito na fonte (o trecho não data)",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação"
+     },
+     "lugares": {
+      "pratica": "Guiné-Bissau",
+      "publicacao": "Recife, PE",
+      "pesquisa": "Guiné-Bissau"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0036-2.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|fábricas que, além da castanha de caju, exploram o pedúnculo para produzir cajuína",
+     "atributo": "insumo",
+     "valor": "fábricas que, além da castanha de caju, exploram o pedúnculo para produzir cajuína",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação"
+     },
+     "lugares": {
+      "pratica": "Guiné-Bissau",
+      "publicacao": "Recife, PE",
+      "pesquisa": "Guiné-Bissau"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0036-3.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|amêndoa e suco (cajuína) beneficiados têm como destino os países da Europa e os Estados Unidos da América",
+     "atributo": "uso e consumo",
+     "valor": "amêndoa e suco (cajuína) beneficiados têm como destino os países da Europa e os Estados Unidos da América",
+     "periodo_referido": "não dito na fonte (o parágrafo trata de 2006 a 2013)",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação"
+     },
+     "lugares": {
+      "pratica": "Guiné-Bissau",
+      "publicacao": "Recife, PE",
+      "pesquisa": "Guiné-Bissau"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0036-4.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|sem mercado doméstico para os produtos (amêndoa e cajuína) beneficiados no país",
+     "atributo": "uso e consumo",
+     "valor": "sem mercado doméstico para os produtos (amêndoa e cajuína) beneficiados no país",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação"
+     },
+     "lugares": {
+      "pratica": "Guiné-Bissau",
+      "publicacao": "Recife, PE",
+      "pesquisa": "Guiné-Bissau"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0036-5.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|pedúnculo ainda pouco explorado na Guiné-Bissau (mais de 95% jogado fora, segundo fonte citada); além do suco (cajuína), serve para doces e outros alimentos",
+     "atributo": "insumo",
+     "valor": "pedúnculo ainda pouco explorado na Guiné-Bissau (mais de 95% jogado fora, segundo fonte citada); além do suco (cajuína), serve para doces e outros alimentos",
+     "periodo_referido": "não dito na fonte (fonte citada de 2016)",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação (cita ANCA, 2016)"
+     },
+     "lugares": {
+      "pratica": "Guiné-Bissau",
+      "publicacao": "Recife, PE",
+      "pesquisa": "Guiné-Bissau"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Aqui cajuína designa o suco do pedúnculo beneficiado na Guiné-Bissau (termo usado pela fonte); se é a mesma CLB brasileira, a regra do termo (D-039) decide, não esta leitura.",
+    "Trechos com quebras de palavra do PDF (explor ação, Guiné - Bissau, outr os) mantidos literais."
+   ]
+  },
+  {
+   "entrada": "EN-0186",
+   "estado": "quarentena",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 0,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+     "trecho_localizado",
+     "voz"
+    ]
+   },
+   "motivo_quarentena": "critérios em falta: trecho_localizado (0) e voz (0): sem arquivo lido, sem texto para localizar e sem autor identificado",
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Estudo de pré-tratamento e hidrólise ácida do bagaço do pedúnculo de caju para a produção de bioetanol hidratado de segunda geração.",
+    "tipo_documento": "não conferido (sem texto)",
+    "ano": 2013,
+    "instituicao": "UFCG (pelo endereço do repositório)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "não lido",
+    "deriva_de": ""
+   },
+   "evidencias": [],
+   "nao_conferido": [
+    "O repositório (dspace.sti.ufcg.edu.br) não respondeu (timeout) e não há arquivo; nada foi lido além do título e do handle da Entrada."
+   ]
+  },
+  {
+   "entrada": "EN-0200",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Avaliação da digestibilidade da fibra do bagaço do pedúnculo do caju e da sua ação anti-inflamatória in vitro",
+    "tipo_documento": "registro da BDTD (resumo)",
+    "ano": 2015,
+    "instituicao": "Universidade Estadual do Ceará (pelo identificador UECE do registro)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0200-1.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|pedúnculo do caju usado como matéria-prima pela indústria de beneficiamento; com ele se fazem sucos, doces, geleias, cajuína e refrigerante",
+     "atributo": "insumo",
+     "valor": "pedúnculo do caju usado como matéria-prima pela indústria de beneficiamento; com ele se fazem sucos, doces, geleias, cajuína e refrigerante",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor do resumo (registro da BDTD)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "O texto lido é a página do registro na BDTD (resumo), não o repositório de origem; o resumo repete o trecho em mais de um campo da página.",
+    "O assunto da obra (fibra do bagaço, ação anti-inflamatória in vitro) não toca a bebida; nada foi extraído dele.",
+    "Lugar não dito no trecho: Falta de lugar."
+   ]
+  },
+  {
+   "entrada": "EN-0271",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Efeito da adição de suco clarificado de caju nas características tecnológicas e propriedades sensoriais da kombucha",
+    "tipo_documento": "dissertação",
+    "ano": 2022,
+    "instituicao": "Universidade Federal do Ceará, Programa de Pós-Graduação em Ciência e Tecnologia de Alimentos",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": "Instrução Normativa nº 37/2018 (citada como BRASIL, 2018); revisão de estudos; experimento próprio"
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0271-1.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|suco clarificado de caju, também conhecido como cajuína: bebida não fermentada, não concentrada, obtida do pseudofruto (parte comestível do caju) por processo tecnológico adequado",
+     "atributo": "nomes e variantes",
+     "valor": "suco clarificado de caju, também conhecido como cajuína: bebida não fermentada, não concentrada, obtida do pseudofruto (parte comestível do caju) por processo tecnológico adequado",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0271-2.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|não é permitido adicionar açúcares, gás carbônico ou corante amarelo à cajuína; parâmetros físico-químicos fixados pela Instrução Normativa nº 37, de 1º de outubro de 2018",
+     "atributo": "reconhecimento",
+     "valor": "não é permitido adicionar açúcares, gás carbônico ou corante amarelo à cajuína; parâmetros físico-químicos fixados pela Instrução Normativa nº 37, de 1º de outubro de 2018",
+     "periodo_referido": "IN nº 37, de 1/10/2018",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação (cita norma, BRASIL, 2018)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0271-3.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|adição de suco de caju clarificado (cajuína) à kombucha, para avaliar efeitos na composição química e nas propriedades sensoriais",
+     "atributo": "uso e consumo",
+     "valor": "adição de suco de caju clarificado (cajuína) à kombucha, para avaliar efeitos na composição química e nas propriedades sensoriais",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0271-4.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|cajuína estudada para bebidas fermentadas de baixo teor alcoólico, bebidas probióticas e vinhos de caju",
+     "atributo": "uso e consumo",
+     "valor": "cajuína estudada para bebidas fermentadas de baixo teor alcoólico, bebidas probióticas e vinhos de caju",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação (revisão de estudos)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0271-6.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|entre os assessores sensoriais da pesquisa que consomem cajuína, a frequência é semestral (42,4%), mensal (30,3%), semanal (21,2%), quinzenal (3%) e 2 a 3 vezes por semana (3%)",
+     "atributo": "uso e consumo",
+     "valor": "entre os assessores sensoriais da pesquisa que consomem cajuína, a frequência é semestral (42,4%), mensal (30,3%), semanal (21,2%), quinzenal (3%) e 2 a 3 vezes por semana (3%)",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da dissertação (tabela do perfil dos assessores sensoriais)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Sexta Evidência possível (66,6% dos assessores consomem cajuína; trecho localizado exato, EN-0271-5.json) deixada de fora pelo teto de 5 por Entrada.",
+    "Lugar da prática e da pesquisa (onde o painel foi feito) não dito nos trechos: Falta de lugar."
+   ]
+  },
+  {
+   "entrada": "EN-1265",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Aproveitamento industrial do caju",
+    "tipo_documento": "publicação técnica (livro, Embrapa)",
+    "ano": 2000,
+    "instituicao": "Embrapa Agroindústria Tropical (Centro Nacional de Pesquisa de Agroindústria Tropical)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "instituição",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1265-1.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|produto basicamente de consumo regional, obtido do suco clarificado",
+     "atributo": "uso e consumo",
+     "valor": "produto basicamente de consumo regional, obtido do suco clarificado",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores da publicação (Embrapa)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1265-2.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|bebida elaborada a partir do suco de caju clarificado e esterilizado no interior do recipiente, de cor amarela âmbar pela caramelização dos açúcares do próprio suco",
+     "atributo": "processo e modo de fazer",
+     "valor": "bebida elaborada a partir do suco de caju clarificado e esterilizado no interior do recipiente, de cor amarela âmbar pela caramelização dos açúcares do próprio suco",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores da publicação (Embrapa)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1265-3.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|clarificação com solução de gelatina a 10%, 2,5 mL por litro de suco",
+     "atributo": "processo e modo de fazer",
+     "valor": "clarificação com solução de gelatina a 10%, 2,5 mL por litro de suco",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores da publicação (Embrapa)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1265-4.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|suco extraído colocado em recipientes limpos de plástico, vidro, alumínio ou aço inox, nunca de ferro",
+     "atributo": "recipiente",
+     "valor": "suco extraído colocado em recipientes limpos de plástico, vidro, alumínio ou aço inox, nunca de ferro",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores da publicação (Embrapa)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1265-5.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|fluxograma de produção de cajuína: pré-tratamento, desintegração, extração, clarificação, sedimentação, filtração, enchimento, fechamento, tratamento térmico, resfriamento, rotulagem e armazenagem",
+     "atributo": "processo e modo de fazer",
+     "valor": "fluxograma de produção de cajuína: pré-tratamento, desintegração, extração, clarificação, sedimentação, filtração, enchimento, fechamento, tratamento térmico, resfriamento, rotulagem e armazenagem",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores da publicação (Embrapa)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Evidência 3 reaproveita a redação de PR do lote 1 (gelatina a 10%, 2,5 mL por litro); a afirmação é a mesma.",
+    "Lugar não dito nos trechos lidos (a primeira página do PDF não traz cidade): Falta de lugar. Os trechos das Evidências 3 e 4 trazem quebras de palavra do PDF mantidas literais."
+   ]
+  },
+  {
+   "entrada": "EN-1370",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Alternativas ao processo tradicionalmente utilizado na província de Nampula (Moçambique) para a produção de suco de caju.",
+    "tipo_documento": "publicação técnica (Comunicado Técnico 182, Embrapa)",
+    "ano": 2011,
+    "instituicao": "Embrapa Agroindústria Tropical",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "instituição",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1370-1.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|suco de caju clarificado, engarrafado e cozido em banho-maria dá origem à cajuína, bebida refrescante, não alcoólica, sem aditivos químicos incorporados e com açúcares do próprio suco",
+     "atributo": "processo e modo de fazer",
+     "valor": "suco de caju clarificado, engarrafado e cozido em banho-maria dá origem à cajuína, bebida refrescante, não alcoólica, sem aditivos químicos incorporados e com açúcares do próprio suco",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores do comunicado técnico (Embrapa)"
+     },
+     "lugares": {
+      "pratica": "Brasil",
+      "publicacao": "Fortaleza, CE",
+      "pesquisa": "Moçambique"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1370-2.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|cajuína muito apreciada nas regiões brasileiras produtoras de caju pelo sabor característico, normalmente consumida gelada",
+     "atributo": "uso e consumo",
+     "valor": "cajuína muito apreciada nas regiões brasileiras produtoras de caju pelo sabor característico, normalmente consumida gelada",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores do comunicado técnico (Embrapa)"
+     },
+     "lugares": {
+      "pratica": "regiões brasileiras produtoras de caju",
+      "publicacao": "Fortaleza, CE",
+      "pesquisa": "Moçambique"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1370-3.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|suco de caju parcialmente clarificado e clarificado, adaptados das condições tradicionais de produção da cajuína brasileira para a realidade moçambicana, com estabilidade de cerca de 60 dias em temperatura ambiente",
+     "atributo": "transmissão",
+     "valor": "suco de caju parcialmente clarificado e clarificado, adaptados das condições tradicionais de produção da cajuína brasileira para a realidade moçambicana, com estabilidade de cerca de 60 dias em temperatura ambiente",
+     "periodo_referido": "não dito na fonte (publicação de 2011)",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores do comunicado técnico (Embrapa)"
+     },
+     "lugares": {
+      "pratica": "Moçambique",
+      "publicacao": "Fortaleza, CE",
+      "pesquisa": "Moçambique"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Lugar da publicação (Fortaleza, CE) lido no cabeçalho; lugar da pesquisa como Moçambique pelo título e pelo trecho (província de Nampula, no título)."
+   ]
+  },
+  {
+   "entrada": "EN-1442",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Rapadura de caju: processamento artesanal.",
+    "tipo_documento": "folheto técnico (3 p., Embrapa)",
+    "ano": 2017,
+    "instituicao": "Embrapa (Infoteca-e; unidade não lida no texto)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "instituição",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1442-1.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|cajuína citada entre os produtos principais do caju, ao lado de amêndoa, suco, vinho, doces e rapadura",
+     "atributo": "uso e consumo",
+     "valor": "cajuína citada entre os produtos principais do caju, ao lado de amêndoa, suco, vinho, doces e rapadura",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores do folheto (Embrapa)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "O assunto da obra é a rapadura de caju; só esta frase toca a cajuína. A instituição consta como Embrapa pelo ambiente da Entrada (Infoteca-e); o texto de 3 páginas não nomeia a unidade.",
+    "Lugar não dito no texto: Falta de lugar."
+   ]
+  },
+  {
+   "entrada": "EN-1461",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Biologia e aspectos morfológicos da mosca-branca-do-cajueiro Aleurodicus cocois (Curtis, 1846)",
+    "tipo_documento": "publicação técnica (Comunicado Técnico 246, Embrapa)",
+    "ano": 2018,
+    "instituicao": "Embrapa Agroindústria Tropical",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "instituição",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1461-1.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|cajuína entre os produtos do cajueiro que podem ser explorados comercialmente (amêndoa, pedúnculo, cajuína, madeira da poda, líquido da castanha)",
+     "atributo": "uso e consumo",
+     "valor": "cajuína entre os produtos do cajueiro que podem ser explorados comercialmente (amêndoa, pedúnculo, cajuína, madeira da poda, líquido da castanha)",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autores do comunicado técnico (Embrapa)"
+     },
+     "lugares": {
+      "pratica": "Nordeste",
+      "publicacao": "Fortaleza, CE",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Menção incidental: o assunto é uma praga do cajueiro. A prática como Nordeste vem da frase anterior ao trecho (a cajucultura no Nordeste)."
+   ]
+  },
+  {
+   "entrada": "EN-1518",
+   "estado": "quarentena",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+     "trecho_localizado"
+    ]
+   },
+   "motivo_quarentena": "critério em falta: trecho_localizado (0): PDF de imagem sem camada de texto; a saída é por OCR, caminho a decidir pela regra, não por este agente",
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Relatório de atividades 1994-1995: avanços tecnológicos na agroindústria tropical.",
+    "tipo_documento": "relatório de atividades (pelo título; PDF de imagem)",
+    "ano": 1997,
+    "instituicao": "Embrapa (pelo registro da Infoteca-e)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "não lido",
+    "deriva_de": ""
+   },
+   "evidencias": [],
+   "nao_conferido": [
+    "PDF de imagem (126 páginas, 0 caracteres): sem texto para o script localizar; só há a citação do resumo na Entrada, onde a cajuína nem aparece (o resumo lista caju, acerola, graviola, ata, sapoti, manga)."
+   ]
+  },
+  {
+   "entrada": "EN-1565",
+   "estado": "quarentena",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 0,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": [
+     "trecho_localizado"
+    ]
+   },
+   "motivo_quarentena": "critério em falta: trecho_localizado (0): sem texto da fonte para o script localizar",
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "A novidade somos nós mesmos: a espacialização identitária do produto turístico gastronômico nordestino brasileiro",
+    "tipo_documento": "não conferido (sem texto)",
+    "ano": 2025,
+    "instituicao": "UFRN (pelo endereço do repositório)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "não lido",
+    "deriva_de": ""
+   },
+   "evidencias": [],
+   "nao_conferido": [
+    "Texto não lido: a página do repositório da UFRN (DSpace 7) só diz DSpace e não há PDF; só se tem a citação do resumo na Entrada, que lista a cajuína entre pratos e bebidas do Nordeste (em inglês)."
+   ]
+  },
+  {
+   "entrada": "EN-0009",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Métodos de conservação pós-colheita de pedúnculos de caju",
+    "tipo_documento": "tese (conforme o registro da BDTD)",
+    "ano": 2017,
+    "instituicao": "Universidade de São Paulo (conforme o registro da BDTD)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0009-1.json",
+     "estado_trecho": "localizado",
+     "chave": "composição|pedúnculo de caju: pseudofruto carnoso, suculento, de ótimo aroma, com altos teores de ácido ascórbico e compostos fenólicos",
+     "atributo": "composição",
+     "valor": "pedúnculo de caju: pseudofruto carnoso, suculento, de ótimo aroma, com altos teores de ácido ascórbico e compostos fenólicos",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor do resumo (registro da BDTD)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": null,
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "O texto lido é a página do registro na BDTD (resumo), não o repositório de origem.",
+    "Tangencial: o resumo trata de conservação pós-colheita do pedúnculo e não cita bebida, suco nem cajuína; só a descrição do fruto foi extraída, por ser o fruto que faz a bebida.",
+    "Lugar não dito no trecho: Falta de lugar."
+   ]
+  },
+  {
+   "entrada": "EN-0010",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Aplicação pré-colheita de reguladores de crescimento na qualidade e fisiologia pós-colheita de caju",
+    "tipo_documento": "tese",
+    "ano": 2016,
+    "instituicao": "Universidade Federal do Ceará, Programa de Pós-Graduação em Agronomia (Fitotecnia)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0010-1.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|caju deve ser colhido totalmente maduro e é altamente perecível; tecnologias pré-colheita podem auxiliar na conservação pós-colheita",
+     "atributo": "insumo",
+     "valor": "caju deve ser colhido totalmente maduro e é altamente perecível; tecnologias pré-colheita podem auxiliar na conservação pós-colheita",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da tese"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Tangencial: nenhuma ocorrência de suco, bebida ou cajuína no texto (busca por palavra); a obra trata de reguladores de crescimento e pós-colheita do pedúnculo fresco. Só a colheita do fruto foi extraída; se a regra entender que isso não toca a bebida, a Evidência pode ficar fora.",
+    "Lugar da prática não dito no trecho: Falta de lugar."
+   ]
+  },
+  {
+   "entrada": "EN-0012",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Antecipação do ponto de colheita do caju CCP 76 visando ao beneficiamento da amêndoa e pedúnculo imaturo.",
+    "tipo_documento": "tese",
+    "ano": 2018,
+    "instituicao": "Universidade Federal do Ceará, Programa de Pós-Graduação em Ciência e Tecnologia de Alimentos",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": ""
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0012-1.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|pedúnculo subutilizado, apesar das características nutricionais importantes, por sua alta perecibilidade",
+     "atributo": "insumo",
+     "valor": "pedúnculo subutilizado, apesar das características nutricionais importantes, por sua alta perecibilidade",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da tese"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0012-2.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|desenvolvimento de bebidas mistas da polpa do pedúnculo do cajueiro imaturo com polpas de pedúnculo maduro, cajá e manga (objetivo do estudo)",
+     "atributo": "uso e consumo",
+     "valor": "desenvolvimento de bebidas mistas da polpa do pedúnculo do cajueiro imaturo com polpas de pedúnculo maduro, cajá e manga (objetivo do estudo)",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da tese"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Nenhuma ocorrência de cajuína (busca por palavra); a bebida em estudo é suco misto, não cajuína. Extraído só o que toca o fruto e a bebida de pedúnculo.",
+    "Lugar da prática não dito nos trechos: Falta de lugar."
+   ]
+  },
+  {
+   "entrada": "EN-0013",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": false,
+   "motivo_marca": "Nada do que foi extraído sustenta aviso, saúde ou política.",
+   "fonte": {
+    "titulo": "Aplicação pré-colheita de citocinina e giberelina e sua influência sobre a qualidade e fisiologia do caju",
+    "tipo_documento": "tese",
+    "ano": 2024,
+    "instituicao": "Universidade Federal do Ceará, Programa de Pós-Graduação em Bioquímica",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "academia",
+    "deriva_de": "cita EMBRAPA, 2020 e Berry e Sargent, 2011"
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0013-1.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|pedúnculo consumido fresco ou processado em suco, polpa, conservas, vinho, vinagre, refrigerantes e doces",
+     "atributo": "uso e consumo",
+     "valor": "pedúnculo consumido fresco ou processado em suco, polpa, conservas, vinho, vinagre, refrigerantes e doces",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da tese (cita Berry e Sargent, 2011)"
+     },
+     "lugares": {
+      "pratica": null,
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-0013-2.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|clone CCP 76, o mais cultivado no Nordeste, é o mais utilizado na fabricação de doces e cajuína",
+     "atributo": "insumo",
+     "valor": "clone CCP 76, o mais cultivado no Nordeste, é o mais utilizado na fabricação de doces e cajuína",
+     "periodo_referido": "não dito na fonte",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor da tese (cita EMBRAPA, 2020)"
+     },
+     "lugares": {
+      "pratica": "Nordeste",
+      "publicacao": "Fortaleza",
+      "pesquisa": null
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "O texto extraído do PDF tem a fonte corrompida (Ø, œ, ª, Œ no lugar de acentos); os trechos ficam literais como extraídos, com a corrupção. A identificação do clone (CCP 76) vem da frase anterior ao trecho.",
+    "Tangencial: o assunto é pré-colheita de reguladores; só duas frases tocam o fruto como insumo da bebida."
+   ]
+  }
+ ],
+ "alcance": {
+  "olhado": [
+   "Manifesto lote-K109-L2.json e as 15 Entradas (entrada/EN-nnnn.json: título, ano, pré-triagem, citação do resumo, proteção).",
+   "Textos em fontes/EN-nnnn.txt por grep -n -i (cajuína, suco, bebida, clarific, fermentad) e faixas de linha curtas: EN-0036 (20 ocorrências de cajuína, 5 usadas), EN-0271 (54 ocorrências, parte lida), EN-1265 (6), EN-1370 (3), EN-1442 (1), EN-1461 (1), EN-0013 (1), EN-0010 e EN-0012 (0 ocorrências de cajuína; lidos o resumo e buscas por suco e bebida), EN-0200 e EN-0009 (páginas de registro da BDTD, resumo).",
+   "Localização de 20 trechos pelo script localizar_trecho.py (normalizacao-0.2) sobre os bytes (.pdf ou .html); arquivos em fontes/aval/EN-nnnn-k.json; o EN-0271-5 (66,6% consomem cajuína) localizou exato mas não foi usado, pelo teto de 5.",
+   "Registros acervo/proposicoes/PR-*.json (atributo e valor) para reaproveitar redação; scripts/gravar_extracao.py (leitura, para o formato); acervo/fontes e acervo/lugares (vocabulário)."
+  ],
+  "fora": [
+   "EN-0957 e EN-1565: sem texto (UFRN, DSpace 7); EN-0186: repositório não respondeu, sem arquivo; EN-1518: PDF de imagem de 126 páginas com 0 caracteres (OCR fora do meu papel).",
+   "Leitura integral dos textos: não feita; EN-0036 (247 p.) e EN-0271 (99 p.) lidos só por busca de palavra e faixas curtas, portanto outras passagens sobre cajuína podem existir além das Evidências.",
+   "Licença e proteção das Entradas: não conferidas (campo não conferido nas Entradas; cabe à triagem jurídica).",
+   "Tipo de documento e instituição de EN-0200 e EN-0009 na obra de origem: só o registro da BDTD foi lido."
+  ]
+ },
+ "log": {
+  "agente": "avaliador",
+  "habilidade": "extrair-evidencia",
+  "versao_harness": "0.1.1",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "K109-L2: EN-0957, EN-0036, EN-0186, EN-0200, EN-0271, EN-1265, EN-1370, EN-1442, EN-1461, EN-1518, EN-1565, EN-0009, EN-0010, EN-0012, EN-0013",
+  "acoes": [
+   "Leu manifesto, Entradas e valencias-0.1 (esquemas/valores-provisorios.json).",
+   "Buscou por grep -n as ocorrências de cajuína e de suco e bebida nos textos, em faixas curtas.",
+   "Rodou localizar_trecho.py para 20 trechos candidatos (PDF ou HTML por Entrada, bytes como fonte), todos localizados exatos (grau 1.0), exceto a primeira versão de um trecho de tabela (0,8726, não verificável), refeito em dois trechos menores que localizaram exatos.",
+   "Pontuou valências pela valencias-0.1, ligou trechos a Proposições (reaproveitando a redação do lote 1 onde a afirmação é a mesma) e montou a saída JSON do lote."
+  ],
+  "resultados": [
+   "11 Entradas extraídas com 27 Evidências (EN-0036: 5; EN-0271: 5; EN-1265: 5; EN-1370: 3; EN-1442: 1; EN-1461: 1; EN-0200: 1; EN-0009: 1; EN-0010: 1; EN-0012: 2; EN-0013: 2).",
+   "4 Entradas em quarentena PENDENTE_JULGAMENTO (EN-0957, EN-0186, EN-1518, EN-1565).",
+   "Nenhum item marcado como sustenta aviso, saúde ou política; nenhum descartado."
+  ],
+  "decisoes": [
+   {
+    "item": "EN-0957",
+    "decisao": "quarentena",
+    "motivo": "critério em falta: trecho_localizado (0): sem texto da fonte para o script localizar; só há a citação do resumo na Entrada, que não é texto lido da fonte",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0036",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 5 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0186",
+    "decisao": "quarentena",
+    "motivo": "critérios em falta: trecho_localizado (0) e voz (0): sem arquivo lido, sem texto para localizar e sem autor identificado",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0200",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 1 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0271",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 5 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-1265",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 5 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-1370",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 3 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-1442",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 1 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-1461",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 1 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-1518",
+    "decisao": "quarentena",
+    "motivo": "critério em falta: trecho_localizado (0): PDF de imagem sem camada de texto; a saída é por OCR, caminho a decidir pela regra, não por este agente",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-1565",
+    "decisao": "quarentena",
+    "motivo": "critério em falta: trecho_localizado (0): sem texto da fonte para o script localizar",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0009",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 1 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0010",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 1 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0012",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 2 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   },
+   {
+    "item": "EN-0013",
+    "decisao": "aceito",
+    "motivo": "valencias-0.1 com os três critérios acima de 0; 2 Evidência(s) com trecho localizado exato",
+    "automatica": true,
+    "versao_regra": "valencias-0.1"
+   }
+  ],
+  "duracao_s": 0,
+  "erros": [
+   "duracao_s não medida pelo agente (sem relógio); o valor vem do retorno do Agent.",
+   "Primeira tentativa do trecho da tabela de consumo de EN-0271 ficou em 0,8726 (não verificável por máquina); refeito em dois trechos menores, ambos localizados exatos."
+  ],
+  "alcance": {
+   "olhado": [
+    "Manifesto lote-K109-L2.json e as 15 Entradas (entrada/EN-nnnn.json: título, ano, pré-triagem, citação do resumo, proteção).",
+    "Textos em fontes/EN-nnnn.txt por grep -n -i (cajuína, suco, bebida, clarific, fermentad) e faixas de linha curtas: EN-0036 (20 ocorrências de cajuína, 5 usadas), EN-0271 (54 ocorrências, parte lida), EN-1265 (6), EN-1370 (3), EN-1442 (1), EN-1461 (1), EN-0013 (1), EN-0010 e EN-0012 (0 ocorrências de cajuína; lidos o resumo e buscas por suco e bebida), EN-0200 e EN-0009 (páginas de registro da BDTD, resumo).",
+    "Localização de 20 trechos pelo script localizar_trecho.py (normalizacao-0.2) sobre os bytes (.pdf ou .html); arquivos em fontes/aval/EN-nnnn-k.json; o EN-0271-5 (66,6% consomem cajuína) localizou exato mas não foi usado, pelo teto de 5.",
+    "Registros acervo/proposicoes/PR-*.json (atributo e valor) para reaproveitar redação; scripts/gravar_extracao.py (leitura, para o formato); acervo/fontes e acervo/lugares (vocabulário)."
+   ],
+   "fora": [
+    "EN-0957 e EN-1565: sem texto (UFRN, DSpace 7); EN-0186: repositório não respondeu, sem arquivo; EN-1518: PDF de imagem de 126 páginas com 0 caracteres (OCR fora do meu papel).",
+    "Leitura integral dos textos: não feita; EN-0036 (247 p.) e EN-0271 (99 p.) lidos só por busca de palavra e faixas curtas, portanto outras passagens sobre cajuína podem existir além das Evidências.",
+    "Licença e proteção das Entradas: não conferidas (campo não conferido nas Entradas; cabe à triagem jurídica).",
+    "Tipo de documento e instituição de EN-0200 e EN-0009 na obra de origem: só o registro da BDTD foi lido."
+   ]
+  }
+ }
+}

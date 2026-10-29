@@ -1,0 +1,29 @@
+{
+  "id": "TR-0049",
+  "fonte": "FO-0017",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 228 do PDF; car. 506667-506870 do texto normalizado (normalizacao-0.2)",
+  "hash": "d48ea68da3f37b40ce23d629fbab15049efe91756bd0cd7fddac711aac883c99",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "O pedúnculo é ainda pouco explorado na Guiné - Bissau (conforme ANCA, 2016 mais de 95% é jogado fora) , visto que além do suco (cajuína), ela serve para fazer doces e outr os tipos de alimentos derivados",
+  "antes": "esenta produto de exportação derivado da castanha de caju . ",
+  "depois": ". No Brasil, alimentos derivados do pedúnculo (cadju), possu",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

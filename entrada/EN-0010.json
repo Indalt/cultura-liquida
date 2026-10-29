@@ -18,7 +18,7 @@
   "data_entrada": "2026-10-23",
   "url_ou_arquivo": "http://www.repositorio.ufc.br/handle/riufc/39579",
   "identificador": "AM-0021:repositorio.ufc.br/handle/riufc/39579",
-  "estado": "bruto",
+  "estado": "extraído",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -29,7 +29,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem Triagem do bloco 7 (K109-L2, EX-0050, valencias-0.1).",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-23",
@@ -42,5 +42,20 @@
     "estado": "segue",
     "motivo": "forma 'caju' no título (CO-0003)",
     "versao_regra": "pretriagem-0.1"
+  },
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+  },
+  "gera": {
+    "fontes": [
+      "FO-0028"
+    ],
+    "trechos": [
+      "TR-0067"
+    ]
   }
 }

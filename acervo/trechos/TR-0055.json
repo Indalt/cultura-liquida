@@ -1,0 +1,29 @@
+{
+  "id": "TR-0055",
+  "fonte": "FO-0020",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 42 do PDF; car. 83020-83149 do texto normalizado (normalizacao-0.2)",
+  "hash": "13a60a653281b4495d9e01d0697efbddbd0ac6f9a5fa88ed860cc66a53027c57",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Frequência de consumo (Cajuína) 2 a 3 vezes/semana 3% 1 vez/semana 21,2% Quinzenalmente 3% Mensalmente 30,3% Semestralmente 42,4%",
+  "antes": "uinzenalmente 11,7% Mensalmente 35,29% Semestralmente 41,1% ",
+  "depois": " Fonte: Autora, 2022. 42 Para análise de aceitação dos trata",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

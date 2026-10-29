@@ -1,0 +1,29 @@
+{
+  "id": "TR-0071",
+  "fonte": "FO-0030",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 21 do PDF; car. 28404-28608 do texto normalizado (normalizacao-0.2)",
+  "hash": "7b592bbef80f95f77685ddc5b2df2fe2688ee2dd0803007e1f785b3d7a7408ec",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Esse clone Ø o mais aceito e recomendado para o consumo in natura, ou seja, para o mercado de mesa. AlØm disso Ø mais utilizado na fabricaçª o de doces e cajuína e suas amŒndoas sªo bem aceitas no mercado",
+  "antes": "do. A produtividade estimada do pedœnculo Ø de 13700 kg/ha. ",
+  "depois": " (EMBRAPA, 2020). De Figueiredo et al. (2002), descrevem set",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

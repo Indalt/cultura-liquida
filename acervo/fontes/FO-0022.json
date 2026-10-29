@@ -1,0 +1,33 @@
+{
+  "id": "FO-0022",
+  "referencia": {
+    "titulo": "Alternativas ao processo tradicionalmente utilizado na província de Nampula (Moçambique) para a produção de suco de caju.",
+    "instituicao": "Embrapa Agroindústria Tropical",
+    "ano": 2011,
+    "tipo": "publicação técnica (Comunicado Técnico 182, Embrapa)",
+    "link_permanente": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/917912"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2011",
+  "url": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/917912",
+  "wayback": "sem cópia arquivada",
+  "data_acesso": "2026-10-29",
+  "perspectiva": "instituição",
+  "deriva_de": [],
+  "entrada": "EN-1370",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: http://www.infoteca.cnptia.embrapa.br/bitstream/doc/917912/1/COT11019.pdf (pdf)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
+    "data": "2026-10-29",
+    "execucao": "EX-0050"
+  }
+}
