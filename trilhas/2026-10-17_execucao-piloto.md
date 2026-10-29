@@ -271,6 +271,7 @@
 - [x] **Guia do IPHAN (juridico, guia-de-liberacao):** EX-0057; **72.965 tokens, 14 chamadas**, Sonnet 5.5 alto; conta antes: 18,92 ≤ 50 pp. **G-iphan-registro-imaterial** (`trilhas/2026-10-29_K-109/guias/`, PASSA; gravado pelo curador da mensagem final), preventivo: a Resolução IPHAN 1/2006 lida inteira (oficial), o Decreto 3.551/2000 só por resumo (o planalto recusou), 6 passos e modelos de requerimento e de declaração da comunidade; o portal e a Resolução divergem sobre quem pode requerer, e o guia diz os dois sem decidir.
 - **Pronto quando (bloco 7):** `validar_acervo.py` passa (1.372 registros); cada dúvida jurídica é Falta com norma e caminho (F-0024, F-0025; as duas só para publicar, com cartão que espera o K-010); nenhuma Falta completada por inferência; as falhas que a amostra e a segunda leitura acharam têm lote de correção e insumo (70 e 72); todo item marcado passou pelo auditor (EV-0002 e PR-0002, marcados depois, foram lidos na mesma leitura). **Falta do bloco:** o registro da cajuína no BCR como Entrada (parada c, com Vicente). A pasta temporária das fontes (101 MB, fora do Git) fica para o K-102, que o brief manda rodar sobre o texto lido no bloco 7, e para reconferências; apaga-se com `ler_fonte.py --apagar <lote>`.
 - **Consumo da conversa:** 10 chamadas de agente, **1.064.272 tokens e 166 chamadas** (rastreador 50.846; avaliador 126.968 e 148.968; juridico 130.428, 132.441, 139.137, 66.181 e 72.965; auditor 120.305 e 76.033). Estimativa pela conta da D-040 (não é medida): 2 + 1,6 × 10,64 = 19,0 pp. O uso da conta no fim fica a informar.
+- **Fechamento (29/10):** Vicente respondeu que decisões como a do adaptador do BCR não se respondem em conversa de trabalho: o registro do BCR vai ao planejamento como insumo 73 ("a definir pelo planejamento"), e o K-109 fecha. Uso ao fechar: 17% (semanal) e 99% (janela de 5 h): a conversa fecha com um lote só (D-040). A conversa custou 16 pp (de 1% a 17%), contra 19,0 pp estimados. As horas da semana de 19 a 25/10 não se registram (Vicente).
 
 ## Consumo semanal de agentes (D-023)
 
@@ -297,7 +298,7 @@
 | Semana | Revisões (h) | Juízo de itens (h) | Busca assistida (h) | Uso da conta antes / depois | Minutos do Actions |
 |---|---|---|---|---|---|
 | 12–18/10 | não informado | — | — | não informado | — |
-| 19–25/10 | não informado (veio em branco na abertura do K-109) | — | 0 | ver "Semana da conta" | — |
+| 19–25/10 | não registrado (Vicente, 29/10: não precisa) | — | 0 | ver "Semana da conta" | — |
 
 ## Semana da conta (D-040)
 
@@ -320,4 +321,4 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | desenvolvimento | K-124 | 70 | 73 | 3 | 82.949 | 24 | janela de 5 h: 26% ao abrir; Opus 5.5 médio; sem agentes nesta conversa; os tokens são do parecer prévio do juridico (EX-0026), feito antes, numa conversa cujos pp estão nos 9 do K-107; A1 pela abertura do K-108 |
 | 21/10–28/10/2026 | desenvolvimento | K-108 | 73 | 78 | 5 | 51.898 | 8 | janela de 5 h: 39% ao abrir; A1 pela retomada do K-108; Opus 5.5 médio; tetos do projeto e do desenvolvimento suspensos para o K-108 por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |
 | 21/10–28/10/2026 | desenvolvimento | K-108 (retomada) e K-108b | 78 | 91 | 13 | 135.915 | 24 | janela de 5 h: 20% ao abrir; Opus 5.5 médio; tetos do projeto e do desenvolvimento seguem suspensos por Vicente (ficam a linha de 90% e a regra da janela de 5 h); A1 pela abertura do K-109 (27/10, antes da renovação) |
-| 28/10–04/11/2026 | desenvolvimento | K-109 | 1 | a informar | a informar | 1.064.272 | 166 | janela de 5 h: 5% ao abrir (29/10); Opus 5.5 médio; aberta em 27/10 e parada pela linha de 90% (91%, semana anterior); retomada em 29/10 sem a leitura, dada em seguida; estimativa da conta 19,0 pp |
+| 28/10–04/11/2026 | desenvolvimento | K-109 | 1 | 17 | 16 | 1.064.272 | 166 | janela de 5 h: 5% ao abrir (29/10); Opus 5.5 médio; aberta em 27/10 e parada pela linha de 90% (91%, semana anterior); retomada em 29/10 sem a leitura, dada em seguida; estimativa da conta 19,0 pp; ao fechar, 17% (semanal) e 99% (janela de 5 h), lidos por Vicente |
