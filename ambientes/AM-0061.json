@@ -3,7 +3,7 @@
   "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
   "tipo": "outro",
   "tipo_detalhe": "bens registrados, dossiês e inventários",
-  "via_protocolo": "via automática não testada: o nome não resolveu na rede da sessão em 23/10/2026; via humana até o reteste",
+  "via_protocolo": "API REST do Tainacan e páginas HTML, abertas ao robô pelo robots.txt (29/10/2026); sem adaptador no projeto (protocolo novo, parado para Vicente no K-109); via humana até lá",
   "estado_escavacao": "proposto",
   "estado_monitoramento": "não iniciado",
   "linha_anexo_e": 61,
@@ -12,27 +12,27 @@
     "data": "2026-10-22",
     "execucao": "EX-0006"
   },
-  "nota": "Anexo E, linha 61 (lote A): uso ambos; nível oficial; link https://bcr.iphan.gov.br/ (o link permanente por bem não foi conferido); termos de uso Não conferido.; como buscar Navegar no BCR; INRC em inrc.iphan.gov.br. Busca por texto não testada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4). Ficha de acesso testada em 2026-10-23 pelo rastreador (EX-0016, K-106); trilha em trilhas/2026-10-23_K-106/.",
+  "nota": "Anexo E, linha 61 (lote A): uso ambos; nível oficial; link https://bcr.iphan.gov.br/ (o link permanente por bem não foi conferido); termos de uso Não conferido.; como buscar Navegar no BCR; INRC em inrc.iphan.gov.br. Busca por texto não testada.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4). Ficha de acesso testada em 2026-10-23 pelo rastreador (EX-0016, K-106); trilha em trilhas/2026-10-23_K-106/. Ficha retestada em 2026-10-29 pelo rastreador (K-109): o DNS voltou; trilha em trilhas/2026-10-29_K-109/.",
   "ficha_de_acesso": {
     "nome": "IPHAN: Banco de Bens Culturais Registrados (BCR)",
-    "tipo": "outro: bens registrados, dossiês e inventários",
-    "acesso": "não conferido em 23/10/2026: o nome bcr.iphan.gov.br não resolveu a partir da rede da sessão (curl exit 6 'Could not resolve host'; WebFetch 'getaddrinfo ENOTFOUND'). Pelo mapa de 17/10/2026 (trilhas/2026-10-17_caminhos/mapas/web-cajuina-fontes.json), o site abria sem cadastro (WordPress com Tainacan); não retestado.",
-    "como_buscar": "não conferido: a busca por texto não foi testada. Hipóteses a testar quando o nome resolver, nenhuma verificada: /?s=<termo> (WordPress); /wp-json/wp/v2/search?search=<termo>&per_page=1; /wp-json/tainacan/v2/items?search=<termo>&perpage=1 (total no cabeçalho X-WP-Total). Até lá, via humana ou a página do bem pelo endereço direto.",
-    "endpoint": "https://bcr.iphan.gov.br/ (hipóteses acima, não conferidas)",
-    "link_permanente": "não conferido. Padrão visto em 17/10 (mapa): https://bcr.iphan.gov.br/bens-culturais/<slug-do-bem>/; o IPHAN não declara que seja permanente.",
-    "texto_integral": "não conferido em 23/10. Pelo mapa de 17/10: dossiê, parecer e atas como páginas de documento do bem.",
-    "termos": "não conferido: os termos de uso do BCR não foram abertos (nem em 17/10).",
-    "robots": "não conferido: https://bcr.iphan.gov.br/robots.txt não pôde ser pedido em 23/10/2026 (nome sem resolução).",
-    "cobertura": "não conferido. Pelo Anexo E e pelo mapa: o registro da cajuína no Livro dos Saberes (15/05/2014; revalidado em 17/06/2025), o dossiê (2009) e o parecer técnico (07/04/2014).",
+    "tipo": "outro: bens registrados, dossiês e inventários (WordPress com Tainacan)",
+    "acesso": "aberto, sem cadastro, para o robô identificado: robots.txt 200 e API pública do Tainacan 200 em 29/10/2026 (https://bcr.iphan.gov.br/robots.txt; https://bcr.iphan.gov.br/wp-json/tainacan/v2/items). Sem desafio, captcha nem 403. Um pedido com fetch_only ampliado (com document_as_html) deu 500 do WordPress; causa não apurada.",
+    "como_buscar": "API REST do Tainacan, conferida: GET /wp-json/tainacan/v2/items?search=<termo>&perpage=<n>&fetch_only=id,title,url,collection_id (200), paginação por perpage e paged, total no cabeçalho X-WP-Total. 'cajuina' (sem acento) deu 49 em 29/10/2026; com acento, não testado. Não testados: /?s=<termo> e /wp-json/wp/v2/search. Varrer ou monitorar o BCR pela API pede um adaptador próprio (protocolo novo; nem VuFind nem OAI-PMH).",
+    "endpoint": "https://bcr.iphan.gov.br/wp-json/tainacan/v2/items (API); https://bcr.iphan.gov.br/ (site). Coleções vistas: 65733 bens-culturais; 65968 documentos do processo (dossiê, parecer, certidão, atas, notas técnicas); 65998 mídias do registro; 106027 ações de salvaguarda; 104725 grupos detentores.",
+    "link_permanente": "padrão https://bcr.iphan.gov.br/<coleção>/<slug>/ (campo url da API); o IPHAN não declara que seja permanente; o ID do item Tainacan (o bem da cajuína: 66089) é o localizador mais estável. Não conferido como permanente.",
+    "texto_integral": "por item próprio: dossiê (66631), parecer técnico de registro (66637), certidão (66643), titulação (66647), parecer de reavaliação (126109), notas técnicas (126055, 140983), na coleção 65968; PDFs em /wp-content/uploads/tainacan-items/65968/<id>/<arquivo>.pdf (padrão visto pelo buscador, nível secundário); nenhum PDF aberto nem medido.",
+    "termos": "não conferido: termos de uso e licença do BCR não achados (busca em 29/10/2026; rodapé não aberto).",
+    "robots": "https://bcr.iphan.gov.br/robots.txt, 200, 29/10/2026: 'User-agent: *; Disallow: /wp-admin/; Allow: /wp-admin/admin-ajax.php; Sitemap: https://bcr.iphan.gov.br/wp-sitemap.xml'. Nada veda /wp-json/ nem as páginas dos bens. Oficial.",
+    "cobertura": "49 itens para 'cajuina' na API (29/10/2026): o bem (66089, 'Produção tradicional e práticas socioculturais associadas à cajuína no Piauí'), os documentos do processo de registro e de revalidação, mídias, ações de salvaguarda, um grupo detentor e documentos genéricos de salvaguarda que casam com o termo. Registro no Livro dos Saberes em 15/05/2014 e revalidação em 17/06/2025: secundária (resumo do buscador). Cobertura do BCR inteiro não medida.",
     "uso": "ambos",
-    "nivel": "não conferido",
+    "nivel": "oficial",
     "teste": {
-      "data": "2026-10-23",
-      "pedido": "GET https://bcr.iphan.gov.br/robots.txt, /?s=cajuína, /wp-json/wp/v2/search?search=cajuína&per_page=1 e /wp-json/tainacan/v2/items?search=cajuína&perpage=1&fetch_only=id,title, com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)'; repetição do robots.txt; WebFetch do robots.txt",
-      "resposta": "sem resposta HTTP: curl (6) Could not resolve host: bcr.iphan.gov.br (HTTP 000); WebFetch: getaddrinfo ENOTFOUND bcr.iphan.gov.br",
-      "observacao": "Falha de resolução de nome pela rede da sessão; outros hosts resolveram na mesma sessão. Nenhum pedido chegou ao servidor: não há recusa da fonte. A causa não foi apurada (rede do dia, bloqueio de nome nesta rede ou mudança de endereço). Diagnóstico do curador em 23/10/2026, depois do lote: nslookup bcr.iphan.gov.br no DNS local deu 'Non-existent domain', e no DNS público 8.8.8.8 também não devolveu endereço, enquanto iphan.gov.br resolveu (177.15.66.134): o nome do BCR não existe no DNS nesta data. Em 17/10 abria; se mudou de endereço ou se é falha temporária do IPHAN não foi apurado."
+      "data": "2026-10-29",
+      "pedido": "6 GET com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)': /robots.txt; /wp-json/tainacan/v2/items?search=cajuina&perpage=3&fetch_only=id,title,url,document,attachments; duas vezes ?search=cajuina&perpage=50&fetch_only=id,title,url,collection_id; duas vezes ?postin=66089,66631 com fetch_only ampliado. Mais 2 buscas na web, sem tocar o BCR.",
+      "resposta": "robots.txt 200 (117 bytes); busca 200, X-WP-Total 49, X-WP-TotalPages 17, X-Robots-Tag noindex; busca de 50 itens 200 (49 listados); fetch_only ampliado 500 (página de erro do WordPress); dois pedidos com a saída perdida por erro da ferramenta local.",
+      "observacao": "O DNS voltou em relação a 23/10 (causa da falha não apurada). A página HTML do bem e os PDFs não foram abertos (teto de 6 pedidos). Rastreador, EX do log de 29/10/2026 (K-109)."
     },
-    "decisao": "falta: fonte inacessível em 23/10/2026, o nome bcr.iphan.gov.br não existe no DNS (local e 8.8.8.8). Via humana: Vicente procura o BCR pelo portal do IPHAN no navegador; reteste do rastreador com os pedidos do campo teste quando o nome voltar ou o novo endereço for conhecido."
+    "decisao": "aceito com ressalvas: a leitura automática é aberta pelo robots.txt (API do Tainacan e páginas dos bens); termos de uso não conferidos (o juridico confere antes de coleta em escala). Trazer o registro como Entrada coletada por robô pede um adaptador do Tainacan, que é protocolo novo: parado para Vicente (K-109, item 2 da autorização). Até a resposta, o registro fica fora dos lotes do bloco 7."
   },
-  "ultima_visita": "2026-10-23"
+  "ultima_visita": "2026-10-29"
 }

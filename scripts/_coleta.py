@@ -38,8 +38,9 @@ class BloqueioAntiRobo(Exception):
 
 
 class Resposta:
-    def __init__(self, url: str, status: int, headers: dict, corpo: str):
+    def __init__(self, url: str, status: int, headers: dict, corpo: str, bruto: bytes | None = None):
         self.url, self.status, self.headers, self.corpo = url, status, headers, corpo
+        self.bruto = bruto if bruto is not None else corpo.encode("utf-8")  # os bytes lidos (PDF; K-109)
 
     def json(self):
         return json.loads(self.corpo)
@@ -75,7 +76,8 @@ class Cliente:
         req = urllib.request.Request(url, data=dados, method=metodo, headers={"User-Agent": ROBO})
         try:
             with urllib.request.urlopen(req, timeout=60) as r:
-                resp = Resposta(r.geturl(), r.status, dict(r.headers), r.read().decode("utf-8", "replace"))
+                bruto = r.read()
+                resp = Resposta(r.geturl(), r.status, dict(r.headers), bruto.decode("utf-8", "replace"), bruto)
         except urllib.error.HTTPError as e:
             resp = Resposta(url, e.code, dict(e.headers or {}), e.read().decode("utf-8", "replace") if e.fp else "")
         finally:

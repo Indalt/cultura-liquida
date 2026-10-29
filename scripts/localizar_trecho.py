@@ -56,6 +56,9 @@ USER_AGENT = "cultura-liquida/0.1 (+https://github.com/Indalt/cultura-liquida)"
 
 def normalizar(t: str) -> str:
     """A regra normalizacao-0.1, na ordem do registro."""
+    # o pypdf pode devolver pares substitutos soltos (letras matemáticas): junta o par e troca o
+    # substituto isolado por U+FFFD, para o texto ter UTF-8 válido (K-109; só muda texto que antes quebrava)
+    t = t.encode("utf-16", "surrogatepass").decode("utf-16", "replace")
     t = unicodedata.normalize("NFC", t)
     t = re.sub(r"([^\W\d_])-[ \t]*\r?\n[ \t]*([^\W\d_])", r"\1\2", t)  # hífen de fim de linha entre letras
     t = re.sub(r"\s+", " ", t)

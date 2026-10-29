@@ -19,6 +19,6 @@
   },
   "AM-0061": {
     "adaptador": "assistido",
-    "motivo": "bcr.iphan.gov.br fora do DNS em 23/10/2026 (ficha do K-106): Falta fonte inacessível; via humana, se a página voltar"
+    "motivo": "robots.txt e API do Tainacan abertos ao robô em 29/10/2026 (ficha do K-109), mas o projeto não tem adaptador do Tainacan (protocolo novo, parado para Vicente); até lá, via humana"
   }
 }
