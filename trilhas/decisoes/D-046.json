@@ -1,0 +1,16 @@
+{
+  "id": "D-046",
+  "data": "2026-10-26",
+  "essencia": "O planejamento decide com tudo reunido: os cartões novos nascem numa reunião só, ao fim do desenvolvimento do piloto (depois do K-116), com os insumos guardados e o relatório do piloto; até lá, o que surge só se anota.",
+  "diretriz": "(1) Até a reunião, nenhum cartão novo no quadro: o insumo que cabe no trabalho de um cartão que já está na fila aponta para ele; o resto fica 'a definir pelo planejamento'. (2) Exceções: o que impedir o próximo cartão de rodar vai a Vicente (Regra de Ouro); os cartões que a ferramenta abre pela regra na operação continuam (D-037). (3) O K-004 começa por essa reunião (os insumos abertos, o relatório do piloto e o proxima-versao.md) e só depois decide os cartões novos e escreve a Fundação; a 3ª passada do K-005 e o K-006 entram na reunião; o K-002 continua antes do K-113. (4) Os insumos 45, 46, 49, 52 e 54 a 59 seguem 'a definir pelo planejamento'. (5) Muda-se o quadro, o mapa (seção 8) e o estado do planejamento só no que ela muda; nada mais dela se executa agora.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-27",
+  "fala_original_ref": "trilhas/2026-10-29_K-109/falas-vicente.md, seção '3. Diretriz de planejamento (D-046)'",
+  "palavras_conferidas": [
+    {"palavra": "reunião", "sentido_confirmado": "uma sessão de planejamento ao fim do desenvolvimento do piloto, depois do K-116, que é o começo do K-004; não é cartão novo"},
+    {"palavra": "só se anota", "sentido_confirmado": "pela registrar-melhoria; o destino é um cartão da fila, quando o insumo cabe no trabalho dele, ou 'a definir pelo planejamento'"},
+    {"palavra": "essência", "sentido_confirmado": "formulada pelo próprio Vicente na conversa de planejamento de 24 a 26/10 e escrita por ele na autorização do K-109; não houve devolução, porque o texto já é dele"}
+  ],
+  "substitui": "Muda a ordem do planejamento no quadro e no mapa (seção 8): o K-005 (3ª passada) e o K-006 deixam de ser cartões soltos e entram na reunião do K-004; o K-002 segue antes do K-113. Não reabre decisão vigente.",
+  "marcador": "VIGENTE"
+}

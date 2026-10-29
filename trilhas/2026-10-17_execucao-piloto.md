@@ -243,6 +243,18 @@
 - [x] **Lote 3, segunda leitura (auditor):** verificar-fundacao, olhar mecânico no código (**78.858 tokens, 16 chamadas**, Sonnet 5.5 alto; conta antes: 6,02 ≤ 12 pp), em `trilhas/2026-10-24_K-108b/achados-auditor.json`. A migração foi conferida por script contra o commit anterior: 1.723 EN-nnnn, 0 perdidos, 0 Recorte sem pegada, 0 wayback perdido. **4 achados, todos corrigidos:** A-001 (o `registrar` com um EN-nnnn de outro item sobrescreveria a Entrada: agora reprova), A-002 (a cópia do teste ficava na pasta temporária: agora se apaga, sem `.git`, `.venv` e `legado/`), A-003 (a reabertura pela mudança de regra só estava escrita: `scripts/reavaliar_pegadas.py`, com o mesmo EN-nnnn e o wayback de volta), A-004 (busca linear nas pegadas: conjunto por Recorte). Corrigidas também as suspeitas S-001 (o EN do item que segue por outra Consulta vai às pegadas dele nos outros Recortes) e S-002 (a contagem dos itens fora). S-003 a S-006 ficam ditas, sem defeito confirmado. Dois casos novos (reabertura que passa; EN de outro item que reprova). `rodar_testes.py`: OK 189 · FALHA 0 · PENDENTE 5; `validar_acervo.py`: 1.118 registros, válido; `deduplicar.py --conferir`: sem duplicata, 9.782 pegadas.
 - **K-108b fechado:** os seis itens da D-045 feitos, menos a compressão das pegadas, que a D-045 permite e o alarme dirá quando fazer (insumo 59). Consumo do cartão: auditor, 78.858 tokens.
 
+## Conversa do cartão K-109 (bloco 7) — aberta em 27/10/2026, retomada em 29/10/2026
+
+- **Autorização de Vicente:** o cartão K-109, com a ordem dos lotes, o BCR, a diretriz de planejamento e dois insumos (fala em `trilhas/2026-10-29_K-109/falas-vicente.md`). Tetos do projeto (60 pp) e do desenvolvimento (50 pp) de volta, com a linha de 90%.
+- **Parada pela linha de 90% (D-040), 27/10:** a leitura dada foi 91% (semanal) e 0% (janela de 5 h), antes da renovação da conta (28/10, 23h); nada se executou. Essa leitura fecha a conversa do K-108 (retomada) e do K-108b: 78% → 91%, 13 pp (pode misturar uso de fora do projeto). Retomada em 29/10 ("tokens renovados"), sem a leitura nova: A0 "a informar"; nenhum agente se abre sem ela (`orcamento.py --a0`).
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (792a793); `Indalt/cultura-liquida` público; cartão K-109 movido para Fazendo. O log do hook de 24/10 (`trilhas/logs/2026-10-24_desconhecido.jsonl`, duas linhas mínimas de subagentes do K-108, sem transcript) entra no Git como estava.
+- **Horas de Vicente, semana de 19 a 25/10 (bloco 13):** leitura e decisões, não informado (veio em branco); busca assistida, 0 h.
+
+### Abertura (curador, sem agente)
+- [x] **D-046** registrada (`trilhas/decisoes/D-046.json`, PASSA): o planejamento decide com tudo reunido; cartões novos só na reunião que abre o K-004, depois do K-116; até lá, o insumo aponta para um cartão da fila ou fica "a definir pelo planejamento". Quadro (K-004, K-005, K-006 e a regra dos cartões novos), mapa (seção 8) e estado do planejamento ajustados só nisso.
+- [x] **Insumos 60 a 62** (`registrar-melhoria`): 60, a escala (1.002 Entradas a 15 por lote, cerca de 67 lotes; vai ao K-002); 61, as portas de Vicente só por terminal e o formulário sem destino; 62, a oralidade sem transcrição (os dois, "a definir pelo planejamento").
+- [x] **Ordem dos lotes** (`trilhas/2026-10-29_K-109/ordem-lotes.md`): pelo cache local de metadados (fora do Git), 26 Entradas citam cajuína (16 no título, 10 só no resumo); a triagem fixa (triagem-fixa-0.3, ato ler) deu 0 Falta nas 26. Lote 1: o registro do BCR (se a ficha permitir) e 14 com cajuína no título, as de saúde e bebida alcoólica primeiro (risco, l. 512); lote 2: as 2 restantes do título, as 10 do resumo e 3 de caju pelos descritores; o resto (976) segue na fila, sem descarte.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -267,6 +279,7 @@
 | Semana | Revisões (h) | Juízo de itens (h) | Busca assistida (h) | Uso da conta antes / depois | Minutos do Actions |
 |---|---|---|---|---|---|
 | 12–18/10 | não informado | — | — | não informado | — |
+| 19–25/10 | não informado (veio em branco na abertura do K-109) | — | 0 | ver "Semana da conta" | — |
 
 ## Semana da conta (D-040)
 
@@ -288,4 +301,5 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | desenvolvimento | K-107 | 61 | 70 | 9 | 240.436 | 24 | janela de 5 h: 2% ao abrir; Opus 5.5 médio; teto de 60 pp do projeto suspenso nesta semana por Vicente (fica o do desenvolvimento e a linha de 90%); estimativa da conta 5,8 pp ; A1 pela abertura do K-124, que inclui a conversa do parecer prévio do juridico para o K-124 (EX-0026, lançado na linha do K-124) |
 | 21/10–28/10/2026 | desenvolvimento | K-124 | 70 | 73 | 3 | 82.949 | 24 | janela de 5 h: 26% ao abrir; Opus 5.5 médio; sem agentes nesta conversa; os tokens são do parecer prévio do juridico (EX-0026), feito antes, numa conversa cujos pp estão nos 9 do K-107; A1 pela abertura do K-108 |
 | 21/10–28/10/2026 | desenvolvimento | K-108 | 73 | 78 | 5 | 51.898 | 8 | janela de 5 h: 39% ao abrir; A1 pela retomada do K-108; Opus 5.5 médio; tetos do projeto e do desenvolvimento suspensos para o K-108 por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |
-| 21/10–28/10/2026 | desenvolvimento | K-108 (retomada) e K-108b | 78 | a informar | a informar | 135.915 | 24 | janela de 5 h: 20% ao abrir; Opus 5.5 médio; tetos do projeto e do desenvolvimento seguem suspensos por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |
+| 21/10–28/10/2026 | desenvolvimento | K-108 (retomada) e K-108b | 78 | 91 | 13 | 135.915 | 24 | janela de 5 h: 20% ao abrir; Opus 5.5 médio; tetos do projeto e do desenvolvimento seguem suspensos por Vicente (ficam a linha de 90% e a regra da janela de 5 h); A1 pela abertura do K-109 (27/10, antes da renovação) |
+| 28/10–04/11/2026 | desenvolvimento | K-109 | a informar | a informar | a informar | — | — | Opus 5.5 médio; aberta em 27/10 e parada pela linha de 90% (91%, semana anterior); retomada em 29/10 sem a leitura |

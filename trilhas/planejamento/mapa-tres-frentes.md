@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 59 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 62 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -393,6 +393,9 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 57, sobreposição caju e cajuína na BDTD | D | a definir pelo planejamento |
 | 58, cajueiro e derivados fora da pré-triagem | P; D | a definir pelo planejamento |
 | 59, pegadas repetidas nas janelas divididas | D | a definir pelo planejamento |
+| 60, escala da triagem: 1.002 Entradas a 15 por lote | P; D; O | K-002 |
+| 61, portas de Vicente só por terminal; formulário sem destino | P; D; O | a definir pelo planejamento |
+| 62, oralidade sem transcrição: trecho e W como Falta | P; D | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-043
 
@@ -444,11 +447,12 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 
 ## 8. Ordem dos cartões e por quê
 
-- **Planejamento:** K-001 (esta rodada) → **K-003** → **K-005** (1ª passada, 23/10, por escolha de Vicente) → **K-002** → K-006 → K-005 (3ª passada) → K-004 → K-007 → K-010 → K-008 → K-009.
+- **Planejamento:** K-001 (esta rodada) → **K-003** → **K-005** (1ª passada, 23/10, por escolha de Vicente) → **K-002** (antes do K-113) → **reunião do K-004** (depois do K-116; D-046), que leva a 3ª passada do K-005 e o K-006 → K-007 → K-010 → K-008 → K-009.
+  - **D-046 (26/10):** o planejamento decide com tudo reunido. Os cartões novos nascem numa reunião só, que abre o K-004, ao fim do desenvolvimento do piloto (depois do K-116), com os insumos guardados, o relatório do piloto e o `proxima-versao.md`; só depois dela o K-004 decide os cartões novos e escreve a Fundação. Até lá, nenhum cartão novo: o insumo que cabe num cartão da fila aponta para ele; o resto fica "a definir pelo planejamento" (entre eles, os 45, 46, 49, 52 e 54 a 59). Exceções: o que impedir o próximo cartão de rodar vai a Vicente (Regra de Ouro); os cartões que a ferramenta abre pela regra na operação continuam (D-037).
   - O K-003 vem antes do bloco 1 porque o bloco 1 muda o `executar-brief` "com o ritual da l. 512" (brief l. 173), que a D-037 relê (A-02), e porque a retomada tem de começar pelo quadro (A-01). Ele acerta o brief, põe no roteiro uma nota de ajuste (rot. l. 17, 101, 120, 176 e 185) e diz o que muda em `.claude/` (curador, avaliador, extrair-evidencia, executar-brief), que o K-101 grava. Leva a Vicente os quatro pontos em aberto: A-04, A-05, A-09 (b) e A-10.
   - O K-002 vem antes do K-113: a operação com IA depende da escolha da IA da operação (D-036, diretriz 4). A configuração, a cadência e o teto do planejamento (A-12, A-13) também valem já para a rodada seguinte.
-  - O K-005 espera medidas: o insumo 4 pede o teto e a regra de folga "calibrados pela medida". Entra depois dos blocos 1 a 3 medidos, ou na primeira Parada (b). A 1ª passada (23/10) deu as D-040 e D-041; a 2ª, que traria as regras dos insumos 34 e 36 antes do K-109, ficou dispensada pela D-041; a 3ª vem depois do K-110, quando os blocos 7 e 8 e as horas do bloco 13 trazem medida para os números da D-038 e do registro.
-  - O K-004 vem depois do relatório do piloto (K-116): é a D-035 e o destino do insumo 1.
+  - O K-005 espera medidas: o insumo 4 pede o teto e a regra de folga "calibrados pela medida". Entra depois dos blocos 1 a 3 medidos, ou na primeira Parada (b). A 1ª passada (23/10) deu as D-040 e D-041; a 2ª, que traria as regras dos insumos 34 e 36 antes do K-109, ficou dispensada pela D-041; a 3ª entra na reunião do K-004 (D-046), com as medidas dos blocos 7 e 8 e as horas do bloco 13 para os números da D-038 e do registro.
+  - O K-004 vem depois do relatório do piloto (K-116): é a D-035 e o destino do insumo 1. Pela D-046, começa pela reunião que reúne tudo, onde entram também a 3ª passada do K-005 e o K-006.
 - **Desenvolvimento:** **K-103** → K-101 → K-104 → K-105 → **K-123** → K-106 → K-107 → K-108 → K-109 → K-110 → **K-102** → K-111 → K-112 → K-113 → K-114 → K-115 → K-116; depois do piloto, K-117 a K-122, a detalhar pelo K-004.
   - O K-123 vem antes do K-106: o bloco 4 é o primeiro com agentes depois da D-040, e a conta de cada conversa passa a ser feita por script; e o K-109 (bloco 7) e o K-110 (bloco 8) usam o `localizar_trecho.py` e o `calcular_mu_lambda.py`, que têm de rodar com as regras da D-041.
   - O K-103 vem antes do K-101: a D-036 pede que toda sessão termine com insumos novos, num formato fixo, e habilidade nova só carrega em sessão nova (insumo 5). Pronta antes, o bloco 1 a liga no `executar-brief`.
