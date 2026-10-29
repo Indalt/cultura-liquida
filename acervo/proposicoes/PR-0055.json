@@ -1,0 +1,20 @@
+{
+  "id": "PR-0055",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "título de Patrimônio Cultural do Brasil revalidado em 17/06/2025, com parecer técnico de 2024 favorável",
+  "periodo": {
+    "referido": "2025"
+  },
+  "evidencias": [
+    "EV-0073"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

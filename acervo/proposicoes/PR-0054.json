@@ -1,0 +1,21 @@
+{
+  "id": "PR-0054",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "Produção tradicional e práticas socioculturais associadas à cajuína no Piauí, registrada em 2014 no Livro dos Saberes do Iphan como Patrimônio Cultural do Brasil",
+  "periodo": {
+    "referido": "2014"
+  },
+  "evidencias": [
+    "EV-0072",
+    "EV-0081"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

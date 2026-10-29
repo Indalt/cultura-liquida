@@ -10,3 +10,6 @@ Thumbs.db
 desktop.ini
 __pycache__/
 *.pyc
+
+# Wiki local do bloco 8 (Quartz e a saída gerada), só na máquina
+wiki-local/

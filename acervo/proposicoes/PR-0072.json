@@ -1,0 +1,20 @@
+{
+  "id": "PR-0072",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "saber repassado por gerações também entre estratos populares empobrecidos, mesmo sem posse da terra",
+  "periodo": {
+    "referido": "há muitas décadas até hoje"
+  },
+  "evidencias": [
+    "EV-0097"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

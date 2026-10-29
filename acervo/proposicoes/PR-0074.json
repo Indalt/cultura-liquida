@@ -1,0 +1,20 @@
+{
+  "id": "PR-0074",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "o saber popular piauiense, não restrito às elites, reinventou os métodos de produção e as sociabilidades ligadas ao consumo",
+  "periodo": {
+    "referido": "2014-2024"
+  },
+  "evidencias": [
+    "EV-0099"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

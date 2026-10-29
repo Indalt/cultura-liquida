@@ -6,7 +6,7 @@
   "url_ou_arquivo": "https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
   "identificador": "AM-0061:https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
   "localizador": "item 66089 do BCR (Tainacan)",
-  "estado": "bruto",
+  "estado": "extraído",
   "sustenta_aviso_saude_politica": false,
   "protecao": {
     "licenca": "não conferido",
@@ -17,11 +17,34 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "o bem registrado (página); endereço dado pela API do BCR (ficha do AM-0061) e conferido na conversa de planejamento de 29/10; K-110",
+  "nota": "o bem registrado (página); endereço dado pela API do BCR (ficha do AM-0061) e conferido na conversa de planejamento de 29/10; K-110. Triagem pela extrair-evidencia (K110-A1, EX-0065, valencias-0.1).",
   "origem_registro": {
     "criado_por": "Vicente (pessoa), link ou documento trazido",
     "data": "2026-10-29",
     "execucao": "EX-0060",
     "versao_regra": "entrada-link-0.1"
+  },
+  "valencias": {
+    "lastro": 1,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+  },
+  "gera": {
+    "fontes": [
+      "FO-0031"
+    ],
+    "trechos": [
+      "TR-0072",
+      "TR-0073",
+      "TR-0074",
+      "TR-0075",
+      "TR-0076",
+      "TR-0077",
+      "TR-0078",
+      "TR-0079",
+      "TR-0080"
+    ]
   }
 }

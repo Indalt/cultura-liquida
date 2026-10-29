@@ -300,11 +300,13 @@ class Gravador:
             if item["estado"] == "quarentena":
                 en.update(estado="quarentena", selo="PENDENTE_JULGAMENTO", motivo_quarentena=item.get("motivo_quarentena") or "critério de valência em 0")
             else:
-                en["estado"] = "extraído" if temas else "aceito"
+                en["estado"] = "extraído" if temas or en.get("estado") == "extraído" else "aceito"
                 en.pop("selo", None)
                 en.pop("motivo_quarentena", None)
+            # uma fonte longa se lê em mais de um lote (K-110, o dossiê do IPHAN): os Trechos se somam
+            trechos = list(dict.fromkeys([*(en.get("gera") or {}).get("trechos", []), *trechos]))
             en["gera"] = {"fontes": [fo_id], **({"trechos": trechos} if trechos else {})}
-            en["nota"] = (en.get("nota", "").rstrip(". ") + f". Triagem do bloco 7 ({saida.get('lote')}, {self.execucao}, valencias-0.1).").strip()
+            en["nota"] = (en.get("nota", "").rstrip(". ") + f". Triagem pela extrair-evidencia ({saida.get('lote')}, {self.execucao}, valencias-0.1).").strip()
             self.novos[en_id] = en
         erros = []
         for i, reg in self.novos.items():

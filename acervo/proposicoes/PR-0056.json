@@ -1,0 +1,21 @@
+{
+  "id": "PR-0056",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "pedido de registro apresentado pela Cooperativa de Produtores de Cajuína do Piauí, com anuência de produtores e da comunidade detentora",
+  "periodo": {
+    "referido": "2008"
+  },
+  "evidencias": [
+    "EV-0074",
+    "EV-0082"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

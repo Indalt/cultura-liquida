@@ -1,0 +1,20 @@
+{
+  "id": "PR-0057",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "oferecer uma garrafa de cajuína a uma visita expressa acolhimento, respeito e identidade",
+  "periodo": {
+    "referido": "atual"
+  },
+  "evidencias": [
+    "EV-0075"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

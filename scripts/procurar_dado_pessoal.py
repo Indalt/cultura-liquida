@@ -79,8 +79,10 @@ def nomes_privados() -> list[str]:
         arq = Path(os.environ.get("CL_PRIVADO") or "C:/Antigravity/Cultura Liquida - privado") / "pessoas" / "tabela.json"
         try:
             tab = json.loads(arq.read_text(encoding="utf-8"))
-            _NOMES = sorted({f.lower() for t in tab.values() for f in [t.get("nome"), *t.get("outras_formas", [])]
-                             if f and len(f.strip()) >= 4})
+            # só formas de duas palavras ou mais: um prenome sozinho acusaria qualquer texto com a mesma palavra
+            # (o gravar_extracao.py barra também o prenome no texto exato do Trecho)
+            _NOMES = sorted({f.lower().strip() for t in tab.values() for f in [t.get("nome"), *t.get("outras_formas", [])]
+                             if f and len(f.split()) >= 2})
         except (OSError, ValueError):
             _NOMES = []
     return _NOMES
@@ -94,7 +96,8 @@ def achar(texto: str) -> list[tuple[int, str, str]]:
         if nomes:
             baixa = linha.lower()
             # o nome não se imprime: só o código da tabela privada diria quem é
-            achados += [(n, "nome da tabela privada de pessoas", "(nome omitido)") for f in nomes if f in baixa]
+            achados += [(n, "nome da tabela privada de pessoas", "(nome omitido)") for f in nomes
+                        if re.search(r"(?<!\w)" + re.escape(f) + r"(?!\w)", baixa)]
         for tipo, rx in PADROES:
             for m in rx.finditer(linha):
                 s = m.group(0).rstrip(".")

@@ -6,8 +6,8 @@
   "url_ou_arquivo": "https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/126109/cajuina_parecer_tecnico.pdf",
   "identificador": "AM-0061:https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/126109/cajuina_parecer_tecnico.pdf",
   "localizador": "item 126109 do BCR (Tainacan)",
-  "estado": "bruto",
-  "sustenta_aviso_saude_politica": false,
+  "estado": "extraído",
+  "sustenta_aviso_saude_politica": true,
   "protecao": {
     "licenca": "não conferido",
     "consentimento": "não se aplica",
@@ -17,11 +17,39 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "parecer técnico de revalidação de 2025 (PDF); endereço dado pela API do BCR e conferido na conversa de planejamento de 29/10; K-110",
+  "nota": "parecer técnico de revalidação de 2025 (PDF); endereço dado pela API do BCR e conferido na conversa de planejamento de 29/10; K-110. Triagem pela extrair-evidencia (K110-A1, EX-0065, valencias-0.1).",
   "origem_registro": {
     "criado_por": "Vicente (pessoa), link ou documento trazido",
     "data": "2026-10-29",
     "execucao": "EX-0063",
     "versao_regra": "entrada-link-0.1"
+  },
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+  },
+  "gera": {
+    "fontes": [
+      "FO-0033"
+    ],
+    "trechos": [
+      "TR-0090",
+      "TR-0091",
+      "TR-0092",
+      "TR-0093",
+      "TR-0094",
+      "TR-0095",
+      "TR-0096",
+      "TR-0097",
+      "TR-0098",
+      "TR-0099",
+      "TR-0100",
+      "TR-0101",
+      "TR-0102",
+      "TR-0103"
+    ]
   }
 }

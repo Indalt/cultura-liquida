@@ -1,0 +1,20 @@
+{
+  "id": "PR-0062",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "novas famílias, cooperativas e produtores passaram a fabricar também para fins comerciais, mantendo o vínculo com as formas tradicionais",
+  "periodo": {
+    "referido": "ao longo do tempo (não datado)"
+  },
+  "evidencias": [
+    "EV-0080"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

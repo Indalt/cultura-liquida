@@ -1,0 +1,29 @@
+{
+  "id": "TR-0076",
+  "fonte": "FO-0031",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 6440-6591 do texto normalizado (normalizacao-0.2)",
+  "hash": "b8d62e7ab888254d8f1058be554cc30cb1e1e7e5bab6c7d8859da239f7837a23",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "diferentes substâncias foram utilizadas nessa etapa, como a resina do cajueiro, cola de madeira ou de sapateiro e, mais recentemente, a gelatina em pó.",
+  "antes": " responsável pela adstringência do caju. Ao longo do tempo, ",
+  "depois": " Após essa separação, o suco é coado em redes de pano e colo",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

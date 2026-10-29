@@ -1,0 +1,22 @@
+{
+  "id": "PR-0058",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "agente da clarificação (corte) do suco: resina do cajueiro, depois cola de sapateiro e, mais recentemente, gelatina em pó",
+  "periodo": {
+    "referido": "ao longo do tempo (não datado)"
+  },
+  "evidencias": [
+    "EV-0076",
+    "EV-0086",
+    "EV-0095"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

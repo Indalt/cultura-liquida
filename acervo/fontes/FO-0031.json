@@ -1,0 +1,33 @@
+{
+  "id": "FO-0031",
+  "referencia": {
+    "titulo": "Produção tradicional e práticas socioculturais associadas à cajuína no Piauí (página do bem no Bens Culturais Registrados)",
+    "instituicao": "Iphan, Bens Culturais Registrados (BCR)",
+    "ano": 2025,
+    "tipo": "página institucional (BCR/Iphan)",
+    "link_permanente": "https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2025",
+  "url": "https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-10-29",
+  "perspectiva": "instituição (síntese da descrição feita com auxílio de IA e revisada por especialistas, segundo a página)",
+  "deriva_de": [],
+  "entrada": "EN-1724",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/ (html); de onde a fonte diz que tira a informação: processo administrativo nº 01450.14375/2008-87 e documentos do BCR (segundo a página)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}

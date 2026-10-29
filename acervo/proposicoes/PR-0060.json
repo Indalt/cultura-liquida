@@ -1,0 +1,20 @@
+{
+  "id": "PR-0060",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "saber desenvolvido dentro das casas e transmitido entre gerações como parte dos modos de fazer e de viver no Nordeste",
+  "periodo": {
+    "referido": "não dito"
+  },
+  "evidencias": [
+    "EV-0078"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0065"
+  }
+}
