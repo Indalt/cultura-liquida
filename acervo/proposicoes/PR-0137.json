@@ -1,0 +1,20 @@
+{
+  "id": "PR-0137",
+  "clb": "CL-0001",
+  "atributo": "nomes e variantes",
+  "valor": "produtores piauienses rejeitaram o nome Crush Cajuína para refrigerante de caju industrializado, gaseificado e de outro sabor",
+  "periodo": {
+    "referido": "2008"
+  },
+  "evidencias": [
+    "EV-0165"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0182",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "na unidade, o pomar é cuidado sobretudo por homens (cerca de 2) e a produção da cajuína é sobretudo feminina (3 mulheres e 2 homens)",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0211"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

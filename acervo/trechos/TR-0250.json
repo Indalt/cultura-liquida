@@ -1,0 +1,29 @@
+{
+  "id": "TR-0250",
+  "fonte": "FO-0033",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 5 do PDF; car. 18873-19051 do texto normalizado (normalizacao-0.2)",
+  "hash": "3bb310cb4a89f95e370f93176b436d70aba65ed2d908142ce4aa7fa443f9d350",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Estimular a troca de experiência entre os produtores tradicionais por meio de oficinas e capacitações que contratem os próprios produtores tradicionais para ministrarem os cursos",
+  "antes": " para a manutenção dos cajuais e da produção da bebida; 2.6 ",
+  "depois": ". 2.7. Fomentar a ampliação e a criação de festivais, encont",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

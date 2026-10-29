@@ -1,0 +1,29 @@
+{
+  "id": "TR-0179",
+  "fonte": "FO-0033",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 6 do PDF; car. 24380-24468 do texto normalizado (normalizacao-0.2)",
+  "hash": "3bb310cb4a89f95e370f93176b436d70aba65ed2d908142ce4aa7fa443f9d350",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "para outros produtores derivados do caju, como, por exemplo, a cajuaça e o licor de caju",
+  "antes": "ampliação de mercado, não apenas para a Cajuína, mas também ",
+  "depois": ", por exemplo. Já nas instituições acima mencionadas, nenhum",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

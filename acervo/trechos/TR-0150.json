@@ -1,0 +1,29 @@
+{
+  "id": "TR-0150",
+  "fonte": "FO-0032",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 30 do PDF; car. 75371-75733 do texto normalizado (normalizacao-0.2)",
+  "hash": "2f7ff74e45db8b15a2e4a6617ca5c17f8114481736e587d344bf09b8f7f58a02",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Empregados de sitiantes que fabricam para o patrão, com ele presente ou ausente; 7. Empregados de sitiantes que, após completarem a cota do patrão, utilizam os frutos e os instrumentos do patrão para produzirem sua cota individual; 8. Ex-empregados que conseguiram adquirir terra, plantar cajuais, e produzem de forma independente, tendo aprendido com os patrões",
+  "antes": "ados na Cooperativa CAJUESPI - solicitante do Registro); 6. ",
+  "depois": "; 9. Assentados da reforma agrária que iniciam a produção at",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

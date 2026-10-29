@@ -1,0 +1,29 @@
+{
+  "id": "TR-0104",
+  "fonte": "FO-0032",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 21 do PDF; car. 50370-50451 do texto normalizado (normalizacao-0.2)",
+  "hash": "2f7ff74e45db8b15a2e4a6617ca5c17f8114481736e587d344bf09b8f7f58a02",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "declara de relevante interesse cultural o Modo de Fazer Tradicional da CAJUÍNA do",
+  "antes": "13.068 de 15/05/2008 — anexado ao processo em tela (1.49) À ",
+  "depois": " | Estado do Piauí e incluí este bem ao patrimônio cultural ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

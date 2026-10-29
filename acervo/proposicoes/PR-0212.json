@@ -1,0 +1,20 @@
+{
+  "id": "PR-0212",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "a cajuína artesanal do Piauí se define pelo que não é: não industrializada, sem aditivos químicos, orgânica, natural, saudável (em contraste com o Ceará)",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0243"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

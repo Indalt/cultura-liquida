@@ -1,0 +1,29 @@
+{
+  "id": "TR-0162",
+  "fonte": "FO-0032",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 33 do PDF; car. 83678-83809 do texto normalizado (normalizacao-0.2)",
+  "hash": "2f7ff74e45db8b15a2e4a6617ca5c17f8114481736e587d344bf09b8f7f58a02",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "latas de querosene que eram usadas inicialmente para a fervura. Essas latas foram substituídas por tonéis de ferro cortados ao meio",
+  "antes": "lão para que elas não balançassem e se chocassem dentro das ",
+  "depois": ". As senhoras foram descobrindo o ponto certo de se encher a",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

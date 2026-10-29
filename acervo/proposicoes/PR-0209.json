@@ -1,0 +1,20 @@
+{
+  "id": "PR-0209",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "homens e mulheres acordam às cinco da manhã e vão aos cajuais; inventam coletores com cabo de vassoura e garrafa pet para colher os frutos distantes sem machucá-los",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0239"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

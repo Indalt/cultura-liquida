@@ -1,0 +1,29 @@
+{
+  "id": "TR-0159",
+  "fonte": "FO-0032",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 32 do PDF; car. 81123-81391 do texto normalizado (normalizacao-0.2)",
+  "hash": "2f7ff74e45db8b15a2e4a6617ca5c17f8114481736e587d344bf09b8f7f58a02",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Se fermentado este líquido se torna o vinho de caju (bebida etílica), se levado para o processo de pasteurização em banho-maria ganha a característica amarelada e caramelizada da cajuína e poderá ser armazenada por um longo período de tempo (aproximadamente dois anos)",
+  "antes": "es que estão na atividade de produção, como um raro prazer. ",
+  "depois": ". Esta descrição desafia-nos a supor algum vínculo entre o m",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

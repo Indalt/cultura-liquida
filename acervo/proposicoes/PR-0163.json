@@ -1,0 +1,20 @@
+{
+  "id": "PR-0163",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "os produtores reconhecem a cajuína como patrimônio por ser algo próprio do Piauí, que os representa",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0192"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0175",
+  "clb": "CL-0001",
+  "atributo": "recipiente",
+  "valor": "as garrafas de vidro vêm em sua maior parte de uma única fábrica de Recife e são difíceis de obter a preço justo",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0204"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

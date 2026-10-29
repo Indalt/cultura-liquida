@@ -1,0 +1,29 @@
+{
+  "id": "TR-0136",
+  "fonte": "FO-0032",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 15 do PDF; car. 35543-35778 do texto normalizado (normalizacao-0.2)",
+  "hash": "2f7ff74e45db8b15a2e4a6617ca5c17f8114481736e587d344bf09b8f7f58a02",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "a cajuína se insere como um dos elementos dos rituais de hospitalidade distintivos desses grupos, que encontram até mesmo nas suas características físicas tais como pureza, limpeza, transparência, cristalinidade, beleza da cor e doçura",
+  "antes": " o estabelecimento de novos comportamentos. Nesse processo, ",
+  "depois": " — o emblema dos valores de distinção que se deseja promover",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

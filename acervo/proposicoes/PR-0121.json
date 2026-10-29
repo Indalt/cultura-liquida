@@ -1,0 +1,20 @@
+{
+  "id": "PR-0121",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "persiste a transmissão tradicional, informal, de conhecedores da técnica para empregados, amigos e aparentados, nas moradias e fazendas",
+  "periodo": {
+    "referido": "2009-2014"
+  },
+  "evidencias": [
+    "EV-0149"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

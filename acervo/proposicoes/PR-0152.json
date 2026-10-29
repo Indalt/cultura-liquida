@@ -1,0 +1,20 @@
+{
+  "id": "PR-0152",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "os produtores formam muitos núcleos que não dialogam entre si e têm reivindicações dispares, o que fragiliza a representação",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0181"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

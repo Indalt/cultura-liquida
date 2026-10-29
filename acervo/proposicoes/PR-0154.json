@@ -1,0 +1,20 @@
+{
+  "id": "PR-0154",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "produtores veem respeito dos técnicos pelo saber tradicional; a queixa maior é a descontinuidade dos cursos e das trocas de experiência",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0183"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

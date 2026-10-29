@@ -1,0 +1,20 @@
+{
+  "id": "PR-0195",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "a produtora diz que o modo de fazer mudou quase nada: só a cola virou gelatina no corte; o resto é igual ao de cem anos atrás",
+  "periodo": {
+    "referido": "até 2024"
+  },
+  "evidencias": [
+    "EV-0224"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

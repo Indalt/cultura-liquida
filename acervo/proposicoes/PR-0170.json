@@ -1,0 +1,20 @@
+{
+  "id": "PR-0170",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "a produtora afirma que só ela dá o corte do suco na sua unidade",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0199"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

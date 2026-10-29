@@ -5,7 +5,8 @@
   "sentido": "a favor",
   "voz": {
     "tipo": "pessoa citada em fala direta",
-    "papel": "detentor ou mestre"
+    "papel": "detentor ou mestre",
+    "pessoa": "P-0005"
   },
   "lugares": {
     "pratica": "LU-0023",
@@ -28,5 +29,6 @@
     "data": "2026-10-29",
     "execucao": "EX-0065"
   },
-  "criterio_pratica_cultural": "reconhecimento pelo grupo"
+  "criterio_pratica_cultural": "reconhecimento pelo grupo",
+  "nota": "Voz ligada a P-0005 pelo curador: a nota 8 do parecer de 2025 atribui a fala (lote K110-A2)."
 }

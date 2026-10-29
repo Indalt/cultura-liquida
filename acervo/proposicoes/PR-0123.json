@@ -1,0 +1,20 @@
+{
+  "id": "PR-0123",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "o parecer lista onze categorias de produtores; as primeiras são senhoras de antigas famílias proprietárias de terra e de famílias de sítios, no interior ou em Teresina",
+  "periodo": {
+    "referido": "2009-2014"
+  },
+  "evidencias": [
+    "EV-0151"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

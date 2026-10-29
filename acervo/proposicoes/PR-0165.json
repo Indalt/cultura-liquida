@@ -1,0 +1,20 @@
+{
+  "id": "PR-0165",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "após a patrimonialização houve aumento do consumo e a cajuína ficou mais conhecida",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0194"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

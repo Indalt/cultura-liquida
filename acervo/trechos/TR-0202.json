@@ -1,0 +1,29 @@
+{
+  "id": "TR-0202",
+  "fonte": "FO-0033",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 14 do PDF; car. 67359-67824 do texto normalizado (normalizacao-0.2)",
+  "hash": "3bb310cb4a89f95e370f93176b436d70aba65ed2d908142ce4aa7fa443f9d350",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Garrafas pets são colocadas em cabos de vassoura para se transformarem em coletores eﬁcientes de cajus maduros, baldes são improvisados para a separação entre o caju e a castanha, moinhos manuais dividem espaço com moinhos elétricos, funis de pano, por vezes improvisados dentro de receptáculos de café solúveis são enﬁleirados para o processo de clariﬁcação do suco de caju, tachos de cobre são utilizados para cozinhar a lenha e em banho maria a Cajuína já pronta",
+  "antes": "ariedade ilimitada. Cada local tem sua conﬁguração própria. ",
+  "depois": ". A Cajuína é colocada nesses tachos em uma maquinária produ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

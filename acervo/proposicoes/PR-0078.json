@@ -1,0 +1,20 @@
+{
+  "id": "PR-0078",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "Decreto estadual nº 13.068, de 15/05/2008, declarou de relevante interesse cultural o modo de fazer tradicional da cajuína e o incluiu no patrimônio cultural imaterial do Piauí",
+  "periodo": {
+    "referido": "2008"
+  },
+  "evidencias": [
+    "EV-0104"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

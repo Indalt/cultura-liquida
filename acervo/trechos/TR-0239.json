@@ -1,0 +1,29 @@
+{
+  "id": "TR-0239",
+  "fonte": "FO-0033",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 25 do PDF; car. 119040-119315 do texto normalizado (normalizacao-0.2)",
+  "hash": "3bb310cb4a89f95e370f93176b436d70aba65ed2d908142ce4aa7fa443f9d350",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "levam homens e mulheres a acordarem cinco horas da manhã, locomoverem-se aos cajuais em busca dos melhores frutos. Nesse processo, instrumentos de colheita são inventados: um cabo de vassoura unido a uma garrafa pet para colher sem prejuízo os frutos que estão mais distantes",
+  "antes": " mesmos ventos do caju, uma anunciação dos tempos chegados, ",
+  "depois": ". Essa bricolagem é uma estratégia eﬁcaz diante da constataç",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

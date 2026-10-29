@@ -1,0 +1,20 @@
+{
+  "id": "PR-0101",
+  "clb": "CL-0001",
+  "atributo": "recipiente",
+  "valor": "garrafas escuras de cerveja, e também de cachaça industrializada, foram as primeiras usadas no envase",
+  "periodo": {
+    "referido": "até 2014"
+  },
+  "evidencias": [
+    "EV-0129"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0153",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "Sebrae e Senar, segundo os detentores, oferecem capacitações que reciclam produtores antigos e introduzem novos sujeitos na prática",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0182"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

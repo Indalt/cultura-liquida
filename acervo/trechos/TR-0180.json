@@ -1,0 +1,29 @@
+{
+  "id": "TR-0180",
+  "fonte": "FO-0033",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 7 do PDF; car. 27676-27860 do texto normalizado (normalizacao-0.2)",
+  "hash": "3bb310cb4a89f95e370f93176b436d70aba65ed2d908142ce4aa7fa443f9d350",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Festival da Cajuína foi o momento simbólico de pactuação entre entidades governamentais e detentores em favor da continuidade do Saber-fazer Cajuína como Patrimônio Cultural Brasileiro",
+  "antes": "_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-Ur… 6/29 ",
+  "depois": ". O título do evento em questão foi \"10 anos de Patrimônio C",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

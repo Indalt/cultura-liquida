@@ -1,0 +1,20 @@
+{
+  "id": "PR-0116",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "os cursos do SEBRAE ensinam a acelerar a filtragem, o que contradiz a forma tradicional, que se esmera na filtragem, às vezes de muitas horas",
+  "periodo": {
+    "referido": "2009-2014"
+  },
+  "evidencias": [
+    "EV-0144"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

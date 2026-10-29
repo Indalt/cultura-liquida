@@ -1,0 +1,20 @@
+{
+  "id": "PR-0198",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "produtores de grande e médio porte defendem parâmetros rígidos; os pequenos preferem a clandestinidade, por medo de fiscalização e de exclusão",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0228"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

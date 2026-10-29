@@ -1,0 +1,20 @@
+{
+  "id": "PR-0083",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "a cajuína representa a hospitalidade doméstica e incorpora aspectos da hospitalidade pública, que agrega valor ao turismo",
+  "periodo": {
+    "referido": "2008-2014"
+  },
+  "evidencias": [
+    "EV-0109"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

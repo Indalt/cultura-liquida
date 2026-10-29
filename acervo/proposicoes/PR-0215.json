@@ -1,0 +1,20 @@
+{
+  "id": "PR-0215",
+  "clb": "CL-0001",
+  "atributo": "insumo",
+  "valor": "em 2024, na comunidade Lago Verde, a produção de cajuína estava atrasada porque os cajus secavam e as castanhas empretavam, apesar da procura",
+  "periodo": {
+    "referido": "2024"
+  },
+  "evidencias": [
+    "EV-0246"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

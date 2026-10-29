@@ -1,0 +1,20 @@
+{
+  "id": "PR-0184",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "na unidade, os homens colhem mais caju e as mulheres descastanham e limpam os cajus",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0213"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

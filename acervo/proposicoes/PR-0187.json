@@ -1,0 +1,20 @@
+{
+  "id": "PR-0187",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "grupo de 10 pessoas saído de curso do Senar usou liquidificador industrial, panela de pasteurização e encapsuladeira emprestados; depois comprou o básico; prensagem manual e garrafas reutilizadas",
+  "periodo": {
+    "referido": "2019-2020"
+  },
+  "evidencias": [
+    "EV-0216"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

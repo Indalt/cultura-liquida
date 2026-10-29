@@ -1,0 +1,20 @@
+{
+  "id": "PR-0183",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "o Senar deu assistência técnica por dois anos, com cursos de aperfeiçoamento da produção e do gerenciamento",
+  "periodo": {
+    "referido": "não informado"
+  },
+  "evidencias": [
+    "EV-0212"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

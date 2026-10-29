@@ -1,0 +1,20 @@
+{
+  "id": "PR-0156",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "kits distribuídos pelo governo estadual a cerca de 120 produtores continham moinho de caju em inox e máquina capsuladora, entre outros itens",
+  "periodo": {
+    "referido": "2023-2024"
+  },
+  "evidencias": [
+    "EV-0185"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

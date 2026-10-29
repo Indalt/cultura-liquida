@@ -1,0 +1,20 @@
+{
+  "id": "PR-0208",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "de agosto a novembro, o cheiro de caju toma o Piauí: são os ventos do caju",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0238"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0149",
+  "clb": "CL-0001",
+  "atributo": "salvaguarda",
+  "valor": "a primeira ação efetiva de salvaguarda foi o I Fórum Estadual para a Salvaguarda da Cajuína, em 10 e 11 de dezembro de 2015",
+  "periodo": {
+    "referido": "2015"
+  },
+  "evidencias": [
+    "EV-0178"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

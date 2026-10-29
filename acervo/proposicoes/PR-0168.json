@@ -1,0 +1,20 @@
+{
+  "id": "PR-0168",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "fábrica diz fazer cajuína nos moldes antigos: extrai o líquido do caju maduro, aquece em alta temperatura e engarrafa de forma artesanal",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0197"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

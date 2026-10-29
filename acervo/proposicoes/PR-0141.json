@@ -1,0 +1,20 @@
+{
+  "id": "PR-0141",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "cada unidade de produção tem seu próprio padrão de cajuína, comentado na degustação, o que forma o pertencimento local",
+  "periodo": {
+    "referido": "2009-2010"
+  },
+  "evidencias": [
+    "EV-0170"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

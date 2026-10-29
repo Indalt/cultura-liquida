@@ -1,0 +1,20 @@
+{
+  "id": "PR-0190",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "produtores fazem outros derivados do caju: mel, carne, doces, suco integral, licor de cajuína, geleia, vinho de caju, pizza, cajupinga e cajuaça",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0219"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0120",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "SEBRAE e EMATER distribuíram kits de produção e dão cursos a assentados e pequenos produtores, o que multiplicou os produtores",
+  "periodo": {
+    "referido": "2000-2014"
+  },
+  "evidencias": [
+    "EV-0148"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

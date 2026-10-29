@@ -1,0 +1,20 @@
+{
+  "id": "PR-0088",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "esmagamento: do caju rasgado e espremido com a mão aos moinhos",
+  "periodo": {
+    "referido": "2009-2010"
+  },
+  "evidencias": [
+    "EV-0116"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

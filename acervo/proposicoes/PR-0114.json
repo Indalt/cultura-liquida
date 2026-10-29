@@ -1,0 +1,20 @@
+{
+  "id": "PR-0114",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "as entrevistas com produtores comprovam a existência da cajuína pelo menos desde a década de 1920",
+  "periodo": {
+    "referido": "década de 1920 em diante"
+  },
+  "evidencias": [
+    "EV-0142"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

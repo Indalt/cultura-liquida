@@ -1,0 +1,20 @@
+{
+  "id": "PR-0148",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "unidades ligadas às elites convivem com outras surgidas dos cursos do Sebrae nos anos 2000; todas se dizem tradicionais e artesanais",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0177"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

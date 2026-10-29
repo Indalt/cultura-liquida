@@ -1,0 +1,20 @@
+{
+  "id": "PR-0135",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "as senhoras foram descobrindo, com a experiência, o ponto certo de encher as garrafas",
+  "periodo": {
+    "referido": "até 2014"
+  },
+  "evidencias": [
+    "EV-0163"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

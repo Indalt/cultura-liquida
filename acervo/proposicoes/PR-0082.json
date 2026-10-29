@@ -1,0 +1,20 @@
+{
+  "id": "PR-0082",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "o imaginário popular atribui à cajuína ancestralidade muito mais remota do que a antiguidade comprovada: algo que sempre se fez, feito há muitos séculos na região",
+  "periodo": {
+    "referido": "2014"
+  },
+  "evidencias": [
+    "EV-0108"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "EV-0148",
+  "trecho": "TR-0148",
+  "proposicao": "PR-0120",
+  "sentido": "a favor",
+  "voz": {
+    "tipo": "instituição",
+    "papel": "parecer técnico do IPHAN"
+  },
+  "lugares": {
+    "pratica": "LU-0023",
+    "publicacao": "LU-0004",
+    "pesquisa": "LU-0025"
+  },
+  "estado": "não conferida",
+  "sustenta_aviso_saude_politica": true,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

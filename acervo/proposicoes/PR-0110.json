@@ -1,0 +1,20 @@
+{
+  "id": "PR-0110",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "uma pessoa é reconhecida no Ceará como inventora da cajuína: na última década do século XIX aplicou a técnica de Appert (pasteurização em banho-maria) à bebida produzida na região",
+  "periodo": {
+    "referido": "década de 1890"
+  },
+  "evidencias": [
+    "EV-0138"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

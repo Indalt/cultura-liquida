@@ -1,0 +1,20 @@
+{
+  "id": "PR-0111",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "a memória coletiva piauiense aponta a cajuína como costume que sempre existiu na região, desde tempos imemoriais",
+  "periodo": {
+    "referido": "2014"
+  },
+  "evidencias": [
+    "EV-0139"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

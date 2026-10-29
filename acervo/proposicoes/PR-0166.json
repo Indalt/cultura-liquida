@@ -1,0 +1,20 @@
+{
+  "id": "PR-0166",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "a divulgação da cajuína por uma canção fez do Piauí o patenteador da bebida",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0195"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

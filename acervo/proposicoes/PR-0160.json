@@ -1,0 +1,20 @@
+{
+  "id": "PR-0160",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "o que não muda são os elementos estruturantes: moagem do caju para separar suco e bagaço, clarificação do suco (o corte) e banho-maria do suco clarificado",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0189"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

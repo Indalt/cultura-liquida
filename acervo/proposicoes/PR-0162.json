@@ -1,0 +1,20 @@
+{
+  "id": "PR-0162",
+  "clb": "CL-0001",
+  "atributo": "lugar",
+  "valor": "o questionário on-line ampliou a geografia da produção a municípios como Geminiano, Pio IX, Santo Antônio de Lisboa, Ipiranga do Piauí, Campo Maior e Timon (já no Maranhão)",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0191"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

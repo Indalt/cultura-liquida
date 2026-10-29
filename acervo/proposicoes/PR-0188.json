@@ -1,0 +1,20 @@
+{
+  "id": "PR-0188",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "a cajuína de um grupo de assentamento é vendida a parceiros de movimentos sociais no Piauí, Bahia e Minas Gerais",
+  "periodo": {
+    "referido": "2024"
+  },
+  "evidencias": [
+    "EV-0217"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

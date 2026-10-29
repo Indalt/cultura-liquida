@@ -1,0 +1,20 @@
+{
+  "id": "PR-0192",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "produtores e poder público concordam que a assistência técnica é insuficiente e que as mudas chegam tarde, já na época das chuvas",
+  "periodo": {
+    "referido": "2022-2024"
+  },
+  "evidencias": [
+    "EV-0221"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

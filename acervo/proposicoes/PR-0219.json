@@ -1,0 +1,20 @@
+{
+  "id": "PR-0219",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "uma das recomendações é estimular a troca de experiência por oficinas em que os próprios produtores tradicionais sejam os instrutores",
+  "periodo": {
+    "referido": "2024"
+  },
+  "evidencias": [
+    "EV-0250"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}

@@ -1,0 +1,3086 @@
+{
+ "lote": "K110-A2",
+ "entradas": [
+  {
+   "entrada": "EN-1726",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": true,
+   "motivo_marca": "Marcadas: a nota da gelatina contra a cola de sapateiro tóxica (saúde); o decreto estadual, a merenda escolar, os cursos e métodos do SEBRAE, a indicação geográfica, a padronização, o risco de perda de variedades e a salvaguarda (política).",
+   "fonte": {
+    "titulo": "Parecer nº 28/2014 do DPI/Iphan, parecer técnico de registro da Produção tradicional e práticas socioculturais associadas à cajuína no Piauí",
+    "tipo_documento": "parecer técnico",
+    "ano": 2014,
+    "instituicao": "Iphan, Departamento do Patrimônio Imaterial (DPI)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "instituição (perspectiva institucional do registro, apoiada em dossiê, pesquisa e entrevistas)",
+    "deriva_de": "Dossiê Descritivo de 2009 a 2011 e produtos da instrução técnica do processo nº 01450.14375/2008-87; entrevistas de campo (segundo o parecer)"
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-1.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|Decreto estadual nº 13.068, de 15/05/2008, declarou de relevante interesse cultural o modo de fazer tradicional da cajuína e o incluiu no patrimônio cultural imaterial do Piauí",
+     "atributo": "reconhecimento",
+     "valor": "Decreto estadual nº 13.068, de 15/05/2008, declarou de relevante interesse cultural o modo de fazer tradicional da cajuína e o incluiu no patrimônio cultural imaterial do Piauí",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-2.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|cajuína declarada bebida oficial do Piauí, a ser servida em reuniões de governo, solenidades oficiais no palácio e celebrações",
+     "atributo": "uso e consumo",
+     "valor": "cajuína declarada bebida oficial do Piauí, a ser servida em reuniões de governo, solenidades oficiais no palácio e celebrações",
+     "periodo_referido": "2008-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-3.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|decreto estadual regulamenta a compra de cajuína para a merenda escolar, classificada pelo Ministério da Agricultura como alimento de grande potencial nutritivo",
+     "atributo": "uso e consumo",
+     "valor": "decreto estadual regulamenta a compra de cajuína para a merenda escolar, classificada pelo Ministério da Agricultura como alimento de grande potencial nutritivo",
+     "periodo_referido": "2008-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-4.json",
+     "estado_trecho": "localizado",
+     "chave": "época|modo de fazer da cajuína com antiguidade comprovada com segurança de mais de oitenta anos",
+     "atributo": "época",
+     "valor": "modo de fazer da cajuína com antiguidade comprovada com segurança de mais de oitenta anos",
+     "periodo_referido": "até 2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-5.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|o imaginário popular atribui à cajuína ancestralidade muito mais remota do que a antiguidade comprovada: algo que sempre se fez, feito há muitos séculos na região",
+     "atributo": "significados",
+     "valor": "o imaginário popular atribui à cajuína ancestralidade muito mais remota do que a antiguidade comprovada: algo que sempre se fez, feito há muitos séculos na região",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-6.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína representa a hospitalidade doméstica e incorpora aspectos da hospitalidade pública, que agrega valor ao turismo",
+     "atributo": "significados",
+     "valor": "a cajuína representa a hospitalidade doméstica e incorpora aspectos da hospitalidade pública, que agrega valor ao turismo",
+     "periodo_referido": "2008-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-7.json",
+     "estado_trecho": "localizado",
+     "chave": "época|a cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste na época do descobrimento do Brasil",
+     "atributo": "época",
+     "valor": "a cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste na época do descobrimento do Brasil",
+     "periodo_referido": "2009-2010",
+     "sentido": "divergente",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-8.json",
+     "estado_trecho": "localizado",
+     "chave": "época|a cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste na época do descobrimento do Brasil",
+     "atributo": "época",
+     "valor": "a cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste na época do descobrimento do Brasil",
+     "periodo_referido": "2009-2010",
+     "sentido": "divergente",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-9.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína é emblema da mudança e do distanciamento dos contextos e modos de vida anteriores, da rusticidade para a modernidade controlada",
+     "atributo": "significados",
+     "valor": "a cajuína é emblema da mudança e do distanciamento dos contextos e modos de vida anteriores, da rusticidade para a modernidade controlada",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-10.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|cada núcleo produtor desenvolveu técnicas específicas que diferenciam seu produto dos demais",
+     "atributo": "processo e modo de fazer",
+     "valor": "cada núcleo produtor desenvolveu técnicas específicas que diferenciam seu produto dos demais",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-11.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|os frutos só podem ser lavados na própria água do caju, não em água natural",
+     "atributo": "processo e modo de fazer",
+     "valor": "os frutos só podem ser lavados na própria água do caju, não em água natural",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-12.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|bacias recebem os frutos na colheita e no descaroçamento, e o caldo transparente que escorre da casca é a água de lavagem",
+     "atributo": "recipiente",
+     "valor": "bacias recebem os frutos na colheita e no descaroçamento, e o caldo transparente que escorre da casca é a água de lavagem",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-13.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|esmagamento: do caju rasgado e espremido com a mão aos moinhos",
+     "atributo": "utensílio",
+     "valor": "esmagamento: do caju rasgado e espremido com a mão aos moinhos",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-14.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|moinhos de diversos tipos, alguns adaptados de outros usos (carne, café), outros modernos",
+     "atributo": "utensílio",
+     "valor": "moinhos de diversos tipos, alguns adaptados de outros usos (carne, café), outros modernos",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-15.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|produtores desenvolvem engenhocas próprias para inovar e otimizar a produção",
+     "atributo": "utensílio",
+     "valor": "produtores desenvolvem engenhocas próprias para inovar e otimizar a produção",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-16.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|quando suco e massa saem juntos do moinho, a massa é posta em sacos e espremida em prensas, para obter o máximo de suco",
+     "atributo": "utensílio",
+     "valor": "quando suco e massa saem juntos do moinho, a massa é posta em sacos e espremida em prensas, para obter o máximo de suco",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-17.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o corte do suco é o ponto crucial da produção, com segredos e um saber específico aprimorado ao longo dos anos",
+     "atributo": "processo e modo de fazer",
+     "valor": "o corte do suco é o ponto crucial da produção, com segredos e um saber específico aprimorado ao longo dos anos",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-18.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|no corte, o tanino do caju precipita e flocula, deixando uma fase sobrenadante incolor e outra decantada amarela",
+     "atributo": "processo e modo de fazer",
+     "valor": "no corte, o tanino do caju precipita e flocula, deixando uma fase sobrenadante incolor e outra decantada amarela",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-19.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|a gelatina em pó, do colágeno da pele bovina, não é considerada tóxica como a cola de sapateiro que ela substituiu no corte",
+     "atributo": "insumo",
+     "valor": "a gelatina em pó, do colágeno da pele bovina, não é considerada tóxica como a cola de sapateiro que ela substituiu no corte",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-20.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|a filtragem se origina da rendinha da farinhada: pano de saco de açúcar em forma de rede de dormir, de cerca de 50 cm, amarrado entre dois paus ou árvores, com uma vasilha embaixo",
+     "atributo": "utensílio",
+     "valor": "a filtragem se origina da rendinha da farinhada: pano de saco de açúcar em forma de rede de dormir, de cerca de 50 cm, amarrado entre dois paus ou árvores, com uma vasilha embaixo",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-21.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|os filtros evoluíram de sacos de açúcar para sacos de brim e depois de feltro, e as redes viraram funis amarrados uns dentro dos outros",
+     "atributo": "utensílio",
+     "valor": "os filtros evoluíram de sacos de açúcar para sacos de brim e depois de feltro, e as redes viraram funis amarrados uns dentro dos outros",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-22.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o número de vezes que o suco cortado passa pelos filtros varia de casa em casa",
+     "atributo": "processo e modo de fazer",
+     "valor": "o número de vezes que o suco cortado passa pelos filtros varia de casa em casa",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-23.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|as mulheres são as principais detentoras do saber de filtrar e de cortar",
+     "atributo": "transmissão",
+     "valor": "as mulheres são as principais detentoras do saber de filtrar e de cortar",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-24.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a camada de massa de tanino que se junta no filtro é o verdadeiro agente de filtração e o segredo da cajuína; por isso a boa cortação é vital",
+     "atributo": "processo e modo de fazer",
+     "valor": "a camada de massa de tanino que se junta no filtro é o verdadeiro agente de filtração e o segredo da cajuína; por isso a boa cortação é vital",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-25.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|o suco filtrado é envasado em garrafas de vidro, tampadas de preferência com tampinhas de metal; rolhas de cortiça já não são consideradas ideais",
+     "atributo": "recipiente",
+     "valor": "o suco filtrado é envasado em garrafas de vidro, tampadas de preferência com tampinhas de metal; rolhas de cortiça já não são consideradas ideais",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-26.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|garrafas escuras de cerveja, e também de cachaça industrializada, foram as primeiras usadas no envase",
+     "atributo": "recipiente",
+     "valor": "garrafas escuras de cerveja, e também de cachaça industrializada, foram as primeiras usadas no envase",
+     "periodo_referido": "até 2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-27.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|o acesso a garrafas de vidro é um dos principais gargalos da produção de cajuína em grande quantidade",
+     "atributo": "recipiente",
+     "valor": "o acesso a garrafas de vidro é um dos principais gargalos da produção de cajuína em grande quantidade",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-28.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o cozimento das garrafas em banho-maria varia de 30 minutos a duas horas entre os produtores",
+     "atributo": "processo e modo de fazer",
+     "valor": "o cozimento das garrafas em banho-maria varia de 30 minutos a duas horas entre os produtores",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-29.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|quanto mais tempo as garrafas cozinham em banho-maria, mais o açúcar do caju carameliza e mais escura fica a cajuína, de amarelo âmbar",
+     "atributo": "processo e modo de fazer",
+     "valor": "quanto mais tempo as garrafas cozinham em banho-maria, mais o açúcar do caju carameliza e mais escura fica a cajuína, de amarelo âmbar",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-30.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|o mapeamento de 2008-2009 encontrou 120 unidades de produção de cajuína no Piauí",
+     "atributo": "lugar",
+     "valor": "o mapeamento de 2008-2009 encontrou 120 unidades de produção de cajuína no Piauí",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-31.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|entre as 120 unidades de produção mapeadas no Piauí, Teresina tinha 36, Pau D'Arco 15, Amarante 11, Picos 10 e Monsenhor Gil 9",
+     "atributo": "lugar",
+     "valor": "entre as 120 unidades de produção mapeadas no Piauí, Teresina tinha 36, Pau D'Arco 15, Amarante 11, Picos 10 e Monsenhor Gil 9",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-32.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína foi alçada a elemento de distinção de uma elite local e, décadas depois, por ressignificação, a símbolo do Piauí",
+     "atributo": "significados",
+     "valor": "a cajuína foi alçada a elemento de distinção de uma elite local e, décadas depois, por ressignificação, a símbolo do Piauí",
+     "periodo_referido": "séculos XIX e XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-33.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína integra rituais de hospitalidade e é emblema de distinção pelas qualidades de pureza, limpeza, transparência, cristalinidade, beleza da cor e doçura",
+     "atributo": "significados",
+     "valor": "a cajuína integra rituais de hospitalidade e é emblema de distinção pelas qualidades de pureza, limpeza, transparência, cristalinidade, beleza da cor e doçura",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-34.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|a cajuína era dada de presente às visitas, em especial aos filhos da terra que retornavam à casa depois de longos períodos fora do estado",
+     "atributo": "uso e consumo",
+     "valor": "a cajuína era dada de presente às visitas, em especial aos filhos da terra que retornavam à casa depois de longos períodos fora do estado",
+     "periodo_referido": "séculos XIX e XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-35.json",
+     "estado_trecho": "localizado",
+     "chave": "época|uma pessoa é reconhecida no Ceará como inventora da cajuína: na última década do século XIX aplicou a técnica de Appert (pasteurização em banho-maria) à bebida produzida na região",
+     "atributo": "época",
+     "valor": "uma pessoa é reconhecida no Ceará como inventora da cajuína: na última década do século XIX aplicou a técnica de Appert (pasteurização em banho-maria) à bebida produzida na região",
+     "periodo_referido": "década de 1890",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Ceará (CE)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-36.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a memória coletiva piauiense aponta a cajuína como costume que sempre existiu na região, desde tempos imemoriais",
+     "atributo": "significados",
+     "valor": "a memória coletiva piauiense aponta a cajuína como costume que sempre existiu na região, desde tempos imemoriais",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-37.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|técnica de fabricação da cajuína mais simplificada no Piauí do que no Ceará, onde a produção é abundante; produção também no Maranhão",
+     "atributo": "lugar",
+     "valor": "técnica de fabricação da cajuína mais simplificada no Piauí do que no Ceará, onde a produção é abundante; produção também no Maranhão",
+     "periodo_referido": "2008-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-38.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|relato de que a produção no Rio Grande do Norte é muito diferente, não clarificada, mais parecida com o vinho de caju",
+     "atributo": "lugar",
+     "valor": "relato de que a produção no Rio Grande do Norte é muito diferente, não clarificada, mais parecida com o vinho de caju",
+     "periodo_referido": "2008-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Rio Grande do Norte (RN)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-39.json",
+     "estado_trecho": "localizado",
+     "chave": "época|as entrevistas com produtores comprovam a existência da cajuína pelo menos desde a década de 1920",
+     "atributo": "época",
+     "valor": "as entrevistas com produtores comprovam a existência da cajuína pelo menos desde a década de 1920",
+     "periodo_referido": "década de 1920 em diante",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-40.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|quanto mais a cajuína é reconhecida fora como produto do Piauí, mais ela significa a identidade local entre os próprios piauienses",
+     "atributo": "significados",
+     "valor": "quanto mais a cajuína é reconhecida fora como produto do Piauí, mais ela significa a identidade local entre os próprios piauienses",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-41.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|os cursos do SEBRAE ensinam a acelerar a filtragem, o que contradiz a forma tradicional, que se esmera na filtragem, às vezes de muitas horas",
+     "atributo": "mudança",
+     "valor": "os cursos do SEBRAE ensinam a acelerar a filtragem, o que contradiz a forma tradicional, que se esmera na filtragem, às vezes de muitas horas",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-42.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|químicos contratados pelo SEBRAE indicaram 40 minutos como tempo ideal de cozimento em banho-maria, para preservar as vitaminas e pasteurizar",
+     "atributo": "processo e modo de fazer",
+     "valor": "químicos contratados pelo SEBRAE indicaram 40 minutos como tempo ideal de cozimento em banho-maria, para preservar as vitaminas e pasteurizar",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-43.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a pasteurização no banho-maria elimina a flora microbiana do suco e evita a fermentação",
+     "atributo": "processo e modo de fazer",
+     "valor": "a pasteurização no banho-maria elimina a flora microbiana do suco e evita a fermentação",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-44.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|nas décadas de 1950 e 1960 a produção artesanal ganha inserção no mercado, sem perder o lugar no cotidiano familiar e o valor de reciprocidade",
+     "atributo": "mudança",
+     "valor": "nas décadas de 1950 e 1960 a produção artesanal ganha inserção no mercado, sem perder o lugar no cotidiano familiar e o valor de reciprocidade",
+     "periodo_referido": "décadas de 1950 e 1960",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-45.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|SEBRAE e EMATER distribuíram kits de produção e dão cursos a assentados e pequenos produtores, o que multiplicou os produtores",
+     "atributo": "transmissão",
+     "valor": "SEBRAE e EMATER distribuíram kits de produção e dão cursos a assentados e pequenos produtores, o que multiplicou os produtores",
+     "periodo_referido": "2000-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-46.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|persiste a transmissão tradicional, informal, de conhecedores da técnica para empregados, amigos e aparentados, nas moradias e fazendas",
+     "atributo": "transmissão",
+     "valor": "persiste a transmissão tradicional, informal, de conhecedores da técnica para empregados, amigos e aparentados, nas moradias e fazendas",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-47.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|entre os produtores há empregados que fabricam para o patrão ou fazem sua cota própria, e ex-empregados que adquiriram terra e produzem de forma independente, tendo aprendido com os patrões",
+     "atributo": "transmissão",
+     "valor": "entre os produtores há empregados que fabricam para o patrão ou fazem sua cota própria, e ex-empregados que adquiriram terra e produzem de forma independente, tendo aprendido com os patrões",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-48.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|o parecer lista onze categorias de produtores; as primeiras são senhoras de antigas famílias proprietárias de terra e de famílias de sítios, no interior ou em Teresina",
+     "atributo": "transmissão",
+     "valor": "o parecer lista onze categorias de produtores; as primeiras são senhoras de antigas famílias proprietárias de terra e de famílias de sítios, no interior ou em Teresina",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-49.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o modo tradicional admite muita criatividade e inovação, mesmo entre os produtores mais antigos",
+     "atributo": "processo e modo de fazer",
+     "valor": "o modo tradicional admite muita criatividade e inovação, mesmo entre os produtores mais antigos",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-50.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|uma boa cajuína é cristalina, pura, límpida, doce e saborosa; os principais valores são pureza e cristalinidade",
+     "atributo": "significados",
+     "valor": "uma boa cajuína é cristalina, pura, límpida, doce e saborosa; os principais valores são pureza e cristalinidade",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-51.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|o encantamento do processo está em transformar o suco leitoso do caju em líquido cristalino",
+     "atributo": "significados",
+     "valor": "o encantamento do processo está em transformar o suco leitoso do caju em líquido cristalino",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-52.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a interdição da água evita que a cajuína tolde (fique opaca) ou pode (forme fungo no fundo da garrafa)",
+     "atributo": "processo e modo de fazer",
+     "valor": "a interdição da água evita que a cajuína tolde (fique opaca) ou pode (forme fungo no fundo da garrafa)",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-53.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o corte pode falhar com pessoas não familiares ou estranhas ao processo, ou com estado de espírito desfavorável (zangadas, chateadas)",
+     "atributo": "processo e modo de fazer",
+     "valor": "o corte pode falhar com pessoas não familiares ou estranhas ao processo, ou com estado de espírito desfavorável (zangadas, chateadas)",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-54.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o corte define o limite entre a cajuína e o vinho de caju",
+     "atributo": "processo e modo de fazer",
+     "valor": "o corte define o limite entre a cajuína e o vinho de caju",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-55.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|para alguns produtores, o suco clarificado depois de cortado não é água de caju, mas mocororó, que dura só mais um dia na geladeira",
+     "atributo": "nomes e variantes",
+     "valor": "para alguns produtores, o suco clarificado depois de cortado não é água de caju, mas mocororó, que dura só mais um dia na geladeira",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-56.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o suco cortado, se fermenta vira vinho de caju; se vai ao banho-maria vira cajuína amarelada e caramelizada, que se armazena por cerca de dois anos",
+     "atributo": "processo e modo de fazer",
+     "valor": "o suco cortado, se fermenta vira vinho de caju; se vai ao banho-maria vira cajuína amarelada e caramelizada, que se armazena por cerca de dois anos",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-57.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|garrafas estouravam no cozimento em banho-maria, com prejuízo de um dia de trabalho, mais no passado que hoje",
+     "atributo": "recipiente",
+     "valor": "garrafas estouravam no cozimento em banho-maria, com prejuízo de um dia de trabalho, mais no passado que hoje",
+     "periodo_referido": "até 2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-58.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|cestos de suporte ou forro de estopa no recipiente do banho-maria evitam que as garrafas quebrem",
+     "atributo": "recipiente",
+     "valor": "cestos de suporte ou forro de estopa no recipiente do banho-maria evitam que as garrafas quebrem",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-59.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|as garrafas eram fervidas em latas de querosene, depois em tonéis de ferro cortados ao meio, e por fim em banheiras de esmalte ou caixas de ferro",
+     "atributo": "recipiente",
+     "valor": "as garrafas eram fervidas em latas de querosene, depois em tonéis de ferro cortados ao meio, e por fim em banheiras de esmalte ou caixas de ferro",
+     "periodo_referido": "até 2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-60.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|as senhoras foram descobrindo, com a experiência, o ponto certo de encher as garrafas",
+     "atributo": "transmissão",
+     "valor": "as senhoras foram descobrindo, com a experiência, o ponto certo de encher as garrafas",
+     "periodo_referido": "até 2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-61.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|os produtores mais antigos se orgulham dos inventos e engenhocas de sua unidade; a capacidade criativa faz parte da tradição",
+     "atributo": "processo e modo de fazer",
+     "valor": "os produtores mais antigos se orgulham dos inventos e engenhocas de sua unidade; a capacidade criativa faz parte da tradição",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-62.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|produtores piauienses rejeitaram o nome Crush Cajuína para refrigerante de caju industrializado, gaseificado e de outro sabor",
+     "atributo": "nomes e variantes",
+     "valor": "produtores piauienses rejeitaram o nome Crush Cajuína para refrigerante de caju industrializado, gaseificado e de outro sabor",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-63.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|padronização do modo de fazer e do sabor e entrada de grandes empresas ameaçam a pequena produção familiar",
+     "atributo": "risco",
+     "valor": "padronização do modo de fazer e do sabor e entrada de grandes empresas ameaçam a pequena produção familiar",
+     "periodo_referido": "2008-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-64.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|a padronização exigida pelo mercado externo interfere nas condições básicas da produção tradicional",
+     "atributo": "risco",
+     "valor": "a padronização exigida pelo mercado externo interfere nas condições básicas da produção tradicional",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-65.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|critérios de asseio dos produtores: lavar e secar os filtros, pô-los ao sol para quarar, lavar as garrafas e limpar moinhos e prensas a cada dia",
+     "atributo": "processo e modo de fazer",
+     "valor": "critérios de asseio dos produtores: lavar e secar os filtros, pô-los ao sol para quarar, lavar as garrafas e limpar moinhos e prensas a cada dia",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-66.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|interdição de contato do caju com a água natural durante o processo, para a cajuína não ficar opaca",
+     "atributo": "processo e modo de fazer",
+     "valor": "interdição de contato do caju com a água natural durante o processo, para a cajuína não ficar opaca",
+     "periodo_referido": "2009-2014",
+     "sentido": "divergente",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-67.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|cada unidade de produção tem seu próprio padrão de cajuína, comentado na degustação, o que forma o pertencimento local",
+     "atributo": "significados",
+     "valor": "cada unidade de produção tem seu próprio padrão de cajuína, comentado na degustação, o que forma o pertencimento local",
+     "periodo_referido": "2009-2010",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-68.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|para o produtor tradicional o caju ideal é o mais doce, evitando-se o caju clonado; os novos atores preferem o clonado",
+     "atributo": "insumo",
+     "valor": "para o produtor tradicional o caju ideal é o mais doce, evitando-se o caju clonado; os novos atores preferem o clonado",
+     "periodo_referido": "2009-2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-69.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|a intervenção institucional pode levar à perda das variedades de cajuína e das práticas de degustação e comparação",
+     "atributo": "risco",
+     "valor": "a intervenção institucional pode levar à perda das variedades de cajuína e das práticas de degustação e comparação",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-70.json",
+     "estado_trecho": "localizado",
+     "chave": "salvaguarda|a salvaguarda busca fortalecer as condições tradicionais de produção, que mantêm os valores referenciais do bem",
+     "atributo": "salvaguarda",
+     "valor": "a salvaguarda busca fortalecer as condições tradicionais de produção, que mantêm os valores referenciais do bem",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-71.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|as práticas associadas incluem produção e consumo em contextos festivos, rituais, de comemoração e hospitalidade, que reiteram coletividade e pertencimento",
+     "atributo": "significados",
+     "valor": "as práticas associadas incluem produção e consumo em contextos festivos, rituais, de comemoração e hospitalidade, que reiteram coletividade e pertencimento",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1726-a2-72.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|o parecer propõe nomear o bem como produção tradicional, no lugar de artesanal, termo da solicitação original",
+     "atributo": "nomes e variantes",
+     "valor": "o parecer propõe nomear o bem como produção tradicional, no lugar de artesanal, termo da solicitação original",
+     "periodo_referido": "2014",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Brasília, DF",
+      "pesquisa": "Piauí (PI), com pesquisa de campo em 2008-2010 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Páginas 2-4, 6, 11-15, 20-38 lidas aqui. Sem Evidência: p. 2 (índice de anexos), p. 3-4 e 6 (histórico do processo e método da pesquisa), p. 11-14 e 22 (formação da sociedade piauiense, de Teresina e da população indígena: contexto histórico, não a prática); da p. 15 e 20 só os trechos sobre hospitalidade, década de 1920 e retroalimentação identitária. Páginas 1, 5, 7, 9-10, 16-19, 39 e 40 não foram relidas aqui (lidas no lote A1, p. 40 quase vazia).",
+    "Das categorias de produtores (p. 30) entraram só as que mostram transmissão (1 a 3 e 6 a 8); as de aposentados, técnicos e universidade (4, 5, 10, 11) ficaram fora. O texto da p. 33 termina cortado por OCR ('Dentro dessas se inserem').",
+    "A valência de voz subiu a 1 pela fala de V01 gravada no A1; este lote não traz fala direta de quem pratica em EN-1726.",
+    "Menções incidentais a outras CLB: mocororó (bebida etílica dos Tremembé), vinho de caju, a produção não clarificada do Rio Grande do Norte, o refrigerante Crush Cajuína.",
+    "Trechos não localizados pelo script: 0 de 72."
+   ]
+  },
+  {
+   "entrada": "EN-1727",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": true,
+   "motivo_marca": "Marcadas: a afirmação de cajuína saudável e a gelatina como produto saudável (saúde); a Instrução Normativa SDA nº 37/2018, o SISBI, a fiscalização e a clandestinidade, a merenda escolar, os kits do governo, a assistência técnica e a salvaguarda (política).",
+   "fonte": {
+    "titulo": "Parecer Técnico nº 57/2024/DIVTEC IPHAN-PI, reavaliação da Produção Artesanal e Práticas socioculturais associadas à Cajuína no Piauí com vistas à revalidação do título",
+    "tipo_documento": "parecer técnico de revalidação",
+    "ano": 2024,
+    "instituicao": "Iphan, Divisão Técnica da Superintendência no Piauí (IPHAN-PI)",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "instituição (perspectiva institucional da revalidação, com trabalho de campo e falas de produtores)",
+    "deriva_de": "visitas técnicas a cerca de dez unidades de produção em 2022-2023, questionário on-line, reuniões e depoimentos de produtores (segundo o parecer)"
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-1.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|produz-se cajuína de modo tradicional ou artesanal em todo o estado do Piauí",
+     "atributo": "lugar",
+     "valor": "produz-se cajuína de modo tradicional ou artesanal em todo o estado do Piauí",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-2.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|unidades ligadas às elites convivem com outras surgidas dos cursos do Sebrae nos anos 2000; todas se dizem tradicionais e artesanais",
+     "atributo": "transmissão",
+     "valor": "unidades ligadas às elites convivem com outras surgidas dos cursos do Sebrae nos anos 2000; todas se dizem tradicionais e artesanais",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-3.json",
+     "estado_trecho": "localizado",
+     "chave": "salvaguarda|a primeira ação efetiva de salvaguarda foi o I Fórum Estadual para a Salvaguarda da Cajuína, em 10 e 11 de dezembro de 2015",
+     "atributo": "salvaguarda",
+     "valor": "a primeira ação efetiva de salvaguarda foi o I Fórum Estadual para a Salvaguarda da Cajuína, em 10 e 11 de dezembro de 2015",
+     "periodo_referido": "2015",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-4.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|a expansão do mercado do caju alcança outros derivados, como a cajuaça e o licor de caju",
+     "atributo": "uso e consumo",
+     "valor": "a expansão do mercado do caju alcança outros derivados, como a cajuaça e o licor de caju",
+     "periodo_referido": "2022",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-5.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|o Festival da Cajuína de junho de 2024 foi o momento de pactuação entre entidades governamentais e detentores pela continuidade do bem",
+     "atributo": "reconhecimento",
+     "valor": "o Festival da Cajuína de junho de 2024 foi o momento de pactuação entre entidades governamentais e detentores pela continuidade do bem",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-6.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|os produtores formam muitos núcleos que não dialogam entre si e têm reivindicações dispares, o que fragiliza a representação",
+     "atributo": "risco",
+     "valor": "os produtores formam muitos núcleos que não dialogam entre si e têm reivindicações dispares, o que fragiliza a representação",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-7.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|Sebrae e Senar, segundo os detentores, oferecem capacitações que reciclam produtores antigos e introduzem novos sujeitos na prática",
+     "atributo": "transmissão",
+     "valor": "Sebrae e Senar, segundo os detentores, oferecem capacitações que reciclam produtores antigos e introduzem novos sujeitos na prática",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-8.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|produtores veem respeito dos técnicos pelo saber tradicional; a queixa maior é a descontinuidade dos cursos e das trocas de experiência",
+     "atributo": "transmissão",
+     "valor": "produtores veem respeito dos técnicos pelo saber tradicional; a queixa maior é a descontinuidade dos cursos e das trocas de experiência",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-9.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|a Cajuespi estima cerca de 3.000 produtores de cajuína no Piauí, formais e informais, número bem acima do dossiê de 2014",
+     "atributo": "lugar",
+     "valor": "a Cajuespi estima cerca de 3.000 produtores de cajuína no Piauí, formais e informais, número bem acima do dossiê de 2014",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-10.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|kits distribuídos pelo governo estadual a cerca de 120 produtores continham moinho de caju em inox e máquina capsuladora, entre outros itens",
+     "atributo": "utensílio",
+     "valor": "kits distribuídos pelo governo estadual a cerca de 120 produtores continham moinho de caju em inox e máquina capsuladora, entre outros itens",
+     "periodo_referido": "2023-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-11.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|os rótulos das cajuínas geralmente trazem o nome das localidades e das famílias produtoras",
+     "atributo": "recipiente",
+     "valor": "os rótulos das cajuínas geralmente trazem o nome das localidades e das famílias produtoras",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-12.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|Piracuruca, Cocal de Telha, Picos, Pio IX e Santo Antônio de Lisboa, fora do dossiê de 2014, hoje entram na cartografia institucional da produção",
+     "atributo": "lugar",
+     "valor": "Piracuruca, Cocal de Telha, Picos, Pio IX e Santo Antônio de Lisboa, fora do dossiê de 2014, hoje entram na cartografia institucional da produção",
+     "periodo_referido": "2014-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-13.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|produtores improvisam maquinários e reciclam garrafas de cerveja como receptáculos de cajuína",
+     "atributo": "recipiente",
+     "valor": "produtores improvisam maquinários e reciclam garrafas de cerveja como receptáculos de cajuína",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-14.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o que não muda são os elementos estruturantes: moagem do caju para separar suco e bagaço, clarificação do suco (o corte) e banho-maria do suco clarificado",
+     "atributo": "processo e modo de fazer",
+     "valor": "o que não muda são os elementos estruturantes: moagem do caju para separar suco e bagaço, clarificação do suco (o corte) e banho-maria do suco clarificado",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-15.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a produção envolve colheita coletiva e festiva do caju e refeições compartilhadas durante o preparo do suco",
+     "atributo": "significados",
+     "valor": "a produção envolve colheita coletiva e festiva do caju e refeições compartilhadas durante o preparo do suco",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-16.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|o questionário on-line ampliou a geografia da produção a municípios como Geminiano, Pio IX, Santo Antônio de Lisboa, Ipiranga do Piauí, Campo Maior e Timon (já no Maranhão)",
+     "atributo": "lugar",
+     "valor": "o questionário on-line ampliou a geografia da produção a municípios como Geminiano, Pio IX, Santo Antônio de Lisboa, Ipiranga do Piauí, Campo Maior e Timon (já no Maranhão)",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-17.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|os produtores reconhecem a cajuína como patrimônio por ser algo próprio do Piauí, que os representa",
+     "atributo": "reconhecimento",
+     "valor": "os produtores reconhecem a cajuína como patrimônio por ser algo próprio do Piauí, que os representa",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "comunidade, coletivo ou sujeito de direitos"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-18.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|a patrimonialização deu mais valor ao produto",
+     "atributo": "reconhecimento",
+     "valor": "a patrimonialização deu mais valor ao produto",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V07"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-19.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|após a patrimonialização houve aumento do consumo e a cajuína ficou mais conhecida",
+     "atributo": "reconhecimento",
+     "valor": "após a patrimonialização houve aumento do consumo e a cajuína ficou mais conhecida",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V08"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-20.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|a divulgação da cajuína por uma canção fez do Piauí o patenteador da bebida",
+     "atributo": "reconhecimento",
+     "valor": "a divulgação da cajuína por uma canção fez do Piauí o patenteador da bebida",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V09"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-21.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|há clientes que não compram cajuína que não siga os requisitos patrimoniais",
+     "atributo": "reconhecimento",
+     "valor": "há clientes que não compram cajuína que não siga os requisitos patrimoniais",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V10"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-22.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|fábrica diz fazer cajuína nos moldes antigos: extrai o líquido do caju maduro, aquece em alta temperatura e engarrafa de forma artesanal",
+     "atributo": "processo e modo de fazer",
+     "valor": "fábrica diz fazer cajuína nos moldes antigos: extrai o líquido do caju maduro, aquece em alta temperatura e engarrafa de forma artesanal",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V11"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-23.json",
+     "estado_trecho": "localizado",
+     "chave": "época|a produção de cajuína ocorre de agosto a outubro, na safra do caju",
+     "atributo": "época",
+     "valor": "a produção de cajuína ocorre de agosto a outubro, na safra do caju",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-24.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a produtora afirma que só ela dá o corte do suco na sua unidade",
+     "atributo": "processo e modo de fazer",
+     "valor": "a produtora afirma que só ela dá o corte do suco na sua unidade",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V02"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-25.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|parte dos produtores diz que sua produção é tradição familiar, que remete a irmã, mãe, avó ou tia",
+     "atributo": "transmissão",
+     "valor": "parte dos produtores diz que sua produção é tradição familiar, que remete a irmã, mãe, avó ou tia",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-26.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|produz-se cajuína para manter a memória de matriarcas, ajudar a sobrevivência de famílias assentadas, consumir em festas e vender a vizinhos",
+     "atributo": "significados",
+     "valor": "produz-se cajuína para manter a memória de matriarcas, ajudar a sobrevivência de famílias assentadas, consumir em festas e vender a vizinhos",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-27.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|garrafas pet em cabos de vassoura colhem cajus; baldes separam caju e castanha; moinhos manuais e elétricos; funis de pano enfileirados clarificam o suco; tachos de cobre a lenha servem ao banho-maria",
+     "atributo": "utensílio",
+     "valor": "garrafas pet em cabos de vassoura colhem cajus; baldes separam caju e castanha; moinhos manuais e elétricos; funis de pano enfileirados clarificam o suco; tachos de cobre a lenha servem ao banho-maria",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-28.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|o vidro é o recipiente ideal, pois a garrafa de plástico não vai ao banho-maria",
+     "atributo": "recipiente",
+     "valor": "o vidro é o recipiente ideal, pois a garrafa de plástico não vai ao banho-maria",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-29.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|as garrafas de vidro vêm em sua maior parte de uma única fábrica de Recife e são difíceis de obter a preço justo",
+     "atributo": "recipiente",
+     "valor": "as garrafas de vidro vêm em sua maior parte de uma única fábrica de Recife e são difíceis de obter a preço justo",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-30.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|sem poder comprar garrafas, os produtores catam, limpam e reutilizam garrafas para novas cajuínas",
+     "atributo": "recipiente",
+     "valor": "sem poder comprar garrafas, os produtores catam, limpam e reutilizam garrafas para novas cajuínas",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-31.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|cada unidade faz seu próprio rótulo, que representa a identidade do núcleo social a que se vincula",
+     "atributo": "recipiente",
+     "valor": "cada unidade faz seu próprio rótulo, que representa a identidade do núcleo social a que se vincula",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-32.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|é comum as cajuínas receberem o nome de matriarcas da família ou de mulheres importantes da comunidade",
+     "atributo": "nomes e variantes",
+     "valor": "é comum as cajuínas receberem o nome de matriarcas da família ou de mulheres importantes da comunidade",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-33.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|muitos produtores separam as cajuínas para vender, com rótulo, das de consumo próprio, sem rótulo",
+     "atributo": "uso e consumo",
+     "valor": "muitos produtores separam as cajuínas para vender, com rótulo, das de consumo próprio, sem rótulo",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-34.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a produtora não segue os minutos ensinados no curso: acompanha o banho-maria olhando e amarra uma garrafa no tambor para puxar de vez em quando e ver a qualidade",
+     "atributo": "processo e modo de fazer",
+     "valor": "a produtora não segue os minutos ensinados no curso: acompanha o banho-maria olhando e amarra uma garrafa no tambor para puxar de vez em quando e ver a qualidade",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V12"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-35.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|um produtor diz que os cursos do Sebrae ensinam a vender e os do Senar ensinam a produzir",
+     "atributo": "transmissão",
+     "valor": "um produtor diz que os cursos do Sebrae ensinam a vender e os do Senar ensinam a produzir",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V10"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-36.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|na unidade, o pomar é cuidado sobretudo por homens (cerca de 2) e a produção da cajuína é sobretudo feminina (3 mulheres e 2 homens)",
+     "atributo": "quem pratica",
+     "valor": "na unidade, o pomar é cuidado sobretudo por homens (cerca de 2) e a produção da cajuína é sobretudo feminina (3 mulheres e 2 homens)",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V04"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-37.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|o Senar deu assistência técnica por dois anos, com cursos de aperfeiçoamento da produção e do gerenciamento",
+     "atributo": "transmissão",
+     "valor": "o Senar deu assistência técnica por dois anos, com cursos de aperfeiçoamento da produção e do gerenciamento",
+     "periodo_referido": "não informado",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V04"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-38.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|na unidade, os homens colhem mais caju e as mulheres descastanham e limpam os cajus",
+     "atributo": "processo e modo de fazer",
+     "valor": "na unidade, os homens colhem mais caju e as mulheres descastanham e limpam os cajus",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V02"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-39.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|depois de descastanhar, os cajus vão à máquina de moer, e o suco cai de um lado e o bagaço do outro",
+     "atributo": "processo e modo de fazer",
+     "valor": "depois de descastanhar, os cajus vão à máquina de moer, e o suco cai de um lado e o bagaço do outro",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V02"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-40.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|produtora de Cocal de Telha chama sua fábrica de Unidade Artesanal de Processamento de Cajuína",
+     "atributo": "nomes e variantes",
+     "valor": "produtora de Cocal de Telha chama sua fábrica de Unidade Artesanal de Processamento de Cajuína",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V05"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-41.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|grupo de 10 pessoas saído de curso do Senar usou liquidificador industrial, panela de pasteurização e encapsuladeira emprestados; depois comprou o básico; prensagem manual e garrafas reutilizadas",
+     "atributo": "utensílio",
+     "valor": "grupo de 10 pessoas saído de curso do Senar usou liquidificador industrial, panela de pasteurização e encapsuladeira emprestados; depois comprou o básico; prensagem manual e garrafas reutilizadas",
+     "periodo_referido": "2019-2020",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V06"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": true,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-42.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|a cajuína de um grupo de assentamento é vendida a parceiros de movimentos sociais no Piauí, Bahia e Minas Gerais",
+     "atributo": "uso e consumo",
+     "valor": "a cajuína de um grupo de assentamento é vendida a parceiros de movimentos sociais no Piauí, Bahia e Minas Gerais",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V06"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-43.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|os mesmos sujeitos da cajuína participam das farinhadas, momentos de festa e encontro de familiares e vizinhos",
+     "atributo": "significados",
+     "valor": "os mesmos sujeitos da cajuína participam das farinhadas, momentos de festa e encontro de familiares e vizinhos",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-44.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|produtores fazem outros derivados do caju: mel, carne, doces, suco integral, licor de cajuína, geleia, vinho de caju, pizza, cajupinga e cajuaça",
+     "atributo": "uso e consumo",
+     "valor": "produtores fazem outros derivados do caju: mel, carne, doces, suco integral, licor de cajuína, geleia, vinho de caju, pizza, cajupinga e cajuaça",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-45.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|fazer cajuína reúne parentes e amigos, que compartilham memórias e refeições; no terreiro, acendem fogueiras e conversam até altas horas",
+     "atributo": "significados",
+     "valor": "fazer cajuína reúne parentes e amigos, que compartilham memórias e refeições; no terreiro, acendem fogueiras e conversam até altas horas",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-46.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|produtores e poder público concordam que a assistência técnica é insuficiente e que as mudas chegam tarde, já na época das chuvas",
+     "atributo": "risco",
+     "valor": "produtores e poder público concordam que a assistência técnica é insuficiente e que as mudas chegam tarde, já na época das chuvas",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-47.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|os saberes da produção seguem associados ao universo feminino, e não apenas às senhoras da elite",
+     "atributo": "transmissão",
+     "valor": "os saberes da produção seguem associados ao universo feminino, e não apenas às senhoras da elite",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-48.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|entre as elites e entre os estratos empobrecidos, remete-se às antepassadas para legitimar o valor do saber",
+     "atributo": "transmissão",
+     "valor": "entre as elites e entre os estratos empobrecidos, remete-se às antepassadas para legitimar o valor do saber",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-49.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a produtora diz que o modo de fazer mudou quase nada: só a cola virou gelatina no corte; o resto é igual ao de cem anos atrás",
+     "atributo": "processo e modo de fazer",
+     "valor": "a produtora diz que o modo de fazer mudou quase nada: só a cola virou gelatina no corte; o resto é igual ao de cem anos atrás",
+     "periodo_referido": "até 2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V02"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-50.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|agente da clarificação (corte) do suco: resina do cajueiro, depois cola de sapateiro e, mais recentemente, gelatina em pó",
+     "atributo": "insumo",
+     "valor": "agente da clarificação (corte) do suco: resina do cajueiro, depois cola de sapateiro e, mais recentemente, gelatina em pó",
+     "periodo_referido": "até 2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V02"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-51.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|a procura por cajuína cresceu em uma década, mas os pequenos produtores não conseguiram entrar nos mercados mais competitivos",
+     "atributo": "risco",
+     "valor": "a procura por cajuína cresceu em uma década, mas os pequenos produtores não conseguiram entrar nos mercados mais competitivos",
+     "periodo_referido": "2014-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-52.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|não há desperdício: toda a cajuína produzida é vendida ou consumida",
+     "atributo": "uso e consumo",
+     "valor": "não há desperdício: toda a cajuína produzida é vendida ou consumida",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-53.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|produtores de grande e médio porte defendem parâmetros rígidos; os pequenos preferem a clandestinidade, por medo de fiscalização e de exclusão",
+     "atributo": "risco",
+     "valor": "produtores de grande e médio porte defendem parâmetros rígidos; os pequenos preferem a clandestinidade, por medo de fiscalização e de exclusão",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-54.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|a riqueza do bem está na diversidade e na inventividade, mas sua natureza alimentar o empurra para parâmetros de mercado, fiscalização sanitária e governo",
+     "atributo": "risco",
+     "valor": "a riqueza do bem está na diversidade e na inventividade, mas sua natureza alimentar o empurra para parâmetros de mercado, fiscalização sanitária e governo",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-55.json",
+     "estado_trecho": "localizado",
+     "chave": "salvaguarda|o parecer propõe um plano de salvaguarda com os eixos capacitação, pesquisa, difusão, ampliação do mercado, transmissão de saberes e fruição",
+     "atributo": "salvaguarda",
+     "valor": "o parecer propõe um plano de salvaguarda com os eixos capacitação, pesquisa, difusão, ampliação do mercado, transmissão de saberes e fruição",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-56.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|a Instrução Normativa SDA nº 37/2018, de padrões de identidade e qualidade da cajuína, gera temor e insegurança entre os produtores",
+     "atributo": "risco",
+     "valor": "a Instrução Normativa SDA nº 37/2018, de padrões de identidade e qualidade da cajuína, gera temor e insegurança entre os produtores",
+     "periodo_referido": "2018-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-57.json",
+     "estado_trecho": "localizado",
+     "chave": "salvaguarda|a ADAPI do Piauí busca aderir ao Sistema Brasileiro de Inspeção de produtos de origem vegetal, o que recai sobre a fabricação artesanal",
+     "atributo": "salvaguarda",
+     "valor": "a ADAPI do Piauí busca aderir ao Sistema Brasileiro de Inspeção de produtos de origem vegetal, o que recai sobre a fabricação artesanal",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-58.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|parte dos produtores não vê sua cajuína como produto de comércio e recusa o rótulo ou o circuito comercial",
+     "atributo": "uso e consumo",
+     "valor": "parte dos produtores não vê sua cajuína como produto de comércio e recusa o rótulo ou o circuito comercial",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-59.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|os produtores relatam dificuldade de conseguir cajus de qualidade e em quantidade suficiente para a cajuína artesanal",
+     "atributo": "insumo",
+     "valor": "os produtores relatam dificuldade de conseguir cajus de qualidade e em quantidade suficiente para a cajuína artesanal",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-60.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|um dos maiores problemas é a precariedade do caju: pomares que não dão frutos suficientes, doenças e pragas que atacam castanha e pedúnculo",
+     "atributo": "insumo",
+     "valor": "um dos maiores problemas é a precariedade do caju: pomares que não dão frutos suficientes, doenças e pragas que atacam castanha e pedúnculo",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-61.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|há mestres e mestras da cajuína, com notoriedade em suas comunidades por conhecimentos e técnicas fundamentais à transmissão",
+     "atributo": "transmissão",
+     "valor": "há mestres e mestras da cajuína, com notoriedade em suas comunidades por conhecimentos e técnicas fundamentais à transmissão",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-62.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|os produtores não se enquadram em editais específicos de valorização de práticas e conhecimentos culturais",
+     "atributo": "risco",
+     "valor": "os produtores não se enquadram em editais específicos de valorização de práticas e conhecimentos culturais",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-63.json",
+     "estado_trecho": "localizado",
+     "chave": "época|de agosto a novembro, o cheiro de caju toma o Piauí: são os ventos do caju",
+     "atributo": "época",
+     "valor": "de agosto a novembro, o cheiro de caju toma o Piauí: são os ventos do caju",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-64.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|homens e mulheres acordam às cinco da manhã e vão aos cajuais; inventam coletores com cabo de vassoura e garrafa pet para colher os frutos distantes sem machucá-los",
+     "atributo": "utensílio",
+     "valor": "homens e mulheres acordam às cinco da manhã e vão aos cajuais; inventam coletores com cabo de vassoura e garrafa pet para colher os frutos distantes sem machucá-los",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-65.json",
+     "estado_trecho": "localizado",
+     "chave": "época|a cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste na época do descobrimento do Brasil",
+     "atributo": "época",
+     "valor": "a cajuína foi desenvolvida pelos indígenas que habitavam o Nordeste na época do descobrimento do Brasil",
+     "periodo_referido": "2022-2024",
+     "sentido": "divergente",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-66.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|para a maior parte dos produtores, a cajuína é patrimônio desde sempre e o título é incontestável",
+     "atributo": "reconhecimento",
+     "valor": "para a maior parte dos produtores, a cajuína é patrimônio desde sempre e o título é incontestável",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "comunidade, coletivo ou sujeito de direitos"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-67.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|a tradicionalidade está no modo como se transmitem conhecimentos e técnicas peculiares, mais que na longevidade temporal",
+     "atributo": "transmissão",
+     "valor": "a tradicionalidade está no modo como se transmitem conhecimentos e técnicas peculiares, mais que na longevidade temporal",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-68.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína artesanal do Piauí se define pelo que não é: não industrializada, sem aditivos químicos, orgânica, natural, saudável (em contraste com o Ceará)",
+     "atributo": "significados",
+     "valor": "a cajuína artesanal do Piauí se define pelo que não é: não industrializada, sem aditivos químicos, orgânica, natural, saudável (em contraste com o Ceará)",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-69.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|na primeira votação virtual, de cerca de cem produtores do grupo, sessenta votaram a favor da revalidação e os outros se abstiveram",
+     "atributo": "reconhecimento",
+     "valor": "na primeira votação virtual, de cerca de cem produtores do grupo, sessenta votaram a favor da revalidação e os outros se abstiveram",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-70.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|há produtoras em assentamento próximo a um dos mais importantes territórios quilombolas do Piauí, para quem a produção trouxe empoderamento",
+     "atributo": "transmissão",
+     "valor": "há produtoras em assentamento próximo a um dos mais importantes territórios quilombolas do Piauí, para quem a produção trouxe empoderamento",
+     "periodo_referido": "2022-2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-71.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|em 2024, na comunidade Lago Verde, a produção de cajuína estava atrasada porque os cajus secavam e as castanhas empretavam, apesar da procura",
+     "atributo": "insumo",
+     "valor": "em 2024, na comunidade Lago Verde, a produção de cajuína estava atrasada porque os cajus secavam e as castanhas empretavam, apesar da procura",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V12"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI), comunidade Lago Verde, Castelo do Piauí",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-72.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|cresce a proposta de introduzir a cajuína na merenda escolar piauiense, com discussões sobre o Programa Nacional de Alimentação Escolar",
+     "atributo": "uso e consumo",
+     "valor": "cresce a proposta de introduzir a cajuína na merenda escolar piauiense, com discussões sobre o Programa Nacional de Alimentação Escolar",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-73.json",
+     "estado_trecho": "localizado",
+     "chave": "salvaguarda|o parecer propõe publicação e exposições itinerantes sobre os rótulos de cajuína, como ação de salvaguarda",
+     "atributo": "salvaguarda",
+     "valor": "o parecer propõe publicação e exposições itinerantes sobre os rótulos de cajuína, como ação de salvaguarda",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-74.json",
+     "estado_trecho": "localizado",
+     "chave": "salvaguarda|uma das recomendações é registrar em audiovisual a diversidade de técnicas e saberes da produção artesanal",
+     "atributo": "salvaguarda",
+     "valor": "uma das recomendações é registrar em audiovisual a diversidade de técnicas e saberes da produção artesanal",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-75.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|uma das recomendações é estimular a troca de experiência por oficinas em que os próprios produtores tradicionais sejam os instrutores",
+     "atributo": "transmissão",
+     "valor": "uma das recomendações é estimular a troca de experiência por oficinas em que os próprios produtores tradicionais sejam os instrutores",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-76.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|consome-se cajuína em praticamente todo o Piauí, realidade bem diferente da do Ceará",
+     "atributo": "lugar",
+     "valor": "consome-se cajuína em praticamente todo o Piauí, realidade bem diferente da do Ceará",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1727-a2-77.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|a simbologia do feminino segue estruturante, com novas protagonistas além das mulheres da elite local, como mostram os nomes nos rótulos",
+     "atributo": "transmissão",
+     "valor": "a simbologia do feminino segue estruturante, com novas protagonistas além das mulheres da elite local, como mostram os nomes nos rótulos",
+     "periodo_referido": "2024",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "instituição",
+      "papel": "parecer técnico do IPHAN"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "Teresina, PI",
+      "pesquisa": "Piauí (PI), com visitas técnicas em 2022-2023 e reuniões em 2024 (segundo o parecer)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Páginas 2-29 lidas aqui (p. 1 só no lote A1). Sem Evidência: listas de instituições, de marcas registradas e de anexos, histórico das reuniões de 2014-2016, o convênio Iphan-Sebrae, o Fundo Nacional da Cajucultura e o trabalho de 2015 (contexto institucional, fora o primeiro fórum de salvaguarda).",
+    "A p. 26 termina cortada na segunda votação virtual ('mais de duzentos'): o resultado dela não foi lido nem registrado.",
+    "As falas de V10 e V11 (notas 9 a 11), V12 (notas 12 e 24), V08 (nota 8), V07, V09, V04, V05, V06 e V02 (notas 13, 15, 20) estão atribuídas por nome nas notas do parecer; as falas das notas 8 e 12 estavam sem rótulo no lote A1 e a de V08 (nota 8: 'Entendo que foi uma forma de valorizar o modo artesanal') segue gravada lá como sem nome: o curador pode ligá-la a V08.",
+    "Nomes de marcas, de unidades produtivas e de proprietários não entram na saída; a fala sobre a canção (V09) vale pela versão do parecer, que o cita com a grafia do original.",
+    "Menções incidentais a outras CLB: mocororó e beberagens indígenas, cajuaça, licor de caju e de cajuína, vinho de caju, cajupinga e cajuína em pizza, cachaça (casas de cachaça).",
+    "Trechos não localizados pelo script: 0 de 77."
+   ]
+  }
+ ]
+}

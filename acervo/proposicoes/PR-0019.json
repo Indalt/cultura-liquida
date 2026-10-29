@@ -8,7 +8,10 @@
   },
   "evidencias": [
     "EV-0031",
-    "EV-0100"
+    "EV-0100",
+    "EV-0110",
+    "EV-0111",
+    "EV-0240"
   ],
   "mu": null,
   "lambda": null,

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0109",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "a cajuína era dada de presente às visitas, em especial aos filhos da terra que retornavam à casa depois de longos períodos fora do estado",
+  "periodo": {
+    "referido": "séculos XIX e XX"
+  },
+  "evidencias": [
+    "EV-0137"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0066"
+  }
+}
