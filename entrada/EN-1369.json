@@ -20,7 +20,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem Triagem do bloco 7 (K109-L1, EX-0046, valencias-0.1).",
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem. Triagem do bloco 7 (K109-L1, EX-0046, valencias-0.1).",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",

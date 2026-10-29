@@ -1,0 +1,58 @@
+{
+ "arquivo": "trilhas/amostras/2026-10-29_amostra.json",
+ "data": "2026-10-29",
+ "verificador": "auditor (Sonnet 5.5, alto)",
+ "olhar": "mecanico",
+ "achados": [
+  {
+   "id": "A-01",
+   "tipo": "outro",
+   "descricao": "FO-0001 grava wayback 'sem cópia arquivada', mas há captura anterior no Wayback para a página (snapshot de 08/02/2026). O valor vem do padrão do gravador (en.get('wayback') or 'sem cópia arquivada', scripts/gravar_extracao.py l. 171) e só 12 Entradas passaram pelo wayback.py (D-043: registra a captura que já existe), a EN-1155 não. O campo diz que não existe o que não foi consultado. O mesmo vale para FO-0013 (EN-0694), não consultada por falta de chamadas.",
+   "linha": 13,
+   "trecho": "\"wayback\": \"sem cópia arquivada\",",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "curl -s -A 'CulturaLiquida-auditor/0.1' 'https://archive.org/wayback/available?url=repositorio.ufc.br/handle/riufc/58951'; grep -n wayback acervo/fontes/FO-0001.json; grep -l archive.org entrada/*.json | wc -l",
+    "saida": "{\"archived_snapshots\": {\"closest\": {\"status\": \"200\", \"available\": true, \"url\": \"http://web.archive.org/web/20260208080426/https://repositorio.ufc.br/handle/riufc/58951\", \"timestamp\": \"20260208080426\"}}}; FO-0001 l. 13: \"wayback\": \"sem cópia arquivada\"; 12 Entradas com archive.org"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A-02",
+   "tipo": "outro",
+   "descricao": "Cosmético: a nota da Entrada triada junta a nota antiga e a nova sem pontuação ('...a conferir na triagem Triagem do bloco 7 (...)'), em EN-0694 e EN-1155.",
+   "linha": null,
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n 'na triagem Triagem do bloco 7' entrada/EN-0694.json entrada/EN-1155.json",
+    "saida": "nota: '...licença e proteção a conferir na triagem Triagem do bloco 7 (K109-L1, EX-0046, valencias-0.1).' nas duas Entradas (lido ao imprimir os registros)"
+   },
+   "estado": "confirmado"
+  }
+ ],
+ "resumo": {
+  "amostra": "amostra-0.2, semente 20261029, 15 itens de 1269; sortear_amostra.py --conferir: 'a amostra bate com a semente 20261029 (15 itens de 1269)'",
+  "itens": {
+   "EN-0224": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma ... no título' verdadeiro para o campo titulo",
+   "EN-0362": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma ... no título' verdadeiro para o campo titulo",
+   "EN-0471": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma ... no título' verdadeiro para o campo titulo",
+   "EN-0564": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma ... no título' verdadeiro para o campo titulo",
+   "EN-0575": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma ... no título' verdadeiro para o campo titulo (a ocorrência é o nome de uma escola, 'Pé de Caju': a regra bate por palavra inteira, sem julgar o sentido)",
+   "EN-0663": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma ... no título' verdadeiro para o campo titulo",
+   "EN-0694": "ok. Quarentena: estado quarentena, selo PENDENTE_JULGAMENTO, valencias lastro 2 / trecho_localizado 0 / voz 0, criterio_em_falta [trecho_localizado, voz]; manifesto lote-K109-L1.json: pagina https://repositorio.ufrn.br/jspui/handle/123456789/15738, tipo html, 6 caracteres de texto, pdf null, erro null; EN-0694.html é a casca vazia do DSpace 7 (<ds-app></ds-app>), como diz motivo_quarentena; lastro 2 pelo handle confere com a escala valencias-0.1 (esquemas/valores-provisorios.json); FO-0013 existe, entrada EN-0694, url igual. Título igual ao da BDTD. Ver A-02 (nota) e a observação sobre o resumo.",
+   "EN-0748": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma caju no resumo (CO-0001)': citacao_resumo está literalmente no resumo da BDTD (confere); a ocorrência é o topônimo 'Caju-Una' (comunidade de Soure-PA), não a fruta",
+   "EN-0968": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo item; recortes existem em ambientes/recortes e o listam em ambientes/pegadas/RC-*.jsonl (campo entrada, link, identificador e motivo iguais); sem autoria, sem Wayback, sem dado pessoal; título igual ao da fonte (API VuFind v1 /record da BDTD, 29/10); motivo 'forma caju no resumo': citacao_resumo está literalmente no resumo da BDTD ('castanha de caju')",
+   "EN-1399": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo handle; recortes existem e o listam nas pegadas (RC-0003/0005); sem autoria, Wayback ou dado pessoal; título igual ao da página do item no Infoteca-e (GET /infoteca/handle/doc/N, 29/10, robots.txt de 23/10 sem Disallow de /handle); motivo: descritor 'colheita' no título (CO-0003): o título traz 'pós-colheita'; CO-0003.descritores inclui 'colheita'; a regra bate por palavra inteira e o hífen é fronteira",
+   "EN-1402": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo handle; recortes existem e o listam nas pegadas (RC-0003/0005); sem autoria, Wayback ou dado pessoal; título igual ao da página do item no Infoteca-e (GET /infoteca/handle/doc/N, 29/10, robots.txt de 23/10 sem Disallow de /handle); motivo: forma 'caju' no título (CO-0001) verdadeira",
+   "EN-1456": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo handle; recortes existem e o listam nas pegadas (RC-0003/0005); sem autoria, Wayback ou dado pessoal; título igual ao da página do item no Infoteca-e (GET /infoteca/handle/doc/N, 29/10, robots.txt de 23/10 sem Disallow de /handle); motivo: forma 'caju' no resumo: citacao_resumo está literalmente no resumo da página (DCTERMS.abstract)",
+   "EN-1498": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo handle; recortes existem e o listam nas pegadas (RC-0003/0005); sem autoria, Wayback ou dado pessoal; título igual ao da página do item no Infoteca-e (GET /infoteca/handle/doc/N, 29/10, robots.txt de 23/10 sem Disallow de /handle); motivo: forma 'caju' no título (CO-0001) verdadeira (o 'caju' é nome da RPPN)",
+   "EN-1503": "ok. validar.py entrada PASSA; identificador e url_ou_arquivo apontam o mesmo handle; recortes existem e o listam nas pegadas (RC-0003/0005); sem autoria, Wayback ou dado pessoal; título igual ao da página do item no Infoteca-e (GET /infoteca/handle/doc/N, 29/10, robots.txt de 23/10 sem Disallow de /handle); motivo: forma 'caju' no resumo: citacao_resumo está literalmente no resumo da página; a ocorrência é o nome do centro de pesquisa ('Centro Nacional de Pesquisa de Caju')",
+   "FO-0001": "com achado A-01. Confere: referencia.titulo é o da capa do PDF (EN-1155.txt p. 2, 'TIME TRIAL'), link_permanente e url iguais ao url_ou_arquivo de EN-1155, entrada EN-1155, perspectiva academia, ano 2021, protecao igual à da EN-1155; manifesto: pagina igual, pdf 86 páginas, hash_texto 398a76a3...; EN-1155 gera FO-0001. Observação: o título da EN-1155 (BDTD) sai sem 'time' ('a um trial simulado'); é o da fonte coletada, não da ferramenta."
+  },
+  "observacoes_nao_achados": [
+   "Palavra inteira em nome próprio: EN-0575 (escola Pé de Caju), EN-0748 (Caju-Una), EN-1498 (RPPN do caju), EN-1503 (centro de pesquisa) seguem pela forma 'caju' sem ser a fruta; a regra pretriagem-0.1 faz isso por desenho (hospitalidade), sem falha.",
+   "EN-0694: a BDTD traz resumo de 2.504 caracteres; o trecho localizado 0 e a voz 0 vêm de só a página da UFRN ter vindo vazia. Coerente com a regra (quem fala = texto lido), mas o resumo da BDTD não foi tentado; é escolha de desenho a Vicente avaliar, não falha.",
+   "Nenhum item da amostra tem Wayback na Entrada; nada a comparar."
+  ]
+ }
+}

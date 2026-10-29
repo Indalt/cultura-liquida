@@ -168,7 +168,7 @@ class Gravador:
                                     "link_permanente": en["url_ou_arquivo"]},
                      "tipo_evidencia": fo.get("tipo_evidencia") or "escrito publicado, de arquivo ou oficial",
                      "data_fonte": str(fo.get("ano") or en.get("ano") or "não conferido"),
-                     "url": en["url_ou_arquivo"], "wayback": en.get("wayback") or "sem cópia arquivada",
+                     "url": en["url_ou_arquivo"], "wayback": en.get("wayback") or "não consultado (o wayback.py não passou pela Entrada)",
                      "data_acesso": self.hoje, "perspectiva": fo.get("perspectiva") or "não dito",
                      "deriva_de": [], "entrada": en_id, "protecao": prot,
                      "nota": "; ".join(nota_fo), "origem_registro": self.origem()}
@@ -232,7 +232,7 @@ class Gravador:
                 en.pop("selo", None)
                 en.pop("motivo_quarentena", None)
             en["gera"] = {"fontes": [fo_id], **({"trechos": trechos} if trechos else {})}
-            en["nota"] = (en.get("nota", "") + f" Triagem do bloco 7 ({saida.get('lote')}, {self.execucao}, valencias-0.1).").strip()
+            en["nota"] = (en.get("nota", "").rstrip(". ") + f". Triagem do bloco 7 ({saida.get('lote')}, {self.execucao}, valencias-0.1).").strip()
             self.novos[en_id] = en
         erros = []
         for i, reg in self.novos.items():
