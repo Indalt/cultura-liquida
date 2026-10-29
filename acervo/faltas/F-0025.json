@@ -1,0 +1,26 @@
+{
+  "id": "F-0025",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "direito_autoral",
+  "vale_para": "publicar",
+  "o_que_falta": "O nome do autor das 15 Fontes (FO-0001 a FO-0015) não consta nos registros da Fonte nem nas quatro Entradas lidas (EN-0438, EN-1543, EN-0078, EN-1369); o que está guardado é título, instituição, ano, tipo e link. Falta decidir se instituição, título e link bastam como 'autor e origem' ou se se acrescenta o nome do autor de cada obra, o que a regra permite.",
+  "por_que": "A citação de passagens de obra alheia só está coberta pela exceção se indicar 'o nome do autor e a origem da obra' (Lei 9.610, art. 46, III). A regra de Vicente (D-042) deixa sem Falta o trecho curto com autor e origem; sem o nome do autor no registro, a condição não está cumprida na forma guardada, e a regra não diz se a instituição vale como autor. O nome do autor citado não é dado pessoal a barrar (D-042; LGPD, art. 7º, §3º). Como o Git é público e a F-0003 trata o Git público como publicação antecipada, o curador pode querer resolver antes da publicação; esta Falta não barra a leitura nem a coleta.",
+  "onde_aparece": [
+    "acervo/fontes/FO-0001.json a FO-0015.json (campo `referencia`: sem autor)",
+    "acervo/evidencias/ (campo `voz.papel`: 'autor da dissertação', sem nome)",
+    "acervo/trechos/ (o campo `fonte` aponta para a Fonte sem autor)"
+  ],
+  "norma": {
+    "referencia": "Lei 9.610/1998, art. 46, III",
+    "trecho": "III - a citação em livros, jornais, revistas ou qualquer outro meio de comunicação, de passagens de qualquer obra, para fins de estudo, crítica ou polêmica, na medida justificada para o fim a atingir, indicando-se o nome do autor e a origem da obra;",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-licenca-texto-imagem-audio-lei-9610 (a preparar; o guia ainda não existe)",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico",
+  "data": "2026-10-29",
+  "nota": "Pergunta 1 (direito autoral). Os trechos têm de 54 a 276 caracteres (média cerca de 173), com 60 caracteres de contexto antes e depois, no máximo 5 por Fonte; a regra os cobre como citação curta se o autor e a origem constarem. Não conferido: se outras Entradas do lote têm o autor em algum campo; a página de cada Fonte (que mostra o autor). O Jurídico não autoriza nem diz que pode publicar. Gravada pelo curador a partir da triagem do juridico (K-109, lote 1)."
+}

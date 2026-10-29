@@ -1,0 +1,26 @@
+{
+  "id": "F-0024",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "conhecimento_tradicional",
+  "vale_para": "publicar",
+  "o_que_falta": "Definir se as menções, em fonte já publicada, a usos do caju e da bebida por povos indígenas (a bebida fermentada 'caoi ou caoim' e a cajuína 'desenvolvida pelos indígenas') configuram conhecimento tradicional associado e, se configuram, se a origem é identificável. Os trechos falam em 'nativos destas terras' e 'indígenas que habitavam o Nordeste', sem nomear povo ou comunidade; isso não foi completado.",
+  "por_que": "A Lei 13.123 chama de conhecimento tradicional associado a 'informação ou prática de população indígena, comunidade tradicional ou agricultor tradicional sobre as propriedades ou usos diretos ou indiretos associada ao patrimônio genético' (art. 2º, II); o caju é planta, e três trechos dizem que indígenas o usavam como bebida (inclusive fermentada) ou 'desenvolveram' a cajuína. A lei vale também para o já publicado: o acesso inclui pesquisa sobre esse conhecimento 'ainda que obtido de fontes secundárias tais como feiras, publicações' (art. 2º, IX), e o cadastro vem antes da divulgação de resultados (art. 12, §2º). Se a origem não puder ser ligada a ao menos uma população, o conhecimento é de origem não identificável (art. 2º, III) e não depende de consentimento (art. 9º, §2º); isso é interpretação, não texto de lei sobre este caso. A regra de Vicente (D-042) põe o conhecimento tradicional como Falta que barra só a publicação, com a nota do art. 9º: se a origem for identificável, o detalhe não se aprofunda e espera numa pasta local até o K-010. Se for mera menção histórica, não é acesso; a regra vigente não decide isso.",
+  "onde_aparece": [
+    "acervo/trechos/TR-0018.json (FO-0006, Embrapa 2009; EN-1314): bebida fermentada dos nativos, 'o caoi ou caoim'",
+    "acervo/trechos/TR-0031.json e TR-0032.json (FO-0010, Embrapa 2011; EN-1369): cajuína 'desenvolvida pelos indígenas'",
+    "as Evidências de acervo/evidencias/ cujo campo `trecho` aponta para esses três Trechos"
+  ],
+  "norma": {
+    "referencia": "Lei 13.123/2015, art. 2º, II (também art. 2º, III e IX; art. 9º, §2º; art. 12, §2º)",
+    "trecho": "II - conhecimento tradicional associado - informação ou prática de população indígena, comunidade tradicional ou agricultor tradicional sobre as propriedades ou usos diretos ou indiretos associada ao patrimônio genético;",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/L13123.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-sisgen-lei-13123 (a preparar; modelo em .claude/skills/guia-de-liberacao/exemplos/guia-sisgen.json); onde a lei exige profissional, o passo vira 'contratar ou consultar'",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico",
+  "data": "2026-10-29",
+  "nota": "Triagem do lote 1 do K-109, ato ler, localizar, linkar e citar trecho curto (sem Falta pela regra) e, para publicar, esta Falta. Pergunta 2: dúvida. Pergunta 3 (restrição por costume): nenhum costume aparece nos trechos; não conferido. TR-0035 (a palavra tupi 'acá-iu' como origem do nome) fica fora desta Falta por ser sobre o nome, não sobre propriedades ou usos do patrimônio genético (art. 2º, II); se Vicente ler diferente, entra aqui. Não conferido: o Decreto 8.772/2016 e a Resolução CGen vigente. O Jurídico não autoriza nem diz que pode publicar. Gravada pelo curador a partir da triagem do juridico (K-109, lote 1)."
+}
