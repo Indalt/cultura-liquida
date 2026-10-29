@@ -159,6 +159,9 @@ def main() -> int:
         except (UnicodeDecodeError, OSError):
             continue
         for n, tipo, s in achar(texto):
+            # a tabela de municípios do IBGE: um topônimo pode ser igual ao nome de uma pessoa (K-110)
+            if tipo == "nome da tabela privada de pessoas" and "lugares/ibge" in f.as_posix():
+                continue
             try:
                 nome = f.relative_to(RAIZ)
             except ValueError:
