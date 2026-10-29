@@ -1,0 +1,27 @@
+{
+  "id": "EN-1727",
+  "canal": "link ou documento trazido por Vicente",
+  "ambiente": "AM-0061",
+  "data_entrada": "2026-10-29",
+  "url_ou_arquivo": "https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/126109/cajuina_parecer_tecnico.pdf",
+  "identificador": "AM-0061:https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/126109/cajuina_parecer_tecnico.pdf",
+  "localizador": "item 126109 do BCR (Tainacan)",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "parecer técnico de revalidação de 2025 (PDF); endereço dado pela API do BCR e conferido na conversa de planejamento de 29/10; K-110",
+  "origem_registro": {
+    "criado_por": "Vicente (pessoa), link ou documento trazido",
+    "data": "2026-10-29",
+    "execucao": "EX-0063",
+    "versao_regra": "entrada-link-0.1"
+  }
+}

@@ -17,10 +17,16 @@ arquivos do `localizar_trecho.py --saida` na pasta temporária. Este script, do 
   - atualiza a Entrada: estado (eixo 1: "extraído" com Evidência, "aceito" sem, "quarentena"), valências,
     selo e motivo da quarentena, marca de aviso, saúde ou política e `gera`.
 Confere o hash do Trecho contra o manifesto do `ler_fonte.py` e roda o esquema de cada registro.
+Pessoas (K-110; padrão do K-104, valor tabela_codigo_nome): a voz de pessoa citada vem do avaliador
+só por rótulo local (`voz.rotulo_pessoa`, ex.: "V01"); o nome fica no arquivo de rótulos que o
+avaliador grava fora do Git (`--pessoas`). O script dá o código opaco P-nnnn (o mesmo nome reaproveita
+o código), grava a Pessoa em `acervo/pessoas/` só com código e papéis, e a tabela código → nome na
+pasta privada (`CL_PRIVADO` ou o caminho padrão do registro), nunca no repositório. Um Trecho cujo
+texto exato traz um nome da tabela reprova; no "antes" e no "depois", o contexto é cortado no nome.
 
 Uso:
     python scripts/gravar_extracao.py <saida-do-avaliador.json> --execucao EX-nnnn [--simular]
-        [--raiz <pasta>] [--manifestos <pasta>]
+        [--raiz <pasta>] [--manifestos <pasta>] [--pessoas <rótulos fora do Git>] [--privado <pasta>]
 `--execucao` é a Execução do avaliador (o log dele, gravado antes pelo curador).
 Código 0 = gravou (ou simulou) sem erro; 1 = algum registro reprova (nada se grava).
 """
@@ -29,6 +35,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import sys
 import unicodedata
 from datetime import date
@@ -39,11 +46,11 @@ from _acervo import carregar_acervo, proximo_id  # noqa: E402
 from _comum import RAIZ, carregar_esquema, carregar_json, validar_objeto  # noqa: E402
 from localizar_trecho import pasta_temporaria  # noqa: E402
 
-VERSAO = "gravar-extracao-0.1"
+VERSAO = "gravar-extracao-0.2"
 PASTA = {"FO": "fontes", "TR": "trechos", "EV": "evidencias", "PR": "proposicoes", "LU": "lugares",
-         "CL": "clb", "F": "faltas"}
+         "CL": "clb", "F": "faltas", "P": "pessoas"}
 ESQ = {"FO": "fonte", "TR": "trecho", "EV": "evidencia", "PR": "proposicao", "LU": "lugar", "CL": "clb",
-       "F": "falta", "EN": "entrada"}
+       "F": "falta", "EN": "entrada", "P": "pessoa"}
 UF = {"AC": "Acre", "AL": "Alagoas", "AP": "Amapá", "AM": "Amazonas", "BA": "Bahia", "CE": "Ceará",
       "DF": "Distrito Federal", "ES": "Espírito Santo", "GO": "Goiás", "MA": "Maranhão", "MT": "Mato Grosso",
       "MS": "Mato Grosso do Sul", "MG": "Minas Gerais", "PA": "Pará", "PB": "Paraíba", "PR": "Paraná",
@@ -64,8 +71,36 @@ def tabela_ibge() -> dict[tuple[str, str], str]:
         return {(chave(l["Nome do município"]), l["Sigla da UF"]): l["Geocódigo"] for l in csv.DictReader(f, delimiter=";")}
 
 
+def pasta_privada() -> Path:
+    """A pasta da tabela código → nome (valor tabela_codigo_nome), fora do repositório."""
+    return Path(os.environ.get("CL_PRIVADO") or "C:/Antigravity/Cultura Liquida - privado") / "pessoas"
+
+
+def fora_do_repositorio(p: Path) -> bool:
+    """Fora do repositório, ou nos casos de teste (`testes/`, com nomes fictícios)."""
+    try:
+        rel = p.resolve().relative_to(RAIZ.resolve())
+    except ValueError:
+        return True
+    return rel.parts[:1] == ("testes",)
+
+
+def formas_do_nome(info: dict) -> list[str]:
+    return [f for f in [info.get("nome"), *info.get("outras_formas", [])] if f and len(f.strip()) >= 4]
+
+
+def cortar_nome(contexto: str, formas: list[str], lado: str) -> str:
+    """Corta o "antes" depois do último nome achado e o "depois" antes do primeiro (o contexto é só seletor)."""
+    for f in formas:
+        baixo = contexto.lower()
+        k = baixo.rfind(f.lower()) if lado == "antes" else baixo.find(f.lower())
+        if k >= 0:
+            contexto = contexto[k + len(f):] if lado == "antes" else contexto[:k]
+    return contexto
+
+
 class Gravador:
-    def __init__(self, execucao: str, raiz: Path = RAIZ):
+    def __init__(self, execucao: str, raiz: Path = RAIZ, rotulos: dict | None = None, privado: Path | None = None):
         self.raiz = raiz
         self.indice, _, erros = carregar_acervo(raiz)
         if erros:
@@ -75,6 +110,35 @@ class Gravador:
         self.execucao = execucao
         self.hoje = date.today().isoformat()
         self.ibge = tabela_ibge()
+        self.rotulos = rotulos or {}
+        self.privado = privado or pasta_privada()
+        arq_tab = self.privado / "tabela.json"
+        self.tabela: dict[str, dict] = json.loads(arq_tab.read_text(encoding="utf-8")) if arq_tab.exists() else {}
+        self.formas = sorted({f for info in [*self.tabela.values(), *self.rotulos.values()] for f in formas_do_nome(info)},
+                             key=len, reverse=True)
+
+    def pessoa(self, rotulo: str, onde: str) -> str:
+        """O código opaco da pessoa do rótulo local; o nome só na tabela privada."""
+        info = self.rotulos.get(rotulo)
+        if not info or not info.get("nome"):
+            raise SystemExit(f"{onde}: rótulo de pessoa {rotulo} sem nome no arquivo de rótulos (--pessoas)")
+        cod = next((c for c, t in self.tabela.items() if chave(t["nome"]) == chave(info["nome"])), None)
+        if not cod:
+            cod = self.novo_id("P")
+            self.tabela[cod] = {"nome": info["nome"], "outras_formas": info.get("outras_formas", []), "onde": []}
+        if onde not in self.tabela[cod]["onde"]:
+            self.tabela[cod]["onde"].append(onde)
+        reg = self.novos.get(cod) or (dict(self.indice[cod]) if cod in self.indice else {
+            "codigo": cod, "papeis": [], "forma_atribuicao": "nome", "nivel_colaborador": "identificado",
+            "nota": "pessoa nomeada na fonte; no Git, só o código e os papéis (a tabela código → nome fica fora do repositório)",
+            "consentimento": "não se aplica (fala publicada em fonte de terceiro; o projeto não colheu a fala)",
+            "protecao": {"licenca": "não conferido", "consentimento": "não se aplica", "restricao_comunitaria": "nenhuma conhecida",
+                         "precisao_lugar": "não se aplica", "dado_sensivel": False, "crianca_ou_adolescente": False,
+                         "pedido_de_retirada": "nenhum"},
+            "origem_registro": self.origem()})
+        reg["papeis"] = list(dict.fromkeys([*reg.get("papeis", []), *info.get("papeis", ["quem fala no trecho"])]))
+        self.novos[cod] = reg
+        return cod
 
     def origem(self, criado_por: str = f"scripts/gravar_extracao.py ({VERSAO})") -> dict:
         return {"criado_por": criado_por, "data": self.hoje, "execucao": self.execucao}
@@ -179,6 +243,12 @@ class Gravador:
                 tr = r["trecho"]
                 if man.get("hash_texto") and tr.get("hash") and tr["hash"] != man["hash_texto"]:
                     raise SystemExit(f"{en_id}: hash do Trecho ≠ hash do texto lido no manifesto ({ev['arquivo_trecho']})")
+                baixo = tr["texto_exato"].lower()
+                if any(f.lower() in baixo for f in self.formas):
+                    raise SystemExit(f"{en_id}: o texto exato de {ev['arquivo_trecho']} traz um nome da tabela de pessoas; "
+                                     "o avaliador escolhe outro trecho (o nome só entra por código opaco)")
+                tr = {**tr, "antes": cortar_nome(tr.get("antes", ""), self.formas, "antes"),
+                      "depois": cortar_nome(tr.get("depois", ""), self.formas, "depois")}
                 tr_id = self.novo_id("TR")
                 reg_tr = {"id": tr_id, "fonte": fo_id, **{k: tr[k] for k in tr if k in (
                     "texto_exato", "antes", "depois", "localizador", "hash", "data_conferencia", "origem_texto",
@@ -215,6 +285,8 @@ class Gravador:
                 voz = {"tipo": ev["voz"]["tipo"]}
                 if ev["voz"].get("papel"):
                     voz["papel"] = ev["voz"]["papel"]
+                if ev["voz"].get("rotulo_pessoa"):
+                    voz["pessoa"] = self.pessoa(ev["voz"]["rotulo_pessoa"], onde)
                 reg_ev = {"id": ev_id, "trecho": tr_id, "proposicao": pr_id, "sentido": ev["sentido"], "voz": voz,
                           "lugares": lug, "estado": "não conferida",
                           "sustenta_aviso_saude_politica": bool(ev.get("sustenta_aviso_saude_politica")),
@@ -249,6 +321,9 @@ class Gravador:
             arq.parent.mkdir(parents=True, exist_ok=True)
             arq.write_text(json.dumps(reg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             feitos.append(arq.relative_to(self.raiz).as_posix())
+        if any(i.startswith("P-") for i in self.novos):
+            self.privado.mkdir(parents=True, exist_ok=True)
+            (self.privado / "tabela.json").write_text(json.dumps(self.tabela, ensure_ascii=False, indent=2), encoding="utf-8")
         return feitos
 
 
@@ -259,14 +334,25 @@ def main() -> int:
     ap.add_argument("--simular", action="store_true")
     ap.add_argument("--raiz", type=Path, default=RAIZ, help="raiz do acervo (testes)")
     ap.add_argument("--manifestos", type=Path, help="pasta dos manifestos do ler_fonte.py (padrão: a pasta temporária)")
+    ap.add_argument("--pessoas", type=Path, help="rótulos locais → nome, gravados pelo avaliador fora do Git")
+    ap.add_argument("--privado", type=Path, help="pasta da tabela código → nome (padrão: CL_PRIVADO ou o caminho do registro)")
     a = ap.parse_args()
+    rotulos = {}
+    if a.pessoas:
+        if not fora_do_repositorio(a.pessoas):
+            print("REPROVA: o arquivo de rótulos de pessoas está dentro do repositório; nada gravado.")
+            return 1
+        rotulos = json.loads(a.pessoas.read_text(encoding="utf-8"))
+    if a.privado and not fora_do_repositorio(a.privado):
+        print("REPROVA: a pasta privada está dentro do repositório; nada gravado.")
+        return 1
     saida = json.loads(Path(a.saida).read_text(encoding="utf-8"))
     manifestos: dict[str, dict] = {}
     for m in sorted((a.manifestos or pasta_temporaria()).glob("lote-*.json")):
         for it in json.loads(m.read_text(encoding="utf-8"))["itens"]:
             if it.get("caracteres") or it["id"] not in manifestos:
                 manifestos[it["id"]] = it
-    g = Gravador(a.execucao, a.raiz)
+    g = Gravador(a.execucao, a.raiz, rotulos, a.privado)
     erros = g.gravar_lote(saida, manifestos)
     if erros:
         print("REPROVA (nada gravado):", *erros, sep="\n  ")

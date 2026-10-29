@@ -1,6 +1,7 @@
 """Procura dado pessoal de terceiros em arquivos de texto (regra 5 do brief; D-021).
 
-Procura: e-mail, telefone brasileiro, CPF, @perfil e links de perfil em redes sociais.
+Procura: e-mail, telefone brasileiro, CPF, @perfil e links de perfil em redes sociais, e os nomes
+da tabela código → nome de pessoas (fora do Git, valor tabela_codigo_nome; K-110), quando ela existe.
 Permitidos (não são de terceiros, ou são institucionais): ver PERMITIDOS abaixo.
 Cada novo permitido precisa de motivo no comentário.
 
@@ -15,6 +16,8 @@ Também é importado por registrar_log.py (função achar).
 from __future__ import annotations
 
 import argparse
+import json
+import os
 import re
 import subprocess
 import sys
@@ -66,10 +69,32 @@ IGNORAR_PASTAS = {".git", ".venv", "legado", "__pycache__", "node_modules"}
 EXT_TEXTO = {".md", ".json", ".jsonl", ".py", ".txt", ".csv", ".yml", ".yaml", ".html", ".gitignore", ""}
 
 
+_NOMES: list[str] | None = None
+
+
+def nomes_privados() -> list[str]:
+    """Os nomes e as outras formas da tabela privada de pessoas (vazia se a tabela não existe nesta máquina)."""
+    global _NOMES
+    if _NOMES is None:
+        arq = Path(os.environ.get("CL_PRIVADO") or "C:/Antigravity/Cultura Liquida - privado") / "pessoas" / "tabela.json"
+        try:
+            tab = json.loads(arq.read_text(encoding="utf-8"))
+            _NOMES = sorted({f.lower() for t in tab.values() for f in [t.get("nome"), *t.get("outras_formas", [])]
+                             if f and len(f.strip()) >= 4})
+        except (OSError, ValueError):
+            _NOMES = []
+    return _NOMES
+
+
 def achar(texto: str) -> list[tuple[int, str, str]]:
     """Devolve (linha, tipo, trecho) para cada ocorrência não permitida."""
     achados = []
+    nomes = nomes_privados()
     for n, linha in enumerate(texto.splitlines(), 1):
+        if nomes:
+            baixa = linha.lower()
+            # o nome não se imprime: só o código da tabela privada diria quem é
+            achados += [(n, "nome da tabela privada de pessoas", "(nome omitido)") for f in nomes if f in baixa]
         for tipo, rx in PADROES:
             for m in rx.finditer(linha):
                 s = m.group(0).rstrip(".")

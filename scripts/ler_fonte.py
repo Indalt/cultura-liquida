@@ -142,7 +142,7 @@ def main() -> int:
     for u in a.url:
         rot, _, url = u.partition("=")
         alvos.append((rot, url))
-    ex = Execucao("script", f"K-109, bloco 7: leitura das Fontes do lote {a.rotulo} ({VERSAO})", simular=bool(a.fixtures))
+    ex = Execucao("script", f"leitura das Fontes do lote {a.rotulo} ({VERSAO})", simular=bool(a.fixtures))
     cli = Cliente(fixtures=a.fixtures)
     itens = [ler(cli, rot, url, pasta, a.max_mb) for rot, url in alvos]
     (pasta / f"lote-{a.rotulo}.json").write_text(json.dumps(

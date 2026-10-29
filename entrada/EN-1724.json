@@ -1,0 +1,27 @@
+{
+  "id": "EN-1724",
+  "canal": "link ou documento trazido por Vicente",
+  "ambiente": "AM-0061",
+  "data_entrada": "2026-10-29",
+  "url_ou_arquivo": "https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
+  "identificador": "AM-0061:https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/",
+  "localizador": "item 66089 do BCR (Tainacan)",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "o bem registrado (página); endereço dado pela API do BCR (ficha do AM-0061) e conferido na conversa de planejamento de 29/10; K-110",
+  "origem_registro": {
+    "criado_por": "Vicente (pessoa), link ou documento trazido",
+    "data": "2026-10-29",
+    "execucao": "EX-0060",
+    "versao_regra": "entrada-link-0.1"
+  }
+}

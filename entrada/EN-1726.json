@@ -1,0 +1,27 @@
+{
+  "id": "EN-1726",
+  "canal": "link ou documento trazido por Vicente",
+  "ambiente": "AM-0061",
+  "data_entrada": "2026-10-29",
+  "url_ou_arquivo": "https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66637/Cajuina_de_Parecer-DPI_.pdf",
+  "identificador": "AM-0061:https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66637/Cajuina_de_Parecer-DPI_.pdf",
+  "localizador": "item 66637 do BCR (Tainacan)",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "parecer técnico de registro (PDF); endereço dado pela API do BCR e conferido na conversa de planejamento de 29/10; K-110",
+  "origem_registro": {
+    "criado_por": "Vicente (pessoa), link ou documento trazido",
+    "data": "2026-10-29",
+    "execucao": "EX-0062",
+    "versao_regra": "entrada-link-0.1"
+  }
+}

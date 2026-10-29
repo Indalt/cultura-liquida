@@ -273,6 +273,18 @@
 - **Consumo da conversa:** 10 chamadas de agente, **1.064.272 tokens e 166 chamadas** (rastreador 50.846; avaliador 126.968 e 148.968; juridico 130.428, 132.441, 139.137, 66.181 e 72.965; auditor 120.305 e 76.033). Estimativa pela conta da D-040 (não é medida): 2 + 1,6 × 10,64 = 19,0 pp. O uso da conta no fim fica a informar.
 - **Fechamento (29/10):** Vicente respondeu que decisões como a do adaptador do BCR não se respondem em conversa de trabalho: o registro do BCR vai ao planejamento como insumo 73 ("a definir pelo planejamento"), e o K-109 fecha. Uso ao fechar: 17% (semanal) e 99% (janela de 5 h): a conversa fecha com um lote só (D-040). A conversa custou 16 pp (de 1% a 17%), contra 19,0 pp estimados. As horas da semana de 19 a 25/10 não se registram (Vicente).
 
+## Conversa do cartão K-110 (bloco 8) — 29/10/2026 (quinta)
+
+- **Autorização de Vicente:** o cartão K-110, com seis itens (o registro do IPHAN por link dele; decisão nova vira insumo; a pasta temporária fica; o Wayback uma vez; o Quartz; a saída dos agentes em arquivo). Fala em `trilhas/2026-10-29_K-110/falas-vicente.md`. Tetos de 60 pp (projeto) e 50 pp (desenvolvimento), com a linha de 90%. **Uso ao abrir: 23% (semanal) e 35% (janela de 5 h).** A leitura fecha o K-109 (17%) e a conversa de planejamento de 29/10 (17% → 23%, 6 pp; pode misturar uso de fora do projeto).
+- **Retomada:** modelo `claude-opus-5-5` conferido; `git pull` em dia (4e5e0c6); árvore limpa; cartão K-110 movido para Fazendo. `relatorio_dia.py`: 22 Faltas, 10 vácuos, desenvolvimento 16 pp de 50 na semana.
+
+### Abertura (curador, sem agente)
+- [x] **Wayback (item 4):** `wayback.py` uma vez nas 30 Entradas do bloco 7 (EX-0059): HTTP 429 de novo em todas; as Fontes seguem "não consultado", sem insistir.
+- [x] **O registro do IPHAN por link de Vicente (item 1):** `entrada_link.py` (canal da fase 1, §5.4), AM-0061, localizador = o número do item no BCR: **EN-1724** (o bem, item 66089, página), **EN-1725** (dossiê de registro, item 66631, PDF), **EN-1726** (parecer técnico de registro, item 66637, PDF), **EN-1727** (parecer técnico de revalidação de 2025, item 126109, PDF) (EX-0060 a EX-0063). `ler_fonte.py --rotulo K110-BCR` (o log deixou de dizer "K-109" fixo): as quatro com texto (a página, 12.363 car.; o dossiê, 207 p.; o parecer de registro, 40 p.; o de revalidação, 29 p.), na mesma pasta temporária do K-109, que não se apaga (item 3).
+- [x] **Pessoas por código opaco (padrão do K-104):** `gravar_extracao.py` 0.2: a voz de pessoa vem do avaliador só por rótulo local; o nome fica num arquivo de rótulos fora do Git; o script dá o P-nnnn, grava a Pessoa só com código e papéis e a tabela código → nome em `C:/Antigravity/Cultura Liquida - privado/pessoas/` (valor tabela_codigo_nome); Trecho com nome no texto exato reprova; no "antes" e no "depois", o contexto é cortado no nome. `procurar_dado_pessoal.py` procura também os nomes da tabela privada (sem imprimi-los). Três casos novos em `testes/extracao/`; `rodar_testes.py`: OK 197 · FALHA 0 · PENDENTE 5.
+
+### Bloco 8 — Termos, ficha, grafo, Educação e wiki local
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -322,3 +334,5 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 21/10–28/10/2026 | desenvolvimento | K-108 | 73 | 78 | 5 | 51.898 | 8 | janela de 5 h: 39% ao abrir; A1 pela retomada do K-108; Opus 5.5 médio; tetos do projeto e do desenvolvimento suspensos para o K-108 por Vicente (ficam a linha de 90% e a regra da janela de 5 h) |
 | 21/10–28/10/2026 | desenvolvimento | K-108 (retomada) e K-108b | 78 | 91 | 13 | 135.915 | 24 | janela de 5 h: 20% ao abrir; Opus 5.5 médio; tetos do projeto e do desenvolvimento seguem suspensos por Vicente (ficam a linha de 90% e a regra da janela de 5 h); A1 pela abertura do K-109 (27/10, antes da renovação) |
 | 28/10–04/11/2026 | desenvolvimento | K-109 | 1 | 17 | 16 | 1.064.272 | 166 | janela de 5 h: 5% ao abrir (29/10); Opus 5.5 médio; aberta em 27/10 e parada pela linha de 90% (91%, semana anterior); retomada em 29/10 sem a leitura, dada em seguida; estimativa da conta 19,0 pp; ao fechar, 17% (semanal) e 99% (janela de 5 h), lidos por Vicente |
+| 28/10–04/11/2026 | planejamento | conversa de planejamento de 29/10 (fora do quadro) | 17 | 23 | 6 | — | — | A1 pela abertura do K-110; atribuída ao planejamento pela fala de Vicente (os endereços do BCR conferidos nessa conversa); pode misturar uso de fora do projeto |
+| 28/10–04/11/2026 | desenvolvimento | K-110 | 23 | a informar | — | — | — | janela de 5 h: 35% ao abrir; Opus 5.5 médio |
