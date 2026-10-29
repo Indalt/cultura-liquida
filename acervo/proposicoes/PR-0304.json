@@ -1,0 +1,20 @@
+{
+  "id": "PR-0304",
+  "clb": "CL-0001",
+  "atributo": "lugar",
+  "valor": "o complexo Amarante-Palmeirais, ligado por via fluvial e estrada secundária, parece ter sido um dos principais difusores da cajuína no Piauí",
+  "periodo": {
+    "referido": "século XX"
+  },
+  "evidencias": [
+    "EV-0339"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

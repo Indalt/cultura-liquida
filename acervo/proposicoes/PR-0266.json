@@ -1,0 +1,20 @@
+{
+  "id": "PR-0266",
+  "clb": "CL-0001",
+  "atributo": "recipiente",
+  "valor": "a tia filtrava o suco pingo por pingo nas garrafas grandes de cerveja",
+  "periodo": {
+    "referido": "meados do século XX"
+  },
+  "evidencias": [
+    "EV-0301"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

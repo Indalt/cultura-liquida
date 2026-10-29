@@ -1,0 +1,29 @@
+{
+  "id": "TR-0283",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 28 do PDF; car. 71644-71755 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "afirma que as senhoras de Amarante \"inventaram de fazer a cajuína\" quando ela tinha em torno de 10 anos – 1942.",
+  "antes": ", com 77 anos, ",
+  "depois": " - Dona Maria do Carmo, de 103 anos, afirma que começou a fa",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

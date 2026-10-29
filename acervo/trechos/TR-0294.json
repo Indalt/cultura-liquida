@@ -1,0 +1,29 @@
+{
+  "id": "TR-0294",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 132 do PDF; car. 366102-366250 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "a gente pegava um pano de prato [...] e amarrava uns cordões dos lados, fazia uma rede, então naquela rede a gente colocava o caju moído e espremido",
+  "antes": " espremer manual, passado na peneira, e aí ia filtrar [...] ",
+  "depois": ". Antes de colocar na rede a gente tem que desmanchar aquela",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

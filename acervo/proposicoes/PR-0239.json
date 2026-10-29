@@ -1,0 +1,20 @@
+{
+  "id": "PR-0239",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "indícios da história oral remetem à introdução da cajuína na região em torno do final da década de 1920 e início da de 1930",
+  "periodo": {
+    "referido": "final dos anos 1920 e início dos 1930"
+  },
+  "evidencias": [
+    "EV-0273"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

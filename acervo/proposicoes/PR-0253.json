@@ -1,0 +1,20 @@
+{
+  "id": "PR-0253",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "a cajuína é lembrada como doce memória do tempo em que as senhoras faziam tudo, doces, bolos e cajuína",
+  "periodo": {
+    "referido": "décadas de 1930 a 1950"
+  },
+  "evidencias": [
+    "EV-0288"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

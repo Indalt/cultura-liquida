@@ -1,0 +1,20 @@
+{
+  "id": "PR-0276",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "as redes de tecido foram substituídas por filtros de tecido sobrepostos, para facilitar a repetição das filtragens",
+  "periodo": {
+    "referido": "a partir de 1960"
+  },
+  "evidencias": [
+    "EV-0311"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

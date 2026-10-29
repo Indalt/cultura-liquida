@@ -1,0 +1,20 @@
+{
+  "id": "PR-0254",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "muita cajuína se servia nas festas, e era o champagne do Piauí",
+  "periodo": {
+    "referido": "décadas de 1930 a 1950"
+  },
+  "evidencias": [
+    "EV-0289"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

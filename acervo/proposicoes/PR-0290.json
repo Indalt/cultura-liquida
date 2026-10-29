@@ -1,0 +1,20 @@
+{
+  "id": "PR-0290",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "há um movimento de apropriação do modo de fazer da cajuína por um segmento novo, os assentados, com apoio do SEBRAE e da EMATER, que utilizam o saber local",
+  "periodo": {
+    "referido": "anos 2000"
+  },
+  "evidencias": [
+    "EV-0325"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

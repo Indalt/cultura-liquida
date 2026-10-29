@@ -1,0 +1,20 @@
+{
+  "id": "PR-0267",
+  "clb": "CL-0001",
+  "atributo": "risco",
+  "valor": "no cozimento em lata de querosene havia garrafa que pipocava e quebrava as telhas da casa",
+  "periodo": {
+    "referido": "meados do século XX"
+  },
+  "evidencias": [
+    "EV-0302"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

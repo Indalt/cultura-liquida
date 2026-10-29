@@ -1,0 +1,29 @@
+{
+  "id": "TR-0261",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 15 do PDF; car. 35756-35931 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "é nessa rede que a cajuína circula como um emblema de pertencimento, capaz de alcançar regiões longínquas, contribuindo para aumentar o orgulho das produtoras por esse alcance",
+  "antes": "s, situados nas periferias das grandes cidades brasileiras, ",
+  "depois": " (algumas cajuínas chegam aos Estados Unidos, França, Holand",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

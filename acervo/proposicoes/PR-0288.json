@@ -1,0 +1,20 @@
+{
+  "id": "PR-0288",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "uma técnica da EMATER dá cursos para todo lado e as pessoas vão aprendendo a fazer cajuína",
+  "periodo": {
+    "referido": "anos 2000"
+  },
+  "evidencias": [
+    "EV-0323"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

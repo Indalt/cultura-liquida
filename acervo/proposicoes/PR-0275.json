@@ -1,0 +1,20 @@
+{
+  "id": "PR-0275",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "a produtora começou a fazer do jeito da mãe, com redinhas",
+  "periodo": {
+    "referido": "1960"
+  },
+  "evidencias": [
+    "EV-0310"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

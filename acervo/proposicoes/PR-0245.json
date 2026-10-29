@@ -1,0 +1,20 @@
+{
+  "id": "PR-0245",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "na região do médio Parnaíba e de Teresina se estabeleceu um complexo cultural de produção, consumo e circulação da cajuína, a que se atribuem limpeza, pureza, segurança e carinho",
+  "periodo": {
+    "referido": "últimas décadas até 2009"
+  },
+  "evidencias": [
+    "EV-0280"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

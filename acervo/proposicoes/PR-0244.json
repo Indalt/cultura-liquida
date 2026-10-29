@@ -1,0 +1,20 @@
+{
+  "id": "PR-0244",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento",
+  "valor": "o decreto que instaura a cajuína como bebida oficial do Estado é marcador da identidade da população local com a bebida",
+  "periodo": {
+    "referido": "anterior a 2009"
+  },
+  "evidencias": [
+    "EV-0279"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-0223",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "suco clarificado cozido em banho-maria em garrafas de vidro até caramelizar os açúcares, ficando amarelado e armazenável por até dois anos",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0254"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

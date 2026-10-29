@@ -1,0 +1,29 @@
+{
+  "id": "TR-0280",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 26 do PDF; car. 66706-66969 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Nessa região, um complexo cultural se estabeleceu ao longo das últimas décadas, que colaborou para firmar tal identidade através das atividades de produção, consumo e circulação de um bem ao qual se atribuem os significados de limpeza, pureza, segurança e carinho",
+  "antes": " u com a bebida, na região do médio Parnaíba e de Teresina. ",
+  "depois": " que aprofundaremos adiante. Tendo estabelecido tal identida",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

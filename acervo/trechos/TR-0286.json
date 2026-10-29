@@ -1,0 +1,29 @@
+{
+  "id": "TR-0286",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 128 do PDF; car. 354158-354394 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Nossas entrevistas, até o momento, revelam que todas essas indústrias nasceram da mesma forma tradicional que descreveremos mais adiante; originando-se do trabalho de uma senhora de família, detentora de terras onde o caju era plantado.",
+  "antes": "ndo algumas dessas atingido o nível de produção industrial. ",
+  "depois": " Protegida pela estrutura familiar que lhe conferia empregad",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

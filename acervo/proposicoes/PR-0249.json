@@ -1,0 +1,20 @@
+{
+  "id": "PR-0249",
+  "clb": "CL-0001",
+  "atributo": "lugar",
+  "valor": "a difusão mais antiga da cajuína identificada vai de Palmeirais, ligada por água e estradas vicinais a Amarante, para Amarante, Água Branca, Demerval Lobão, União e Monsenhor Gil",
+  "periodo": {
+    "referido": "século XX, a partir da década de 1920"
+  },
+  "evidencias": [
+    "EV-0284"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

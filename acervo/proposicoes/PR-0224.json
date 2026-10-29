@@ -1,0 +1,20 @@
+{
+  "id": "PR-0224",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "produção em pequenas unidades familiares de fundo de quintal, capitaneadas por mulheres, com ajuda de homens, familiares e empregados",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0255"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

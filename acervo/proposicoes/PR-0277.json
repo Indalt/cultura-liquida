@@ -1,0 +1,20 @@
+{
+  "id": "PR-0277",
+  "clb": "CL-0001",
+  "atributo": "recipiente",
+  "valor": "limitar o líquido ao gogó da garrafa diminuiu muito as garrafas quebradas no banho-maria",
+  "periodo": {
+    "referido": "a partir de 1960"
+  },
+  "evidencias": [
+    "EV-0312"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

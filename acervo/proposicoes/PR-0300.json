@@ -1,0 +1,20 @@
+{
+  "id": "PR-0300",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "em Amarante a cajuína é instrumento para aumentar a renda e melhorar a qualidade de vida das famílias de assentados",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0335"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

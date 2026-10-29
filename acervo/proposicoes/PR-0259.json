@@ -1,0 +1,20 @@
+{
+  "id": "PR-0259",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "faz-se uma rede de um pano de prato com cordões amarrados nos lados, onde se coloca o caju moído e espremido",
+  "periodo": {
+    "referido": "década de 1940-1950"
+  },
+  "evidencias": [
+    "EV-0294"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

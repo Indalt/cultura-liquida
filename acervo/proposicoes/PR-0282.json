@@ -1,0 +1,20 @@
+{
+  "id": "PR-0282",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "da década de 1980 em diante pôde-se produzir mais cajuína, porque já havia bastante cajueiro",
+  "periodo": {
+    "referido": "década de 1980 em diante"
+  },
+  "evidencias": [
+    "EV-0317"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

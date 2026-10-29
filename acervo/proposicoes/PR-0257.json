@@ -1,0 +1,20 @@
+{
+  "id": "PR-0257",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "a cajuína era servida nas reuniões sociais, gelada com gelo, porque não havia geladeira doméstica",
+  "periodo": {
+    "referido": "década de 1930"
+  },
+  "evidencias": [
+    "EV-0292"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "FO-0034",
+  "referencia": {
+    "titulo": "Produção artesanal e práticas socioculturais associadas à cajuína no Piauí (dossiê de registro)",
+    "instituicao": "Iphan, contratado à MW Projetos Socioambientais pela Superintendência do Iphan no Piauí",
+    "ano": 2009,
+    "tipo": "dossiê de registro",
+    "link_permanente": "https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66631/Cajuina_de_Dossie-Producao-artesanal-e-praticas-socioculturais-associ_.pdf"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2009",
+  "url": "https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66631/Cajuina_de_Dossie-Producao-artesanal-e-praticas-socioculturais-associ_.pdf",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-10-29",
+  "perspectiva": "equipe contratada pelo Iphan (pesquisa de campo, bibliografia e entrevistas; perspectiva institucional do registro)",
+  "deriva_de": [],
+  "entrada": "EN-1725",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66631/Cajuina_de_Dossie-Producao-artesanal-e-praticas-socioculturais-associ_.pdf (pdf); de onde a fonte diz que tira a informação: três relatórios parciais, pesquisa de campo e entrevistas de out. 2008 a set. 2009, e bibliografia (segundo o dossiê)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

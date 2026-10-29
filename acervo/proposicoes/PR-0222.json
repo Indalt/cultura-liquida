@@ -1,0 +1,20 @@
+{
+  "id": "PR-0222",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "suco do caju separado do tanino por agente precipitador (resina do cajueiro, cola de sapateiro, hoje gelatina em pó) e coado várias vezes em redes ou funis de pano",
+  "periodo": {
+    "referido": "resina no início; cola de sapateiro por muitas décadas; gelatina em pó em 2009"
+  },
+  "evidencias": [
+    "EV-0253"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

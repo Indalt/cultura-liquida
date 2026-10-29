@@ -1,0 +1,31 @@
+{
+  "id": "EV-0335",
+  "trecho": "TR-0335",
+  "proposicao": "PR-0300",
+  "sentido": "a favor",
+  "voz": {
+    "tipo": "autor",
+    "papel": "equipe do dossiê de registro"
+  },
+  "lugares": {
+    "pratica": "LU-0037",
+    "publicacao": "LU-0032",
+    "pesquisa": "LU-0033"
+  },
+  "estado": "não conferida",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

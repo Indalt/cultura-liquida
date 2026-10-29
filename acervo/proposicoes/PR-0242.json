@@ -1,0 +1,20 @@
+{
+  "id": "PR-0242",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "uma entrevistada nascida em 1927 afirma que a mãe já produzia e servia cajuína à família, às visitas e em casamentos e batizados",
+  "periodo": {
+    "referido": "década de 1930"
+  },
+  "evidencias": [
+    "EV-0276"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

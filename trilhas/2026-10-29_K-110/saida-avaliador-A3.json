@@ -1,0 +1,1831 @@
+{
+ "lote": "K110-A3",
+ "entradas": [
+  {
+   "entrada": "EN-1725",
+   "estado": "extraído",
+   "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+   },
+   "sustenta_aviso_saude_politica": true,
+   "motivo_marca": "Marcadas: o decreto que instaura a cajuína como bebida oficial do Estado; a visão do SEBRAE de industrialização de grande porte; os treinamentos e cursos da EMATER e do SEBRAE; a fala sobre a Reforma Agrária; a apropriação do modo de fazer por assentados com apoio institucional (política); o açúcar na cajuína com estoque separado para diabéticos (saúde).",
+   "fonte": {
+    "titulo": "Produção artesanal e práticas socioculturais associadas à cajuína no Piauí (dossiê de registro)",
+    "tipo_documento": "dossiê de registro",
+    "ano": 2009,
+    "instituicao": "Iphan, contratado à MW Projetos Socioambientais pela Superintendência do Iphan no Piauí",
+    "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+    "perspectiva": "equipe contratada pelo Iphan (pesquisa de campo, bibliografia e entrevistas; perspectiva institucional do registro)",
+    "deriva_de": "três relatórios parciais, pesquisa de campo e entrevistas de out. 2008 a set. 2009, e bibliografia (segundo o dossiê)"
+   },
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-1.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|suco do caju separado do tanino por agente precipitador (resina do cajueiro, cola de sapateiro, hoje gelatina em pó) e coado várias vezes em redes ou funis de pano",
+     "atributo": "processo e modo de fazer",
+     "valor": "suco do caju separado do tanino por agente precipitador (resina do cajueiro, cola de sapateiro, hoje gelatina em pó) e coado várias vezes em redes ou funis de pano",
+     "periodo_referido": "resina no início; cola de sapateiro por muitas décadas; gelatina em pó em 2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-2.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|suco clarificado cozido em banho-maria em garrafas de vidro até caramelizar os açúcares, ficando amarelado e armazenável por até dois anos",
+     "atributo": "processo e modo de fazer",
+     "valor": "suco clarificado cozido em banho-maria em garrafas de vidro até caramelizar os açúcares, ficando amarelado e armazenável por até dois anos",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-3.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|produção em pequenas unidades familiares de fundo de quintal, capitaneadas por mulheres, com ajuda de homens, familiares e empregados",
+     "atributo": "quem pratica",
+     "valor": "produção em pequenas unidades familiares de fundo de quintal, capitaneadas por mulheres, com ajuda de homens, familiares e empregados",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-4.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|é comum as cajuínas receberem o nome de matriarcas da família ou de mulheres importantes da comunidade",
+     "atributo": "nomes e variantes",
+     "valor": "é comum as cajuínas receberem o nome de matriarcas da família ou de mulheres importantes da comunidade",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-5.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|o advento dos refrigerantes retraiu a produção e o hábito da cajuína, com retomada e valorização do costume desde a década de 1970",
+     "atributo": "mudança",
+     "valor": "o advento dos refrigerantes retraiu a produção e o hábito da cajuína, com retomada e valorização do costume desde a década de 1970",
+     "periodo_referido": "década de 1970 em diante",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-6.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|servir cajuína em rituais de hospitalidade reforça vínculos de reciprocidade, na lógica do dom e contradom",
+     "atributo": "significados",
+     "valor": "servir cajuína em rituais de hospitalidade reforça vínculos de reciprocidade, na lógica do dom e contradom",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-7.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|à cajuína se atribuem cristalinidade, pureza, higiene, limpeza, cuidado e o talento feminino de mulheres prendadas, valores transferidos à família e ao lugar de origem",
+     "atributo": "significados",
+     "valor": "à cajuína se atribuem cristalinidade, pureza, higiene, limpeza, cuidado e o talento feminino de mulheres prendadas, valores transferidos à família e ao lugar de origem",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-8.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a identificação da população piauiense com a cajuína aparece em nomes de ruas, hotel, bares, lojas, corrida e projetos universitários",
+     "atributo": "significados",
+     "valor": "a identificação da população piauiense com a cajuína aparece em nomes de ruas, hotel, bares, lojas, corrida e projetos universitários",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-9.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|a cajuína circula pela rede de famílias extensas como emblema de pertencimento, chegando a regiões distantes, o que aumenta o orgulho das produtoras",
+     "atributo": "uso e consumo",
+     "valor": "a cajuína circula pela rede de famílias extensas como emblema de pertencimento, chegando a regiões distantes, o que aumenta o orgulho das produtoras",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-10.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|a bebida se originou entre famílias proprietárias de terras, e hoje muitas produtoras são senhoras urbanas de classe média ou sitiantes",
+     "atributo": "quem pratica",
+     "valor": "a bebida se originou entre famílias proprietárias de terras, e hoje muitas produtoras são senhoras urbanas de classe média ou sitiantes",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-11.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|o SEBRAE viu no Piauí condições de transformar a bebida tradicional em indústria de grande porte, capaz de atrair investimentos externos",
+     "atributo": "mudança",
+     "valor": "o SEBRAE viu no Piauí condições de transformar a bebida tradicional em indústria de grande porte, capaz de atrair investimentos externos",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-12.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|o modo de fazer estava em franco processo de apropriação por novos segmentos sociais, afastando-se das origens ligadas à aristocracia agrária",
+     "atributo": "mudança",
+     "valor": "o modo de fazer estava em franco processo de apropriação por novos segmentos sociais, afastando-se das origens ligadas à aristocracia agrária",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-13.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|cada família apresenta com orgulho as pequenas inovações que implementa nos instrumentos utilizados",
+     "atributo": "utensílio",
+     "valor": "cada família apresenta com orgulho as pequenas inovações que implementa nos instrumentos utilizados",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-14.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a memória coletiva piauiense aponta a cajuína como costume que sempre existiu na região, desde tempos imemoriais",
+     "atributo": "significados",
+     "valor": "a memória coletiva piauiense aponta a cajuína como costume que sempre existiu na região, desde tempos imemoriais",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-15.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|no Piauí o universo da cajuína assume maior complexidade, na produção artesanal familiar e no consumo cheios de simbolismo e de rituais de hospitalidade, que afirmam a identidade local",
+     "atributo": "significados",
+     "valor": "no Piauí o universo da cajuína assume maior complexidade, na produção artesanal familiar e no consumo cheios de simbolismo e de rituais de hospitalidade, que afirmam a identidade local",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-16.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|no Ceará, na última década do século XIX, aplicou-se à bebida que se produzia na região a técnica francesa de Appert (pasteurização em banho-maria), segundo a bibliografia cearense",
+     "atributo": "processo e modo de fazer",
+     "valor": "no Ceará, na última década do século XIX, aplicou-se à bebida que se produzia na região a técnica francesa de Appert (pasteurização em banho-maria), segundo a bibliografia cearense",
+     "periodo_referido": "1890-1899",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Ceará (CE)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-17.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|no Ceará (Pacajus) a cajuína era coada em redinhas e em vasilhame de cano de flandres, alumínio ou zinco, método que uma produtora piauiense achou trabalhoso e de muito espaço",
+     "atributo": "utensílio",
+     "valor": "no Ceará (Pacajus) a cajuína era coada em redinhas e em vasilhame de cano de flandres, alumínio ou zinco, método que uma produtora piauiense achou trabalhoso e de muito espaço",
+     "periodo_referido": "década de 1980",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V13"
+     },
+     "lugares": {
+      "pratica": "Pacajus, CE",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-18.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|na garrafa, a produtora coloca um funil com um paninho para coar a cajuína",
+     "atributo": "utensílio",
+     "valor": "na garrafa, a produtora coloca um funil com um paninho para coar a cajuína",
+     "periodo_referido": "década de 1980",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V13"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-19.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|relato de que a produção no Rio Grande do Norte é muito diferente, não clarificada, mais parecida com o vinho de caju",
+     "atributo": "lugar",
+     "valor": "relato de que a produção no Rio Grande do Norte é muito diferente, não clarificada, mais parecida com o vinho de caju",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Rio Grande do Norte (RN)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-20.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|em 1912 o produto foi registrado como cajuína na Junta Comercial de Fortaleza, segundo a bibliografia cearense",
+     "atributo": "reconhecimento",
+     "valor": "em 1912 o produto foi registrado como cajuína na Junta Comercial de Fortaleza, segundo a bibliografia cearense",
+     "periodo_referido": "1912",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Fortaleza, CE",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-21.json",
+     "estado_trecho": "localizado",
+     "chave": "época|indícios da história oral remetem à introdução da cajuína na região em torno do final da década de 1920 e início da de 1930",
+     "atributo": "época",
+     "valor": "indícios da história oral remetem à introdução da cajuína na região em torno do final da década de 1920 e início da de 1930",
+     "periodo_referido": "final dos anos 1920 e início dos 1930",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-22.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|produtoras dizem ter aprendido a fazer cajuína por um livrinho de receita que o marido trouxe do Ceará",
+     "atributo": "transmissão",
+     "valor": "produtoras dizem ter aprendido a fazer cajuína por um livrinho de receita que o marido trouxe do Ceará",
+     "periodo_referido": "anos 1920-1930",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-23.json",
+     "estado_trecho": "localizado",
+     "chave": "época|uma família de Valença do Piauí considera pioneira da cajuína no Piauí uma antepassada e oferece como prova um rótulo impresso na década de 1930",
+     "atributo": "época",
+     "valor": "uma família de Valença do Piauí considera pioneira da cajuína no Piauí uma antepassada e oferece como prova um rótulo impresso na década de 1930",
+     "periodo_referido": "década de 1930",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Valença do Piauí, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-24.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|uma entrevistada nascida em 1927 afirma que a mãe já produzia e servia cajuína à família, às visitas e em casamentos e batizados",
+     "atributo": "transmissão",
+     "valor": "uma entrevistada nascida em 1927 afirma que a mãe já produzia e servia cajuína à família, às visitas e em casamentos e batizados",
+     "periodo_referido": "década de 1930",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-25.json",
+     "estado_trecho": "localizado",
+     "chave": "época|antiguidade do modo de fazer comprovada com segurança de oitenta anos no Piauí, com maior intensidade a partir da década de 1940",
+     "atributo": "época",
+     "valor": "antiguidade do modo de fazer comprovada com segurança de oitenta anos no Piauí, com maior intensidade a partir da década de 1940",
+     "periodo_referido": "cerca de 1929 em diante",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-26.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|o imaginário popular atribui à cajuína ancestralidade muito mais remota do que a antiguidade comprovada: algo que sempre se fez, feito há muitos séculos na região",
+     "atributo": "significados",
+     "valor": "o imaginário popular atribui à cajuína ancestralidade muito mais remota do que a antiguidade comprovada: algo que sempre se fez, feito há muitos séculos na região",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-27.json",
+     "estado_trecho": "localizado",
+     "chave": "reconhecimento|o decreto que instaura a cajuína como bebida oficial do Estado é marcador da identidade da população local com a bebida",
+     "atributo": "reconhecimento",
+     "valor": "o decreto que instaura a cajuína como bebida oficial do Estado é marcador da identidade da população local com a bebida",
+     "periodo_referido": "anterior a 2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "reconhecimento pelo grupo",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-28.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|na região do médio Parnaíba e de Teresina se estabeleceu um complexo cultural de produção, consumo e circulação da cajuína, a que se atribuem limpeza, pureza, segurança e carinho",
+     "atributo": "significados",
+     "valor": "na região do médio Parnaíba e de Teresina se estabeleceu um complexo cultural de produção, consumo e circulação da cajuína, a que se atribuem limpeza, pureza, segurança e carinho",
+     "periodo_referido": "últimas décadas até 2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "médio Parnaíba e Teresina (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-29.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|em Amarante, a mais reconhecida difusora do modo de fazer o passou à sobrinha e a uma geração de senhoras amigas e vizinhas da avenida principal",
+     "atributo": "transmissão",
+     "valor": "em Amarante, a mais reconhecida difusora do modo de fazer o passou à sobrinha e a uma geração de senhoras amigas e vizinhas da avenida principal",
+     "periodo_referido": "século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-30.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|no final do século XIX, em Amarante, cortava-se o suco do caju no tacho de cobre, como no preparo do vinho de caju, interrompendo antes da fermentação para produzir o refresco",
+     "atributo": "processo e modo de fazer",
+     "valor": "no final do século XIX, em Amarante, cortava-se o suco do caju no tacho de cobre, como no preparo do vinho de caju, interrompendo antes da fermentação para produzir o refresco",
+     "periodo_referido": "final do século XIX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-31.json",
+     "estado_trecho": "localizado",
+     "chave": "época|uma entrevistada de 77 anos afirma que as senhoras de Amarante inventaram de fazer a cajuína quando ela tinha cerca de 10 anos, por volta de 1942",
+     "atributo": "época",
+     "valor": "uma entrevistada de 77 anos afirma que as senhoras de Amarante inventaram de fazer a cajuína quando ela tinha cerca de 10 anos, por volta de 1942",
+     "periodo_referido": "por volta de 1942",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V14"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-32.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|a difusão mais antiga da cajuína identificada vai de Palmeirais, ligada por água e estradas vicinais a Amarante, para Amarante, Água Branca, Demerval Lobão, União e Monsenhor Gil",
+     "atributo": "lugar",
+     "valor": "a difusão mais antiga da cajuína identificada vai de Palmeirais, ligada por água e estradas vicinais a Amarante, para Amarante, Água Branca, Demerval Lobão, União e Monsenhor Gil",
+     "periodo_referido": "século XX, a partir da década de 1920",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Palmeirais, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-33.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|há fortes indícios de a cajuína ter se disseminado no médio Parnaíba como refresco servido aos navegantes",
+     "atributo": "uso e consumo",
+     "valor": "há fortes indícios de a cajuína ter se disseminado no médio Parnaíba como refresco servido aos navegantes",
+     "periodo_referido": "final do século XIX e século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "médio Parnaíba (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-34.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|as indústrias maiores de cajuína nasceram do trabalho tradicional de uma senhora de família detentora de terras onde o caju era plantado",
+     "atributo": "quem pratica",
+     "valor": "as indústrias maiores de cajuína nasceram do trabalho tradicional de uma senhora de família detentora de terras onde o caju era plantado",
+     "periodo_referido": "século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-35.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|há empregados que fabricam para o patrão ou fazem sua cota própria com os frutos e instrumentos do patrão, depois de completar a cota dele",
+     "atributo": "quem pratica",
+     "valor": "há empregados que fabricam para o patrão ou fazem sua cota própria com os frutos e instrumentos do patrão, depois de completar a cota dele",
+     "periodo_referido": "2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Piauí (PI)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-36.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína é lembrada como doce memória do tempo em que as senhoras faziam tudo, doces, bolos e cajuína",
+     "atributo": "significados",
+     "valor": "a cajuína é lembrada como doce memória do tempo em que as senhoras faziam tudo, doces, bolos e cajuína",
+     "periodo_referido": "décadas de 1930 a 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V15"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-37.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|muita cajuína se servia nas festas, e era o champagne do Piauí",
+     "atributo": "uso e consumo",
+     "valor": "muita cajuína se servia nas festas, e era o champagne do Piauí",
+     "periodo_referido": "décadas de 1930 a 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V15"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-38.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|na década de 1930 Teresina era circundada por sítios de onde vinha o caju para as casas, onde as senhoras produziam a cajuína de forma artesanal",
+     "atributo": "lugar",
+     "valor": "na década de 1930 Teresina era circundada por sítios de onde vinha o caju para as casas, onde as senhoras produziam a cajuína de forma artesanal",
+     "periodo_referido": "década de 1930",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-39.json",
+     "estado_trecho": "localizado",
+     "chave": "significados|a cajuína era bebida muito fina e saborosa",
+     "atributo": "significados",
+     "valor": "a cajuína era bebida muito fina e saborosa",
+     "periodo_referido": "décadas de 1930 a 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V15"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-40.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|a cajuína era servida nas reuniões sociais, gelada com gelo, porque não havia geladeira doméstica",
+     "atributo": "uso e consumo",
+     "valor": "a cajuína era servida nas reuniões sociais, gelada com gelo, porque não havia geladeira doméstica",
+     "periodo_referido": "década de 1930",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-41.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o caju era moído em máquina de moer carne, espremido à mão, passado na peneira e então filtrado",
+     "atributo": "processo e modo de fazer",
+     "valor": "o caju era moído em máquina de moer carne, espremido à mão, passado na peneira e então filtrado",
+     "periodo_referido": "década de 1940-1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V16"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-42.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|faz-se uma rede de um pano de prato com cordões amarrados nos lados, onde se coloca o caju moído e espremido",
+     "atributo": "utensílio",
+     "valor": "faz-se uma rede de um pano de prato com cordões amarrados nos lados, onde se coloca o caju moído e espremido",
+     "periodo_referido": "década de 1940-1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V16"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-43.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|com a cola de sapateiro a água do caju cortava, separando o tanino, e se filtrava usando o bagaço do caju como filtro",
+     "atributo": "processo e modo de fazer",
+     "valor": "com a cola de sapateiro a água do caju cortava, separando o tanino, e se filtrava usando o bagaço do caju como filtro",
+     "periodo_referido": "década de 1940-1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V16"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-44.json",
+     "estado_trecho": "localizado",
+     "chave": "época|frutas colhidas com chuva dão uma água que não aceita o corte, e quando há chuvas deve-se esperar para preparar a cajuína",
+     "atributo": "época",
+     "valor": "frutas colhidas com chuva dão uma água que não aceita o corte, e quando há chuvas deve-se esperar para preparar a cajuína",
+     "periodo_referido": "safra do caju, 2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-45.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|o caju de semiárido é mais doce, pelo menor índice de chuvas",
+     "atributo": "insumo",
+     "valor": "o caju de semiárido é mais doce, pelo menor índice de chuvas",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Simplício Mendes, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-46.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o saber do modo de fazer inclui uma interdição simbólica entre água normal e água do caju, cuja incompatibilidade atrapalha o processo e compromete o resultado",
+     "atributo": "processo e modo de fazer",
+     "valor": "o saber do modo de fazer inclui uma interdição simbólica entre água normal e água do caju, cuja incompatibilidade atrapalha o processo e compromete o resultado",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-47.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|o saber é transmitido envolvendo homens como intermediários e parceiros, mas a mulher segue como portadora do saber, mesmo empregada ou moradora, com liderança feminina no processo",
+     "atributo": "transmissão",
+     "valor": "o saber é transmitido envolvendo homens como intermediários e parceiros, mas a mulher segue como portadora do saber, mesmo empregada ou moradora, com liderança feminina no processo",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-48.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a tia moía o caju no moinho de moer carne, cortava o suco com cola de sapateiro e passava a água cortada numa rede de pano",
+     "atributo": "processo e modo de fazer",
+     "valor": "a tia moía o caju no moinho de moer carne, cortava o suco com cola de sapateiro e passava a água cortada numa rede de pano",
+     "periodo_referido": "meados do século XX (tia falecida em 1988)",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-49.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|a tia filtrava o suco pingo por pingo nas garrafas grandes de cerveja",
+     "atributo": "recipiente",
+     "valor": "a tia filtrava o suco pingo por pingo nas garrafas grandes de cerveja",
+     "periodo_referido": "meados do século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-50.json",
+     "estado_trecho": "localizado",
+     "chave": "risco|no cozimento em lata de querosene havia garrafa que pipocava e quebrava as telhas da casa",
+     "atributo": "risco",
+     "valor": "no cozimento em lata de querosene havia garrafa que pipocava e quebrava as telhas da casa",
+     "periodo_referido": "meados do século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-51.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o caju não pode receber água, porque a água do caju não corta",
+     "atributo": "processo e modo de fazer",
+     "valor": "o caju não pode receber água, porque a água do caju não corta",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-52.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|para um balde de 10 ou 12 litros de água de caju, uma colher grande de gelatina, que repousa de 10 a 15 minutos para cortar",
+     "atributo": "processo e modo de fazer",
+     "valor": "para um balde de 10 ou 12 litros de água de caju, uma colher grande de gelatina, que repousa de 10 a 15 minutos para cortar",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-53.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|filtra-se com um funil e dois ou três coadores de café, um dentro do outro",
+     "atributo": "utensílio",
+     "valor": "filtra-se com um funil e dois ou três coadores de café, um dentro do outro",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-54.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o banho-maria não passa de uma hora, porque a cajuína fica escura e grossa e, com o tempo, amarga",
+     "atributo": "processo e modo de fazer",
+     "valor": "o banho-maria não passa de uma hora, porque a cajuína fica escura e grossa e, com o tempo, amarga",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-55.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|a produtora ensinou e continua ensinando a fabricar cajuína a muita gente em Teresina",
+     "atributo": "transmissão",
+     "valor": "a produtora ensinou e continua ensinando a fabricar cajuína a muita gente em Teresina",
+     "periodo_referido": "2008",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "quem ensinou",
+      "rotulo_pessoa": "V17"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-56.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|o bagaço do caju, posto dentro de um saco de algodãozinho, servia de filtro",
+     "atributo": "utensílio",
+     "valor": "o bagaço do caju, posto dentro de um saco de algodãozinho, servia de filtro",
+     "periodo_referido": "década de 1940",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V18"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-57.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|na década de 1940 o modo de fazer cajuína já atravessava as fronteiras sociais, chegando a famílias pobres",
+     "atributo": "transmissão",
+     "valor": "na década de 1940 o modo de fazer cajuína já atravessava as fronteiras sociais, chegando a famílias pobres",
+     "periodo_referido": "década de 1940",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-58.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|a produtora começou a fazer do jeito da mãe, com redinhas",
+     "atributo": "utensílio",
+     "valor": "a produtora começou a fazer do jeito da mãe, com redinhas",
+     "periodo_referido": "1960",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V13"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-59.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|as redes de tecido foram substituídas por filtros de tecido sobrepostos, para facilitar a repetição das filtragens",
+     "atributo": "utensílio",
+     "valor": "as redes de tecido foram substituídas por filtros de tecido sobrepostos, para facilitar a repetição das filtragens",
+     "periodo_referido": "a partir de 1960",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-60.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|limitar o líquido ao gogó da garrafa diminuiu muito as garrafas quebradas no banho-maria",
+     "atributo": "recipiente",
+     "valor": "limitar o líquido ao gogó da garrafa diminuiu muito as garrafas quebradas no banho-maria",
+     "periodo_referido": "a partir de 1960",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-61.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|após o envase, o líquido vai à fervura em banho-maria por trinta minutos",
+     "atributo": "processo e modo de fazer",
+     "valor": "após o envase, o líquido vai à fervura em banho-maria por trinta minutos",
+     "periodo_referido": "a partir de 1960",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-62.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|da década de 1950 a 1960 a produção, embora artesanal, volta-se à venda, mantendo o lugar no cotidiano familiar e nos rituais de hospitalidade",
+     "atributo": "mudança",
+     "valor": "da década de 1950 a 1960 a produção, embora artesanal, volta-se à venda, mantendo o lugar no cotidiano familiar e nos rituais de hospitalidade",
+     "periodo_referido": "décadas de 1950 e 1960",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-63.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|aos modos tradicionais de transmissão somam-se os treinamentos institucionais da EMATER e do SEBRAE",
+     "atributo": "transmissão",
+     "valor": "aos modos tradicionais de transmissão somam-se os treinamentos institucionais da EMATER e do SEBRAE",
+     "periodo_referido": "a partir dos anos 2000",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-64.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|o modo de fazer tem estrutura comum, com pequenas variações que não comprometem o saber fazer básico",
+     "atributo": "processo e modo de fazer",
+     "valor": "o modo de fazer tem estrutura comum, com pequenas variações que não comprometem o saber fazer básico",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Teresina, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-65.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|da década de 1980 em diante pôde-se produzir mais cajuína, porque já havia bastante cajueiro",
+     "atributo": "mudança",
+     "valor": "da década de 1980 em diante pôde-se produzir mais cajuína, porque já havia bastante cajueiro",
+     "periodo_referido": "década de 1980 em diante",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre"
+     },
+     "lugares": {
+      "pratica": "Monsenhor Gil, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-66.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|os maridos, vendo que a cajuína era boa, plantaram caju nos quintais para as produtoras fazerem cajuína",
+     "atributo": "insumo",
+     "valor": "os maridos, vendo que a cajuína era boa, plantaram caju nos quintais para as produtoras fazerem cajuína",
+     "periodo_referido": "meados do século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre"
+     },
+     "lugares": {
+      "pratica": "Monsenhor Gil, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-67.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|o trabalho da cajuína é feito pela família imediata e dois ajudantes pagos, e a cajuína é vendida na beira da estrada",
+     "atributo": "quem pratica",
+     "valor": "o trabalho da cajuína é feito pela família imediata e dois ajudantes pagos, e a cajuína é vendida na beira da estrada",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Monsenhor Gil, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-68.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|nas casas dos ricos a cajuína era guardada como alimento para pessoas idosas, que não faz mal, e servida aos amigos",
+     "atributo": "uso e consumo",
+     "valor": "nas casas dos ricos a cajuína era guardada como alimento para pessoas idosas, que não faz mal, e servida aos amigos",
+     "periodo_referido": "meados do século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V20"
+     },
+     "lugares": {
+      "pratica": "Altos, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-69.json",
+     "estado_trecho": "localizado",
+     "chave": "recipiente|a produtora tem muita dificuldade de conseguir garrafas e oferece a cajuína mais barata a quem devolve os vasilhames",
+     "atributo": "recipiente",
+     "valor": "a produtora tem muita dificuldade de conseguir garrafas e oferece a cajuína mais barata a quem devolve os vasilhames",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Altos, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-70.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|uma produtora foi fundamental na propagação do modo de fazer cajuína entre os assentados, que usam o liquidificador como ela",
+     "atributo": "transmissão",
+     "valor": "uma produtora foi fundamental na propagação do modo de fazer cajuína entre os assentados, que usam o liquidificador como ela",
+     "periodo_referido": "anos 2000",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Altos, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-71.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|uma técnica da EMATER dá cursos para todo lado e as pessoas vão aprendendo a fazer cajuína",
+     "atributo": "transmissão",
+     "valor": "uma técnica da EMATER dá cursos para todo lado e as pessoas vão aprendendo a fazer cajuína",
+     "periodo_referido": "anos 2000",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre"
+     },
+     "lugares": {
+      "pratica": "Altos, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": true,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-72.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|um assentado afirma que só conseguiu montar o empreendimento de produção da cajuína graças à Reforma Agrária",
+     "atributo": "mudança",
+     "valor": "um assentado afirma que só conseguiu montar o empreendimento de produção da cajuína graças à Reforma Agrária",
+     "periodo_referido": "anos 2000",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre"
+     },
+     "lugares": {
+      "pratica": "Altos, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": true,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-73.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|há um movimento de apropriação do modo de fazer da cajuína por um segmento novo, os assentados, com apoio do SEBRAE e da EMATER, que utilizam o saber local",
+     "atributo": "mudança",
+     "valor": "há um movimento de apropriação do modo de fazer da cajuína por um segmento novo, os assentados, com apoio do SEBRAE e da EMATER, que utilizam o saber local",
+     "periodo_referido": "anos 2000",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Altos, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-74.json",
+     "estado_trecho": "localizado",
+     "chave": "quem pratica|o trabalho era feito pelos empregados, embora a patroa fosse reconhecida como a produtora",
+     "atributo": "quem pratica",
+     "valor": "o trabalho era feito pelos empregados, embora a patroa fosse reconhecida como a produtora",
+     "periodo_referido": "cerca de 1955",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V21"
+     },
+     "lugares": {
+      "pratica": "Água Branca, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-75.json",
+     "estado_trecho": "localizado",
+     "chave": "nomes e variantes|não há termo designativo da profissão cajuineira nas localidades visitadas; em Água Branca aparece com frequência a expressão moedor de caju",
+     "atributo": "nomes e variantes",
+     "valor": "não há termo designativo da profissão cajuineira nas localidades visitadas; em Água Branca aparece com frequência a expressão moedor de caju",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Água Branca, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-76.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a primeira produtora espremia o caju na mão, cortava com cola e tampava sem máquina de tampar",
+     "atributo": "processo e modo de fazer",
+     "valor": "a primeira produtora espremia o caju na mão, cortava com cola e tampava sem máquina de tampar",
+     "periodo_referido": "década de 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre"
+     },
+     "lugares": {
+      "pratica": "Água Branca, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-77.json",
+     "estado_trecho": "localizado",
+     "chave": "transmissão|uma produtora de Água Branca aprendeu a fazer cajuína por um livrinho de receitas que o marido trouxe do Ceará",
+     "atributo": "transmissão",
+     "valor": "uma produtora de Água Branca aprendeu a fazer cajuína por um livrinho de receitas que o marido trouxe do Ceará",
+     "periodo_referido": "século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Água Branca, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-78.json",
+     "estado_trecho": "localizado",
+     "chave": "composição|uma produtora e suas empregadas de Água Branca colocam açúcar na cajuína e mantêm estoque sem açúcar para diabéticos",
+     "atributo": "composição",
+     "valor": "uma produtora e suas empregadas de Água Branca colocam açúcar na cajuína e mantêm estoque sem açúcar para diabéticos",
+     "periodo_referido": "2008-2009",
+     "sentido": "divergente",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Água Branca, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-79.json",
+     "estado_trecho": "localizado",
+     "chave": "uso e consumo|em Amarante as moradoras da avenida central se visitavam e se ajudavam a fazer as cajuínas servidas nas recepções",
+     "atributo": "uso e consumo",
+     "valor": "em Amarante as moradoras da avenida central se visitavam e se ajudavam a fazer as cajuínas servidas nas recepções",
+     "periodo_referido": "anos 1940 e 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-80.json",
+     "estado_trecho": "localizado",
+     "chave": "processo e modo de fazer|a água do caju era cortada no tacho (de cobre), depois coada para fazer a cajuína, como aprendido de quem o pai fazia",
+     "atributo": "processo e modo de fazer",
+     "valor": "a água do caju era cortada no tacho (de cobre), depois coada para fazer a cajuína, como aprendido de quem o pai fazia",
+     "periodo_referido": "final do século XIX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V22"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "transmissão entre gerações",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-81.json",
+     "estado_trecho": "localizado",
+     "chave": "época|as senhoras de Amarante faziam primeiro o doce e o vinho e depois passaram a fazer a cajuína",
+     "atributo": "época",
+     "valor": "as senhoras de Amarante faziam primeiro o doce e o vinho e depois passaram a fazer a cajuína",
+     "periodo_referido": "décadas de 1940 e 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V14"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "identidade ou memória",
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-82.json",
+     "estado_trecho": "localizado",
+     "chave": "insumo|o cajual dá pouco trabalho: só roçar e colher, enquanto a roça se faz todo ano",
+     "atributo": "insumo",
+     "valor": "o cajual dá pouco trabalho: só roçar e colher, enquanto a roça se faz todo ano",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "pessoa citada em fala direta",
+      "papel": "detentor ou mestre",
+      "rotulo_pessoa": "V23"
+     },
+     "lugares": {
+      "pratica": "Água Branca, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false,
+     "ancora_w": true
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-83.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|em Amarante a cajuína é instrumento para aumentar a renda e melhorar a qualidade de vida das famílias de assentados",
+     "atributo": "mudança",
+     "valor": "em Amarante a cajuína é instrumento para aumentar a renda e melhorar a qualidade de vida das famílias de assentados",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-84.json",
+     "estado_trecho": "localizado",
+     "chave": "mudança|em Amarante houve grande declínio da cajuína com a entrada de refrigerantes no comércio local",
+     "atributo": "mudança",
+     "valor": "em Amarante houve grande declínio da cajuína com a entrada de refrigerantes no comércio local",
+     "periodo_referido": "após os anos 1950",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-85.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|um produtor de Amarante inventou vários sistemas de filtragem e prensas, feitos em funilarias de Teresina",
+     "atributo": "utensílio",
+     "valor": "um produtor de Amarante inventou vários sistemas de filtragem e prensas, feitos em funilarias de Teresina",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-86.json",
+     "estado_trecho": "localizado",
+     "chave": "utensílio|um produtor de Amarante adiciona ao moedor manual um pequeno motor para agilizar a moagem, a etapa de maior esforço físico",
+     "atributo": "utensílio",
+     "valor": "um produtor de Amarante adiciona ao moedor manual um pequeno motor para agilizar a moagem, a etapa de maior esforço físico",
+     "periodo_referido": "2008-2009",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": "recriação",
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a3-87.json",
+     "estado_trecho": "localizado",
+     "chave": "lugar|o complexo Amarante-Palmeirais, ligado por via fluvial e estrada secundária, parece ter sido um dos principais difusores da cajuína no Piauí",
+     "atributo": "lugar",
+     "valor": "o complexo Amarante-Palmeirais, ligado por via fluvial e estrada secundária, parece ter sido um dos principais difusores da cajuína no Piauí",
+     "periodo_referido": "século XX",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "equipe do dossiê de registro"
+     },
+     "lugares": {
+      "pratica": "Amarante e Palmeirais, PI",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ],
+   "nao_conferido": [
+    "Páginas lidas: 1 a 28 e 125 a 158. Fora do lote, por ordem de Vicente (lotes A4 e A5): p. 29 a 124 e p. 159 a 207.",
+    "Dentro das faixas, lidas e sem Evidência: p. 2 a 5 (ficha técnica, listas e sumário); p. 126 (contagens por município, aqui só como resumo, fora de trecho; correção do curador: a p. 3 é a lista de ilustrações); p. 9 a 11 e 17 a 19 em parte (referências teóricas e citações bibliográficas, sem fala de quem pratica); p. 139 a 141 (entrevistas com técnicos da EMBRAPA, EMATER, SEBRAE e UFPI: voz institucional, sem valor para as Proposições da prática); p. 142 a 147 (histórias de famílias e fazendas com nomes de pessoas, que o trecho não pode trazer); p. 147 (citações de historiografia sobre sítios e fazendas coloniais).",
+    "Falas diretas com espaçamento de OCR (ex.: 'r apaz', 'a c ajuína') não foram extraídas como trecho, para não alterar o literal; falas longas com '[...]' entraram só em segmentos contínuos.",
+    "Menções a outras CLB, sem Evidência para a cajuína: vinho de caju e mocororó (p. 16, 19 e 149, inclusive a descrição do vinho de caju da mãe de uma entrevistada, p. 149), cauim, cachaça de caju (p. 130 e 138), cajuína gaseificada do Ceará (marca de refrigerante, p. 20), vinho do Rio Grande do Norte (p. 21).",
+    "Datas e idades de entrevistados vêm do dossiê (2008-2009) e não foram conferidas.",
+    "Trechos não localizados pelo script: 0 de 87."
+   ]
+  }
+ ]
+}

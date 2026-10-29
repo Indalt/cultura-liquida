@@ -1,0 +1,20 @@
+{
+  "id": "PR-0234",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "no Piauí o universo da cajuína assume maior complexidade, na produção artesanal familiar e no consumo cheios de simbolismo e de rituais de hospitalidade, que afirmam a identidade local",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0267"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

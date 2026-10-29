@@ -1,0 +1,20 @@
+{
+  "id": "PR-0231",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "o SEBRAE viu no Piauí condições de transformar a bebida tradicional em indústria de grande porte, capaz de atrair investimentos externos",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0263"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

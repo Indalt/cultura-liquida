@@ -1,0 +1,20 @@
+{
+  "id": "PR-0285",
+  "clb": "CL-0001",
+  "atributo": "uso e consumo",
+  "valor": "nas casas dos ricos a cajuína era guardada como alimento para pessoas idosas, que não faz mal, e servida aos amigos",
+  "periodo": {
+    "referido": "meados do século XX"
+  },
+  "evidencias": [
+    "EV-0320"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

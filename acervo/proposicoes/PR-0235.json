@@ -1,0 +1,20 @@
+{
+  "id": "PR-0235",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "no Ceará, na última década do século XIX, aplicou-se à bebida que se produzia na região a técnica francesa de Appert (pasteurização em banho-maria), segundo a bibliografia cearense",
+  "periodo": {
+    "referido": "1890-1899"
+  },
+  "evidencias": [
+    "EV-0268"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

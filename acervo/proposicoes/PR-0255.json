@@ -1,0 +1,20 @@
+{
+  "id": "PR-0255",
+  "clb": "CL-0001",
+  "atributo": "lugar",
+  "valor": "na década de 1930 Teresina era circundada por sítios de onde vinha o caju para as casas, onde as senhoras produziam a cajuína de forma artesanal",
+  "periodo": {
+    "referido": "década de 1930"
+  },
+  "evidencias": [
+    "EV-0290"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

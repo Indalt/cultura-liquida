@@ -1,0 +1,20 @@
+{
+  "id": "PR-0279",
+  "clb": "CL-0001",
+  "atributo": "mudança",
+  "valor": "da década de 1950 a 1960 a produção, embora artesanal, volta-se à venda, mantendo o lugar no cotidiano familiar e nos rituais de hospitalidade",
+  "periodo": {
+    "referido": "décadas de 1950 e 1960"
+  },
+  "evidencias": [
+    "EV-0314"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

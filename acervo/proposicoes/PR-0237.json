@@ -1,0 +1,20 @@
+{
+  "id": "PR-0237",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "na garrafa, a produtora coloca um funil com um paninho para coar a cajuína",
+  "periodo": {
+    "referido": "década de 1980"
+  },
+  "evidencias": [
+    "EV-0270"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

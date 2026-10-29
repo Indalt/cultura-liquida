@@ -1,0 +1,24 @@
+{
+  "id": "LU-0042",
+  "nivel": "município",
+  "nome_na_fonte": "Altos, PI",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "município",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  },
+  "municipio_atual": {
+    "geocodigo_ibge": "2200400",
+    "ano_divisao": 2022,
+    "validade_toponimo": "nome atual na tabela do IBGE de 2024 (Malha Municipal 2022); a época do nome na fonte não foi conferida"
+  }
+}

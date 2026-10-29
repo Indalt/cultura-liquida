@@ -1,0 +1,20 @@
+{
+  "id": "PR-0302",
+  "clb": "CL-0001",
+  "atributo": "utensílio",
+  "valor": "um produtor de Amarante inventou vários sistemas de filtragem e prensas, feitos em funilarias de Teresina",
+  "periodo": {
+    "referido": "2008-2009"
+  },
+  "evidencias": [
+    "EV-0337"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

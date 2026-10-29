@@ -1,0 +1,20 @@
+{
+  "id": "PR-0230",
+  "clb": "CL-0001",
+  "atributo": "quem pratica",
+  "valor": "a bebida se originou entre famílias proprietárias de terras, e hoje muitas produtoras são senhoras urbanas de classe média ou sitiantes",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0262"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

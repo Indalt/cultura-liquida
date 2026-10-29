@@ -1,0 +1,20 @@
+{
+  "id": "PR-0240",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "produtoras dizem ter aprendido a fazer cajuína por um livrinho de receita que o marido trouxe do Ceará",
+  "periodo": {
+    "referido": "anos 1920-1930"
+  },
+  "evidencias": [
+    "EV-0274"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

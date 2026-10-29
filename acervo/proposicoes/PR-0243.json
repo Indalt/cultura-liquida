@@ -1,0 +1,20 @@
+{
+  "id": "PR-0243",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "antiguidade do modo de fazer comprovada com segurança de oitenta anos no Piauí, com maior intensidade a partir da década de 1940",
+  "periodo": {
+    "referido": "cerca de 1929 em diante"
+  },
+  "evidencias": [
+    "EV-0277"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

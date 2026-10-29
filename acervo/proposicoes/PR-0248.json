@@ -1,0 +1,20 @@
+{
+  "id": "PR-0248",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "uma entrevistada de 77 anos afirma que as senhoras de Amarante inventaram de fazer a cajuína quando ela tinha cerca de 10 anos, por volta de 1942",
+  "periodo": {
+    "referido": "por volta de 1942"
+  },
+  "evidencias": [
+    "EV-0283"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

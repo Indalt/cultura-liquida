@@ -1,0 +1,20 @@
+{
+  "id": "PR-0280",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "aos modos tradicionais de transmissão somam-se os treinamentos institucionais da EMATER e do SEBRAE",
+  "periodo": {
+    "referido": "a partir dos anos 2000"
+  },
+  "evidencias": [
+    "EV-0315"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

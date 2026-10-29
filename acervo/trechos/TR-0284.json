@@ -1,0 +1,29 @@
+{
+  "id": "TR-0284",
+  "fonte": "FO-0034",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 127 do PDF; car. 352854-353063 do texto normalizado (normalizacao-0.2)",
+  "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-10-29",
+  "estado": "localizado",
+  "texto_exato": "Conseguimos identificar a difusão mais antiga da cajuína a partir de Palmeirais – que se conecta por água e por estradas vicinais a Amarante – para Amarante, Água Branca, Demerval Lobão, União e Monsenhor Gil.",
+  "antes": "que categorizamos mais abaixo como \"senhoras tradicionais\". ",
+  "depois": " As referências a senhoras de Almescar, Parnarama e Palmeira",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

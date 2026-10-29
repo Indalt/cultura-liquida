@@ -1,0 +1,20 @@
+{
+  "id": "PR-0260",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "com a cola de sapateiro a água do caju cortava, separando o tanino, e se filtrava usando o bagaço do caju como filtro",
+  "periodo": {
+    "referido": "década de 1940-1950"
+  },
+  "evidencias": [
+    "EV-0295"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

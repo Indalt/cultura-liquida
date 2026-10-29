@@ -1,0 +1,20 @@
+{
+  "id": "PR-0241",
+  "clb": "CL-0001",
+  "atributo": "época",
+  "valor": "uma família de Valença do Piauí considera pioneira da cajuína no Piauí uma antepassada e oferece como prova um rótulo impresso na década de 1930",
+  "periodo": {
+    "referido": "década de 1930"
+  },
+  "evidencias": [
+    "EV-0275"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

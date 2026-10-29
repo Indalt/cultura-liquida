@@ -1,0 +1,20 @@
+{
+  "id": "PR-0265",
+  "clb": "CL-0001",
+  "atributo": "processo e modo de fazer",
+  "valor": "a tia moía o caju no moinho de moer carne, cortava o suco com cola de sapateiro e passava a água cortada numa rede de pano",
+  "periodo": {
+    "referido": "meados do século XX (tia falecida em 1988)"
+  },
+  "evidencias": [
+    "EV-0300"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

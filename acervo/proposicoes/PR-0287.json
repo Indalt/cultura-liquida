@@ -1,0 +1,20 @@
+{
+  "id": "PR-0287",
+  "clb": "CL-0001",
+  "atributo": "transmissão",
+  "valor": "uma produtora foi fundamental na propagação do modo de fazer cajuína entre os assentados, que usam o liquidificador como ela",
+  "periodo": {
+    "referido": "anos 2000"
+  },
+  "evidencias": [
+    "EV-0322"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}

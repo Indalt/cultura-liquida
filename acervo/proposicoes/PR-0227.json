@@ -1,0 +1,20 @@
+{
+  "id": "PR-0227",
+  "clb": "CL-0001",
+  "atributo": "significados",
+  "valor": "à cajuína se atribuem cristalinidade, pureza, higiene, limpeza, cuidado e o talento feminino de mulheres prendadas, valores transferidos à família e ao lugar de origem",
+  "periodo": {
+    "referido": "2009"
+  },
+  "evidencias": [
+    "EV-0259"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.2)",
+    "data": "2026-10-29",
+    "execucao": "EX-0067"
+  }
+}
