@@ -1,0 +1,24 @@
+{
+  "lote": "K-109 lote 2",
+  "fontes": "FO-0016 a FO-0030",
+  "trechos": "TR-0045 a TR-0071",
+  "evidencias": "EV-0045 a EV-0071",
+  "commit": "6b43f4a",
+  "ato": "ler, localizar, linkar e citar trecho curto; para publicar, as Faltas abaixo",
+  "faltas_novas": [],
+  "faltas_ampliadas": {
+    "F-0024": "mais 1 lugar: TR-0063 e EV-0063 (condições tradicionais de produção da cajuína brasileira), o caso mais fraco",
+    "F-0025": "mais 15 Fontes (FO-0016 a FO-0030), 27 Evidências (EV-0045 a EV-0071) e 27 Trechos (TR-0045 a TR-0071), todos sem nome do autor"
+  },
+  "perguntas": {
+    "1 direito autoral": "Ler, linkar e citar: sem Falta pela regra (D-042). Trechos de 76 a 243 caracteres, no máximo 5 por Fonte (art. 46, III e VIII). TR-0052 cita a Instrução Normativa 37/2018 (ato oficial, art. 8º, IV; trecho da lei lido no Planalto). Para publicar: nome do autor ausente (F-0025 ampliada); licença não conferida nas 15 Fontes (F-0003 e guia G-licenca-lei-9610). Infoteca-e mostra o autor por nome na página (FO-0021).",
+    "2 conhecimento tradicional": "Guiné-Bissau (TR-0045 a TR-0049, FO-0017): o trecho diz técnica aprendida com os holandeses, e as entrevistas foram com dirigentes do setor; não há povo indígena, comunidade nem agricultor tradicional: sem Falta pela regra (D-042). Não conferido: se a Lei 13.123 alcança conhecimento de fora do país (art. 1º não aberto). Fermentação e bebida alcoólica (TR-0053 e TR-0054, FO-0020): é pesquisa sobre kombucha e vinho de caju, sem população nomeada: sem Falta pela regra (D-042). TR-0063: dúvida leve, vai para a F-0024.",
+    "3 restrição por costume": "Nenhum costume aparece nos 27 trechos: sem Falta pela regra (D-042).",
+    "4 dados pessoais": "Nenhum nome, contato ou pessoa identificável nos 27 trechos. TR-0055 é uma linha de percentuais de frequência de consumo de um painel sensorial: dado agregado, sem identificar ninguém e sem dado sensível (a tabela inteira da dissertação não foi lida): sem Falta pela regra (D-042). Autor citado (ANCA 2016, outros) não é dado a barrar (D-042).",
+    "5 imagem e voz": "Só texto: não se aplica.",
+    "6 crianças": "Nenhuma menção; flags da Evidência falsos: não se aplica.",
+    "7 substância controlada": "Nenhuma substância ou planta da Portaria 344 nomeada; os trechos não trazem modo de obter nem de preparar bebida alcoólica (TR-0058 e TR-0060 são a clarificação e o fluxograma da cajuína, não alcoólica): sem Falta pela regra (D-042). Não conferido: a lista oficial e atual da Portaria 344 não foi aberta.",
+    "8 licença de contribuinte": "Degrau 1, só Vicente: não se aplica."
+  },
+  "observacao_nao_juridica": "TR-0070 e TR-0071 (FO-0030) têm texto_exato com caracteres trocados (pedœnculo, Ø, ª): a citação não é literal da obra; é assunto do avaliador e do localizador."
+}

@@ -8,7 +8,10 @@
   "onde_aparece": [
     "acervo/fontes/FO-0001.json a FO-0015.json (campo `referencia`: sem autor)",
     "acervo/evidencias/ (campo `voz.papel`: 'autor da dissertação', sem nome)",
-    "acervo/trechos/ (o campo `fonte` aponta para a Fonte sem autor)"
+    "acervo/trechos/ (o campo `fonte` aponta para a Fonte sem autor)",
+    "acervo/fontes/FO-0016.json a FO-0030.json (campo referencia: sem nome do autor)",
+    "acervo/evidencias/EV-0045.json a EV-0071.json (voz.papel: autor da dissertação, autor da tese, autores da publicação (Embrapa) e similares, sem nome)",
+    "acervo/trechos/TR-0045.json a TR-0071.json (o campo fonte aponta para Fonte sem autor)"
   ],
   "norma": {
     "referencia": "Lei 9.610/1998, art. 46, III",
@@ -17,7 +20,7 @@
     "nivel": "oficial"
   },
   "caminho_de_liberacao": {
-    "guia": "G-licenca-texto-imagem-audio-lei-9610 (a preparar; o guia ainda não existe)",
+    "guia": "G-licenca-lei-9610 (rascunho em trilhas/2026-10-29_K-109/guias/; não circula antes de formulários e prazos conferidos, l. 695)",
     "estado": "não iniciado"
   },
   "criada_por": "juridico",

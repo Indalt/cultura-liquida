@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 68 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 69 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -402,6 +402,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 66, menção histórica a uso indígena e a Lei 13.123 | P | K-010 |
 | 67, bebida alcoólica fora da triagem fixa | P; D | a definir pelo planejamento |
 | 68, DSpace 7 e PDF de imagem sem texto | D; O | a definir pelo planejamento |
+| 69, PDF com caracteres trocados no texto extraído | D | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-043
 

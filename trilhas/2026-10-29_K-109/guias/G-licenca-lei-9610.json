@@ -1,0 +1,145 @@
+{
+  "id": "G-licenca-lei-9610",
+  "titulo": "Licença e autorização de uso de obra de terceiros (Lei 9.610/1998): o que cabe na citação e o que pede licença ou autorização. RASCUNHO",
+  "por_que_barrado": [
+    {
+      "explicacao": "Copiar a obra de alguém, inclusive guardá-la em base de dados, depende de autorização prévia e expressa do autor. O Git público (D-021) oferece ao público tudo o que guarda; o que passa da citação curta (texto de página, cópia, resumo que reproduz o texto) fica retido como Falta só para a publicação (F-0003, F-0025) até haver licença ou autorização.",
+      "norma": "Lei 9.610/1998, art. 29, I e IX",
+      "trecho": "Art. 29. Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como: I - a reprodução parcial ou integral; (...) IX - a inclusão em base de dados, o armazenamento em computador, a microfilmagem e as demais formas de arquivamento do gênero;",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+      "nivel": "oficial"
+    },
+    {
+      "explicacao": "A citação curta, com o nome do autor e a origem, não ofende o direito autoral: é o que a regra de Vicente (D-042) usa para não abrir Falta ao citar. Falta o nome do autor no registro das Fontes (F-0025).",
+      "norma": "Lei 9.610/1998, art. 46, III",
+      "trecho": "III - a citação em livros, jornais, revistas ou qualquer outro meio de comunicação, de passagens de qualquer obra, para fins de estudo, crítica ou polêmica, na medida justificada para o fim a atingir, indicando-se o nome do autor e a origem da obra;",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+      "nivel": "oficial"
+    },
+    {
+      "explicacao": "Os pequenos trechos em obra nova também têm limite: a reprodução não pode ser o objetivo principal da obra nova nem prejudicar a exploração normal da obra. Se o conjunto de trechos virar o produto, esta leitura precisa ser revista.",
+      "norma": "Lei 9.610/1998, art. 46, VIII",
+      "trecho": "VIII - a reprodução, em quaisquer obras, de pequenos trechos de obras preexistentes, de qualquer natureza, ou de obra integral, quando de artes plásticas, sempre que a reprodução em si não seja o objetivo principal da obra nova e que não prejudique a exploração normal da obra reproduzida nem cause um prejuízo injustificado aos legítimos interesses dos autores.",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+      "nivel": "oficial"
+    },
+    {
+      "explicacao": "Interpretação, não parecer, para a pergunta da F-0003 (até onde o Git público já é publicação): a lei chama de publicação oferecer a obra ao conhecimento do público, com o consentimento do titular. O Git público oferece o que contém; o que é citação curta com autor e origem está na exceção do art. 46; o que passa disso precisa de consentimento (licença ou autorização). A decisão é de Vicente.",
+      "norma": "Lei 9.610/1998, art. 5º, I",
+      "trecho": "I - publicação - o oferecimento de obra literária, artística ou científica ao conhecimento do público, com o consentimento do autor, ou de qualquer outro titular de direito de autor, por qualquer forma ou processo;",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+      "nivel": "oficial"
+    }
+  ],
+  "o_que_destravaria": [
+    "Ficar dentro da citação: link, localizador e trecho curto, sempre com o nome do autor e a origem (art. 46, III e VIII). Aí a regra de Vicente (D-042) já deixa sem Falta e este guia não é preciso; resta registrar o nome do autor de cada Fonte (F-0025).",
+    "Licença aberta registrada na página da obra, que cubra o uso pretendido (cópia, resumo, tradução), com o texto exato e a URL do termo guardados em protecao.licenca da Fonte.",
+    "Autorização do titular dos direitos, prévia, expressa e por escrito, dizendo o que se usa, de que modo, onde e por quanto tempo (arts. 29, 49 e 50).",
+    "Manter fora do repositório público o que passa da citação (decisão de lugar e visibilidade, de Vicente; F-0003, item c).",
+    "Consulta pontual a profissional de propriedade intelectual sobre o Git público como um todo (F-0003, item d); a lei não a exige para pedir licença ou autorização."
+  ],
+  "quem_pode_fazer": {
+    "texto": "Quem concede é o titular dos direitos: em regra o autor, ou quem os recebeu por licenciamento, concessão ou cessão (art. 49); se a instituição é titular, a página da obra ou o termo de depósito deve dizer (não conferido). Do lado do projeto, Vicente, pessoa natural e responsável (D-026), confere a licença na página, registra e assina o pedido; o agente só prepara o rascunho. A lei não exige profissional para licenciar ou autorizar.",
+    "nivel": "oficial",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm"
+  },
+  "passos": [
+    {
+      "n": 1,
+      "o_que_fazer": "Dizer o que se quer fazer com a obra. Link, localizador e citação curta com autor e origem: sem Falta pela regra (D-042); parar aqui. Cópia de página inteira ou de parte longa, resumo que reproduz o texto, tradução, inclusão da obra no Git público: seguir. (Resumo e tradução como transformação e tradução do art. 29, III e IV é leitura do texto, não parecer.)",
+      "onde": "Lei 9.610/1998, arts. 29, 46 e 5º, I",
+      "como_preencher": "Anotar na Fonte (FO-nnnn) o ato (citar, copiar, resumir, traduzir) e a extensão (caracteres ou páginas).",
+      "nivel": "oficial",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm"
+    },
+    {
+      "n": 2,
+      "o_que_fazer": "Achar o nome do autor e quem detém os direitos, na página da obra. Na Infoteca-e (Embrapa) o nome aparece no campo Autoria do item (visto em 29/10/2026 em um item).",
+      "onde": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/422033",
+      "como_preencher": "O nome do autor citado não é dado pessoal a barrar (D-042), mas o esquema da Fonte (referencia, sem campos extras) não tem campo para autor: onde guardá-lo é decisão do curador e de Vicente (F-0025). Não completar o nome por inferência.",
+      "nivel": "secundária",
+      "url": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/422033"
+    },
+    {
+      "n": 3,
+      "o_que_fazer": "Conferir a licença na página da obra na Infoteca-e: o rodapé do item de 29/10/2026 diz que está licenciado sob a Licença Creative Commons Atribuição - NãoComercial - SemDerivações 4.0 Internacional, e o campo Acesso diz openAccess. Não se sabe se o rodapé vale para a obra do item ou só para o site.",
+      "onde": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/422033",
+      "como_preencher": "Copiar o texto exato do rodapé e do campo Acesso, a URL e a data. Abrir também o PDF (folha de rosto, termo de autorização). A leitura de 29/10 veio de WebFetch (resumo por modelo pequeno): reconferir por leitura literal antes de gravar.",
+      "nivel": "secundária",
+      "url": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/422033"
+    },
+    {
+      "n": 4,
+      "o_que_fazer": "Em repositório DSpace (BDTD, universidades): abrir a página do item e procurar o selo ou link de licença, o campo de direitos (em geral dc.rights) em Mostrar registro completo e os termos de uso do repositório; abrir o PDF e ler a folha de rosto. Licença de depósito dada ao repositório não é, por si, licença para o público.",
+      "onde": "página do item de cada Fonte (URLs no campo url de FO-0016 a FO-0030)",
+      "como_preencher": "Mesmo registro do passo 3. Nenhuma página DSpace foi lida nesta rodada (a do UFC deu erro de certificado e não foi contornada).",
+      "nivel": "não conferido"
+    },
+    {
+      "n": 5,
+      "o_que_fazer": "Abrir o texto da licença identificada (por exemplo, a CC BY-NC-ND 4.0) e anotar o que ela permite: atribuição, uso não comercial, obras derivadas (resumo, tradução, trecho adaptado). Só então decidir se o uso cabe nela.",
+      "onde": "https://creativecommons.org/licenses/by-nc-nd/4.0/ (não aberto)",
+      "como_preencher": "Nada foi assumido sobre o conteúdo da licença neste rascunho.",
+      "nivel": "não conferido",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "n": 6,
+      "o_que_fazer": "Registrar em protecao.licenca da Fonte o texto exato da licença como aparece na página, a URL do termo e a data. Sem licença visível, deixar não conferido. Nunca escrever livre por inferência.",
+      "onde": "esquemas/comum.schema.json, campo protecao.licenca; registro acervo/fontes/FO-nnnn.json",
+      "como_preencher": "Forma, não fato conferido: CC BY-NC-ND 4.0 (rodapé da página do item), https://creativecommons.org/licenses/by-nc-nd/4.0/, visto em AAAA-MM-DD. (Nível secundário: leitura do esquema do projeto.)",
+      "nivel": "secundária"
+    },
+    {
+      "n": 7,
+      "o_que_fazer": "Se nenhuma licença aberta cobre o uso, pedir autorização por escrito ao titular: a obra, a parte, a modalidade (reprodução, inclusão em base de dados, publicação na internet), o território, o prazo, se é gratuita e que o nome do autor será indicado. Os negócios sobre direitos autorais se interpretam restritivamente: sem contrato escrito o prazo máximo é de cinco anos, a cessão vale só para o país do contrato e só para modalidades já existentes.",
+      "onde": "Lei 9.610/1998, arts. 4º, 49 e 50; contato do titular na página da obra ou do repositório (não conferido para cada Fonte)",
+      "como_preencher": "Usar o modelo em documentos; campos em branco são de Vicente. Pedir o uso concreto, não tudo.",
+      "nivel": "oficial",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm"
+    },
+    {
+      "n": 8,
+      "o_que_fazer": "Guardar a resposta ou a licença como comprovante, fora do Git (traz e-mail e assinatura de terceiro); no projeto, só um ID opaco, a data e o alcance. Só o comprovante real muda o estado da Falta.",
+      "onde": "pasta local fora do Git; AGENTS.md, seção O que não fazer (dado pessoal)",
+      "como_preencher": "Em protecao.licenca, o ID opaco do comprovante, nunca o e-mail. (Nível secundário: regra do projeto.)",
+      "nivel": "secundária"
+    },
+    {
+      "n": 9,
+      "o_que_fazer": "Vicente decide o que publicar e quando (K-010). O guia não libera nada: F-0003 e F-0025 só saem de não iniciado com licença conferida ou autorização guardada, e a decisão é dele.",
+      "onde": "decisão de Vicente; Faltas F-0003 e F-0025",
+      "como_preencher": "Anotar na Falta o ID do comprovante e a data; o agente não fecha a Falta.",
+      "nivel": "secundária"
+    }
+  ],
+  "documentos": [
+    "Modelo de pedido de autorização (rascunho; Vicente confere, completa e assina; o agente não envia): Prezado(a) [titular dos direitos: a preencher]. Sou responsável pelo projeto Cultura Líquida Brasileira (repositório público https://github.com/Indalt/cultura-liquida), que organiza o que se pode saber sobre bebidas tradicionais brasileiras, ligando cada informação à sua fonte. Peço autorização, nos termos dos arts. 29 e 49 da Lei 9.610/1998, para [reproduzir / resumir / traduzir: a preencher] [parte da obra: título, autor, ano, endereço permanente, extensão: a preencher], com indicação do nome do autor e da origem, [gratuitamente: a confirmar], no território [a preencher], pelo prazo de [a preencher], na modalidade [publicação na internet em repositório público: a confirmar]. Se a obra já tem licença aberta, peço indicá-la. [Data] [Assinatura de Vicente]",
+    "Ficha de conferência de licença, uma por Fonte: FO-nnnn; URL da página; data; texto exato da licença ou dos direitos; URL do termo; onde apareceu (rodapé, campo de direitos, PDF); titular, se a página diz.",
+    "Comprovante da licença ou da autorização (resposta do titular): fora do Git; no projeto, só o ID opaco, a data e o alcance.",
+    "Lista das Fontes com licença conferida e não conferida (as 15 do lote 2 estão com protecao.licenca = não conferido; as do lote 1 não foram relidas nesta rodada)."
+  ],
+  "exige_profissional": false,
+  "limites": [
+    "O guia nunca autoriza, nunca diz que pode publicar, não protocola nem envia pedido em nome de Vicente e não é parecer jurídico (D-020).",
+    "A lei não exige profissional para licenciar ou pedir autorização; a consulta a profissional de propriedade intelectual é recomendada para o Git público como um todo (F-0003, item d) e para o limite na medida justificada (art. 46, III), que é de caso.",
+    "Se o conjunto de trechos virar o produto do projeto (um corpus), o art. 46, VIII (a reprodução em si não pode ser o objetivo principal; exploração normal da obra) pede nova leitura.",
+    "O direito moral de ter o nome indicado (art. 24, II) permanece mesmo com licença ou autorização.",
+    "O rodapé de licença de um site pode ser do site e não da obra; licença de depósito no repositório não é licença para o público. Na dúvida, a Falta continua.",
+    "Sem contornar bloqueio nem anti-robô: página que não abre fica não conferido.",
+    "Rascunho: o campo estado do esquema só admite não iniciado, em andamento e liberado; fica em não iniciado, e o guia só circula depois de conferidos formulários e prazos no portal oficial (l. 695)."
+  ],
+  "estado": "não iniciado",
+  "nao_conferido": [
+    "RASCUNHO: não há formulário oficial único de licença ou autorização de uso; o modelo é do projeto. Políticas, formulários e prazos das instituições (Embrapa, UFC, UFRN, UFRPE, UFCG, UECE, USP, BDTD) não foram abertos.",
+    "O texto da CC BY-NC-ND 4.0 não foi aberto; nada sobre o que a licença permite foi afirmado.",
+    "A página da Infoteca-e (doc/422033) foi lida só por WebFetch (resumo de modelo pequeno), não por leitura literal; rodapé e campo Acesso precisam de reconferência, e não se sabe se o rodapé vale para a obra ou para o site.",
+    "Nenhuma página DSpace foi lida: a do repositório da UFC (www.repositorio.ufc.br) deu erro de certificado e não foi contornada; a documentação do DSpace sobre dc.rights e selo de licença não foi aberta (o passo 4 é não conferido).",
+    "Quem detém os direitos de teses e dissertações (autor ou instituição, termo de depósito) não foi conferido.",
+    "Da Lei 9.610 foram lidos os arts. 4º, 5º (I, V e parte do VI), 8º, 22, 24, 29, 41, 45, 46 (inteiro), 49 e 50; o resto não. O art. 41 (setenta anos após a morte) não alcança as Fontes de 1997 a 2025 do lote 2.",
+    "Onde guardar o nome do autor: o esquema da Fonte não traz campo; decisão do curador e de Vicente.",
+    "Se resumo ou tradução entram na reprodução ou na transformação do art. 29 é leitura do texto, sem jurisprudência nem doutrina conferidas."
+  ],
+  "versao": "0.1.0-rascunho",
+  "data": "2026-10-29"
+}
