@@ -4,22 +4,226 @@
   "termos": [
     "TE-0002"
   ],
-  "situacoes": [],
+  "situacoes": [
+    {
+      "lugares": [
+        "LU-0007"
+      ],
+      "grupo": "produtoras e produtores de Teresina, de famílias de posse e de cursos",
+      "periodo": "décadas de 1930 a 1950 e 2008",
+      "evidencias": [
+        "EV-0288",
+        "EV-0289",
+        "EV-0295",
+        "EV-0303"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0037"
+      ],
+      "grupo": "senhoras de famílias proprietárias de terra de Amarante",
+      "periodo": "final do século XIX a meados do século XX",
+      "evidencias": [
+        "EV-0282",
+        "EV-0359",
+        "EV-0283",
+        "EV-0333",
+        "EV-0300"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0042"
+      ],
+      "grupo": "produtoras, técnicos de extensão e produtores de assentamento de Altos",
+      "periodo": "anos 2000",
+      "evidencias": [
+        "EV-0320",
+        "EV-0323",
+        "EV-0391"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0043"
+      ],
+      "grupo": "produtoras patroas e empregados e agregados de Água Branca",
+      "periodo": "cerca de 1955 a 2009",
+      "evidencias": [
+        "EV-0326",
+        "EV-0328",
+        "EV-0344"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0041"
+      ],
+      "grupo": "produtoras de Monsenhor Gil e seus maridos que plantaram caju",
+      "periodo": "meados do século XX e década de 1980 em diante",
+      "evidencias": [
+        "EV-0317",
+        "EV-0318"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0028"
+      ],
+      "grupo": "produtora que aprendeu na família, em Barras",
+      "periodo": "não datado na fonte",
+      "evidencias": [
+        "EV-0096"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0040"
+      ],
+      "grupo": "produtores de Simplício Mendes",
+      "periodo": "novembro de 2008",
+      "evidencias": [
+        "EV-0351"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0031"
+      ],
+      "grupo": "comunidade produtora de Lago Verde, Castelo do Piauí",
+      "periodo": "2024",
+      "evidencias": [
+        "EV-0246"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0023"
+      ],
+      "grupo": "produtores e produtoras do Piauí: cooperativa, assentamentos, famílias",
+      "periodo": "2008 a 2024",
+      "evidencias": [
+        "EV-0192",
+        "EV-0241",
+        "EV-0092",
+        "EV-0074",
+        "EV-0082"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0034"
+      ],
+      "grupo": "produtoras de Pacajus, no Ceará",
+      "periodo": "década de 1980",
+      "evidencias": [
+        "EV-0269"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0030"
+      ],
+      "grupo": "produção relatada como diferente, não clarificada, no Rio Grande do Norte",
+      "periodo": "2008 a 2010",
+      "evidencias": [
+        "EV-0141",
+        "EV-0271"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0029"
+      ],
+      "grupo": "registro comercial relatado pela bibliografia cearense",
+      "periodo": "1912",
+      "evidencias": [
+        "EV-0272",
+        "EV-0363"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0016"
+      ],
+      "grupo": "fábricas que exploram a castanha e o pedúnculo na Guiné-Bissau",
+      "periodo": "não datado na fonte",
+      "evidencias": [
+        "EV-0046",
+        "EV-0049"
+      ]
+    },
+    {
+      "lugares": [
+        "LU-0020"
+      ],
+      "grupo": "adaptação das condições da cajuína brasileira em Moçambique",
+      "periodo": "2011",
+      "evidencias": [
+        "EV-0063"
+      ]
+    }
+  ],
   "criterios": {
     "identidade_ou_memoria": {
-      "falta": "F-0020"
+      "evidencias": [
+        "EV-0195",
+        "EV-0215",
+        "EV-0283",
+        "EV-0288",
+        "EV-0289",
+        "EV-0303",
+        "EV-0333",
+        "EV-0344",
+        "EV-0430",
+        "EV-0432"
+      ]
     },
     "reconhecimento_pelo_grupo": {
-      "falta": "F-0020"
+      "evidencias": [
+        "EV-0092",
+        "EV-0192",
+        "EV-0193",
+        "EV-0194",
+        "EV-0196",
+        "EV-0199",
+        "EV-0211",
+        "EV-0241",
+        "EV-0033",
+        "EV-0074"
+      ]
     },
     "transmissao_entre_geracoes": {
-      "falta": "F-0020"
+      "evidencias": [
+        "EV-0096",
+        "EV-0216",
+        "EV-0224",
+        "EV-0274",
+        "EV-0300",
+        "EV-0307",
+        "EV-0310",
+        "EV-0318",
+        "EV-0323",
+        "EV-0332"
+      ]
     },
     "recriacao": {
-      "falta": "F-0020"
+      "evidencias": [
+        "EV-0102",
+        "EV-0209",
+        "EV-0305",
+        "EV-0365",
+        "EV-0076",
+        "EV-0086",
+        "EV-0116",
+        "EV-0123",
+        "EV-0124",
+        "EV-0132"
+      ]
     }
   },
-  "estado": "ficha em montagem",
+  "estado": "ficha montada",
   "protecao": {
     "licenca": "não conferido",
     "consentimento": "não se aplica",
@@ -34,5 +238,6 @@
     "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.1)",
     "data": "2026-10-29",
     "execucao": "EX-0046"
-  }
+  },
+  "ficha": "acervo/fichas/CL-0001.md"
 }
