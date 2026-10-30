@@ -1,0 +1,98 @@
+{
+ "arquivo": "rodada B do K-111 (pares e casos)",
+ "data": "2026-10-30",
+ "verificador": "auditor",
+ "olhar": "mecanico",
+ "achados": [
+  {
+   "id": "A1",
+   "tipo": "outro",
+   "descricao": "testes/rodada-b/caso_real.py mostrava a última linha informativa ('fora da conta: EV-0004') no lugar das linhas 'NÃO BATE' do calcular_mu_lambda.py em erro-pr0016-mesma-linhagem, erro-pr0065-tensao-apagada e erro-pr0001-divergente-contada; o validador estava certo. Corrigido pelo curador: o motivo são as linhas que nomeiam o erro.",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python testes/rodada-b/caso_real.py .claude/skills/gerar-grafo/exemplos/erro-pr0016-mesma-linhagem.json"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A2",
+   "tipo": "outro",
+   "descricao": "montar-ficha/exemplos/erro-cl0001-frase-sem-proposicao.json dava código 2 (caso mal escrito: o trecho de troca não existia na ficha) e contava como reprovação. Corrigido pelo curador: o trecho de troca é o da l. 136 da ficha, e todo caso que reprova traz agora o erro esperado (saida_contem), para que um caso mal escrito dê FALHA.",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python testes/rodada-b/caso_real.py .claude/skills/montar-ficha/exemplos/erro-cl0001-frase-sem-proposicao.json"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A3",
+   "tipo": "outro",
+   "descricao": "o LEIA-ME de extrair-evidencia citava erro-tr0505-rotulo-sem-palavra como arquivo; é o nome do caso, que roda o mencoes_incidentais.py sobre erro-tr0505-separadas.json. Os erro-*.json da rodada A estão em outro formato e não são casos do caso_real.py. Corrigido no LEIA-ME.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n tr0505 .claude/skills/extrair-evidencia/exemplos/LEIA-ME.md"
+   },
+   "estado": "corrigido"
+  },
+  {
+   "id": "A4",
+   "tipo": "outro",
+   "descricao": "os 'não dado pelo piloto' de gerar-grafo e registrar-termo são verdade: 427 Proposições (52 verdadeiras, 371 intermediárias, 4 paracompletas; nenhuma inconsistente ou falsa) e nenhum Termo com língua.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -ho '\"estado\": \"[^\"]*\"' acervo/proposicoes/*.json | sort | uniq -c"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A5",
+   "tipo": "outro",
+   "descricao": "o 'não dado' de montar-ficha (nenhuma Falta preenchida numa ficha) foi olhado só na CL-0001; as outras fichas (só existe a CL-0001 e a camada Educação dela) não foram varridas pelo auditor.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n Falta acervo/fichas/CL-0001.md"
+   },
+   "estado": "nao_confirmado"
+  },
+  {
+   "id": "A6",
+   "tipo": "outro",
+   "descricao": "nomes_provaveis.py: depois do corte, nenhum nome no antes ou no depois; no texto exato, só TR-0363 e TR-0368, que o curador leu: nomeiam um autor e farmacêutico histórico do Ceará (registro em junta comercial em 1912; aplicação do método de Appert), pessoa pública citada com o ato, sem Falta pela regra (D-042).",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python scripts/nomes_provaveis.py"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A7",
+   "tipo": "outro",
+   "descricao": "os itens 12 a 14 do validar_acervo.py (acervo-0.4), o ramo novo do cmd_conferir (insumo 83: só passa com relido 1.0) e o cortar_nome fazem o que o docstring diz; os casos reprovam pelo erro certo.",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python scripts/rodar_testes.py --rodada B"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "A8",
+   "tipo": "outro",
+   "descricao": "os casos-rodada-b.json não têm campo de origem: a origem está no critério e nos LEIA-ME; o auditor não conferiu caso a caso a origem das sementes nos cartões K-106 a K-110.",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -c origem_registro .claude/skills/*/exemplos/casos-rodada-b.json"
+   },
+   "estado": "nao_confirmado"
+  },
+  {
+   "id": "A9",
+   "tipo": "outro",
+   "descricao": "erro-f0024-completada reprovava sem que a mensagem nomeasse a regra; com o runner corrigido (A1) e o saida_contem 'valor_inferido', o motivo fica dito.",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python testes/rodada-b/caso_real.py .claude/skills/triagem-juridica/exemplos/erro-f0024-completada.json"
+   },
+   "estado": "corrigido"
+  }
+ ]
+}

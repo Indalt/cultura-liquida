@@ -15,6 +15,7 @@
       "nome": "PR-0016 com a FO-0009 derivada da FO-0008 e o μ gravado contando duas",
       "espera": "reprova",
       "criterio": "erro do brief (l. 348): duas fontes da mesma linhagem contadas como duas",
+      "saida_contem": "NÃO BATE: PR-0016",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/gerar-grafo/exemplos/erro-pr0016-mesma-linhagem.json"
@@ -33,6 +34,7 @@
       "nome": "PR-0065 gravada sem a tensão interna sinalizada",
       "espera": "reprova",
       "criterio": "D-041: a tensão interna é sinalizada, nunca escondida",
+      "saida_contem": "NÃO BATE: PR-0065",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/gerar-grafo/exemplos/erro-pr0065-tensao-apagada.json"

@@ -107,8 +107,10 @@ def rodar(cmd: list[str], raiz: Path) -> tuple[int, str]:
     r = subprocess.run([sys.executable, str(RAIZ / cmd[0]), *cmd[1:]], cwd=RAIZ, capture_output=True,
                        text=True, encoding="utf-8")
     saida = (r.stdout + r.stderr).strip().splitlines()
-    erros = [l for l in saida if l.startswith(("ERRO", "REPROVA", "  "))]
-    return r.returncode, (erros[0] if erros and r.returncode else (saida[-1] if saida else ""))
+    # o motivo: as linhas que nomeiam o erro (achado A1 do auditor no K-111), não a última linha informativa
+    marcas = ("NÃO BATE", "ERRO", "NÃO SE SUSTENTA", "BARRA", "    - ", "REPROVA (")
+    erros = [l.strip() for l in saida if l.startswith(marcas) or l.lstrip().startswith(marcas)]
+    return r.returncode, ("; ".join(erros[:2]) if erros and r.returncode else (saida[-1] if saida else ""))
 
 
 def modo_fatia(caso: dict, tmp: Path) -> int:

@@ -24,6 +24,7 @@
       "nome": "F-0033 sem o caminho de liberação",
       "espera": "reprova",
       "criterio": "caso do bloco 3: toda barreira jurídica traz porquê e caminho de liberação (D-025)",
+      "saida_contem": "caminho_de_liberacao",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/triagem-juridica/exemplos/erro-f0033-sem-caminho.json"
@@ -33,6 +34,7 @@
       "nome": "F-0024 completada por inferência",
       "espera": "reprova",
       "criterio": "caso do bloco 3: a Falta é dita, nunca completada (D-018); o Jurídico nunca autoriza (D-020)",
+      "saida_contem": "['valor_inferido']}]}",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/triagem-juridica/exemplos/erro-f0024-completada.json"
@@ -52,6 +54,7 @@
       "nome": "regra fixa: copiar além da citação a Entrada real EN-0009 barra agora",
       "espera": "reprova",
       "criterio": "D-042: cópia além da citação barra agora (a regra fixa do Jurídico reprova o caso de teste)",
+      "saida_contem": "BARRA",
       "comando": [
         "scripts/triagem_fixa.py",
         "entrada/EN-0009.json",

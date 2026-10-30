@@ -15,6 +15,7 @@
       "nome": "Recorte RC-0010 com o total visto acima do informado, sem explicação",
       "espera": "reprova",
       "criterio": "erro do brief (l. 348): total visto acima do informado, sem explicação",
+      "saida_contem": "maior que total_informado",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/consulta/exemplos/erro-rc0010-visto-maior.json"

@@ -9,7 +9,7 @@ Pares reais do caso-piloto da cajuína (K-109 e K-110), em `casos-rodada-b.json`
 | `real-tr0101-ligadura` | passa | achado A6 do K-110 (insumo 83): ligadura no texto exato, grau da leitura com "fi" |
 | `real-pr0001` / `erro-pr0001-divergente-contada` | passa / reprova | achado A1 do K-109 (insumo 72): a EV-0004 diz menos que a PR-0001; fica fora de μ e λ |
 | `real-pr0002` / `erro-pr0002-marca-perdida` | passa / reprova | achado A3 do K-109 (insumo 72): a marca de saúde da Evidência vai à Proposição |
-| `erro-tr0505-rotulo-sem-palavra` | reprova | insumo 88: "mocororó" declarado num trecho da p. 100 que não traz a palavra (o erro real do K-110) |
+| `erro-tr0505-rotulo-sem-palavra` (comando sobre `erro-tr0505-separadas.json`) | reprova | insumo 88: "mocororó" declarado num trecho da p. 100 que não traz a palavra (o erro real do K-110) |
 
 **Fonte reduzida à janela.** Nos casos de Trecho, a fonte é a janela de citação que já está no Git (antes + texto exato + depois); o texto integral nunca entra no repositório (l. 100). O caso confere o script de localização, não a captura: a captura se confere com o `localizar_trecho.py conferir` sobre a fonte, na pasta temporária.
 

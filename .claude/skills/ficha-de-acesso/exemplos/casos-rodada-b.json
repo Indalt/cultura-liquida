@@ -15,6 +15,7 @@
       "nome": "ficha da Hemeroteca com o 403 e a decisão 'aceito'",
       "espera": "reprova",
       "criterio": "erro do brief (l. 348): 403 com decisão 'aceito'",
+      "saida_contem": "decisao",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/ficha-de-acesso/exemplos/erro-am0001-403-aceito.json"

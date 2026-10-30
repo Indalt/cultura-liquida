@@ -15,6 +15,7 @@
       "nome": "TE-0002 com a forma de busca 'cajuyna' registrada como variante de OCR",
       "espera": "reprova",
       "criterio": "erro do brief (l. 348): forma de OCR nunca é variante, só forma de busca",
+      "saida_contem": "forma de OCR",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/registrar-termo/exemplos/erro-te0002-ocr-variante.json"
@@ -24,6 +25,7 @@
       "nome": "TE-0002 com 'mocororó' como designação local, sem a marca de termo ambíguo",
       "espera": "reprova",
       "criterio": "insumos 26 e 88 (D-039): a forma que nomeia mais de um Termo é termo ambíguo e se marca nos dois; o erro do K-110 foi tratar 'mocororó' como nome de uma CLB só",
+      "saida_contem": "termo ambíguo",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/registrar-termo/exemplos/erro-te0002-ambiguo-sem-marca.json"

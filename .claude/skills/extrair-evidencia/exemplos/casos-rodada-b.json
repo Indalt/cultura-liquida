@@ -15,6 +15,7 @@
       "nome": "TR-0034 com 'fresco', palavra de outro trecho, marcado como localizado",
       "espera": "reprova",
       "criterio": "erro do brief (l. 348): trecho não localizado marcado como localizado; o erro injetado é o do achado A5 do K-109 (insumo 72): 'fresco' veio de outro trecho",
+      "saida_contem": "NÃO SE SUSTENTA",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/extrair-evidencia/exemplos/erro-tr0034-palavra-de-outro-trecho.json"
@@ -42,6 +43,7 @@
       "nome": "PR-0001 gravada sem a EV-0004 em fora_da_conta (a leitura divergente contada)",
       "espera": "reprova",
       "criterio": "insumo 72, A1: a leitura divergente nunca pesa; o recálculo reprova a Proposição gravada que a conta",
+      "saida_contem": "NÃO BATE: PR-0001",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/extrair-evidencia/exemplos/erro-pr0001-divergente-contada.json"
@@ -60,6 +62,7 @@
       "nome": "PR-0002 sem a marca de saúde que a EV-0002 tem",
       "espera": "reprova",
       "criterio": "insumo 72, A3: a marca faltando numa Proposição de composição (o erro real do K-109, antes do lote de correção)",
+      "saida_contem": "Proposição sem a marca",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/extrair-evidencia/exemplos/erro-pr0002-marca-perdida.json"
@@ -69,6 +72,7 @@
       "nome": "'mocororó' declarado num trecho da p. 100 que não traz a palavra",
       "espera": "reprova",
       "criterio": "insumo 88: o rótulo de uma menção usa só a palavra que o trecho traz; o erro real do K-110 (a p. 100 do dossiê rotulada 'mocororó')",
+      "saida_contem": "não está no texto exato",
       "comando": [
         "scripts/mencoes_incidentais.py",
         "--separadas",

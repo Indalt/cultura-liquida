@@ -73,8 +73,8 @@ CASOS: dict[str, list[dict]] = {
         {"arq": "erro-cl0001-frase-sem-proposicao", "nome": "ficha CL-0001 com uma frase factual sem a marca da Proposição",
          "espera": "reprova", "caso": {"fichas": ["CL-0001.md"], "validadores": [VALIDAR],
                                        "mudancas": [{"arquivo": "acervo/fichas/CL-0001.md", "op": "texto",
-                                                     "de": "ficou nos cantos recônditos (μ 0,5, intermediário) [PR-0402].\n\n### Quem ensina",
-                                                     "para": "ficou nos cantos recônditos (μ 0,5, intermediário).\n\n### Quem ensina"}]},
+                                                     "de": "enquanto a bebida fermentada ficou nos cantos recônditos (μ 0,5, intermediário) [PR-0402].",
+                                                     "para": "enquanto a bebida fermentada ficou nos cantos recônditos (μ 0,5, intermediário)."}]},
          "criterio": "erro do brief (l. 348): frase factual sem Proposição"},
         {"arq": "real-educacao-cl0001", "nome": "camada Educação da CL-0001 (K-110), com as marcas e as habilidades da BNCC",
          "espera": "passa", "caso": {"fichas": ["educacao/CL-0001.md"], "validadores": [VALIDAR]},
@@ -156,6 +156,27 @@ CASOS: dict[str, list[dict]] = {
     ],
 }
 
+# o erro que cada caso que reprova tem de nomear (achado A2 do auditor no K-111)
+ESPERADO = {
+ "erro-te0002-ocr-variante": "forma de OCR",
+ "erro-te0002-ambiguo-sem-marca": "termo ambíguo",
+ "erro-tr0034-palavra-de-outro-trecho": "NÃO SE SUSTENTA",
+ "erro-pr0001-divergente-contada": "NÃO BATE: PR-0001",
+ "erro-pr0002-marca-perdida": "Proposição sem a marca",
+ "erro-tr0505-rotulo-sem-palavra": "não está no texto exato",
+ "erro-cl0001-frase-sem-proposicao": "sem marcação de Proposição",
+ "erro-educacao-bncc-sem-pagina": "sem a página do PDF",
+ "erro-pr0016-mesma-linhagem": "NÃO BATE: PR-0016",
+ "erro-pr0065-tensao-apagada": "NÃO BATE: PR-0065",
+ "erro-am0001-403-aceito": "decisao",
+ "erro-rc0010-visto-maior": "maior que total_informado",
+ "erro-f0033-sem-caminho": "caminho_de_liberacao",
+ "erro-f0024-completada": "['valor_inferido']}]}",
+ "erro-en0009-copiar": "BARRA",
+ "erro-guia-9610-sem-limites": "limites",
+ "erro-guia-9610-oficial-sem-url": "url"
+}
+
 SEPARADAS_TR0505 = {
     "lote": "caso que reprova da rodada B (K-111, insumo 88): cópia do erro real do K-110",
     "nota": "O K-110 rotulou 'mocororó' um trecho da p. 100 do dossiê que não traz a palavra; aqui, o TR-0505 (p. 100, real) declarado como abonação da forma. A regra mencoes-0.1 reprova: a forma tem de estar no texto exato.",
@@ -169,6 +190,8 @@ def main() -> None:
         lista = []
         for c in casos:
             item = {"nome": c["nome"], "espera": c["espera"], "criterio": c["criterio"]}
+            if c["arq"] in ESPERADO:
+                item["saida_contem"] = ESPERADO[c["arq"]]
             if "caso" in c:
                 arq = pasta / f"{c['arq']}.json"
                 arq.write_text(json.dumps({"habilidade": hab, "nome": c["nome"], **c["caso"]}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

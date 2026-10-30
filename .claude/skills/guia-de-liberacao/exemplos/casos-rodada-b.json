@@ -15,6 +15,7 @@
       "nome": "guia da Lei 9.610 sem os limites",
       "espera": "reprova",
       "criterio": "caso do bloco 3: o guia diz o que não faz (nunca autoriza, não protocola; D-020)",
+      "saida_contem": "limites",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/guia-de-liberacao/exemplos/erro-guia-9610-sem-limites.json"
@@ -24,6 +25,7 @@
       "nome": "guia da Lei 9.610 com passo 'oficial' sem URL",
       "espera": "reprova",
       "criterio": "caso do bloco 3: 'oficial' só com a página oficial aberta, com URL",
+      "saida_contem": "url",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/guia-de-liberacao/exemplos/erro-guia-9610-oficial-sem-url.json"

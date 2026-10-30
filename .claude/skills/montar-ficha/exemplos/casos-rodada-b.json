@@ -15,6 +15,7 @@
       "nome": "ficha CL-0001 com uma frase factual sem a marca da Proposição",
       "espera": "reprova",
       "criterio": "erro do brief (l. 348): frase factual sem Proposição",
+      "saida_contem": "sem marcação de Proposição",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/montar-ficha/exemplos/erro-cl0001-frase-sem-proposicao.json"
@@ -33,6 +34,7 @@
       "nome": "camada Educação com uma habilidade da BNCC sem a página do PDF",
       "espera": "reprova",
       "criterio": "insumo 80: a habilidade da BNCC cita a página do PDF do MEC, e não uma Proposição",
+      "saida_contem": "sem a página do PDF",
       "comando": [
         "testes/rodada-b/caso_real.py",
         ".claude/skills/montar-ficha/exemplos/erro-educacao-bncc-sem-pagina.json"
