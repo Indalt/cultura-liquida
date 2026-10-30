@@ -1,0 +1,26 @@
+{
+  "id": "TE-0005",
+  "conceito": "bebida fermentada de caju que a fonte atribui aos nativos, usada em comemorações e ocasiões especiais (a fonte também a chama caoim)",
+  "designacoes": [
+    {
+      "forma": "caoi"
+    }
+  ],
+  "estado": "candidato",
+  "nota": "Nasce candidato pela regra mencoes-0.1 (brief, l. 419 b; D-039; K-102): Evidências separadas como outra CLB em trilhas/2026-10-30_K-111/separadas-caoi.json (EV-0018 (PR-0011)); a forma no texto exato de TR-0018. Atestar fica com o arquivista (registrar-termo), fora do K-102. Sem língua: nenhuma fonte a dá (insumo 30).",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "dúvida de conhecimento tradicional na F-0024 (só para publicar); a fonte não nomeia povo",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/mencoes_incidentais.py (mencoes-0.1)",
+    "data": "2026-10-30",
+    "execucao": "EX-0095",
+    "versao_regra": "mencoes-0.1"
+  }
+}

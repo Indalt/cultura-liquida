@@ -1,0 +1,48 @@
+{
+ "lote": "K111-CL0002 (Evidências separadas no K110-A5, EX-0069)",
+ "entradas": [
+  {
+   "entrada": "EN-1725",
+   "evidencias": [
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-39.json",
+     "chave": "uso e consumo|em 1587 se relatava que o gentio fazia vinho do sumo do caju, de bom cheiro e saboroso, com que se embebedava",
+     "atributo": "uso e consumo",
+     "valor": "em 1587 se relatava que o gentio fazia vinho do sumo do caju, de bom cheiro e saboroso, com que se embebedava",
+     "periodo_referido": "1587",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor citado no dossiê"
+     },
+     "lugares": {
+      "pratica": "litoral do Brasil (local não detalhado no trecho)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    },
+    {
+     "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-40.json",
+     "chave": "processo e modo de fazer|em 1663 se relatava que espremiam o caju em vasos e o deixavam ferver e fermentar até ficar com a substância do vinho",
+     "atributo": "processo e modo de fazer",
+     "valor": "em 1663 se relatava que espremiam o caju em vasos e o deixavam ferver e fermentar até ficar com a substância do vinho",
+     "periodo_referido": "1663",
+     "sentido": "a favor",
+     "voz": {
+      "tipo": "autor",
+      "papel": "autor citado no dossiê"
+     },
+     "lugares": {
+      "pratica": "litoral do Brasil (local não detalhado no trecho)",
+      "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
+      "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
+     },
+     "criterio_pratica_cultural": null,
+     "sustenta_aviso_saude_politica": false
+    }
+   ]
+  }
+ ]
+}

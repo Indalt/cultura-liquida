@@ -29,8 +29,12 @@ gravados (o contexto é só seletor de citação: o hash e o localizador não mu
 
 Uso:
     python scripts/gravar_extracao.py <saida-do-avaliador.json> --execucao EX-nnnn [--simular]
-        [--raiz <pasta>] [--manifestos <pasta>] [--pessoas <rótulos fora do Git> ...] [--privado <pasta>]
+        [--raiz <pasta>] [--manifestos <pasta>] [--pessoas <rótulos fora do Git> ...] [--privado <pasta>] [--clb CL-nnnn]
 `--execucao` é a Execução do avaliador (o log dele, gravado antes pelo curador).
+`--clb CL-nnnn` (0.3, K-111, insumo 92): as Evidências que um lote separou como de outra CLB (D-039) vão
+à CLB candidata dada, que já existe (nasce pela regra das menções); a Fonte já gravada fica como está, e a
+Entrada só ganha os Trechos novos. O que a Falta de conhecimento tradicional marca não entra no arquivo
+de saída: fica na pasta local (D-043, 3).
 Código 0 = gravou (ou simulou) sem erro; 1 = algum registro reprova (nada se grava).
 """
 from __future__ import annotations
@@ -50,7 +54,7 @@ from _acervo import carregar_acervo, proximo_id  # noqa: E402
 from _comum import RAIZ, carregar_esquema, carregar_json, validar_objeto  # noqa: E402
 from localizar_trecho import pasta_temporaria  # noqa: E402
 
-VERSAO = "gravar-extracao-0.2"
+VERSAO = "gravar-extracao-0.3"
 PASTA = {"FO": "fontes", "TR": "trechos", "EV": "evidencias", "PR": "proposicoes", "LU": "lugares",
          "CL": "clb", "F": "faltas", "P": "pessoas"}
 ESQ = {"FO": "fonte", "TR": "trecho", "EV": "evidencia", "PR": "proposicao", "LU": "lugar", "CL": "clb",
@@ -236,8 +240,10 @@ class Gravador:
                          "origem_registro": self.origem()}
         return i
 
-    def gravar_lote(self, saida: dict, manifestos: dict[str, dict]) -> list[str]:
-        clb = self.clb_cajuina()
+    def gravar_lote(self, saida: dict, manifestos: dict[str, dict], clb_destino: str | None = None) -> list[str]:
+        if clb_destino and clb_destino not in self.indice:
+            raise SystemExit(f"--clb {clb_destino}: a CLB não existe no acervo (nasce pela regra das menções, mencoes_incidentais.py)")
+        clb = clb_destino or self.clb_cajuina()
         props: dict[str, str] = {}
         for item in saida["entradas"]:
             en_id = item["entrada"]
@@ -246,6 +252,9 @@ class Gravador:
             man = manifestos.get(en_id, {})
             fo = item.get("fonte") or {}
             fo_id = self.por("FO", lambda r: r.get("entrada") == en_id) or self.novo_id("FO")
+            separadas = bool(clb_destino)
+            if separadas and fo_id not in self.indice:
+                raise SystemExit(f"--clb: {en_id} sem Fonte no acervo; as Evidências separadas vêm de uma fonte já extraída")
             nota_fo = [f"lida pelo ler_fonte.py: {man.get('pdf') or man.get('pagina') or en['url_ou_arquivo']} ({man.get('tipo') or 'sem texto'})"]
             if fo.get("deriva_de"):
                 nota_fo.append(f"de onde a fonte diz que tira a informação: {fo['deriva_de']}")
@@ -261,7 +270,8 @@ class Gravador:
                      "data_acesso": self.hoje, "perspectiva": fo.get("perspectiva") or "não dito",
                      "deriva_de": [], "entrada": en_id, "protecao": prot,
                      "nota": "; ".join(nota_fo), "origem_registro": self.origem()}
-            self.novos[fo_id] = fonte
+            if not separadas:  # com --clb, a Fonte já gravada fica como está
+                self.novos[fo_id] = fonte
             trechos, temas = [], False
             for ev in item.get("evidencias", []):
                 r = json.loads(Path(ev["arquivo_trecho"]).read_text(encoding="utf-8"))
@@ -320,6 +330,11 @@ class Gravador:
                     reg_ev["criterio_pratica_cultural"] = ev["criterio_pratica_cultural"]
                 self.novos[ev_id] = reg_ev
                 temas = True
+            if separadas:  # a Entrada só ganha os Trechos novos; a triagem dela é a do lote de origem
+                en["gera"] = {**(en.get("gera") or {}), "trechos": list(dict.fromkeys([*(en.get("gera") or {}).get("trechos", []), *trechos]))}
+                en["nota"] = (en.get("nota", "").rstrip(". ") + f". Evidências separadas gravadas na {clb} ({saida.get('lote')}, {VERSAO}).").strip()
+                self.novos[en_id] = en
+                continue
             en["valencias"] = item["valencias"]
             en["sustenta_aviso_saude_politica"] = bool(item.get("sustenta_aviso_saude_politica"))
             if item["estado"] == "quarentena":
@@ -366,6 +381,7 @@ def main() -> int:
     ap.add_argument("--pessoas", type=Path, nargs="+", default=[],
                     help="rótulos locais → nome, gravados pelo avaliador fora do Git (vários lotes: os rótulos se somam)")
     ap.add_argument("--privado", type=Path, help="pasta da tabela código → nome (padrão: CL_PRIVADO ou o caminho do registro)")
+    ap.add_argument("--clb", help="CLB candidata de destino das Evidências separadas como outra CLB (insumo 92; K-111)")
     a = ap.parse_args()
     rotulos = {}
     for arq in a.pessoas:
@@ -390,7 +406,7 @@ def main() -> int:
             if it.get("caracteres") or it["id"] not in manifestos:
                 manifestos[it["id"]] = it
     g = Gravador(a.execucao, a.raiz, rotulos, a.privado)
-    erros = g.gravar_lote(saida, manifestos)
+    erros = g.gravar_lote(saida, manifestos, a.clb)
     if erros:
         print("REPROVA (nada gravado):", *erros, sep="\n  ")
         return 1

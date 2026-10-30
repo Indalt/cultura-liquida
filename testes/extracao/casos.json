@@ -156,6 +156,25 @@
       ],
       "saida_contem": "1 Trecho(s) com o contexto cortado (simulado): TR-0001",
       "criterio": "a pessoa que a fonte nomeia sem falar não fica no contexto do Trecho"
+    },
+    {
+      "nome": "gravar_extracao --clb: CLB de destino que não existe (K-111, insumo 92)",
+      "espera": "reprova",
+      "comando": [
+        "scripts/gravar_extracao.py",
+        "testes/extracao/saida-ok.json",
+        "--execucao",
+        "EX-0046",
+        "--simular",
+        "--raiz",
+        "testes/extracao/raiz",
+        "--manifestos",
+        "testes/extracao/manifesto-ok",
+        "--clb",
+        "CL-999999"
+      ],
+      "saida_contem": "a CLB não existe",
+      "criterio": "a Evidência separada como outra CLB só vai a uma CLB que já nasceu pela regra das menções; sem ela, nada se grava"
     }
   ]
 }

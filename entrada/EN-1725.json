@@ -17,7 +17,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "dossiê de registro (PDF); endereço dado pela API do BCR e conferido na conversa de planejamento de 29/10; K-110. Triagem pela extrair-evidencia (K110-A3, EX-0067, valencias-0.1). Triagem pela extrair-evidencia (K110-A4, EX-0068, valencias-0.1). Triagem pela extrair-evidencia (K110-A5, EX-0069, valencias-0.1).",
+  "nota": "dossiê de registro (PDF); endereço dado pela API do BCR e conferido na conversa de planejamento de 29/10; K-110. Triagem pela extrair-evidencia (K110-A3, EX-0067, valencias-0.1). Triagem pela extrair-evidencia (K110-A4, EX-0068, valencias-0.1). Triagem pela extrair-evidencia (K110-A5, EX-0069, valencias-0.1). Evidências separadas gravadas na CL-0002 (K111-CL0002 (Evidências separadas no K110-A5, EX-0069), gravar-extracao-0.3).",
   "origem_registro": {
     "criado_por": "Vicente (pessoa), link ou documento trazido",
     "data": "2026-10-29",
@@ -301,7 +301,9 @@
       "TR-0515",
       "TR-0516",
       "TR-0517",
-      "TR-0518"
+      "TR-0518",
+      "TR-0519",
+      "TR-0520"
     ]
   }
 }

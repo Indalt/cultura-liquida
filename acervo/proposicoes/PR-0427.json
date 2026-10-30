@@ -1,0 +1,23 @@
+{
+  "id": "PR-0427",
+  "clb": "CL-0002",
+  "atributo": "processo e modo de fazer",
+  "valor": "em 1663 se relatava que espremiam o caju em vasos e o deixavam ferver e fermentar até ficar com a substância do vinho",
+  "periodo": {
+    "referido": "1663"
+  },
+  "evidencias": [
+    "EV-0520"
+  ],
+  "mu": 0.5,
+  "lambda": 0.0,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-10-30",
+    "execucao": "EX-0069"
+  },
+  "estado": "intermediário",
+  "versao_regra": "mu-lambda-0.2",
+  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
+}

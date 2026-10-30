@@ -1,6 +1,6 @@
 {
   "id": "PR-0011",
-  "clb": "CL-0001",
+  "clb": "CL-0004",
   "atributo": "insumo",
   "valor": "caju descoberto pelos nativos: fruto in natura, suco por prensagem manual ou bebida fermentada (caoi ou caoim) em comemorações",
   "periodo": {
@@ -19,5 +19,6 @@
   },
   "estado": "intermediário",
   "versao_regra": "mu-lambda-0.2",
-  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
+  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto",
+  "nota": "Movida de CL-0001 para CL-0004 (caoi) em 30/10/2026, no K-111 (insumo 89): o trecho TR-0018 nomeia a bebida fermentada 'o caoi ou caoim', outro termo (D-039); a CLB candidata nasceu pela regra mencoes-0.1 (trilhas/2026-10-30_K-111/separadas-caoi.json). O IN-0001 (caju) segue citando-a: o insumo X é do caju, comum às CLB."
 }

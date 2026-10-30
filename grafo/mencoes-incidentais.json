@@ -1,5 +1,5 @@
 {
-  "execucao": "EX-0087",
+  "execucao": "EX-0096",
   "data": "2026-10-30",
   "versao_regra": "mencoes-0.1",
   "normalizacao": "normalizacao-0.2",
@@ -8,12 +8,14 @@
       "TE-0001",
       "TE-0002",
       "TE-0003",
-      "TE-0004"
+      "TE-0004",
+      "TE-0005"
     ],
     "formas": [
       "acá-iu",
       "caju",
       "cajuína",
+      "caoi",
       "mocororó",
       "suco de caju clarificado",
       "vinho de caju"
@@ -138,7 +140,8 @@
       "arquivo": "EN-1314.txt",
       "entrada": "EN-1314",
       "clbs": [
-        "CL-0001"
+        "CL-0001",
+        "CL-0004"
       ]
     },
     {
@@ -232,7 +235,8 @@
       "arquivo": "EN-1725.txt",
       "entrada": "EN-1725",
       "clbs": [
-        "CL-0001"
+        "CL-0001",
+        "CL-0002"
       ]
     },
     {
@@ -251,6 +255,20 @@
     }
   ],
   "ligacoes": [
+    {
+      "de": [
+        "CL-0001"
+      ],
+      "para": "CL-0004",
+      "termo": "TE-0005",
+      "forma": "caoi",
+      "texto": "EN-0078.txt",
+      "entrada": "EN-0078",
+      "ocorrencias": 1,
+      "localizadores": [
+        "p. 10; car. 5150-5154 do texto normalizado (normalizacao-0.2)"
+      ]
+    },
     {
       "de": [
         "CL-0001"
@@ -292,6 +310,20 @@
       "de": [
         "CL-0001"
       ],
+      "para": "CL-0004",
+      "termo": "TE-0005",
+      "forma": "caoi",
+      "texto": "EN-1294.txt",
+      "entrada": "EN-1294",
+      "ocorrencias": 1,
+      "localizadores": [
+        "p. 9; car. 7265-7269 do texto normalizado (normalizacao-0.2)"
+      ]
+    },
+    {
+      "de": [
+        "CL-0001"
+      ],
       "para": "CL-0002",
       "termo": "TE-0003",
       "forma": "vinho de caju",
@@ -317,39 +349,6 @@
       "localizadores": [
         "p. 36; car. 51352-51365 do texto normalizado (normalizacao-0.2)",
         "p. 36; car. 51906-51919 do texto normalizado (normalizacao-0.2)"
-      ]
-    },
-    {
-      "de": [
-        "CL-0001"
-      ],
-      "para": "CL-0002",
-      "termo": "TE-0003",
-      "forma": "vinho de caju",
-      "texto": "EN-1725.txt",
-      "entrada": "EN-1725",
-      "ocorrencias": 20,
-      "localizadores": [
-        "p. 10; car. 22786-22799 do texto normalizado (normalizacao-0.2)",
-        "p. 21; car. 51566-51579 do texto normalizado (normalizacao-0.2)",
-        "p. 27; car. 69797-69810 do texto normalizado (normalizacao-0.2)",
-        "p. 62; car. 169665-169678 do texto normalizado (normalizacao-0.2)",
-        "p. 82; car. 227151-227164 do texto normalizado (normalizacao-0.2)",
-        "p. 86; car. 237699-237712 do texto normalizado (normalizacao-0.2)",
-        "p. 87; car. 240013-240026 do texto normalizado (normalizacao-0.2)",
-        "p. 116; car. 323777-323790 do texto normalizado (normalizacao-0.2)",
-        "p. 148; car. 409827-409840 do texto normalizado (normalizacao-0.2)",
-        "p. 149; car. 410915-410928 do texto normalizado (normalizacao-0.2)",
-        "p. 152; car. 418682-418695 do texto normalizado (normalizacao-0.2)",
-        "p. 152; car. 419131-419144 do texto normalizado (normalizacao-0.2)",
-        "p. 153; car. 420157-420170 do texto normalizado (normalizacao-0.2)",
-        "p. 156; car. 427287-427300 do texto normalizado (normalizacao-0.2)",
-        "p. 159; car. 433332-433345 do texto normalizado (normalizacao-0.2)",
-        "p. 163; car. 445127-445140 do texto normalizado (normalizacao-0.2)",
-        "p. 163; car. 447141-447154 do texto normalizado (normalizacao-0.2)",
-        "p. 163; car. 447277-447290 do texto normalizado (normalizacao-0.2)",
-        "p. 165; car. 452088-452101 do texto normalizado (normalizacao-0.2)",
-        "p. 166; car. 453934-453947 do texto normalizado (normalizacao-0.2)"
       ]
     },
     {
@@ -436,7 +435,8 @@
       "texto": "EN-1725.txt",
       "entrada": "EN-1725",
       "de": [
-        "CL-0001"
+        "CL-0001",
+        "CL-0002"
       ],
       "marca": "termo ambíguo (D-039): sem ligação automática",
       "ocorrencias": 25,
@@ -511,7 +511,9 @@
   ],
   "contagens": {
     "propria_clb": {
-      "CL-0001": 2537
+      "CL-0001": 2537,
+      "CL-0004": 1,
+      "CL-0002": 20
     },
     "termo_sem_clb": {
       "TE-0001": 1998

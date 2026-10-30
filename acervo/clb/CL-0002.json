@@ -29,7 +29,7 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "origem: Evidências separadas como outra CLB em trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (a5-35, a5-36, a5-39, a5-40); a forma no texto exato de TR-0491, TR-0513. CLB de outro termo pela regra mencoes-0.1 (D-039); os critérios esperam a triagem (F-0020); a situação, as Evidências gravadas no acervo.",
+  "nota": "origem: Evidências separadas como outra CLB em trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (a5-35, a5-36, a5-39, a5-40); a forma no texto exato de TR-0491, TR-0513. CLB de outro termo pela regra mencoes-0.1 (D-039); os critérios esperam a triagem (F-0020); a situação fica para a ficha (montar-ficha). Evidências gravadas no acervo em 30/10/2026 (K-111, insumo 92; gravar-extracao-0.3 --clb): EV-0519 e EV-0520 (os relatos de 1587 e 1663, PR-0426 e PR-0427). Ficam fora: a5-35 e a5-36 (modo de fazer nas falas de quem o fazia no Piauí, de origem identificável, em dúvida na F-0024; insumo 90, K-010) e a5-31 a a5-34 (o trecho não nomeia a bebida).",
   "origem_registro": {
     "criado_por": "scripts/mencoes_incidentais.py (mencoes-0.1)",
     "data": "2026-10-30",

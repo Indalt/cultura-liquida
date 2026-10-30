@@ -1,0 +1,31 @@
+{
+  "id": "EV-0519",
+  "trecho": "TR-0519",
+  "proposicao": "PR-0426",
+  "sentido": "a favor",
+  "voz": {
+    "tipo": "autor",
+    "papel": "autor citado no dossiê"
+  },
+  "lugares": {
+    "pratica": "LU-0058",
+    "publicacao": "LU-0032",
+    "pesquisa": "LU-0033"
+  },
+  "estado": "não conferida",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-10-30",
+    "execucao": "EX-0069"
+  }
+}

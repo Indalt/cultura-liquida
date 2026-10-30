@@ -1,0 +1,23 @@
+{
+  "id": "PR-0426",
+  "clb": "CL-0002",
+  "atributo": "uso e consumo",
+  "valor": "em 1587 se relatava que o gentio fazia vinho do sumo do caju, de bom cheiro e saboroso, com que se embebedava",
+  "periodo": {
+    "referido": "1587"
+  },
+  "evidencias": [
+    "EV-0519"
+  ],
+  "mu": 0.5,
+  "lambda": 0.0,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-10-30",
+    "execucao": "EX-0069"
+  },
+  "estado": "intermediário",
+  "versao_regra": "mu-lambda-0.2",
+  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
+}

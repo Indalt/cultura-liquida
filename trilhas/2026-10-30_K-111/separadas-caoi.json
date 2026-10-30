@@ -1,0 +1,13 @@
+{
+ "lote": "K-111, insumo 89: a PR-0011 (EV-0018, TR-0018) trata de outra CLB pela D-039",
+ "nota": "o trecho TR-0018 (FO-0006, Embrapa 2009) nomeia a bebida fermentada 'o caoi ou caoim'; a forma 'caoi' está no texto exato (eixo 3). 'caoim' também está, como segunda forma; a designação segunda e o atestado ficam com o arquivista (registrar-termo), como no K-102.",
+ "termos_declarados": [
+  {
+   "forma": "caoi",
+   "sentido": "bebida fermentada de caju que a fonte atribui aos nativos, usada em comemorações e ocasiões especiais (a fonte também a chama caoim)",
+   "abonado_em": ["TR-0018"],
+   "evidencias_separadas": ["EV-0018 (PR-0011)"],
+   "protecao": {"licenca": "não conferido", "consentimento": "não se aplica", "restricao_comunitaria": "dúvida de conhecimento tradicional na F-0024 (só para publicar); a fonte não nomeia povo", "precisao_lugar": "não se aplica", "dado_sensivel": false, "crianca_ou_adolescente": false, "pedido_de_retirada": "nenhum"}
+  }
+ ]
+}
