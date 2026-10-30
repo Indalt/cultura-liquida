@@ -1,0 +1,39 @@
+{
+  "id": "CL-0002",
+  "termo": "TE-0003",
+  "termos": [
+    "TE-0003"
+  ],
+  "situacoes": [],
+  "criterios": {
+    "identidade_ou_memoria": {
+      "falta": "F-0020"
+    },
+    "reconhecimento_pelo_grupo": {
+      "falta": "F-0020"
+    },
+    "transmissao_entre_geracoes": {
+      "falta": "F-0020"
+    },
+    "recriacao": {
+      "falta": "F-0020"
+    }
+  },
+  "estado": "candidata",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "origem: Evidências separadas como outra CLB em trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (a5-35, a5-36, a5-39, a5-40); a forma no texto exato de TR-0491, TR-0513. CLB de outro termo pela regra mencoes-0.1 (D-039); os critérios esperam a triagem (F-0020); a situação, as Evidências gravadas no acervo.",
+  "origem_registro": {
+    "criado_por": "scripts/mencoes_incidentais.py (mencoes-0.1)",
+    "data": "2026-10-30",
+    "execucao": "EX-0085",
+    "versao_regra": "mencoes-0.1"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "CL-0003",
+  "termo": "TE-0004",
+  "termos": [
+    "TE-0004"
+  ],
+  "situacoes": [],
+  "criterios": {
+    "identidade_ou_memoria": {
+      "falta": "F-0020"
+    },
+    "reconhecimento_pelo_grupo": {
+      "falta": "F-0020"
+    },
+    "transmissao_entre_geracoes": {
+      "falta": "F-0020"
+    },
+    "recriacao": {
+      "falta": "F-0020"
+    }
+  },
+  "estado": "candidata",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "o detalhe atribuído ao povo Tremembé fica na pasta local até o K-010 (D-043, 3; F-0033)",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "origem: Evidências separadas como outra CLB em trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (nenhuma com a forma no trecho); a forma no texto exato de TR-0494; desdobramento do termo ambíguo de TE-0002 (D-039). CLB de outro termo pela regra mencoes-0.1 (D-039); os critérios esperam a triagem (F-0020); a situação, as Evidências gravadas no acervo.",
+  "origem_registro": {
+    "criado_por": "scripts/mencoes_incidentais.py (mencoes-0.1)",
+    "data": "2026-10-30",
+    "execucao": "EX-0085",
+    "versao_regra": "mencoes-0.1"
+  },
+  "desdobrada_de": "TE-0002"
+}

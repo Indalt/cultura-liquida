@@ -1,0 +1,15 @@
+{
+  "id": "TE-900002",
+  "conceito": "outra bebida do caso de teste",
+  "designacoes": [
+    {
+      "forma": "vinho de caju"
+    }
+  ],
+  "estado": "candidato",
+  "origem_registro": {
+    "criado_por": "teste do K-102 (exemplo de esquema)",
+    "data": "2026-10-30",
+    "execucao": "EX-900001"
+  }
+}

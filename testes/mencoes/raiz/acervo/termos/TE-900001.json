@@ -1,0 +1,21 @@
+{
+  "id": "TE-900001",
+  "conceito": "bebida do caso de teste",
+  "designacoes": [
+    {
+      "forma": "cajuína"
+    }
+  ],
+  "variantes": [
+    {
+      "forma": "mocororó",
+      "tipo_variacao": "designação local de uma etapa; termo ambíguo (D-039)"
+    }
+  ],
+  "estado": "candidato",
+  "origem_registro": {
+    "criado_por": "teste do K-102 (exemplo de esquema)",
+    "data": "2026-10-30",
+    "execucao": "EX-900001"
+  }
+}

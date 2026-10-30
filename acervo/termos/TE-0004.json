@@ -1,0 +1,32 @@
+{
+  "id": "TE-0004",
+  "conceito": "bebida fermentada de caju que o registro do Iphan atribui ao povo Tremembé; o detalhe fica na pasta local (D-043, 3; F-0033)",
+  "designacoes": [
+    {
+      "forma": "mocororó"
+    }
+  ],
+  "estado": "candidato",
+  "nota": "Nasce candidato pela regra mencoes-0.1 (brief, l. 419 b; D-039; K-102): Evidências separadas como outra CLB em trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (nenhuma com a forma no trecho); a forma no texto exato de TR-0494; desdobramento do termo ambíguo de TE-0002 (D-039). Atestar fica com o arquivista (registrar-termo), fora do K-102. Sem língua: nenhuma fonte a dá (insumo 30).",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "o detalhe atribuído ao povo Tremembé fica na pasta local até o K-010 (D-043, 3; F-0033)",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/mencoes_incidentais.py (mencoes-0.1)",
+    "data": "2026-10-30",
+    "execucao": "EX-0085",
+    "versao_regra": "mencoes-0.1"
+  },
+  "relacoes": [
+    {
+      "tipo": "relacionado",
+      "termo": "TE-0002"
+    }
+  ]
+}

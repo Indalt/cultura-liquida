@@ -1,0 +1,114 @@
+{
+  "habilidade": "script de menções incidentais (K-102)",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "menções: a CLB registrada vira ligação, o termo ambíguo vai marcado, a candidata tem linha com a origem",
+      "espera": "passa",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--raiz",
+        "testes/mencoes/raiz",
+        "--textos",
+        "testes/mencoes/textos",
+        "--conferir",
+        "--arquivo",
+        "testes/mencoes/mencoes-ok.json",
+        "--lista",
+        "testes/mencoes/lista-ok.md",
+        "--quadro",
+        "testes/mencoes/quadro-ok.md"
+      ],
+      "saida_contem": "1 ligação(ões); 1 menção(ões) ambígua(s); conferido",
+      "criterio": "trecho real (TR-0513, FO-0034): 'vinho de caju' liga CL-900001 a CL-900002; 'mocororó' (ambíguo, D-039) sem ligação; um só cartão de lista"
+    },
+    {
+      "nome": "menções: menção a outra CLB sem ligação",
+      "espera": "reprova",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--raiz",
+        "testes/mencoes/raiz",
+        "--textos",
+        "testes/mencoes/textos",
+        "--conferir",
+        "--arquivo",
+        "testes/mencoes/mencoes-sem-ligacao.json",
+        "--lista",
+        "testes/mencoes/lista-ok.md",
+        "--quadro",
+        "testes/mencoes/quadro-ok.md"
+      ],
+      "saida_contem": "menção sem ligação",
+      "criterio": "a menção a uma CLB registrada tem de virar ligação no grafo"
+    },
+    {
+      "nome": "menções: linha do cartão de lista sem a menção de origem",
+      "espera": "reprova",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--raiz",
+        "testes/mencoes/raiz",
+        "--textos",
+        "testes/mencoes/textos",
+        "--conferir",
+        "--arquivo",
+        "testes/mencoes/mencoes-ok.json",
+        "--lista",
+        "testes/mencoes/lista-sem-origem.md",
+        "--quadro",
+        "testes/mencoes/quadro-ok.md"
+      ],
+      "saida_contem": "sem a menção de origem",
+      "criterio": "a linha da CLB candidata traz a menção de origem"
+    },
+    {
+      "nome": "menções: um cartão por CLB no lugar da linha no cartão de lista",
+      "espera": "reprova",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--raiz",
+        "testes/mencoes/raiz",
+        "--textos",
+        "testes/mencoes/textos",
+        "--conferir",
+        "--arquivo",
+        "testes/mencoes/mencoes-ok.json",
+        "--lista",
+        "testes/mencoes/lista-ok.md",
+        "--quadro",
+        "testes/mencoes/quadro-cartao-por-clb.md"
+      ],
+      "saida_contem": "cartão por CLB",
+      "criterio": "D-039: um só cartão de lista, com uma linha por CLB"
+    },
+    {
+      "nome": "menções: o termo ambíguo declarado se desdobra em Termo e CLB candidatos",
+      "espera": "passa",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--raiz",
+        "testes/mencoes/raiz",
+        "--separadas",
+        "testes/mencoes/separadas-ok.json",
+        "--simular"
+      ],
+      "saida_contem": "desdobra TE-900001",
+      "criterio": "D-039: a forma no texto exato de um Trecho localizado; o termo ambíguo se desdobra; nada gravado (simulado)"
+    },
+    {
+      "nome": "menções: forma declarada que o trecho não traz",
+      "espera": "reprova",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--raiz",
+        "testes/mencoes/raiz",
+        "--separadas",
+        "testes/mencoes/separadas-erro.json",
+        "--simular"
+      ],
+      "saida_contem": "não está no texto exato",
+      "criterio": "eixo 3: o termo tem de estar no trecho; o nome não se infere"
+    }
+  ]
+}

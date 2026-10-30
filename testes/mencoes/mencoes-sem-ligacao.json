@@ -1,0 +1,54 @@
+{
+  "versao_regra": "mencoes-0.1",
+  "normalizacao": "normalizacao-0.2",
+  "dicionario": {
+    "termos": [
+      "TE-900001",
+      "TE-900002"
+    ],
+    "formas": [
+      "cajuína",
+      "mocororó",
+      "vinho de caju"
+    ],
+    "ambiguas": [
+      "mocororó"
+    ]
+  },
+  "textos": [
+    {
+      "arquivo": "EN-900001.txt",
+      "entrada": "EN-900001",
+      "clbs": [
+        "CL-900001"
+      ]
+    }
+  ],
+  "ligacoes": [],
+  "ambiguas": [
+    {
+      "forma": "mocororó",
+      "termos": [
+        "TE-900001"
+      ],
+      "texto": "EN-900001.txt",
+      "entrada": "EN-900001",
+      "de": [
+        "CL-900001"
+      ],
+      "marca": "termo ambíguo (D-039): sem ligação automática",
+      "ocorrencias": 1,
+      "localizadores": [
+        "p. 116; car. 215-223 do texto normalizado (normalizacao-0.2)"
+      ]
+    }
+  ],
+  "contagens": {
+    "propria_clb": {
+      "CL-900001": 1
+    },
+    "termo_sem_clb": {},
+    "texto_sem_clb_de_origem": {},
+    "textos_sem_clb": 0
+  }
+}

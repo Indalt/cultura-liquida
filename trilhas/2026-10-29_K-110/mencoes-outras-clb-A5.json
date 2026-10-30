@@ -209,5 +209,41 @@
     "falta": "F-0033"
    }
   }
+ ],
+ "termos_declarados": [
+  {
+   "forma": "vinho de caju",
+   "sentido": "bebida fermentada do caju que as fontes chamam vinho de caju",
+   "abonado_em": [
+    "TR-0491",
+    "TR-0513"
+   ],
+   "evidencias_separadas": [
+    "a5-35",
+    "a5-36",
+    "a5-39",
+    "a5-40"
+   ],
+   "nota": "declarado pelo curador em 30/10/2026 (K-102), pelo eixo 3: 'vinho' está no texto exato das quatro separadas; a forma inteira está no texto exato de TR-0491 e TR-0513 (FO-0034). a5-31 a a5-34 não nomeiam a bebida e ficam sem termo."
+  },
+  {
+   "forma": "mocororó",
+   "sentido": "bebida fermentada de caju que o registro do Iphan atribui ao povo Tremembé; o detalhe fica na pasta local (D-043, 3; F-0033)",
+   "abonado_em": [
+    "TR-0494"
+   ],
+   "ambiguo_com": "TE-0002",
+   "evidencias_separadas": [],
+   "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "o detalhe atribuído ao povo Tremembé fica na pasta local até o K-010 (D-043, 3; F-0033)",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+   },
+   "nota": "declarado pelo curador em 30/10/2026 (K-102): desdobramento do termo ambíguo registrado no TE-0002 (D-039); a forma e o povo estão no texto exato de TR-0494 (FO-0034, p. 86). A a5-47 trata do uso de bebida de caju pelos Tremembé, mas o trecho não traz a palavra: não se liga ao Termo por inferência."
+  }
  ]
 }

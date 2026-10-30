@@ -21,3 +21,16 @@ Bebida obtida do suco clarificado do pedúnculo (a 'maçã' ou pseudofruto) do c
 - **Relacionado:** [TE-0001](TE-0001.json)
 - **Booleanos:** `("cajuína" OR "suco de caju clarificado" OR "mocororó" OR "cajuina" OR "caju-ína" OR "cajuí-na" OR "ca-juína" OR "cajuyna")` · `("cajuína" OR "suco de caju clarificado" OR "mocororó" OR "cajuina" OR "caju-ína" OR "cajuí-na" OR "ca-juína" OR "cajuyna") AND (clarificação OR banho-maria OR filtragem OR esterilização)`
 
+## mocororó (TE-0004, candidato)
+
+bebida fermentada de caju que o registro do Iphan atribui ao povo Tremembé; o detalhe fica na pasta local (D-043, 3; F-0033)
+
+- **Relacionado:** [TE-0002](TE-0002.json)
+- **Booleanos:** 
+
+## vinho de caju (TE-0003, candidato)
+
+bebida fermentada do caju que as fontes chamam vinho de caju
+
+- **Booleanos:** 
+

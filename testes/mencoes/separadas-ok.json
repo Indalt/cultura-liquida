@@ -1,0 +1,12 @@
+{
+ "termos_declarados": [
+  {
+   "forma": "mocororó",
+   "sentido": "o outro sentido do caso de teste",
+   "abonado_em": [
+    "TR-900001"
+   ],
+   "ambiguo_com": "TE-900001"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "CL-900002",
+  "termo": "TE-900002",
+  "termos": [
+    "TE-900002"
+  ],
+  "situacoes": [],
+  "criterios": {
+    "identidade_ou_memoria": {
+      "falta": "F-900001"
+    },
+    "reconhecimento_pelo_grupo": {
+      "falta": "F-900001"
+    },
+    "transmissao_entre_geracoes": {
+      "falta": "F-900001"
+    },
+    "recriacao": {
+      "falta": "F-900001"
+    }
+  },
+  "estado": "candidata",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "origem: caso de teste. CLB de outro termo pela regra mencoes-0.1 (D-039)",
+  "origem_registro": {
+    "criado_por": "teste do K-102 (exemplo de esquema)",
+    "data": "2026-10-30",
+    "execucao": "EX-900001"
+  }
+}

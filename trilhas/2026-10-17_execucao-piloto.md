@@ -318,6 +318,19 @@
 - **Insumos novos:** 84 (triagem de conhecimento tradicional antes da extração; K-111), 85 (o conjunto de citações de uma obra; K-010), 86 (a D-044 no harness do juridico; K-111), 87 (aviso da lei por uso, proposta de Vicente; K-010), 88 (rótulo e termo ambíguo no harness, achado do lote; K-111), 89 (Proposições de outra CLB na CL-0001; K-111), 90 (o detalhe sob dúvida de conhecimento tradicional: Git ou pasta local; K-010).
 - **Consumo do lote:** 2 agentes, **129.503 tokens e 25 chamadas** (arquivista 40.097; juridico 89.406). `rodar_testes.py`: OK 198 · FALHA 0 · PENDENTE 5; `procurar_dado_pessoal.py --git`: 0 ocorrência. O K-110 volta a Concluído.
 
+### Cartão K-102 (menções incidentais) — mesma conversa, 30/10/2026
+
+- **Janela de 5 h ao fim do item 1:** não lida nesta conversa (Vicente lê); a conversa seguiu para o K-102, que não usa agente, com o commit do lote antes (D-040: não perder trabalho).
+- **Cartão K-102 movido para Fazendo.** Sem agentes (brief, l. 342).
+- [x] **`scripts/mencoes_incidentais.py`** (mencoes-0.1), sem IA: as candidatas das Evidências separadas (l. 419 b; D-039), a varredura do texto lido contra o registro de Termos, com a ligação no grafo e a marca do termo ambíguo, e o `--conferir`. Termos declarados pelo curador no arquivo das separadas, pelo eixo 3 (a forma no texto exato de um Trecho localizado).
+- [x] **Candidatas (EX-0085):** TE-0003 "vinho de caju" e CL-0002 (das a5-35, a5-36, a5-39 e a5-40; a forma inteira em TR-0491 e TR-0513); TE-0004 "mocororó" e CL-0003, desdobrados do termo ambíguo do TE-0002 (D-039; a forma e o povo em TR-0494; o detalhe na pasta local, F-0033; sem ligação à a5-47). As a5-31 a a5-34 ficam sem termo. Atestar fica com o arquivista, fora do cartão.
+- [x] **Cartão de lista (EX-0086):** K-207, único, de baixa prioridade, que não chama Vicente; as duas linhas em `trilhas/planejamento/clb-candidatas.md`, com a forma e a menção de origem (`fila_curadoria.py` 0.2).
+- [x] **Varredura (EX-0087):** 34 textos da pasta temporária (não apagada), 4 Termos, 6 formas; 7 ligações CL-0001 → CL-0002 (43 ocorrências de "vinho de caju"); 5 menções ambíguas de "mocororó" (41 ocorrências), marcadas e sem ligação; `grafo/mencoes-incidentais.json` sem texto da fonte (`procurar_dado_pessoal.py`: 0); `--conferir`: conferido.
+- [x] **Casos** em `testes/mencoes/` (trecho real, TR-0513): 2 que passam e 4 que reprovam como esperado (menção sem ligação, linha sem origem, cartão por CLB, forma fora do trecho); `rodar_testes.py`: OK 204 · FALHA 0 · PENDENTE 5.
+- **Pronto quando:** os casos dão o esperado; o script rodou sobre o texto dos blocos 7 e 8 sem gravar texto integral; a linha entrou no cartão de lista com a menção de origem. **Fora (D-030):** as CLB de termo não registrado, as formas de busca, "vinho do caju" e "vinho-de-caju" (insumo 91), seis textos sem CLB de origem, atestar os candidatos e gravar as Evidências das candidatas no acervo (insumo 92). Relatório em `trilhas/2026-10-30_K-102/relatorio.md`.
+- **Insumos novos:** 91 (atestar TE-0003 e TE-0004 e as variantes; a definir pelo planejamento) e 92 (as Evidências das CLB candidatas no acervo; K-111).
+- **Consumo da conversa:** 2 agentes, **129.503 tokens e 25 chamadas** (arquivista 40.097; juridico 89.406), todos no lote de correção do K-110; o K-102, sem agentes. Estimativa pela conta da D-040 (não é medida): 2 + 1,6 × 1,30 = 4,1 pp.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -371,4 +384,4 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 28/10–04/11/2026 | planejamento | conversa de planejamento de 29/10 (fora do quadro) | 17 | 23 | 6 | — | — | A1 pela abertura do K-110; atribuída ao planejamento pela fala de Vicente (os endereços do BCR conferidos nessa conversa); pode misturar uso de fora do projeto |
 | 28/10–04/11/2026 | desenvolvimento | K-110 | 23 | não lido | 27 | 1.476.529 | 230 | janela de 5 h: 35% ao abrir; Opus 5.5 médio; parada pelo limite da janela de 5 h às 19h41 de 29/10 e retomada em 30/10 com 34% (semanal) e 6% (janela); estimativa da conta 25,6 pp; sem leitura ao fechar: os 27 pp (23 → 50, pela abertura do lote de correção) somam o K-110 e a conversa de planejamento de 30/10, todos contados aqui, no desenvolvimento, para não subestimar o teto dele |
 | 28/10–04/11/2026 | planejamento | conversa de planejamento de 30/10 (fora do quadro; a D-047 e a pesquisa do SisGen) | não lido | 50 | — | 127.058 | — | A1 pela abertura do lote de correção do K-110; os pp estão na linha do K-110 (sem leitura entre as duas); agentes EX-0080 (juridico) e EX-0081 (auditor), num workflow; pode misturar uso de fora do projeto |
-| 28/10–04/11/2026 | desenvolvimento | K-110 (lote de correção) e K-102 | 50 | a informar | — | — | — | janela de 5 h: 7% ao abrir; Opus 5.5 médio |
+| 28/10–04/11/2026 | desenvolvimento | K-110 (lote de correção) e K-102 | 50 | a informar | — | 129.503 | 25 | janela de 5 h: 7% ao abrir; Opus 5.5 médio; estimativa da conta 4,1 pp; o pedido de Vicente mudou no meio do lote (versão revista, registrada) |

@@ -94,6 +94,18 @@ def abertos(linhas: list[str]) -> list[str]:
     return [x for x in linhas if x.startswith("| A fazer") or x.startswith("| Fazendo")]
 
 
+def forma(termo: dict) -> str:
+    return ", ".join(d["forma"] for d in termo.get("designacoes", [])) or "?"
+
+
+def origem_da_candidata(c: dict) -> str:
+    """A menção de origem da CLB candidata: a nota que começa por 'origem:' (mencoes_incidentais.py) ou a Execução."""
+    nota = c.get("nota", "")
+    if nota.startswith("origem:"):
+        return nota.split(". CLB de outro termo")[0]
+    return f"origem: Execução {c.get('origem_registro', {}).get('execucao', '?')}"
+
+
 def chama_vicente(linha: str) -> bool:
     """Conflito ou Falta jurídica a liberar, sem estar à espera de outra coisa (ex.: a decisão de publicar)."""
     return ("Conflito:" in linha or "a liberar" in linha) and "espera" not in linha.lower()
@@ -179,13 +191,15 @@ def main() -> int:
                       f"{len(linhas)} cartão(ões) da frente de operação"]
         ex.fora.append("as Faltas e os cartões fora do acervo (a F-0003, na trilha, tem o K-201)")
         print(f"log: {ex.gravar_log()}")
-        lista = next((it for it in novos if it["tipo"] == "lista"), None) or next((it for it in itens if it["tipo"] == "lista"), None)
-        if lista:
-            arq = raiz / "trilhas" / "planejamento" / "clb-candidatas.md"
-            arq.parent.mkdir(parents=True, exist_ok=True)
-            arq.write_text("# CLB candidatas de outro termo (D-039)\n\n" + "".join(
-                f"- {c['id']}: termo {c.get('termo')}; origem {', '.join(c.get('origem_mencao', [])) or c.get('origem_registro', {}).get('execucao', '?')}\n"
-                for c in lista["candidatas"]), encoding="utf-8")
+    # a lista acompanha as CLB candidatas a cada --abrir-cartoes, com cartão novo ou não (uma linha por CLB; D-039)
+    lista = next((it for it in itens if it["tipo"] == "lista"), None)
+    if a.abrir_cartoes and lista:
+        arq = raiz / "trilhas" / "planejamento" / "clb-candidatas.md"
+        arq.parent.mkdir(parents=True, exist_ok=True)
+        termos = {r["id"]: r for r in registros(raiz, "acervo/termos")}
+        arq.write_text("# CLB candidatas de outro termo (D-039)\n\n" + "".join(
+            f"- {c['id']}: termo {c.get('termo')} ({forma(termos.get(c.get('termo'), {}))}); {origem_da_candidata(c)}\n"
+            for c in lista["candidatas"]), encoding="utf-8")
     for p in problemas:
         print("PROBLEMA", p)
     print(f"{VERSAO}: {len(novos)} cartão(ões) novo(s){' gravado(s)' if a.abrir_cartoes and novos else ''}; fila {len(fila)} de {LIMITE}; "
