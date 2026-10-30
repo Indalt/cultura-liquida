@@ -1,0 +1,20 @@
+{
+  "habilidade": "registrar-termo",
+  "nome": "TE-0002 cajuína, atestado, com o termo ambíguo marcado (e o TE-0004 que divide a forma)",
+  "sementes": [
+    "TE-0002",
+    "TE-0004"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ],
+    [
+      "scripts/gerar_termo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ]
+}

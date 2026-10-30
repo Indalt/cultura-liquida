@@ -1,11 +1,11 @@
 ---
 name: registrar-termo
-description: Registra um Termo do projeto Cultura Líquida como entrada terminológica (conceito, designações, variantes com uso no lugar e no tempo, abonações com fonte, booleanos derivados), nascendo candidato e virando atestado com a primeira abonação localizada. Harness pendente do caso-piloto do Passo 1.
+description: Registra um Termo do projeto Cultura Líquida como entrada terminológica (conceito, designações, variantes com uso no lugar e no tempo, abonações com fonte, booleanos derivados), nascendo candidato e virando atestado com a primeira abonação localizada.
 ---
 
 # registrar-termo
 
-**Versão do harness:** 0.1.1 · **Quem usa:** arquivista · **Rodada:** B · **Estado:** papel, formato e passos escritos; contrato em `esquemas/termo.schema.json` (0.2.0); **exemplos pendentes: caso-piloto (Passo 1)**.
+**Versão do harness:** 0.2.0 · **Quem usa:** arquivista · **Rodada:** B · **Estado:** contrato em `esquemas/termo.schema.json` (0.2.0); exemplos reais do piloto (rodada B, K-111).
 
 ## Objetivo
 Que o glossário seja o motor de busca: um único registro de Termo gera, por script, os booleanos, os links do wiki e o glossário (princípio 2; plano, item 6).
@@ -24,13 +24,14 @@ Que o glossário seja o motor de busca: um único registro de Termo gera, por sc
 3. Dê a língua da designação e da variante **só quando a fonte a der**, com `lingua_fonte`; sem ela, deixe sem língua (a exportação usa `und`). Nunca infira a língua.
 4. Ligue a abonação (trecho localizado) e mude para atestado.
 5. Gere os booleanos por script (`scripts/gerar_termo.py`, regra termo-0.2) e sinalize ao rastreador a busca nova.
-6. Termine com o bloco LOG.
+6. **Termo ambíguo** (D-039; insumos 26 e 88): se a designação nomeia mais de um conceito nas abonações, não escolha um: desdobre (`mencoes_incidentais.py --separadas`, com `ambiguo_com`) e marque "termo ambíguo" nos dois Termos (na variante, no `tipo_variacao`; na designação, na nota); o `validar_acervo.py` (item 12) reprova a forma dividida sem a marca.
+7. Termine com o bloco LOG.
 
 ## Regras herdadas
 Nível de verificação; essência (D-017: termos não limitam a busca; D-018); dado pessoal; anti-robô; Falta dita.
 
 ## Teto e custo
-A medir no caso-piloto.
+Medido no piloto (logs, arquivista): 3 execuções, 149.782 tokens e 32 chamadas; de 40.097 a 56.779 por execução.
 
 ## Critério de parada
 Termo registrado com estado, variantes e abonações disponíveis.
@@ -42,8 +43,9 @@ Não impõe taxonomia de cima; não trata a variação como ruído; não atesta 
 `agente: "arquivista"`, `habilidade: "registrar-termo"`, `entrada_ref` (ID do termo).
 
 ## Exemplos e validador
-**Pendente: caso-piloto (Passo 1).** Ver [exemplos/LEIA-ME.md](exemplos/LEIA-ME.md).
+**Rodada B (K-111):** pares reais do piloto em [exemplos/casos-rodada-b.json](exemplos/casos-rodada-b.json), rodados pelo `testes/rodada-b/caso_real.py` sobre uma cópia do acervo do momento; o que o piloto não deu está no [exemplos/LEIA-ME.md](exemplos/LEIA-ME.md). Relatório: `testes/relatorio-rodada-B.md`.
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): exemplos reais da rodada B (TE-0002 e TE-0004); passo do termo ambíguo, com a marca nos dois Termos e o desdobramento (insumos 26, 88; `validar_acervo.py`, item 12); custo medido.
 - 0.1.1 (23/10/2026, K-106): contrato do Termo 0.2.0 com a língua da designação e da variante só quando a fonte a der, e de onde ela veio (insumo 30); passo 3 novo; booleanos pelo `gerar_termo.py` (termo-0.2).
 - 0.1.0 (16/10/2026): papel, formato e passos (D-029).

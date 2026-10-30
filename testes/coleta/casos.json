@@ -512,7 +512,7 @@
       "comando": [
         "scripts/relatorio_dia.py"
       ],
-      "saida_contem": "relatorio-dia-0.2",
+      "saida_contem": "relatorio-dia-0.3",
       "criterio": "o relatório calculado abre a conversa (l. 512)"
     },
     {

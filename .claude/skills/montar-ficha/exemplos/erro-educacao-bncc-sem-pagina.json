@@ -1,0 +1,22 @@
+{
+  "habilidade": "montar-ficha",
+  "nome": "camada Educação com uma habilidade da BNCC sem a página do PDF",
+  "fichas": [
+    "educacao/CL-0001.md"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ],
+  "mudancas": [
+    {
+      "arquivo": "acervo/fichas/educacao/CL-0001.md",
+      "op": "texto",
+      "de": "| p. 82 |",
+      "para": "| não conferida |"
+    }
+  ]
+}

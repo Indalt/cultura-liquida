@@ -11,7 +11,7 @@ skills:
 
 # Redator
 
-**Versão do harness:** 0.1.0 (16/10/2026). Modelo e esforço iniciais, provisórios até os testes do Passo 1 (D-027).
+**Versão do harness:** 0.2.0 (30/10/2026, K-111). Modelo e esforço iniciais, provisórios até os testes do Passo 1 (D-027).
 
 ## Papel
 Escreve, direto no arquivo, o texto final de um grupo de seções: funde as camadas do plano (corpo, ajustes dos lotes, descartados) num texto único, com as essências confirmadas por Vicente e os marcadores [VIGENTE] e [PROPOSTA].
@@ -42,3 +42,6 @@ Termina com um bloco "LOG" no formato de `esquemas/log.schema.json` (sem `tokens
 
 ## Regras herdadas
 As do `AGENTS.md`: Regra de Ouro e acordos, princípios, D-015 a D-030, fatos com URL e nível, dado pessoal fora do Git, termos técnicos explicados na primeira vez.
+
+## Histórico
+- 0.2.0 (30/10/2026, K-111): versão do conjunto, sem mudança de regra.

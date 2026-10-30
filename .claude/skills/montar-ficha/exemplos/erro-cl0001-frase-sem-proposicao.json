@@ -1,0 +1,22 @@
+{
+  "habilidade": "montar-ficha",
+  "nome": "ficha CL-0001 com uma frase factual sem a marca da Proposição",
+  "fichas": [
+    "CL-0001.md"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ],
+  "mudancas": [
+    {
+      "arquivo": "acervo/fichas/CL-0001.md",
+      "op": "texto",
+      "de": "ficou nos cantos recônditos (μ 0,5, intermediário) [PR-0402].\n\n### Quem ensina",
+      "para": "ficou nos cantos recônditos (μ 0,5, intermediário).\n\n### Quem ensina"
+    }
+  ]
+}

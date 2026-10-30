@@ -1,0 +1,14 @@
+{
+  "habilidade": "extrair-evidencia",
+  "nome": "PR-0002 com a marca de saúde da EV-0002",
+  "sementes": [
+    "PR-0002"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ]
+}

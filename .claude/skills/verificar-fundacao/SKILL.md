@@ -5,7 +5,7 @@ description: Verifica a Fundação do projeto Cultura Líquida (00_Fundacao_Cult
 
 # verificar-fundacao
 
-**Versão do harness:** 0.1.0 · **Quem usa:** auditor · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** auditor · **Rodada:** A
 
 ## Objetivo
 Quem produz não confere. Achar o que se perdeu ou se contradiz na Fundação, com prova mecânica: **cada achado só vale com o comando de `grep` ou de script que o confirma e, quando não é ausência, a linha citada**. Não se decide por votação nem por impressão.
@@ -56,4 +56,5 @@ Não corrige, não reescreve, não vota, não confere fato na web, não aceita a
 - Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): versão do conjunto, sem mudança de regra.
 - 0.1.0 (16/10/2026): primeira versão.

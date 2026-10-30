@@ -1,0 +1,24 @@
+{
+  "habilidade": "consulta",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "Recorte RC-0010 da primeira coleta real (K-108)",
+      "espera": "passa",
+      "criterio": "Recorte real: total informado, total visto, saturação e próxima ação",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/consulta/exemplos/real-rc0010.json"
+      ]
+    },
+    {
+      "nome": "Recorte RC-0010 com o total visto acima do informado, sem explicação",
+      "espera": "reprova",
+      "criterio": "erro do brief (l. 348): total visto acima do informado, sem explicação",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/consulta/exemplos/erro-rc0010-visto-maior.json"
+      ]
+    }
+  ]
+}

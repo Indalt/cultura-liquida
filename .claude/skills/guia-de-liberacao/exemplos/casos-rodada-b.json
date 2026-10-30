@@ -1,0 +1,33 @@
+{
+  "habilidade": "guia-de-liberacao",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "guia da licença de uso (Lei 9.610), rascunho do K-109",
+      "espera": "passa",
+      "criterio": "guia real do piloto: porquê, passos com nível e URL, documentos e limites",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/guia-de-liberacao/exemplos/real-guia-9610.json"
+      ]
+    },
+    {
+      "nome": "guia da Lei 9.610 sem os limites",
+      "espera": "reprova",
+      "criterio": "caso do bloco 3: o guia diz o que não faz (nunca autoriza, não protocola; D-020)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/guia-de-liberacao/exemplos/erro-guia-9610-sem-limites.json"
+      ]
+    },
+    {
+      "nome": "guia da Lei 9.610 com passo 'oficial' sem URL",
+      "espera": "reprova",
+      "criterio": "caso do bloco 3: 'oficial' só com a página oficial aberta, com URL",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/guia-de-liberacao/exemplos/erro-guia-9610-oficial-sem-url.json"
+      ]
+    }
+  ]
+}

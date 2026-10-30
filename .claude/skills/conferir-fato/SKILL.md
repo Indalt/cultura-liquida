@@ -5,7 +5,7 @@ description: Confere um lote de fatos na fonte (Cn), com URL, nível (oficial, s
 
 # conferir-fato
 
-**Versão do harness:** 0.1.1 · **Quem usa:** auditor, juridico · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** auditor, juridico · **Rodada:** A
 
 ## Objetivo
 Transformar perguntas de fato em respostas verificáveis: cada afirmação com a URL de onde veio, o nível de verificação e o trecho literal que a sustenta. O que não se confirmou fica escrito como "não conferido", nunca omitido nem completado.
@@ -33,6 +33,7 @@ Transformar perguntas de fato em respostas verificáveis: cada afirmação com a
 9. Termine com o bloco LOG.
 
 ## Regras herdadas
+Pedido à web pela D-044 (insumo 86): o robô se identifica sempre; nada de cabeçalho de navegador nem de robô escondido; para-se no primeiro desafio, mesmo sem barreira do sistema de permissões.
 - **Nível de verificação:** "oficial" exige URL http(s) e citação; nada de memória como se fosse conferido.
 - **Essência:** não reescreva decisões de Vicente; fatos só informam.
 - **Dado pessoal:** não registre e-mail, telefone, CPF ou @perfil de terceiros (só e-mails institucionais quando forem a via de acesso).
@@ -57,5 +58,6 @@ Não decide se o projeto pode publicar algo (isso é Falta do juridico); não al
 - Validador: `scripts/validar.py conferencia`.
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): pedido à web pela D-044 (insumo 86); saída item a item, com `juntar_saida.py` e validação por arquivo (insumos 29, 71, 74).
 - 0.1.1 (22/10/2026, K-101; insumo 17): uma chamada reservada no teto para validar a saída com `scripts/validar.py`, com o campo `resposta`; citação literal da página crua por `curl` e `grep -n`, e o WebFetch só para localizar a página; teto contado como o harness conta.
 - 0.1.0 (16/10/2026): primeira versão, a partir das conferências C1 e C2.

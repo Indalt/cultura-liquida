@@ -1,0 +1,1 @@
+{"id": "A2", "tipo": "outro", "descricao": "segundo item", "confirmacao": {"metodo": "grep", "comando": "grep -n mocororó acervo/termos/TE-0002.json"}, "estado": "confirmado"}

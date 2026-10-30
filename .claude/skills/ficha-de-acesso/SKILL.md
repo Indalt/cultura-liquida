@@ -5,7 +5,7 @@ description: Monta ou atualiza a ficha de acesso de um ambiente de busca do proj
 
 # ficha-de-acesso
 
-**Versão do harness:** 0.1.2 · **Quem usa:** rastreador · **Rodada:** B
+**Versão do harness:** 0.2.0 · **Quem usa:** rastreador · **Rodada:** B
 
 ## Objetivo
 Saber, antes de buscar, **como** cada ambiente pode ser lido, o que ele permite e o que respondeu no último teste, para não repetir erro nem contornar proteção.
@@ -32,6 +32,7 @@ Saber, antes de buscar, **como** cada ambiente pode ser lido, o que ele permite 
 - Uso classificado (monitoramento × escavação) e termos de uso citados com URL.
 
 ## Regras herdadas
+Pedido à web pela D-044 (insumo 86): o robô se identifica sempre; nada de cabeçalho de navegador nem de robô escondido; para-se no primeiro desafio, mesmo sem barreira do sistema de permissões.
 - **Nível:** "oficial" só com a página oficial aberta.
 - **Essência:** D-016 (sem teto de coleta), D-017 (exemplos não limitam: os ambientes do catálogo não são a lista fechada).
 - **Dado pessoal:** só e-mails institucionais quando forem a via de acesso.
@@ -57,7 +58,10 @@ Não contorna proteção, não coleta conteúdo, não usa instâncias públicas 
 - [exemplos/erro-403-aceito.json](exemplos/erro-403-aceito.json): a ficha da Hemeroteca com a decisão trocada para "aceito", que reprova.
 - Casos: [exemplos/casos.json](exemplos/casos.json).
 
+**Rodada B (K-111):** pares reais do piloto em [exemplos/casos-rodada-b.json](exemplos/casos-rodada-b.json), rodados pelo `testes/rodada-b/caso_real.py` sobre uma cópia do acervo do momento; os casos da rodada A seguem em exemplos/casos.json. Relatório: `testes/relatorio-rodada-B.md`.
+
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): par real do piloto (a ficha da Hemeroteca do K-106); pedido à web pela D-044 (insumo 86).
 - 0.1.2 (22/10/2026, K-104): esquema da ficha e do Ambiente (bloco 2); os três exemplos reais validam; caso que reprova: 403 com decisão "aceito".
 - 0.1.1 (22/10/2026, K-101): entrada pelo Anexo E e por `ambientes/`; `robots` e `cobertura` nos três exemplos, com "não conferido" onde faltava dado; Ambientes e alcance no log.
 - 0.1.0 (16/10/2026): papel, formato, passos e exemplos reais; esquema pendente do Passo 1.

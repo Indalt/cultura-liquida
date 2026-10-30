@@ -20,7 +20,9 @@ Uso:
         [--id-falta F-nnnn] [--saida trecho.json]
     python scripts/localizar_trecho.py conferir <trecho.json> --fonte <arquivo|URL> [--wayback ...]
 "localizar": código 0 = localizado (exato ou por semelhança); 2 = abaixo do limiar (Falta emitida).
-"conferir": relê a mesma captura, compara o hash e relocaliza; código 0 = o Trecho se sustenta;
+"conferir": relê a mesma captura, compara o hash e relocaliza; código 0 = o Trecho se sustenta (o texto
+exato gravado é o literal da fonte; achado por semelhança, ele relê 1.0 e o grau gravado, o da leitura do
+agente, acima do limiar, não é diferença: K-111, insumo 83);
 1 = não se sustenta (hash diferente, texto que não está na fonte, estado ou grau que não batem).
 """
 from __future__ import annotations
@@ -288,6 +290,9 @@ def cmd_conferir(a) -> int:
             problemas.append(f"marcado como localizado, mas o grau relido é {novo['grau_semelhanca']} (< {LIMIAR})")
         elif reg.get("grau_semelhanca") == 1.0 and novo["grau_semelhanca"] < 1.0:
             problemas.append(f"marcado como exato (1.0), mas o texto não está literal na fonte (grau {novo['grau_semelhanca']})")
+        elif novo["grau_semelhanca"] == 1.0 and (reg.get("grau_semelhanca") or 0) >= LIMIAR:
+            pass  # K-111, insumo 83: o texto exato gravado é o literal da fonte (relido 1.0); o grau gravado
+            # é o da leitura do agente, localizada por semelhança (a ligadura 'ﬁ' lida como 'fi', por exemplo)
         elif abs((reg.get("grau_semelhanca") or 0) - novo["grau_semelhanca"]) > 0.001:
             problemas.append(f"grau registrado {reg.get('grau_semelhanca')} ≠ relido {novo['grau_semelhanca']}")
     for p in problemas:

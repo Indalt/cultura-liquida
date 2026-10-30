@@ -1,0 +1,42 @@
+{
+  "habilidade": "gerar-grafo",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "PR-0016 com duas linhagens a favor (FO-0008 e FO-0009), μ 1,0",
+      "espera": "passa",
+      "criterio": "Proposição real do piloto: μ e λ gravados batem com o recálculo por linhagens independentes",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/gerar-grafo/exemplos/real-pr0016.json"
+      ]
+    },
+    {
+      "nome": "PR-0016 com a FO-0009 derivada da FO-0008 e o μ gravado contando duas",
+      "espera": "reprova",
+      "criterio": "erro do brief (l. 348): duas fontes da mesma linhagem contadas como duas",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/gerar-grafo/exemplos/erro-pr0016-mesma-linhagem.json"
+      ]
+    },
+    {
+      "nome": "PR-0065 com tensão interna de linhagem (FO-0032 e FO-0034), fora de μ e λ",
+      "espera": "passa",
+      "criterio": "par real da D-041: a linhagem com Evidência a favor e divergente fica sinalizada e não pesa em nenhum lado",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/gerar-grafo/exemplos/real-pr0065.json"
+      ]
+    },
+    {
+      "nome": "PR-0065 gravada sem a tensão interna sinalizada",
+      "espera": "reprova",
+      "criterio": "D-041: a tensão interna é sinalizada, nunca escondida",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/gerar-grafo/exemplos/erro-pr0065-tensao-apagada.json"
+      ]
+    }
+  ]
+}

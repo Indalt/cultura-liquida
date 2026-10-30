@@ -1,0 +1,16 @@
+{
+  "habilidade": "triagem-juridica",
+  "nome": "F-0024 completada por inferência",
+  "modo": "registro",
+  "registro": "F-0024",
+  "esquema": "falta",
+  "mudancas": [
+    {
+      "op": "set",
+      "caminho": [
+        "valor_inferido"
+      ],
+      "valor": "não é conhecimento tradicional"
+    }
+  ]
+}

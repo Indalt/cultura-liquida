@@ -5,7 +5,7 @@ description: Roda uma consulta num ambiente de busca do projeto Cultura Líquida
 
 # consulta
 
-**Versão do harness:** 0.1.2 · **Quem usa:** rastreador · **Rodada:** B
+**Versão do harness:** 0.2.0 · **Quem usa:** rastreador · **Rodada:** B
 
 ## Objetivo
 Saber, para cada consulta, quanto o ambiente diz ter, quanto já vimos e o que falta, para que nenhuma fonte seja dada como esgotada cedo demais (D-016: os "15" são lote de tratamento, nunca teto).
@@ -32,6 +32,7 @@ Saber, para cada consulta, quanto o ambiente diz ter, quanto já vimos e o que f
 - Ruído (itens sem relação) é anotado, não apagado.
 
 ## Regras herdadas
+Pedido à web pela D-044 (insumo 86): o robô se identifica sempre; nada de cabeçalho de navegador nem de robô escondido; para-se no primeiro desafio, mesmo sem barreira do sistema de permissões.
 - **Nível:** totais com URL da consulta e data.
 - **Essência:** D-016 e D-017.
 - **Dado pessoal:** não registrar autor de post ou perfil; em redes sociais, só link enviado por pessoa.
@@ -55,7 +56,10 @@ Não avalia relevância (isso é do avaliador), não guarda texto integral de te
 - [exemplos/erro-visto-maior-que-informado.json](exemplos/erro-visto-maior-que-informado.json): o mesmo estado com 14 vistos para 10 informados na BDTD, sem explicação, que reprova.
 - Casos: [exemplos/casos.json](exemplos/casos.json).
 
+**Rodada B (K-111):** pares reais do piloto em [exemplos/casos-rodada-b.json](exemplos/casos-rodada-b.json), rodados pelo `testes/rodada-b/caso_real.py` sobre uma cópia do acervo do momento; os casos da rodada A seguem em exemplos/casos.json. Relatório: `testes/relatorio-rodada-B.md`.
+
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): par real do piloto (o Recorte RC-0010 do K-108); pedido à web pela D-044 (insumo 86).
 - 0.1.2 (22/10/2026, K-104): esquemas do estado da consulta, da Consulta e do Recorte (bloco 2); o exemplo real valida; caso que reprova: total visto maior que o informado sem explicação.
 - 0.1.1 (22/10/2026, K-101): bola de neve só na fase 2 (l. 438, 592); novidade por ID não visto, nunca por data (l. 428); entrada pelo Anexo E e por `ambientes/`; Ambientes, Consultas, Recortes e alcance no log.
 - 0.1.0 (16/10/2026): papel, formato, passos e exemplo real; esquema pendente do Passo 1.

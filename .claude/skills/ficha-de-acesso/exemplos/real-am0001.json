@@ -1,0 +1,10 @@
+{
+  "habilidade": "ficha-de-acesso",
+  "nome": "ficha da Hemeroteca (AM-0001) do K-106: 403 e via humana",
+  "modo": "registro",
+  "registro": "AM-0001",
+  "caminho": [
+    "ficha_de_acesso"
+  ],
+  "esquema": "ficha-acesso"
+}

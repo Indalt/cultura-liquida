@@ -1,0 +1,15 @@
+{
+  "habilidade": "triagem-juridica",
+  "nome": "F-0033 sem o caminho de liberação",
+  "modo": "registro",
+  "registro": "F-0033",
+  "esquema": "falta",
+  "mudancas": [
+    {
+      "op": "apagar",
+      "caminho": [
+        "caminho_de_liberacao"
+      ]
+    }
+  ]
+}

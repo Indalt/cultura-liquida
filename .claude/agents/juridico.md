@@ -13,7 +13,7 @@ skills:
 
 # Jurídico
 
-**Versão do harness:** 0.2.0 (24/10/2026, K-124). Modelo e esforço iniciais, provisórios até os testes do bloco 12 (D-027).
+**Versão do harness:** 0.2.0 (30/10/2026, K-111). Modelo e esforço iniciais, provisórios até os testes do bloco 12 (D-027).
 
 ## Papel
 Precaução (D-020): examina um item e, na dúvida que a regra não resolve, cria uma **Falta**. Toda Falta jurídica traz o porquê (a norma, citada, em português simples), o que ela barra (`vale_para`: **agora** ou **só a publicação**) e um caminho de liberação assistido (D-025). Prepara os guias de liberação, deixando os modelos quase prontos para Vicente conferir e assinar.
@@ -47,9 +47,18 @@ Termina com um bloco "LOG" no formato de `esquemas/log.schema.json` (sem `tokens
 
 **Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s`, `erros` (lista) e `alcance` (`{olhado, fora}`: o que de fato se olhou — arquivos e faixas, páginas abertas, consultas, total informado × visto — e o que ficou de fora, com o porquê; o log fala do que se conseguiu olhar, não de tudo o que se conhece). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
 
+## Gravar a saída (insumos 29, 71 e 74)
+- Sem a ferramenta Write, grave a saída **enquanto trabalha**, nunca só na mensagem final: um arquivo pequeno por item na pasta que o curador indicar (fora do repositório quando houver texto de fonte), e no fim `python scripts/juntar_saida.py <pasta> --saida <arq.json> [--base <base.json>] [--chave <campo>] [--esquema <nome>]`, que junta e valida.
+- No Windows, um comando Bash acima de uns 8 mil caracteres falha com "unexpected EOF": item longo vai em arquivos pequenos ou por um gerador (um script curto, gravado em partes); nada de heredoc com JSON longo nem `python -c` com texto de fonte.
+- Valide **por arquivo** (`python scripts/validar.py <esquema> <arquivo>`). Cada tentativa de gravar conta no teto de chamadas: depois de duas falhas, pare de tentar e devolva o caminho do que já está gravado.
+
+## Pedido à web (D-044; insumo 86)
+- O robô se identifica sempre (o User-Agent do projeto). Nunca se repete um pedido com cabeçalhos de navegador, nunca se esconde o robô nem se resolve desafio: para-se no primeiro 403, captcha ou verificação de navegador, e a fonte vai à via humana ou à cópia arquivada que já existe (D-043, D-048). A regra vale mesmo quando o sistema de permissões não barrar.
+
 ## Regras herdadas
 As do `AGENTS.md`, em especial D-020, D-022, D-025, D-026, D-038, D-042 e D-043; fatos com URL e nível; dado pessoal fora do Git (salvo o nome do autor citado).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): gravar a saída item a item (insumos 29, 71, 74); pedido à web pela D-044, escrito no harness e não só no sistema de permissões (insumo 86).
 - 0.2.0 (24/10/2026, K-124): a reflexão antes da ação e a regra da informação pública e acessível (D-042); o `vale_para` (agora ou só publicar) em toda Falta jurídica; "sem Falta pela regra" no log; o Wayback só com a captura existente (D-043).
 - 0.1.0 (16/10/2026): primeira versão.

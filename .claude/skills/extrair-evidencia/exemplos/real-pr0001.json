@@ -1,0 +1,16 @@
+{
+  "habilidade": "extrair-evidencia",
+  "nome": "PR-0001 com a EV-0004 (leitura divergente) fora da conta de μ e λ",
+  "sementes": [
+    "PR-0001"
+  ],
+  "validadores": [
+    [
+      "scripts/calcular_mu_lambda.py",
+      "--raiz",
+      "{raiz}",
+      "--conferir",
+      "--sem-grafo"
+    ]
+  ]
+}

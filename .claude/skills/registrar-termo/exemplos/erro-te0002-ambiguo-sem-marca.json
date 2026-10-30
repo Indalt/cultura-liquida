@@ -1,0 +1,27 @@
+{
+  "habilidade": "registrar-termo",
+  "nome": "TE-0002 com 'mocororó' como designação local, sem a marca de termo ambíguo",
+  "sementes": [
+    "TE-0002",
+    "TE-0004"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ],
+  "mudancas": [
+    {
+      "registro": "TE-0002",
+      "op": "set",
+      "caminho": [
+        "variantes",
+        1,
+        "tipo_variacao"
+      ],
+      "valor": "designação local, de alguns produtores do Piauí, para a cajuína crua, no período das fontes (2009–2014)"
+    }
+  ]
+}

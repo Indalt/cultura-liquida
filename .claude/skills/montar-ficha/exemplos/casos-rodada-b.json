@@ -1,0 +1,42 @@
+{
+  "habilidade": "montar-ficha",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "ficha CL-0001 (cajuína) com as Proposições que ela marca",
+      "espera": "passa",
+      "criterio": "ficha real do piloto (K-110): toda frase factual com a marca [PR-nnnn] de uma Proposição que existe",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/montar-ficha/exemplos/real-cl0001.json"
+      ]
+    },
+    {
+      "nome": "ficha CL-0001 com uma frase factual sem a marca da Proposição",
+      "espera": "reprova",
+      "criterio": "erro do brief (l. 348): frase factual sem Proposição",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/montar-ficha/exemplos/erro-cl0001-frase-sem-proposicao.json"
+      ]
+    },
+    {
+      "nome": "camada Educação da CL-0001 (K-110), com as marcas e as habilidades da BNCC",
+      "espera": "passa",
+      "criterio": "insumo 80 (regra educacao-0.1, acervo-0.4, item 14): cada item sobre a CLB com a marca; cada habilidade com código, texto literal e página do PDF oficial",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/montar-ficha/exemplos/real-educacao-cl0001.json"
+      ]
+    },
+    {
+      "nome": "camada Educação com uma habilidade da BNCC sem a página do PDF",
+      "espera": "reprova",
+      "criterio": "insumo 80: a habilidade da BNCC cita a página do PDF do MEC, e não uma Proposição",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/montar-ficha/exemplos/erro-educacao-bncc-sem-pagina.json"
+      ]
+    }
+  ]
+}

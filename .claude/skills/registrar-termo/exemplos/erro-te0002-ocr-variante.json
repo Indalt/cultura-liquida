@@ -1,0 +1,28 @@
+{
+  "habilidade": "registrar-termo",
+  "nome": "TE-0002 com a forma de busca 'cajuyna' registrada como variante de OCR",
+  "sementes": [
+    "TE-0002",
+    "TE-0004"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ],
+  "mudancas": [
+    {
+      "registro": "TE-0002",
+      "op": "anexar",
+      "caminho": [
+        "variantes"
+      ],
+      "valor": {
+        "forma": "cajuina",
+        "tipo_variacao": "grafia sem acento vinda do OCR das bases"
+      }
+    }
+  ]
+}

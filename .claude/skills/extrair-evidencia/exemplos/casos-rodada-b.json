@@ -1,0 +1,80 @@
+{
+  "habilidade": "extrair-evidencia",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "TR-0001 (EV-0001, conferida pelo auditor) relocalizado na janela de citação",
+      "espera": "passa",
+      "criterio": "Trecho real do piloto (K-109), localizado pelo script, nunca pela IA; a fonte é reduzida à janela de citação que já está no Git (o texto integral nunca entra, l. 100)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/real-tr0001.json"
+      ]
+    },
+    {
+      "nome": "TR-0034 com 'fresco', palavra de outro trecho, marcado como localizado",
+      "espera": "reprova",
+      "criterio": "erro do brief (l. 348): trecho não localizado marcado como localizado; o erro injetado é o do achado A5 do K-109 (insumo 72): 'fresco' veio de outro trecho",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/erro-tr0034-palavra-de-outro-trecho.json"
+      ]
+    },
+    {
+      "nome": "TR-0101 com a ligadura 'ﬁ' no texto exato e o grau gravado da leitura com 'fi' (0,9746)",
+      "espera": "passa",
+      "criterio": "insumo 83 (achado A6 do K-110): o texto exato é literal na fonte (relido 1.0) e o grau gravado é o da leitura do agente; o conferir não acusa diferença falsa",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/real-tr0101-ligadura.json"
+      ]
+    },
+    {
+      "nome": "PR-0001 com a EV-0004 (leitura divergente) fora da conta de μ e λ",
+      "espera": "passa",
+      "criterio": "par real do achado A1 do K-109 (insumo 72): a Evidência ligada a Proposição que diz mais que o trecho fica visível e fora da conta (D-041)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/real-pr0001.json"
+      ]
+    },
+    {
+      "nome": "PR-0001 gravada sem a EV-0004 em fora_da_conta (a leitura divergente contada)",
+      "espera": "reprova",
+      "criterio": "insumo 72, A1: a leitura divergente nunca pesa; o recálculo reprova a Proposição gravada que a conta",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/erro-pr0001-divergente-contada.json"
+      ]
+    },
+    {
+      "nome": "PR-0002 com a marca de saúde da EV-0002",
+      "espera": "passa",
+      "criterio": "par real do achado A3 do K-109 (insumo 72): a marca de aviso, saúde ou política da Evidência vai à Proposição (acervo-0.4, item 13)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/real-pr0002.json"
+      ]
+    },
+    {
+      "nome": "PR-0002 sem a marca de saúde que a EV-0002 tem",
+      "espera": "reprova",
+      "criterio": "insumo 72, A3: a marca faltando numa Proposição de composição (o erro real do K-109, antes do lote de correção)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/extrair-evidencia/exemplos/erro-pr0002-marca-perdida.json"
+      ]
+    },
+    {
+      "nome": "'mocororó' declarado num trecho da p. 100 que não traz a palavra",
+      "espera": "reprova",
+      "criterio": "insumo 88: o rótulo de uma menção usa só a palavra que o trecho traz; o erro real do K-110 (a p. 100 do dossiê rotulada 'mocororó')",
+      "comando": [
+        "scripts/mencoes_incidentais.py",
+        "--separadas",
+        ".claude/skills/extrair-evidencia/exemplos/erro-tr0505-separadas.json",
+        "--simular"
+      ]
+    }
+  ]
+}

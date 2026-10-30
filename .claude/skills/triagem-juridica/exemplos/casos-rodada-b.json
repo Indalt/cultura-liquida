@@ -1,0 +1,64 @@
+{
+  "habilidade": "triagem-juridica",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "F-0033 (mocororó dos Tremembé, só para publicar), do K-110",
+      "espera": "passa",
+      "criterio": "Falta jurídica real: norma com trecho e URL oficial, vale_para e caminho de liberação",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/triagem-juridica/exemplos/real-f0033.json"
+      ]
+    },
+    {
+      "nome": "F-0024 (dúvida de conhecimento tradicional, só para publicar), do K-109",
+      "espera": "passa",
+      "criterio": "Falta jurídica real, relida no K-110 e no K-111",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/triagem-juridica/exemplos/real-f0024.json"
+      ]
+    },
+    {
+      "nome": "F-0033 sem o caminho de liberação",
+      "espera": "reprova",
+      "criterio": "caso do bloco 3: toda barreira jurídica traz porquê e caminho de liberação (D-025)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/triagem-juridica/exemplos/erro-f0033-sem-caminho.json"
+      ]
+    },
+    {
+      "nome": "F-0024 completada por inferência",
+      "espera": "reprova",
+      "criterio": "caso do bloco 3: a Falta é dita, nunca completada (D-018); o Jurídico nunca autoriza (D-020)",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/triagem-juridica/exemplos/erro-f0024-completada.json"
+      ]
+    },
+    {
+      "nome": "regra fixa: ler, localizar, linkar e citar a Entrada real EN-0009 (BDTD)",
+      "espera": "passa",
+      "criterio": "D-042: ler e citar trecho curto de informação pública não gera Falta",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "entrada/EN-0009.json",
+        "--portao"
+      ]
+    },
+    {
+      "nome": "regra fixa: copiar além da citação a Entrada real EN-0009 barra agora",
+      "espera": "reprova",
+      "criterio": "D-042: cópia além da citação barra agora (a regra fixa do Jurídico reprova o caso de teste)",
+      "comando": [
+        "scripts/triagem_fixa.py",
+        "entrada/EN-0009.json",
+        "--ato",
+        "copiar",
+        "--portao"
+      ]
+    }
+  ]
+}

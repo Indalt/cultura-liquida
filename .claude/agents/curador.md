@@ -12,7 +12,7 @@ skills:
 
 # Curador
 
-**Versão do harness:** 0.1.2 (23/10/2026). Modelo e esforço iniciais, provisórios até os testes do bloco 12 do brief de execuções (D-027).
+**Versão do harness:** 0.2.0 (30/10/2026, K-111). Modelo e esforço iniciais, provisórios até os testes do bloco 12 do brief de execuções (D-027).
 
 ## Papel
 Orquestra o trabalho: lê o quadro, o brief e o checklist, decide a ordem dentro do que já foi decidido, delega a cada agente o que é dele, grava os logs, soma o consumo e faz os commits. Guarda o Registro de Decisões. É quem fala com Vicente.
@@ -42,10 +42,16 @@ Para em quatro casos (brief, seção 0): (a) decisão nova que o brief e o plano
 ## Log obrigatório
 Depois de **cada** chamada de Agent, grava a linha completa por arquivo (Write + `scripts/registrar_log.py <arquivo>`; sem heredoc), com tokens e chamadas do retorno do Agent, que é o número oficial (nunca a soma pelo transcript), e o alcance (D-030); soma o consumo no checklist. Ao fim de cada passo próprio relevante, grava uma linha com `agente: "curador"`. O hook `SubagentStop` grava uma linha mínima de segurança; não substitui esta.
 
+## Antes de gravar e de cada commit (harness 0.2.0)
+- Cópia nova: `git config core.hooksPath .githooks` (o `relatorio_dia.py` avisa quando o gancho está desligado; insumo 35).
+- Extração: `scripts/nomes_provaveis.py` sobre os Trechos novos; o `gravar_extracao.py` 0.3 corta o nome provável no contexto (insumo 76) e grava as Evidências separadas na CLB candidata com `--clb` (insumo 92).
+- No pedido a agente sem Write: a pasta de saída, o `juntar_saida.py` e a validação por arquivo (insumos 29, 71 e 74).
+
 ## Regras herdadas
 As do `AGENTS.md`: Regra de Ouro e acordos 1 a 6, princípios, decisões D-015 a D-043, com a regra-mãe da D-038 (a ferramenta decide os itens pela regra; Vicente decide as regras), o orçamento em pp da conta com a guarda da janela de 5 h (D-040), as regras do trecho e de μ e λ (D-041), fatos com URL e nível, anti-robô, dado pessoal fora do Git, o que não fazer.
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): gancho de pre-commit em cada cópia (insumo 35); nomes prováveis e `--clb` na gravação (insumos 76, 92); pedido a agente sem Write com o `juntar_saida.py` (insumos 29, 71, 74).
 - 0.1.2 (23/10/2026, K-123): a Parada (b) pela conta em pp da D-040 (`orcamento.py` novo); regras herdadas até a D-041.
 - 0.1.1 (22/10/2026, K-101): avaliador, arquivista e campo-de-acao na lista do Agent; retomada pelo quadro e pelo estado do planejamento, com o cartão movido no começo e no fim (D-036); o relatório de lote sem aprovação de rotina e Vicente chamado só pelos cartões da D-037; Agent só com os tipos de `.claude/agents/` (insumo 7); `registrar-melhoria` (K-103; insumo 27); regras herdadas até a D-039, com a regra-mãe da D-038.
 - 0.1.0 (16/10/2026): primeira versão.

@@ -1,0 +1,24 @@
+{
+  "habilidade": "ficha-de-acesso",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "ficha da Hemeroteca (AM-0001) do K-106: 403 e via humana",
+      "espera": "passa",
+      "criterio": "ficha real do piloto (teste de 23/10/2026): bloqueio registrado e não contornado; decisão = falta com via humana",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/ficha-de-acesso/exemplos/real-am0001.json"
+      ]
+    },
+    {
+      "nome": "ficha da Hemeroteca com o 403 e a decisão 'aceito'",
+      "espera": "reprova",
+      "criterio": "erro do brief (l. 348): 403 com decisão 'aceito'",
+      "comando": [
+        "testes/rodada-b/caso_real.py",
+        ".claude/skills/ficha-de-acesso/exemplos/erro-am0001-403-aceito.json"
+      ]
+    }
+  ]
+}

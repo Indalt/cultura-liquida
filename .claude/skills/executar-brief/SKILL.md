@@ -5,7 +5,7 @@ description: Conduz um brief de execução do projeto Cultura Líquida passo a p
 
 # executar-brief
 
-**Versão do harness:** 0.1.2 · **Quem usa:** curador (sessão principal) · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** curador (sessão principal) · **Rodada:** A
 
 ## Objetivo
 Executar o cartão que Vicente autorizou, sem parar para aprovar o já decidido (D-028), medindo e parando antes de acabar (D-023), com tudo registrado e no GitHub.
@@ -20,11 +20,11 @@ Executar o cartão que Vicente autorizou, sem parar para aprovar o já decidido 
 
 ## Passos
 1. **Modelo:** confira o ID da sessão. Se não for o indicado (hoje `claude-opus-5-5`, esforço médio), avise e pare.
-2. **Retomada (brief, seção 1):** `git pull`, `git log --oneline -10`, `git status --short`, `git remote -v`, `gh repo view Indalt/cultura-liquida --json name,visibility || true`. Leia o quadro e o estado do planejamento; pegue o cartão autorizado, na ordem do quadro, e **mova-o para Fazendo**. Leia o checklist do piloto (com a tabela "Semana da conta" no fim); rode `scripts/rodar_testes.py` (a partir do bloco 5, `scripts/relatorio_dia.py`). Pule o que já foi feito; nunca crie um segundo repositório.
+2. **Retomada (brief, seção 1):** `git pull`, `git log --oneline -10`, `git status --short`, `git remote -v`, `gh repo view Indalt/cultura-liquida --json name,visibility || true`. Leia o quadro e o estado do planejamento; pegue o cartão autorizado, na ordem do quadro, e **mova-o para Fazendo**. Leia o checklist do piloto (com a tabela "Semana da conta" no fim); rode `scripts/rodar_testes.py` (a partir do bloco 5, `scripts/relatorio_dia.py`, que avisa se o gancho de pre-commit está desligado nesta cópia: `git config core.hooksPath .githooks`; insumo 35). Pule o que já foi feito; nunca crie um segundo repositório.
 3. **Registre** no checklist a autorização e o uso informado (semanal e da janela de 5 h; "não informado" se vier em branco), e abra a linha da conversa na tabela "Semana da conta" (semana, frente, cartão, A0; D-040). A leitura de abertura fecha a linha da conversa anterior (A1 e pp), se ela ficou "a informar". Com a janela de 5 h acima de 70%, só um lote e a conversa fecha.
 4. **Para cada passo:**
    1. Se o passo usa agente: rode `python scripts/orcamento.py --a0 <uso semanal ao abrir> --janela <uso da janela de 5 h> --agente <agente> --habilidade <habilidade> --medidos-conversa <tokens de cada agente já rodado nesta conversa>` (D-040). O script lê o que o desenvolvimento já usou na semana da conta pela tabela do checklist e a estimativa nos logs (a última medida do mesmo agente com a mesma habilidade; sem medida, 96.520). Código 1 → parada (caso b). No planejamento, `--frente planejamento`.
-   2. Delegue a **um** agente do projeto por vez, só com os tipos de `.claude/agents/` (insumo 7): fato trazido por outro tipo de agente ou outro modelo entra como "não conferido" até a reconferência. O pedido traz a entrada (arquivos e faixas de linhas), a habilidade, o critério de parada, o esquema da saída e o **teto de chamadas contado como o harness conta** (cada ferramenta e cada pedido HTTP, mesmo agrupados num só comando), com margem.
+   2. Delegue a **um** agente do projeto por vez, só com os tipos de `.claude/agents/` (insumo 7): fato trazido por outro tipo de agente ou outro modelo entra como "não conferido" até a reconferência. O pedido traz a entrada (arquivos e faixas de linhas), a habilidade, o critério de parada, o esquema da saída e o **teto de chamadas contado como o harness conta** e, a agente sem Write, a pasta de saída com o `juntar_saida.py` e a validação por arquivo (insumos 29, 71, 74) (cada ferramenta e cada pedido HTTP, mesmo agrupados num só comando), com margem.
    3. Valide a saída do agente com `scripts/validar.py <esquema>` e grave-a no lugar indicado.
    4. Grave o log completo **por arquivo**: monte o JSON com a ferramenta Write (formato `esquemas/log.schema.json`, com `alcance`) e rode `python scripts/registrar_log.py <arquivo>`, sem heredoc. Os `tokens` e as `chamadas` são os do retorno do Agent, o número oficial, nunca a soma pelo transcript (insumo 5).
    5. Atualize o checklist (o passo e a linha da conversa: tokens de agentes e chamadas).
@@ -62,6 +62,7 @@ Não lança agentes em paralelo, não usa Workflow sem pedido, não reabre decis
 - Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): gancho de pre-commit em cada cópia, conferido na retomada (insumo 35); nomes prováveis e `--clb` na gravação (insumos 76, 92); pedido a agente sem Write com o `juntar_saida.py` (insumos 29, 71, 74).
 - 0.1.2 (23/10/2026, K-123): a conta da conversa em pp da conta (D-040), com o `orcamento.py` novo (A0, janela de 5 h, tabela "Semana da conta" do checklist, estimativa pelos logs com 96.520 sem medida, sem a folga de 2×); a linha da conversa no checklist; os casos da conta trocados.
 - 0.1.1 (22/10/2026, K-101): retomada pelo quadro e pelo estado do planejamento, com o cartão movido no começo e no fim (D-036, diretriz 2; A-01); entrada no brief de execuções e no checklist do piloto; conta com `--teto 300000` por semana; teto de chamadas contado como o harness conta; log por arquivo, sem heredoc; tokens do retorno do Agent, nunca pelo transcript (insumo 5); Agent só com os tipos de `.claude/agents/` (insumo 7); relatório de lote sem aprovação (D-037; A-02); insumos pela `registrar-melhoria` (K-103; insumo 27); casos novos do esquema de log.
 - 0.1.0 (16/10/2026): primeira versão, a partir das janelas 1 e 2.

@@ -5,7 +5,7 @@ description: Triagem jurídica de precaução de um item do projeto Cultura Líq
 
 # triagem-juridica
 
-**Versão do harness:** 0.2.0 · **Quem usa:** juridico · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** juridico · **Rodada:** A (regras) e B (pares reais do piloto)
 
 ## Objetivo
 Achar, com perguntas fixas e **reflexão antes da ação** (D-042), o que pode impedir o projeto de fazer algo com um item, e dizer isso como **Falta** (D-020), com o que ela barra: o ato **agora** ou **só a publicação**. Nunca autorizar.
@@ -59,6 +59,7 @@ Se o passo 4 ou o 6 resolver pela regra, a pergunta fecha "sem Falta pela regra"
 6. Valide cada Falta: `python scripts/validar.py falta <arquivo>` (o juridico devolve o JSON ao curador, que grava e valida). Termine com o bloco LOG.
 
 ## Regras herdadas
+Pedido à web pela D-044 (insumo 86): o robô se identifica sempre; nada de cabeçalho de navegador nem de robô escondido; para-se no primeiro desafio, mesmo sem barreira do sistema de permissões.
 - **Nível:** norma com URL e nível; nada de memória.
 - **Essência:** D-019 (não julgamos a prática), D-020 (só cria Faltas), D-025 (porquê e caminho; proporcional, "de início"), D-038 (Vicente decide as regras; o agente só aplica), D-042 (a regra da informação pública e a reflexão antes da ação), D-043 (o Wayback só com a captura existente; o padrão da F-0003 para o Git público).
 - **Dado pessoal:** a Falta descreve o tipo de dado, nunca o dado ("aparece o nome de quem ensinou", e não o nome).
@@ -90,6 +91,9 @@ Casos construídos a partir do 16-J do plano e do K-124 (sem pessoa real):
 - Os casos da regra na triagem fixa (cópia de página inteira, quem ensinou, receita de substância listada e conhecimento tradicional de origem identificável no ato publicar, que reprovam no portão; link e citação com o autor, e o conhecimento tradicional no ato ler, que passam) estão em `testes/nucleo/casos.json`.
 - Validador: `scripts/validar.py falta`; `scripts/triagem_fixa.py --ato <ato> --portao`.
 
+**Rodada B (K-111):** pares reais do piloto em [exemplos/casos-rodada-b.json](exemplos/casos-rodada-b.json), rodados pelo `testes/rodada-b/caso_real.py` sobre uma cópia do acervo do momento; os casos da rodada A seguem em exemplos/casos.json. Relatório: `testes/relatorio-rodada-B.md`.
+
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): pares reais da rodada B (F-0024, F-0033 e a regra fixa sobre a EN-0009); pedido à web pela D-044, no harness (insumo 86).
 - 0.2.0 (24/10/2026, K-124): a regra da informação pública e acessível (D-042, regra de Vicente, não parecer de licitude); a reflexão antes da ação, em seis passos, dentro das oito perguntas, que ficam; o `vale_para` (agora ou só publicar) em toda Falta jurídica; a CF, art. 5º, X, e o Código Civil, art. 20, conferidos; a substância pela Lista E e pelas substâncias, com ayahuasca e jurema como dúvida; o Wayback só com a captura existente (D-043); casos novos, com a F-0004 relida.
 - 0.1.0 (16/10/2026): primeira versão, com as perguntas fixas do plano (itens 7 e 16-J) e o art. 2º, I, da Lei 13.123 conferido no C1.

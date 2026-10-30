@@ -5,7 +5,7 @@ description: Escreve um grupo de seções da Fundação do projeto Cultura Líqu
 
 # escrever-secao-fundacao
 
-**Versão do harness:** 0.1.0 · **Quem usa:** redator · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** redator · **Rodada:** A
 
 ## Objetivo
 Produzir o texto final de um grupo de seções que qualquer sessão de IA leia e siga, curto nas seções de leitura padrão e com o longo nos anexos.
@@ -56,4 +56,5 @@ Não altera os Anexos A e B; não muda o sentido de decisão; não transcreve fa
 - Validador: `scripts/checar_fundacao.py --so-essencias --essencias ... --falas ...`. Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): versão do conjunto, sem mudança de regra.
 - 0.1.0 (16/10/2026): primeira versão.

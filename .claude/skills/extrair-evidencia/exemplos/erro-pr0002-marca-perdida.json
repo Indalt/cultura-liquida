@@ -1,0 +1,24 @@
+{
+  "habilidade": "extrair-evidencia",
+  "nome": "PR-0002 sem a marca de saúde que a EV-0002 tem",
+  "sementes": [
+    "PR-0002"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ],
+  "mudancas": [
+    {
+      "registro": "PR-0002",
+      "op": "set",
+      "caminho": [
+        "sustenta_aviso_saude_politica"
+      ],
+      "valor": false
+    }
+  ]
+}

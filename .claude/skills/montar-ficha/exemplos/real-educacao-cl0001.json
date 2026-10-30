@@ -1,0 +1,14 @@
+{
+  "habilidade": "montar-ficha",
+  "nome": "camada Educação da CL-0001 (K-110), com as marcas e as habilidades da BNCC",
+  "fichas": [
+    "educacao/CL-0001.md"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ]
+}

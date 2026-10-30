@@ -7,7 +7,7 @@ as Faltas (abertas e novas do dia); a fila de curadoria (cartões que esperam Vi
 semana); as propostas das rotinas à espera de junção, com o resultado do portão (ramificações
 `claude/`; A-10, D-038); a Matriz de Pegadas e Vácuos (vácuos de busca); o consumo da semana da conta
 (tabela do checklist do piloto; D-040); a guarda das Entradas (D-045): as pegadas por estado da
-pré-triagem e o alarme de tamanho (arquivos e MB do que o Git versiona, contra `guarda_alarme`). Vácuos por região e período do conhecimento são do grafo
+pré-triagem e o alarme de tamanho; e avisa quando o gancho de pre-commit está desligado na cópia (K-111, insumo 35) (arquivos e MB do que o Git versiona, contra `guarda_alarme`). Vácuos por região e período do conhecimento são do grafo
 (bloco 8): aqui, só o que a coleta mostra.
 
 Uso:
@@ -29,7 +29,7 @@ import orcamento  # noqa: E402
 import guarda  # noqa: E402
 import pegadas  # noqa: E402
 
-VERSAO = "relatorio-dia-0.2"
+VERSAO = "relatorio-dia-0.3"
 
 
 def ramificacoes_claude(raiz: Path) -> list[str]:
@@ -54,6 +54,11 @@ def main() -> int:
     rcs, vacuos = pegadas.matriz(raiz)
     faltas = fila_curadoria.registros(raiz, "acervo/faltas")
     ls = [f"# Relatório do dia {hoje}", "", f"Calculado por `scripts/relatorio_dia.py` ({VERSAO}), sem IA (l. 512).", ""]
+    # K-111, insumo 35: o gancho de pre-commit é versionado, mas a ligação é de cada cópia
+    r = subprocess.run(["git", "config", "core.hooksPath"], cwd=raiz, capture_output=True, text=True)
+    if r.stdout.strip() != ".githooks":
+        ls += ["## AVISO: gancho de pre-commit desligado nesta cópia",
+               "- o `validar_acervo.py` não roda antes do commit; ligue com `git config core.hooksPath .githooks`", ""]
     ls.append(f"## Entradas: {len(novas)} nova(s) hoje, {len(ents)} no total")
     por = Counter(f"{e.get('canal')} · {e.get('ambiente', 'sem ambiente')}" for e in novas)
     ls += [f"- {k}: {v}" for k, v in sorted(por.items())] or ["- nenhuma"]

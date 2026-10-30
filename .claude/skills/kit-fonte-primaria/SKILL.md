@@ -5,7 +5,7 @@ description: Produz, sob demanda, o kit de fonte primária do projeto Cultura L�
 
 # kit-fonte-primaria
 
-**Versão do harness:** 0.1.0 · **Quem usa:** campo-de-acao · **Rodada:** B · **Estado:** papel, formato e passos escritos; **exemplos pendentes: caso-piloto (Passo 1)**.
+**Versão do harness:** 0.2.0 · **Quem usa:** campo-de-acao · **Rodada:** B · **Estado:** exemplos reais do piloto (rodada B, K-111).
 
 ## Objetivo
 Ferramenta de ação (plano, item 20): ajudar quem tem uma fonte primária a registrá-la de modo que o projeto possa conferi-la, respeitando a fonte e as pessoas.
@@ -43,4 +43,5 @@ Não produz sem pedido; não dá parecer jurídico ou sanitário; não publica s
 **Pendente: caso-piloto (Passo 1).** Ver [exemplos/LEIA-ME.md](exemplos/LEIA-ME.md).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): versão do conjunto; os exemplos seguem pendentes até o bloco 11 (K-114), fora do critério do bloco 9.
 - 0.1.0 (16/10/2026): papel, formato e passos (D-029).

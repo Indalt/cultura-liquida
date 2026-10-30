@@ -5,7 +5,7 @@ description: Registra um comentário novo de Vicente no projeto Cultura Líquida
 
 # registrar-decisao
 
-**Versão do harness:** 0.1.0 · **Quem usa:** curador · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** curador · **Rodada:** A
 
 ## Objetivo
 Que o texto de trabalho registre o **sentido** do que Vicente decidiu, confirmado por ele, e não a transcrição. A fala original fica só na trilha, por referência (plano, item 8).
@@ -53,4 +53,5 @@ Não registra decisão sem confirmação, não interpreta sozinho palavra ambíg
 - Validador: `scripts/validar.py decisao`. Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): versão do conjunto, sem mudança de regra.
 - 0.1.0 (16/10/2026): primeira versão.

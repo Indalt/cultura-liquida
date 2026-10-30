@@ -1,0 +1,14 @@
+{
+ "lote": "caso que reprova da rodada B (K-111, insumo 88): cópia do erro real do K-110",
+ "nota": "O K-110 rotulou 'mocororó' um trecho da p. 100 do dossiê que não traz a palavra; aqui, o TR-0505 (p. 100, real) declarado como abonação da forma. A regra mencoes-0.1 reprova: a forma tem de estar no texto exato.",
+ "termos_declarados": [
+  {
+   "forma": "mocororó",
+   "sentido": "caso de teste",
+   "abonado_em": [
+    "TR-0505"
+   ],
+   "ambiguo_com": "TE-0002"
+  }
+ ]
+}

@@ -5,7 +5,7 @@ description: Anota um insumo para o planejamento de melhorias do projeto Cultura
 
 # registrar-melhoria
 
-**Versão do harness:** 0.1.0 · **Quem usa:** curador e toda sessão das três frentes; a rotina, pelo script, sem IA · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** curador e toda sessão das três frentes; a rotina, pelo script, sem IA · **Rodada:** A
 
 ## Objetivo
 Que o que surge no meio do trabalho chegue ao planejamento sem ser explorado ali (D-035) e sempre no mesmo formato (D-036; insumo 10; P36, a consolidação ao fim de cada etapa). É a primeira habilidade do agente de melhorias e contribuições (K-006).
@@ -55,4 +55,5 @@ Não explora o insumo, não decide o cartão por conta própria (só propõe), n
 - Validadores: `scripts/validar.py insumo` e `scripts/registrar_melhoria.py --simular`. Casos: [exemplos/casos.json](exemplos/casos.json).
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): versão do conjunto, sem mudança de regra.
 - 0.1.0 (22/10/2026): primeira versão (K-103).

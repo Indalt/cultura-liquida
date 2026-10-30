@@ -1,0 +1,14 @@
+{
+  "habilidade": "montar-ficha",
+  "nome": "ficha CL-0001 (cajuína) com as Proposições que ela marca",
+  "fichas": [
+    "CL-0001.md"
+  ],
+  "validadores": [
+    [
+      "scripts/validar_acervo.py",
+      "--raiz",
+      "{raiz}"
+    ]
+  ]
+}

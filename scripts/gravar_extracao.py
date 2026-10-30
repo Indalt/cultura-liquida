@@ -53,6 +53,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _acervo import carregar_acervo, proximo_id  # noqa: E402
 from _comum import RAIZ, carregar_esquema, carregar_json, validar_objeto  # noqa: E402
 from localizar_trecho import pasta_temporaria  # noqa: E402
+from nomes_provaveis import lugares as lugares_ibge, provaveis  # noqa: E402
 
 VERSAO = "gravar-extracao-0.3"
 PASTA = {"FO": "fontes", "TR": "trechos", "EV": "evidencias", "PR": "proposicoes", "LU": "lugares",
@@ -101,8 +102,13 @@ RE_TRATAMENTO = re.compile(r"(?<!\w)(Dona|D\.|Seu|seu|Sr\.?|Sra\.?|Dr\.?|Dra\.?|
                            r"\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+")
 
 
+_LUGS: set[str] = set()
+
+
 def cortar_nome(contexto: str, formas: list[str], lado: str) -> str:
-    """Corta o "antes" depois do último nome achado e o "depois" antes do primeiro (o contexto é só seletor)."""
+    """Corta o "antes" depois do último nome achado e o "depois" antes do primeiro (o contexto é só seletor).
+    Desde a 0.3 (K-111, insumo 76), corta também no nome provável da regra nomes-0.1, que não depende da
+    leitura: o contexto perde só o pedaço, e o hash e o localizador do Trecho não mudam."""
     for f in formas:
         baixo = contexto.lower()
         k = baixo.rfind(f.lower()) if lado == "antes" else baixo.find(f.lower())
@@ -111,6 +117,12 @@ def cortar_nome(contexto: str, formas: list[str], lado: str) -> str:
     achados = list(RE_TRATAMENTO.finditer(contexto))
     if achados:
         contexto = contexto[achados[-1].end():] if lado == "antes" else contexto[:achados[0].start()]
+    if not _LUGS:
+        _LUGS.update(lugares_ibge())
+    for seq in provaveis(contexto, _LUGS):
+        k = contexto.rfind(seq) if lado == "antes" else contexto.find(seq)
+        if k >= 0:
+            contexto = contexto[k + len(seq):] if lado == "antes" else contexto[:k]
     return contexto
 
 

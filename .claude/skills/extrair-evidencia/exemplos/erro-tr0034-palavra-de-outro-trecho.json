@@ -1,0 +1,15 @@
+{
+  "habilidade": "extrair-evidencia",
+  "nome": "TR-0034 com 'fresco', palavra de outro trecho, marcado como localizado",
+  "modo": "trecho",
+  "trecho": "TR-0034",
+  "mudancas": [
+    {
+      "op": "set",
+      "caminho": [
+        "texto_exato"
+      ],
+      "valor": "A cajuína é o suco do caju fresco e puro, clarificado, sem adição de açúcar e conservantes, acondicionado em garrafas que são colocadas por um período de cozimento em banho-maria para o líquido adquirir uma coloração âmbar e um sabor característico"
+    }
+  ]
+}

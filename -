@@ -1,0 +1,29 @@
+{
+  "arquivo": "acervo/termos/TE-0002.json",
+  "data": "2026-10-30",
+  "verificador": "auditor",
+  "olhar": "mecanico",
+  "nota": "exemplo de esquema do juntar_saida.py (K-111): não é achado real",
+  "achados": [
+    {
+      "id": "A1",
+      "tipo": "outro",
+      "descricao": "primeiro item gravado num arquivo pequeno",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n mocororó acervo/termos/TE-0002.json"
+      },
+      "estado": "confirmado"
+    },
+    {
+      "id": "A2",
+      "tipo": "outro",
+      "descricao": "segundo item",
+      "confirmacao": {
+        "metodo": "grep",
+        "comando": "grep -n mocororó acervo/termos/TE-0002.json"
+      },
+      "estado": "confirmado"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "habilidade": "consulta",
+  "nome": "Recorte RC-0010 com o total visto acima do informado, sem explicação",
+  "modo": "registro",
+  "registro": "RC-0010",
+  "esquema": "recorte",
+  "mudancas": [
+    {
+      "op": "set",
+      "caminho": [
+        "total_visto"
+      ],
+      "valor": 999999
+    }
+  ]
+}

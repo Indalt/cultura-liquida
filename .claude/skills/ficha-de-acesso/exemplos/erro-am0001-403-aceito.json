@@ -1,0 +1,19 @@
+{
+  "habilidade": "ficha-de-acesso",
+  "nome": "ficha da Hemeroteca com o 403 e a decisão 'aceito'",
+  "modo": "registro",
+  "registro": "AM-0001",
+  "caminho": [
+    "ficha_de_acesso"
+  ],
+  "esquema": "ficha-acesso",
+  "mudancas": [
+    {
+      "op": "set",
+      "caminho": [
+        "decisao"
+      ],
+      "valor": "aceito como via automática"
+    }
+  ]
+}

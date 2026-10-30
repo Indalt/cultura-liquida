@@ -1,0 +1,54 @@
+{
+  "habilidade": "scripts do harness 0.2.0 (K-111)",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "juntar_saida: itens em arquivos pequenos viram um JSON que passa no esquema",
+      "espera": "passa",
+      "comando": [
+        "scripts/juntar_saida.py",
+        "testes/rodada-b/juntar/ok",
+        "--base",
+        "testes/rodada-b/juntar/base.json",
+        "--chave",
+        "achados",
+        "--esquema",
+        "achado-verificacao",
+        "--saida",
+        "-"
+      ],
+      "criterio": "insumos 29, 71 e 74: o agente sem Write grava item a item e valida por arquivo, sem heredoc (exemplo de esquema)"
+    },
+    {
+      "nome": "juntar_saida: arquivo com aspas quebradas",
+      "espera": "reprova",
+      "comando": [
+        "scripts/juntar_saida.py",
+        "testes/rodada-b/juntar/ilegivel",
+        "--saida",
+        "-"
+      ],
+      "criterio": "o item ilegível reprova e nada se grava"
+    },
+    {
+      "nome": "nomes_provaveis: o TR-0001 real sem nome de pessoa",
+      "espera": "passa",
+      "comando": [
+        "scripts/nomes_provaveis.py",
+        "acervo/trechos/TR-0001.json",
+        "--falhar"
+      ],
+      "criterio": "insumo 76: a lista não depende da leitura; Trecho real sem nome"
+    },
+    {
+      "nome": "nomes_provaveis: nome sem tratamento e fora da tabela no contexto",
+      "espera": "reprova",
+      "comando": [
+        "scripts/nomes_provaveis.py",
+        "testes/rodada-b/nomes/TR-900001.json",
+        "--falhar"
+      ],
+      "criterio": "insumo 76: o nome de quem a fonte cita sem falar e sem tratamento aparece na lista (exemplo de esquema, nome fictício)"
+    }
+  ]
+}

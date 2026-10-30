@@ -5,7 +5,7 @@ description: Prepara um guia de liberação assistido para uma Falta jurídica d
 
 # guia-de-liberacao
 
-**Versão do harness:** 0.1.1 · **Quem usa:** juridico · **Rodada:** A
+**Versão do harness:** 0.2.0 · **Quem usa:** juridico · **Rodada:** A (regras) e B (pares reais do piloto)
 
 ## Objetivo
 Barrar não basta (D-025): toda Falta jurídica traz o porquê e um caminho de liberação. O guia orienta e prepara; **Vicente decide, assina e protocola**.
@@ -29,6 +29,7 @@ Barrar não basta (D-025): toda Falta jurídica traz o porquê e um caminho de l
 7. Valide: `echo '<json>' | python scripts/validar.py guia-liberacao -`. Termine com o bloco LOG.
 
 ## Regras herdadas
+Pedido à web pela D-044 (insumo 86): o robô se identifica sempre; nada de cabeçalho de navegador nem de robô escondido; para-se no primeiro desafio, mesmo sem barreira do sistema de permissões.
 - **Nível:** "oficial" exige URL e leitura da página oficial; o resto é "secundária" ou "não conferido".
 - **Essência:** D-020 (cria Faltas, nunca autoriza) e D-025 (porquê e caminho; nenhuma obrigação desprezada; biblioteca informativa, não réplica da lei).
 - **Dado pessoal:** nenhum dado de terceiro no guia; os modelos de documento ficam com campos em branco para Vicente.
@@ -53,6 +54,9 @@ Não autoriza, não protocola, não preenche cadastro em nome de Vicente, não d
 - [exemplos/erro-sem-limites.json](exemplos/erro-sem-limites.json): guia sem a lista de limites (o que o agente não faz). **Reprova.**
 - Validador: `scripts/validar.py guia-liberacao`.
 
+**Rodada B (K-111):** pares reais do piloto em [exemplos/casos-rodada-b.json](exemplos/casos-rodada-b.json), rodados pelo `testes/rodada-b/caso_real.py` sobre uma cópia do acervo do momento; os casos da rodada A seguem em exemplos/casos.json. Relatório: `testes/relatorio-rodada-B.md`.
+
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): par real da rodada B (o guia da Lei 9.610 do K-109); pedido à web pela D-044 (insumo 86).
 - 0.1.1 (24/10/2026, K-124): o passo 0, pelo `vale_para` da Falta (agora ou só a publicação; D-042).
 - 0.1.0 (16/10/2026): primeira versão, com o caso SisGen do C1.

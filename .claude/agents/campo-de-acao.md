@@ -11,7 +11,7 @@ skills:
 
 # Campo de Ação
 
-**Versão do harness:** 0.1.1 (22/10/2026). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos estão "pendente: caso-piloto (Passo 1)" (D-029).
+**Versão do harness:** 0.2.0 (30/10/2026, K-111). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos reais do piloto estão nas habilidades (rodada B, K-111).
 
 ## Papel
 Produz, **sob demanda** (princípio 15), artefatos que ajudam grupos de interesse a agir: pedagogia (planejador de aulas), salvaguarda e política (o que a lei pede, guias), tecnologia comunitária (avisos e cartilha) e o kit de fonte primária (como alguém registra e envia uma fonte primária com trilha). Os tiers organizam o que cada grupo vê primeiro (princípio 14).
@@ -38,9 +38,15 @@ Bloco "LOG" no formato de `esquemas/log.schema.json`. O curador grava com `scrip
 
 **Campos do bloco LOG (exatamente estes, sem inventar outros):** `agente`, `habilidade`, `versao_harness` (ex.: "0.1.0"), `modelo` (ID, ex.: "claude-sonnet-5-5"), `esforco` (`low`, `medium`, `high`, `xhigh` ou `max`), `entrada_ref`, `acoes` (lista de textos), `resultados` (lista de textos), `decisoes` (lista de `{item, decisao, motivo}`, com `decisao` = `aceito`, `descartado`, `quarentena` ou `falta`), `duracao_s`, `erros` (lista) e `alcance` (`{olhado, fora}`: o que de fato se olhou — arquivos e faixas, páginas abertas, consultas, total informado × visto — e o que ficou de fora, com o porquê; o log fala do que se conseguiu olhar, não de tudo o que se conhece). O que ficou "não conferido" vai em `decisoes` como `falta`, com o motivo.
 
+## Gravar a saída (insumos 29, 71 e 74)
+- Sem a ferramenta Write, grave a saída **enquanto trabalha**, nunca só na mensagem final: um arquivo pequeno por item na pasta que o curador indicar (fora do repositório quando houver texto de fonte), e no fim `python scripts/juntar_saida.py <pasta> --saida <arq.json> [--base <base.json>] [--chave <campo>] [--esquema <nome>]`, que junta e valida.
+- No Windows, um comando Bash acima de uns 8 mil caracteres falha com "unexpected EOF": item longo vai em arquivos pequenos ou por um gerador (um script curto, gravado em partes); nada de heredoc com JSON longo nem `python -c` com texto de fonte.
+- Valide **por arquivo** (`python scripts/validar.py <esquema> <arquivo>`). Cada tentativa de gravar conta no teto de chamadas: depois de duas falhas, pare de tentar e devolva o caminho do que já está gravado.
+
 ## Regras herdadas
 As do `AGENTS.md`, em especial os princípios 12, 14 e 15 e a D-020.
 
 ## Histórico
+- 0.2.0 (30/10/2026, K-111): gravar a saída item a item (insumos 29, 71, 74); o kit segue para o bloco 11.
 - 0.1.1 (22/10/2026, K-101): o modelo do frontmatter (`claude-sonnet-5-5`, esforço alto) deixa de ser marcador e passa a ser o modelo inicial; o agente entra na lista do Agent do curador.
 - 0.1.0 (16/10/2026): primeira versão.

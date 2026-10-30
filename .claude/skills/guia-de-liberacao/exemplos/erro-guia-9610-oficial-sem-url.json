@@ -1,0 +1,17 @@
+{
+  "habilidade": "guia-de-liberacao",
+  "nome": "guia da Lei 9.610 com passo 'oficial' sem URL",
+  "modo": "registro",
+  "arquivo": "trilhas/2026-10-29_K-109/guias/G-licenca-lei-9610.json",
+  "esquema": "guia-liberacao",
+  "mudancas": [
+    {
+      "op": "apagar",
+      "caminho": [
+        "passos",
+        0,
+        "url"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "habilidade": "extrair-evidencia",
+  "nome": "TR-0101 com a ligadura 'ﬁ' no texto exato e o grau gravado da leitura com 'fi' (0,9746)",
+  "modo": "trecho",
+  "trecho": "TR-0101",
+  "mudancas": [
+    {
+      "op": "set",
+      "caminho": [
+        "grau_semelhanca"
+      ],
+      "valor": 0.9746
+    }
+  ]
+}
