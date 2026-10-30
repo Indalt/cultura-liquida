@@ -1,0 +1,33 @@
+{
+  "id": "D-048",
+  "data": "2026-10-30",
+  "essencia": "As rotinas sem IA rodam todo dia, numa nuvem (hoje, o GitHub) até haver um servidor dedicado, sem depender do ambiente de desenvolvimento e de planejamento. Cada fonte é consultada no ritmo que aceita e que rende novidade, medido pela ferramenta, e a rotina só grava quando há novidade. A ferramenta junta o que as rotinas gravaram quando as checagens passam, sem esperar Vicente, que acompanha pelo relatório do dia. E a ferramenta torna acessível às rotinas o que hoje não está: abre todo local de busca que for possível abrir pelas vias permitidas, incluindo o BCR, e dá a elas as ações e a nuvem de que precisam, sem contornar proteção. O Internet Archive serve só para consulta, que não pede cadastro: o projeto não registra nada nele, nem conta nem cópia nova.",
+  "diretriz": "(1) Cadência: as rotinas sem IA (camada 1) rodam todo dia; a cadência de cada ambiente sai do rendimento medido (novidade por consulta) e do que a fonte aceita (termos, robots.txt e ritmo, como a ficha de acesso diz), e o script de agenda do bloco 10a a aplica por regra, com versão. Substitui o 'cada ambiente é alimentado semanalmente' da D-012. (2) A rotina grava só quando há novidade (ID ainda não visto); a execução sem novidade deixa só a linha do relatório do dia. (3) Junção: a ferramenta junta a ramificação das rotinas quando o portão da camada 1 passa (o validador, o procurar_dado_pessoal.py e as checagens por script, com o log); a parte reprovada não entra, e a execução seguinte retoma do último estado que passou. Vicente acompanha pelo relatório do dia, sem a junção semanal (substitui o padrão A-10 do brief de execuções, bloco 10a; mantém a D-038: quem propõe não aprova, e o portão é da ferramenta). (4) Locais de busca: o K-112 abre, fonte por fonte, todo local de busca que for possível abrir pelas vias permitidas (ficha de acesso testada, também na máquina da nuvem; termos de uso e robots.txt sem proibição, D-042; via oficial do serviço), incluindo o BCR, cuja API está aberta: o adaptador do Tainacan nasce no K-112 (responde ao insumo 73), e o Internet Archive (AM-0007), acervo de livros e periódicos digitalizados com busca nos metadados e no texto (insumo 96); depois, a ordem do bloco 10a (Oasisbr, OpenAlex e os demais ambientes do Anexo E com via por programa). Fonte com proteção anti-robô não se abre por contorno (D-044): segue na via humana ou por pedido de acesso à instituição. (5) Ações: as rotinas recebem as ações de que precisam (buscar, deduplicar, checar links, feed de novidades, relatório do dia); e a ferramenta, ao ler o texto de uma fonte que não abre, tenta a cópia arquivada no Wayback (Fundação, l. 100), só nessa falha e no ritmo que o Internet Archive aceita (insumo 96). A consulta da captura existente da página do registro sai das rotinas diárias. O Internet Archive serve só para consulta, que não pede cadastro: o projeto não registra nada nele, nem conta nem cópia nova, e a captura nova sai do plano (deixa de voltar no K-010). (6) Nuvem: as rotinas rodam numa nuvem, hoje o GitHub (se ele impedir, a D-033: outro fornecedor, nomeado por decisão), até haver um servidor dedicado; não dependem de caminho, pasta ou programa da máquina de Vicente nem de sessão de trabalho, e o que é privado (a tabela de pessoas e a pasta de conhecimento tradicional) fica fora delas. (7) Entra no K-112 (bloco 10a) e no texto da próxima versão da Fundação (l. 497 e 509); não muda a D-040 (o teto); da D-043, muda só a volta da captura nova no K-010, que cai. Fatos do GitHub conferidos em 30/10 (EX-0089, oficial): executores padrão grátis em repositório público; agenda de no mínimo 5 minutos, com atraso possível no início de cada hora; rotinas agendadas desligadas depois de 60 dias sem atividade no repositório (o que conta como atividade não foi conferido); os termos vedam atividade alheia ao projeto do repositório e carga desproporcional (a leitura para a coleta fica com a parada (a) do K-112).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-30",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-10-30_conversa/falas-vicente.md, seção 'Rotinas sem IA (D-048)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "liberar",
+      "sentido_confirmado": "tornar acessível o que não está acessível: aqui, tornar acessível às rotinas as ações, os locais de busca e a nuvem em que rodam; não é autorização prévia (a leitura de autorização, do curador, foi corrigida por Vicente)"
+    },
+    {
+      "palavra": "onde",
+      "sentido_confirmado": "os locais de busca, as ações e a nuvem em que as rotinas rodam, até haver um servidor dedicado (as leituras anteriores do curador, só a máquina e o lugar de gravar, e depois só os locais de busca, foram corrigidas por Vicente)"
+    },
+    {
+      "palavra": "o que for possível abrir de local de busca, abrir",
+      "sentido_confirmado": "abrir pelas vias permitidas (ficha testada, sem proibição nos termos de uso ou no robots.txt, sem contorno de proteção; D-042, D-044), incluindo o BCR"
+    },
+    {
+      "palavra": "não deixar a necessidade de registrar no Internet Archive",
+      "sentido_confirmado": "o projeto não registra nada no Internet Archive, nem conta nem cópia nova; usa só consulta, que funciona sem cadastro; a captura nova sai do plano"
+    },
+    {
+      "palavra": "os outros pontos estão seguros",
+      "sentido_confirmado": "confirmados sem ressalva: rotinas diárias com cadência por fonte, gravar só com novidade, junção pelo portão sem esperar Vicente, relatório do dia"
+    }
+  ],
+  "substitui": "Em parte, a D-012 (só o 'cada ambiente é alimentado semanalmente até ser exaurido'; as rotinas diárias continuam) e o padrão A-10 do brief de execuções, bloco 10a (a junção semanal por Vicente, pela página do GitHub); e a D-043 só no ponto em que a captura nova voltava no K-010: ela sai do plano. Responde ao insumo 73 (o BCR sem adaptador do Tainacan) e ao insumo 96 (o Wayback e o Internet Archive para consultar a fonte). Não reabre a D-038: a junção continua pelo portão da ferramenta.",
+  "marcador": "VIGENTE"
+}
