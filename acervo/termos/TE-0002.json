@@ -14,6 +14,14 @@
         "EV-0028",
         "EV-0051"
       ]
+    },
+    {
+      "forma": "mocororó",
+      "tipo_variacao": "designação local, de alguns produtores do Piauí, para a cajuína crua (o suco clarificado e cortado, antes de ir ao fogo), no período das fontes (2009–2014); termo ambíguo (D-039): em outra CLB nomeia a bebida fermentada ritual dos Tremembé, e esse sentido não entra neste Termo",
+      "periodo": "2009–2014 (período das fontes)",
+      "abonacoes": [
+        "EV-0158"
+      ]
     }
   ],
   "formas_de_busca": [
@@ -31,7 +39,8 @@
     "EV-0084",
     "EV-0409",
     "EV-0192",
-    "EV-0051"
+    "EV-0051",
+    "EV-0158"
   ],
   "estado": "atestado",
   "relacoes": [
@@ -40,14 +49,14 @@
       "termo": "TE-0001"
     }
   ],
-  "nota": "Atestado em 29/10/2026 (K-110) por oito abonações de Trecho localizado, de oito Fontes (FO-0001, FO-0009, FO-0010, FO-0011, FO-0020, FO-0032, FO-0033, FO-0034). Falas de quem pratica: EV-0409 (detentor ou mestre, FO-0034) e EV-0192 (comunidade, FO-0033). As Evidências ainda estão 'não conferida' (exceto EV-0001 e EV-0034); a abonação vale pelo Trecho localizado. EV-0004 (mesma ideia, FO-0002) não entra: leitura divergente. Variante: 'suco de caju clarificado' vem ligada a 'cajuína' por 'ou'/'também conhecido como' (EV-0028, EV-0051); a Evidência EV-0020 liga o nome a uma instrução normativa citada pela fonte. Nomes de outras bebidas do caju (vinho de caju, mocororó) NÃO são variantes: são outra CLB (D-039), a tratar no K-102. Sem língua: nenhuma fonte a dá (insumo 30). As formas de busca (cajuina, caju-ína, cajuí-na, ca-juína, cajuyna) ficam só no booleano; nenhuma foi vista como variante nas fontes lidas.",
+  "nota": "Atestado em 29/10/2026 (K-110) por oito abonações de Trecho localizado, de oito Fontes (FO-0001, FO-0009, FO-0010, FO-0011, FO-0020, FO-0032, FO-0033, FO-0034). Falas de quem pratica: EV-0409 (detentor ou mestre, FO-0034) e EV-0192 (comunidade, FO-0033). As Evidências ainda estão 'não conferida' (exceto EV-0001 e EV-0034); a abonação vale pelo Trecho localizado. EV-0004 (mesma ideia, FO-0002) não entra: leitura divergente. Variante: 'suco de caju clarificado' vem ligada a 'cajuína' por 'ou'/'também conhecido como' (EV-0028, EV-0051); a Evidência EV-0020 liga o nome a uma instrução normativa citada pela fonte. O vinho de caju é outra CLB (D-039), a tratar no K-102; \"mocororó\" é termo ambíguo (D-039, lote de correção de 30/10/2026): o sentido da cajuína crua entra aqui como variante pela EV-0158 (TR-0158, FO-0032, EN-1726, p. 32, com a palavra no texto exato; proposição ligada PR-0130); a EV-0357 (TR-0357, FO-0034, p. 177) é só apoio, porque a palavra está no contexto `depois` e não no texto exato, e não consta como abonação; o sentido da bebida fermentada ritual dos Tremembé fica para o Termo candidato da outra CLB (K-102), sem ligação automática entre os dois. Sem língua: nenhuma fonte a dá (insumo 30). As formas de busca (cajuina, caju-ína, cajuí-na, ca-juína, cajuyna) ficam só no booleano; nenhuma foi vista como variante nas fontes lidas.",
   "origem_registro": {
     "criado_por": "arquivista (registrar-termo 0.1.1, K-106)",
     "data": "2026-10-23",
     "execucao": "EX-0014"
   },
   "booleanos": [
-    "(\"cajuína\" OR \"suco de caju clarificado\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
-    "(\"cajuína\" OR \"suco de caju clarificado\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (clarificação OR banho-maria OR filtragem OR esterilização)"
+    "(\"cajuína\" OR \"suco de caju clarificado\" OR \"mocororó\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+    "(\"cajuína\" OR \"suco de caju clarificado\" OR \"mocororó\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (clarificação OR banho-maria OR filtragem OR esterilização)"
   ]
 }

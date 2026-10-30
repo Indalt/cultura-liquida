@@ -40,7 +40,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_json, carregar_valores  # noqa: E402
 from _coleta import Execucao  # noqa: E402
 
-VERSAO = "fila-curadoria-0.1"
+VERSAO = "fila-curadoria-0.2"
 LIMITE = carregar_valores()["valores"]["fila_curadoria"]["valor"]["cartoes_por_semana"]
 TERMOS_PILOTO = ("TE-0001", "TE-0002")
 CAB_OPERACAO = "## Operação"
@@ -96,7 +96,7 @@ def abertos(linhas: list[str]) -> list[str]:
 
 def chama_vicente(linha: str) -> bool:
     """Conflito ou Falta jurídica a liberar, sem estar à espera de outra coisa (ex.: a decisão de publicar)."""
-    return ("Conflito:" in linha or "a liberar" in linha) and "Espera" not in linha
+    return ("Conflito:" in linha or "a liberar" in linha) and "espera" not in linha.lower()
 
 
 def main() -> int:

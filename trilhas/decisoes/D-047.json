@@ -1,0 +1,25 @@
+{
+  "id": "D-047",
+  "data": "2026-10-30",
+  "essencia": "Leitura de Vicente sobre a cajuína, diante da Lei 13.123/2015. As fontes mostram o saber da cajuína como público e difundido há muito tempo, mudado ao longo da história, com a origem discutida pelas fontes (pode estar no Ceará); nenhuma o atribui hoje a um povo indígena, a uma comunidade tradicional ou a um agricultor tradicional como detentores. Por isso, ele não é tratado como conhecimento tradicional associado (art. 2º, II). O projeto descreve a prática a partir de fontes públicas e não pesquisa o patrimônio genético do caju; por isso, o trabalho dele não é tratado como acesso (art. 2º, IX). O detalhe da cajuína fica no Git, e a Falta de conhecimento tradicional dela se libera por esta leitura. No K-110, outra CLB recebe a mesma leitura só quando as regras de termos, de ambiguidade e de tradição, aplicadas pela ferramenta e pelo juridico, a mostrarem do mesmo tipo; as demais seguem as regras vigentes. É regra de precaução de Vicente, não parecer sobre a licitude.",
+  "diretriz": "(1) Na F-0024, o que é da cajuína (CL-0001) se libera, com esta decisão como comprovante. (2) O que a F-0024 marca de outra CLB (D-039) passa pela triagem do juridico: recebe a mesma leitura só se as regras de termos, de ambiguidade (D-039) e de tradição (as perguntas da triagem-juridica, D-042) a mostrarem do mesmo tipo (saber público, que nenhuma fonte atribui hoje a povo, comunidade ou agricultor tradicional como detentores); senão, segue a D-039, a D-042 e a D-043. O juridico aplica a regra e não autoriza (D-020): o comprovante é esta decisão. (3) O cartão K-203 fecha se a F-0024 ficar toda liberada; senão, continua à espera do K-010. (4) O detalhe da cajuína fica no Git, sem pasta local; o que a fonte atribui a povo nomeado segue a D-043 (3). (5) Sem decisão de Vicente caso a caso; a regra geral para as CLB depois do K-110 é proposta para o planejamento. (6) Não reabre a D-042 nem a D-043.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-10-30",
+  "fala_original_ref": "trilhas/2026-10-29_K-110/falas-vicente.md, seção 'Autorização do lote de correção do K-110 e do K-102 (mensagem de 30/10/2026)', item 1, versão revista; formulada na conversa de planejamento de 30/10/2026",
+  "palavras_conferidas": [
+    {
+      "palavra": "para a K-110 qualquer CLB desse tipo",
+      "sentido_confirmado": "a mesma leitura para a CLB que as regras (de termos, de ambiguidade e de tradição, aplicadas pela ferramenta e pelo juridico) mostrarem do mesmo tipo, sem decisão de Vicente caso a caso"
+    },
+    {
+      "palavra": "talvez deva ser regra",
+      "sentido_confirmado": "proposta para o planejamento, não regra vigente"
+    },
+    {
+      "palavra": "essência",
+      "sentido_confirmado": "formulada na conversa de planejamento de 30/10 e escrita por Vicente na autorização (versão que ele mandou no meio do lote, em 30/10, no lugar da primeira); não houve devolução, porque o texto já é dele"
+    }
+  ],
+  "substitui": "Não substitui decisão vigente. Libera a parte da cajuína da F-0024 pela leitura de Vicente que a própria Falta pedia ('a regra vigente não decide isso').",
+  "marcador": "VIGENTE"
+}

@@ -2,12 +2,13 @@
   "tipo": "impedimento_juridico",
   "subtipo_juridico": "conhecimento_tradicional",
   "vale_para": "publicar",
-  "o_que_falta": "Definir se a menção do dossiê de registro ao povo Tremembé e ao mocororó (beberagem de caju nas danças rituais; outra CLB, D-039) é conhecimento tradicional associado de origem identificável e se há costume que rege o acesso a esse aspecto ritual. O povo é nomeado na fonte; o preparo do mocororó não está guardado e não se aprofunda antes da decisão. Consentimento ou protocolo do povo: não apurado, não completado.",
+  "o_que_falta": "Definir se o uso e o preparo da bebida fermentada ritual de caju que o registro do Iphan atribui ao povo Tremembé (outra CLB, D-039; 'mocororó dos Tremembé') são conhecimento tradicional associado de origem identificável e se há costume que rege o acesso a esse aspecto ritual. O povo é nomeado na fonte, nas páginas 16, 86, 100, 163, 165 e 177 do dossiê (FO-0034), 23 e 32 do parecer do DPI (FO-0032) e 19 do parecer de revalidação (FO-0033). O detalhe fica na pasta local; no Git ficam link, localizador, hash e metadados. Onde a fonte só nomeia o povo ou o nome da bebida (TR-0494, TR-0100, TR-0158, TR-0357, TR-0358), não há Falta pela regra (D-042). A Evidência da p. 100 não traz a palavra 'mocororó': o rótulo que o K-110 lhe deu foi corrigido em 30/10/2026. Consentimento ou protocolo do povo: não apurado, não completado.",
   "por_que": "Conhecimento tradicional associado é 'informação ou prática de população indígena, comunidade tradicional ou agricultor tradicional sobre as propriedades ou usos diretos ou indiretos associada ao patrimônio genético' (Lei 13.123, art. 2º, II); o caju é planta e a fonte atribui o uso a um povo nomeado. Sendo a origem identificável, o acesso depende de consentimento prévio informado (art. 9º; leitura secundária) e o cadastro vem antes da divulgação (art. 12, §2º, oficial). Pela D-042 e pela D-043, de origem identificável o detalhe espera numa pasta local até o K-010. O uso ritual levanta a dúvida de costume que rege o acesso (Convenção de 2003, art. 13, d, ii; não conferido). Hoje só há menção, sem modo de preparo; barra só a publicação.",
   "onde_aparece": [
-    "trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (a Evidência sobre os Tremembé e o mocororó em danças rituais)",
-    "acervo/evidencias/EV-0494.json",
-    "acervo/evidencias/EV-0504.json"
+    "trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json, a5-47 (p. 100; inteira na pasta local; no Git, link, localizador, hash e esta Falta)",
+    "acervo/trechos/TR-0504.json, o campo 'depois' (p. 100; na pasta local)",
+    "acervo/trechos/TR-0505.json, o campo 'antes', e acervo/proposicoes/PR-0412.json, o valor (p. 100; na pasta local)",
+    "pasta local, fora do Git: C:/Antigravity/Cultura Liquida - privado/conhecimento-tradicional/ (F-0033_detalhe.json e EN-1725-a5-47.json)"
   ],
   "norma": {
     "referencia": "Lei 13.123/2015, art. 2º, II (também art. 9º e art. 12, §2º)",
@@ -21,6 +22,6 @@
   },
   "criada_por": "juridico",
   "data": "2026-10-30",
-  "nota": "Triagem do K-110. O trecho do art. 2º, II, é o da F-0024, conferido como oficial no K-109; nesta chamada, relido só por WebFetch (secundária). Não conferido: Convenção de 2003, art. 13, d, ii; Decreto 8.772/2016. O Jurídico não autoriza nem diz que pode publicar.",
+  "nota": "Triagem do K-110. O trecho do art. 2º, II, é o da F-0024, conferido como oficial no K-109; nesta chamada, relido só por WebFetch (secundária). Não conferido: Convenção de 2003, art. 13, d, ii; Decreto 8.772/2016. O Jurídico não autoriza nem diz que pode publicar. Reexame do juridico no lote de correção do K-110 (30/10/2026, D-047): a F-0033 segue de pé (povo nomeado; a D-047 não a libera); marca a a5-47 inteira, o 'depois' do TR-0504, o 'antes' do TR-0505 e o valor da PR-0412, que foram à pasta local (D-043, 3); a EV-0494 saiu da lista (só nomeia; sem Falta pela regra). Não conferidos: Lei 13.123, art. 9º e art. 12, §2º, Decreto 8.772/2016 e Convenção de 2003, art. 13, d, ii, nesta chamada.",
   "id": "F-0033"
 }

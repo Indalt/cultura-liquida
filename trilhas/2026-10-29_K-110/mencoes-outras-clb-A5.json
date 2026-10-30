@@ -1,13 +1,13 @@
 {
  "lote": "K110-A5",
- "nota": "Evidências do dossiê (EN-1725) sobre outra CLB, separadas pelo curador em 29/10/2026 (D-039): o vinho de caju e o mocororó. Os trechos estão localizados (arquivos na pasta temporária, fora do Git); não entram como Proposições da cajuína (CL-0001). Vão ao K-102 (menções incidentais) e ao cartão de lista das CLB candidatas.",
+ "nota": "Evidências do dossiê (EN-1725) sobre outra CLB, separadas pelo curador em 29/10/2026 (D-039): o vinho de caju e o mocororó. Os trechos estão localizados (arquivos na pasta temporária, fora do Git); não entram como Proposições da cajuína (CL-0001). Vão ao K-102 (menções incidentais) e ao cartão de lista das CLB candidatas. Lote de correção de 30/10/2026 (D-047): o rótulo da a5-47 (p. 100) dizia 'mocororó', palavra que o trecho não traz; corrigido, e o detalhe foi à pasta local (D-043, 3), com o link, o localizador, o hash e a F-0033 no Git. Conferência pelo eixo 3 (30/10/2026): o rótulo de cada Evidência tem de estar no trecho; a5-31 a a5-34 (o trecho não nomeia a bebida) e a5-47 (sem 'mocororó') corrigidos; a5-35, a5-36, a5-39 e a5-40 trazem 'vinho' no texto exato.",
  "evidencias": [
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-31.json",
    "estado_trecho": "localizado",
-   "chave": "processo e modo de fazer|vinho de caju (outra CLB): espreme-se o caju, adoça-se com rapadura ou açúcar e ferve-se",
+   "chave": "processo e modo de fazer|bebida que o povo faz com a água do caju: espreme-se o caju, adoça-se com rapadura ou açúcar e põe-se para ferver (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "atributo": "processo e modo de fazer",
-   "valor": "vinho de caju (outra CLB): espreme-se o caju, adoça-se com rapadura ou açúcar e ferve-se",
+   "valor": "bebida que o povo faz com a água do caju: espreme-se o caju, adoça-se com rapadura ou açúcar e põe-se para ferver (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "periodo_referido": "sem data (lembrança)",
    "sentido": "a favor",
    "voz": {
@@ -22,14 +22,15 @@
    },
    "criterio_pratica_cultural": null,
    "sustenta_aviso_saude_politica": false,
-   "ancora_w": true
+   "ancora_w": true,
+   "rotulo_K110": "vinho de caju (outra CLB): espreme-se o caju, adoça-se com rapadura ou açúcar e ferve-se"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-32.json",
    "estado_trecho": "localizado",
-   "chave": "processo e modo de fazer|vinho de caju (outra CLB): do recipiente de lata vai para a garrafa, tapada e posta no sol para curtir",
+   "chave": "processo e modo de fazer|a mesma bebida: da lata vai para a garrafa, tapada e posta no sol para curtir (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "atributo": "processo e modo de fazer",
-   "valor": "vinho de caju (outra CLB): do recipiente de lata vai para a garrafa, tapada e posta no sol para curtir",
+   "valor": "a mesma bebida: da lata vai para a garrafa, tapada e posta no sol para curtir (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "periodo_referido": "sem data (lembrança)",
    "sentido": "a favor",
    "voz": {
@@ -44,14 +45,15 @@
    },
    "criterio_pratica_cultural": null,
    "sustenta_aviso_saude_politica": false,
-   "ancora_w": true
+   "ancora_w": true,
+   "rotulo_K110": "vinho de caju (outra CLB): do recipiente de lata vai para a garrafa, tapada e posta no sol para curtir"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-33.json",
    "estado_trecho": "localizado",
-   "chave": "uso e consumo|vinho de caju (outra CLB): embebeda quem não tem o costume de beber",
+   "chave": "uso e consumo|a mesma bebida embebeda quem não tem o costume de beber (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "atributo": "uso e consumo",
-   "valor": "vinho de caju (outra CLB): embebeda quem não tem o costume de beber",
+   "valor": "a mesma bebida embebeda quem não tem o costume de beber (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "periodo_referido": "sem data (lembrança)",
    "sentido": "a favor",
    "voz": {
@@ -66,14 +68,15 @@
    },
    "criterio_pratica_cultural": null,
    "sustenta_aviso_saude_politica": false,
-   "ancora_w": true
+   "ancora_w": true,
+   "rotulo_K110": "vinho de caju (outra CLB): embebeda quem não tem o costume de beber"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-34.json",
    "estado_trecho": "localizado",
-   "chave": "transmissão|a mãe da entrevistada fazia muito vinho de caju (outra CLB); ela mesma não fez",
+   "chave": "transmissão|a mãe da entrevistada fazia muito a mesma bebida; ela mesma não fez (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "atributo": "transmissão",
-   "valor": "a mãe da entrevistada fazia muito vinho de caju (outra CLB); ela mesma não fez",
+   "valor": "a mãe da entrevistada fazia muito a mesma bebida; ela mesma não fez (outra CLB; o trecho não a nomeia: o rótulo 'vinho de caju' do K-110 foi corrigido em 30/10/2026 pelo eixo 3; o nome não se infere)",
    "periodo_referido": "sem data (lembrança)",
    "sentido": "a favor",
    "voz": {
@@ -88,7 +91,8 @@
    },
    "criterio_pratica_cultural": "transmissão entre gerações",
    "sustenta_aviso_saude_politica": false,
-   "ancora_w": true
+   "ancora_w": true,
+   "rotulo_K110": "a mãe da entrevistada fazia muito vinho de caju (outra CLB); ela mesma não fez"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-35.json",
@@ -109,7 +113,8 @@
    },
    "criterio_pratica_cultural": null,
    "sustenta_aviso_saude_politica": false,
-   "ancora_w": true
+   "ancora_w": true,
+   "eixo3": "conferido em 30/10/2026: 'vinho' está no texto exato do trecho"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-36.json",
@@ -130,7 +135,8 @@
    },
    "criterio_pratica_cultural": null,
    "sustenta_aviso_saude_politica": false,
-   "ancora_w": true
+   "ancora_w": true,
+   "eixo3": "conferido em 30/10/2026: 'vinho' está no texto exato do trecho"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-39.json",
@@ -150,7 +156,8 @@
     "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
    },
    "criterio_pratica_cultural": null,
-   "sustenta_aviso_saude_politica": false
+   "sustenta_aviso_saude_politica": false,
+   "eixo3": "conferido em 30/10/2026: 'vinho' está no texto exato do trecho"
   },
   {
    "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-40.json",
@@ -170,14 +177,15 @@
     "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
    },
    "criterio_pratica_cultural": null,
-   "sustenta_aviso_saude_politica": false
+   "sustenta_aviso_saude_politica": false,
+   "eixo3": "conferido em 30/10/2026: 'vinho' está no texto exato do trecho"
   },
   {
-   "arquivo_trecho": "C:/Users/alqui/AppData/Local/Temp/cultura-liquida/fontes/aval/EN-1725-a5-47.json",
+   "arquivo_trecho": "C:/Antigravity/Cultura Liquida - privado/conhecimento-tradicional/EN-1725-a5-47.json (fora do Git)",
    "estado_trecho": "localizado",
-   "chave": "uso e consumo|os Tremembés utilizam beberagens feitas a partir do caju em suas danças rituais (outra CLB: mocororó)",
+   "chave": "uso e consumo|uso de bebida de caju por povo nomeado (outra CLB: a bebida fermentada ritual dos Tremembé; o trecho não traz a palavra 'mocororó'; rótulo do K-110 corrigido em 30/10/2026) [detalhe na pasta local, D-043 (3); F-0033]",
    "atributo": "uso e consumo",
-   "valor": "os Tremembés utilizam beberagens feitas a partir do caju em suas danças rituais (outra CLB: mocororó)",
+   "valor": "uso de bebida de caju por povo nomeado (outra CLB: a bebida fermentada ritual dos Tremembé; o trecho não traz a palavra 'mocororó'; rótulo do K-110 corrigido em 30/10/2026) [detalhe na pasta local, D-043 (3); F-0033]",
    "periodo_referido": "séc. XVII e até hoje",
    "sentido": "a favor",
    "voz": {
@@ -185,12 +193,21 @@
     "papel": "equipe do dossiê de registro"
    },
    "lugares": {
-    "pratica": "Delta do Parnaíba, Ceará e Rio Grande do Norte",
+    "pratica": "[detalhe na pasta local, D-043 (3); F-0033]",
     "publicacao": "não informado no dossiê (contratado pela Superintendência do Iphan no Piauí)",
     "pesquisa": "Piauí (PI): Teresina, Altos, Monsenhor Gil, Água Branca e Amarante, out. 2008 a set. 2009 (segundo o dossiê)"
    },
    "criterio_pratica_cultural": "identidade ou memória",
-   "sustenta_aviso_saude_politica": false
+   "sustenta_aviso_saude_politica": false,
+   "trecho_no_git": {
+    "localizador": "p. 100 do PDF; car. 276886-276962 do texto normalizado (normalizacao-0.2)",
+    "hash": "3f261b455fc127201eedd6a3d6e5c7ab35b49adbc0b78eb7850c4aa231a83a20",
+    "versao_normalizacao": "normalizacao-0.2",
+    "data_conferencia": "2026-10-29",
+    "estado": "localizado",
+    "link": "https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66631/Cajuina_de_Dossie-Producao-artesanal-e-praticas-socioculturais-associ_.pdf",
+    "falta": "F-0033"
+   }
   }
  ]
 }
