@@ -11,7 +11,9 @@
     "acervo/trechos/ (o campo `fonte` aponta para a Fonte sem autor)",
     "acervo/fontes/FO-0016.json a FO-0030.json (campo referencia: sem nome do autor)",
     "acervo/evidencias/EV-0045.json a EV-0071.json (voz.papel: autor da dissertação, autor da tese, autores da publicação (Embrapa) e similares, sem nome)",
-    "acervo/trechos/TR-0045.json a TR-0071.json (o campo fonte aponta para Fonte sem autor)"
+    "acervo/trechos/TR-0045.json a TR-0071.json (o campo fonte aponta para Fonte sem autor)",
+    "FO-0031 a FO-0034 (Iphan: o dossiê contratado a empresa e os pareceres), sem campo de autor nominal; licença dos documentos do BCR não vista na página (art. 8º, IV, da Lei 9.610 não conferido) (K-110)",
+    "as Evidências das Fontes FO-0031 a FO-0034, voz por papel sem o nome do autor (K-110)"
   ],
   "norma": {
     "referencia": "Lei 9.610/1998, art. 46, III",

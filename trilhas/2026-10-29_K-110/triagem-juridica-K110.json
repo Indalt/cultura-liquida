@@ -1,0 +1,53 @@
+{
+  "cartao": "K-110",
+  "habilidade": "triagem-juridica 0.2.0",
+  "data": "2026-10-30",
+  "nota": "Gravado pelo curador da mensagem final do juridico, que não conseguiu gravar o arquivo (comando acima do limite do Windows; insumo 71).",
+  "itens": [
+    {
+      "item": "ficha CL-0001 e CLB (ato: guardar no Git público; wiki só na máquina)",
+      "resultado": "amplia F-0024 e F-0025; o resto sem Falta pela regra (D-042): citações curtas com Fonte; 0 dado pessoal em claro; avisos sem conselho"
+    },
+    {
+      "item": "EN-1724 a EN-1727 e FO-0031 a FO-0034 (ler, localizar, linkar, citar)",
+      "resultado": "sem Falta pela regra; autoria e licença ampliam F-0025"
+    },
+    {
+      "item": "447 Trechos e Evidências do registro do IPHAN",
+      "resultado": "sem Falta pela regra para a citação curta (máx. 465 caracteres); as falas de detentores ampliam F-0024; 'na medida justificada' (art. 46, III) para o conjunto é leitura de Vicente"
+    },
+    {
+      "item": "34 Pessoas (código e papel)",
+      "resultado": "Falta nova lgpd (reidentificação por contexto), só para publicar"
+    },
+    {
+      "item": "menções a outra CLB (A5)",
+      "resultado": "Falta nova de conhecimento tradicional (Tremembé, mocororó em danças rituais), só para publicar; o vinho de caju amplia F-0024"
+    },
+    {
+      "item": "avisos da ficha (cola de sapateiro, diabéticos, IN SDA 37/2018)",
+      "resultado": "sem Falta pela regra (D-042); Portaria SVS/MS 344 não conferida; auditor antes de publicar (D-038)"
+    }
+  ],
+  "faltas_novas": [
+    "F-0032",
+    "F-0033"
+  ],
+  "faltas_ampliadas": [
+    {
+      "id": "F-0024",
+      "onde_aparece_somado": [
+        "acervo/fichas/CL-0001.md, seções Modo de fazer, Compreensão local e Quem ensina (usos do caju por produtoras e produtores do Piauí, com falas de detentoras e detentores; origem identificável; triagem do K-110)",
+        "as 86 Evidências de papel 'detentor ou mestre' e 'quem ensinou' das Fontes FO-0031 a FO-0034 (K-110)",
+        "trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (o vinho de caju nas falas de quem o fazia)"
+      ]
+    },
+    {
+      "id": "F-0025",
+      "onde_aparece_somado": [
+        "FO-0031 a FO-0034 (Iphan: o dossiê contratado a empresa e os pareceres), sem campo de autor nominal; licença dos documentos do BCR não vista na página (art. 8º, IV, da Lei 9.610 não conferido) (K-110)",
+        "as Evidências das Fontes FO-0031 a FO-0034, voz por papel sem o nome do autor (K-110)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "conhecimento_tradicional",
+  "vale_para": "publicar",
+  "o_que_falta": "Definir se a menção do dossiê de registro ao povo Tremembé e ao mocororó (beberagem de caju nas danças rituais; outra CLB, D-039) é conhecimento tradicional associado de origem identificável e se há costume que rege o acesso a esse aspecto ritual. O povo é nomeado na fonte; o preparo do mocororó não está guardado e não se aprofunda antes da decisão. Consentimento ou protocolo do povo: não apurado, não completado.",
+  "por_que": "Conhecimento tradicional associado é 'informação ou prática de população indígena, comunidade tradicional ou agricultor tradicional sobre as propriedades ou usos diretos ou indiretos associada ao patrimônio genético' (Lei 13.123, art. 2º, II); o caju é planta e a fonte atribui o uso a um povo nomeado. Sendo a origem identificável, o acesso depende de consentimento prévio informado (art. 9º; leitura secundária) e o cadastro vem antes da divulgação (art. 12, §2º, oficial). Pela D-042 e pela D-043, de origem identificável o detalhe espera numa pasta local até o K-010. O uso ritual levanta a dúvida de costume que rege o acesso (Convenção de 2003, art. 13, d, ii; não conferido). Hoje só há menção, sem modo de preparo; barra só a publicação.",
+  "onde_aparece": [
+    "trilhas/2026-10-29_K-110/mencoes-outras-clb-A5.json (a Evidência sobre os Tremembé e o mocororó em danças rituais)",
+    "acervo/evidencias/EV-0494.json",
+    "acervo/evidencias/EV-0504.json"
+  ],
+  "norma": {
+    "referencia": "Lei 13.123/2015, art. 2º, II (também art. 9º e art. 12, §2º)",
+    "trecho": "II - conhecimento tradicional associado - informação ou prática de população indígena, comunidade tradicional ou agricultor tradicional sobre as propriedades ou usos diretos ou indiretos associada ao patrimônio genético;",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/L13123.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-sisgen-lei-13123 (rascunho em trilhas/2026-10-29_K-109/guias/; consentimento e protocolo comunitário)",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico",
+  "data": "2026-10-30",
+  "nota": "Triagem do K-110. O trecho do art. 2º, II, é o da F-0024, conferido como oficial no K-109; nesta chamada, relido só por WebFetch (secundária). Não conferido: Convenção de 2003, art. 13, d, ii; Decreto 8.772/2016. O Jurídico não autoriza nem diz que pode publicar.",
+  "id": "F-0033"
+}

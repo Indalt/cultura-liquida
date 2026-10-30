@@ -1,0 +1,26 @@
+{
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "lgpd",
+  "vale_para": "publicar",
+  "o_que_falta": "Definir se as falas de detentoras e detentores citadas no dossiê e nos pareceres do Iphan, guardadas só por papel e código P-nnnn (34 Pessoas, 78 Evidências com pessoa), ainda deixam a pessoa identificável pela combinação de lugar, papel e dado biográfico (idade e ano, parentesco, como aprendeu), e se, para publicar, falta consentimento ou outra base legal. Não se apurou se alguma pessoa é de comunidade tradicional (dado sensível); isso não foi completado.",
+  "por_que": "Dado pessoal é 'informação relacionada a pessoa natural identificada ou identificável' (LGPD, art. 5º, I). O projeto não guarda nome, telefone, e-mail nem CPF, e guarda quem fala só por papel e código opaco (padrão do K-104). O que a regra não resolve: a fala vem de documento público do Iphan que nomeia a pessoa, e Evidências como a EV-0283 somam idade, ano, município e papel, o que permite reencontrar a pessoa no documento de origem. O dado de acesso público segue a finalidade, a boa-fé e o interesse público da disponibilização (art. 7º, §3º); se a finalidade do projeto se encaixa nisso é leitura de Vicente. Barra só a publicação, a não ser que Vicente leia que o Git público já é publicação (F-0003, K-201).",
+  "onde_aparece": [
+    "acervo/pessoas/ (34 Pessoas; só código e papel; a tabela código → nome fica fora do Git)",
+    "acervo/evidencias/ das Fontes FO-0031 a FO-0034, em especial as 78 com voz.pessoa; EV-0283 traz idade e ano ligados a município e papel",
+    "acervo/fichas/CL-0001.md, seções Compreensão local, Quem ensina e Modo de fazer"
+  ],
+  "norma": {
+    "referencia": "Lei 13.709/2018 (LGPD), art. 5º, I (e art. 7º, §3º)",
+    "trecho": "I - dado pessoal: informação relacionada a pessoa natural identificada ou identificável;",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "nivel": "oficial"
+  },
+  "caminho_de_liberacao": {
+    "guia": "G-lgpd-consentimento (rascunho em trilhas/2026-10-29_K-109/guias/; não circula antes de formulários e prazos conferidos)",
+    "estado": "não iniciado"
+  },
+  "criada_por": "juridico",
+  "data": "2026-10-30",
+  "nota": "Triagem do K-110 (ato: guardar no Git público). O trecho da LGPD vem de esquemas/triagem-fixa.json (oficial, conferido antes); nesta chamada o planalto recusou a conexão. O Jurídico não autoriza nem diz que pode publicar.",
+  "id": "F-0032"
+}
