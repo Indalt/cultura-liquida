@@ -8,7 +8,7 @@
   "data_conferencia": "2026-10-29",
   "estado": "localizado",
   "texto_exato": "a cola foi condenada pela ANVISA por ser cancerígena, mas essa informação não foi confirmada",
-  "antes": " Paula, da EMATER, ",
+  "antes": ", da EMATER, ",
   "depois": " pela ",
   "origem_texto": "fonte",
   "protecao": {
@@ -25,5 +25,6 @@
     "data": "2026-10-29",
     "execucao": "EX-0068",
     "versao_regra": "normalizacao-0.2"
-  }
+  },
+  "nota": "Contexto 'antes' cortado pelo curador (K-110, achado A5 do auditor): trazia o fragmento do nome de uma pessoa citada pela fonte."
 }

@@ -9,7 +9,7 @@
   "evidencias": [
     "EV-0423"
   ],
-  "mu": 0.5,
+  "mu": 0.0,
   "lambda": 0.0,
   "sustenta_aviso_saude_politica": true,
   "origem_registro": {
@@ -17,7 +17,9 @@
     "data": "2026-10-29",
     "execucao": "EX-0068"
   },
-  "estado": "intermediário",
+  "estado": "paracompleto",
   "versao_regra": "mu-lambda-0.2",
-  "estado_detalhe": "quase-verdadeiro tendendo ao paracompleto"
+  "fora_da_conta": {
+    "EV-0423": "leitura divergente"
+  }
 }

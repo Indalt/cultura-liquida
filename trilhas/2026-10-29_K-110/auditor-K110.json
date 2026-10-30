@@ -1,0 +1,234 @@
+{
+ "parte_a": {
+  "contagem": {
+   "total": 72,
+   "conferidas": 71,
+   "leitura_divergente": 1,
+   "divergentes_ids": [
+    "EV-0423"
+   ]
+  },
+  "itens": [
+   {
+    "ev": "EV-0423",
+    "eixo3": "leitura divergente",
+    "motivo": "A Proposição PR-0344 diz que os 'novos atores' aprenderam tardiamente, por cursos do SEBRAE; o Trecho fala só de 'esses três senhores', apresentados no texto como exemplos ('Entre os produtores que categorizamos como novos atores ... estão' três nomeados). Generalização do trio para a categoria."
+   }
+  ],
+  "conferidas_com_ressalva": [
+   {
+    "ev": "EV-0279",
+    "ressalva": "o Trecho começa no meio da frase, sem o sujeito (plural: 'são marcadores'); o antes é nota de rodapé, não a frase anterior; a Proposição atribui só ao decreto."
+   },
+   {
+    "ev": "EV-0435",
+    "ressalva": "o contraste com a Indicação Geográfica está na frase anterior ao Trecho, fora da janela de 60 caracteres do antes; confere na fonte, não no registro."
+   },
+   {
+    "ev": "EV-0101",
+    "ressalva": "'restaurantes' não aparece na janela do Trecho (antes termina em 'chique, você tem que ter um mapa'); 'não consegue' vem de pergunta retórica da fala. Trecho com grau registrado desatualizado (achado A6)."
+   },
+   {
+    "ev": "EV-0228",
+    "ressalva": "o Trecho dá dois motivos aos pequenos produtores (medo de fiscalização e relação afetiva com a produção); a Proposição cita só o medo."
+   },
+   {
+    "ev": "EV-0436",
+    "ressalva": "'processo em andamento em 2009' vem do contexto (pergunta anterior sobre processos em andamento; data do dossiê), não do Trecho."
+   }
+  ],
+  "voz": "Nenhuma voz trocada: as 8 falas diretas (EV-0095, 0210, 0212, 0216, 0225, 0323, 0324, 0415) são de quem pratica, em primeira pessoa; as demais são da instituição (parecer) ou da equipe do dossiê; sentido 'divergente' justificado em EV-0169, EV-0355 e EV-0330.",
+  "achados": [
+   {
+    "id": "A1",
+    "tipo": "outro",
+    "descricao": "EV-0423/PR-0344: leitura divergente (generaliza três pessoas para a categoria 'novos atores').",
+    "linha": null,
+    "confirmacao": {
+     "metodo": "script",
+     "comando": "python ctx.py (texto normalizado de EN-1725, 450 car. antes de 'esses três senhores')",
+     "saida": "'Entre os produtores que categorizamos como \"novos atores\", ... estão [três nomeados]. Além de serem ex-funcionários públicos ... esses três senhores compartilham o fato de terem começado a fazer a cajuína tardiamente'"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "A2",
+    "tipo": "outro",
+    "descricao": "Ficha, seção Avisos, 'Registro sanitário' (PR-0075): diz que a fonte anota 'conflito'; a Proposição diz 'confusão de sigla' (MAPA/mapa). Palavra trocada num item de aviso.",
+    "linha": 252,
+    "trecho": "e a própria fonte anota conflito (μ 0,5, intermediário) [PR-0075]",
+    "confirmacao": {
+     "metodo": "grep",
+     "comando": "grep -n \"conflito\" acervo/fichas/CL-0001.md; grep -n '\"valor\"' acervo/proposicoes/PR-0075.json",
+     "saida": "252: ...anota conflito...  |  PR-0075.json:5: ...(a própria fonte anota confusão de sigla)"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "A3",
+    "tipo": "outro",
+    "descricao": "Ficha, Avisos, 'Diabéticos' (PR-0295): corta o fato central da Proposição, que a produtora COLOCA açúcar na cajuína e mantém estoque sem açúcar; a frase da ficha diz só 'mantém estoque sem açúcar para diabéticos'. A seção Relato de campo (l. 231) traz inteira.",
+    "linha": 251,
+    "trecho": "uma produtora mantém estoque sem açúcar para diabéticos [PR-0295]",
+    "confirmacao": {
+     "metodo": "grep",
+     "comando": "grep -n \"PR-0295\" acervo/fichas/CL-0001.md; grep -n '\"valor\"' acervo/proposicoes/PR-0295.json",
+     "saida": "251: ...mantém estoque sem açúcar para diabéticos...; 231: ...colocam açúcar na cajuína e mantêm estoque sem açúcar...; PR-0295.json:5 idem 231"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "A4",
+    "tipo": "outro",
+    "descricao": "Ficha, cabeçalho (l. 11): diz que as 69 Proposições com marca 'estão na seção Avisos'; a seção cita 17. Das 52 restantes, 9 aparecem em outra seção e 43 não aparecem na ficha, entre elas as de saúde PR-0094 (gelatina não tóxica), PR-0310 (riscos à saúde) e PR-0319 (cola dita cancerígena, não confirmada).",
+    "linha": 11,
+    "trecho": "69 Proposições sustentam aviso, saúde ou política; estão na seção Avisos",
+    "confirmacao": {
+     "metodo": "script",
+     "comando": "sed -n 11p acervo/fichas/CL-0001.md; python (IDs marcados × texto das l. 247-261 e do resto da ficha)",
+     "saida": "marcadas: 69, não no bloco Avisos: 52, dessas aparecem em outra seção: 9; PR-0310, PR-0319, PR-0094: linhas []"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "A5",
+    "tipo": "dado_pessoal",
+    "descricao": "TR-0385 (EV-0385, PR-0319): o campo 'antes' guarda o fragmento de sobrenome de uma pessoa nomeada na fonte (técnico de órgão estadual). Nome de terceiro no Git público (o fragmento fica, a pessoa é identificável pela fonte). Só o registro é citado aqui, não o nome.",
+    "linha": 11,
+    "trecho": "[campo 'antes' do TR-0385, fragmento de sobrenome omitido]",
+    "confirmacao": {
+     "metodo": "grep",
+     "comando": "grep -n '\"antes\"' acervo/trechos/TR-0385.json",
+     "saida": "11:  \"antes\": \" [fragmento de nome], da EMATER, \" (omitido do relatório)"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "A6",
+    "tipo": "outro",
+    "descricao": "TR-0101 (e TR-0094, TR-0098): o grau registrado é de uma versão do texto com 'fi' no lugar da ligadura; o texto_exato guardado tem a ligadura e é literal na fonte (relido 1.0, hash igual). Falha do metadado do Trecho (grau desatualizado), não do script, que acusa certo. Das 16 Trechos com ligadura, 3 têm grau<1 (TR-0094 0.9894, TR-0098 0.9916, TR-0101 0.9746).",
+    "linha": null,
+    "confirmacao": {
+     "metodo": "script",
+     "comando": "localizar_trecho.py conferir TR-0101/TR-0094/TR-0098 --fonte EN-1727.pdf; difflib.ratio(texto com 'fi' vs texto com ligadura)",
+     "saida": "NÃO SE SUSTENTA: grau registrado 0.9746 ≠ relido 1.0 | ratio com fi: 0.9746 (igual ao grau registrado) | ligaduras no texto: 2 | grep -c ﬁnanciamento EN-1727.txt = 4, financiamento = 0"
+    },
+    "estado": "confirmado"
+   }
+  ],
+  "tr_0101": "Falha do Trecho (grau registrado desatualizado), não do script: o texto é literal na fonte; o script acusa corretamente a incoerência entre grau registrado e relido. TR-0094 e TR-0098 têm o mesmo defeito e não estão entre os 72."
+ },
+ "parte_b": {
+  "sorteio_bate": true,
+  "itens": [
+   {
+    "id": "EL-0043",
+    "resultado": "Y: PR-0237 está em PC-0004 (filtrar o suco cortado). W: EV-0270 (de PR-0237) está em CP-0002. Z: o Elemento diz 'décadas de 1970-1980' e a PR-0237 diz 'década de 1980' (ver B1). X: IN-0001 (caju) não lista a PR-0237 (ver B2)."
+   },
+   {
+    "id": "EV-0259",
+    "resultado": "Leitura conferida (PR-0227: valores atribuídos à bebida, autor equipe do dossiê; 'transferidos à família e ao lugar' na continuação do trecho). TR-0259 se sustenta, grau 1.0."
+   },
+   {
+    "id": "EV-0485",
+    "resultado": "Leitura conferida (PR-0395: noção de cajuína 'coisa de rico', acesso só como empregados ou após conquistar terra; sujeito 'assentados' no antes). TR-0485 se sustenta, grau 1.0."
+   },
+   {
+    "id": "P-0003",
+    "resultado": "Código opaco (forma letra-hífen-quatro dígitos), papel 'detentor ou mestre', consentimento 'não se aplica (fala publicada em fonte de terceiro)'; usado em EV-0102 com voz detentor. Nenhum nome."
+   },
+   {
+    "id": "P-0020",
+    "resultado": "Código opaco, papel 'detentor ou mestre', mesmo consentimento; usado em EV-0326 e EV-0510 com voz detentor (fala em primeira pessoa). Nenhum nome."
+   },
+   {
+    "id": "PR-0070",
+    "resultado": "EV-0094 (parecer IPHAN) confere: 'conhecimentos tradicionais e atravessados por gerações que identificam o momento certo de cada ação', com 'repertório específico de materiais' no antes. μ 0.5 λ 0.0 bate. TR-0094: texto literal (1.0) mas grau registrado 0.9894 (achado A6)."
+   },
+   {
+    "id": "PR-0184",
+    "resultado": "EV-0213 (fala de P-0002, detentor) confere. TR-0213 literal."
+   },
+   {
+    "id": "PR-0203",
+    "resultado": "EV-0233 (parecer) confere integralmente; EV-0461 (dossiê) sustenta só a parte do rótulo/registro. Duas linhagens (FO-0033, FO-0034): μ 1.0 λ 0.0 bate."
+   },
+   {
+    "id": "PR-0385",
+    "resultado": "EV-0474 confere, com ressalva de redação (B3). μ 0.5 bate."
+   },
+   {
+    "id": "PR-0386",
+    "resultado": "EV-0475 confere ('circulam as garrafas de cajuína como mensagens que reforçam a pertença'). μ 0.5 bate."
+   },
+   {
+    "id": "TR-0248",
+    "resultado": "se sustenta: localizado, grau 1.0, hash igual (EN-1727.pdf)."
+   },
+   {
+    "id": "TR-0306",
+    "resultado": "se sustenta: grau 1.0, hash igual (EN-1725.pdf)."
+   },
+   {
+    "id": "TR-0337",
+    "resultado": "se sustenta: grau 1.0, hash igual. 'Carro Quebrado' no depois é nome de sítio (lugar)."
+   },
+   {
+    "id": "TR-0400",
+    "resultado": "se sustenta: grau 1.0, hash igual."
+   },
+   {
+    "id": "TR-0489",
+    "resultado": "se sustenta: grau 1.0, hash igual."
+   }
+  ],
+  "dado_pessoal": {
+   "trechos_da_amostra_com_nome_de_pessoa": [],
+   "nota": "Nos 5 Trechos da amostra (texto exato, antes e depois), nenhum nome de pessoa; procurar_dado_pessoal.py em acervo/trechos: 0 ocorrências em 518 arquivos (só pega e-mail, telefone e semelhantes). Nome de pessoa achado fora da amostra: TR-0385 (achado A5)."
+  },
+  "achados": [
+   {
+    "id": "B1",
+    "tipo": "outro",
+    "descricao": "PR-0237 (EL-0043): o período 'década de 1980' vem da excursão do SENAI que a produtora relata; o gesto do funil com paninho vem depois de 'Agora,' (tempo da entrevista, 2008-2009, o mesmo da PR-0385). O Elemento herda 'décadas de 1970-1980' no Z.",
+    "linha": null,
+    "confirmacao": {
+     "metodo": "script",
+     "comando": "amostra3.py (contexto de 'eu boto um funil com um paninho' em EN-1725.txt; PR-0237 periodo; EL-0043 z)",
+     "saida": "'...na década de oitenta, a dar aulas... Pacajus, no Ceará... Agora, na garrafa, eu boto um funil com um paninho' | PR-0237 periodo: década de 1980 | EL-0043 z: décadas de 1970-1980"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "B2",
+    "tipo": "outro",
+    "descricao": "EL-0043: a única Proposição do Elemento (PR-0237) não consta na lista de Proposições do X (IN-0001). Vale para 49 dos 72 Elementos (nenhuma PR do Elemento está nas PR do X): pode ser desenho do modelo; o esquema do Elemento não diz; decisão do curador.",
+    "linha": null,
+    "confirmacao": {
+     "metodo": "script",
+     "comando": "amostra3.py (PR do Elemento ∩ PR de cada X, em acervo/elementos/*.json)",
+     "saida": "PR-0237 em IN-0001: False | PR-0237 em PC-0004: True | elementos: 72, sem PR que sustente X: 49"
+    },
+    "estado": "confirmado"
+   },
+   {
+    "id": "B3",
+    "tipo": "outro",
+    "descricao": "PR-0385: 'a cajuína é bem vinculado à família extensa' (frase ambígua: 'bem' substantivo ou advérbio) e sem o enquadramento da fonte, que diz 'essa visão da cajuína como um bem vinculado' (visão reforçada nas entrevistas). Baixa gravidade.",
+    "linha": null,
+    "confirmacao": {
+     "metodo": "script",
+     "comando": "amostra2.py (PR-0385 valor × TR-0474 texto_exato)",
+     "saida": "PR: 'a cajuína é bem vinculado à família extensa, unidade de produção e não só de consumo' | TR-0474: 'essa visão da cajuína como um bem vinculado à estrutura familiar extensa; família enquanto unidade de produção...'"
+    },
+    "estado": "confirmado"
+   }
+  ]
+ },
+ "scripts": {
+  "sortear_amostra --conferir": "a amostra bate com a semente 20261030 (15 itens de 1329)",
+  "calcular_mu_lambda --conferir": "mu-lambda-0.2: 449 registros calculados; recálculo bate (tensões internas sinalizadas: AR-0018, PR-0065, PR-0401)",
+  "validar_acervo": "acervo-0.3: 2845 registros; válido",
+  "localizar_trecho conferir": "TR-0248, TR-0306, TR-0337, TR-0400, TR-0489, TR-0259, TR-0485: se sustentam; TR-0101, TR-0094, TR-0098: grau registrado desatualizado (A6)"
+ }
+}
