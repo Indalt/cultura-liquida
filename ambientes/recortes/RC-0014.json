@@ -5,17 +5,17 @@
   "periodo": "2012-2026",
   "modo": "termo",
   "cursor": null,
-  "total_informado": 926,
-  "total_visto": 926,
-  "saturacao": "exaurido: 926 de 926 visto(s), passada completa e não saturada",
+  "total_informado": 916,
+  "total_visto": 916,
+  "saturacao": "exaurido: 916 de 916 visto(s), passada completa e não saturada",
   "erros": [],
   "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
-    "chamadas": 100,
+    "chamadas": 120,
     "divisoes_janela": 1
   },
   "estado": "percorrido pela busca",
-  "data": "2026-10-24",
+  "data": "2026-11-05",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",

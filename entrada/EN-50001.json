@@ -1,0 +1,37 @@
+{
+  "id": "EN-50001",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0029",
+  "recortes": [
+    "RC-50000"
+  ],
+  "data_entrada": "2026-11-05",
+  "url_ou_arquivo": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/541963",
+  "identificador": "AM-0029:infoteca.cnptia.embrapa.br/handle/doc/541963",
+  "titulo": "Vinho tinto.",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'clarificação' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Maceração. Descuba e prensagem. Fim da fermentação alcoólica (fermentação lenta). Fermentação malolática. Clarificação e estabilização. Engarrafamento. Equipamentos e utensílios. Planta baixa da agroindústria. Higienização do…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-05",
+    "execucao": "EX-50001",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

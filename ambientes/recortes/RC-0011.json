@@ -11,11 +11,11 @@
   "erros": [],
   "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
-    "chamadas": 100,
+    "chamadas": 120,
     "divisoes_janela": 2
   },
   "estado": "percorrido pela busca",
-  "data": "2026-10-24",
+  "data": "2026-11-05",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",

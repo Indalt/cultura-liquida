@@ -1,0 +1,25 @@
+{
+  "id": "RC-50000",
+  "ambiente": "AM-0029",
+  "consulta": "CO-0008",
+  "periodo": "todo",
+  "modo": "descritores",
+  "cursor": null,
+  "total_informado": 59690,
+  "total_visto": 59690,
+  "saturacao": "exaurido: 59690 de 59690 visto(s), passada completa e não saturada",
+  "erros": [],
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
+  "teto": {
+    "chamadas": 800,
+    "divisoes_janela": 4
+  },
+  "estado": "percorrido pela busca",
+  "data": "2026-11-05",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-05",
+    "execucao": "EX-50001",
+    "versao_regra": "recorte-0.3"
+  }
+}

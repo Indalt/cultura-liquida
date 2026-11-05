@@ -3,7 +3,8 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0029",
   "recortes": [
-    "RC-0003"
+    "RC-0003",
+    "RC-50000"
   ],
   "data_entrada": "2026-10-24",
   "url_ou_arquivo": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1133084",

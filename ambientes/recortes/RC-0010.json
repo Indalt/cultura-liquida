@@ -4,20 +4,21 @@
   "consulta": "CO-0001",
   "periodo": "1964-2026",
   "modo": "termo",
-  "cursor": 11,
-  "total_informado": 1305,
-  "total_visto": 1000,
-  "saturacao": "saturada: a página 11 repete a anterior: a fonte não entrega além de 1000 de 1305; janela dividida em 1964-1995 e 1996-2026",
+  "cursor": 12,
+  "total_informado": 1295,
+  "total_visto": 1100,
+  "saturacao": "saturada: a página 2 repete a anterior: a fonte não entrega além de 1100 de 1295; janela dividida em 1964-1995 e 1996-2026",
   "erros": [
-    "a página 11 repete a anterior: a fonte não entrega além de 1000 de 1305"
+    "a página 11 repete a anterior: a fonte não entrega além de 1000 de 1305",
+    "a página 2 repete a anterior: a fonte não entrega além de 1100 de 1295"
   ],
   "proxima_acao": "não conta como pegada: valem os Recortes da janela dividida",
   "teto": {
-    "chamadas": 100,
+    "chamadas": 120,
     "divisoes_janela": 3
   },
   "estado": "aberto",
-  "data": "2026-10-24",
+  "data": "2026-11-05",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",

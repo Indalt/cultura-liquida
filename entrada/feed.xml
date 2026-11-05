@@ -6,6 +6,41 @@
   <updated>2026-11-05T00:00:00Z</updated>
   <generator>scripts/feed.py (feed-0.1)</generator>
   <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-50003.json</id>
+    <title>EN-50003 — Processo de obtenção de bebida não láctea com probiótico preservada por pasteurização e enchimento a quente.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1081382"/>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0008</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-50002.json</id>
+    <title>EN-50002 — Vinho branco.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/662684"/>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0008</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-50001.json</id>
+    <title>EN-50001 — Vinho tinto.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/541963"/>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0008</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-50000.json</id>
+    <title>EN-50000 — ESPUMANTES: sucesso brasileiro: programa 46.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/870024"/>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0008</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-0929.json</id>
+    <title>EN-0929 — Produção de carotenóides, empregando diferentes leveduras produtoras de carotenóides, utilizando o bagaço de mandioca como substrato de fermentação submersa</title>
+    <link href="https://repositorio.cruzeirodosul.edu.br/handle/123456789/2572"/>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>AM-0021; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
     <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1727.json</id>
     <title>EN-1727 — sem título</title>
     <link href="https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/126109/cajuina_parecer_tecnico.pdf"/>
@@ -507,7 +542,7 @@
     <title>EN-1493 — Bebida vegetal de amêndoa de castanha-de-caju desenvolvida pela Embrapa comparada a produto comercial.</title>
     <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1133084"/>
     <updated>2026-10-24T00:00:00Z</updated>
-    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0008</summary>
   </entry>
   <entry>
     <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1492.json</id>
@@ -669,40 +704,5 @@
     <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1102063"/>
     <updated>2026-10-24T00:00:00Z</updated>
     <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0002</summary>
-  </entry>
-  <entry>
-    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1460.json</id>
-    <title>EN-1460 — Efeito da torragem da amêndoa no aroma do óleo da castanha-de-caju segundo análise sensorial.</title>
-    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098259"/>
-    <updated>2026-10-24T00:00:00Z</updated>
-    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
-  </entry>
-  <entry>
-    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1459.json</id>
-    <title>EN-1459 — Extrato concentrado de carotenoides obtido da fibra do pedúnculo de caju: estabilidade durante o armazenamento refrigerado (5° C).</title>
-    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098224"/>
-    <updated>2026-10-24T00:00:00Z</updated>
-    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003, CO-0005</summary>
-  </entry>
-  <entry>
-    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1458.json</id>
-    <title>EN-1458 — Castanha de caju e sua amêndoa: composição e importância dos ácidos graxos - produção e comércio mundiais.</title>
-    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098166"/>
-    <updated>2026-10-24T00:00:00Z</updated>
-    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
-  </entry>
-  <entry>
-    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1456.json</id>
-    <title>EN-1456 — Método para estimar a oferta de lenha na substituição de copa em cajueiros.</title>
-    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1093331"/>
-    <updated>2026-10-24T00:00:00Z</updated>
-    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
-  </entry>
-  <entry>
-    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1455.json</id>
-    <title>EN-1455 — Óleo da amêndoa de castanha-de-caju: métodos de extração.</title>
-    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1093151"/>
-    <updated>2026-10-24T00:00:00Z</updated>
-    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
   </entry>
 </feed>

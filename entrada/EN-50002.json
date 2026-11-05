@@ -1,0 +1,37 @@
+{
+  "id": "EN-50002",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0029",
+  "recortes": [
+    "RC-50000"
+  ],
+  "data_entrada": "2026-11-05",
+  "url_ou_arquivo": "http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/662684",
+  "identificador": "AM-0029:infoteca.cnptia.embrapa.br/handle/doc/662684",
+  "titulo": "Vinho branco.",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…do produto; Etapas do processo de produção; Equipamentos e utensílios; Planta baixa da agroindústira (cantina); Higienização do ambiente, de equipamentos e de utensílios; Boas práticas de elaboração (BPE).",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-05",
+    "execucao": "EX-50001",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}
