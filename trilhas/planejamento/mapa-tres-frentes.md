@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 113 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 114 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -341,23 +341,23 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 5, achados de harness | D (bloco 1: lista exata de campos do log, teto de chamadas contado como o harness conta); PDO (o número oficial é o do Agent; agente novo só em sessão nova); P (termos-chave das decisões no `checar_fundacao.py`) | K-003 (o que cabe no bloco 1), K-101; V-23, V-35 |
 | 6, custos medidos | P; D (a estimativa no registro de valores, bloco 2) | K-005; V-30 |
 | 7, mapa de hospedagem em Haiku | D (reconferência em Sonnet no bloco 10); P (tipo de agente preso ao harness) | K-112; K-003 (regra no bloco 1); V-23 |
-| 8, o planejamento gastou 57% da semana | P | K-002 |
+| 8, o planejamento gastou 57% da semana | P | a definir pelo planejamento (insumo 114; a D-050 fixou só o teto da ferramenta) |
 | 9, contribuição com tokens próprios (fase 2) | P | K-008 |
 | 10, agente de melhorias e contribuições | P (desenho); D (habilidades) | K-103 (primeira habilidade); K-006 |
 | 11, `checar_fundacao.py` volta a cobrar as D-031 em diante | P; D | K-004 (V-35) |
-| 12, a IA da operação | P | K-002 |
-| 13, cadência e teto do planejamento | P | K-002 |
+| 12, a IA da operação | P | respondido pela D-050 (05/11) |
+| 13, cadência e teto do planejamento | P | a definir pelo planejamento (insumo 114) |
 | 14, o quadro como porta de contribuição | P | K-001 (seção 9 deste mapa); K-008 |
-| 15, o número do Workflow e o do Agent não batem (desta rodada) | P | K-002 |
-| 16, estimativa do lote pela medida do mesmo agente e habilidade (desta rodada) | P | K-002, K-005 |
+| 15, o número do Workflow e o do Agent não batem (desta rodada) | P | a definir pelo planejamento (a D-050 toma os usos medidos como métrica) |
+| 16, estimativa do lote pela medida do mesmo agente e habilidade (desta rodada) | P | K-005; a D-050 toma os usos medidos como métrica |
 | 17, harness: validação reservada no teto, citação literal de verdade, log de agente de workflow (desta rodada) | D | K-003 (o que cabe no bloco 1), K-101 |
 | 18, script de checagem do mapa (desta rodada) | P (ferramenta do planejamento); D (construir) | K-006 |
-| 19, configuração e teto de cada frente; "operação" na D-023 (desta rodada) | P | K-002 |
-| 20, juntar a proposta da rotina sem Vicente, por script sem IA (K-003) | P; D (teste na 10b) | K-002, K-113 |
+| 19, configuração e teto de cada frente; "operação" na D-023 (desta rodada) | P | em parte, D-050 (a configuração); os tetos, insumo 114 |
+| 20, juntar a proposta da rotina sem Vicente, por script sem IA (K-003) | P; D (teste na 10b) | K-113, pela D-050 (com a D-038) |
 | 21, o alcance do script de menções é o registro de Termos (K-003) | D; P | K-102, K-117 |
 | 22, `checar_mapa.py` lê a 6A do brief por linhas fixas (K-003) | P (ferramenta do planejamento); D (construir) | K-006 |
 | 23, o auditor da amostra usa o mesmo modelo dos agentes que produzem (K-003) | P; D (bloco 12) | K-115; V-24 |
-| 24, o cartão do tratamento com IA entre o piloto e o K-113 (K-003) | P; O | K-002 |
+| 24, o cartão do tratamento com IA entre o piloto e o K-113 (K-003) | P; O | K-113 (D-050: depois dele, a rodada de quinta); antes, a lacuna continua |
 | 25, o kit e a regra do campo-de-acao sobre Falta jurídica aberta, sem a v0.2.1 (K-003) | P; D (bloco 11) | K-114 |
 | 26, o termo ambíguo e o desdobramento da CLB na registrar-termo e na montar-ficha (K-003, D-039) | D (blocos 8 e 9); P | K-110, K-111 |
 | 27, o curador.md e o executar-brief ainda sem a registrar-melhoria (K-103) | D | K-101 |
@@ -370,8 +370,8 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 34, μ e λ: quais Evidências contam | P; D | K-005 (regra pela D-041); K-123 (no script, feito em 23/10: mu-lambda-0.2) |
 | 35, pre-commit em cada cópia | D; O | K-111 |
 | 36, limiar do trecho e linhagem nos dois lados | P; D | K-005 (regra pela D-041); K-123 (no script, feito em 23/10: normalizacao-0.2 e mu-lambda-0.2) |
-| 37, o planejamento medido em pp da conta (K-005) | P | K-002 |
-| 38, a leitura da conta depende de Vicente (K-005) | P; O | K-002 |
+| 37, o planejamento medido em pp da conta (K-005) | P | a definir pelo planejamento (insumo 114) |
+| 38, a leitura da conta depende de Vicente (K-005) | P; O | a definir pelo planejamento (a D-050 toma os usos medidos como métrica) |
 | 39, formas de hífen por tipo de ambiente | D | K-107 |
 | 40, BCR fora do DNS em 23/10 | D; O | K-108 |
 | 41, UTF-8, RSS vedado e OAI da Infoteca-e | D | K-107 |
@@ -447,6 +447,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 111, commits à frente do main no relatório | D | a definir pelo planejamento |
 | 112, alcance de intervenção humana | P | a definir pelo planejamento |
 | 113, proteção do main com outra pessoa | P; D | K-008 |
+| 114, tetos das conversas depois do K-113 | P | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-043
 

@@ -1,0 +1,41 @@
+{
+  "id": "D-050",
+  "data": "2026-11-05",
+  "essencia": "A IA da operação é a rotina do Claude Code, na assinatura de Vicente. A ferramenta, com as suas automatizações, usa no máximo 20% do limite semanal da conta e 50% de cada janela de 5 horas; deve custar menos, e, se custar mais, o trabalho automatizado é calibrado até caber, com os usos medidos como métrica. A automatização roda às quintas, e Vicente pode disparar rodadas a mais. A configuração das frentes fica como está, e a junção do trabalho da rotina com IA é a mais conveniente para o funcionamento da ferramenta. Vicente espera que a ferramenta acumule CLB e cumpra as funções para as quais foi criada.",
+  "diretriz": "(1) IA da operação (K-113): a rotina do Claude Code, na assinatura de Vicente (opção A da página do K-002), e não a API com teto em dinheiro (insumo 12). (2) Teto da ferramenta e das suas automatizações, a partir do fim do K-113: até 20% do limite semanal da conta e até 50% de cada janela de 5 horas. Vale só para a ferramenta, não para as conversas de planejamento e de desenvolvimento: é a parte da ferramenta no teto de manutenção que a D-040 manda fixar no K-002. Deve custar menos; se a medida passar, calibra-se o trabalho automatizado até caber, com os usos medidos como métrica. A linha de 90% da conta (D-040) segue. (3) Cadência da rotina com IA: às quintas-feiras, e Vicente pode disparar rodadas a mais quando quiser. As rotinas sem IA seguem diárias (D-048, não reaberta). (4) Configuração das frentes, como a página do K-002 a descreve: desenvolvimento em Opus 5.5 médio, com subagentes em Sonnet 5.5 alto (D-027); planejamento em Opus 5.5 máximo, com ultracode; operação com o modelo que o K-115 apontar para cada habilidade. (5) Junção: a proposta da rotina com IA entra no main pelo modo mais conveniente para o funcionamento da ferramenta, escolhido no K-113; segue a estrutura 'quem propõe não aprova' (D-038). (6) Pergunta 10 do §10, respondida: se a IA sair de cena, hoje Vicente só confiaria em buscas humanas, também porque não conhece outras ferramentas. (7) [ABERTO]: a cadência e o teto por rodada do planejamento e o teto das conversas de desenvolvimento depois do K-113, isto é, o resto do teto de manutenção do projeto; até serem fixados, a D-040 segue para as três frentes (insumo 114).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-05",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-05_K-002/falas-vicente.md",
+  "palavras_conferidas": [
+    {
+      "palavra": "opção 1A",
+      "sentido_confirmado": "resposta direta de Vicente na página do K-002: a rotina do Claude Code, na assinatura dele; a devolução do curador não foi contestada"
+    },
+    {
+      "palavra": "opção 2 ok",
+      "sentido_confirmado": "resposta direta de Vicente na página do K-002 à configuração de cada frente como ela a descreve; a devolução do curador ('fica como está') não foi contestada"
+    },
+    {
+      "palavra": "50% de 5h em 5h e 20% dos tokens semanais de máximo",
+      "sentido_confirmado": "nas mesmas unidades das leituras que Vicente dá da conta ('56% 5h em 5h e 36% semanal', 05/11): no máximo 50% de cada janela de 5 horas e 20% do limite semanal; 'de máximo' lido como 'no máximo'; 'só para a ferramenta com suas automatizações' (Vicente, na resposta seguinte), não para as conversas"
+    },
+    {
+      "palavra": "as datas são fixas, mas posso querer disparar rodadas",
+      "sentido_confirmado": "perguntado se falava das rodadas do planejamento, da ferramenta com IA ou das duas, Vicente respondeu 'respondi sobre automatização. as datas são todas as quintas': a automatização roda às quintas, e ele pode disparar rodadas a mais. Lido pelo curador como a rotina com IA, a que gasta tokens: as rotinas sem IA seguem diárias pela D-048, que esta decisão não reabre; a cadência do planejamento fica [ABERTO] (insumo 114)"
+    },
+    {
+      "palavra": "os usos que fizemos devem ser considerados como métricas",
+      "sentido_confirmado": "as medidas já feitas (logs e leituras da conta) servem de métrica para o teto e para a calibração do trabalho automatizado"
+    },
+    {
+      "palavra": "como for mais conveniente para o funcionamento da ferramenta",
+      "sentido_confirmado": "resposta à pergunta de como o trabalho da rotina com IA entra no main: o modo é o que funcionar melhor para a ferramenta, escolhido no K-113"
+    },
+    {
+      "palavra": "as soluções propostas sejam realizadas",
+      "sentido_confirmado": "'as funções para as quais a ferramenta foi criada'; a resposta não desdobra que soluções são, e fica como expectativa de Vicente, não como regra"
+    }
+  ],
+  "substitui": "Fixa a parte da ferramenta no teto de manutenção que a D-040 manda fixar no K-002; o resto desse teto (planejamento e desenvolvimento depois do K-113) fica [ABERTO], e a D-040 segue para as três frentes até ele ser fixado (insumo 114). Muda a cadência da camada 2 da seção 3b do brief de execuções ('cadência diária só dentro do teto do projeto') para as quintas, com rodadas a mais quando Vicente quiser. Responde ao insumo 12 (a IA da operação); em parte ao 19 (a configuração de cada frente, sem os tetos do planejamento e do desenvolvimento); em parte ao 20 (a junção da proposta da rotina com IA passa ao K-113, com a D-038; a proteção do main, insumo 113, é o obstáculo já visto na camada 1); e ao 24 só a partir do K-113 (a rodada de quinta trata o lote da semana; antes dele, a lacuna continua). Os insumos 15, 16 e 38 (como medir) seguem abertos; a decisão toma os usos medidos como métrica. Responde à pergunta 10 do §10 e, em parte, à 16.",
+  "marcador": "VIGENTE"
+}
