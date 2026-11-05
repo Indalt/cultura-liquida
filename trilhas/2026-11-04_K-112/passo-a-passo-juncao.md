@@ -5,7 +5,7 @@ só o dono faz para a junção pelo portão, que a D-048 já decidiu.
 
 ## Por que precisa
 
-- A proteção do `main` pede uma revisão aprovada antes de cada junção (`required_approving_review_count: 1`)
+- (Até 05/11; ver o fim deste arquivo.) A proteção do `main` pedia uma revisão aprovada antes de cada junção (`required_approving_review_count: 1`)
   e não vale para administradores (`enforce_admins: false`; conferido pela API em 04/11/2026).
 - O token que o próprio workflow recebe (`GITHUB_TOKEN`) não é administrador: o envio dele ao `main`
   é barrado. Sem o ajuste, a rotina segue gravando todo dia na ramificação `rotinas`, com o portão rodado,
@@ -48,13 +48,9 @@ O portão passou, e o envio com o `ROTINAS_TOKEN` foi recusado pela proteção d
 só com *Contents* não recebe a dispensa de administrador que o seu `git push` recebe. A rotina segue
 gravando em `rotinas`, e os 7 dias contam.
 
-Passo (só o dono; não muda o que a proteção exige das outras pessoas):
-1. Abra <https://github.com/Indalt/cultura-liquida/settings/branches> e clique em **Edit** na regra do `main`.
-2. Em *Require a pull request before merging*, marque **Allow specified actors to bypass required pull
-   requests** e acrescente o seu usuário, **Indalt**.
-3. **Save changes**. A rodada seguinte diz no Issue se a junção passou.
-
-Não conferido: se a dispensa por nome vale para o token fino. Se a rodada seguinte ainda recusar, o
-caminho é dar ao mesmo token a permissão *Administration: Read and write* (em
-<https://github.com/settings/personal-access-tokens>, **Edit** no token), que é mais ampla: o token
-passaria a poder mudar as configurações do repositório.
+Passo seguido (05/11/2026): a opção de dispensa por nome não existe na proteção deste repositório.
+Vicente desmarcou *Require approvals* e *Require a pull request before merging*. Conferido pela API em
+05/11: pull request não exigido; push forçado e exclusão seguem bloqueados; administradores dispensados.
+Com isso, o `ROTINAS_TOKEN` (só *Contents*) grava direto no `main`, e o `git push` do dono deixa de
+trazer o aviso "Bypassed rule violations". A proteção volta a exigir pull request quando houver outra
+pessoa com escrita (insumo, K-008). O resultado da rodada de conferência está no relatório da conversa.

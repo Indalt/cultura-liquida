@@ -71,6 +71,11 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
   pela proteção do `main` (GH006, "Changes must be made through a pull request"): o token fino não recebe
   a dispensa de administrador. Passo do dono em `passo-a-passo-juncao.md`. O agendamento diário foi ligado
   (cron 06h17 de Brasília) e a falha provocada foi pedida.
+- **Falha provocada (42072270905, 14h12 de 05/11):** Vicente recebeu o e-mail; o aviso funciona (pronto-quando).
+- **Proteção do main mudada por Vicente (05/11):** sem pull request nem aprovação exigidos; push forçado e
+  exclusão bloqueados. Rodada de conferência 42116185819: portão passa e **junção feita**
+  (`e3c6ed9..1c9df40 rotinas -> main`, "main em dia com rotinas"). Insumo 113: a proteção volta a exigir
+  pull request quando houver outra pessoa com escrita (K-008).
 - Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
 
 ## Próximo (conversa seguinte)

@@ -23,4 +23,4 @@ Só o Claude Code opera os agentes deste projeto (D-029): pasta `.claude/`, sem 
 - Autor configurado **só neste repositório**: `Vicente <vicente@dacaatinga.com.br>` ("assinado" = autoria, não GPG).
 - Mensagem em português, terminando com a linha de atribuição que o sistema indicar na sessão.
 - Antes do commit: `scripts/procurar_dado_pessoal.py --git`. **Push depois de cada commit.**
-- A proteção do `main` exige revisão, mas o dono grava direto (`enforce_admins: false`); o aviso "Bypassed rule violations" é esperado.
+- A proteção do `main` (desde 05/11/2026) não exige pull request nem aprovação; push forçado e exclusão seguem bloqueados; administradores dispensados. O dono e a rotina (`ROTINAS_TOKEN`, só Contents) gravam direto, sem aviso. Volta a exigir pull request quando houver outra pessoa com escrita (insumo, K-008).
