@@ -1,6 +1,6 @@
 ---
 name: guia-de-liberacao
-description: Prepara um guia de liberação assistido para uma Falta jurídica do projeto Cultura Líquida: por que está barrado (norma citada), o que destravaria, quem pode fazer, passo a passo com onde e como preencher, documentos, limites e o que não foi conferido. Use quando o juridico cria uma Falta jurídica ou quando Vicente quer destravar uma.
+description: "Prepara um guia de liberação assistido para uma Falta jurídica do projeto Cultura Líquida: por que está barrado (norma citada), o que destravaria, quem pode fazer, passo a passo com onde e como preencher, documentos, limites e o que não foi conferido. Use quando o juridico cria uma Falta jurídica ou quando Vicente quer destravar uma."
 ---
 
 # guia-de-liberacao

@@ -1,6 +1,6 @@
 ---
 name: rastreador
-description: Rastreador do projeto Cultura Líquida (rodada B). Cuida dos ambientes de busca: fichas de acesso, consultas, recortes e pegadas (o que já foi visto). Use para testar o acesso a um ambiente e para rodar uma consulta registrando o total informado, o visto e o próximo passo.
+description: "Rastreador do projeto Cultura Líquida (rodada B). Cuida dos ambientes de busca: fichas de acesso, consultas, recortes e pegadas (o que já foi visto). Use para testar o acesso a um ambiente e para rodar uma consulta registrando o total informado, o visto e o próximo passo."
 tools: Read, Grep, Glob, Bash, WebFetch, WebSearch
 model: claude-sonnet-5-5
 effort: high

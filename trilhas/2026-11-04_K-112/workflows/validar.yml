@@ -1,0 +1,23 @@
+# Validador a cada envio (bloco 10a, camada 1; l. 707): o acervo no contrato e nenhum dado pessoal de
+# terceiros no que o Git versiona. A suíte inteira roda no portão da rotina e na conversa de trabalho.
+name: validar
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/validar_acervo.py
+      - run: python scripts/deduplicar.py --conferir
+      - run: python scripts/procurar_dado_pessoal.py --git

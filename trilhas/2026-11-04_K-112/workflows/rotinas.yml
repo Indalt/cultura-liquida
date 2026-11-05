@@ -1,0 +1,120 @@
+# Rotina diária sem IA (bloco 10a, camada 1; D-048): agenda, buscas, deduplicação, pegadas, feed,
+# links e o relatório do dia. Grava na ramificação `rotinas` (única e permanente) e só com novidade; a
+# ferramenta a junta ao main quando o portão da camada 1 passa, sem esperar Vicente (D-048). O relatório
+# do dia vai a um Issue do repositório (notificação do próprio GitHub); a falha avisa por e-mail nativo
+# a quem criou ou mudou por último o cron (C112.4). Nada da máquina de Vicente: nenhum caminho local,
+# nem a tabela de pessoas, nem a pasta de conhecimento tradicional, nem a pasta temporária (D-048).
+name: rotinas
+on:
+  # schedule:   # liga depois do teste das fichas no runner e de uma rodada pedida à mão (K-112)
+  #   - cron: "17 9 * * *"   # todo dia, 06h17 em Brasília (UTC 09h17)
+  workflow_dispatch:
+    inputs:
+      falha_provocada:
+        description: "Falha provocada (teste do aviso; pronto-quando do bloco 10a)"
+        type: boolean
+        default: false
+      so:
+        description: "Só estes ambientes (AM-0021,AM-0029); vazio = a agenda inteira"
+        type: string
+        default: ""
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: rotinas
+  cancel-in-progress: false
+jobs:
+  rotina:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      PYTHONUTF8: "1"
+      TZ: America/Fortaleza
+      CL_GRAVADOR: rotina        # IDs na faixa da rotina (50000-89999): nunca colidem com a conversa
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Falha provocada (teste do aviso)
+        if: ${{ inputs.falha_provocada }}
+        run: |
+          echo "Falha provocada a pedido, para testar o aviso por e-mail (K-112)."
+          exit 1
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Ramificação das rotinas, em dia com o main
+        run: |
+          git config user.name "Vicente"
+          git config user.email "vicente@dacaatinga.com.br"
+          if git ls-remote --exit-code --heads origin rotinas >/dev/null; then
+            git checkout -B rotinas origin/rotinas
+            git merge --no-edit origin/main
+          else
+            git checkout -b rotinas
+          fi
+      - name: Rotina do dia
+        id: rotina
+        run: |
+          SO="${{ inputs.so }}"
+          python scripts/rotina_diaria.py --descartar-sem-novidade ${SO:+--so "$SO"} | tee rotina.out
+      - name: Portão da camada 1
+        id: portao
+        run: |
+          git add -A
+          git reset -q -- rotina.out
+          if python scripts/portao.py --testes | tee portao.out; then
+            echo "passa=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "passa=0" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Gravar na ramificação das rotinas
+        run: |
+          HOJE=$(date +%F)
+          if [ "${{ steps.portao.outputs.passa }}" != "1" ]; then
+            # a parte reprovada não entra: volta ao último estado que passou, com a trilha
+            git reset -q --hard HEAD
+            mkdir -p trilhas/relatorios
+            printf '{"data": "%s", "execucao_actions": "%s", "motivo": "o portão da camada 1 reprovou; nada da rodada foi gravado"}\n' \
+              "$HOJE" "${{ github.run_id }}" >> trilhas/relatorios/rodadas-reprovadas.jsonl
+            git add trilhas/relatorios/rodadas-reprovadas.jsonl
+          fi
+          git add -A
+          git reset -q -- rotina.out portao.out
+          git commit -q -m "Rotina diária de $HOJE (camada 1, sem IA; portão: $([ "${{ steps.portao.outputs.passa }}" = 1 ] && echo passa || echo reprova))" || echo "nada a gravar"
+          git push origin rotinas
+      - name: Junção ao main pelo portão (sem esperar Vicente; D-048)
+        if: ${{ steps.portao.outputs.passa == '1' }}
+        env:
+          TOKEN: ${{ secrets.ROTINAS_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "junção: sem o segredo ROTINAS_TOKEN; a proteção do main barra o token do workflow. A rotina segue gravando em 'rotinas'." | tee juncao.out
+          elif git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"                  push origin rotinas:main 2>&1 | tee juncao.out; then
+            echo "junção: main em dia com rotinas" | tee -a juncao.out
+          else
+            echo "junção: o push ao main falhou (o main andou? fica para a rodada seguinte)" | tee -a juncao.out
+          fi
+      - name: Relatório do dia no Issue (notificação do GitHub)
+        if: ${{ always() }}
+        run: |
+          HOJE=$(date +%F)
+          N=$(gh issue list --state open --search "Relatório do dia (rotinas) in:title" --json number --jq '.[0].number')
+          if [ -z "$N" ]; then
+            N=$(gh issue create --title "Relatório do dia (rotinas)" --body "Um comentário por dia com o relatório da rotina sem IA (K-112, bloco 10a). Fechar este Issue não para a rotina." | grep -o '[0-9]*$')
+          fi
+          {
+            echo "**Rotina de $HOJE** — execução ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — portão: ${{ steps.portao.outputs.passa == '1' && 'passa' || 'reprova ou não rodou' }}"
+            echo
+            [ -f juncao.out ] && cat juncao.out && echo
+            [ -f "trilhas/relatorios/$HOJE.md" ] && cat "trilhas/relatorios/$HOJE.md" || echo "(sem relatório do dia: a rotina quebrou antes; ver a execução)"
+          } > comentario.md
+          head -c 60000 comentario.md > c.md
+          gh issue comment "$N" --body-file c.md
+      - name: Falhar se a rotina ou o portão falharam
+        if: ${{ steps.portao.outputs.passa != '1' }}
+        run: exit 1

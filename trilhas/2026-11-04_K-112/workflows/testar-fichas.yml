@@ -1,0 +1,32 @@
+# Teste das fichas de acesso no runner do Actions (bloco 10a; l. 418): antes de ligar um ambiente na
+# rotina, o pedido de teste roda aqui, com outro endereço de rede. O resultado volta à ficha na
+# conversa de trabalho (`testar_no_runner.py --registrar`).
+name: testar-fichas
+on:
+  workflow_dispatch:
+    inputs:
+      ambientes:
+        description: "Ambientes (AM-0021,AM-0029); vazio = todos com adaptador automático"
+        type: string
+        default: ""
+permissions:
+  contents: read
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: |
+          A="${{ inputs.ambientes }}"
+          python scripts/testar_no_runner.py ${A:+--ambientes "$A"} --saida resultado-runner.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resultado-runner
+          path: resultado-runner.json
