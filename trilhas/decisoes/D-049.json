@@ -1,0 +1,29 @@
+{
+  "id": "D-049",
+  "data": "2026-11-05",
+  "essencia": "Até haver financiamento, o projeto não acessa as fontes que pedem intervenção humana para o acesso, como o cadastro. As rotinas configuram só o que é público, gratuito e aberto aos robôs. O que fica sem acesso não se descarta: é colocado como passo para melhoria.",
+  "diretriz": "(1) Fonte que pede intervenção humana para o acesso, como o cadastro, não é acessada enquanto não houver financiamento para isso: nenhuma conta se abre em fonte, nem para obter chave (mesmo grátis) ou login. (2) As rotinas configuram (ficha testada, adaptador e linha de configuração) só o que é público, gratuito (sem pagar) e aberto aos robôs; o que é aberto aos robôs segue a D-042 e a D-044. (3) O que fica sem acesso é colocado como passo para melhoria; pela D-046, chega ao planejamento como insumo. (4) A volta do acesso por cadastro muda o plano e pede decisão nova (acordo 5). (5) [ABERTO], perguntado a Vicente em 05/11: se 'intervenção humana' alcança também a busca à mão nas fontes que barram o robô (D-044), o pedido de acesso a uma instituição (D-048, item 4), a entrada por link de Vicente, a leitura de termos no navegador (cartão K-208) e a caixa de e-mail que receberia os Alertas do Google; até a resposta, esses casos seguem como o plano os tem. Também [ABERTO]: a fonte cujos termos de uso o robô não consegue ler (insumo 109).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-05",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-05_conversa/falas-vicente.md, seção 'Cadastros nas fontes (D-049)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "intervenção humana",
+      "sentido_confirmado": "literal, na fala que começa por 'sobre cadastros': as fontes que pedem intervenção humana para o acesso, como o cadastro. Outros casos de intervenção humana estão [ABERTO] (diretriz, item 5)"
+    },
+    {
+      "palavra": "até que tenhamos financiamento para isso",
+      "sentido_confirmado": "literal: o acesso a essas fontes espera haver financiamento para ele"
+    },
+    {
+      "palavra": "público gratuito e com acesso para os robôs",
+      "sentido_confirmado": "literal: é o que as rotinas configuram; o que é 'com acesso para os robôs' segue as regras vigentes (D-042, D-044)"
+    },
+    {
+      "palavra": "passo para melhoria",
+      "sentido_confirmado": "literal: o que falta acesso não se descarta e é colocado como passo para melhoria; o veículo, pela D-046, é o insumo ao planejamento"
+    }
+  ],
+  "substitui": "Delimita a D-048, item 4 ('todo local de busca que for possível abrir pelas vias permitidas'): até haver financiamento, não se abre a via que pede cadastro; a D-048 só tratava de conta no Internet Archive (insumo 108). Não muda a D-044. Se a D-049 alcança o pedido de acesso a uma instituição (D-048, item 4) e a via humana (D-044) está [ABERTO] (diretriz, item 5). A ordem do bloco 10a não muda: a OpenAlex já entrava sem chave (brief de execuções, l. 360); sem chave, a paginação por cursor só entrega a primeira página (Fundação, Anexo C, F-05, oficial), e o adaptador de cursor da l. 362 fica com esse alcance na OpenAlex, a confirmar no teste do rastreador. Responde aos insumos 106 e 108. A leitura do curador de 05/11, de que Vicente abriria as contas, não chegou a ser decisão.",
+  "marcador": "VIGENTE"
+}
