@@ -8,7 +8,8 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
   grava com novidade, feed de novidades, checagem de links, portão da camada 1, relatório do dia 0.4,
   faixa própria da rotina nos IDs (50000-89999), teste das fichas no runner, hook SubagentStop sem o
   Python do Windows, `ler_fonte.py` com a cópia arquivada só na falha.
-- **Workflows** `validar`, `rotinas` e `testar-fichas`, guardados em `workflows/` desta pasta até o envio.
+- **Workflows** `validar`, `rotinas` e `testar-fichas`, guardados em `workflows/` desta pasta até o envio
+  (05/11, com o escopo renovado: estão em `.github/workflows/`, e a cópia da trilha saiu).
 - **Adaptadores novos** Tainacan (BCR) e "API com cursor" (OpenAlex; Scrape API do Internet Archive), com
   casos sintéticos; falta a resposta real gravada e a rodada curta.
 - **Consulta geral CO-0008** ("bebida" E um processo do piloto), já na colheita da Infoteca-e.
