@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime
@@ -38,7 +39,10 @@ def rodar_caso(c: dict) -> tuple[str, str]:
             erros = validar_arquivo(RAIZ / c["entrada"], carregar_esquema(c["esquema"]))
             return ("passa" if not erros else "reprova"), "; ".join(erros[:3])
         cmd = [sys.executable, *[str(RAIZ / x) if i == 0 else x for i, x in enumerate(c["comando"])]]
-        r = subprocess.run(cmd, cwd=RAIZ, capture_output=True, text=True, encoding="utf-8")
+        # os casos rodam com o gravador da conversa: a faixa de IDs da rotina (CL_GRAVADOR) vem do workflow
+        # e mudaria os números esperados; o caso que testa a rotina a liga no próprio comando
+        env = {k: v for k, v in os.environ.items() if k != "CL_GRAVADOR"}
+        r = subprocess.run(cmd, cwd=RAIZ, capture_output=True, text=True, encoding="utf-8", env=env)
         saida = (r.stdout + r.stderr).strip()
         obtido = "passa" if r.returncode == 0 else "reprova"
         if c.get("saida_contem") and c["saida_contem"] not in saida:
