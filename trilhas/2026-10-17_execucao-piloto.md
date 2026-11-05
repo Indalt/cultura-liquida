@@ -360,6 +360,7 @@
 - [x] **Rodada real simulada (curador, script):** `rotina_diaria.py --simular --so AM-0021` com `CL_GRAVADOR=rotina`: 39 pedidos, 1 Entrada nova e 27 itens só como pegada, nada gravado (EX-50000, simulado).
 - **Estado salvo:** o K-112 segue em Fazendo. Relatório da conversa: `trilhas/2026-11-04_K-112/relatorio-conversa-1.md`. Próximo: os workflows para `.github/` e o envio; o lote do rastreador; a resposta real dos adaptadores; o teste no runner; uma rodada pedida à mão; a falha provocada; ligar o agendamento; os ambientes do Anexo E em lotes de 4.
 - **Consumo da conversa:** 3 agentes, **188.830 tokens e 33 chamadas** (auditor 2, juridico 1).
+- **Continuação (05/11):** Vicente pediu que o curador rode os workflows e perguntou onde fica o segredo e o que se passa com as fontes que pedem acesso, chave e conta. O token do gh seguia sem o escopo `workflow` (`gh auth status`: gist, read:org, repo); o curador abriu o pedido de autorização por código (`gh auth refresh -h github.com -s workflow`), que Vicente confirma no navegador. Insumo 108: o "sem cadastro" da D-048 vale só para o Internet Archive (o insumo 106 o estendeu à OpenAlex); conta e chave são a parada (c) do brief (l. 49), com a chave fora do Git (l. 69), e a regra de quando abrir conta vai ao planejamento (D-046). O registro mínimo do gancho SubagentStop de dois subagentes sem transcrito (`trilhas/logs/2026-11-05_desconhecido.jsonl`; um de outra sessão) entrou no Git.
 - **Insumos novos:** 101 a 107.
 
 ## Consumo semanal de agentes (D-023)

@@ -36,6 +36,17 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
 - Se o commit da rotina passa pela proteção do `main` com o seu token (confere-se na primeira junção).
 - Os termos de uso do BCR, do Oasisbr e da OpenAlex (não achados ou só a casca da página).
 
+## Continuação de 05/11 (pedido de Vicente: rodar os workflows; o segredo; contas e chaves)
+- O token do gh seguia sem o escopo `workflow`; o pedido de autorização por código foi aberto pelo curador
+  e Vicente o confirma no navegador. Depois disso, os workflows vão a `.github/workflows/` e rodam.
+- **O segredo `ROTINAS_TOKEN`** não se escreve no arquivo: a linha `TOKEN: ${{ secrets.ROTINAS_TOKEN }}`
+  do `rotinas.yml` só o lê pelo nome. O valor (um token fino de Vicente) fica na página de segredos do
+  repositório, pelo `passo-a-passo-juncao.md`. Serve só à junção automática ao `main` (D-048).
+- **Contas e chaves (insumo 108):** a exigência é da fonte e vale igual para a rotina; login pessoal
+  (gov.br, CAFe) não cabe num robô; nenhuma conta se abre por agente ou rotina (parada c do brief, l. 49);
+  a chave fica fora do Git (l. 69), como segredo do repositório. O "sem cadastro" da D-048 vale só para o
+  Internet Archive; a regra de quando abrir conta vai ao planejamento.
+
 ## Próximo (conversa seguinte)
 Mover os workflows para `.github/` e enviar; o rastreador (que volta a carregar: a descrição dele estava
 quebrada desde o K-111, insumo 105) testa as fichas do BCR, do Oasisbr e da OpenAlex e a tradução da
