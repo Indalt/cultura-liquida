@@ -19,3 +19,9 @@ Resposta:
 "sobre estas decisoes o que impacta no 112 e na sequencia para o piloto nos ajudar a perceber o que a ferramenta faz e o que pode fazer."
 
 A pergunta sobre os termos que o robô não lê ficou sem resposta e foi como insumo ao planejamento.
+
+O curador registrou a D-049 com as três frases, devolveu a aplicação (cadastro como abrir conta numa fonte, inclusive para chave grátis ou login; gratuito como sem pagar; aberto aos robôs pelas D-042 e D-044; o passo para melhoria como insumo) e perguntou como Vicente via os outros casos de intervenção humana (busca à mão, pedido de acesso a instituição, links, termos no navegador, caixa dos Alertas). Resposta:
+
+"tudo correto e ja mandei o prompt para a sessao 112 - proximos passos enquanto k112 opera?"
+
+A aplicação ficou confirmada; o alcance de "intervenção humana" ficou sem resposta e segue [ABERTO] na D-049.

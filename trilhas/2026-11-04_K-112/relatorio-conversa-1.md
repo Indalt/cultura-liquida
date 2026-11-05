@@ -63,6 +63,10 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
 - **D-049 no bloco 10a:** fonte que pede cadastro (conta, chave grátis, login) ou pagamento não entra nas
   rotinas; nenhum segredo de fonte; os adaptadores não leem chave; a OpenAlex sem chave (cursor só dá a
   primeira página; a paginação por página, o rastreador testa). A ordem segue: Oasisbr, OpenAlex, Anexo E.
+- **O caso que reprovava o portão** (rodada 42068431829): "Recorte: o teto de chamadas vale para a rodada
+  inteira" esperava RC-0003 e recebeu RC-50000, porque a suíte herdava do workflow a faixa de IDs da rotina
+  (`CL_GRAVADOR`). Falha do teste no servidor, não do conteúdo de 87ae840 e 62e0df8, que não se revertem:
+  `rodar_testes.py` roda os casos sem a variável (o caso da rotina a liga no próprio comando).
 - Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
 
 ## Próximo (conversa seguinte)

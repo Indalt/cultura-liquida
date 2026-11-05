@@ -22,6 +22,10 @@
     {
       "palavra": "passo para melhoria",
       "sentido_confirmado": "literal: o que falta acesso não se descarta e é colocado como passo para melhoria; o veículo, pela D-046, é o insumo ao planejamento"
+    },
+    {
+      "palavra": "cadastro e gratuito (a aplicação devolvida em 05/11)",
+      "sentido_confirmado": "cadastro é abrir conta numa fonte, inclusive para obter chave grátis ou login; gratuito é sem pagar; o que é aberto aos robôs segue a D-042 e a D-044; o passo para melhoria vai ao planejamento como insumo (D-046). Devolvido pelo curador e confirmado por Vicente em 05/11 ('tudo correto'); o alcance de 'intervenção humana' (diretriz, item 5) ficou sem resposta e segue [ABERTO]"
     }
   ],
   "substitui": "Delimita a D-048, item 4 ('todo local de busca que for possível abrir pelas vias permitidas'): até haver financiamento, não se abre a via que pede cadastro; a D-048 só tratava de conta no Internet Archive (insumo 108). Não muda a D-044. Se a D-049 alcança o pedido de acesso a uma instituição (D-048, item 4) e a via humana (D-044) está [ABERTO] (diretriz, item 5). A ordem do bloco 10a não muda: a OpenAlex já entrava sem chave (brief de execuções, l. 360); sem chave, a paginação por cursor só entrega a primeira página (Fundação, Anexo C, F-05, oficial), e o adaptador de cursor da l. 362 fica com esse alcance na OpenAlex, a confirmar no teste do rastreador. Responde aos insumos 106 e 108. A leitura do curador de 05/11, de que Vicente abriria as contas, não chegou a ser decisão.",
