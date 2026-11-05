@@ -48,6 +48,23 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
   a chave fica fora do Git (l. 69), como segredo do repositório. O "sem cadastro" da D-048 vale só para o
   Internet Archive; a regra de quando abrir conta vai ao planejamento.
 
+## Primeira rodada no runner (05/11, execução 42019165807) e a D-049
+- Workflows no repositório (2b241f3); `validar` e `testar-fichas` passaram; a BDTD e a Infoteca-e abrem no
+  runner (gravado nas fichas, 2e22d98). A rodada: 1 Entrada nova da BDTD e 4 da Infoteca-e, estas pela
+  CO-0008 (só descritores, sem caju nem cajuína).
+- **Os commits 87ae840 e 62e0df8 da ramificação `rotinas` dizem "portão: passa" sem ter passado:** o
+  portão reprovou nas duas tentativas (1 caso da suíte) e o `tee` sem pipefail escondeu a reprovação.
+  Corrigido no bffd3b4 (bash -eo pipefail; portão reprovado não grava nem tenta junção).
+- A junção da tentativa 2 ("Re-run") foi recusada por non-fast-forward: o checkout repetiu o main antigo.
+  Endurecido: o workflow busca o main na hora antes do merge e antes da junção, e o main que andou cai em
+  "fica para a rodada seguinte".
+- O `validar` do bffd3b4 e do 5e8b678 falhou só nos dois casos do verificar-fundacao que pedem o commit
+  e868a98 (checkout raso); o `validar.yml` passa a buscar a história inteira. Nenhum outro caso falhou no Linux.
+- **D-049 no bloco 10a:** fonte que pede cadastro (conta, chave grátis, login) ou pagamento não entra nas
+  rotinas; nenhum segredo de fonte; os adaptadores não leem chave; a OpenAlex sem chave (cursor só dá a
+  primeira página; a paginação por página, o rastreador testa). A ordem segue: Oasisbr, OpenAlex, Anexo E.
+- Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
+
 ## Próximo (conversa seguinte)
 Mover os workflows para `.github/` e enviar; o rastreador (que volta a carregar: a descrição dele estava
 quebrada desde o K-111, insumo 105) testa as fichas do BCR, do Oasisbr e da OpenAlex e a tradução da

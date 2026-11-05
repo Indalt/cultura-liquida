@@ -78,7 +78,7 @@ def main() -> int:
             for _, _, s in achar(det):  # o relatório vai para o Git: nunca repetir dado pessoal, nem fictício
                 det = det.replace(s, "[dado pessoal omitido]")
             linhas_rel.append(f"| {c['nome']} | {c['espera']} | {obtido} | {res} | {det} |")
-            print(f"{res:<28} {spec['habilidade']}: {c['nome']}")
+            print(f"{res:<28} {spec['habilidade']}: {c['nome']}" + (f" — {det}" if res == "FALHA" else ""))
     total = f"OK: {cont['ok']} · FALHA: {cont['falha']} · PENDENTE: {cont['pendente']}"
     print(total)
     if a.relatorio:

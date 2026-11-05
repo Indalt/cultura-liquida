@@ -1,5 +1,6 @@
 # Validador a cada envio (bloco 10a, camada 1; l. 707): o acervo no contrato e nenhum dado pessoal de
-# terceiros no que o Git versiona. A suíte inteira roda no portão da rotina e na conversa de trabalho.
+# terceiros no que o Git versiona. A suíte inteira roda também aqui, no Linux do runner: o portão da
+# rotina a roda neste mesmo sistema, e um caso que só falha nele travaria toda junção (05/11).
 name: validar
 on:
   push:
@@ -14,6 +15,8 @@ jobs:
       PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # a suíte lê commits antigos (verificar-fundacao pede o e868a98)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -21,3 +24,4 @@ jobs:
       - run: python scripts/validar_acervo.py
       - run: python scripts/deduplicar.py --conferir
       - run: python scripts/procurar_dado_pessoal.py --git
+      - run: python scripts/rodar_testes.py
