@@ -1,0 +1,12 @@
+{
+ "lote": "C112h",
+ "data": "2026-11-04",
+ "modelo": "claude-sonnet-5-5",
+ "esforco": "high",
+ "chamadas_usadas": 10,
+ "nao_conferido": [
+  "C112h.10: a pagina de rotinas (raw .md, 533 linhas) nao traz CLAUDE.md em nenhuma linha (grep sem acerto); so a pagina de projetos diz que threads de PROJETO leem CLAUDE.md",
+  "Pagina cloud-environments (lista padrao de dominios, tempos) nao aberta: teto de chamadas",
+  "Pagina sub-agents e plan/credito de excedente por plano nao abertos"
+ ]
+}

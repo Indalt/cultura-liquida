@@ -1,0 +1,226 @@
+{
+  "lote": "C112h",
+  "data": "2026-11-04",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "chamadas_usadas": 10,
+  "nao_conferido": [
+    "C112h.10: a pagina de rotinas (raw .md, 533 linhas) nao traz CLAUDE.md em nenhuma linha (grep sem acerto); so a pagina de projetos diz que threads de PROJETO leem CLAUDE.md",
+    "Pagina cloud-environments (lista padrao de dominios, tempos) nao aberta: teto de chamadas",
+    "Pagina sub-agents e plan/credito de excedente por plano nao abertos"
+  ],
+  "itens": [
+    {
+      "id": "C112h.1",
+      "pergunta": "Rotinas do Claude Code: sao previa de pesquisa? (mapa de 17/10)",
+      "resposta": "CONFIRMA, com atualizacao de nome: a pagina (versao .md, curl 04/11/2026, HTTP 200, l. 11 e 13) chama o recurso de scheduled tasks (cloud scheduled task, formerly a routine); a URL segue /routines e o nome routines ainda aparece na pagina.",
+      "partes": [
+        {
+          "afirmacao": "O recurso segue em previa de pesquisa",
+          "citacao": "Scheduled tasks are in research preview. Behavior, limits, and the API surface may change.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Nome atual: scheduled task; routine e o nome anterior",
+          "citacao": "A cloud scheduled task, formerly a routine, is a saved Claude Code configuration",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C112h.2",
+      "pergunta": "Rotinas: em quais planos? (mapa: Pro, Max, Team e Enterprise)",
+      "resposta": "CORRIGE: a lista atual inclui o plano Ultra, que o mapa nao trazia (pagina l. 28).",
+      "partes": [
+        {
+          "afirmacao": "Planos com acesso",
+          "citacao": "Scheduled tasks are available on Pro, Max, Ultra, Team, and Enterprise plans.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ],
+      "observacao": "Org de Team/Enterprise pode desligar o recurso (l. 502 da pagina); nao relevante ao piloto."
+    },
+    {
+      "id": "C112h.3",
+      "pergunta": "Rotinas rodam com o computador desligado?",
+      "resposta": "CONFIRMA (l. 13): rodam em infraestrutura gerenciada pela Anthropic (ou ambiente self-hosted da organizacao) e seguem com o notebook fechado.",
+      "partes": [
+        {
+          "afirmacao": "Rodam na nuvem sem a maquina do usuario",
+          "citacao": "so they keep working when your laptop is closed.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C112h.4",
+      "pergunta": "Rotinas gastam a cota da assinatura?",
+      "resposta": "CONFIRMA (l. 462 e 63).",
+      "partes": [
+        {
+          "afirmacao": "Gasto da cota da assinatura",
+          "citacao": "Scheduled tasks draw down subscription usage the same way interactive sessions do.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Contam na conta individual",
+          "citacao": "their runs count against your account's usage and limits",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C112h.5",
+      "pergunta": "Rotinas usam as habilidades (.claude/skills) do repositorio?",
+      "resposta": "CONFIRMA com ressalva (l. 53): fora de threads de um projeto do claude.ai, as habilidades commitadas no repositorio clonado entram. Dentro de projeto, a pagina de projetos diz que habilidades de repositorio NAO carregam (l. 349).",
+      "partes": [
+        {
+          "afirmacao": "Habilidades do repositorio clonado",
+          "citacao": "Outside a project's threads, those skills include the ones committed to the cloned repository.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Em threads de projeto nao carregam",
+          "citacao": "Skills under `.claude/skills/` | Not loaded.",
+          "url": "https://code.claude.com/docs/en/claude-projects",
+          "nivel": "oficial"
+        }
+      ],
+      "observacao": "Ressalva da pagina: o texto liga a regra a \"project threads\"; uma rotina agendada nao e thread de projeto pelo texto da pagina de rotinas, mas a pagina nao a declara fora de projeto de modo expresso."
+    },
+    {
+      "id": "C112h.6",
+      "pergunta": "Rede padrao da rotina so com dominios permitidos; fora deles 403?",
+      "resposta": "CONFIRMA (l. 114, 434, 452): ambiente Default com acesso Trusted (lista padrao); host fora da lista falha com 403 e x-deny-reason host_not_allowed. Da para usar Custom (dominios proprios) ou Full (sem restricao). Trafego de conectores MCP passa pelos servidores da Anthropic e nao precisa de dominio na lista.",
+      "partes": [
+        {
+          "afirmacao": "403 fora da lista",
+          "citacao": "Requests on that path to hosts outside the allowlist fail with `403` and `x-deny-reason: host_not_allowed`.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Full libera a rede",
+          "citacao": "Select **Full** instead for unrestricted access.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C112h.7",
+      "pergunta": "Commits da rotina saem com o usuario do GitHub conectado?",
+      "resposta": "CONFIRMA (l. 63): commits e PRs levam o usuario do GitHub conectado; a rotina pertence a conta individual do claude.ai e nao e compartilhada.",
+      "partes": [
+        {
+          "afirmacao": "Commits com o usuario conectado",
+          "citacao": "Commits and pull requests carry your GitHub user",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C112h.8",
+      "pergunta": "Envio para ramificacoes claude/ por padrao; regra que a conta conectada pode contornar nao barra?",
+      "resposta": "CONFIRMA (l. 104 e 376): ramificacoes com prefixo claude/ por padrao, ou outra se o prompt mandar; protecao de ramo e rulesets do GitHub valem sobre o acesso conectado, e regra que esse acesso pode contornar nao bloqueia o envio.",
+      "partes": [
+        {
+          "afirmacao": "Prefixo claude/ por padrao",
+          "citacao": "Claude pushes its work to a branch prefixed with `claude/` unless your prompt directs it to push to another branch.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Regra contornavel pela conta nao barra",
+          "citacao": "so a rule that access can bypass doesn't block a run's push.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ],
+      "observacao": "Para a D-048 (ferramenta junta ramificacao pelo portao): o que protege o main e o portao do projeto; a protecao do GitHub nao basta se o dono pode contornar (enforce_admins false)."
+    },
+    {
+      "id": "C112h.9",
+      "pergunta": "Creditos de uso / excedente; limites por hora sem excedente; intervalo minimo",
+      "resposta": "CONFIRMA (l. 173, 468-476): com usage credits ligados, as tarefas seguem em excedente medido ao bater o limite da assinatura; sem creditos, as execucoes seguintes sao recusadas ate a janela reiniciar; os limites por hora (100/h por conta nas agendadas; 30/h por tarefa em Run now e API) nao tem excedente; cron mais frequente que 1 h e rejeitado.",
+      "partes": [
+        {
+          "afirmacao": "Excedente medido com creditos",
+          "citacao": "organizations with usage credits turned on can keep running scheduled tasks on metered overage.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Sem creditos, recusa",
+          "citacao": "Without usage credits, additional runs are rejected until your usage window resets.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Limites horarios sem excedente",
+          "citacao": "None of these hourly limits has overage.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Intervalo minimo de 1 hora",
+          "citacao": "Expressions that run more often than once per hour are rejected.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C112h.10",
+      "pergunta": "A sessao da rotina carrega o CLAUDE.md do repositorio?",
+      "resposta": "NAO CONFERIDO para rotinas: a pagina de rotinas nao menciona CLAUDE.md (grep -n -i sem acerto em 533 linhas). A pagina de projetos so afirma, para threads de PROJETO do claude.ai, que o CLAUDE.md na raiz de cada repositorio carrega (l. 344, 348). Nao se estende a rotinas por inferencia.",
+      "partes": [
+        {
+          "afirmacao": "Rotina carrega CLAUDE.md",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "nao conferido"
+        },
+        {
+          "afirmacao": "Threads de projeto carregam CLAUDE.md (nao e a regra das rotinas)",
+          "citacao": "Cloud threads load each repository's `CLAUDE.md` instructions but not its skills, `.mcp.json` servers, or `.claude/settings.json`",
+          "url": "https://code.claude.com/docs/en/claude-projects",
+          "nivel": "oficial"
+        }
+      ],
+      "observacao": "Mapa de 17/10 dizia nao confirmado: continua nao confirmado. Teste empirico (rotina de teste que lista o contexto) seria o caminho; fora do alcance desta conferencia."
+    },
+    {
+      "id": "C112h.11",
+      "pergunta": "Sessoes de nuvem carregam subagentes de .claude/agents/ e nao ha cobranca a parte pela maquina; rotinas sao sessoes de nuvem?",
+      "resposta": "CONFIRMA (web l. 13 e 300; rotinas l. 53): fora de threads de projeto, subagentes de .claude/agents/ do repositorio carregam automaticamente; a sessao conta no limite do plano e nao tem cobranca separada pela VM; a rotina roda como sessao de nuvem completa. Para rotinas, a conclusao vem de duas paginas oficiais juntas (rotina = sessao de nuvem; sessao carrega agents), sem frase unica sobre rotinas e agents.",
+      "partes": [
+        {
+          "afirmacao": "Subagentes carregam",
+          "citacao": "Outside a project's threads, subagents defined in your repo's `.claude/agents/` load automatically.",
+          "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Sem cobranca separada pela VM",
+          "citacao": "there's no separate charge for the cloud VM.",
+          "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Rotina e sessao de nuvem completa",
+          "citacao": "Scheduled tasks run autonomously as full Claude Code cloud sessions.",
+          "url": "https://code.claude.com/docs/en/routines",
+          "nivel": "oficial"
+        }
+      ]
+    }
+  ]
+}

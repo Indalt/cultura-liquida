@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 from datetime import datetime
@@ -30,23 +31,28 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_esquema, carregar_valores, validar_objeto  # noqa: E402
 from procurar_dado_pessoal import achar  # noqa: E402
 
-PASTA_LOGS = RAIZ / "trilhas" / "logs"
+PASTA_LOGS = Path(os.environ["CL_PASTA_LOGS"]) if os.environ.get("CL_PASTA_LOGS") else RAIZ / "trilhas" / "logs"  # outra pasta só nos testes (K-112)
 _VALORES = carregar_valores()["valores"]
 PREFIXO_ID = "EX"  # o prefixo da Execução no registro de valores (prefixos_id; insumo 28)
 assert PREFIXO_ID in _VALORES["prefixos_id"]["valor"]["tipos"]
-FAIXA = _VALORES["numeracao_id"]["valor"]["faixas"]["conversa"]  # este script grava pela conversa
+FAIXAS = _VALORES["numeracao_id"]["valor"]["faixas"]
+
+
+def gravador() -> str:
+    """A conversa, por padrão; a rotina do workflow grava com CL_GRAVADOR=rotina (K-112)."""
+    return os.environ.get("CL_GRAVADOR") or "conversa"
 
 
 def proximo_id() -> str:
-    """O maior número da faixa da conversa + 1 (registro de valores: numeracao_id)."""
-    menor, teto = FAIXA
+    """O maior número da faixa do gravador + 1 (registro de valores: numeracao_id)."""
+    menor, teto = FAIXAS[gravador()]
     maior = menor - 1
     for arq in PASTA_LOGS.glob("*.jsonl"):
         for m in re.finditer(rf'"id": "{PREFIXO_ID}-([0-9]+)"', arq.read_text(encoding="utf-8")):
             if menor <= int(m.group(1)) <= teto:
                 maior = max(maior, int(m.group(1)))
     if maior + 1 > teto:
-        raise SystemExit(f"faixa da conversa cheia ({menor}-{teto}): faixa nova só por decisão")
+        raise SystemExit(f"faixa {gravador()} cheia ({menor}-{teto}): faixa nova só por decisão")
     return f"{PREFIXO_ID}-{maior + 1:04d}"
 
 
@@ -68,7 +74,8 @@ def conferir(e: dict) -> list[str]:
 
 def gravar(e: dict) -> Path:
     PASTA_LOGS.mkdir(parents=True, exist_ok=True)
-    destino = PASTA_LOGS / f"{e['data_hora'][:10]}_{e['agente']}.jsonl"
+    sufixo = "" if gravador() == "conversa" else f"-{gravador()}"  # arquivo próprio da rotina: sem conflito na junção
+    destino = PASTA_LOGS / f"{e['data_hora'][:10]}_{e['agente']}{sufixo}.jsonl"
     with destino.open("a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(e, ensure_ascii=False) + "\n")
     return destino

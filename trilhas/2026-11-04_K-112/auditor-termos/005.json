@@ -1,0 +1,17 @@
+{
+ "id": "C112.5",
+ "pergunta": "Desativacao de 60 dias em repositorio publico: o que conta como atividade e se um commit feito pelo proprio workflow conta?",
+ "resposta": "Oficial: a pagina de eventos que disparam workflows diz que workflows agendados em repositorio publico sao desativados automaticamente apos 60 dias sem atividade no repositorio. Nao conferido: o que a pagina considera 'atividade' (o grep por 60 days, no repository activity, disabled when e inactiv nao achou definicao) e se commit feito pelo proprio workflow conta; a pagina Disabling and enabling a workflow nao foi aberta.",
+ "partes": [
+  {
+   "afirmacao": "Desativacao automatica em 60 dias sem atividade",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "citacao": "In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days."
+  },
+  {
+   "afirmacao": "Definicao de atividade e se commit do workflow conta",
+   "nivel": "não conferido"
+  }
+ ]
+}

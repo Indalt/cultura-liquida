@@ -1,0 +1,31 @@
+{
+ "id": "C112h.9",
+ "pergunta": "Creditos de uso / excedente; limites por hora sem excedente; intervalo minimo",
+ "resposta": "CONFIRMA (l. 173, 468-476): com usage credits ligados, as tarefas seguem em excedente medido ao bater o limite da assinatura; sem creditos, as execucoes seguintes sao recusadas ate a janela reiniciar; os limites por hora (100/h por conta nas agendadas; 30/h por tarefa em Run now e API) nao tem excedente; cron mais frequente que 1 h e rejeitado.",
+ "partes": [
+  {
+   "afirmacao": "Excedente medido com creditos",
+   "citacao": "organizations with usage credits turned on can keep running scheduled tasks on metered overage.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Sem creditos, recusa",
+   "citacao": "Without usage credits, additional runs are rejected until your usage window resets.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Limites horarios sem excedente",
+   "citacao": "None of these hourly limits has overage.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Intervalo minimo de 1 hora",
+   "citacao": "Expressions that run more often than once per hour are rejected.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

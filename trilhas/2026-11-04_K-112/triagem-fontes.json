@@ -1,0 +1,153 @@
+{
+  "fontes": [
+    {
+      "ambiente": "AM-0061",
+      "fonte": "BCR do IPHAN",
+      "termos": {
+        "proibicao_expressa": null,
+        "trecho": "não conferido: sem página de termos ou licença na página inicial (curl com grep e WebFetch, 05/11/2026)",
+        "url": "https://bcr.iphan.gov.br/",
+        "nivel": "não conferido",
+        "olhado": "página inicial"
+      },
+      "robots": {
+        "url": "https://bcr.iphan.gov.br/robots.txt",
+        "status": 200,
+        "trecho": "User-agent: *; Disallow: /wp-admin/; Allow: /wp-admin/admin-ajax.php; Sitemap: https://bcr.iphan.gov.br/wp-sitemap.xml"
+      },
+      "cadastro_ou_chave": "nenhum (API do Tainacan abriu sem cadastro em 29/10, ficha)",
+      "ritmo": "sem texto de ritmo; ficha anota X-Robots-Tag noindex (indexação, não veda leitura)",
+      "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+      "perguntas": [
+        "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+        "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+        "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+        "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+        "5 Imagem e voz: não se aplica (só link)",
+        "6 Crianças: não se aplica",
+        "7 Substância controlada: não se aplica",
+        "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+      ],
+      "conclusao": "sem Falta pela regra (D-042): robots não veda /wp-json/; termos NÃO CONFERIDOS (nada a ler); não é autorização",
+      "faltas": []
+    },
+    {
+      "ambiente": "AM-0007",
+      "fonte": "Internet Archive",
+      "termos": {
+        "proibicao_expressa": null,
+        "trecho": "Terms of Use NÃO LIDOS (about/terms.php abriu 200, casca de JavaScript sem texto). Página de desenvolvedores: 'All automated requests to archive.org must include a descriptive User-Agent header'; 'Honor 429 Too Many Requests responses and Retry-After headers'; 'Authenticate when possible' (recomendação)",
+        "url": "https://archive.org/developers/bots.html",
+        "nivel": "oficial só para a página de desenvolvedores; termos não conferidos",
+        "olhado": "bots.html (grep); terms.php"
+      },
+      "robots": {
+        "url": "https://archive.org/robots.txt",
+        "status": 200,
+        "trecho": "User-agent: *; Disallow: /control/; Disallow: /report/; Sitemap: https://archive.org/sitemap/sitemap.xml"
+      },
+      "cadastro_ou_chave": "não conferido que a busca exija cadastro ou chave; o projeto não cadastra (D-048)",
+      "ritmo": "só lido: respeitar 429 e Retry-After; números não lidos",
+      "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+      "perguntas": [
+        "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+        "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+        "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+        "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+        "5 Imagem e voz: não se aplica (só link)",
+        "6 Crianças: não se aplica",
+        "7 Substância controlada: não se aplica",
+        "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+      ],
+      "conclusao": "Falta: Terms of Use não lidos (continua a F-0005); robots e página de bots não proíbem a busca por API com robô identificado, mas a proibição dos termos não foi descartada; vale_para agora",
+      "faltas": [
+        {
+          "id": "F-90001",
+          "tipo": "impedimento_juridico",
+          "subtipo_juridico": "outro",
+          "o_que_falta": "Leitura dos Terms of Use do Internet Archive sobre acesso automatizado e coleta de metadados pela busca por script diário com robô identificado.",
+          "por_que": "A página dos termos abriu sem o texto (casca de JavaScript); sem lê-los não se descarta proibição expressa. A página de desenvolvedores exige User-Agent descritivo e respeito a 429, e o robots.txt só veda /control/ e /report/.",
+          "norma": {
+            "referencia": "Internet Archive, Bots, LLMs, and Automated Access",
+            "trecho": "All automated requests to archive.org must include a descriptive User-Agent header",
+            "url": "https://archive.org/developers/bots.html",
+            "nivel": "oficial"
+          },
+          "vale_para": "agora",
+          "caminho_de_liberacao": {
+            "guia": "G-termos-internet-archive (a preparar)",
+            "estado": "não iniciado"
+          },
+          "onde_aparece": [
+            "scripts/rotina_diaria.py"
+          ],
+          "criada_por": "juridico (triagem-juridica, K-112)",
+          "data": "2026-11-05",
+          "nota": "Pode ser agregada à F-0005. Resolve-se lendo os termos no navegador. Rótulos de tipo e subtipo a conferir."
+        }
+      ]
+    },
+    {
+      "ambiente": "AM-0022",
+      "fonte": "Oasisbr do IBICT",
+      "termos": {
+        "proibicao_expressa": null,
+        "trecho": "não conferido: página inicial 200 em 05/11/2026 sem desafio visível e sem link de termos (grep)",
+        "url": "https://oasisbr.ibict.br/",
+        "nivel": "não conferido",
+        "olhado": "página inicial; robots inteiro"
+      },
+      "robots": {
+        "url": "https://oasisbr.ibict.br/robots.txt",
+        "status": 200,
+        "trecho": "User-agent: *: Disallow /vufind/AJAX, Alphabrowse, Browse, Combined, EDS, EdsRecord, Search/Results, Summon, SummonRecord. Disallow: / para GPTBot, PetalBot, Bingbot, openai, ClaudeBot, Claude-Web, CCBot, PerplexityBot, Bytespider, Amazonbot e outros bots de IA. /vufind/api/ não consta; sem Crawl-delay"
+      },
+      "cadastro_ou_chave": "nenhum (API respondeu sem cadastro em 15/10, ficha; não repetido hoje)",
+      "ritmo": "sem texto de ritmo; se pedir verificação de navegador, parar neste host",
+      "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+      "perguntas": [
+        "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+        "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+        "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+        "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+        "5 Imagem e voz: não se aplica (só link)",
+        "6 Crianças: não se aplica",
+        "7 Substância controlada: não se aplica",
+        "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+      ],
+      "conclusao": "sem Falta pela regra (D-042): robots não cobre /vufind/api/ nem o agente CulturaLiquida-coleta; termos NÃO CONFERIDOS. Ressalva: o robots mostra intenção de barrar crawlers de IA; o script não é um deles",
+      "faltas": []
+    },
+    {
+      "ambiente": "AM-0026",
+      "fonte": "OpenAlex",
+      "termos": {
+        "proibicao_expressa": null,
+        "trecho": "Termos em PDF NÃO LIDOS (openalex.org/terms é casca de JavaScript). Documentação: 'OpenAlex data is free, and so is casual use of the API — you can make basic queries with no key at all.'",
+        "url": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+        "nivel": "oficial para a documentação; termos e CC0 não conferidos (CC0 só pela ficha)",
+        "olhado": "página de autenticação (grep)"
+      },
+      "robots": {
+        "url": "https://api.openalex.org/robots.txt",
+        "status": 200,
+        "trecho": "User-agent: *; Allow: /"
+      },
+      "cadastro_ou_chave": "sem chave para uso básico; a chave grátis pede conta com e-mail e o projeto não cria (D-048); cursor exige chave: só a primeira página",
+      "ritmo": "oficial: 10 pedidos/s sem chave; 429 ao passar do orçamento diário (US$ 0,10 sem chave, pela ficha)",
+      "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+      "perguntas": [
+        "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+        "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+        "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+        "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+        "5 Imagem e voz: não se aplica (só link)",
+        "6 Crianças: não se aplica",
+        "7 Substância controlada: não se aplica",
+        "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+      ],
+      "conclusao": "sem Falta pela regra (D-042): a documentação convida ao uso sem chave e o robots é aberto; termos em PDF e CC0 NÃO CONFERIDOS",
+      "faltas": []
+    }
+  ]
+}

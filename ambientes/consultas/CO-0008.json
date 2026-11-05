@@ -1,0 +1,24 @@
+{
+  "id": "CO-0008",
+  "nome": "bebida + descritores processuais do piloto (só descritores)",
+  "tipo": "só descritores",
+  "variantes": [
+    "bebida"
+  ],
+  "descritores": [
+    "extração do suco",
+    "clarificação",
+    "filtração",
+    "envase",
+    "tratamento térmico",
+    "higienização"
+  ],
+  "origem_registro": {
+    "criado_por": "scripts/gerar_termo.py --gerais",
+    "data": "2026-11-05",
+    "execucao": "EX-0103",
+    "versao_regra": "consultas-gerais-0.1"
+  },
+  "nota": "Consulta geral (consultas-gerais-0.1): a classe E um descritor; booleano: \"bebida\" AND (\"extração do suco\" OR clarificação OR filtração OR envase OR \"tratamento térmico\" OR higienização)",
+  "traducao": "ambientes/traducao-consultas.json#CO-0008"
+}

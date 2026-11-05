@@ -88,9 +88,11 @@ def _acha(texto: str, formas: list[str]) -> bool:
 
 
 def casa(texto: str, formas: list[str], descritores: list[str], tipo: str) -> bool:
-    """termo: uma forma; mista: uma forma E um descritor; só descritores: um descritor."""
+    """termo: uma forma; mista: uma forma E um descritor; só descritores: um descritor e, quando a
+    Consulta traz a classe da CLB em `variantes` (Consultas gerais, consultas-gerais-0.1; K-112), a
+    classe E um descritor."""
     if tipo == "termo":
         return _acha(texto, formas)
-    if tipo == "mista":
+    if tipo == "mista" or formas:
         return _acha(texto, formas) and _acha(texto, descritores)
     return _acha(texto, descritores)

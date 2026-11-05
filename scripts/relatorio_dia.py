@@ -29,7 +29,7 @@ import orcamento  # noqa: E402
 import guarda  # noqa: E402
 import pegadas  # noqa: E402
 
-VERSAO = "relatorio-dia-0.3"
+VERSAO = "relatorio-dia-0.4"
 
 
 def ramificacoes_claude(raiz: Path) -> list[str]:
@@ -39,6 +39,41 @@ def ramificacoes_claude(raiz: Path) -> list[str]:
         return [x.strip(" *") for x in r.stdout.splitlines() if x.strip()]
     except Exception:
         return []
+
+
+def ramificacao_rotinas(raiz: Path) -> str | None:
+    """Commits da ramificação das rotinas que o main ainda não tem (K-112; D-048)."""
+    for ref in ("origin/rotinas", "rotinas"):
+        r = subprocess.run(["git", "rev-list", "--count", f"origin/main..{ref}"], cwd=raiz, capture_output=True, text=True)
+        if r.returncode == 0:
+            return f"{ref}: {r.stdout.strip()} commit(s) à frente do main"
+    return None
+
+
+def secao_rotina(raiz: Path, hoje: str, novas: list[dict]) -> list[str]:
+    """As rodadas do dia (agenda e novidade), as Entradas novas por Consulta de origem e os links."""
+    import json as _json
+    arq = raiz / "trilhas" / "relatorios" / "rodadas.jsonl"
+    rod = [_json.loads(x) for x in arq.read_text(encoding="utf-8").splitlines() if x.strip()] if arq.exists() else []
+    hoje_r = [r for r in rod if r["data"] == hoje]
+    ls = ["", f"## Rotina do dia: {len(hoje_r)} ambiente(s) rodado(s)"]
+    for r in hoje_r:
+        ls.append(f"- {r['ambiente']} ({', '.join(r['consultas'])}): {r['entradas_novas']} Entrada(s) nova(s), "
+                  f"{r['pegadas_novas']} pegada(s) nova(s); {'gravado' if r.get('gravado') else 'sem novidade: nada gravado além desta linha' if not r.get('novidade') else 'não gravado (simulação)'}"
+                  + (f"; ERRO: {r['erro']}" if r.get("erro") else "") + f"; {r['motivo']}")
+    if not hoje_r:
+        ls.append("- nenhum (a agenda não pôs ambiente no dia, ou a rotina não rodou)")
+    co = {}
+    pasta = raiz / "ambientes" / "recortes"
+    for a in pasta.glob("*.json") if pasta.exists() else []:
+        x = carregar_json(a)
+        co[x["id"]] = x.get("consulta", "?")
+    por_co = Counter(c for e in novas for c in sorted({co.get(r, "?") for r in e.get("recortes", [])}))
+    ls += [f"- Entradas novas por Consulta de origem: " + (", ".join(f"{k} {v}" for k, v in sorted(por_co.items())) or "nenhuma")]
+    lq = raiz / "trilhas" / "relatorios" / "links-quebrados.jsonl"
+    q = [_json.loads(x) for x in lq.read_text(encoding="utf-8").splitlines() if x.strip()] if lq.exists() else []
+    ls.append(f"- links quebrados: {len(q)} no total, {sum(1 for x in q if x['data'] == hoje)} novo(s) hoje (`verificar_links.py`)")
+    return ls
 
 
 def main() -> int:
@@ -87,9 +122,13 @@ def main() -> int:
         ls += [f"- {x.split('|')[2].strip()[:140]}" for x in fila]
         pend = len(fila_curadoria.pendencias(raiz, fila_curadoria.TERMOS_PILOTO))
         ls.append(f"- itens no acervo que pedem cartão: {pend} (os novos se abrem com `fila_curadoria.py --abrir-cartoes`)")
+    ls += secao_rotina(raiz, hoje, novas)
     ram = ramificacoes_claude(raiz)
+    rot = ramificacao_rotinas(raiz)
+    if rot:
+        ls += ["", f"## Ramificação das rotinas (camada 1): {rot}"]
     ls += ["", f"## Propostas das rotinas à espera de junção: {len(ram)}"]
-    ls += [f"- {x}: portão não rodado (o portão é do bloco 10)" for x in ram] or ["- nenhuma (as rotinas são do bloco 10)"]
+    ls += [f"- {x}: portão não rodado (o portão é do bloco 10)" for x in ram] or ["- nenhuma (as da camada 2 são do K-113)"]
     ls += ["", f"## Vácuos de busca: {len(vacuos)} (Matriz de Pegadas e Vácuos, `scripts/pegadas.py`)"]
     ls += [f"- {v}" for v in vacuos[:20]] + ([f"- … mais {len(vacuos) - 20}"] if len(vacuos) > 20 else [])
     ck = raiz / "trilhas" / "2026-10-17_execucao-piloto.md"

@@ -1,0 +1,13 @@
+{
+ "lote": "C112",
+ "data": "2026-11-04",
+ "modelo": "claude-sonnet-5-5",
+ "esforco": "high",
+ "chamadas_usadas": 9,
+ "nao_conferido": [
+  "C112.5: definicao de 'repository activity' e se commit feito pelo proprio workflow conta (nenhuma pagina oficial aberta a respeito; pagina Disabling and enabling a workflow nao aberta por teto de chamadas)",
+  "C112.3: repositorio github.com/githubocto/flat nao aberto (teto de chamadas)",
+  "C112.2: AUP lida so por palavras-chave, nao a pagina inteira",
+  "C112.1: Actions documentation (service limitations) e Terms of Service secao H nao abertos"
+ ]
+}

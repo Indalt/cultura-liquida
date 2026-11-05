@@ -44,14 +44,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_esquema, carregar_json, validar_objeto  # noqa: E402
 from _acervo import carregar_acervo, proximo_id  # noqa: E402
 from _coleta import BloqueioAntiRobo, BloqueioRobos, Cliente, Execucao, gravar_json  # noqa: E402
+import adaptador_cursor  # noqa: E402
 import adaptador_oai  # noqa: E402
+import adaptador_tainacan  # noqa: E402
 import adaptador_vufind  # noqa: E402
 import deduplicar  # noqa: E402
 import pretriagem  # noqa: E402
 from gerar_termo import formas  # noqa: E402
 
 VERSAO = "recorte-0.3"
-ADAPTADORES = {m.PROTOCOLO: m for m in (adaptador_vufind, adaptador_oai)}
+ADAPTADORES = {m.PROTOCOLO: m for m in (adaptador_vufind, adaptador_oai, adaptador_tainacan, adaptador_cursor)}
 INICIO_PERIODO = 1900  # desde 1900 (propósito; §0)
 FINAIS = ("percorrido pela busca", "lido por inteiro")
 
@@ -289,7 +291,7 @@ def rodar_busca(reg, cli, mod, cfg, ambiente, co, periodo, teto, resumo, cota: i
             break
         pags += 1
         ids = {it.get("id_fonte") or it["identificador"] for it in p["itens"]}
-        repetida = bool(ids) and ids <= anteriores
+        repetida = bool(ids) and ids <= anteriores and not p.get("reinicio")  # a 1ª página de outra busca da mesma Consulta (Tainacan) não é repetição
         anteriores = ids
         if (p["saturada"] and r["total_visto"] == 0) or repetida:
             partes = dividir(periodo, cfg)

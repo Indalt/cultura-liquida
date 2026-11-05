@@ -1,0 +1,14 @@
+{
+ "id": "C112h.2",
+ "pergunta": "Rotinas: em quais planos? (mapa: Pro, Max, Team e Enterprise)",
+ "resposta": "CORRIGE: a lista atual inclui o plano Ultra, que o mapa nao trazia (pagina l. 28).",
+ "partes": [
+  {
+   "afirmacao": "Planos com acesso",
+   "citacao": "Scheduled tasks are available on Pro, Max, Ultra, Team, and Enterprise plans.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ],
+ "observacao": "Org de Team/Enterprise pode desligar o recurso (l. 502 da pagina); nao relevante ao piloto."
+}

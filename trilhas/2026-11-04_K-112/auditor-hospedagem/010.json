@@ -1,0 +1,19 @@
+{
+ "id": "C112h.10",
+ "pergunta": "A sessao da rotina carrega o CLAUDE.md do repositorio?",
+ "resposta": "NAO CONFERIDO para rotinas: a pagina de rotinas nao menciona CLAUDE.md (grep -n -i sem acerto em 533 linhas). A pagina de projetos so afirma, para threads de PROJETO do claude.ai, que o CLAUDE.md na raiz de cada repositorio carrega (l. 344, 348). Nao se estende a rotinas por inferencia.",
+ "partes": [
+  {
+   "afirmacao": "Rotina carrega CLAUDE.md",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "nao conferido"
+  },
+  {
+   "afirmacao": "Threads de projeto carregam CLAUDE.md (nao e a regra das rotinas)",
+   "citacao": "Cloud threads load each repository's `CLAUDE.md` instructions but not its skills, `.mcp.json` servers, or `.claude/settings.json`",
+   "url": "https://code.claude.com/docs/en/claude-projects",
+   "nivel": "oficial"
+  }
+ ],
+ "observacao": "Mapa de 17/10 dizia nao confirmado: continua nao confirmado. Teste empirico (rotina de teste que lista o contexto) seria o caminho; fora do alcance desta conferencia."
+}

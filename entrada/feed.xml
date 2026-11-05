@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Cultura Líquida — Entradas novas</title>
+  <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/feed.xml</id>
+  <link href="https://github.com/Indalt/cultura-liquida/tree/main/entrada"/>
+  <updated>2026-11-05T00:00:00Z</updated>
+  <generator>scripts/feed.py (feed-0.1)</generator>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1727.json</id>
+    <title>EN-1727 — sem título</title>
+    <link href="https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/126109/cajuina_parecer_tecnico.pdf"/>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <summary>AM-0061; canal link ou documento trazido por Vicente; Consulta de origem: nenhuma</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1726.json</id>
+    <title>EN-1726 — sem título</title>
+    <link href="https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66637/Cajuina_de_Parecer-DPI_.pdf"/>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <summary>AM-0061; canal link ou documento trazido por Vicente; Consulta de origem: nenhuma</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1725.json</id>
+    <title>EN-1725 — sem título</title>
+    <link href="https://bcr.iphan.gov.br/wp-content/uploads/tainacan-items/65968/66631/Cajuina_de_Dossie-Producao-artesanal-e-praticas-socioculturais-associ_.pdf"/>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <summary>AM-0061; canal link ou documento trazido por Vicente; Consulta de origem: nenhuma</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1724.json</id>
+    <title>EN-1724 — sem título</title>
+    <link href="https://bcr.iphan.gov.br/bens-culturais/producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-no-piaui/"/>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <summary>AM-0061; canal link ou documento trazido por Vicente; Consulta de origem: nenhuma</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1723.json</id>
+    <title>EN-1723 — Extração da pectina do bagaço do caju: caracterização físico-química e lignocelulósica da fração insolúvel.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1190663"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1722.json</id>
+    <title>EN-1722 — Ocorrência e manejo de lepidópteros fitófagos associados ao cajueiro no município de Jacaraú, Paraíba.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1190573"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1720.json</id>
+    <title>EN-1720 — Emulsão de fibra de caju como potencial revestimento para a conservação pós-colheita de tomate.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1190563"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1717.json</id>
+    <title>EN-1717 — Obtenção de enzimas para a indústria de alimentos.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/943276"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1716.json</id>
+    <title>EN-1716 — ‘Monitora Caju’: instruções para o uso do aplicativo.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1186771"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1715.json</id>
+    <title>EN-1715 — Validação microbiológica de análogo a queijo simbiótico elaborado com amêndoas de castanha-de-caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1186242"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1714.json</id>
+    <title>EN-1714 — Avaliação microbiológica de produtos vegetais análogos à carne elaborados com fibra de pedúnculo de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1185320"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1713.json</id>
+    <title>EN-1713 — A agroindústria do caju no Brasil: políticas públicas e transformações econômicas.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/420978"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1712.json</id>
+    <title>EN-1712 — Avaliação técnico-econômica da qualidade industrial de amêndoas de castanha de caju submetidas a controle fitossanitário.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1183085"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1711.json</id>
+    <title>EN-1711 — Elaboração e análise sensorial de barras de caju submetidas a diferentes formas de desidratação.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1183072"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1709.json</id>
+    <title>EN-1709 — Aplicação do óleo da amêndoa da castanha-de-caju na elaboração de creme vegetal com cacau.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1182446"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1708.json</id>
+    <title>EN-1708 — Mapeamento da traça-da-castanha e perdas econômicas causadas pela praga em regiões produtoras de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1181955"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1707.json</id>
+    <title>EN-1707 — Caju: histórico, clones da Embrapa e sistema de produção.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1181928"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1706.json</id>
+    <title>EN-1706 — Colheita e pós-colheita.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/908336"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1705.json</id>
+    <title>EN-1705 — Barra proteica à base de coproduto da amêndoa de castanha-de-caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1180408"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1704.json</id>
+    <title>EN-1704 — sem título</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1179686"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1703.json</id>
+    <title>EN-1703 — Kibe vegetal de fibra de caju, lentilha e macroalga: elaboração e características.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1178656"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1702.json</id>
+    <title>EN-1702 — Irrigação e fertirrigação em fruteiras e hortaliças.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1078336"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1701.json</id>
+    <title>EN-1701 — Zoneamento de risco econômico de Bactrocera dorsalis para produção de castanha de caju no Brasil.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1178149"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1700.json</id>
+    <title>EN-1700 — Zoneamento de risco econômico de Bactrocera carambolae para produção de castanha de caju no Brasil.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1178113"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1699.json</id>
+    <title>EN-1699 — Fruticultura Tropical: capacitação e experiências de sucesso.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1174039"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1697.json</id>
+    <title>EN-1697 — Tecnologia de fabricação de análogo a queijo cremoso simbiótico de amêndoas de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1176479"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1692.json</id>
+    <title>EN-1692 — Programa Nacional de Pesquisa de Caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/420973"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1690.json</id>
+    <title>EN-1690 — Efeito de biodefensivos no controle da traça-das-castanhas do cajueiro.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1175065"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1688.json</id>
+    <title>EN-1688 — Pesquisa avalia potencial nutritivo de subprodutos agroindustriais.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/529075"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1687.json</id>
+    <title>EN-1687 — Frutas nativas dos cerrados.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/549892"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1686.json</id>
+    <title>EN-1686 — Peixes comerciais do Tocantins.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1048151"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1685.json</id>
+    <title>EN-1685 — Rastreabilidade do caju (Anacardium occidentale L.) na agricultura familiar: desafios e oportunidades.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1173932"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1684.json</id>
+    <title>EN-1684 — Flutuação do inóculo nas epidemias de oídio do cajueiro-anão.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1172444"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1683.json</id>
+    <title>EN-1683 — Manual de gestão do banco ativo de germoplasma de caju da Embrapa Agroindústria Tropical</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1168075"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1682.json</id>
+    <title>EN-1682 — CONSERVAÇÃO dos recursos genéticos da mangabeira no Bioma Mata Atlântica: segunda semana.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1169935"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1681.json</id>
+    <title>EN-1681 — Perfil sensorial de amêndoas de castanha-de-caju de cultivares de cajueiro da Embrapa.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1169859"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1678.json</id>
+    <title>EN-1678 — Clones de cajueiro.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1148416"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1565.json</id>
+    <title>EN-1565 — A novidade somos nós mesmos: a espacialização identitária do produto turístico gastronômico nordestino brasileiro</title>
+    <link href="https://repositorio.ufrn.br/handle/123456789/65302"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0021; canal monitoramento e escavação; Consulta de origem: CO-0002</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1544.json</id>
+    <title>EN-1544 — CULTURA, REGIONALIDADE E CONSUMO: UM ESTUDO DA INFLUÊNCIA DOS SIGNIFICADOS CULTURAIS DA CAJUÍNA DO PIAUÍ SOBRE A DECISÃO DE COMPRA DOS CONSUMIDORES DA REGIÃO</title>
+    <link href="https://repositorio.uscs.edu.br/handle/123456789/547"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0021; canal monitoramento e escavação; Consulta de origem: CO-0002</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1543.json</id>
+    <title>EN-1543 — O efeito de cinco doses de cajuína em indivíduos destreinados submetidos a uma corrida até a exaustão</title>
+    <link href="http://repositorio.ufc.br/handle/riufc/80267"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0021; canal monitoramento e escavação; Consulta de origem: CO-0002</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1540.json</id>
+    <title>EN-1540 — Manual de adubação e calagem para o Estado da Bahia.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/145390"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1539.json</id>
+    <title>EN-1539 — CUIDADOS na pós-colheita do caju: segunda semana.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1164052"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1538.json</id>
+    <title>EN-1538 — Sobrevivência e desenvolvimento vegetativo de plantas de cajueiro-anão, clone ‘BRS 226’, em cultivo de sequeiro com uso de hidrogel.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1164025"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1536.json</id>
+    <title>EN-1536 — Moscas-das-frutas, suas plantas hospedeiras e parasitoides no estado de Pernambuco.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1162298"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1535.json</id>
+    <title>EN-1535 — Qualidade industrial e estimativa de receita de castanhas de cajueiro submetidas a diferentes tratamentos pós-colheita.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1161341"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1532.json</id>
+    <title>EN-1532 — sem título</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1160222"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0002</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1531.json</id>
+    <title>EN-1531 — Defensivos registrados no Ministério da Agricultura e Pecuária para a cultura do caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1160021"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1530.json</id>
+    <title>EN-1530 — Croquete de caju: elaboração e características.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1159345"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1526.json</id>
+    <title>EN-1526 — SemiáridoShow: catálogo de tecnologias, produtos e serviços 2023.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1156007"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1521.json</id>
+    <title>EN-1521 — Zoneamentos territoriais mensais de áreas brasileiras mais favoráveis ao desenvolvimento de Bactrocera carambolae.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1154535"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1518.json</id>
+    <title>EN-1518 — Relatório de atividades 1994-1995: avanços tecnológicos na agroindústria tropical.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/944150"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0002, CO-0003, CO-0004</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1517.json</id>
+    <title>EN-1517 — Manual de Pragas das Culturas do Baixo Madeira.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1148154"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1516.json</id>
+    <title>EN-1516 — Relatório técnico anual do Centro Nacional de Pesquisa de Caju 1987-1988.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1148134"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1515.json</id>
+    <title>EN-1515 — Hortaliça como comprar, conservar e consumir: pimenta caiena.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1147767"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1514.json</id>
+    <title>EN-1514 — Atributos da qualidade de pedúnculos de cajueiro para consumo in natura.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1147108"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1513.json</id>
+    <title>EN-1513 — Defensivos registrados no Ministério da Agricultura para a cultura do caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1146319"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1512.json</id>
+    <title>EN-1512 — Potencial proteico de pedúnculos de caju enriquecidos por leveduras.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/135444"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1510.json</id>
+    <title>EN-1510 — sem título</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1145418"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1507.json</id>
+    <title>EN-1507 — Grau de infestação da traça-da-castanha em clones de cajueiro-anão consorciados com fruteiras.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1144477"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1506.json</id>
+    <title>EN-1506 — Óleo da amêndoa de castanha-de-caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1141989"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1505.json</id>
+    <title>EN-1505 — Recomendações para avaliação rápida da qualidade de castanhas-de-caju destinadas ao beneficiamento industrial.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1141720"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1504.json</id>
+    <title>EN-1504 — ZONEAMENTO agroecológico do Nordeste do Brasil: diagnóstico e prognóstico.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/336837"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1503.json</id>
+    <title>EN-1503 — O mundo do cajulino.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/419024"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1502.json</id>
+    <title>EN-1502 — Isolado protéico obtido de subproduto do processamento da castanha de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1139043"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1500.json</id>
+    <title>EN-1500 — Produção do biogás a partir do bagaço de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/917336"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1499.json</id>
+    <title>EN-1499 — Amostragem e tamanho de amostra de castanha-de-caju como suporte às pesquisas com o cajueiro.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1135759"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1498.json</id>
+    <title>EN-1498 — Reserva particular do patrimônio Natural (RPPN) do caju: avaliação dos cinco primeiros anos de gestão.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1106457"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1497.json</id>
+    <title>EN-1497 — ZONEAMENTO agroecológico do Município de Porto Grande/AP: relatório final.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/344795"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1496.json</id>
+    <title>EN-1496 — Revestimento de amido e goma de cajueiro: influência sobre a estabilidade de amêndoas de castanhas-de-caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1134131"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1495.json</id>
+    <title>EN-1495 — DEFENSIVOS aprovados para a cultura do cajueiro: programa 28: Norte.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1133282"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1494.json</id>
+    <title>EN-1494 — DEFENSIVOS aprovados para a cultura do cajueiro: programa 28: Nordeste/Vale do Jequitinhonha.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1133281"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1493.json</id>
+    <title>EN-1493 — Bebida vegetal de amêndoa de castanha-de-caju desenvolvida pela Embrapa comparada a produto comercial.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1133084"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1492.json</id>
+    <title>EN-1492 — ESCOLHA correta do clone de cajueiro para o plantio: programa 24: Norte.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1132891"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1491.json</id>
+    <title>EN-1491 — ESCOLHA correta do clone de cajueiro para o plantio: programa 24: Nordeste/Vale do Jequitinhonha.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1132890"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1489.json</id>
+    <title>EN-1489 — DEFENSIVOS registrados no Ministério da Agricultura para a cultura do caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1132155"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1488.json</id>
+    <title>EN-1488 — Desempenho agronômico de clones de cajueiro em Santana do Matos, RN.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1131782"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1487.json</id>
+    <title>EN-1487 — USO do xarope de caju como alimento funcional: programa 10: Norte.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1131034"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1486.json</id>
+    <title>EN-1486 — USO do xarope de caju como alimento funcional: programa 10: Nordeste/Vale do Jequitinhonha.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1131030"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1484.json</id>
+    <title>EN-1484 — Quantificação e caracterização fitoquímica de castanhas de cajueiro-anão infestadas por Anacampsis phytomiella.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1129713"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1483.json</id>
+    <title>EN-1483 — Processamento de castanha de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1025377"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003, CO-0005</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1482.json</id>
+    <title>EN-1482 — O MANEJO da traça-da-castanha do cajueiro: programa 38: Nordeste/ Vale do Jequitinhonha.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1125233"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1481.json</id>
+    <title>EN-1481 — Diversidade genética e desempenho agronômico de híbridos de cajueiro: recursos para o melhoramento genético.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1124548"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1479.json</id>
+    <title>EN-1479 — Caju: o produtor pergunta, a Embrapa responde.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1015476"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1478.json</id>
+    <title>EN-1478 — Levantamento detalhado dos solos da Fazenda Caju, UEPAE/Aracaju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/336019"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1475.json</id>
+    <title>EN-1475 — Conservação da biodiversidade de besouros escarabeíneos (coleoptera: scarabaeidae) na Reserva Particular do Patrimônio Natural (RPPN) do Caju, Sergipe.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1119481"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1474.json</id>
+    <title>EN-1474 — Conservação da biodiversidade de abelhas e vespas solitárias em vegetação de restinga da Reserva Particular do Patrimônio Natural (RPPN) do Caju, Sergipe.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1112578"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1473.json</id>
+    <title>EN-1473 — Clones de cajueiro recomendados pela Embrapa Agroindústria Tropical.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1114138"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1471.json</id>
+    <title>EN-1471 — Extrato concentrado de carotenoides microencapsulado obtido a partir das fibras residuais do processamento do caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1113798"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1470.json</id>
+    <title>EN-1470 — Obtenção de concentrado e isolado proteicos de amêndoa de castanha-de-caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1109230"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1469.json</id>
+    <title>EN-1469 — Contribuição do consumidor para o desenvolvimento de novos sabores de suco tropical: estudo de caso com caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1110449"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1468.json</id>
+    <title>EN-1468 — Produtividade de castanha e infestação da traça-da-castanha Anacampsis phytomiella Busck (Lepidoptera: Gelechiidae) em cajueiro-anão, Pacajus - CE.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1109798"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1466.json</id>
+    <title>EN-1466 — VANTAGENS do cultivo do cajueiro-anão consorciado com pimenta: programa 14: Nordeste/Vale do Jequitinhonha.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1108616"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1463.json</id>
+    <title>EN-1463 — Suco clarificado de yacon: processo, caracterização e aceitabilidade de bebidas mistas formuladas com suco de caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098857"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1462.json</id>
+    <title>EN-1462 — Estabilidade durante armazenamento em temperatura ambiente de extrato hidrossolúvel de amêndoa de castanha-de-caju.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098845"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1461.json</id>
+    <title>EN-1461 — Biologia e aspectos morfológicos da mosca-branca-do-cajueiro Aleurodicus cocois (Curtis, 1846).</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1102063"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0002</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1460.json</id>
+    <title>EN-1460 — Efeito da torragem da amêndoa no aroma do óleo da castanha-de-caju segundo análise sensorial.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098259"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1459.json</id>
+    <title>EN-1459 — Extrato concentrado de carotenoides obtido da fibra do pedúnculo de caju: estabilidade durante o armazenamento refrigerado (5° C).</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098224"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003, CO-0005</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1458.json</id>
+    <title>EN-1458 — Castanha de caju e sua amêndoa: composição e importância dos ácidos graxos - produção e comércio mundiais.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1098166"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1456.json</id>
+    <title>EN-1456 — Método para estimar a oferta de lenha na substituição de copa em cajueiros.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1093331"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001, CO-0003</summary>
+  </entry>
+  <entry>
+    <id>https://github.com/Indalt/cultura-liquida/blob/main/entrada/EN-1455.json</id>
+    <title>EN-1455 — Óleo da amêndoa de castanha-de-caju: métodos de extração.</title>
+    <link href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1093151"/>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <summary>AM-0029; canal monitoramento e escavação; Consulta de origem: CO-0001</summary>
+  </entry>
+</feed>

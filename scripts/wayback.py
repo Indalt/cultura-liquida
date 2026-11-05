@@ -1,7 +1,9 @@
 """Cópia no Wayback (l. 509), no piloto só a captura que já existe (D-043, K-124): consulta a
 Availability API do Internet Archive para as Entradas sem cópia e grava na Entrada o endereço da captura
 existente. **Não pede captura nova** ao Save Page Now: a captura nova é cópia além da citação, barra agora
-(F-0004, D-042) e volta no K-010.
+(F-0004, D-042); pela D-048, a captura nova sai do plano e não volta.
+**Fora das rotinas diárias (D-048, K-112):** a consulta da cópia da página do registro não roda na rotina;
+o Wayback só é lido pelo `ler_fonte.py`, quando a fonte não abre (as funções daqui são as dele).
 
 - Sem captura existente, a Entrada fica com o link permanente, e o script grava uma Falta "sem cópia
   arquivada", dita (tipo "outro", uma por Entrada, nunca repetida); o trecho, o hash e a data vêm no

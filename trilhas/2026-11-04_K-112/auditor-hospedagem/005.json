@@ -1,0 +1,20 @@
+{
+ "id": "C112h.5",
+ "pergunta": "Rotinas usam as habilidades (.claude/skills) do repositorio?",
+ "resposta": "CONFIRMA com ressalva (l. 53): fora de threads de um projeto do claude.ai, as habilidades commitadas no repositorio clonado entram. Dentro de projeto, a pagina de projetos diz que habilidades de repositorio NAO carregam (l. 349).",
+ "partes": [
+  {
+   "afirmacao": "Habilidades do repositorio clonado",
+   "citacao": "Outside a project's threads, those skills include the ones committed to the cloned repository.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Em threads de projeto nao carregam",
+   "citacao": "Skills under `.claude/skills/` | Not loaded.",
+   "url": "https://code.claude.com/docs/en/claude-projects",
+   "nivel": "oficial"
+  }
+ ],
+ "observacao": "Ressalva da pagina: o texto liga a regra a \"project threads\"; uma rotina agendada nao e thread de projeto pelo texto da pagina de rotinas, mas a pagina nao a declara fora de projeto de modo expresso."
+}

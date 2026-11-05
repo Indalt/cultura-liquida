@@ -26,6 +26,7 @@ import registrar_log
 
 ROBO = "CulturaLiquida-coleta/0.1 (+https://github.com/Indalt/cultura-liquida)"
 INTERVALO_S = 1.0  # 1 pedido por segundo (brief, bloco 5)
+CABECALHOS_GRAVADOS = {"x-wp-total", "x-wp-totalpages", "content-type"}  # os que os adaptadores leem (K-112)
 SINAIS_ANTIROBO = ("captcha", "cf-chl", "challenge-platform", "just a moment", "verificação de navegador")
 
 
@@ -85,7 +86,8 @@ class Cliente:
         if self.gravar_fixtures:
             self.gravar_fixtures.mkdir(parents=True, exist_ok=True)
             (self.gravar_fixtures / _nome_fixture(metodo, url)).write_text(json.dumps(
-                {"url": resp.url, "status": resp.status, "headers": {}, "corpo": resp.corpo},
+                {"url": resp.url, "status": resp.status, "corpo": resp.corpo,
+                 "headers": {k: v for k, v in resp.headers.items() if k.lower() in CABECALHOS_GRAVADOS}},
                 ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         return resp
 
@@ -168,7 +170,8 @@ class Execucao:
             raise SystemExit("log reprovado: " + "; ".join(erros))
         if self.simular:
             return "log simulado (nada gravado)"
-        return registrar_log.gravar(e).relative_to(RAIZ).as_posix()
+        destino = registrar_log.gravar(e)
+        return destino.relative_to(RAIZ).as_posix() if destino.is_relative_to(RAIZ) else destino.as_posix()
 
 
 def gravar_json(arq: Path, obj: dict) -> None:

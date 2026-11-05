@@ -1,0 +1,26 @@
+{
+ "id": "C112.3",
+ "pergunta": "O que e o Flat Data do GitHub Next (Action que busca dados externos por agenda e faz commit no repositorio)?",
+ "resposta": "A pagina do GitHub Next (curl, HTTP 200) descreve o Flat Data como um padrao para trazer conjuntos de dados para o repositorio e versiona-los, com uma Action que busca dados de qualquer endpoint HTTP em agenda. O exemplo da pagina busca o preco do Bitcoin a cada cinco minutos e guarda no repositorio. A pagina nao usa literalmente a palavra commit nas linhas lidas (grep: flat|commit|schedul|fetch|external|repository); 'versionar no repositorio' e o que ela diz. E um experimento do GitHub Next, nao um termo de uso.",
+ "observacao": "O repositorio github.com/githubocto/flat nao foi aberto (teto de chamadas). A pagina nao e clausula de termos: so mostra que o GitHub publica essa pratica como exemplo.",
+ "partes": [
+  {
+   "afirmacao": "O que e o Flat",
+   "nivel": "oficial",
+   "url": "https://githubnext.com/projects/flat-data/",
+   "citacao": "Flat explores how to make it easy to work with data in git and GitHub. It builds on the git scraping approach pioneered by Simon Willison to offer a simple pattern for bringing working datasets into your repositories and versioning them"
+  },
+  {
+   "afirmacao": "A Action busca dados",
+   "nivel": "oficial",
+   "url": "https://githubnext.com/projects/flat-data/",
+   "citacao": "The GitHub action which fetches and transforms data."
+  },
+  {
+   "afirmacao": "Agenda e qualquer URL",
+   "nivel": "oficial",
+   "url": "https://githubnext.com/projects/flat-data/",
+   "citacao": "It allows you to download any kind of data (JSON, CSV, images, text files, zip folders, etc.) into your repositories at a repeatable schedule. As long as what you're fetching has a URL, it can be downloaded into a GitHub repo."
+  }
+ ]
+}

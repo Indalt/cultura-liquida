@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"C:/Users/alqui/AppData/Local/Programs/Python/Python312/python.exe\" \"${CLAUDE_PROJECT_DIR}/scripts/hook_subagent_stop.py\"",
+            "command": "sh \"${CLAUDE_PROJECT_DIR}/scripts/hook_subagent_stop.sh\"",
             "timeout": 30
           }
         ]

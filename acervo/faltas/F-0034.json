@@ -1,0 +1,31 @@
+{
+  "id": "F-0034",
+  "tipo": "impedimento_juridico",
+  "subtipo_juridico": "outro",
+  "o_que_falta": "A leitura dos Terms of Use do Internet Archive sobre acesso automatizado: a busca de metadados por script diário (AM-0007) e a consulta automática da cópia arquivada (Availability API e leitura da cópia), ambas com robô identificado e sem cadastro.",
+  "por_que": "A página dos termos abriu sem o texto (casca de JavaScript); sem lê-los não se descarta proibição expressa. A página de desenvolvedores exige User-Agent descritivo e respeito a 429, e o robots.txt só veda /control/ e /report/.",
+  "norma": {
+    "referencia": "Internet Archive, Bots, LLMs, and Automated Access",
+    "trecho": "All automated requests to archive.org must include a descriptive User-Agent header",
+    "url": "https://archive.org/developers/bots.html",
+    "nivel": "oficial"
+  },
+  "vale_para": "agora",
+  "caminho_de_liberacao": {
+    "guia": "G-termos-internet-archive (a preparar)",
+    "estado": "não iniciado"
+  },
+  "onde_aparece": [
+    "ambientes/AM-0007.json (busca pela rotina, K-112)",
+    "scripts/wayback.py",
+    "scripts/ler_fonte.py (cópia arquivada só na falha)"
+  ],
+  "criada_por": "juridico (triagem-juridica, K-112)",
+  "data": "2026-11-05",
+  "nota": "Triagem do juridico no K-112 (trilhas/2026-11-04_K-112/triagem-fontes.json, item AM-0007). Liga-se à F-0005 (os termos sobre o Save Page Now, também não lidos). Enquanto aberta, o AM-0007 fica fora da rotina e o ler_fonte.py não consulta cópia (wayback.falta_que_barra); a saída é Vicente ler os termos no navegador, cartão de Falta jurídica a liberar (D-037).",
+  "origem_registro": {
+    "criado_por": "juridico (triagem-juridica 0.2.0), gravada pelo curador",
+    "data": "2026-11-05",
+    "execucao": "EX-0102"
+  }
+}

@@ -1,0 +1,31 @@
+{
+ "ambiente": "AM-0061",
+ "fonte": "BCR do IPHAN",
+ "termos": {
+  "proibicao_expressa": null,
+  "trecho": "não conferido: sem página de termos ou licença na página inicial (curl com grep e WebFetch, 05/11/2026)",
+  "url": "https://bcr.iphan.gov.br/",
+  "nivel": "não conferido",
+  "olhado": "página inicial"
+ },
+ "robots": {
+  "url": "https://bcr.iphan.gov.br/robots.txt",
+  "status": 200,
+  "trecho": "User-agent: *; Disallow: /wp-admin/; Allow: /wp-admin/admin-ajax.php; Sitemap: https://bcr.iphan.gov.br/wp-sitemap.xml"
+ },
+ "cadastro_ou_chave": "nenhum (API do Tainacan abriu sem cadastro em 29/10, ficha)",
+ "ritmo": "sem texto de ritmo; ficha anota X-Robots-Tag noindex (indexação, não veda leitura)",
+ "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+ "perguntas": [
+  "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+  "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+  "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+  "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+  "5 Imagem e voz: não se aplica (só link)",
+  "6 Crianças: não se aplica",
+  "7 Substância controlada: não se aplica",
+  "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+ ],
+ "conclusao": "sem Falta pela regra (D-042): robots não veda /wp-json/; termos NÃO CONFERIDOS (nada a ler); não é autorização",
+ "faltas": []
+}

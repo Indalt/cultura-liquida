@@ -1,0 +1,25 @@
+{
+ "id": "C112h.11",
+ "pergunta": "Sessoes de nuvem carregam subagentes de .claude/agents/ e nao ha cobranca a parte pela maquina; rotinas sao sessoes de nuvem?",
+ "resposta": "CONFIRMA (web l. 13 e 300; rotinas l. 53): fora de threads de projeto, subagentes de .claude/agents/ do repositorio carregam automaticamente; a sessao conta no limite do plano e nao tem cobranca separada pela VM; a rotina roda como sessao de nuvem completa. Para rotinas, a conclusao vem de duas paginas oficiais juntas (rotina = sessao de nuvem; sessao carrega agents), sem frase unica sobre rotinas e agents.",
+ "partes": [
+  {
+   "afirmacao": "Subagentes carregam",
+   "citacao": "Outside a project's threads, subagents defined in your repo's `.claude/agents/` load automatically.",
+   "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Sem cobranca separada pela VM",
+   "citacao": "there's no separate charge for the cloud VM.",
+   "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Rotina e sessao de nuvem completa",
+   "citacao": "Scheduled tasks run autonomously as full Claude Code cloud sessions.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

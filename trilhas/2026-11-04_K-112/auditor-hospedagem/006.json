@@ -1,0 +1,19 @@
+{
+ "id": "C112h.6",
+ "pergunta": "Rede padrao da rotina so com dominios permitidos; fora deles 403?",
+ "resposta": "CONFIRMA (l. 114, 434, 452): ambiente Default com acesso Trusted (lista padrao); host fora da lista falha com 403 e x-deny-reason host_not_allowed. Da para usar Custom (dominios proprios) ou Full (sem restricao). Trafego de conectores MCP passa pelos servidores da Anthropic e nao precisa de dominio na lista.",
+ "partes": [
+  {
+   "afirmacao": "403 fora da lista",
+   "citacao": "Requests on that path to hosts outside the allowlist fail with `403` and `x-deny-reason: host_not_allowed`.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Full libera a rede",
+   "citacao": "Select **Full** instead for unrestricted access.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

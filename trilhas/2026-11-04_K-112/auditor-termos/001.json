@@ -1,0 +1,32 @@
+{
+ "id": "C112.1",
+ "pergunta": "Texto inteiro da secao Actions dos GitHub Terms for Additional Products and Features: o que e vedado ou permitido.",
+ "resposta": "A secao (aberta com curl em 04/11/2026, HTTP 200) veda, mesmo com self-hosted runners: criptomineracao; acesso nao autorizado a servicos; oferecer o Actions como servico comercial; atividade que sobrecarregue os servidores de forma desproporcional ao beneficio (exemplos: CDN, aplicacao serverless); e, com runners hospedados pelo GitHub, qualquer atividade sem relacao com producao, teste, implantacao ou publicacao do projeto de software do repositorio. O texto nao menciona agendamento, consulta a APIs de terceiros nem coleta de dados. Frases numeradas pela extracao de texto da pagina (linhas 16 a 25), nao pelo HTML.",
+ "observacao": "Interpretacao (nao e parecer): a frase 'unrelated to the production, testing, deployment, or publication of the software project associated with the repository' nao define 'software project'; o texto nao diz se um repositorio de dados/metadados publicado conta. A frase sobre 'develop and test your application(s)' esta na mesma secao. O auditor nao decide o enquadramento.",
+ "partes": [
+  {
+   "afirmacao": "Regra geral e lista de usos que nao devem ocorrer",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "citacao": "Actions and any elements of the Actions product or service may not be used in violation of the Agreement, the GitHub Acceptable Use Policies, or the GitHub Actions service limitations set forth in the Actions documentation. Additionally, regardless of whether an Action is using self-hosted runners, Actions should not be used for:"
+  },
+  {
+   "afirmacao": "Itens da lista de usos vedados",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "citacao": "Cryptomining; | Disrupting, gaining, or attempting to gain unauthorized access to, any service, device, data, account, or network (other than those authorized by the GitHub Bug Bounty program); | The provision of a stand-alone or integrated application or service offering the Actions product or service, or any elements of the Actions product or service, for commercial purposes; | Any activity that places a burden on our servers, where that burden is disproportionate to the benefits provided to users (for example, don't use Actions as a content delivery network or as part of a serverless application, but a low benefit Action could be ok if it's also low burden); or | If using GitHub-hosted runners, any other activity unrelated to the production, testing, deployment, or publication of the software project associated with the repository where GitHub Actions are used."
+  },
+  {
+   "afirmacao": "Monitoramento e sancoes",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "citacao": "GitHub may monitor your use of GitHub Actions. Misuse of GitHub Actions may result in termination of jobs, restrictions in your ability to use GitHub Actions, disabling of repositories created to run Actions in a way that violates these Terms, or in some cases, suspension or termination of your GitHub account."
+  },
+  {
+   "afirmacao": "Clausula de uso para desenvolvimento e teste",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "citacao": "You may only access and use GitHub Actions to develop and test your application(s). Only one licensed user may access a virtual machine provided by Actions at any time."
+  }
+ ]
+}

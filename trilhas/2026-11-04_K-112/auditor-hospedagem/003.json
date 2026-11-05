@@ -1,0 +1,13 @@
+{
+ "id": "C112h.3",
+ "pergunta": "Rotinas rodam com o computador desligado?",
+ "resposta": "CONFIRMA (l. 13): rodam em infraestrutura gerenciada pela Anthropic (ou ambiente self-hosted da organizacao) e seguem com o notebook fechado.",
+ "partes": [
+  {
+   "afirmacao": "Rodam na nuvem sem a maquina do usuario",
+   "citacao": "so they keep working when your laptop is closed.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

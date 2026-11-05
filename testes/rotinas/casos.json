@@ -1,0 +1,136 @@
+{
+  "habilidade": "rotinas sem IA (K-112, bloco 10a)",
+  "rodada": "A",
+  "casos": [
+    {
+      "nome": "agenda: intervalo pelo rendimento",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "agenda"
+      ],
+      "saida_contem": "agenda-0.1: intervalos [1, 2, 4, 8, 1, 2]",
+      "criterio": "o intervalo começa no mínimo da ficha, dobra a cada rodada sem novidade até o máximo, volta ao mínimo com novidade, e o erro da fonte não mede rendimento (D-048)"
+    },
+    {
+      "nome": "agenda: porta nova fechada com a fila cheia",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "agenda-fila-cheia"
+      ],
+      "saida_contem": "fila cheia",
+      "criterio": "com mais de 15 cartões à espera de Vicente, ambiente sem rodada anterior não abre (l. 472)"
+    },
+    {
+      "nome": "rotina: duas rodadas seguidas, a segunda só com o não visto",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "duas-rodadas"
+      ],
+      "saida_contem": "nada gravado além de trilhas/relatorios",
+      "criterio": "a 1ª rodada grava as Entradas na faixa da rotina; a 2ª não acha ID novo, volta o que mudou e grava só a linha da rodada e o relatório (D-048)"
+    },
+    {
+      "nome": "feed: Consulta de origem e sem regravar sem novidade",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "feed"
+      ],
+      "saida_contem": "feed com a Consulta de origem",
+      "criterio": "o feed por ID não visto traz a Consulta de origem; sem Entrada nova, não muda (l. 428)"
+    },
+    {
+      "nome": "agenda que não dobrasse reprova",
+      "espera": "reprova",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "erro-agenda-sem-regra"
+      ],
+      "saida_contem": "REPROVA como esperado",
+      "criterio": "caso que reprova: três rodadas sem novidade não dão o intervalo mínimo"
+    },
+    {
+      "nome": "ler_fonte: cópia arquivada só na falha",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "copia-na-falha"
+      ],
+      "saida_contem": "lida pela cópia arquivada que já existe",
+      "criterio": "a página que responde 404 é lida pela captura que já existe no Wayback, sem pedir captura nova (D-048, D-043); respostas sintéticas; as Faltas e fichas vêm de uma pasta vazia, para testar só o caminho da leitura"
+    },
+    {
+      "nome": "ler_fonte: bloqueio contra robô não vai à cópia",
+      "espera": "reprova",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "sem-copia-no-bloqueio"
+      ],
+      "saida_contem": "a cópia não se consulta",
+      "criterio": "caso que reprova: com 403 (proteção anti-robô), a cópia arquivada não se consulta (D-044)"
+    },
+    {
+      "nome": "Consulta geral: classe E descritor no filtro local",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "geral-classe-e-descritor"
+      ],
+      "saida_contem": "a classe E um descritor",
+      "criterio": "a Consulta só por descritores com a classe 'bebida' acha só o texto com a classe e um descritor; a sem classe segue a regra antiga"
+    },
+    {
+      "nome": "gerar_termo --gerais não repete Consulta gravada",
+      "espera": "passa",
+      "comando": [
+        "scripts/gerar_termo.py",
+        "--gerais"
+      ],
+      "saida_contem": "já gravada: bebida + descritores processuais do piloto",
+      "criterio": "a Consulta geral CO-0008 já gravada não se propõe de novo (consultas-gerais-0.1)"
+    },
+    {
+      "nome": "api-cursor: OpenAlex e Scrape API pela mesma regra (respostas sintéticas)",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "cursor-dois-formatos"
+      ],
+      "saida_contem": "api-cursor: a mesma regra",
+      "criterio": "o adaptador por protocolo lê duas APIs com cursor só pela linha de configuração"
+    },
+    {
+      "nome": "tainacan: lista de buscas, total somado e cursor (respostas sintéticas)",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "tainacan-buscas"
+      ],
+      "saida_contem": "tainacan: uma busca por forma",
+      "criterio": "a busca do WordPress sem OU vira uma busca por forma; a 1ª página da busca seguinte não conta como repetida"
+    },
+    {
+      "nome": "tainacan: tradução sem a lista de buscas reprova",
+      "espera": "reprova",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "erro-tainacan-sem-buscas"
+      ],
+      "saida_contem": "REPROVA como esperado",
+      "criterio": "caso que reprova: sem a lista de buscas testada, o adaptador não roda"
+    },
+    {
+      "nome": "ler_fonte: a Falta jurídica aberta barra a cópia arquivada",
+      "espera": "passa",
+      "comando": [
+        "testes/rotinas/teste_rotinas.py",
+        "copia-barrada-pela-falta"
+      ],
+      "saida_contem": "a cópia não se consulta",
+      "criterio": "no acervo real, a F-0034 (termos do Internet Archive não lidos, vale agora) barra a consulta da cópia pela regra do wayback.py; quando for liberada, este caso muda"
+    }
+  ]
+}

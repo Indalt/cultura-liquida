@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 100 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 104 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -434,6 +434,10 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 98, Suspensão de teto no orcamento.py | D; P | K-002 |
 | 99, Regra educacao-0.1: por item ou por frase | D | a definir pelo planejamento |
 | 100, Lista de nomes prováveis larga demais | D | a definir pelo planejamento |
+| 101, números da agenda-0.1 | P; D | a definir pelo planejamento |
+| 102, ritmo da cópia arquivada | P; D | a definir pelo planejamento |
+| 103, regra das Consultas gerais | P; D | a definir pelo planejamento |
+| 104, atividade e 60 dias do Actions | O | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-043
 

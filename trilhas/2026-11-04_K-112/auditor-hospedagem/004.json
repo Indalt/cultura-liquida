@@ -1,0 +1,19 @@
+{
+ "id": "C112h.4",
+ "pergunta": "Rotinas gastam a cota da assinatura?",
+ "resposta": "CONFIRMA (l. 462 e 63).",
+ "partes": [
+  {
+   "afirmacao": "Gasto da cota da assinatura",
+   "citacao": "Scheduled tasks draw down subscription usage the same way interactive sessions do.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Contam na conta individual",
+   "citacao": "their runs count against your account's usage and limits",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

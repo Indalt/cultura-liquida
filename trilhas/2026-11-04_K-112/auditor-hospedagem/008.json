@@ -1,0 +1,20 @@
+{
+ "id": "C112h.8",
+ "pergunta": "Envio para ramificacoes claude/ por padrao; regra que a conta conectada pode contornar nao barra?",
+ "resposta": "CONFIRMA (l. 104 e 376): ramificacoes com prefixo claude/ por padrao, ou outra se o prompt mandar; protecao de ramo e rulesets do GitHub valem sobre o acesso conectado, e regra que esse acesso pode contornar nao bloqueia o envio.",
+ "partes": [
+  {
+   "afirmacao": "Prefixo claude/ por padrao",
+   "citacao": "Claude pushes its work to a branch prefixed with `claude/` unless your prompt directs it to push to another branch.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Regra contornavel pela conta nao barra",
+   "citacao": "so a rule that access can bypass doesn't block a run's push.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ],
+ "observacao": "Para a D-048 (ferramenta junta ramificacao pelo portao): o que protege o main e o portao do projeto; a protecao do GitHub nao basta se o dono pode contornar (enforce_admins false)."
+}

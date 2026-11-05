@@ -1,0 +1,19 @@
+{
+ "id": "C112h.1",
+ "pergunta": "Rotinas do Claude Code: sao previa de pesquisa? (mapa de 17/10)",
+ "resposta": "CONFIRMA, com atualizacao de nome: a pagina (versao .md, curl 04/11/2026, HTTP 200, l. 11 e 13) chama o recurso de scheduled tasks (cloud scheduled task, formerly a routine); a URL segue /routines e o nome routines ainda aparece na pagina.",
+ "partes": [
+  {
+   "afirmacao": "O recurso segue em previa de pesquisa",
+   "citacao": "Scheduled tasks are in research preview. Behavior, limits, and the API surface may change.",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Nome atual: scheduled task; routine e o nome anterior",
+   "citacao": "A cloud scheduled task, formerly a routine, is a saved Claude Code configuration",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

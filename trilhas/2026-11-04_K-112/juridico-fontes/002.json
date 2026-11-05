@@ -1,0 +1,56 @@
+{
+ "ambiente": "AM-0007",
+ "fonte": "Internet Archive",
+ "termos": {
+  "proibicao_expressa": null,
+  "trecho": "Terms of Use NÃO LIDOS (about/terms.php abriu 200, casca de JavaScript sem texto). Página de desenvolvedores: 'All automated requests to archive.org must include a descriptive User-Agent header'; 'Honor 429 Too Many Requests responses and Retry-After headers'; 'Authenticate when possible' (recomendação)",
+  "url": "https://archive.org/developers/bots.html",
+  "nivel": "oficial só para a página de desenvolvedores; termos não conferidos",
+  "olhado": "bots.html (grep); terms.php"
+ },
+ "robots": {
+  "url": "https://archive.org/robots.txt",
+  "status": 200,
+  "trecho": "User-agent: *; Disallow: /control/; Disallow: /report/; Sitemap: https://archive.org/sitemap/sitemap.xml"
+ },
+ "cadastro_ou_chave": "não conferido que a busca exija cadastro ou chave; o projeto não cadastra (D-048)",
+ "ritmo": "só lido: respeitar 429 e Retry-After; números não lidos",
+ "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+ "perguntas": [
+  "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+  "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+  "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+  "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+  "5 Imagem e voz: não se aplica (só link)",
+  "6 Crianças: não se aplica",
+  "7 Substância controlada: não se aplica",
+  "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+ ],
+ "conclusao": "Falta: Terms of Use não lidos (continua a F-0005); robots e página de bots não proíbem a busca por API com robô identificado, mas a proibição dos termos não foi descartada; vale_para agora",
+ "faltas": [
+  {
+   "id": "F-90001",
+   "tipo": "impedimento_juridico",
+   "subtipo_juridico": "outro",
+   "o_que_falta": "Leitura dos Terms of Use do Internet Archive sobre acesso automatizado e coleta de metadados pela busca por script diário com robô identificado.",
+   "por_que": "A página dos termos abriu sem o texto (casca de JavaScript); sem lê-los não se descarta proibição expressa. A página de desenvolvedores exige User-Agent descritivo e respeito a 429, e o robots.txt só veda /control/ e /report/.",
+   "norma": {
+    "referencia": "Internet Archive, Bots, LLMs, and Automated Access",
+    "trecho": "All automated requests to archive.org must include a descriptive User-Agent header",
+    "url": "https://archive.org/developers/bots.html",
+    "nivel": "oficial"
+   },
+   "vale_para": "agora",
+   "caminho_de_liberacao": {
+    "guia": "G-termos-internet-archive (a preparar)",
+    "estado": "não iniciado"
+   },
+   "onde_aparece": [
+    "scripts/rotina_diaria.py"
+   ],
+   "criada_por": "juridico (triagem-juridica, K-112)",
+   "data": "2026-11-05",
+   "nota": "Pode ser agregada à F-0005. Resolve-se lendo os termos no navegador. Rótulos de tipo e subtipo a conferir."
+  }
+ ]
+}

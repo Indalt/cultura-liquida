@@ -1,0 +1,13 @@
+{
+ "id": "C112h.7",
+ "pergunta": "Commits da rotina saem com o usuario do GitHub conectado?",
+ "resposta": "CONFIRMA (l. 63): commits e PRs levam o usuario do GitHub conectado; a rotina pertence a conta individual do claude.ai e nao e compartilhada.",
+ "partes": [
+  {
+   "afirmacao": "Commits com o usuario conectado",
+   "citacao": "Commits and pull requests carry your GitHub user",
+   "url": "https://code.claude.com/docs/en/routines",
+   "nivel": "oficial"
+  }
+ ]
+}

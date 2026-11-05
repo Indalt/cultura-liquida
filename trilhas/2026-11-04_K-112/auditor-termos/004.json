@@ -1,0 +1,19 @@
+{
+ "id": "C112.4",
+ "pergunta": "Quem recebe a notificacao quando um workflow agendado falha?",
+ "resposta": "Segundo a pagina oficial (curl, HTTP 200, apos redirecionamento do caminho antigo), as notificacoes de workflows agendados vao ao usuario que criou o workflow; se outro usuario altera a sintaxe cron, passam a ir a ele; se o workflow for desativado e reativado, vao a quem o reativou. A pagina diz tambem que o usuario pode escolher receber so as falhas, por e-mail ou web, conforme as preferencias de notificacao.",
+ "partes": [
+  {
+   "afirmacao": "Destinatario das notificacoes de workflow agendado",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/actions/concepts/workflows-and-actions/notifications-for-workflow-runs",
+   "citacao": "Notifications for scheduled workflows are sent to the user who initially created the workflow. If a different user updates the cron syntax, in the schedule event in the workflow file, subsequent notifications will be sent to that user instead. If a scheduled workflow is disabled and then re-enabled, notifications will be sent to the user who re-enabled the workflow rather than the user who last modified the cron syntax."
+  },
+  {
+   "afirmacao": "Escolha de receber so falhas",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/actions/concepts/workflows-and-actions/notifications-for-workflow-runs",
+   "citacao": "You can also choose to receive a notification only when a workflow run has failed."
+  }
+ ]
+}

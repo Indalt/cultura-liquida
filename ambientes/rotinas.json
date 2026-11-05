@@ -1,0 +1,44 @@
+{
+  "nota": "Configuração das rotinas sem IA (bloco 10a; D-048; l. 430, 497): uma linha por ambiente, com as Consultas que a rotina roda nele, o teto de chamadas da rodada e a cadência que a fonte aceita (da ficha de acesso). O que roda em cada dia é decidido por scripts/agendar.py (agenda-0.1), pelo rendimento medido nas rodadas (trilhas/relatorios/rodadas.jsonl). Um ambiente novo entra com ficha testada (também no runner do Actions), a linha em ambientes/adaptadores.json e uma linha aqui. Versão 0.1.0 (04/11/2026, K-112).",
+  "versao": "rotinas-0.1",
+  "AM-0021": {
+    "ligado": true,
+    "consultas": [
+      "CO-0001",
+      "CO-0002",
+      "CO-0003",
+      "CO-0004",
+      "CO-0005"
+    ],
+    "teto_chamadas": 120,
+    "cadencia_min_dias": 1,
+    "cadencia_max_dias": 28,
+    "fonte_da_cadencia": "ficha de acesso de 23/10/2026: nenhum limite de uso publicado; 1 pedido por segundo, robô identificado"
+  },
+  "AM-0029": {
+    "ligado": true,
+    "consultas": [
+      "CO-0001",
+      "CO-0002",
+      "CO-0003",
+      "CO-0004",
+      "CO-0005",
+      "CO-0008"
+    ],
+    "teto_chamadas": 800,
+    "cadencia_min_dias": 7,
+    "cadencia_max_dias": 28,
+    "fonte_da_cadencia": "ficha de acesso de 23/10/2026: a busca por texto é vedada ao robô e a via é a colheita OAI-PMH inteira (cerca de 600 páginas, 59.365 registros em 24/10); sem limite publicado, a passada inteira não se repete antes de 7 dias (valor provisório)",
+    "nota_consultas": "CO-0008 (Consulta geral, só descritores: bebida E um descritor processual do piloto) entra pelo filtro local da colheita, sem pedido por Consulta"
+  },
+  "AM-0001": {
+    "ligado": false,
+    "consultas": [],
+    "motivo": "via humana: 403 com desafio do Cloudflare (ficha do K-106; D-044, teste de 24/10 não passou)"
+  },
+  "AM-0061": {
+    "ligado": false,
+    "consultas": [],
+    "motivo": "adaptador do Tainacan em construção no K-112 (insumo 73); liga depois da resposta gravada, do caso que reprova, da rodada real curta e do teste no runner"
+  }
+}

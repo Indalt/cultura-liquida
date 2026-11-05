@@ -1,0 +1,31 @@
+{
+ "ambiente": "AM-0026",
+ "fonte": "OpenAlex",
+ "termos": {
+  "proibicao_expressa": null,
+  "trecho": "Termos em PDF NÃO LIDOS (openalex.org/terms é casca de JavaScript). Documentação: 'OpenAlex data is free, and so is casual use of the API — you can make basic queries with no key at all.'",
+  "url": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+  "nivel": "oficial para a documentação; termos e CC0 não conferidos (CC0 só pela ficha)",
+  "olhado": "página de autenticação (grep)"
+ },
+ "robots": {
+  "url": "https://api.openalex.org/robots.txt",
+  "status": 200,
+  "trecho": "User-agent: *; Allow: /"
+ },
+ "cadastro_ou_chave": "sem chave para uso básico; a chave grátis pede conta com e-mail e o projeto não cria (D-048); cursor exige chave: só a primeira página",
+ "ritmo": "oficial: 10 pedidos/s sem chave; 429 ao passar do orçamento diário (US$ 0,10 sem chave, pela ficha)",
+ "reflexao": "ato: buscar por API e gravar só metadados (ID, link, título, ano, hash), robô identificado, 1 pedido/s; pública: ver robots; norma: ver termos; bate/barra: ver conclusão",
+ "perguntas": [
+  "1 Direito autoral: sem Falta pela regra; só metadados factuais, sem texto nem autoria (art. 46, III)",
+  "2 Conhecimento tradicional: sem Falta pela regra no ato (só localizador); detalhe para publicar é outro ato",
+  "3 Costume: não se aplica ao ato; se surgir, a Falta é do item",
+  "4 Dados pessoais: sem autoria; título com nome passa pelo procurar_dado_pessoal; sem Falta pela regra",
+  "5 Imagem e voz: não se aplica (só link)",
+  "6 Crianças: não se aplica",
+  "7 Substância controlada: não se aplica",
+  "8 Licença de quem contribuiu: não se aplica ao degrau 1"
+ ],
+ "conclusao": "sem Falta pela regra (D-042): a documentação convida ao uso sem chave e o robots é aberto; termos em PDF e CC0 NÃO CONFERIDOS",
+ "faltas": []
+}

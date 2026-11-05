@@ -14,6 +14,14 @@ fica a página. Grava na pasta temporária das fontes (a mesma do `localizar_tre
 Nada disso entra no Git: a pasta temporária fica fora do repositório, e o script recusa o contrário.
 Ao fim do lote, `--apagar <rotulo>` apaga os arquivos do lote (o texto integral não fica).
 
+**Cópia arquivada, só na falha (D-048; ler-fonte-0.2):** quando a página não abre por erro que não é
+bloqueio (HTTP 404, 410, 5xx, rede), o script consulta a captura que já existe no Wayback (Availability
+API; nunca pede captura nova, D-043) e lê a cópia (`/web/<data>id_/<url>`). Nunca quando a falha é
+bloqueio contra robô (403, captcha, verificação de navegador; D-044) ou o robots.txt, nunca para link de
+host cuja ficha registra barreira, e nunca em Entrada com proteção (D-043, 2; `wayback.protecao_barra`).
+O Internet Archive recebe no máximo 1 pedido a cada 10 s (valor provisório; insumos 78 e 96), e o
+primeiro HTTP 429 encerra a consulta de cópias no lote. O manifesto diz "via" (direto ou a cópia).
+
 O que não faz: não cria Fonte nem Trecho (é o avaliador, com o `localizar_trecho.py`, e o curador
 grava); não lê página vedada pelo robots.txt nem com desafio anti-robô (vira erro no manifesto e no
 log, e a Entrada fica para a via humana); não baixa PDF acima de `--max-mb` (padrão 60).
@@ -37,8 +45,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_json  # noqa: E402
 from _coleta import BloqueioAntiRobo, BloqueioRobos, Cliente, Execucao  # noqa: E402
 from localizar_trecho import extrair_texto, pasta_temporaria, sha256  # noqa: E402
+import wayback  # noqa: E402
 
-VERSAO = "ler-fonte-0.1"
+VERSAO = "ler-fonte-0.2"
+IA_INTERVALO_S = 10.0  # ritmo provisório para o Internet Archive (insumos 78 e 96: 429 a 1 pedido por segundo); para no primeiro 429
 
 
 class _Links(HTMLParser):
@@ -109,6 +119,47 @@ def ler(cli: Cliente, rotulo: str, url: str, pasta: Path, max_mb: int) -> dict:
     return item
 
 
+class CopiaArquivada:
+    """A consulta da cópia arquivada no lote: um cliente próprio, no ritmo do Internet Archive."""
+
+    def __init__(self, fixtures: Path | None = None, raiz: Path = RAIZ):
+        self.cli = Cliente(fixtures=fixtures, intervalo_s=IA_INTERVALO_S)
+        self.raiz = raiz  # de onde vêm as fichas e as Faltas que barram (outra só nos testes)
+        self.parado: str | None = None
+
+    def motivo_para_nao(self, item: dict, entrada: dict | None) -> str | None:
+        erro = item.get("erro") or ""
+        if item.get("caracteres"):
+            return "a fonte abriu"
+        if "anti-robô" in erro or "robots.txt" in erro or "HTTP 403" in erro:
+            return "a falha é bloqueio (anti-robô ou robots.txt): não se lê cópia (D-044)"
+        if entrada and (m := wayback.protecao_barra(entrada)):
+            return f"Entrada com proteção ({m}; D-043, 2)"
+        if m := wayback.barrado(self.raiz, (entrada or {}).get("ambiente"), item["pagina"]):
+            return m
+        if f := wayback.falta_que_barra(self.raiz):
+            return f"Falta {f} barra a consulta"
+        if self.parado:
+            return self.parado
+        return None
+
+    def ler(self, cli_fonte: Cliente, item: dict, pasta: Path, max_mb: int) -> dict:
+        try:
+            copia = wayback.captura_existente(self.cli, item["pagina"])
+        except RuntimeError as e:
+            if "429" in str(e):
+                self.parado = "o Internet Archive respondeu 429: a consulta de cópias parou neste lote"
+            item["copia"] = f"não consultada: {e}"
+            return item
+        if not copia:
+            item["copia"] = wayback.SEM_COPIA
+            return item
+        bruta = copia.replace("/" + item["pagina"], "id_/" + item["pagina"], 1)
+        novo = ler(self.cli, item["id"], bruta, pasta, max_mb)
+        novo.update(pagina=item["pagina"], via=f"cópia arquivada {copia}", erro_direto=item["erro"])
+        return novo
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--rotulo", help="nome do lote (ex.: K109-L1)")
@@ -117,6 +168,7 @@ def main() -> int:
     ap.add_argument("--max-mb", type=int, default=60)
     ap.add_argument("--apagar", help="apaga os arquivos do lote dado")
     ap.add_argument("--fixtures", type=Path, help="respostas gravadas (testes, sem rede)")
+    ap.add_argument("--raiz-barreiras", type=Path, default=RAIZ, help="fichas e Faltas que barram a cópia (outra só nos testes)")
     a = ap.parse_args()
     pasta = pasta_temporaria()
     if a.apagar:
@@ -136,15 +188,27 @@ def main() -> int:
     if not a.rotulo or not (a.entrada or a.url):
         ap.error("--rotulo e --entrada ou --url")
     alvos: list[tuple[str, str]] = []
+    entradas: dict[str, dict] = {}
     for en in filter(None, a.entrada.split(",")):
         e = carregar_json(RAIZ / "entrada" / f"{en.strip()}.json")
         alvos.append((e["id"], e["url_ou_arquivo"]))
+        entradas[e["id"]] = e
     for u in a.url:
         rot, _, url = u.partition("=")
         alvos.append((rot, url))
     ex = Execucao("script", f"leitura das Fontes do lote {a.rotulo} ({VERSAO})", simular=bool(a.fixtures))
     cli = Cliente(fixtures=a.fixtures)
-    itens = [ler(cli, rot, url, pasta, a.max_mb) for rot, url in alvos]
+    copias = CopiaArquivada(fixtures=a.fixtures, raiz=a.raiz_barreiras)
+    itens = []
+    for rot, url in alvos:
+        it = ler(cli, rot, url, pasta, a.max_mb)
+        it.setdefault("via", "direto")
+        if not it["caracteres"]:
+            if m := copias.motivo_para_nao(it, entradas.get(rot)):
+                it["copia"] = f"não consultada: {m}"
+            else:
+                it = copias.ler(cli, it, pasta, a.max_mb)
+        itens.append(it)
     (pasta / f"lote-{a.rotulo}.json").write_text(json.dumps(
         {"lote": a.rotulo, "versao": VERSAO, "execucao": ex.id, "itens": itens}, ensure_ascii=False, indent=2),
         encoding="utf-8")
@@ -154,11 +218,11 @@ def main() -> int:
                          f"{len(sem)} sem texto; pasta temporária fora do Git")
     ex.olhado = [f"{i['id']}: {i['pdf'] or i['pagina']} ({i['tipo'] or 'sem texto'}, {i['paginas']} p.)" for i in itens]
     ex.fora = [f"{i['id']}: {i['erro']}" for i in itens if i["erro"]] + [
-        f"{cli.pedidos} pedidos HTTP no total, robots.txt incluídos; o texto integral não entra no Git"]
+        f"{cli.pedidos + copias.cli.pedidos} pedidos HTTP no total ({copias.cli.pedidos} ao Internet Archive), robots.txt incluídos; o texto integral não entra no Git"]
     ex.erros = [f"{i['id']}: {i['erro']}" for i in sem]
     print(ex.gravar_log() if not a.fixtures else "teste com respostas gravadas: log não gravado")
     for i in itens:
-        print(f"{i['id']}\t{i['tipo']}\t{i['paginas']} p.\t{i['caracteres']} car.\t{i['erro'] or ''}")
+        print(f"{i['id']}\t{i['tipo']}\t{i['paginas']} p.\t{i['caracteres']} car.\t{i['via']}\t{i['erro'] or ''}\t{i.get('copia', '')}")
     print(f"manifesto: {pasta / ('lote-' + a.rotulo + '.json')}")
     return 2 if sem else 0
 

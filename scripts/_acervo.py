@@ -8,6 +8,7 @@ no passo em que entram (l. 723): pasta ausente não é erro.
 """
 from __future__ import annotations
 
+import os
 import re
 from pathlib import Path
 
@@ -76,8 +77,15 @@ def faixas() -> dict[str, list[int]]:
     return carregar_valores()["valores"]["numeracao_id"]["valor"]["faixas"]
 
 
-def proximo_id(prefixo_: str, ids_existentes, gravador: str = "conversa") -> str:
+def gravador_atual() -> str:
+    """O gravador desta execução: "conversa" (padrão) ou o da variável CL_GRAVADOR (as rotinas do
+    workflow gravam com CL_GRAVADOR=rotina, para nunca colidir com a conversa; K-112)."""
+    return os.environ.get("CL_GRAVADOR") or "conversa"
+
+
+def proximo_id(prefixo_: str, ids_existentes, gravador: str | None = None) -> str:
     """O maior número da faixa do gravador + 1 (valor numeracao_id)."""
+    gravador = gravador or gravador_atual()
     ini, fim = faixas()[gravador]
     nums = [int(m.group(2)) for i in ids_existentes
             if (m := RE_ID.match(i)) and m.group(1) == prefixo_ and ini <= int(m.group(2)) <= fim]

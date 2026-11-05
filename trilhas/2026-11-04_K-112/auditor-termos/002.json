@@ -1,0 +1,38 @@
+{
+ "id": "C112.2",
+ "pergunta": "Clausulas da GitHub Acceptable Use Policies que tocam o uso descrito (uso excessivo/automatizado, scraping, bulk, Actions, coleta de dados de terceiros).",
+ "resposta": "A pagina abriu (curl, HTTP 200). Achados por palavra-chave (excessive, automat, scrap, bulk, Actions, collect, bandwidth, burden, server, crypto): secao 4 (spam e atividade inautentica), secao sobre scraping/coleta e secao 9 (banda). Nenhuma frase veda literalmente consultar APIs publicas de terceiros a 1 pedido por segundo nem gravar metadados no repositorio; as clausulas de scraping e de coleta de dados tratam de informacao obtida DO servico GitHub. A palavra 'Actions' nao aparece na AUP pelo grep. Nao conferido: leitura da pagina inteira (so as linhas com as palavras-chave, 70 linhas no maximo).",
+ "observacao": "Interpretacao (nao e parecer): 'excessive automated bulk activity' e 'undue burden on our servers' nao trazem limite numerico; se 1 pedido/s por poucos minutos diarios cabe nelas o texto nao diz.",
+ "partes": [
+  {
+   "afirmacao": "Atividade automatizada em massa nos servidores do GitHub",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+   "citacao": "using our servers for any form of excessive automated bulk activity, to place undue burden on our servers through automated means, or to relay any form of unsolicited advertising or solicitation through our servers, such as get-rich-quick schemes;"
+  },
+  {
+   "afirmacao": "Mineracao de cripto na secao de spam",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+   "citacao": "cryptocurrency mining;"
+  },
+  {
+   "afirmacao": "Definicao de scraping e informacao do servico",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+   "citacao": "Scraping refers to extracting information from our Service via an automated process, such as a bot or webcrawler. Scraping does not refer to the collection of information through our API."
+  },
+  {
+   "afirmacao": "Coleta de dados do servico e dado pessoal",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+   "citacao": "Any person, entity, or service collecting data from the Service must comply with the GitHub Privacy Statement, particularly in regards to the collection of personal information."
+  },
+  {
+   "afirmacao": "Banda excessiva",
+   "nivel": "oficial",
+   "url": "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+   "citacao": "If we determine your bandwidth usage to be significantly excessive in relation to other users of similar features, we reserve the right to suspend your Account, throttle your file hosting, or otherwise limit your activity until you can reduce your bandwidth consumption."
+  }
+ ]
+}
