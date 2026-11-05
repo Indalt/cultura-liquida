@@ -40,3 +40,21 @@ Apague o segredo `ROTINAS_TOKEN` (mesma página do passo 6) ou revogue o token e
 - Se o commit do workflow conta como atividade contra a desativação de 60 dias dos workflows agendados
   em repositório público (C112.5, não conferido pela documentação; confere-se pelo próprio GitHub,
   que avisa por e-mail antes de desativar).
+
+## Resultado da primeira junção (05/11/2026, execução 42070639701) e o passo seguinte
+
+O portão passou, e o envio com o `ROTINAS_TOKEN` foi recusado pela proteção do `main`:
+`GH006: Protected branch update failed ... Changes must be made through a pull request`. O token fino
+só com *Contents* não recebe a dispensa de administrador que o seu `git push` recebe. A rotina segue
+gravando em `rotinas`, e os 7 dias contam.
+
+Passo (só o dono; não muda o que a proteção exige das outras pessoas):
+1. Abra <https://github.com/Indalt/cultura-liquida/settings/branches> e clique em **Edit** na regra do `main`.
+2. Em *Require a pull request before merging*, marque **Allow specified actors to bypass required pull
+   requests** e acrescente o seu usuário, **Indalt**.
+3. **Save changes**. A rodada seguinte diz no Issue se a junção passou.
+
+Não conferido: se a dispensa por nome vale para o token fino. Se a rodada seguinte ainda recusar, o
+caminho é dar ao mesmo token a permissão *Administration: Read and write* (em
+<https://github.com/settings/personal-access-tokens>, **Edit** no token), que é mais ampla: o token
+passaria a poder mudar as configurações do repositório.

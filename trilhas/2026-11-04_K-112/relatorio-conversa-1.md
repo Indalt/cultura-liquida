@@ -67,6 +67,10 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
   inteira" esperava RC-0003 e recebeu RC-50000, porque a suíte herdava do workflow a faixa de IDs da rotina
   (`CL_GRAVADOR`). Falha do teste no servidor, não do conteúdo de 87ae840 e 62e0df8, que não se revertem:
   `rodar_testes.py` roda os casos sem a variável (o caso da rotina a liga no próprio comando).
+- **Rodada 42070639701:** o portão passou (OK 254 · FALHA 0); a junção com o `ROTINAS_TOKEN` foi recusada
+  pela proteção do `main` (GH006, "Changes must be made through a pull request"): o token fino não recebe
+  a dispensa de administrador. Passo do dono em `passo-a-passo-juncao.md`. O agendamento diário foi ligado
+  (cron 06h17 de Brasília) e a falha provocada foi pedida.
 - Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
 
 ## Próximo (conversa seguinte)
