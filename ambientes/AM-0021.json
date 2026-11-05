@@ -30,7 +30,7 @@
       "data": "2026-10-23",
       "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
       "resposta": "HTTP 200 {\"resultCount\":1441,\"status\":\"OK\"}",
-      "observacao": "Uma primeira rodada com codificação Latin-1 devolveu 1167710 (a base inteira) em 6 pedidos, descartados como inválidos. Em 17/10, a busca simples 'cajuína' informou 25."
+      "observacao": "Uma primeira rodada com codificação Latin-1 devolveu 1167710 (a base inteira) em 6 pedidos, descartados como inválidos. Em 17/10, a busca simples 'cajuína' informou 25. Teste no runner do GitHub Actions em 2026-11-05 (https://github.com/Indalt/cultura-liquida/actions/runs/42017771918; Linux 7.0.0-1017-azure; runnervm7aw5e): GET https://bdtd.ibict.br/vufind/api/v1/search?lookfor=cajuina&type=AllFields&limit=0 → HTTP 200; 32 bytes; início: '{\"resultCount\":25,\"status\":\"OK\"}'"
     },
     "decisao": "aceito como via automática (API v1, UTF-8 percent-encoded), sem o RSS de busca, vedado pelo robots.txt"
   },

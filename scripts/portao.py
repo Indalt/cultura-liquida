@@ -21,6 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ  # noqa: E402
 from _coleta import Execucao  # noqa: E402
+from procurar_dado_pessoal import nomes_privados  # noqa: E402
 
 VERSAO = "portao-camada1-0.1"
 PY = sys.executable
@@ -55,6 +56,9 @@ def main() -> int:
                         "versao_regra": VERSAO})
     if not a.testes:
         ex.fora.append("a suíte rodar_testes.py (só com --testes)")
+    if not nomes_privados():  # na rotina, a tabela de pessoas não existe (D-048)
+        ex.fora.append("os nomes da tabela privada de pessoas, que não está nesta máquina: a busca de dado "
+                       "pessoal olhou e-mail, telefone, CPF e @perfil, não os nomes")
     print(f"{VERSAO}: {'REPROVA' if reprovou else 'PASSA'}; {ex.gravar_log()}")
     return 1 if reprovou else 0
 

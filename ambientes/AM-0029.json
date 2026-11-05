@@ -30,7 +30,7 @@
       "data": "2026-10-23",
       "pedido": "GET https://www.infoteca.cnptia.embrapa.br/oai/request?verb=Identify; .../oai/request?verb=ListIdentifiers&metadataPrefix=oai_dc (só o resumptionToken e a contagem); .../robots.txt; .../ (página inicial); .../handle/doc/748513?locale=en; .../infoteca/oai/request?verb=Identify",
       "resposta": "Identify: HTTP 200, application/xml, repositoryName Infoteca-e, protocolVersion 2.0; ListIdentifiers: HTTP 200, completeListSize=59357; /infoteca/oai/request: HTTP 404; robots.txt: 200; página inicial: 200; handle/doc/748513: 200",
-      "observacao": "O OAI-PMH do Anexo E, nunca retestado, está confirmado em /oai/request."
+      "observacao": "O OAI-PMH do Anexo E, nunca retestado, está confirmado em /oai/request. Teste no runner do GitHub Actions em 2026-11-05 (https://github.com/Indalt/cultura-liquida/actions/runs/42017771918; Linux 7.0.0-1017-azure; runnervm7aw5e): GET https://www.infoteca.cnptia.embrapa.br/oai/request?verb=Identify → HTTP 200; 1336 bytes; início: '<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"static/style.xsl\"?><OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" xmlns:xsi='"
     },
     "decisao": "aceito como via automática, só por OAI-PMH (colheita e filtro local); a busca por texto fica fora da via automática pelo robots.txt (via humana: Vicente usa a busca do site). Licença do item 748513: CC BY-NC-ND 4.0 pelo rodapé, a confirmar por item."
   },
