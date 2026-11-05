@@ -43,13 +43,17 @@ def main() -> int:
     reprovou = []
     for nome, cmd in checagens:
         r = subprocess.run(cmd, cwd=RAIZ, capture_output=True, text=True, encoding="utf-8")
-        cauda = ((r.stdout or "") + (r.stderr or "")).strip().splitlines()[-3:]
+        saida = ((r.stdout or "") + (r.stderr or "")).strip().splitlines()
+        cauda = saida[-3:]
+        falhas = [x.strip() for x in saida if x.startswith("FALHA ")][:10]  # os casos da suíte que falharam
         ex.acoes.append(f"scripts/{nome}")
         ex.olhado.append(f"{nome}: código {r.returncode}")
         if r.returncode != 0:
             reprovou.append(nome)
-            ex.erros.append(f"{nome} reprovou: {' | '.join(cauda)[:400]}")
+            ex.erros.append(f"{nome} reprovou: {' | '.join(falhas or cauda)[:800]}")
         print(f"{'PASSA' if r.returncode == 0 else 'REPROVA'} {nome}: {' | '.join(cauda)[:300]}")
+        for x in falhas:
+            print(f"  {x[:300]}")
     ex.resultados.append(f"{VERSAO}: {'reprova (' + ', '.join(reprovou) + ')' if reprovou else 'passa'}")
     ex.decisoes.append({"item": "junção da ramificação das rotinas", "decisao": "falta" if reprovou else "aceito",
                         "motivo": f"regra {VERSAO}: " + ("checagem reprovada" if reprovou else "todas as checagens passaram"),
