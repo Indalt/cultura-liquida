@@ -7,8 +7,8 @@
 # As saídas de trabalho (rotina, portão, junção, comentário) ficam na pasta temporária do runner, fora do Git.
 name: rotinas
 on:
-  # schedule:   # liga depois do teste das fichas no runner e de uma rodada pedida à mão (K-112)
-  #   - cron: "17 9 * * *"   # todo dia, 06h17 em Brasília (UTC 09h17)
+  schedule:   # ligado em 05/11, depois do teste das fichas no runner e das rodadas pedidas à mão (K-112)
+    - cron: "17 9 * * *"   # todo dia, 06h17 em Brasília (UTC 09h17)
   workflow_dispatch:
     inputs:
       falha_provocada:
