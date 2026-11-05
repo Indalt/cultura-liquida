@@ -57,6 +57,8 @@ jobs:
         run: |
           git config user.name "Vicente"
           git config user.email "vicente@dacaatinga.com.br"
+          # o main buscado na hora: num "Re-run", o checkout repete o commit antigo da 1ª tentativa
+          git fetch -q origin main rotinas 2>/dev/null || git fetch -q origin main
           if git ls-remote --exit-code --heads origin rotinas >/dev/null; then
             git checkout -B rotinas origin/rotinas
             git merge --no-edit origin/main
@@ -102,8 +104,11 @@ jobs:
           TOKEN: ${{ secrets.ROTINAS_TOKEN }}
         run: |
           J="$RUNNER_TEMP/juncao.out"
+          git fetch -q origin main
           if [ -z "$TOKEN" ]; then
             echo "junção: sem o segredo ROTINAS_TOKEN; a proteção do main barra o token do workflow. A rotina segue gravando em 'rotinas'." | tee "$J"
+          elif ! git merge-base --is-ancestor origin/main rotinas; then
+            echo "junção: o main andou durante a rodada; fica para a rodada seguinte" | tee "$J"
           elif git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)" push origin rotinas:main 2>&1 | tee "$J"; then
             echo "junção: main em dia com rotinas" | tee -a "$J"
           else
