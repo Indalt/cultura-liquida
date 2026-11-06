@@ -1,0 +1,38 @@
+{
+  "id": "EN-50015",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0021",
+  "recortes": [
+    "RC-0014",
+    "RC-0021"
+  ],
+  "data_entrada": "2026-11-06",
+  "url_ou_arquivo": "https://app.uff.br/riuff/handle/1/13081",
+  "identificador": "doi:10.22409/ppgff.2020.d.08917110665",
+  "titulo": "Efeito do consumo de um mix de frutas secas e oleaginosas e de chocolate amargo (70% cacau) na modulação do craving em tabagistas em tratamento para abstinência",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…30g do mix de frutas secas e oleaginosas por dia, contendo damasco seco, uvas passas, maçã desidratada, castanha de caju, castanha do Pará, e amêndoas. Ambos os alimentos foram consumidos por quatro semanas consecutivas. Grupo 3 (G3),…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-06",
+    "execucao": "EX-50007",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

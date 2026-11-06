@@ -4,18 +4,18 @@
   "consulta": "CO-0002",
   "periodo": "2012-2019",
   "modo": "termo",
-  "cursor": null,
-  "total_informado": 632,
-  "total_visto": 632,
-  "saturacao": "exaurido: 632 de 632 visto(s), passada completa e não saturada",
+  "cursor": 2,
+  "total_informado": 629,
+  "total_visto": 100,
+  "saturacao": "não exaurido: 100 de 629 visto(s)",
   "erros": [],
-  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
+  "proxima_acao": "retomar do cursor 2 com teto novo",
   "teto": {
-    "chamadas": 10,
-    "divisoes_janela": 4
+    "chamadas": 120,
+    "divisoes_janela": 0
   },
-  "estado": "percorrido pela busca",
-  "data": "2026-10-24",
+  "estado": "interrompido por teto",
+  "data": "2026-11-06",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",
@@ -23,6 +23,7 @@
     "versao_regra": "recorte-0.2"
   },
   "faltas": [
-    "F-0011"
+    "F-0011",
+    "F-50000"
   ]
 }

@@ -5,9 +5,9 @@
   "periodo": "todo",
   "modo": "termo",
   "cursor": null,
-  "total_informado": 83,
-  "total_visto": 83,
-  "saturacao": "exaurido: 83 de 83 visto(s), passada completa e não saturada",
+  "total_informado": 82,
+  "total_visto": 82,
+  "saturacao": "exaurido: 82 de 82 visto(s), passada completa e não saturada",
   "erros": [],
   "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
@@ -15,7 +15,7 @@
     "divisoes_janela": 4
   },
   "estado": "percorrido pela busca",
-  "data": "2026-11-05",
+  "data": "2026-11-06",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",

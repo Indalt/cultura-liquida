@@ -4,22 +4,25 @@
   "consulta": "CO-0002",
   "periodo": "2020-2026",
   "modo": "termo",
-  "cursor": null,
-  "total_informado": 398,
-  "total_visto": 398,
-  "saturacao": "exaurido: 398 de 398 visto(s), passada completa e não saturada",
+  "cursor": 2,
+  "total_informado": 391,
+  "total_visto": 100,
+  "saturacao": "não exaurido: 100 de 391 visto(s)",
   "erros": [],
-  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
+  "proxima_acao": "retomar do cursor 2 com teto novo",
   "teto": {
     "chamadas": 120,
     "divisoes_janela": 0
   },
-  "estado": "percorrido pela busca",
-  "data": "2026-10-24",
+  "estado": "interrompido por teto",
+  "data": "2026-11-06",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",
     "execucao": "EX-0032",
     "versao_regra": "recorte-0.2"
-  }
+  },
+  "faltas": [
+    "F-50001"
+  ]
 }

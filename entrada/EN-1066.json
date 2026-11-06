@@ -1,0 +1,36 @@
+{
+  "id": "EN-1066",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0021",
+  "recortes": [
+    "RC-0021"
+  ],
+  "data_entrada": "2026-11-06",
+  "url_ou_arquivo": "https://repositorio.unilab.edu.br/jspui/handle/123456789/3667",
+  "identificador": "AM-0021:repositorio.unilab.edu.br/handle/123456789/3667",
+  "titulo": "Sociobiodiversidade e soberania alimentar do povo Kanindé de Aratuba - saberes indígenas no preparo do mocororó",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'mocororó' no título (CO-0002)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-06",
+    "execucao": "EX-50007",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

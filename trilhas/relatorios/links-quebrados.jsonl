@@ -1,1 +1,9 @@
 {"data": "2026-11-05", "entrada": "EN-0610", "url": "https://repositorio.ufla.br/handle/1/2072", "detalhe": "TimeoutError: The read operation timed out", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0657", "url": "http://repositorio.uem.br:8080/jspui/handle/1/5598", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0658", "url": "http://repositorio.uem.br:8080/jspui/handle/1/5641", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0659", "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/887", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0660", "url": "http://www.repositorio.ufc.br/handle/riufc/55037", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0661", "url": "http://repositorio.ufc.br/handle/riufc/74964", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0662", "url": "http://www.repositorio.ufc.br/handle/riufc/4853", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0663", "url": "http://www.repositorio.ufc.br/handle/riufc/40027", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-06", "entrada": "EN-0665", "url": "http://dspace.unipampa.edu.br/jspui/handle/riu/712", "detalhe": "URLError: <urlopen error [Errno 101] Network is unreachable>", "versao": "links-0.1"}

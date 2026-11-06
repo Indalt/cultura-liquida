@@ -3,7 +3,11 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0021",
   "recortes": [
-    "RC-0014"
+    "RC-0014",
+    "RC-0008",
+    "RC-0010",
+    "RC-0012",
+    "RC-0021"
   ],
   "data_entrada": "2026-11-05",
   "url_ou_arquivo": "https://repositorio.cruzeirodosul.edu.br/handle/123456789/2572",
