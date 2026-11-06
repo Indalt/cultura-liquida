@@ -18,7 +18,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[2]
@@ -73,18 +73,26 @@ def caso_agenda_fila_cheia() -> str:
         return f"porta nova fechada: {it['motivo']}"
 
 
+def dias() -> tuple[str, str, date]:
+    """A 1ª rodada no dia de hoje: o deduplicar.py data a Entrada pelo relógio, não pelo --data da rotina
+    (insumo do planejamento de 06/11); com datas fixas, o caso só passava no próprio dia 05/11/2026."""
+    d1 = date.today()
+    return d1.isoformat(), (d1 + timedelta(days=1)).isoformat(), d1 + timedelta(days=2)
+
+
 def caso_duas_rodadas() -> str:
+    d1, d2, d3 = dias()
     with tempfile.TemporaryDirectory() as t:
         r, logs = montar(Path(t)), Path(t) / "logs"
         base = {p.name for p in (r / "entrada").glob("EN-*.json")}
-        rodar(r, "2026-11-05", logs)
+        rodar(r, d1, logs)
         rod = [json.loads(x) for x in (r / agendar.RODADAS).read_text(encoding="utf-8").splitlines()]
         assert rod[-1]["entradas_novas"] > 0 and rod[-1]["gravado"], rod[-1]
         ents1 = sorted(p.name for p in (r / "entrada").glob("EN-*.json"))
         novas = [n for n in ents1 if n not in base]
         assert novas and all(50000 <= int(n[3:-5]) <= 89999 for n in novas), novas
         # segunda rodada no dia seguinte: nada novo; só a linha da rodada
-        rodar(r, "2026-11-06", logs)
+        rodar(r, d2, logs)
         rod = [json.loads(x) for x in (r / agendar.RODADAS).read_text(encoding="utf-8").splitlines()]
         ents2 = sorted(p.name for p in (r / "entrada").glob("EN-*.json"))
         st = subprocess.run(["git", "show", "--stat", "--format=", "HEAD"], cwd=r, capture_output=True, text=True).stdout
@@ -92,21 +100,22 @@ def caso_duas_rodadas() -> str:
         assert ents1 == ents2, (ents1, ents2)
         mudou = [x.split("|")[0].strip() for x in st.splitlines() if "|" in x]
         assert all(m.startswith("trilhas/relatorios") for m in mudou), mudou
-        # a agenda dobra o intervalo: no dia 07 o ambiente não roda
-        p = agendar.plano(r, date(2026, 11, 7))
+        # a agenda dobra o intervalo: no terceiro dia o ambiente não roda
+        p = agendar.plano(r, d3)
         assert not next(x for x in p if x["ambiente"] == "AM-0021")["roda"]
         return (f"1ª rodada: {rod[0]['entradas_novas']} Entrada(s) nova(s), gravada(s) na faixa da rotina; 2ª: só o não visto "
                 f"(nenhum), nada gravado além de {', '.join(sorted(set(mudou)))}; intervalo dobrado")
 
 
 def caso_feed() -> str:
+    d1, d2, _ = dias()
     with tempfile.TemporaryDirectory() as t:
         r, logs = montar(Path(t)), Path(t) / "logs"
-        rodar(r, "2026-11-05", logs)
+        rodar(r, d1, logs)
         xml = (r / "entrada" / "feed.xml").read_text(encoding="utf-8")
         assert "Consulta de origem: CO-0005" in xml and "<entry>" in xml, xml[:400]
         antes = xml
-        rodar(r, "2026-11-06", logs)
+        rodar(r, d2, logs)
         assert (r / "entrada" / "feed.xml").read_text(encoding="utf-8") == antes
         return "feed com a Consulta de origem de cada Entrada; sem Entrada nova, o feed não muda"
 
