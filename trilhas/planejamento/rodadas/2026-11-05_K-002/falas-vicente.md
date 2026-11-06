@@ -18,3 +18,11 @@ O curador devolveu o entendido: (1) opção A, a rotina do Claude Code na assina
 Resposta:
 
 "1 respondi sobre automatizacao. as datas sao todas as quintas. 2 sim, so para a ferramenta com suas automatizacoes. 3 como for mais coveniente para o funcionamento da ferramenta. 4 as funcoes para as quais a ferramenta foi criada."
+
+## Confirmação
+
+O curador registrou a D-050 e devolveu duas leituras: "todas as quintas" vale para a rotina com IA (as rotinas sem IA seguem diárias, D-048), e os 20% e os 50% estão nas unidades das leituras da conta. Deixou em aberto a cadência e o teto do planejamento e o teto do desenvolvimento depois do K-113. Resposta:
+
+"suas duas leituras estao corretas."
+
+"Cadencia e teto de planejamento será o que ja temos. o prompt do k-002 continua o mesmo?"

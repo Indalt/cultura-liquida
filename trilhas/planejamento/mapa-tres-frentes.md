@@ -341,18 +341,18 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 5, achados de harness | D (bloco 1: lista exata de campos do log, teto de chamadas contado como o harness conta); PDO (o número oficial é o do Agent; agente novo só em sessão nova); P (termos-chave das decisões no `checar_fundacao.py`) | K-003 (o que cabe no bloco 1), K-101; V-23, V-35 |
 | 6, custos medidos | P; D (a estimativa no registro de valores, bloco 2) | K-005; V-30 |
 | 7, mapa de hospedagem em Haiku | D (reconferência em Sonnet no bloco 10); P (tipo de agente preso ao harness) | K-112; K-003 (regra no bloco 1); V-23 |
-| 8, o planejamento gastou 57% da semana | P | a definir pelo planejamento (insumo 114; a D-050 fixou só o teto da ferramenta) |
+| 8, o planejamento gastou 57% da semana | P | respondido pela D-050 (o planejamento como está, D-040) |
 | 9, contribuição com tokens próprios (fase 2) | P | K-008 |
 | 10, agente de melhorias e contribuições | P (desenho); D (habilidades) | K-103 (primeira habilidade); K-006 |
 | 11, `checar_fundacao.py` volta a cobrar as D-031 em diante | P; D | K-004 (V-35) |
 | 12, a IA da operação | P | respondido pela D-050 (05/11) |
-| 13, cadência e teto do planejamento | P | a definir pelo planejamento (insumo 114) |
+| 13, cadência e teto do planejamento | P | respondido pela D-050 (como estão) |
 | 14, o quadro como porta de contribuição | P | K-001 (seção 9 deste mapa); K-008 |
 | 15, o número do Workflow e o do Agent não batem (desta rodada) | P | a definir pelo planejamento (a D-050 toma os usos medidos como métrica) |
 | 16, estimativa do lote pela medida do mesmo agente e habilidade (desta rodada) | P | K-005; a D-050 toma os usos medidos como métrica |
 | 17, harness: validação reservada no teto, citação literal de verdade, log de agente de workflow (desta rodada) | D | K-003 (o que cabe no bloco 1), K-101 |
 | 18, script de checagem do mapa (desta rodada) | P (ferramenta do planejamento); D (construir) | K-006 |
-| 19, configuração e teto de cada frente; "operação" na D-023 (desta rodada) | P | em parte, D-050 (a configuração); os tetos, insumo 114 |
+| 19, configuração e teto de cada frente; "operação" na D-023 (desta rodada) | P | respondido pela D-050 (a configuração; o planejamento como está; o desenvolvimento depois do K-113 pela D-040, insumo 114) |
 | 20, juntar a proposta da rotina sem Vicente, por script sem IA (K-003) | P; D (teste na 10b) | K-113, pela D-050 (com a D-038) |
 | 21, o alcance do script de menções é o registro de Termos (K-003) | D; P | K-102, K-117 |
 | 22, `checar_mapa.py` lê a 6A do brief por linhas fixas (K-003) | P (ferramenta do planejamento); D (construir) | K-006 |
@@ -370,7 +370,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 34, μ e λ: quais Evidências contam | P; D | K-005 (regra pela D-041); K-123 (no script, feito em 23/10: mu-lambda-0.2) |
 | 35, pre-commit em cada cópia | D; O | K-111 |
 | 36, limiar do trecho e linhagem nos dois lados | P; D | K-005 (regra pela D-041); K-123 (no script, feito em 23/10: normalizacao-0.2 e mu-lambda-0.2) |
-| 37, o planejamento medido em pp da conta (K-005) | P | a definir pelo planejamento (insumo 114) |
+| 37, o planejamento medido em pp da conta (K-005) | P | respondido pela D-050 (o planejamento como está, D-040) |
 | 38, a leitura da conta depende de Vicente (K-005) | P; O | a definir pelo planejamento (a D-050 toma os usos medidos como métrica) |
 | 39, formas de hífen por tipo de ambiente | D | K-107 |
 | 40, BCR fora do DNS em 23/10 | D; O | K-108 |
@@ -447,7 +447,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 111, commits à frente do main no relatório | D | a definir pelo planejamento |
 | 112, alcance de intervenção humana | P | a definir pelo planejamento |
 | 113, proteção do main com outra pessoa | P; D | K-008 |
-| 114, tetos das conversas depois do K-113 | P | a definir pelo planejamento |
+| 114, tetos das conversas depois do K-113 | P | em parte, D-050: o planejamento como está; o teto do desenvolvimento depois do K-113 segue a D-040 até ser fixado |
 
 ## 7. Decisões D-001 a D-043
 
