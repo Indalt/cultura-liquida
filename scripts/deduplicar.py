@@ -176,21 +176,30 @@ def conferir_pegadas(ind: Indice) -> list[str]:
     """A pegada e a Entrada contam a mesma história: o EN-nnnn de um identificador é sempre o mesmo, e
     a Entrada de trabalho com Recortes tem a pegada de cada um deles (quando o Recorte já tem pegadas)."""
     erros, en_de = [], {}
+    por_id = {x["id"]: x for _, x in [*ind.por_chave.values(), *ind.por_url.values()]}
+    ids_entradas = set(por_id)
+
+    def pelo_link(en: str, p: dict) -> bool:  # outro registro do mesmo item, achado pelo link (A-007)
+        x = por_id.get(en)
+        return bool(x) and normalizar_url(p.get("link") or "") == normalizar_url(x["url_ou_arquivo"])
+
     for rc, linhas in ind.pegadas.por_recorte.items():
         for p in linhas:
             en = p.get("entrada")
             if not en:
                 continue
-            if en_de.setdefault(en, p["identificador"]) != p["identificador"]:
+            if en_de.setdefault(en, p["identificador"]) != p["identificador"] and not pelo_link(en, p):
                 erros.append(f"{en} em pegadas de dois identificadores ({en_de[en]} e {p['identificador']})")
             e = ind.por_chave.get(p["identificador"])
             if e and e[1]["id"] != en:
                 erros.append(f"pegada de {p['identificador']} em {rc} aponta {en}, e a Entrada é {e[1]['id']}")
-            if p["triagem"] == "segue" and not e:
+            if p["triagem"] == "segue" and not e and en not in ids_entradas:  # achada pelo link vale (A-007)
                 erros.append(f"pegada 'segue' de {p['identificador']} em {rc} sem a Entrada {en}")
     for k, (_, e) in ind.por_chave.items():
         for rc in e.get("recortes", []):
-            if rc in ind.pegadas.por_recorte and not ind.pegadas.tem(rc, k):
+            # a pegada pode vir de outro registro do mesmo item, achado pelo link (A-007): ela aponta a Entrada
+            if rc in ind.pegadas.por_recorte and not ind.pegadas.tem(rc, k) and not any(
+                    p.get("entrada") == e["id"] for p in ind.pegadas.por_recorte[rc]):
                 erros.append(f"{e['id']} sem pegada em {rc}")
     return erros
 
