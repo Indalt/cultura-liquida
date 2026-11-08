@@ -121,8 +121,10 @@ jobs:
           T="$RUNNER_TEMP"
           N=$(gh issue list --state open --search "Relatório do dia (rotinas) in:title" --json number --jq '.[0].number')
           if [ -z "$N" ]; then
-            N=$(gh issue create --title "Relatório do dia (rotinas)" --body "Um comentário por dia com o relatório da rotina sem IA (K-112, bloco 10a). Fechar este Issue não para a rotina." | grep -o '[0-9]*$')
+            N=$(gh issue create --title "Relatório do dia (rotinas)" --body "Um comentário por dia com o relatório da rotina sem IA (K-112, bloco 10a). Fechar este Issue não para a rotina." --assignee "${{ github.repository_owner }}" | grep -o '[0-9]*$')
           fi
+          # o dono é o responsável pelo Issue: cada comentário chega a ele como notificação (e-mail), sem precisar acompanhar o repositório
+          gh issue edit "$N" --add-assignee "${{ github.repository_owner }}" >/dev/null || true
           {
             echo "**Rotina de $HOJE** — execução ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — rotina: ${{ steps.rotina.outcome || 'não rodou' }}; portão: ${{ steps.portao.outputs.passa == '1' && 'passa' || 'reprova ou não rodou' }}"
             echo

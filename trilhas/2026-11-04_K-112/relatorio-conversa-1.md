@@ -76,6 +76,10 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
   exclusão bloqueados. Rodada de conferência 42116185819: portão passa e **junção feita**
   (`e3c6ed9..1c9df40 rotinas -> main`, "main em dia com rotinas"). Insumo 113: a proteção volta a exigir
   pull request quando houver outra pessoa com escrita (K-008).
+- **Aviso do relatório do dia (08/11):** Vicente não recebia os comentários do Issue #1: ele não acompanha o
+  repositório (a API responde 404 à inscrição) e o Issue foi aberto pelo robô, então só os avisos de falha
+  chegavam. O Issue foi atribuído a Vicente (Indalt), e o workflow passa a atribuí-lo em cada rodada; o
+  e-mail do próximo comentário confirma (não conferido até lá).
 - Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
 
 ## Próximo (conversa seguinte)
