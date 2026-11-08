@@ -1,0 +1,21 @@
+{
+  "id": "D-052",
+  "data": "2026-11-08",
+  "essencia": "O K-112 não encurta os 7 dias e avança mesmo que algumas fontes não sejam consultadas por não estarem automatizadas: fecha com as fontes que estiverem automatizadas até lá, e as outras ficam documentadas, sem segurar o cartão.",
+  "diretriz": "(1) Os 7 dias de relatório do K-112 seguem até 12/11, sem encurtar. O cartão fecha quando o pronto-quando do bloco 10a se cumpre (os 7 relatórios, a falha provocada, as Entradas das Consultas gerais com a Consulta de origem, o boletim com o procurar_dado_pessoal e a amostra do auditor), com as fontes que estiverem automatizadas até lá. (2) A fonte que não se automatiza no cartão não é consultada pela rotina e não segura o fechamento. Aplicação do curador, revisável por Vicente: entram aqui o acesso que pede intervenção humana (D-049), a fonte que barra o robô (D-044), a que tem Falta jurídica que barra agora (como a F-0034), a que pede adaptador que o cartão não constrói e a que não chegou a ser testada até o fechamento. (3) Cada fonte que fica fora tem na ficha o motivo e entra, ao fechar o cartão, num insumo com a lista: é o passo para melhoria da D-049 (item 3), e o insumo 110 leva a lista ao relatório do piloto (K-116). (4) A busca à mão e a entrada por link de Vicente seguem como o plano as tem (D-049, item 5, [ABERTO]); esta decisão não as trata.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-08",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-05_conversa/falas-vicente.md, seção 'O K-112 avança sem esperar a automação de todas as fontes (D-052, 08/11/2026)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "não vou encurtar",
+      "sentido_confirmado": "literal: os 7 dias de relatório do K-112 seguem inteiros"
+    },
+    {
+      "palavra": "que a sua execução aconteça de forma que nos permita avançar mesmo que se considere que algumas fontes não serão consultadas porque não estão automatizadas",
+      "sentido_confirmado": "literal: o K-112 avança e fecha com as fontes automatizadas; as que não estão automatizadas não são consultadas pela rotina. Os casos que contam como 'não automatizada' (item 2 da diretriz) são aplicação do curador, devolvida a Vicente em 08/11"
+    }
+  ],
+  "substitui": "Delimita, no K-112, a D-048, item 4 ('todo local de busca que for possível abrir'): o que não se automatiza dentro do cartão fica para o passo para melhoria e não segura o fechamento. Não muda o pronto-quando do K-112 (bloco 10a do brief), nem a D-044, nem a D-049.",
+  "marcador": "VIGENTE"
+}

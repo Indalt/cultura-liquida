@@ -37,3 +37,9 @@ Depois de ler as condições da D-051 e o prompt do K-115:
 "Vamos continuar após a conclusão do cartao 112. pergunta: já temos dados o suficiente para que o cartao 112 seja compreendido e verificado como o projetado? seria possível antecipar execução e não esperar a finalização dos 7 dias?"
 
 O K-115 espera o K-112 fechar; a antecipação que a D-051 permite não será usada.
+
+## O K-112 avança sem esperar a automação de todas as fontes (D-052, 08/11/2026)
+
+O curador mostrou o que de 05 a 07/11 já verifica o K-112, o que só os 7 dias mostram (o ritmo das fontes e o ciclo semanal da Infoteca-e, em 12/11) e que o que segura o cartão é a abertura das fontes, que ainda não começou; recomendou não encurtar. Vicente:
+
+"não vou encurtar. me mande o prompt que devo levar ao k112 que temos o dever de falar para que a sua execução aconteça de forma que nos permita avançar mesmo que se considere que algumas fontes não serão consultadas porque nao estao automatizadas."
