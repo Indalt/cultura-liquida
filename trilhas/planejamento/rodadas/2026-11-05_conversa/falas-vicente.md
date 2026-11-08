@@ -25,3 +25,9 @@ O curador registrou a D-049 com as três frases, devolveu a aplicação (cadastr
 "tudo correto e ja mandei o prompt para a sessao 112 - proximos passos enquanto k112 opera?"
 
 A aplicação ficou confirmada; o alcance de "intervenção humana" ficou sem resposta e segue [ABERTO] na D-049.
+
+## O K-115 em paralelo com o K-112 (D-051, 08/11/2026)
+
+O curador explicou que a regra de um cartão por vez no desenvolvimento (D-035, D-036) segura a vez até o K-112 fechar (7 dias, boletim e amostra), que a regra não diz se um cartão que só espera os dias de medida ocupa a vez, e recomendou o K-115 para rodar em paralelo, com o limite do orçamento da semana. Vicente:
+
+"vamos rodar o k-115 ja que nao implica em nada sobre os outros cartao (confirmar se nao implica ao antecipar)."

@@ -1,0 +1,21 @@
+{
+  "id": "D-051",
+  "data": "2026-11-08",
+  "essencia": "O K-115 roda antes de o K-112 fechar, desde que antecipá-lo não implique nos outros cartões.",
+  "diretriz": "(1) O K-115 (bloco 12, testes de modelos) começa antes de o K-112 fechar: é exceção, só para este caso, à regra de um cartão por vez no desenvolvimento (D-035, D-036). (2) Condições para que a antecipação não implique nos outros cartões, verificadas pelo curador e devolvidas a Vicente em 08/11 (aplicação do curador, revisável por Vicente): (a) as conversas do K-112 e do K-115 não rodam ao mesmo tempo; cada uma faz git pull ao abrir, antes de cada registro (log e insumo) e antes de cada envio, e comita só os próprios arquivos; (b) o K-115 não mexe nas rotinas do K-112 (os workflows, os scripts e a configuração das rotinas); (c) na folga do teto de desenvolvimento da semana (D-040), o K-112 tem a vez; o que não couber do K-115 fica para a semana seguinte; (d) os modelos novos vão aos frontmatters dos agentes só depois que o K-112 fechar, para o rastreador, o auditor e o redator do boletim dele não mudarem no meio; até lá, o resultado fica em testes/relatorio-modelos.md; (e) os logs das rodadas de teste ficam marcados como teste de modelo, e nem a estimativa de lote do orcamento.py nem o relatório do piloto (K-116) nem a calibração do K-005 os tomam como medida de produção; (f) a saída dos agentes testados fica fora do acervo. (3) O que passa a outros cartões pela antecipação: o teste de modelo do kit vai ao fechamento do K-114 (brief, bloco 12: 'para o kit, o bloco 11'); a configuração da rotina com IA ('rotinas atualizados', bloco 12) vai ao K-113, que a cria com a tabela do K-115 (D-050, item 4). O K-115 fecha sem esses dois itens.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-08",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-05_conversa/falas-vicente.md, seção 'O K-115 em paralelo com o K-112 (D-051, 08/11/2026)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "vamos rodar o k-115",
+      "sentido_confirmado": "literal: o K-115 começa antes de o K-112 fechar"
+    },
+    {
+      "palavra": "já que não implica em nada sobre os outros cartões (confirmar se não implica ao antecipar)",
+      "sentido_confirmado": "literal: a antecipação vale se não implicar nos outros cartões. A verificação é do curador: implica em pontos que se contornam pelas condições do item 2 e em dois itens que passam ao K-114 e ao K-113 (item 3); condições e itens devolvidos a Vicente em 08/11, revisáveis por ele"
+    }
+  ],
+  "substitui": "Abre exceção, só para o K-115, à regra de um cartão por vez no desenvolvimento (D-035: 'uma tarefa por vez, terminada antes da próxima'; D-036: 'um cartão por vez'). Muda o pronto-quando do K-115 do bloco 12 do brief: o teste do kit passa ao fechamento do K-114, a configuração da rotina com IA ao K-113, e os frontmatters só mudam depois que o K-112 fechar. Não muda o pronto-quando do K-112.",
+  "marcador": "VIGENTE"
+}
