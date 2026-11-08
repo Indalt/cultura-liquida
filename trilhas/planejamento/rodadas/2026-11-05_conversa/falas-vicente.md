@@ -43,3 +43,7 @@ O K-115 espera o K-112 fechar; a antecipação que a D-051 permite não será us
 O curador mostrou o que de 05 a 07/11 já verifica o K-112, o que só os 7 dias mostram (o ritmo das fontes e o ciclo semanal da Infoteca-e, em 12/11) e que o que segura o cartão é a abertura das fontes, que ainda não começou; recomendou não encurtar. Vicente:
 
 "não vou encurtar. me mande o prompt que devo levar ao k112 que temos o dever de falar para que a sua execução aconteça de forma que nos permita avançar mesmo que se considere que algumas fontes não serão consultadas porque nao estao automatizadas."
+
+Depois do prompt de continuação do K-112:
+
+"se for essencial para que o piloto entregue o que a ferramenta precisa para finalizar a avaliação do sistema, vamos tratar os pontos. eu havia entendido que nao é essencial. nao sendo essencial esperamos os 7 dias. (na quinta, dia 05, não foi o primeiro dia? se foi hoje ja é o quarto dia, confirma?)"
