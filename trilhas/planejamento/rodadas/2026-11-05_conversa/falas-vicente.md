@@ -31,3 +31,9 @@ A aplicação ficou confirmada; o alcance de "intervenção humana" ficou sem re
 O curador explicou que a regra de um cartão por vez no desenvolvimento (D-035, D-036) segura a vez até o K-112 fechar (7 dias, boletim e amostra), que a regra não diz se um cartão que só espera os dias de medida ocupa a vez, e recomendou o K-115 para rodar em paralelo, com o limite do orçamento da semana. Vicente:
 
 "vamos rodar o k-115 ja que nao implica em nada sobre os outros cartao (confirmar se nao implica ao antecipar)."
+
+Depois de ler as condições da D-051 e o prompt do K-115:
+
+"Vamos continuar após a conclusão do cartao 112. pergunta: já temos dados o suficiente para que o cartao 112 seja compreendido e verificado como o projetado? seria possível antecipar execução e não esperar a finalização dos 7 dias?"
+
+O K-115 espera o K-112 fechar; a antecipação que a D-051 permite não será usada.
