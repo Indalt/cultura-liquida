@@ -65,7 +65,7 @@ def chave(ambiente: str, id_fonte: str, urls: list[str] = (), doi: str | None = 
         if m := RE_HANDLE.search(u):
             host = urllib.parse.urlsplit(u).hostname or ""
             return f"{ambiente}:{host.removeprefix('www.')}/handle/{m.group(1)}"
-    return f"{ambiente}:{id_fonte}"
+    return f"{ambiente}:{re.sub(r'\s', '_', str(id_fonte))}"  # ID com espaço (Oasisbr: "ICESP - 2_..."; 08/11)
 
 
 def normalizar_url(u: str) -> str:

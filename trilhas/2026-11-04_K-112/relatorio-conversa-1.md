@@ -79,7 +79,17 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
 - **Aviso do relatório do dia (08/11):** Vicente não recebia os comentários do Issue #1: ele não acompanha o
   repositório (a API responde 404 à inscrição) e o Issue foi aberto pelo robô, então só os avisos de falha
   chegavam. O Issue foi atribuído a Vicente (Indalt), e o workflow passa a atribuí-lo em cada rodada; o
-  e-mail do próximo comentário confirma (não conferido até lá).
+  e-mail do próximo comentário confirma: **confirmado por Vicente em 08/11** (rodada 42490655777, comentário das 11h41).
+- **Lote do rastreador (08/11; 70.830 tokens, 11 chamadas):** BDTD com a CO-0008 (440); BCR por lista de buscas
+  (caju 105, cajuína 48; os pares bebida + descritor deram 0); Oasisbr retestado em UTF-8 pelo curador (o
+  1º teste mandou acentos em Latin-1); OpenAlex sem chave: 429 nas rodadas curtas e 503 no runner (busca
+  anônima pausada), desligada com o adaptador pronto (F-0035 nasceu do 429 como 'total desconhecido').
+  Rodadas reais curtas com respostas gravadas e casos. Oasisbr e BCR abrem no runner (42493394580) e
+  entraram na rotina. A 1ª rodada com eles (42493664560) reprovou no portão: a conferência das pegadas não
+  aceitava o item do agregador ligado pelo link; corrigido (93540aa). A seguinte (42494850740) passou e
+  juntou ao main 1.028 Entradas novas; o passo da rotina falhou num ID do Oasisbr com espaço
+  ('ICESP - 2_...'), que a chave do item passa a trocar por '_'; o Recorte da CO-0008 no Oasisbr segue na
+  rodada seguinte.
 - Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
 
 ## Próximo (conversa seguinte)
