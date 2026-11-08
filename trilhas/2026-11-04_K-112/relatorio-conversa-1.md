@@ -90,6 +90,11 @@ workflows não puderam ser enviados ao GitHub (falta um escopo do token, que só
   juntou ao main 1.028 Entradas novas; o passo da rotina falhou num ID do Oasisbr com espaço
   ('ICESP - 2_...'), que a chave do item passa a trocar por '_'; o Recorte da CO-0008 no Oasisbr segue na
   rodada seguinte.
+- **Retomada (08/11, uso 80% semanal e 75% da janela de 5 h: um lote e fecha):** a rodada agendada de 08/11
+  ainda não tinha rodado às 12h46; o Recorte da CO-0008 no Oasisbr, que quebrou pelo ID com espaço, foi
+  simulado na máquina com o 1fcb938 e passou (44 pedidos, nada gravado). O volume da rodada de 08/11 foi ao
+  insumo para o K-113. Os lotes do Anexo E não entram no cartão (D-052): ficam não testados, no passo para
+  melhoria do fechamento. O insumo 115 segue aberto, sem conserto neste lote.
 - Insumo 111: a contagem de commits à frente do main no relatório do dia sai antes do commit da rodada.
 
 ## Próximo (conversa seguinte)
