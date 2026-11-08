@@ -30,7 +30,7 @@
       "data": "2026-11-08",
       "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
       "resposta": "HTTP 200 {\"resultCount\":7350,\"status\":\"OK\"}",
-      "observacao": "6 pedidos do rastreador em 08/11 (EX do lote 1) com os acentos em Latin-1 devolveram o índice inteiro e foram descartados; retestado em UTF-8 pelo curador com o cliente da coleta (CO-0001 3.641; CO-0002 7.350; CO-0003 176; CO-0004 190; CO-0005 19; CO-0008 1.022)"
+      "observacao": "6 pedidos do rastreador em 08/11 (EX do lote 1) com os acentos em Latin-1 devolveram o índice inteiro e foram descartados; retestado em UTF-8 pelo curador com o cliente da coleta (CO-0001 3.641; CO-0002 7.350; CO-0003 176; CO-0004 190; CO-0005 19; CO-0008 1.022) Teste no runner do GitHub Actions em 2026-11-08 (https://github.com/Indalt/cultura-liquida/actions/runs/42493394580; Linux 7.0.0-1019-azure; runnervmwuk1x): GET https://oasisbr.ibict.br/vufind/api/v1/search?lookfor=cajuina&type=AllFields&limit=0 → HTTP 200; 34 bytes; início: '{\"resultCount\":2996,\"status\":\"OK\"}'"
     },
     "decisao": "aceito como via automática (adaptador vufind); liga depois do teste no runner e da rodada real curta"
   }

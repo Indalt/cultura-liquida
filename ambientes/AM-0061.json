@@ -30,7 +30,7 @@
       "data": "2026-11-08",
       "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=caju&perpage=1&fetch_only=id,title",
       "resposta": "HTTP 200; X-WP-Total: 105; X-WP-TotalPages: 105 (6 de 6 pedidos 200, sem desafio)",
-      "observacao": "rastreador, 08/11: 6 pedidos 200, sem desafio; caju=105, cajú=105, cajuína=48, cajuina=48 (acento indiferente), bebida extração do suco=0, bebida envase=0 (a busca exige todas as palavras no item); 9 buscas não testadas"
+      "observacao": "rastreador, 08/11: 6 pedidos 200, sem desafio; caju=105, cajú=105, cajuína=48, cajuina=48 (acento indiferente), bebida extração do suco=0, bebida envase=0 (a busca exige todas as palavras no item); 9 buscas não testadas Teste no runner do GitHub Actions em 2026-11-08 (https://github.com/Indalt/cultura-liquida/actions/runs/42493394580; Linux 7.0.0-1019-azure; runnervmwuk1x): GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=cajuina&perpage=1&fetch_only=id,title → HTTP 200; 524 bytes; início: '{\"items\":[{\"id\":333243,\"title\":\"Registro da Produ\\\\u00e7\\\\u00e3o Tradicional e das Pr\\\\u00e1ticas Socioculturais Associadas \\\\u00e0 Caju\\\\u00edna no Piau\\\\u00ed como '"
     },
     "decisao": "aceito como via automática pela API do Tainacan (adaptador tainacan, K-112), com a lista de buscas testada; liga depois da rodada real curta e do teste no runner"
   },

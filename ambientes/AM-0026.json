@@ -30,7 +30,7 @@
       "data": "2026-11-08",
       "pedido": "GET https://api.openalex.org/works?search=%28%22caju%22%20OR%20%22caj%C3%BA%22%20OR%20%22ca-ju%22%29&per-page=1&select=id%2Ctitle%2Cpublication_year",
       "resposta": "HTTP 200; meta.count=32467; cost_usd=0.001 por pedido; aviso no corpo: \"No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address\"",
-      "observacao": "sem chave: page=2 deu 429 e, repetido 16 s depois, 200; cursor=* deu 200 com meta.next_cursor (as páginas seguintes, não testadas); limite da paginação por página e do per-page não conferido; a ficha antiga dizia que o cursor exige chave"
+      "observacao": "sem chave: page=2 deu 429 e, repetido 16 s depois, 200; cursor=* deu 200 com meta.next_cursor (as páginas seguintes, não testadas); limite da paginação por página e do per-page não conferido; a ficha antiga dizia que o cursor exige chave Teste no runner do GitHub Actions em 2026-11-08 (https://github.com/Indalt/cultura-liquida/actions/runs/42493394580; Linux 7.0.0-1019-azure; runnervmwuk1x): GET https://api.openalex.org/works?search=cajuina&per-page=1&select=id → HTTP 503; 233 bytes; início: '{\"error\":\"Search temporarily unavailable\",\"message\":\"Anonymous search is paused while the search cluster recovers from heavy load. Please retry shortly, or use '"
     },
     "decisao": "aceito como via automática só dentro do orçamento sem chave (adaptador api-cursor); a cobertura cabe no Recorte como alcance; liga depois da rodada real curta e do teste no runner"
   }

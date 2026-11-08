@@ -37,8 +37,35 @@
     "motivo": "via humana: 403 com desafio do Cloudflare (ficha do K-106; D-044, teste de 24/10 não passou)"
   },
   "AM-0061": {
+    "ligado": true,
+    "consultas": [
+      "CO-0001",
+      "CO-0002"
+    ],
+    "teto_chamadas": 30,
+    "cadencia_min_dias": 7,
+    "cadencia_max_dias": 28,
+    "fonte_da_cadencia": "ficha de acesso de 08/11/2026: API do Tainacan aberta, sem limite publicado; acervo pequeno (105 itens com caju) e de mudança lenta: a passada não se repete antes de 7 dias (valor provisório); aberta também no runner (execução 42493394580)",
+    "nota_consultas": "CO-0008 fica fora: os pares bebida + descritor testados deram 0 (a busca do WordPress exige todas as palavras no item); CO-0003 a CO-0005 sem lista de buscas testada"
+  },
+  "AM-0022": {
+    "ligado": true,
+    "consultas": [
+      "CO-0001",
+      "CO-0002",
+      "CO-0003",
+      "CO-0004",
+      "CO-0005",
+      "CO-0008"
+    ],
+    "teto_chamadas": 120,
+    "cadencia_min_dias": 1,
+    "cadencia_max_dias": 28,
+    "fonte_da_cadencia": "ficha de acesso de 08/11/2026: API do VuFind aberta, sem limite de uso publicado (não conferido), a mesma infraestrutura do IBICT que a BDTD; 1 pedido por segundo, robô identificado; aberta também no runner (execução 42493394580)"
+  },
+  "AM-0026": {
     "ligado": false,
     "consultas": [],
-    "motivo": "adaptador do Tainacan em construção no K-112 (insumo 73); liga depois da resposta gravada, do caso que reprova, da rodada real curta e do teste no runner"
+    "motivo": "OpenAlex sem chave (D-049): a busca anônima respondeu 429 (08/11, duas rodadas reais curtas) e 503 no runner ('Anonymous search is paused while the search cluster recovers from heavy load'); o adaptador api-cursor está pronto; liga quando uma rodada real curta passar"
   }
 }
