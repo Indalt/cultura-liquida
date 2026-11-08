@@ -16,3 +16,5 @@
 {"data": "2026-11-07", "entrada": "EN-0701", "url": "http://www.repositorio.ufc.br/handle/riufc/15013", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
 {"data": "2026-11-07", "entrada": "EN-0702", "url": "http://repositorio.uem.br:8080/jspui/handle/1/6051", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
 {"data": "2026-11-07", "entrada": "EN-0703", "url": "http://www.repositorio.ufc.br/handle/riufc/18532", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-08", "entrada": "EN-0717", "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/35835", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-08", "entrada": "EN-0718", "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/28126", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
