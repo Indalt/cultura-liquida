@@ -1,0 +1,37 @@
+{
+  "id": "EN-51000",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/VERACRUZ-0_de1baedbdd3171724e599c11f51d15dd",
+  "identificador": "AM-0022:VERACRUZ-0_de1baedbdd3171724e599c11f51d15dd",
+  "titulo": "Elaboração e caracterização físico-química de bebidas saborizadas a base de quirera de arroz e soja / Physical and chemical characterization and characterization of flavored drinks based on rice and soybeer querera",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…uma elevação nos teores de lipídios, mas uma estabilização na proporção 70A:30S. O teor de umidade foi menor na bebida 30A:70S, já as cinzas apresentam valores muito próximos entre si. Os valores do pH, sólidos solúveis e densidade…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

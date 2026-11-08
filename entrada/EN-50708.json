@@ -1,0 +1,38 @@
+{
+  "id": "EN-50708",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SBFRU-1_4247ee185e2de166c68703f2e083246f",
+  "identificador": "AM-0022:SBFRU-1_4247ee185e2de166c68703f2e083246f",
+  "titulo": "Armazenamento refrigerado sob atmosfera modificada de pedúnculos de cajueiro-anão-precoce dos clones CCP-76, end-157, end-183 e end-189",
+  "ano": "2002",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…fenólicos. O uso da refrigeração (5ºC e 85% U.R), associada a atmosfera modificada, proporcionou uma vida útil pós-colheita de 10 dias para o clone END 189, de até 15 dias para o clone END 157 e de até 25 dias para os clones CCP 76 e END…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

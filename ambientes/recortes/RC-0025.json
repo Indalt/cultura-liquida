@@ -11,7 +11,7 @@
   "erros": [],
   "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
-    "chamadas": 3,
+    "chamadas": 30,
     "divisoes_janela": 4
   },
   "estado": "percorrido pela busca",

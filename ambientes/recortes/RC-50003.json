@@ -1,0 +1,28 @@
+{
+  "id": "RC-50003",
+  "ambiente": "AM-0022",
+  "consulta": "CO-0001",
+  "periodo": "1964-2026",
+  "modo": "termo",
+  "cursor": 9,
+  "total_informado": 3635,
+  "total_visto": 800,
+  "saturacao": "não exaurido: 800 de 3635 visto(s)",
+  "erros": [],
+  "proxima_acao": "retomar do cursor 9 com teto novo",
+  "teto": {
+    "chamadas": 120,
+    "divisoes_janela": 3
+  },
+  "estado": "interrompido por teto",
+  "data": "2026-11-08",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "recorte-0.3"
+  },
+  "faltas": [
+    "F-50002"
+  ]
+}

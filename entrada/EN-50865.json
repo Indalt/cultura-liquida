@@ -1,0 +1,36 @@
+{
+  "id": "EN-50865",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UCEN_f46ce65e48a449db1378356eb8953bf2",
+  "identificador": "AM-0022:UCEN_f46ce65e48a449db1378356eb8953bf2",
+  "titulo": "Análise da eficiência de remoção de ferro e manganês de águas de abastecimento por filtração adsortiva",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no título (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

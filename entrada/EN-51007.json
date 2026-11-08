@@ -1,0 +1,37 @@
+{
+  "id": "EN-51007",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://repositorio.ufpe.br/handle/123456789/1510",
+  "identificador": "AM-0022:repositorio.ufpe.br/handle/123456789/1510",
+  "titulo": "Desenvolvimento fetal e função renal em ratos submetidos a uma sobrecarga de sódio durante a vida pré-natal",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de fluxo e clearance de inulina para mensurar a pressão arterial média (PAM), fluxo sanguíneo renal e ritmo de filtração glomerular respectivamente. O número de néfrons (NN) foi contado em suspensão renal. As mães não apresentaram…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

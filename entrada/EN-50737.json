@@ -1,0 +1,38 @@
+{
+  "id": "EN-50737",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_54ef0290d1727b06bad4311a1f21eafb",
+  "identificador": "AM-0022:USP_54ef0290d1727b06bad4311a1f21eafb",
+  "titulo": "Análise de variância para dados de tonalidade de cor: um caso de dados circulares",
+  "ano": "2004",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…na área de tecnologia de alimentos e, que teve como objetivo, avaliar a conservação de cogumelos i>Pleurotus sajor-caju frescos quanto à qualidade e à durabilidade, quando submetidos a quatro diferentes tratamentos usuais na conservação…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

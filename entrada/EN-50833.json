@@ -1,0 +1,37 @@
+{
+  "id": "EN-50833",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://www.alice.cnptia.embrapa.br/alice/handle/doc/1059688",
+  "identificador": "AM-0022:alice.cnptia.embrapa.br/handle/doc/1059688",
+  "titulo": "O branqueamento do açaí em batedeiras artesanais para controle do Trypanosoma cruzi, agente etiológico da Doença de Chagas.",
+  "ano": "2016",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…população local. Há alguns anos, casos de doença de Chagas foram relatados na região amazônica por transmissão pela bebida açaí que continha barbeiros contaminados pelo protozoário Trypanosoma cruzi ou suas fezes. No período de 2007 a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "EN-50756",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://hdl.handle.net/10183/198331",
+  "identificador": "hdl:10183/198331",
+  "titulo": "Adaptação de envasadora para engarrafar bebidas gasosas",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'envase' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Este trabalho tem como objetivo adaptar o projeto de uma máquina envasadora de vinhos, tornando-a hábil para o envase de espumantes e/ou bebidas com gás para pequenas e médias empresas visando o aumento de produtividade,…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

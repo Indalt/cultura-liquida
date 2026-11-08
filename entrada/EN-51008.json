@@ -1,0 +1,37 @@
+{
+  "id": "EN-51008",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UFSP_88cdf3ccd300f6332e36c251198cab6c",
+  "identificador": "AM-0022:UFSP_88cdf3ccd300f6332e36c251198cab6c",
+  "titulo": "Aplicação de modelo de predição de prognóstico em nefropatia por IgA na população brasileira",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…original de validação da calculadora e correspondia a um desfecho composto que chamamos de DRC terminal (taxa de filtração glomerular estimada, TFGe < 15 ml/min ou terapia renal substitutiva ou transplante renal) e/ou a diminuição de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "RC-50009",
+  "ambiente": "AM-0022",
+  "consulta": "CO-0008",
+  "periodo": "todo",
+  "modo": "descritores",
+  "cursor": 4,
+  "total_informado": 1022,
+  "total_visto": 300,
+  "saturacao": "nada visto ainda",
+  "erros": [],
+  "proxima_acao": "rodar a primeira página",
+  "teto": {
+    "chamadas": 120,
+    "divisoes_janela": 4
+  },
+  "estado": "em curso",
+  "data": "2026-11-08",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "recorte-0.3"
+  }
+}

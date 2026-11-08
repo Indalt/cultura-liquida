@@ -1,0 +1,37 @@
+{
+  "id": "EN-50819",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://repositorio.ufpa.br/handle/2011/15506",
+  "identificador": "hdl:2011/15506",
+  "titulo": "Desenvolvimento de \"língua eletrônica\" nanoestruturada baseada em buckypaper e seu uso para autenticação de bebidas etílicas",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…culminando em parâmetros de desempenho pronunciados para o BP-NTCPMs-COOH (resposta máxima de 5,67 ± 1,82 para bebida etílica de açaí não adulterada e tempos de resposta e recuperação máximos de 37,33 min e 50,58 min, para vinho do…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

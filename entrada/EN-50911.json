@@ -1,0 +1,37 @@
+{
+  "id": "EN-50911",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://hdl.handle.net/10737/1942",
+  "identificador": "hdl:10737/1942",
+  "titulo": "Aplicação da ferramenta FMEA de processos em uma indústria de bebidas",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'envase' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…competitividade em seus segmentos. Em virtude desse cenário, o estudo buscou encontrar melhorias no processo de envase de refrigerantes, por meio da ferramenta FMEA (Análise de Modo e Efeitos de Falha Potencial, do inglês Failure Mode…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

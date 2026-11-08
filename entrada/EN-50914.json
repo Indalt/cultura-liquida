@@ -1,0 +1,37 @@
+{
+  "id": "EN-50914",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_859c09468f5fd77ec9c595718a753e63",
+  "identificador": "AM-0022:USP_859c09468f5fd77ec9c595718a753e63",
+  "titulo": "Aproveitamento de soro de ricota para elaboração de suplemento hidroeletrolítico",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…o binômio tempo de retenção (30 a 50 s) x temperatura de pasteurização (85 a 95 ºC) adequado à obtenção de uma bebida comercialmente esterilizada com elevada aceitação sensorial. A estabilização da bebida foi baseada na seguinte…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

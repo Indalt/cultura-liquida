@@ -1,0 +1,38 @@
+{
+  "id": "EN-50264",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50001",
+    "RC-50003"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://www.alice.cnptia.embrapa.br/alice/handle/doc/65556",
+  "identificador": "AM-0022:alice.cnptia.embrapa.br/handle/doc/65556",
+  "titulo": "Avaliação de clones de cajueiro anão precoce no Semi-Árido do Meio-Norte brasileiro.",
+  "ano": "2002",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…nos estados do Nordeste (Levantamento..., 2002). O Estado do Piauí possui a segunda maior área plantada com caju no Nordeste, com uma previsão de 149.770 hectares para o ano de 2002, apresentando uma produtividade média de 281…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

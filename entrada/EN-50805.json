@@ -1,0 +1,37 @@
+{
+  "id": "EN-50805",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_3ee4cebec44e77145dc6a45214783374",
+  "identificador": "AM-0022:USP_3ee4cebec44e77145dc6a45214783374",
+  "titulo": "Avaliação sensorial descritiva de caldo de cana extraído de diferentes cultivares",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…(C1), SP 832847 (C2), RB 92579 (C3), RB 867515 (C4), CTC 9001 (C5), CTC 2 (C6), CTC 9003 (C7) e SP 813250 (C8). A bebida foi processada a 85 °C/30 s, acondicionada assepticamente em garrafas de polietileno tereftalato (PET) e armazenada…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

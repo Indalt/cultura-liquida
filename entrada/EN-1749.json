@@ -3,7 +3,9 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-0027"
+    "RC-0027",
+    "RC-50007",
+    "RC-50008"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BRCRIS_0f8e93f15843fbd071341f1d9af81cc0",

@@ -3,7 +3,8 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0061",
   "recortes": [
-    "RC-0025"
+    "RC-0025",
+    "RC-50010"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/realizacao-do-i-forum-estadual-de-salvaguarda-da-producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-do-piaui/",

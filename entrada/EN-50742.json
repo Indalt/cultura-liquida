@@ -1,0 +1,38 @@
+{
+  "id": "EN-50742",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://repositorio.ufpb.br/jspui/handle/123456789/23907",
+  "identificador": "AM-0022:repositorio.ufpb.br/handle/123456789/23907",
+  "titulo": "CoLingPB/Agreste Rural/Cuité/brPB09_g2bF01",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…no passado; alimentos e sua conservação; banheiro e sua inexistência no passado; banho de cuia no passado; caju e sua colheita; caju e sua plantação; caju e sua venda; carregar água; castanha e seu modo de torrar; castanha e sua…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

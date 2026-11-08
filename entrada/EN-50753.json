@@ -1,0 +1,37 @@
+{
+  "id": "EN-50753",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://hdl.handle.net/10284/1086",
+  "identificador": "hdl:10284/1086",
+  "titulo": "A contribuição da implementação do controlo da qualidade da imagem radiológica digital para a melhoria contínua da qualidade num serviço de imagiologia: o estudo de caso no serviço de imagiologia do HFF",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'colheita' no resumo (CO-0004)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…do mesmo ano. A amostra foi retirada da população recorrendo a uma selecção aleatória simples. Como instrumento de colheita de dados recorreu-se à elaboração de uma folha de verificação. Os resultados foram apresentados em cartas de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

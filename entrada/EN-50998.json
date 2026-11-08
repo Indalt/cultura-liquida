@@ -1,0 +1,37 @@
+{
+  "id": "EN-50998",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/VERACRUZ-0_6524f905a7c94903b10d7fde5bdb29d3",
+  "identificador": "AM-0022:VERACRUZ-0_6524f905a7c94903b10d7fde5bdb29d3",
+  "titulo": "Desenvolvimento, avaliação sensorial e da estabilidade físico-química de um fermentado alcoólico de maracujá-do-mato (Passiflora cincinnata Mast.) durante o armazenamento / Development, evaluation of physico-chemical and sensory stability of maracujá-do-mato (Passiflora cincinnata Mast.) alcoholic fermented beverage during storage",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de maracujá-do-mato durante 150 dias, bem como realizar a análise sensorial após o armazenamento. Para obtenção da bebida, seguiram-se as seguintes etapas: seleção da matéria-prima, correção do pH, adição do inóculo, fermentação,…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

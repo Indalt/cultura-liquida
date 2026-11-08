@@ -1,0 +1,38 @@
+{
+  "id": "EN-50714",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://hdl.handle.net/11449/10382",
+  "identificador": "doi:10.1590/s0100-29452010005000044",
+  "titulo": "Análise técnica e econômica do cultivo do cajueiro-anão (Anacardium occidentale L.) na regional de Jales-SP",
+  "ano": "2010",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Objetivou-se estimar os custos de produção e lucratividade do caju in natura na Regional de Jales, noroeste do Estado de São Paulo. Os dados foram levantados junto a produtores, a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

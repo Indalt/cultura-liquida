@@ -1,0 +1,36 @@
+{
+  "id": "EN-50763",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UECE-0_01b09e4267f1349274c4710a2c1a9f9f",
+  "identificador": "AM-0022:UECE-0_01b09e4267f1349274c4710a2c1a9f9f",
+  "titulo": "Higienização em indústrias de bebidas - segmento cerveja: uma revisão de literatura",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no título (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "EN-50740",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_2ece602e74bfc7fa7fce491debcbfa50",
+  "identificador": "AM-0022:USP_2ece602e74bfc7fa7fce491debcbfa50",
+  "titulo": "Desenvolvimento, maturação e armazenamento de pedúnculos de cajueiro anão precoce CCP-76 sob influência do cálcio",
+  "ano": "2000",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…é o ideal para a colheita de pedúnculos ocasião em que alcança sua máxima qualidade para o consumo. Os pedúnculos de caju apresentaram amaciamento acentuado durante o desenvolvimento e maturação, observando-se paralelamente redução no…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "EN-50724",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/18992",
+  "identificador": "AM-0022:dspace.sti.ufcg.edu.br/handle/riufcg/18992",
+  "titulo": "Estudos das características físicas e químicas das folhas do cajueiro (Anacardium occidentale) e suas aplicações tecnológicas.",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…para seu cultivo e conseqüentemente classifica o país entre os maiores produtores e exportadores de seu pseudofruto (caju) e fruto (castanha). No entanto, durante as etapas de pós colheita muito se é perdido, principalmente no que diz…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

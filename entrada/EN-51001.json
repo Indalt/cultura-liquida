@@ -1,0 +1,37 @@
+{
+  "id": "EN-51001",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_2fe8c549d0452a6f63cb9b6a8664a75e",
+  "identificador": "AM-0022:USP_2fe8c549d0452a6f63cb9b6a8664a75e",
+  "titulo": "Uso do aplicativo de WhatsApp® no acompanhamento do bebê pré-termo após alta hospitalar da unidade neonatal",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…inseguranças e dúvidas sobre os cuidados básicos com o bebê prematuro, como por exemplo, cuidados com a pele, higienização nasal, sono, preparo de fórmulas infantis, e, em especial, o alívio de cólica. Outros tópicos específicos da…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

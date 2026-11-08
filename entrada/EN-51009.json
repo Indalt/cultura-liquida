@@ -1,0 +1,37 @@
+{
+  "id": "EN-51009",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://repositorio.ufes.br/handle/10/8093",
+  "identificador": "AM-0022:repositorio.ufes.br/handle/10/8093",
+  "titulo": "Desenvolvimento e caracterização de banana-passa e licor de banana elaborados com xarope de yacon e sacarose",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ácido cítrico, bissulfito de sódio e cloridrato de L-cisteína nas concentrações de 100, 200, 300 e 400 ppm e tratamento térmico a 100 °C por 2, 4, 6 e 8 minutos. Todos os tratamentos foram avaliados quanto a alteração de cor (ΔE). Os…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "EN-50732",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50007",
+    "RC-50008"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SBFRU-1_a669383e66eb7d6334ab5d13c04ade16",
+  "identificador": "AM-0022:SBFRU-1_a669383e66eb7d6334ab5d13c04ade16",
+  "titulo": "Qualidade de cajus-de-mesa obtidos nos sistemas de produção integrada e convencional",
+  "ano": "2008",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0003)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de plantas. No sistema PI, foram aplicadas as práticas recomendadas nas Normas Técnicas de Produção Integrada de Caju. No PC, foram aplicadas as práticas comumente utilizadas pelo produtor. Foram avaliados cor da película, firmeza de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

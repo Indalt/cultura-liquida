@@ -1,0 +1,37 @@
+{
+  "id": "EN-50773",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009"
+  ],
+  "data_entrada": "2026-11-08",
+  "url_ou_arquivo": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/30457",
+  "identificador": "AM-0022:dspace.sti.ufcg.edu.br/handle/riufcg/30457",
+  "titulo": "Controle estatístico do processo aplicado ao processo de envasamento em uma indústria de bebidas.",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'envase' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…da Qualidade (CEQ). Este trabalho possui como objetivo de seu estudo a aplicação de técnicas do CEP no processo de envase em uma indústria de bebidas, que produz suco de laranja concentrado. Para cumprir este objetivo, foram aplicadas…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-50014",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}
