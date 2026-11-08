@@ -1,0 +1,11 @@
+{
+  "id": "F-0035",
+  "tipo": "outro",
+  "o_que_falta": "total desconhecido: RC-0026 (AM-0026 × CO-0002)",
+  "por_que": "a fonte ainda não informou o total",
+  "onde_aparece": [
+    "RC-0026"
+  ],
+  "criada_por": "scripts/recorte.py (EX-0121)",
+  "data": "2026-11-08"
+}

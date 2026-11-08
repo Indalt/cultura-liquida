@@ -18,7 +18,41 @@
     "motivo": "403 com desafio do Cloudflare em 23/10/2026 (ficha do K-106): via humana, busca de Vicente com link permanente por página"
   },
   "AM-0061": {
-    "adaptador": "assistido",
-    "motivo": "robots.txt e API do Tainacan abertos ao robô em 29/10/2026 (ficha do K-109), mas o projeto não tem adaptador do Tainacan (protocolo novo, parado para Vicente); até lá, via humana"
+    "adaptador": "tainacan",
+    "base": "https://bcr.iphan.gov.br/wp-json/tainacan/v2/items",
+    "pagina": 50,
+    "teste": "https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=cajuina&perpage=1&fetch_only=id,title"
+  },
+  "AM-0022": {
+    "adaptador": "vufind",
+    "base": "https://oasisbr.ibict.br/vufind/api/v1/search",
+    "registro": "https://oasisbr.ibict.br/vufind/Record/<id>",
+    "pagina": 100,
+    "limite_fonte": null
+  },
+  "AM-0026": {
+    "adaptador": "api-cursor",
+    "base": "https://api.openalex.org/works",
+    "param_busca": "search",
+    "param_cursor": "cursor",
+    "cursor_inicial": "*",
+    "fixos": {
+      "per-page": "100",
+      "select": "id,title,publication_year,abstract_inverted_index"
+    },
+    "pagina": 100,
+    "caminhos": {
+      "itens": "results",
+      "total": "meta.count",
+      "proximo": "meta.next_cursor",
+      "id": "id",
+      "titulo": "title",
+      "ano": "publication_year",
+      "resumo": "abstract_inverted_index",
+      "url": "id"
+    },
+    "filtro_periodo": "filter=publication_year:{a}-{b}",
+    "nota": "sem chave (D-049): orçamento grátis de US$ 0,10 por dia por IP, dividido com quem usa o mesmo IP (cerca de 100 buscas; aviso da API em 08/11); 429 ao passar",
+    "teste": "https://api.openalex.org/works?search=cajuina&per-page=1&select=id"
   }
 }

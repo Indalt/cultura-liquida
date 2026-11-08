@@ -1,0 +1,8 @@
+{
+ "url": "https://bcr.iphan.gov.br/robots.txt",
+ "status": 200,
+ "corpo": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://bcr.iphan.gov.br/wp-sitemap.xml\n",
+ "headers": {
+  "Content-Type": "text/plain; charset=utf-8"
+ }
+}

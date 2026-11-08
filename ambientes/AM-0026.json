@@ -12,5 +12,26 @@
     "data": "2026-10-22",
     "execucao": "EX-0006"
   },
-  "nota": "Anexo E, linha 26 (frentes FH, PA e MO): uso ambos; nível oficial; link ID do OpenAlex (W…) e DOI; termos de uso Mil buscas custam US$ 1, mil listas com filtro US$ 0,10 e mil PDFs US$ 10. Limite de 10 requisições por segundo sem chave e 30 com chave. Dados em CC0, domínio público (informação de fonte secundária).; como buscar RSS nosso: repetir cada consulta e comparar com as pegadas, porque o filtro por data de criação é pago. Escavação: paginar com cursor e fazer a bola de neve pelas referências e citações (PA-3). Nunca recortar por país ou idioma (PA-4).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+  "nota": "Anexo E, linha 26 (frentes FH, PA e MO): uso ambos; nível oficial; link ID do OpenAlex (W…) e DOI; termos de uso Mil buscas custam US$ 1, mil listas com filtro US$ 0,10 e mil PDFs US$ 10. Limite de 10 requisições por segundo sem chave e 30 com chave. Dados em CC0, domínio público (informação de fonte secundária).; como buscar RSS nosso: repetir cada consulta e comparar com as pegadas, porque o filtro por data de criação é pago. Escavação: paginar com cursor e fazer a bola de neve pelas referências e citações (PA-3). Nunca recortar por país ou idioma (PA-4).. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4).",
+  "ficha_de_acesso": {
+    "nome": "OpenAlex",
+    "tipo": "API de metadados acadêmicos",
+    "acesso": "aberto sem chave para uso básico; a chave grátis pediria conta com e-mail (D-049: não se abre); sem chave, orçamento de US$ 0,10 por dia por IP compartilhado e 429 sob carga (08/11)",
+    "como_buscar": "GET /works?search=<consulta>&per-page=<n>&select=...; search= aceita aspas, OR, AND e parênteses e busca também no texto integral; paginação por cursor (cursor=* devolveu next_cursor sem chave na 1ª página, 08/11) e por página (page=2 respondeu 200 depois de um 429)",
+    "endpoint": "https://api.openalex.org/works",
+    "link_permanente": "https://openalex.org/W<id> (o id da obra)",
+    "texto_integral": "não conferido (só metadados nesta via)",
+    "termos": "não conferido: termos em PDF não lidos (juridico, 05/11); sem Falta pela regra (D-042)",
+    "robots": "https://api.openalex.org/robots.txt (juridico, 05/11): User-agent: *; Allow: /",
+    "cobertura": "não conferido (o total da busca vazia não foi pedido)",
+    "uso": "ambos",
+    "nivel": "não conferido",
+    "teste": {
+      "data": "2026-11-08",
+      "pedido": "GET https://api.openalex.org/works?search=%28%22caju%22%20OR%20%22caj%C3%BA%22%20OR%20%22ca-ju%22%29&per-page=1&select=id%2Ctitle%2Cpublication_year",
+      "resposta": "HTTP 200; meta.count=32467; cost_usd=0.001 por pedido; aviso no corpo: \"No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address\"",
+      "observacao": "sem chave: page=2 deu 429 e, repetido 16 s depois, 200; cursor=* deu 200 com meta.next_cursor (as páginas seguintes, não testadas); limite da paginação por página e do per-page não conferido; a ficha antiga dizia que o cursor exige chave"
+    },
+    "decisao": "aceito como via automática só dentro do orçamento sem chave (adaptador api-cursor); a cobertura cabe no Recorte como alcance; liga depois da rodada real curta e do teste no runner"
+  }
 }

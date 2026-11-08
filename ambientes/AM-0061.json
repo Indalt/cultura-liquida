@@ -27,12 +27,12 @@
     "uso": "ambos",
     "nivel": "oficial",
     "teste": {
-      "data": "2026-10-29",
-      "pedido": "6 GET com -A 'CulturaLiquida-rastreador/0.1 (+https://github.com/Indalt/cultura-liquida)': /robots.txt; /wp-json/tainacan/v2/items?search=cajuina&perpage=3&fetch_only=id,title,url,document,attachments; duas vezes ?search=cajuina&perpage=50&fetch_only=id,title,url,collection_id; duas vezes ?postin=66089,66631 com fetch_only ampliado. Mais 2 buscas na web, sem tocar o BCR.",
-      "resposta": "robots.txt 200 (117 bytes); busca 200, X-WP-Total 49, X-WP-TotalPages 17, X-Robots-Tag noindex; busca de 50 itens 200 (49 listados); fetch_only ampliado 500 (página de erro do WordPress); dois pedidos com a saída perdida por erro da ferramenta local.",
-      "observacao": "O DNS voltou em relação a 23/10 (causa da falha não apurada). A página HTML do bem e os PDFs não foram abertos (teto de 6 pedidos). Rastreador, EX do log de 29/10/2026 (K-109)."
+      "data": "2026-11-08",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=caju&perpage=1&fetch_only=id,title",
+      "resposta": "HTTP 200; X-WP-Total: 105; X-WP-TotalPages: 105 (6 de 6 pedidos 200, sem desafio)",
+      "observacao": "rastreador, 08/11: 6 pedidos 200, sem desafio; caju=105, cajú=105, cajuína=48, cajuina=48 (acento indiferente), bebida extração do suco=0, bebida envase=0 (a busca exige todas as palavras no item); 9 buscas não testadas"
     },
-    "decisao": "aceito com ressalvas: a leitura automática é aberta pelo robots.txt (API do Tainacan e páginas dos bens); termos de uso não conferidos (o juridico confere antes de coleta em escala). Trazer o registro como Entrada coletada por robô pede um adaptador do Tainacan, que é protocolo novo: parado para Vicente (K-109, item 2 da autorização). Até a resposta, o registro fica fora dos lotes do bloco 7."
+    "decisao": "aceito como via automática pela API do Tainacan (adaptador tainacan, K-112), com a lista de buscas testada; liga depois da rodada real curta e do teste no runner"
   },
   "ultima_visita": "2026-10-29"
 }

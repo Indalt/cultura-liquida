@@ -1,0 +1,31 @@
+{
+  "id": "RC-0026",
+  "ambiente": "AM-0026",
+  "consulta": "CO-0002",
+  "periodo": "todo",
+  "modo": "termo",
+  "cursor": null,
+  "total_informado": null,
+  "total_visto": 0,
+  "saturacao": "não exaurido: 0 visto(s) até o erro",
+  "erros": [
+    "HTTP 429 no cursor None",
+    "HTTP 429 no cursor None"
+  ],
+  "proxima_acao": "repetir mais tarde do cursor None: erro da fonte, não barreira",
+  "teto": {
+    "chamadas": 3,
+    "divisoes_janela": 4
+  },
+  "estado": "aberto",
+  "data": "2026-11-08",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-0121",
+    "versao_regra": "recorte-0.3"
+  },
+  "faltas": [
+    "F-0035"
+  ]
+}

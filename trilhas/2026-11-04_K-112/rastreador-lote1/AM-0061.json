@@ -1,0 +1,128 @@
+{
+  "ambiente": "AM-0061 BCR IPHAN (WordPress com Tainacan, API REST)",
+  "teste": {
+    "data": "2026-11-08",
+    "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=caju&perpage=1&fetch_only=id,title",
+    "resposta": "HTTP 200; X-WP-Total: 105; X-WP-TotalPages: 105 (6 de 6 pedidos 200, sem desafio)",
+    "abre": "sim, sem cadastro, ao robô identificado; perpage=1 e fetch_only funcionam"
+  },
+  "traducoes": {
+    "CO-0001": {
+      "sintaxe": "LISTA DE BUSCAS, uma por forma do TE-0001: caju | cajú | ca-ju",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; caju=105; cajú=105; ca-ju não testada",
+      "total_informado": "caju=105; cajú=105; ca-ju não testada",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados",
+      "estado": "testada em parte (2 de 3 formas)"
+    },
+    "CO-0002": {
+      "sintaxe": "LISTA DE BUSCAS, uma por forma do TE-0002: cajuína | cajuina | caju-ína | cajuí-na | ca-juína | cajuyna",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; cajuína=48; cajuina=48; as outras 4 formas não testadas",
+      "total_informado": "cajuína=48; cajuina=48; as outras 4 formas não testadas",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados",
+      "estado": "testada em parte (2 de 6 formas)"
+    },
+    "CO-0008": {
+      "sintaxe": "LISTA DE BUSCAS por par classe + descritor: bebida extração do suco | bebida clarificação | bebida filtração | bebida envase | bebida tratamento térmico | bebida higienização",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; bebida extração do suco=0; bebida envase=0; as outras 4 não testadas",
+      "total_informado": "bebida extração do suco=0; bebida envase=0; as outras 4 não testadas",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados",
+      "estado": "testada em parte (2 de 6 pares)"
+    },
+    "CO-0003": {
+      "estado": "não testada (teto de pedidos)",
+      "sintaxe": "LISTA DE BUSCAS: pares forma de caju + descritor (ex.: caju colheita)"
+    },
+    "CO-0004": {
+      "estado": "não testada (teto de pedidos)",
+      "sintaxe": "LISTA DE BUSCAS: pares forma de cajuína + descritor"
+    },
+    "CO-0005": {
+      "estado": "não testada (teto de pedidos)",
+      "sintaxe": "LISTA DE BUSCAS: um descritor por busca (processamento do pedúnculo | descastanhamento)"
+    }
+  },
+  "buscas": {
+    "CO-0001": [
+      {
+        "busca": "caju",
+        "total": 105
+      },
+      {
+        "busca": "cajú",
+        "total": 105
+      },
+      {
+        "busca": "ca-ju",
+        "total": "não testada"
+      }
+    ],
+    "CO-0002": [
+      {
+        "busca": "cajuína",
+        "total": 48
+      },
+      {
+        "busca": "cajuina",
+        "total": 48
+      },
+      {
+        "busca": "caju-ína",
+        "total": "não testada"
+      },
+      {
+        "busca": "cajuí-na",
+        "total": "não testada"
+      },
+      {
+        "busca": "ca-juína",
+        "total": "não testada"
+      },
+      {
+        "busca": "cajuyna",
+        "total": "não testada"
+      }
+    ],
+    "CO-0008": [
+      {
+        "busca": "bebida extração do suco",
+        "total": 0
+      },
+      {
+        "busca": "bebida envase",
+        "total": 0
+      },
+      {
+        "busca": "bebida clarificação",
+        "total": "não testada"
+      },
+      {
+        "busca": "bebida filtração",
+        "total": "não testada"
+      },
+      {
+        "busca": "bebida tratamento térmico",
+        "total": "não testada"
+      },
+      {
+        "busca": "bebida higienização",
+        "total": "não testada"
+      }
+    ]
+  },
+  "observacoes": "a busca ignora o acento (caju = cajú, 105 e 105; cajuína = cajuina, 48 e 48; o primeiro item devolvido foi o mesmo), então as formas só de acento são redundantes e podem sair da lista; os 48 de cajuína provavelmente estão dentro dos 105 de caju (não verificado por ID); o par bebida + descritor deu 0 (a busca exige todas as palavras no mesmo item; o BCR é registro de bens e os descritores de processo ficam nos dossiês); a rotina decide se esses pares valem a chamada",
+  "cadastro_ou_pagamento": "nenhum",
+  "nivel": "teste direto da API em 2026-11-08; robots.txt e termos vistos em 29/10 (ficha, sem repetição hoje); página oficial de ajuda não aberta",
+  "nao_conferido": [
+    "as 9 buscas listadas como não testadas",
+    "CO-0003, CO-0004 e CO-0005",
+    "a sobreposição entre as buscas, por ID",
+    "se a busca olha o texto do dossiê anexo ou só os metadados",
+    "limite de taxa e de perpage do Tainacan"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "RC-0027",
+  "ambiente": "AM-0022",
+  "consulta": "CO-0005",
+  "periodo": "todo",
+  "modo": "descritores",
+  "cursor": null,
+  "total_informado": 19,
+  "total_visto": 19,
+  "saturacao": "exaurido: 19 de 19 visto(s), passada completa e não saturada",
+  "erros": [],
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
+  "teto": {
+    "chamadas": 3,
+    "divisoes_janela": 4
+  },
+  "estado": "percorrido pela busca",
+  "data": "2026-11-08",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-08",
+    "execucao": "EX-0122",
+    "versao_regra": "recorte-0.3"
+  }
+}

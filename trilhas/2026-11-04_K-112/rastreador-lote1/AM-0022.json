@@ -1,0 +1,74 @@
+{
+  "ambiente": "AM-0022 Oasisbr (IBICT, VuFind)",
+  "teste": {
+    "data": "2026-11-08",
+    "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<CO-0001>",
+    "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"} (6 de 6 pedidos 200, sem 403, captcha nem verificação de navegador)",
+    "abre": "A API responde 200 e em JSON sem cadastro, ao robô identificado (UA CulturaLiquida-rastreador/0.1). O filtro da consulta NÃO foi confirmado: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD)."
+  },
+  "traducoes": {
+    "CO-0001": {
+      "sintaxe": "VuFind AllFields: (\"caju\" OR \"cajú\" OR \"ca-ju\")",
+      "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<consulta>",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"}",
+      "total_informado": "inválido (6582278 = índice inteiro, não o resultado da consulta)",
+      "perda": "não conferida: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD).",
+      "estado": "falha de teste (reteste com UTF-8)"
+    },
+    "CO-0002": {
+      "sintaxe": "VuFind AllFields: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+      "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<consulta>",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"}",
+      "total_informado": "inválido (6582278 = índice inteiro, não o resultado da consulta)",
+      "perda": "não conferida: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD).",
+      "estado": "falha de teste (reteste com UTF-8)"
+    },
+    "CO-0008": {
+      "sintaxe": "VuFind AllFields: (\"bebida\") AND (\"extração do suco\" OR \"clarificação\" OR \"filtração\" OR \"envase\" OR \"tratamento térmico\" OR \"higienização\")",
+      "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<consulta>",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"}",
+      "total_informado": "inválido (6582278 = índice inteiro, não o resultado da consulta)",
+      "perda": "não conferida: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD).",
+      "estado": "falha de teste (reteste com UTF-8)"
+    },
+    "CO-0003": {
+      "sintaxe": "VuFind AllFields: (\"caju\" OR \"cajú\" OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR \"colheita\" OR \"descastanhamento\")",
+      "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<consulta>",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"}",
+      "total_informado": "inválido (6582278 = índice inteiro, não o resultado da consulta)",
+      "perda": "não conferida: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD).",
+      "estado": "falha de teste (reteste com UTF-8)"
+    },
+    "CO-0004": {
+      "sintaxe": "VuFind AllFields: (as 6 formas de cajuína) AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR \"colheita\" OR \"descastanhamento\")",
+      "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<consulta>",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"}",
+      "total_informado": "inválido (6582278 = índice inteiro, não o resultado da consulta)",
+      "perda": "não conferida: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD).",
+      "estado": "falha de teste (reteste com UTF-8)"
+    },
+    "CO-0005": {
+      "sintaxe": "VuFind AllFields: (\"processamento do pedúnculo\" OR \"descastanhamento\")",
+      "pedido": "GET https://www.oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<consulta>",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":6582278,\"status\":\"OK\"}",
+      "total_informado": "inválido (6582278 = índice inteiro, não o resultado da consulta)",
+      "perda": "não conferida: RESULTADO INVALIDO: o total 6582278 veio igual nas seis consultas, inclusive nas bem diferentes entre si; parece ser o índice inteiro (a consulta não filtrou). Hipótese não confirmada: o shell do Windows mandou os acentos em Latin-1 (%FA, %E7, %ED) e não em UTF-8; o teto de 6 pedidos do ambiente acabou antes do reteste. Reteste com UTF-8 percent-encoded (como o helper em Python do lote usou no OpenAlex, BCR e BDTD).",
+      "estado": "falha de teste (reteste com UTF-8)"
+    }
+  },
+  "cadastro_ou_pagamento": "nenhum",
+  "nivel": "teste direto da API em 2026-11-08; página oficial de ajuda e termos de uso não abertas nesta rodada (não conferido)",
+  "nao_conferido": [
+    "se a consulta filtra de fato (os seis totais iguais indicam que não, nesta rodada)",
+    "a causa (codificação Latin-1 dos acentos? sintaxe? o campo lookfor?)",
+    "robots.txt reconferido hoje (a ficha diz que veda /vufind/Search/Results e não a API)",
+    "limite de página e de taxa da API",
+    "termos de uso (página oficial)"
+  ]
+}

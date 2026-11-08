@@ -86,13 +86,20 @@
       "sintaxe": "busca humana: cajuína OR cajuina OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR cajuyna"
     },
     "AM-0061": {
-      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
-      "pedido": "não feito",
-      "data": "2026-10-23",
-      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
-      "total_informado": "não informado",
-      "perda": "não conferida",
-      "estado": "não testada (falta: reteste)"
+      "sintaxe": "LISTA DE BUSCAS, uma por forma do TE-0002: cajuína | cajuina | caju-ína | cajuí-na | ca-juína | cajuyna",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; cajuína=48; cajuina=48; as outras 4 formas não testadas",
+      "total_informado": "cajuína=48; cajuina=48; as outras 4 formas não testadas",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados; na lista entram só as buscas testadas que trazem itens (as formas que diferem só no acento deram o mesmo total e ficam de fora); as não testadas ficam fora até o teste",
+      "estado": "testada em parte (2 de 6 formas)",
+      "buscas": [
+        "cajuína"
+      ],
+      "buscas_testadas": [
+        "cajuína",
+        "cajuina"
+      ]
     },
     "AM-0001": {
       "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
@@ -102,6 +109,16 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "(cajuína/\"caju-ína\"/\"cajuí-na\"/\"ca-juína\"/cajuyna) (acento indiferente: cajuina já coberta)"
+    },
+    "AM-0026": {
+      "sintaxe": "search=(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+      "pedido": "GET https://api.openalex.org/works?search=%28%22caju%C3%ADna%22%20OR%20%22cajuina%22%20OR%20%22caju-%C3%ADna%22%20OR%20%22caju%C3%AD-na%22%20OR%20%22ca-ju%C3%ADna%22%20OR%20%22cajuyna%22%29&per-page=1&select=id%2Ctitle%2Cpublication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=2488",
+      "total_informado": 2488,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado O search= busca também no texto integral, com radicalização (x_query da resposta): o total é muito maior que o da BDTD.",
+      "estado": "testada",
+      "param_busca": "search"
     }
   },
   "CO-0003": {
@@ -217,6 +234,15 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "\"processamento do pedúnculo\"/descastanhamento"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"processamento do pedúnculo\" OR descastanhamento)",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22processamento+do+ped%C3%BAnculo%22+OR+descastanhamento%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":19,\"status\":\"OK\"}",
+      "total_informado": 19,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
     }
   }
 }

@@ -1,0 +1,8 @@
+{
+ "url": "https://api.openalex.org/works?search=%28%22caju%C3%ADna%22%20OR%20%22cajuina%22%20OR%20%22caju-%C3%ADna%22%20OR%20%22caju%C3%AD-na%22%20OR%20%22ca-ju%C3%ADna%22%20OR%20%22cajuyna%22%29&per-page=100&select=id%2Ctitle%2Cpublication_year%2Cabstract_inverted_index&cursor=%2A",
+ "status": 429,
+ "corpo": "{\"error\":\"Rate limit exceeded\",\"message\":\"Anonymous search is temporarily rate-limited while the search cluster is under elevated load. Please retry in 40s, or use a free API key for uninterrupted access: https://openalex.org/rest-api.\",\"retryAfter\":40}",
+ "headers": {
+  "Content-Type": "application/json"
+ }
+}

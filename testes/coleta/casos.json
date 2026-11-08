@@ -593,6 +593,60 @@
       ],
       "saida_contem": "já é de outro item",
       "criterio": "achado A-001 do K-108b: o registro não sobrescreve a Entrada de outro identificador"
+    },
+    {
+      "nome": "adaptador VuFind: Oasisbr com resposta gravada (K-112)",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0022",
+        "--consulta",
+        "CO-0005",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/oasisbr"
+      ],
+      "saida_contem": "percorrido pela busca; visto 19 de 19",
+      "criterio": "a resposta real de 08/11 do Oasisbr (só id e urls, sem autoria) vira um Recorte percorrido"
+    },
+    {
+      "nome": "adaptador Tainacan: BCR com resposta gravada (K-112)",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0061",
+        "--consulta",
+        "CO-0002",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/tainacan"
+      ],
+      "saida_contem": "percorrido pela busca; visto 48 de 48",
+      "criterio": "a resposta real de 08/11 da API do Tainacan (id, title, url, collection_id; total no X-WP-Total) vira um Recorte percorrido"
+    },
+    {
+      "nome": "adaptador API com cursor: OpenAlex sem chave recusado com 429 (K-112)",
+      "espera": "passa",
+      "comando": [
+        "scripts/recorte.py",
+        "--ambiente",
+        "AM-0026",
+        "--consulta",
+        "CO-0002",
+        "--simular",
+        "--raiz",
+        "testes/coleta/raiz",
+        "--fixtures",
+        "testes/coleta/fixtures/openalex"
+      ],
+      "saida_contem": "HTTP 429",
+      "criterio": "a resposta real de 08/11 (429, busca anônima limitada sob carga) fica como erro no Recorte, sem Entrada e sem contornar (D-049: sem chave)"
     }
   ]
 }

@@ -115,6 +115,10 @@ def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, o
     pré-triagem e a citação curta do resumo (D-045)."""
     if achada := ind.achar(identificador, url):
         arq, e = achada
+        if identificador and identificador not in ind.por_chave:
+            # achada pelo link com outra chave (agregador como o Oasisbr, 08/11): a chave vira apelido na
+            # memória da rodada, e o outro registro do mesmo item, por outro link, acha a mesma Entrada
+            ind.por_chave[identificador] = achada
         if recorte and recorte not in e.setdefault("recortes", []):
             e["recortes"].append(recorte)
             if gravar:

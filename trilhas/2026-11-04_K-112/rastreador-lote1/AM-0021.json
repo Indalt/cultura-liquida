@@ -1,0 +1,26 @@
+{
+  "ambiente": "AM-0021 BDTD (IBICT, VuFind)",
+  "teste": {
+    "data": "2026-11-08",
+    "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=<CO-0008, UTF-8 percent-encoded>",
+    "resposta": "HTTP 200 {\"resultCount\":440,\"status\":\"OK\"}",
+    "abre": "sim: API VuFind aberta, sem cadastro, sem desafio"
+  },
+  "traducoes": {
+    "CO-0008": {
+      "sintaxe": "VuFind AllFields: (\"bebida\") AND (\"extração do suco\" OR \"clarificação\" OR \"filtração\" OR \"envase\" OR \"tratamento térmico\" OR \"higienização\")",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22bebida%22%29%20AND%20%28%22extra%C3%A7%C3%A3o%20do%20suco%22%20OR%20%22clarifica%C3%A7%C3%A3o%22%20OR%20%22filtra%C3%A7%C3%A3o%22%20OR%20%22envase%22%20OR%20%22tratamento%20t%C3%A9rmico%22%20OR%20%22higieniza%C3%A7%C3%A3o%22%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":440,\"status\":\"OK\"}",
+      "total_informado": 440,
+      "perda": "nenhuma de sintaxe (aspas, AND, OR e parênteses aceitos; o total filtrou, ao contrário do Oasisbr); o AllFields busca em todos os campos, o que inclui resumo e assunto, não só título",
+      "estado": "testada"
+    }
+  },
+  "cadastro_ou_pagamento": "nenhum",
+  "nivel": "teste direto da API em 2026-11-08; a ficha do ambiente (K-106) já tinha o teste de 23/10 em AM-0021.json",
+  "nao_conferido": [
+    "relevância dos 440 (não avaliada; o rastreador não avalia)",
+    "robots.txt reconferido hoje"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+ "url": "https://api.openalex.org/robots.txt",
+ "status": 200,
+ "corpo": "User-agent: *\nAllow: /\n",
+ "headers": {
+  "Content-Type": "text/plain; charset=utf-8"
+ }
+}

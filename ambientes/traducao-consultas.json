@@ -21,13 +21,20 @@
       "sintaxe": "busca humana: caju OR cajú OR \"ca-ju\""
     },
     "AM-0061": {
-      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
-      "pedido": "não feito",
-      "data": "2026-10-23",
-      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
-      "total_informado": "não informado",
-      "perda": "não conferida",
-      "estado": "não testada (falta: reteste)"
+      "sintaxe": "LISTA DE BUSCAS, uma por forma do TE-0001: caju | cajú | ca-ju",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; caju=105; cajú=105; ca-ju não testada",
+      "total_informado": "caju=105; cajú=105; ca-ju não testada",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados; na lista entram só as buscas testadas que trazem itens (as formas que diferem só no acento deram o mesmo total e ficam de fora); as não testadas ficam fora até o teste",
+      "estado": "testada em parte (2 de 3 formas)",
+      "buscas": [
+        "caju"
+      ],
+      "buscas_testadas": [
+        "caju",
+        "cajú"
+      ]
     },
     "AM-0001": {
       "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
@@ -37,6 +44,25 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "(caju/\"ca-ju\") (acento indiferente: cajú já coberto)"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"caju\" OR \"cajú\" OR \"ca-ju\")",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":3641,\"status\":\"OK\"}",
+      "total_informado": 3641,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
+    },
+    "AM-0026": {
+      "sintaxe": "search=(\"caju\" OR \"cajú\" OR \"ca-ju\")",
+      "pedido": "GET https://api.openalex.org/works?search=%28%22caju%22%20OR%20%22caj%C3%BA%22%20OR%20%22ca-ju%22%29&per-page=1&select=id%2Ctitle%2Cpublication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=32467",
+      "total_informado": 32467,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado O search= busca também no texto integral, com radicalização (x_query da resposta): o total é muito maior que o da BDTD.",
+      "estado": "testada",
+      "param_busca": "search"
     }
   },
   "CO-0002": {
@@ -86,13 +112,20 @@
       "sintaxe": "busca humana: cajuína OR cajuina OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR cajuyna"
     },
     "AM-0061": {
-      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
-      "pedido": "não feito",
-      "data": "2026-10-23",
-      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
-      "total_informado": "não informado",
-      "perda": "não conferida",
-      "estado": "não testada (falta: reteste)"
+      "sintaxe": "LISTA DE BUSCAS, uma por forma do TE-0002: cajuína | cajuina | caju-ína | cajuí-na | ca-juína | cajuyna",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; cajuína=48; cajuina=48; as outras 4 formas não testadas",
+      "total_informado": "cajuína=48; cajuina=48; as outras 4 formas não testadas",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados; na lista entram só as buscas testadas que trazem itens (as formas que diferem só no acento deram o mesmo total e ficam de fora); as não testadas ficam fora até o teste",
+      "estado": "testada em parte (2 de 6 formas)",
+      "buscas": [
+        "cajuína"
+      ],
+      "buscas_testadas": [
+        "cajuína",
+        "cajuina"
+      ]
     },
     "AM-0001": {
       "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
@@ -102,6 +135,25 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "(cajuína/\"caju-ína\"/\"cajuí-na\"/\"ca-juína\"/cajuyna) (acento indiferente: cajuina já coberta)"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":7350,\"status\":\"OK\"}",
+      "total_informado": 7350,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
+    },
+    "AM-0026": {
+      "sintaxe": "search=(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+      "pedido": "GET https://api.openalex.org/works?search=%28%22caju%C3%ADna%22%20OR%20%22cajuina%22%20OR%20%22caju-%C3%ADna%22%20OR%20%22caju%C3%AD-na%22%20OR%20%22ca-ju%C3%ADna%22%20OR%20%22cajuyna%22%29&per-page=1&select=id%2Ctitle%2Cpublication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=2488",
+      "total_informado": 2488,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado O search= busca também no texto integral, com radicalização (x_query da resposta): o total é muito maior que o da BDTD.",
+      "estado": "testada",
+      "param_busca": "search"
     }
   },
   "CO-0003": {
@@ -124,13 +176,8 @@
       "sintaxe": "busca humana: (caju OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
     },
     "AM-0061": {
-      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
-      "pedido": "não feito",
-      "data": "2026-10-23",
-      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
-      "total_informado": "não informado",
-      "perda": "não conferida",
-      "estado": "não testada (falta: reteste)"
+      "estado": "não testada (teto de pedidos)",
+      "sintaxe": "LISTA DE BUSCAS: pares forma de caju + descritor (ex.: caju colheita)"
     },
     "AM-0001": {
       "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
@@ -140,6 +187,15 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "(caju/\"ca-ju\")+(\"processamento do pedúnculo\"/\"etapas de produção\"/colheita/descastanhamento)"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"caju\" OR \"cajú\" OR \"ca-ju\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29+AND+%28%22processamento+do+ped%C3%BAnculo%22+OR+%22etapas+de+produ%C3%A7%C3%A3o%22+OR+colheita+OR+descastanhamento%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":176,\"status\":\"OK\"}",
+      "total_informado": 176,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
     }
   },
   "CO-0004": {
@@ -163,13 +219,8 @@
       "sintaxe": "busca humana: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)"
     },
     "AM-0061": {
-      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
-      "pedido": "não feito",
-      "data": "2026-10-23",
-      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
-      "total_informado": "não informado",
-      "perda": "não conferida",
-      "estado": "não testada (falta: reteste)"
+      "estado": "não testada (teto de pedidos)",
+      "sintaxe": "LISTA DE BUSCAS: pares forma de cajuína + descritor"
     },
     "AM-0001": {
       "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
@@ -179,6 +230,15 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "(cajuína/\"caju-ína\"/\"cajuí-na\"/\"ca-juína\"/cajuyna)+(\"processamento do pedúnculo\"/\"etapas de produção\"/colheita/descastanhamento)"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\") AND (\"processamento do pedúnculo\" OR \"etapas de produção\" OR colheita OR descastanhamento)",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29+AND+%28%22processamento+do+ped%C3%BAnculo%22+OR+%22etapas+de+produ%C3%A7%C3%A3o%22+OR+colheita+OR+descastanhamento%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":190,\"status\":\"OK\"}",
+      "total_informado": 190,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
     }
   },
   "CO-0005": {
@@ -201,13 +261,8 @@
       "sintaxe": "busca humana: \"processamento do pedúnculo\" OR descastanhamento (caso de controle: o item 748513, 'Processamento do pedúnculo do caju: cajuína')"
     },
     "AM-0061": {
-      "sintaxe": "não testada: o nome bcr.iphan.gov.br não resolveu na rede da sessão; hipóteses na ficha (WordPress ?s=, API REST do WordPress ou do Tainacan), sem saber se há OR",
-      "pedido": "não feito",
-      "data": "2026-10-23",
-      "resposta": "sem resposta HTTP (curl 6, Could not resolve host)",
-      "total_informado": "não informado",
-      "perda": "não conferida",
-      "estado": "não testada (falta: reteste)"
+      "estado": "não testada (teto de pedidos)",
+      "sintaxe": "LISTA DE BUSCAS: um descritor por busca (processamento do pedúnculo | descastanhamento)"
     },
     "AM-0001": {
       "pedido": "digitação humana na busca da Hemeroteca; nenhum pedido do robô",
@@ -217,6 +272,59 @@
       "perda": "nenhuma prevista pela sintaxe do Anexo E (aspas, + para e, / para ou, parênteses; acento indiferente); não conferida na prática",
       "estado": "não testada: via humana",
       "sintaxe": "\"processamento do pedúnculo\"/descastanhamento"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"processamento do pedúnculo\" OR descastanhamento)",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22processamento+do+ped%C3%BAnculo%22+OR+descastanhamento%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":19,\"status\":\"OK\"}",
+      "total_informado": 19,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
+    }
+  },
+  "CO-0008": {
+    "AM-0021": {
+      "sintaxe": "VuFind AllFields: (\"bebida\") AND (\"extração do suco\" OR \"clarificação\" OR \"filtração\" OR \"envase\" OR \"tratamento térmico\" OR \"higienização\")",
+      "pedido": "GET https://bdtd.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22bebida%22%29%20AND%20%28%22extra%C3%A7%C3%A3o%20do%20suco%22%20OR%20%22clarifica%C3%A7%C3%A3o%22%20OR%20%22filtra%C3%A7%C3%A3o%22%20OR%20%22envase%22%20OR%20%22tratamento%20t%C3%A9rmico%22%20OR%20%22higieniza%C3%A7%C3%A3o%22%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":440,\"status\":\"OK\"}",
+      "total_informado": 440,
+      "perda": "nenhuma de sintaxe (aspas, AND, OR e parênteses aceitos; o total filtrou, ao contrário do Oasisbr); o AllFields busca em todos os campos, o que inclui resumo e assunto, não só título",
+      "estado": "testada"
+    },
+    "AM-0022": {
+      "sintaxe": "VuFind AllFields: (\"bebida\") AND (\"extração do suco\" OR \"clarificação\" OR \"filtração\" OR \"envase\" OR \"tratamento térmico\" OR \"higienização\")",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22bebida%22%29%20AND%20%28%22extra%C3%A7%C3%A3o%20do%20suco%22%20OR%20%22clarifica%C3%A7%C3%A3o%22%20OR%20%22filtra%C3%A7%C3%A3o%22%20OR%20%22envase%22%20OR%20%22tratamento%20t%C3%A9rmico%22%20OR%20%22higieniza%C3%A7%C3%A3o%22%29",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 {\"resultCount\":1022,\"status\":\"OK\"}",
+      "total_informado": 1022,
+      "perda": "nenhuma de sintaxe; o 1º teste do rastreador (08/11) mandou os acentos em Latin-1 e devolveu o índice inteiro (6.582.278) nos 6 pedidos, descartados como inválidos; retestado em UTF-8 pelo curador com o cliente da coleta",
+      "estado": "testada"
+    },
+    "AM-0026": {
+      "sintaxe": "search=(\"bebida\") AND (\"extração do suco\" OR \"clarificação\" OR \"filtração\" OR \"envase\" OR \"tratamento térmico\" OR \"higienização\")",
+      "pedido": "GET https://api.openalex.org/works?search=%28%22bebida%22%29%20AND%20%28%22extra%C3%A7%C3%A3o%20do%20suco%22%20OR%20%22clarifica%C3%A7%C3%A3o%22%20OR%20%22filtra%C3%A7%C3%A3o%22%20OR%20%22envase%22%20OR%20%22tratamento%20t%C3%A9rmico%22%20OR%20%22higieniza%C3%A7%C3%A3o%22%29&per-page=1&select=id%2Ctitle%2Cpublication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=29923",
+      "total_informado": 29923,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado O search= busca também no texto integral, com radicalização (x_query da resposta): o total é muito maior que o da BDTD.",
+      "estado": "testada",
+      "param_busca": "search"
+    },
+    "AM-0061": {
+      "sintaxe": "LISTA DE BUSCAS por par classe + descritor: bebida extração do suco | bebida clarificação | bebida filtração | bebida envase | bebida tratamento térmico | bebida higienização",
+      "pedido": "GET https://bcr.iphan.gov.br/wp-json/tainacan/v2/items?search=<busca>&perpage=1&fetch_only=id,title (total no cabeçalho X-WP-Total)",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200; bebida extração do suco=0; bebida envase=0; as outras 4 não testadas",
+      "total_informado": "bebida extração do suco=0; bebida envase=0; as outras 4 não testadas",
+      "perda": "sem OU nem aspas: a busca soma as palavras com E; cada forma ou par é uma busca à parte, e a união não sai dos totais (as buscas se sobrepõem; deduplicar por ID do item); acento indiferente nos dois pares testados; os dois pares testados deram 0, e a lista fica vazia: a Consulta geral não roda no BCR por ora",
+      "estado": "testada em parte (2 de 6 pares)",
+      "buscas": [],
+      "buscas_testadas": [
+        "bebida extração do suco",
+        "bebida envase"
+      ]
     }
   }
 }

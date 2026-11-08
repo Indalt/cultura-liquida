@@ -1,0 +1,54 @@
+{
+  "ambiente": "AM-0026 OpenAlex (https://api.openalex.org/works), sem chave",
+  "teste": {
+    "data": "2026-11-08",
+    "pedido": "GET https://api.openalex.org/works?search=<CO-0001>&per-page=1&select=id,title,publication_year",
+    "resposta": "HTTP 200; meta.count=32467; cost_usd=0.001 por pedido; aviso no corpo: \"No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address\"",
+    "abre": "sim, sem chave, em JSON; 5 de 6 pedidos 200 e 1 pedido 429 (limite temporário) que, repetido 16 s depois, deu 200"
+  },
+  "traducoes": {
+    "CO-0001": {
+      "sintaxe": "search=(\"caju\" OR \"cajú\" OR \"ca-ju\")",
+      "pedido": "GET https://api.openalex.org/works?search=<busca>&per-page=1&select=id,title,publication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=32467",
+      "total_informado": 32467,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado",
+      "estado": "testada"
+    },
+    "CO-0002": {
+      "sintaxe": "search=(\"cajuína\" OR \"cajuina\" OR \"caju-ína\" OR \"cajuí-na\" OR \"ca-juína\" OR \"cajuyna\")",
+      "pedido": "GET https://api.openalex.org/works?search=<busca>&per-page=1&select=id,title,publication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=2488",
+      "total_informado": 2488,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado",
+      "estado": "testada"
+    },
+    "CO-0008": {
+      "sintaxe": "search=(\"bebida\") AND (\"extração do suco\" OR \"clarificação\" OR \"filtração\" OR \"envase\" OR \"tratamento térmico\" OR \"higienização\")",
+      "pedido": "GET https://api.openalex.org/works?search=<busca>&per-page=1&select=id,title,publication_year",
+      "data": "2026-11-08",
+      "resposta": "HTTP 200 meta.count=29923",
+      "total_informado": 29923,
+      "perda": "aspas, OR, AND e parênteses aceitos; o parâmetro search= busca em título, resumo e texto integral (o x_query da resposta diz \"stemmed ... in the title, abstract, or full text\"), com radicalização: por isso os totais são muito maiores que os de BDTD e BCR; um filtro só de título e resumo (title_and_abstract.search) não foi testado",
+      "estado": "testada"
+    }
+  },
+  "paginacao": {
+    "page_2_per_page_25": "primeiro pedido: HTTP 429 {\"error\":\"Rate limit exceeded\",\"message\":\"Anonymous search is temporarily rate-limited while the search cluster is under elevated load. Please retry in 15s, or use a free API key for uninterrupted access\",\"retryAfter\":15}; repetido 16 s depois: HTTP 200, meta.page=2, meta.per_page=25, sem chave. A paginação por página serve sem chave, com a trava de taxa que pede esperar.",
+    "cursor_asterisco": "HTTP 200 com cursor=* sem chave; a resposta trouxe meta.next_cursor (84 caracteres) e meta.page nulo; o cursor não foi seguido. Contradiz a ficha (\"A paginação por cursor exige chave\") para este pedido com search=; a primeira página pelo cursor funcionou, as seguintes não foram testadas.",
+    "limite_de_pagina": "não conferido nesta rodada: nem a resposta nem a ficha AM-0026 trazem o limite de per-page nem o teto da paginação por página; de memória da documentação do OpenAlex (não aberta hoje): a paginação por página vai até 10.000 resultados e o per-page até 100 ou 200; nível: não conferido",
+    "taxa_e_orcamento": "cost_usd=0.001 por busca; o aviso diz orçamento diário gratuito de US$ 0,10 compartilhado por todos no mesmo IP: cerca de 100 buscas por dia por IP sem chave (conta pelos números da resposta); a ficha cita 10 requisições por segundo sem chave (não reconferido)",
+    "consequencia": "sem chave, paginar uma consulta de 32 mil resultados estouraria o orçamento diário; sem chave só dá para totais e amostras, e IPs compartilhados (runner do GitHub) dividem o mesmo orçamento"
+  },
+  "cadastro_ou_pagamento": "a chave gratuita pediria e-mail (POST https://api.openalex.org/api-keys com o e-mail; link de confirmação por e-mail) e daria US$ 1 por dia próprio; contrário à D-049, não usada. Sem chave: US$ 0,10 por dia por IP compartilhado. Passo para melhoria (planejamento): decidir se o OpenAlex entra na rotina só com totais (sem chave) ou se a D-049 admite a chave gratuita",
+  "nivel": "teste direto da API em 2026-11-08 (resposta e aviso da própria API); documentação oficial não aberta nesta rodada",
+  "nao_conferido": [
+    "limite de per-page e da paginação por página (documentação não aberta)",
+    "se o cursor segue funcionando nas páginas seguintes sem chave",
+    "filtro só de título e resumo",
+    "taxa de 10 requisições por segundo (da ficha)",
+    "robots.txt"
+  ]
+}

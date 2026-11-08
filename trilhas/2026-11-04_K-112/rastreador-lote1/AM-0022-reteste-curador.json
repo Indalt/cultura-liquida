@@ -1,0 +1,26 @@
+{
+ "CO-0001": {
+  "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29",
+  "resposta": "HTTP 200 {\"resultCount\":3641,\"status\":\"OK\"}"
+ },
+ "CO-0002": {
+  "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
+  "resposta": "HTTP 200 {\"resultCount\":7350,\"status\":\"OK\"}"
+ },
+ "CO-0003": {
+  "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%22+OR+%22caj%C3%BA%22+OR+%22ca-ju%22%29+AND+%28%22processamento+do+ped%C3%BAnculo%22+OR+%22etapas+de+produ%C3%A7%C3%A3o%22+OR+colheita+OR+descastanhamento%29",
+  "resposta": "HTTP 200 {\"resultCount\":176,\"status\":\"OK\"}"
+ },
+ "CO-0004": {
+  "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29+AND+%28%22processamento+do+ped%C3%BAnculo%22+OR+%22etapas+de+produ%C3%A7%C3%A3o%22+OR+colheita+OR+descastanhamento%29",
+  "resposta": "HTTP 200 {\"resultCount\":190,\"status\":\"OK\"}"
+ },
+ "CO-0005": {
+  "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22processamento+do+ped%C3%BAnculo%22+OR+descastanhamento%29",
+  "resposta": "HTTP 200 {\"resultCount\":19,\"status\":\"OK\"}"
+ },
+ "CO-0008": {
+  "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22bebida%22%29%20AND%20%28%22extra%C3%A7%C3%A3o%20do%20suco%22%20OR%20%22clarifica%C3%A7%C3%A3o%22%20OR%20%22filtra%C3%A7%C3%A3o%22%20OR%20%22envase%22%20OR%20%22tratamento%20t%C3%A9rmico%22%20OR%20%22higieniza%C3%A7%C3%A3o%22%29",
+  "resposta": "HTTP 200 {\"resultCount\":1022,\"status\":\"OK\"}"
+ }
+}

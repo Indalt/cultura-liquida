@@ -12,5 +12,26 @@
     "data": "2026-10-22",
     "execucao": "EX-0006"
   },
-  "nota": "Anexo E, linha 22 (frentes FH, PA e MO): uso ambos; nível oficial; link /vufind/Record/<id> e o handle de origem; termos de uso Nenhum limite publicado foi encontrado. Testar o acesso a partir do GitHub Actions.; como buscar Igual à BDTD, que usa o mesmo software. A faceta de formato separa TCC e anais. Deduplicar com BDTD, Embrapa e LA Referencia por handle, DOI ou título.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4)."
+  "nota": "Anexo E, linha 22 (frentes FH, PA e MO): uso ambos; nível oficial; link /vufind/Record/<id> e o handle de origem; termos de uso Nenhum limite publicado foi encontrado. Testar o acesso a partir do GitHub Actions.; como buscar Igual à BDTD, que usa o mesmo software. A faceta de formato separa TCC e anais. Deduplicar com BDTD, Embrapa e LA Referencia por handle, DOI ou título.. Dados do catálogo de 15/10, a conferir na ficha de acesso (bloco 4).",
+  "ficha_de_acesso": {
+    "nome": "Oasisbr (IBICT)",
+    "tipo": "agregador de repositórios (VuFind)",
+    "acesso": "aberto, sem cadastro nem pagamento (D-049), ao robô identificado: API 200 em 15/10 e em 08/11/2026",
+    "como_buscar": "API do VuFind: GET /vufind/api/v1/search?type=AllFields&lookfor=<consulta>&limit=<n>, a mesma sintaxe da BDTD (aspas, OR, AND, parênteses), em UTF-8",
+    "endpoint": "https://oasisbr.ibict.br/vufind/api/v1/search",
+    "link_permanente": "https://oasisbr.ibict.br/vufind/Record/<id>",
+    "texto_integral": "não conferido (só metadados nesta via)",
+    "termos": "não conferido: a página inicial não traz termos (juridico, 05/11); sem Falta pela regra (D-042)",
+    "robots": "https://oasisbr.ibict.br/robots.txt (triagem do juridico, 05/11): veda /vufind/Search/Results e outras rotas de busca do site; /vufind/api/ não consta; veda bots de IA nomeados",
+    "cobertura": "não conferido (o índice informa 6.582.278 registros na busca vazia de 08/11)",
+    "uso": "ambos",
+    "nivel": "não conferido",
+    "teste": {
+      "data": "2026-11-08",
+      "pedido": "GET https://oasisbr.ibict.br/vufind/api/v1/search?type=AllFields&limit=0&lookfor=%28%22caju%C3%ADna%22+OR+%22cajuina%22+OR+%22caju-%C3%ADna%22+OR+%22caju%C3%AD-na%22+OR+%22ca-ju%C3%ADna%22+OR+%22cajuyna%22%29",
+      "resposta": "HTTP 200 {\"resultCount\":7350,\"status\":\"OK\"}",
+      "observacao": "6 pedidos do rastreador em 08/11 (EX do lote 1) com os acentos em Latin-1 devolveram o índice inteiro e foram descartados; retestado em UTF-8 pelo curador com o cliente da coleta (CO-0001 3.641; CO-0002 7.350; CO-0003 176; CO-0004 190; CO-0005 19; CO-0008 1.022)"
+    },
+    "decisao": "aceito como via automática (adaptador vufind); liga depois do teste no runner e da rodada real curta"
+  }
 }
