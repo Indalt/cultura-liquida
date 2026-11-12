@@ -1,0 +1,40 @@
+{
+  "id": "EN-51355",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://repositorio.furg.br/handle/1/6388",
+  "identificador": "AM-0022:repositorio.furg.br/handle/1/6388",
+  "titulo": "Produção de nanopartículas contendo peptídeos bioativos de microalgas",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…LEB 18 ou Chlorella pyrenoidosa (4% de proteína) durante tempo de 200 min. Os hidrolisados foram purificados por filtração a vácuo com membranas millipores de diferentes tamanhos (0,45; 0,2 e 0,1 µm) e por colunas com membrana vertical…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

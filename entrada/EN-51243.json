@@ -1,0 +1,40 @@
+{
+  "id": "EN-51243",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://tede2.uepg.br/jspui/handle/prefix/2475",
+  "identificador": "AM-0022:tede2.uepg.br/handle/prefix/2475",
+  "titulo": "Especiação de antimônio em amostras de água mineral e especiação de cromo em águas naturais empregando métodos de microextração e espectrometria de absorção atômica",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…nas amostras foi o Sb(III) com 53 a 79% do teor total de Sb, sugerindo a migração do Sb2O3 do PET para a bebida. Um estudo foi conduzido com cinco marcas de água mineral envasada e analisadas durante seis meses. O teor de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

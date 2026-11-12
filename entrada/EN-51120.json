@@ -1,0 +1,40 @@
+{
+  "id": "EN-51120",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repository.ufrpe.br/handle/123456789/1052",
+  "identificador": "AM-0022:repository.ufrpe.br/handle/123456789/1052",
+  "titulo": "Desenvolvimento e caracterização sensorial de uma fruitbeer de pitanga",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…pelo vinho, inclusive no que se refere à realização de degustações e busca por harmonizações para cada tipo da bebida à base de malte. O objetivo do presente trabalho foi produzir uma cerveja do tipo fruitbeer de pitanga e analisar a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

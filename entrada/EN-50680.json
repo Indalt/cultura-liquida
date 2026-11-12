@@ -4,7 +4,9 @@
   "ambiente": "AM-0022",
   "recortes": [
     "RC-50004",
-    "RC-50006"
+    "RC-50006",
+    "RC-50016",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/PUC_MINS-6_ec34678eed5aa1a8fee853ab90521824",

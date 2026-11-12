@@ -5,9 +5,9 @@
   "periodo": "todo",
   "modo": "descritores",
   "cursor": null,
-  "total_informado": 59690,
-  "total_visto": 59690,
-  "saturacao": "exaurido: 59690 de 59690 visto(s), passada completa e não saturada",
+  "total_informado": 59744,
+  "total_visto": 59744,
+  "saturacao": "exaurido: 59744 de 59744 visto(s), passada completa e não saturada",
   "erros": [
     "HTTP 500 no cursor 'oai_dc////52400'"
   ],
@@ -17,7 +17,7 @@
     "divisoes_janela": 4
   },
   "estado": "percorrido pela busca",
-  "data": "2026-11-05",
+  "data": "2026-11-12",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-23",

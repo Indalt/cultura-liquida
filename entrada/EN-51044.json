@@ -1,0 +1,38 @@
+{
+  "id": "EN-51044",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50011",
+    "RC-50015"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SBMT-1_273a468629e5b6bd6cfd02a315f6c5e7",
+  "identificador": "AM-0022:SBMT-1_273a468629e5b6bd6cfd02a315f6c5e7",
+  "titulo": "Atividade moluscicida da mistura de ácidos 6-n-alquil salicílicos (ácido anacárdico) e dos seus complexos com cobre (II) e chumbo (II)",
+  "ano": "1990",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Foi comparada, em laboratório, a atividade moluscicida do extrato hexânico da casca da castanha do caju - Anacardium occidentalel L. (EHCCC), do complexo de cobre (II), docomplexo de chumbo (II) e do ácido anacárdico com…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

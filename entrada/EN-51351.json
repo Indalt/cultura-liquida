@@ -1,0 +1,40 @@
+{
+  "id": "EN-51351",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/VERACRUZ-0_dc23e635784652c0e9839ac76e45e565",
+  "identificador": "AM-0022:VERACRUZ-0_dc23e635784652c0e9839ac76e45e565",
+  "titulo": "Caracterização físico-química de cerveja Summer Ale adicionada de polpa de pitanga (Eugenia uniflora) / Physico-chemical characterization of Summer Ale beer added with pitanga pulp (Eugenia uniflora)",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…intuito de agradar a um número cada vez maior de paladares dos consumidores. O uso de frutas nativas na produção da bebida é uma singularidade da cerveja artesanal, porém a turbidez frequente em Fruit beers não é desejável. Logo, o…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

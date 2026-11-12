@@ -1,0 +1,40 @@
+{
+  "id": "EN-51158",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50023"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SBCTA-1_294d0688954d3b00fa2c83d6a4731472",
+  "identificador": "AM-0022:SBCTA-1_294d0688954d3b00fa2c83d6a4731472",
+  "titulo": "Desenvolvimento do perfil sensorial e avaliação sensorial/instrumental de suco de maracujá",
+  "ano": "2005",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…constituintes que se encontram em concentrações variáveis, extremamente sensíveis às mudanças durante o tratamento térmico na produção de suco. Há a necessidade do desenvolvimento dos perfis sensorial e de cor, que podem ser…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

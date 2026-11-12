@@ -1,0 +1,40 @@
+{
+  "id": "EN-51362",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/VERACRUZ-0_981bc4b0b109a43c47a4a61ce0fcab5f",
+  "identificador": "AM-0022:VERACRUZ-0_981bc4b0b109a43c47a4a61ce0fcab5f",
+  "titulo": "Produção de carvão a partir da casca de laranja ativado com cloreto de cálcio (CaCl2) e sua aplicação em tratamento de água contaminada com nitrato (NO3-) / Production of charcoal from orange peel activated with calcium chloride (CaCl2) and its application in treatment of water contaminated with nitrate (NO3-)",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…pelos pesquisadores e, posteriormente, realizadas novas análises para a comparação do teor de nitrato pós e pré-filtração. Uma amostra que continha 8,7 mg/L de teor de NO3-, após a filtração com formulação de carvão ativado que…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

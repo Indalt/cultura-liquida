@@ -1,0 +1,40 @@
+{
+  "id": "EN-51276",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_bd6920f90918cd3c6965bdcc8189085e",
+  "identificador": "AM-0022:USP_bd6920f90918cd3c6965bdcc8189085e",
+  "titulo": "Fabricação de sensor eletroquímico impresso em 3D utilizando filamento de PLA/Cu e sinterização com laser de CO2 para quantificação de glicose em soro de reidratação oral",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de cobre utilizados nessa técnica não conduzem eletricidade após a impressão, o que exige a aplicação de um tratamento térmico posterior para que as peças impressas adquiram as propriedades necessárias para a condução elétrica. Neste…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

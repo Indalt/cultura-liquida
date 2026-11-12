@@ -1,0 +1,36 @@
+{
+  "id": "EN-51067",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50012"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP-2_27e9f90dd857f7c471ed0f736106c256",
+  "identificador": "AM-0022:USP-2_27e9f90dd857f7c471ed0f736106c256",
+  "titulo": "Efeito da radiação gama e do armazenamento na qualidade de padúnculos de caju (Anacardium occidentale L.)",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

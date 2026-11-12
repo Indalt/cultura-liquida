@@ -1,0 +1,40 @@
+{
+  "id": "EN-51197",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/GVAA-1_7ffea28c2ee5bfce1f8933c3a42a5764",
+  "identificador": "AM-0022:GVAA-1_7ffea28c2ee5bfce1f8933c3a42a5764",
+  "titulo": "Comportamento cinético do fermentado alcoólico de banana prata (musa ssp) frente a diferentes parâmetros",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de banana prata, cuja fruta foi comprada no mercado local da cidade de Campinha Grande - PB. Foi feito um tratamento térmico a 120°C por 15 min. O teor de sólidos solúveis do caldo foi de 12,5 °Brix e estes foram inoculados com…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

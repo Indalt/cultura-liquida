@@ -1,0 +1,40 @@
+{
+  "id": "EN-51306",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50023"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repositorio.ufms.br/handle/123456789/863",
+  "identificador": "AM-0022:repositorio.ufms.br/handle/123456789/863",
+  "titulo": "Análise dos fatores que influenciam o consumo de água mineral",
+  "ano": "2006",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…questionários a uma amostra de consumidores de água mineral na referida cidade. Verificou-se, que o consumidor da bebida acredita que a água mineral possui uma qualidade superior e grande parte dos consumidores consome este produto…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

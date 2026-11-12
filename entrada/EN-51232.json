@@ -1,0 +1,40 @@
+{
+  "id": "EN-51232",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://hdl.handle.net/10183/179905",
+  "identificador": "hdl:10183/179905",
+  "titulo": "Estudo de tecnologia de tratamento de efluentes de uma microcervejaria : alternativa on-site versus off-site",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'envase' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…mais consumidas no mundo, e sua produção permeia os seguintes passos: mostura, fervura, resfriamento, fermentação e envase. Em todos estes processos, a indústria de cervejas costuma consumir grandes quantidades de água, de 4 a 12,6 L de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

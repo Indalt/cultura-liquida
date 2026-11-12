@@ -1,0 +1,40 @@
+{
+  "id": "EN-51134",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50023"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://hdl.handle.net/11449/28103",
+  "identificador": "doi:10.1590/s0101-20611999000200003",
+  "titulo": "Aproveitamento da água de umidificação de malte da moagem úmida como matéria prima na fabricação de cerveja",
+  "ano": "1999",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…a possibilidade de ganho de rendimento na mosturação e alterações nas características químicas e sensoriais da bebida, em virtude do uso dessa água. Cervejas do tipo Pilsen foram produzidas de duas formas: com e sem água de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -3,7 +3,10 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50009"
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50023"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SBFRU-1_bfae9517d63a6e30f56d3e07d5416383",

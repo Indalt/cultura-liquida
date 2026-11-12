@@ -1,0 +1,38 @@
+{
+  "id": "EN-51045",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50011",
+    "RC-50015"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/25177",
+  "identificador": "AM-0022:dspace.sti.ufcg.edu.br/handle/riufcg/25177",
+  "titulo": "A importância do reflorestamento da cultura do cajueiro (Anacardium occidentales L.) na Região Nordeste.",
+  "ano": "1988",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…aspectos, deve ser solucionado os principais problemas, tais como: doenças e pragas, irregularidades na oferta do caju, alternâncias da produção, variabilidade genética, problemas de implantação e comercialização. É de fundamental…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

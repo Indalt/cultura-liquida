@@ -1,0 +1,40 @@
+{
+  "id": "EN-51364",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/VERACRUZ-0_2ddc2ecc736ece55368bb9fc9b900c71",
+  "identificador": "AM-0022:VERACRUZ-0_2ddc2ecc736ece55368bb9fc9b900c71",
+  "titulo": "Uso do simulador de processos no estudo da engenharia química: uma aplicação no processo de produção de cerveja / Using the process simulator in chemical engineering study: an application in the beer production process",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "De acordo com a legislação brasileira, a cerveja é definida como a bebida obtida pela fermentação alcoólica do mosto cervejeiro, oriundo do malte de cevada e água potável, por ação da…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

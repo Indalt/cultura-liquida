@@ -1,0 +1,40 @@
+{
+  "id": "EN-51194",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UFMT_6e58dafd8343f8dd364fed1883947c0b",
+  "identificador": "AM-0022:UFMT_6e58dafd8343f8dd364fed1883947c0b",
+  "titulo": "Estudo da adição de terra diatomácea em matrizes cimentícias para captura de CO2",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'clarificação' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "Um dos resíduos gerados nas indústrias de bebidas é a pasta de diatomita produzida após a etapa de filtração e clarificação da mesma. Após várias campanhas de filtração, ocorre a saturação dos poros com matéria orgânica, diminuindo a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

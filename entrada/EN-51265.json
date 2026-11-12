@@ -1,0 +1,40 @@
+{
+  "id": "EN-51265",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://hdl.handle.net/11449/318296",
+  "identificador": "hdl:11449/318296",
+  "titulo": "Estudo sobre impactos de microfibras eletrofiadas de resíduos de poliestireno em tijolo de geopolímero baseado em caulim do Amazonas, tratado termicamente",
+  "ano": "2025",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…mecânicas e na condutividade térmica dos tijolos de geopolímeros. Foram realizadas as seguintes etapas: tratamento térmico do caulim, produção de microfibras eletrofiadas a partir de resíduos de copos de poliestireno pós-consumo, e…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

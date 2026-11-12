@@ -1,0 +1,40 @@
+{
+  "id": "EN-51288",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repositorio.uepb.edu.br/handle/123456789/44118",
+  "identificador": "AM-0022:repositorio.uepb.edu.br/handle/123456789/44118",
+  "titulo": "Gestação e saúde bucal: Avaliação dos conhecimentos e práticas adotadas pelas gestantes",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…a transmissibilidade da doença cárie, assim como, não tinham devidas informações sobre o período para início de higienização da cavidade bucal da criança. Sendo assim, preocupante a falta de conhecimento da grande maioria das mães a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

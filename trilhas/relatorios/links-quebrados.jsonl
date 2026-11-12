@@ -18,3 +18,5 @@
 {"data": "2026-11-07", "entrada": "EN-0703", "url": "http://www.repositorio.ufc.br/handle/riufc/18532", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
 {"data": "2026-11-08", "entrada": "EN-0717", "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/35835", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
 {"data": "2026-11-08", "entrada": "EN-0718", "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/28126", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}
+{"data": "2026-11-12", "entrada": "EN-50994", "url": "http://hdl.handle.net/1884/25038", "detalhe": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>", "versao": "links-0.1"}
+{"data": "2026-11-12", "entrada": "EN-50997", "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/27837", "detalhe": "URLError: <urlopen error timed out>", "versao": "links-0.1"}

@@ -1,0 +1,40 @@
+{
+  "id": "EN-51137",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://www.repositorio.jesuita.org.br/handle/UNISINOS/4582",
+  "identificador": "AM-0022:repositorio.jesuita.org.br/handle/UNISINOS/4582",
+  "titulo": "Seleção de uma cultura microbiana camercial para indústria de laticínios com baixa pós-acidificação e aumento de viscosidade em leites fermentados",
+  "ano": "2014",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…sendo que a principal característica buscada foi baixa pós-acidificação e aumento de viscosidade do iogurte e da bebida láctea. Foram avaliadas as três culturas atualmente utilizadas pelo laticínio e cinco novas culturas para os…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

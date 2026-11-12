@@ -1,0 +1,40 @@
+{
+  "id": "EN-51241",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repositorio.ufopa.edu.br/jspui/handle/123456789/1240",
+  "identificador": "AM-0022:repositorio.ufopa.edu.br/handle/123456789/1240",
+  "titulo": "Elaboração de licores de Myrciaria dubia (H.B.K.) McVaugh Myrtaceae produzidos a partir do fruto in natura e desidratado",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foram filtradas e adicionada calda a 63° Brix. O licor primário foi deixado em repouso por mais 15 dias seguido de filtração e envase. Nos licores e suco in natura foi realizado análises de pH, acidez total, teor alcoólico, sólidos…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

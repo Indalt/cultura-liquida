@@ -1,0 +1,38 @@
+{
+  "id": "EN-51046",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50011",
+    "RC-50015"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/INPA-3_07a9262f523014a406124f6a28a5ed4b",
+  "identificador": "AM-0022:INPA-3_07a9262f523014a406124f6a28a5ed4b",
+  "titulo": "A influência de dois tipos de consórcios de fruteiras na incidência de broca do tronco (Cratosomus sp) na graviola (Annona muricata L.) (*)",
+  "ano": "1985",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…6 espécies de fruteiras: graviola (Annona muricataL.), côco (Cocos nucíferaL.), pupunha (Bactris gasipaesH.B.K.), caju (Anacardium ocidentaleL.) birlbá (Rollinia mu cosa (Jacq.) Baill e o mapati (Pouroma cecropiazfoliaMart.). Os…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

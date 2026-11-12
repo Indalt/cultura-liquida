@@ -1,0 +1,40 @@
+{
+  "id": "EN-51253",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://hdl.handle.net/11449/154691",
+  "identificador": "hdl:11449/154691",
+  "titulo": "Caracterização de dispositivos a base de Pani e Pedot: PSS impressos por impressora jato de tinta visando aplicações como sensores",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Uma maior sensibilidade para o sistema PANI/PEDOT/papel (sensores de papel) pode ser obtida realizando um tratamento térmico promovendo a evaporação do excesso de HCI no sistema. Para monitoramentos em baixas concentrações de NH3…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

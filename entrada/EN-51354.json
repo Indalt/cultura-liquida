@@ -1,0 +1,40 @@
+{
+  "id": "EN-51354",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://tede2.uepg.br/jspui/handle/prefix/4242",
+  "identificador": "AM-0022:tede2.uepg.br/handle/prefix/4242",
+  "titulo": "Entrelaçamento entre curadoria e produção visual: o retrato visual de Micky na coleção do Fundo Foto Bianchi",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…do feminino. Como no momento inicial desta investigação a coleção pessoal estava em processo de catalogação e higienização, tornou-se necessário realizar e evidenciar os procedimentos curatoriais, procurando estabelecer métodos para a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

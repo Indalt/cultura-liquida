@@ -1,0 +1,39 @@
+{
+  "id": "EN-51277",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50021"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://www.repositorio.ufc.br/handle/riufc/1666",
+  "identificador": "AM-0022:repositorio.ufc.br/handle/riufc/1666",
+  "titulo": "Contribuição ao estudo geomorfológico-sedimentológico do litoral de Beberibe (Ceará-Brasil)",
+  "ano": "1975",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'clarificação' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de argilas montmoriloníticas, pelo seu vasto emprego em fundições, impermeabilizantes, perfuração de poços, clarificação das águas e bebidas em geral, peletizaçao de minérios, produtos cosméticos e farmacêuticos, além de outras…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

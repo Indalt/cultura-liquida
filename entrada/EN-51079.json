@@ -1,0 +1,40 @@
+{
+  "id": "EN-51079",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://rima.ufrrj.br/jspui/handle/20.500.14407/9277",
+  "identificador": "hdl:20.500.14407/9277",
+  "titulo": "Whey drink de uva processado por dióxido de carbono supercrítico: parâmetros de qualidade e sensoriais",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…efeitos do processamento do DCSC por diferentes pressões 14, 16 e 18 MPa (35 ± 2 °C / 10 min) no whey drink de uva, bebida a base de soro de leite e suco de uva, em comparação à pasteurização convencional (tratamento térmico a 72 °C / 15…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

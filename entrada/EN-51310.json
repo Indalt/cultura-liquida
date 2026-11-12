@@ -1,0 +1,40 @@
+{
+  "id": "EN-51310",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repositorio.ufpb.br/jspui/handle/123456789/13537",
+  "identificador": "AM-0022:repositorio.ufpb.br/handle/123456789/13537",
+  "titulo": "Dimensionamento de tanques para uma micro cervejaria com produção de 500L por batelada",
+  "ano": "2017",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…por batelada no qual o tanque de mosturação teve como medidas (0,91m de diâmetro por 1,18m de altura, tanque de filtração 1,25m diâmetro por 0,72m altura, fervura 0,95m de diâmetro por 1,24m de altura), além da construção de um layout…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

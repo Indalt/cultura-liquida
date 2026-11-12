@@ -1,0 +1,40 @@
+{
+  "id": "EN-51346",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://hdl.handle.net/11449/192026",
+  "identificador": "hdl:11449/192026",
+  "titulo": "Desenvolvimento e caracterização de alumina tenacificada por zircônia dopada com óxido de magnésio para uso em próteses odontológicas",
+  "ano": "2020",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…estrôncio, e óxido de crômio, esses passaram por moagem e secagem, foram prensados em discos e submetidos a tratamento térmico (1450 - 1500 oC). A RF foi realizada em máquina de ensaios universal EMIC DL2000 (5KN, 0,5 mm/min), seguido…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

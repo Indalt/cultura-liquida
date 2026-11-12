@@ -1,0 +1,40 @@
+{
+  "id": "EN-51356",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50023"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/PUC_CAMP-2_2fcbcf53652fb1df7c781eae7ba08684",
+  "identificador": "AM-0022:PUC_CAMP-2_2fcbcf53652fb1df7c781eae7ba08684",
+  "titulo": "Lista de Publicações",
+  "ano": "1996",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'tratamento térmico' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Community and International Nutrition, p.880-884, 1994. OLIVEIRA, A. J., GALLO, C.R., CARVALHO, C.M. Tratamento térmico do leite acondicionado em filme plástico em banho-maria. Scientia Agrícola, Piracicaba, v.51 , n.1, p,…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

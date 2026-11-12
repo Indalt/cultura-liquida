@@ -1,0 +1,40 @@
+{
+  "id": "EN-51165",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repository.ufrpe.br/handle/123456789/1504",
+  "identificador": "AM-0022:repository.ufrpe.br/handle/123456789/1504",
+  "titulo": "Programas de autocontrole (PAC) de laboratório e controle de qualidade do produto final: estudo de caso - Valelac Indústria de Laticínios Eireli",
+  "ano": "2019",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'envase' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…de qualquer intervenção necessária durante o processo produtivo, revertendo anormalidades e prosseguindo o envase. O período de realização do ESO permitiu unir o conhecimento acadêmico com a vivência industrial e entender a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

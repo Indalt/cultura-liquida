@@ -3,7 +3,10 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50009"
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50023"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SBCTA-1_9dc93c516972623d32cbb0f1ae06ef02",

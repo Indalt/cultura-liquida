@@ -1,0 +1,40 @@
+{
+  "id": "EN-51168",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/SLMC-1_e7aa2daa9e5596583594de75c660d290",
+  "identificador": "AM-0022:SLMC-1_e7aa2daa9e5596583594de75c660d290",
+  "titulo": "Alimentação no primeiro ano de vida",
+  "ano": "2013",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…leite materno • a preparação de fórmulas infantis • a introdução de novos alimentos (sucos. sopas e papas) • a higienização dos alimentos e recipientes. Redigido de forma prática. clara e didática. este livro apresenta também receitas…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "F-50006",
+  "tipo": "outro",
+  "o_que_falta": "busca interrompida por teto: RC-50017 (AM-0022 × CO-0002, 1996-2011)",
+  "por_que": "teto de 120 chamadas da rodada (cota desta janela: 1)",
+  "onde_aparece": [
+    "RC-50017"
+  ],
+  "criada_por": "scripts/recorte.py (EX-50028)",
+  "data": "2026-11-12"
+}

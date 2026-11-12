@@ -1,0 +1,40 @@
+{
+  "id": "EN-51106",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UNICAMP-16_c0154f8f09a52e80d5509fc63313de71",
+  "identificador": "AM-0022:UNICAMP-16_c0154f8f09a52e80d5509fc63313de71",
+  "titulo": "Proposta de plano para Análise de Perigos e Pontos Críticos de Controle (APPCC) para o processo de industrialização da água mineral",
+  "ano": "2015",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'filtração' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…e comercialização da água mineral. As etapas consideradas críticas foram: o reservatório de água, a filtração e o envase.",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

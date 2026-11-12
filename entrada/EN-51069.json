@@ -1,0 +1,37 @@
+{
+  "id": "EN-51069",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50012"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://hdl.handle.net/10400.2/16520",
+  "identificador": "hdl:10400.2/16520",
+  "titulo": "Avaliação das Progressive Web Apps como solução digital para a monitorização das plantações de cajueiros: caso de Norte de Moçambique",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ele propôs uma metodologia simplificada de desenvolvimento de uma aplicação que introduz a precisão na cultura de caju em Moçambique. O presente estudo despertou a pertinência de um outro estudo futuramente, que consistiria em avaliar…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

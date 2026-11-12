@@ -3,7 +3,10 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50009"
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "http://hdl.handle.net/11422/23706",

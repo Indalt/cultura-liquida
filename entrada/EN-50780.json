@@ -3,7 +3,9 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50009"
+    "RC-50009",
+    "RC-50020",
+    "RC-50021"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://doi.org/10.11606/D.64.1995.tde-20260512-143425",

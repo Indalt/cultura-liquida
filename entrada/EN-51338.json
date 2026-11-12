@@ -1,0 +1,40 @@
+{
+  "id": "EN-51338",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repositorio.cruzeirodosul.edu.br/handle/123456789/417",
+  "identificador": "AM-0022:repositorio.cruzeirodosul.edu.br/handle/123456789/417",
+  "titulo": "Bancada de testes para bombas com ligações em série e paralelo",
+  "ano": "2018",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'envase' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…local para outro. Para deixar isso mais claro, tem-se como exemplo o deslocamento de água para uma caixa d’água, o envase de bebidas, a extração de petróleo, entre outros. Devido à vasta gama de aplicação de bombas hidráulicas, sendo que…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

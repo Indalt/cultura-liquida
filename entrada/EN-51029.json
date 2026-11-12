@@ -1,0 +1,37 @@
+{
+  "id": "EN-51029",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50011",
+    "RC-50015"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BRCRIS_c9dd477377fdd77297bc1f068a13daa5",
+  "identificador": "AM-0022:BRCRIS_c9dd477377fdd77297bc1f068a13daa5",
+  "titulo": "SINTESE, CARACTERIZACAO E ESTUDO TERMNOANALITICO DE RESINAS FENOLICAS OBTIDAS A PARTIR DO LIQUIDO DA CASCA DE CASTANHA DE CAJU.",
+  "ano": "1992",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

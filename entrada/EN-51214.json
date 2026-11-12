@@ -1,0 +1,40 @@
+{
+  "id": "EN-51214",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repository.ufrpe.br/handle/123456789/6324",
+  "identificador": "AM-0022:repository.ufrpe.br/handle/123456789/6324",
+  "titulo": "A importância da organização operacional dos processos em bar temático e lúdico",
+  "ano": "2024",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…Obrigatório, na equipe de bar do Le Faux Nez. No período de permanência, foram desenvolvidas atividades de higienização de vegetais; organização e limpeza do ambiente de trabalho; limpeza de utensílios e maquinários em geral;…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

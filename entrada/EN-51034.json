@@ -1,0 +1,37 @@
+{
+  "id": "EN-51034",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50011",
+    "RC-50015"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BRCRIS_0f98ec31c3a9c45662abc56b0bf8e138",
+  "identificador": "AM-0022:BRCRIS_0f98ec31c3a9c45662abc56b0bf8e138",
+  "titulo": "CARACTERIZACAO DA VARIABILIDADE GENETICA ENTRE ACESSOS DE CAJU (ANARCADIUM OCCIDENTALE) PROVENIENTES DE QUATRO REGIOES GEOGRAFICAS DO BRASIL.",
+  "ano": "1992",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

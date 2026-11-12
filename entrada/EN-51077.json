@@ -1,0 +1,40 @@
+{
+  "id": "EN-51077",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/ICESP%20-%202_d70f1dd1b30692d67811333e8371bf3c",
+  "identificador": "AM-0022:ICESP_-_2_d70f1dd1b30692d67811333e8371bf3c",
+  "titulo": "DOENÇAS PERIODONTAIS RELACIONADAS COM O CONSUMO DO ÁLCOOL",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…deve ser preconizada aos consumidores do álcool. Deve-se procurar orientar esses indivíduos a realizarem higienização oral de maneira correta. Conclusão: A abordagem odontológica dos pacientes alcóolatras deve ser cuidadosa e deve…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

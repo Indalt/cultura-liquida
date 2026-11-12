@@ -1,0 +1,40 @@
+{
+  "id": "EN-51345",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "http://hdl.handle.net/11449/243467",
+  "identificador": "hdl:11449/243467",
+  "titulo": "Produção, purificação e caracterização bioquímica funcional de uma α-L-arabinofuranosidase secretada pelo fungo Coriolopsis byrsina",
+  "ano": "2023",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'clarificação' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…estudos têm demonstrado suas aplicações no processamento de sucos, visando diminuir a viscosidade e promoção da clarificação, e hidrólise de biomassa vegetal. Outro interesse por estas enzimas decorre de sua capacidade para melhorar a…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

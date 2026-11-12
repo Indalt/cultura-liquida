@@ -1,0 +1,25 @@
+{
+  "id": "RC-50023",
+  "ambiente": "AM-0022",
+  "consulta": "CO-0008",
+  "periodo": "1996-2011",
+  "modo": "descritores",
+  "cursor": null,
+  "total_informado": 163,
+  "total_visto": 163,
+  "saturacao": "exaurido: 163 de 163 visto(s), passada completa e não saturada",
+  "erros": [],
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
+  "teto": {
+    "chamadas": 120,
+    "divisoes_janela": 1
+  },
+  "estado": "percorrido pela busca",
+  "data": "2026-11-12",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "recorte-0.3"
+  }
+}

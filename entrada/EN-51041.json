@@ -1,0 +1,38 @@
+{
+  "id": "EN-51041",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50011",
+    "RC-50015"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP-23_dd85a4465cb536badbe0641d3b4591c8",
+  "identificador": "AM-0022:USP-23_dd85a4465cb536badbe0641d3b4591c8",
+  "titulo": "Tabus alimentares em região do Norte do Brasil",
+  "ano": "1989",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…foi grande a restrição feita à ingestão simultânea de leite com várias frutas, especialmente com manga, laranja, cajú e abacaxi; também a ingestão simultânea de ovos com frutas foram referidas como hábitos que devem ser evitados,…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

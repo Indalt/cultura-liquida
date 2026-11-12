@@ -1,0 +1,40 @@
+{
+  "id": "EN-51228",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://repositorio.ufpb.br/jspui/handle/123456789/24332",
+  "identificador": "AM-0022:repositorio.ufpb.br/handle/123456789/24332",
+  "titulo": "IMPACTO DE TREINAMENTO ON-LINE NOS CONHECIMENTOS E ATITUDES PRÁTICAS DE HIGIENE DE MANIPULADORES DE ALIMENTOS",
+  "ano": "2022",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "descritor 'higienização' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…nos conhecimentos de pré-preparo/ preparo, tais como descongelamento e recongelamento, alimentos contaminados e higienização de vegetais. Revelou que os participantes já possuíam conhecimentos satisfatórios relacionados aos hábitos de…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

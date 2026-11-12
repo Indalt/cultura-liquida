@@ -1,0 +1,40 @@
+{
+  "id": "EN-51096",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50009",
+    "RC-50020",
+    "RC-50022",
+    "RC-50024"
+  ],
+  "data_entrada": "2026-11-12",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BJRH-0_dc1735a32936ec9f0ea7774c8c361023",
+  "identificador": "AM-0022:BJRH-0_dc1735a32936ec9f0ea7774c8c361023",
+  "titulo": "Ação das enzimas celulase, invertase, pectinase e xilanase na produção de vinhos – uma revisão sistemática da literatura / Activity of celulase, invertase, pectinase and xylanase enzymes in wine production - a systematic literature review",
+  "ano": "2021",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'bebida' no resumo (CO-0008)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "O vinho é uma bebida popular no mundo todo e a prática de vinificação é uma técnica complexa de elevadas operações convenientes às…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-12",
+    "execucao": "EX-50028",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}
