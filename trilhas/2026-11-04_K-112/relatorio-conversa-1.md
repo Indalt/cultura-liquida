@@ -102,3 +102,17 @@ Mover os workflows para `.github/` e enviar; o rastreador (que volta a carregar:
 quebrada desde o K-111, insumo 105) testa as fichas do BCR, do Oasisbr e da OpenAlex e a tradução da
 CO-0008 na BDTD; a resposta real dos adaptadores; o teste no runner; uma rodada pedida à mão; a falha
 provocada; ligar o agendamento; depois, os ambientes do Anexo E, em lotes de 4.
+
+## Fechamento (12/11/2026, D-052)
+- Rodadas agendadas de 09 a 11/11 falharam (nada gravado; dias e causas em `dias-da-rotina.md`); consertos
+  6dd5d99 (a coleta acrescenta o Recorte à Entrada que a pegada aponta) e 5946cbe e ff8fd66 (o caso do RC-0010
+  deixa de depender do registro real). Rodada à mão 43203545917: passou e juntou 350 Entradas ao `main`.
+- Pronto-quando: relatório do dia que chega a Vicente (confirmado em 08/11); falha provocada que avisa
+  (confirmada em 05/11); 567 Entradas da Consulta geral CO-0008 (sem caju nem cajuína), cada uma com o Recorte de
+  origem e o motivo da pré-triagem; boletim (redator, 45.927 tokens, 7 chamadas) com `procurar_dado_pessoal.py`
+  sem ocorrência e amostra do auditor (semente 3374007052; 15 de 15 conferem; boletim 19 de 21 conferem; as duas
+  restantes são critério de contagem de palavras e a OpenAlex sem fonte local lida). Os 7 dias não foram seguidos
+  sem erro: os dias de erro ficam como informação para os cartões que tratam da falha.
+- Notas do curador às divergências: o 565 da CO-0008 contou só a faixa EN-5xxxx da rotina (o auditor confirma
+  567 pelo motivo da pré-triagem); a EX-0120 de 08/11 é a rodada real curta do BCR feita na conversa.
+- Insumos 117 (fontes fora da rotina) e 118 (ruído da Consulta geral no agregador); o 115 segue aberto.

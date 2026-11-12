@@ -1,0 +1,187 @@
+{
+ "amostra": [
+  {
+   "item": "EN-50080",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50080\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Motivo: forma 'caju' no título (CO-0001); título 'cerveja artesanal de caju'."
+  },
+  {
+   "item": "EN-50132",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50132\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Título 'Industrias de Caju S/A' (nome de empresa, não de pessoa)."
+  },
+  {
+   "item": "EN-50217",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50217\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Título 'Paula Caju: a obra artística...' traz nome de artista como assunto da obra; não é dado pessoal de cadastro (D-042, nome em título de obra citada), mas é item de ruído da regra (forma 'caju' no sobrenome); observação, não falha."
+  },
+  {
+   "item": "EN-50230",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50230\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Motivo bate ('sajor-caju' contém 'caju' no título); é um fungo, ruído esperado da pré-triagem por forma literal."
+  },
+  {
+   "item": "EN-50250",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 3/3 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50250\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. A busca por padrão de telefone acusou só fragmento de hash no identificador (UFOR_4074195936...): falso positivo, sem dado pessoal."
+  },
+  {
+   "item": "EN-50308",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50308\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF."
+  },
+  {
+   "item": "EN-50465",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50465\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. A busca por padrão de telefone acusou só fragmento de hash no identificador (UECE-0_...8586500796...): falso positivo."
+  },
+  {
+   "item": "EN-50535",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50535\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF."
+  },
+  {
+   "item": "EN-50611",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 6/6 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50611\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF."
+  },
+  {
+   "item": "EN-50730",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 2/2 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50730\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Motivo: descritor 'colheita' no título (CO-0003); aparece em 'pós-colheita' (Colletotrichum); regra literal, ruído esperado."
+  },
+  {
+   "item": "EN-50771",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 4/4 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-50771\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Motivo: descritor 'envase' no título (CO-0008), presente em '...DURANTE O ENVASE'. Identificador no formato doi:, não AM-0022:; a pegada foi achada pelo campo entrada."
+  },
+  {
+   "item": "EN-51051",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 2/2 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-51051\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF."
+  },
+  {
+   "item": "EN-51090",
+   "confere": true,
+   "achado": "Entrada passa em validar.py entrada (código 0); ambiente AM existe; recortes 4/4 existem em ambientes/recortes/; pegada com \"entrada\": \"EN-51090\" achada em ambientes/pegadas/ de cada Recorte; motivo bate com o texto gravado; sem e-mail, telefone, @perfil ou CPF. Motivo: forma 'bebida' no resumo (CO-0008); a Entrada guarda só citacao_resumo ('...aspecto final da bebida...'), que contém a forma literal."
+  },
+  {
+   "item": "F-0034",
+   "confere": true,
+   "achado": "Falta passa em validar.py falta (código 0); tipo impedimento_juridico, vale_para 'agora', norma com url, trecho e nivel oficial, origem_registro presente; sem dado pessoal (só 'Vicente' como responsável na nota, permitido). Não é Entrada: sem Recorte nem pegada a conferir."
+  },
+  {
+   "item": "TE-0003",
+   "confere": true,
+   "achado": "Termo passa em validar.py termo (código 0); estado candidato, designação 'vinho de caju', origem mencoes-0.1 (30/10, no corte); sem dado pessoal. Não é Entrada: sem Recorte nem pegada a conferir."
+  }
+ ],
+ "boletim": [
+  {
+   "afirmacao": "1.398 Entradas novas; acervo com 1.006 antes de 05/11 e 2.404 no fim de 12/11",
+   "confere": true,
+   "achado": "Contagem de entrada/EN-*.json: 2.404 arquivos; 1.006 com data_entrada antes de 05/11; 1.398 de 05 a 12/11 (todas em estado bruto). Relatórios: 05/11 'Entradas: 5 nova(s), 1011 no total'; 12/11 '350 nova(s), 2404 no total'."
+  },
+  {
+   "afirmacao": "Dias com rodada gravada 05, 06, 07, 08 e 12/11; nada gravado em 09 a 11/11",
+   "confere": true,
+   "achado": "Existem relatórios só desses cinco dias; dias-da-rotina.md dá falha com 'nada gravado' em 09, 10 e 11/11; entrada/ não tem data_entrada nesses dias."
+  },
+  {
+   "afirmacao": "Tabela por fonte (BDTD 16, Infoteca-e 5, Oasisbr 1.357, BCR 20; total do dia 5/15/0/1.028/350)",
+   "confere": true,
+   "achado": "Contagem de data_entrada x ambiente em entrada/: 05/11 AM-0021 1 e AM-0029 4; 06/11 AM-0021 15; 08/11 AM-0022 1.008 e AM-0061 20; 12/11 AM-0022 349 e AM-0029 1. Somas batem. Ressalva: o rodadas.jsonl da AM-0061 em 08/11 diz 0 Entradas; as 20 vêm da execução EX-0120, que não é linha de rodada (origem de EX-0120 não verificada)."
+  },
+  {
+   "afirmacao": "Por Consulta (CO-0001 a CO-0008, cinco colunas)",
+   "confere": true,
+   "achado": "Todas as células batem com a linha 'Entradas novas por Consulta de origem' dos relatórios 05, 06, 07, 08 e 12/11 (nenhuma = 0)."
+  },
+  {
+   "afirmacao": "Pegadas de 9.845 para 20.706 em 48 Recortes; 5.884 fora (3.222 no dia 05); 5.569 arquivos, 19,1 MB",
+   "confere": true,
+   "achado": "Relatórios: 05/11 '9845 pegada(s) em 25 Recorte(s)', 'fora do escopo 3222', '4082 arquivos, 12.6 MB'; 12/11 '20706 pegada(s) em 48 Recorte(s)', 'fora 5884', '5569 arquivos, 19.1 MB'."
+  },
+  {
+   "afirmacao": "Divergência 08/11 (1.008 e 20 contra 1.004 e 0): qual número está certo",
+   "confere": true,
+   "achado": "O certo, por contagem de arquivos, é 1.028 (1.008 + 20). Em entrada/ com data 08/11: execução EX-50014 deu 1.004 do AM-0022 (é o número da linha da rodada, gravado quando recorte.py saiu com código 1); EX-0122 deu mais 4 do AM-0022 (motivo CO-0005); EX-0120 deu 20 do AM-0061. A linha da rodada só viu a primeira execução; o bloco 'Entradas' (1.028) conta arquivos. O boletim está certo ao usar 1.008 e 20."
+  },
+  {
+   "afirmacao": "CO-0008: 565, 567 ou 568 Entradas; qual número está certo",
+   "confere": true,
+   "achado": "Por critério reproduzível (pretriagem.motivo cita CO-0008): 567 = 563 AM-0022 + 4 AM-0029 (05/11 4; 08/11 268; 12/11 295). Pelos Recortes de CO-0008 (8 Recortes): 571, pois 4 Entradas citam outra Consulta no motivo mas também vêm de Recorte de CO-0008. A soma das linhas diárias (4+269+295 = 568) vem do tally por rodada, 1 acima do que os arquivos mostram em 08/11. O 565 do curador não foi reproduzido por nenhum critério. O 567 do boletim é o que a medida sustenta."
+  },
+  {
+   "afirmacao": "563 das 567 sem 'caju' no título nem no trecho do resumo",
+   "confere": true,
+   "achado": "Script: de 567, 563 sem 'caju' (sem acento) no titulo + citacao_resumo; 4 com caju."
+  },
+  {
+   "afirmacao": "Por que entraram: descritor no resumo 250, forma no resumo 155, descritor no título 106, forma no título 56; 'bebida' 211",
+   "confere": true,
+   "achado": "Contagem do motivo de pré-triagem das 567: 250, 155, 106, 56; forma 'bebida' 211 (outras: higienização 106, filtração 81, tratamento térmico 61)."
+  },
+  {
+   "afirmacao": "Palavras nos títulos: cerveja 53, suco 25, fermentad- 22, cachaça 18, refrigerante 18, vinho 9, hidromel 6, néctar 5, umbu 5, destilad- 5, licor 4, aguardente 3, açaí 2, kefir 2",
+   "confere": false,
+   "achado": "Reproduzido por substring (minúsculas) nas 567: fermentad 22, cachaça 18, refrigerante 18, vinho 9, hidromel 6, néctar 5, umbu 5, destilad 5, licor 4, aguardente 3, açaí 2, kefir 2 conferem. Divergem cerveja (54, boletim 53) e suco (27, boletim 25); por palavra inteira seria 37 e 19. Diferença de 1 a 2, de regra de contagem; o boletim já diz 'contagem crua', mas não diz o critério."
+  },
+  {
+   "afirmacao": "Exemplos EN-51263 (jabuticaba), EN-51304 (baru e pequi), EN-51202 (água de coco), EN-50000 (espumantes)",
+   "confere": true,
+   "achado": "Os quatro existem, todos com motivo CO-0008; títulos confirmam jabuticaba, baru e pequi, água de coco e 'ESPUMANTES'."
+  },
+  {
+   "afirmacao": "Ruído: EN-50885, EN-51191, EN-50868 não tratam de bebida",
+   "confere": true,
+   "achado": "Títulos: concreto submetido a tratamento térmico; têmpera em aço inoxidável; remoção de ferro e manganês de águas de abastecimento por filtração. A frase 'em 15 títulos, cerca de metade' não é reproduzível: a amostra de 15 não é identificada."
+  },
+  {
+   "afirmacao": "Nenhuma Entrada lida ou extraída: todas 'bruto'",
+   "confere": true,
+   "achado": "Estado das 1.398 Entradas de 05 a 12/11: 1.398 'bruto'."
+  },
+  {
+   "afirmacao": "Tabela dos dias de erro (commits bffd3b4, 467d9b5, 1c9df40, 93540aa, 1fcb938, 6dd5d99, ff8fd66, 063d2a1)",
+   "confere": true,
+   "achado": "Cada linha e cada commit coincidem com dias-da-rotina.md; 063d2a1 aparece no git log como 'Rotina diária de 2026-11-12 (camada 1, sem IA; portão: passa)'. Não abri o log do Actions nem conferi os hashes antigos contra o git."
+  },
+  {
+   "afirmacao": "Execução 43203545917 (12/11) não lida: qual é o resultado",
+   "confere": true,
+   "achado": "Resultado sustentado por medida local: dias-da-rotina.md a dá como 'passou e juntou ao main (350 Entradas novas; portão OK 257, FALHA 0)'; existem 350 arquivos com data 12/11 em entrada/ (349 AM-0022, 1 AM-0029) e o relatório 2026-11-12.md diz 350 e 2404. Coerente com o commit 063d2a1. O log do Actions em si não foi lido por mim."
+  },
+  {
+   "afirmacao": "Recortes interrompidos pelo teto: 6 em 12/11, 0 em 05/11, 2 em 06/11",
+   "confere": true,
+   "achado": "Relatório 12/11 'interrompido por teto: 6'; 05/11 não lista; 06/11 'interrompido por teto: 2'."
+  },
+  {
+   "afirmacao": "Faltas de 31 para 40 na semana",
+   "confere": true,
+   "achado": "Relatórios: 05/11 'Faltas no acervo: 31 (1 nova hoje)'; 12/11 '40 (4 nova hoje)'. Nuance: 31 já inclui a F-0034 criada em 05/11; contando do início do dia 05, são 30 para 40."
+  },
+  {
+   "afirmacao": "Links quebrados: 22 em 12/11 e 1 em 05/11",
+   "confere": true,
+   "achado": "Relatórios: '22 no total' (12/11) e '1 no total' (05/11)."
+  },
+  {
+   "afirmacao": "F-0034 fecha o Internet Archive; cartão K-208",
+   "confere": true,
+   "achado": "acervo/faltas/F-0034.json (valida) e trilhas/planejamento/quadro.md l. 35 e 71 citam K-208."
+  },
+  {
+   "afirmacao": "OpenAlex fora da rotina: sem chave, respostas 429 e 503",
+   "confere": false,
+   "achado": "Não conferido: não li fonte local para os códigos 429 e 503 (teto de chamadas); não é achado de erro."
+  },
+  {
+   "afirmacao": "O boletim não traz dado pessoal",
+   "confere": true,
+   "achado": "scripts/procurar_dado_pessoal.py sobre o boletim: 0 ocorrência(s). Só aparece 'Vicente' como responsável (permitido). nomes_provaveis.py não foi rodado."
+  }
+ ],
+ "resumo": "Amostra: 15 de 15 itens conferem (13 Entradas e F-0034 e TE-0003 passam no esquema; ambiente, Recortes, pegadas e motivo batem; nenhum dado pessoal; 2 falsos positivos de telefone em hash; EN-50217, EN-50230 e EN-50730 são ruído esperado da regra literal). Boletim: números conferem, exceto cerveja 53 (54) e suco 25 (27), diferença de critério de contagem, e OpenAlex 429/503 não conferido. Divergências: 08/11 o certo é 1.028 (1.008 + 20), a linha da rodada só viu a execução EX-50014; CO-0008 é 567 por motivo (571 por Recorte, 568 pela soma das linhas, 565 não reproduzido); a execução 43203545917 tem resultado sustentado pelos 350 arquivos de 12/11 e pelo commit 063d2a1."
+}
