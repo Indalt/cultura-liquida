@@ -78,8 +78,8 @@ def aplicar(obj, m: dict):
     alvo = pegar(obj, pai)
     if m["op"] == "set":
         alvo[ult] = m["valor"]
-    elif m["op"] == "apagar":
-        del alvo[ult]
+    elif m["op"] == "apagar":  # sem erro se o campo já não existe (o registro real muda com a rotina)
+        alvo.pop(ult, None)
     elif m["op"] == "anexar":
         alvo[ult].append(m["valor"])
     else:
