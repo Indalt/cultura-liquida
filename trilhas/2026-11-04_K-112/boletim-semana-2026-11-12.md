@@ -81,3 +81,5 @@ Fonte: `trilhas/2026-11-04_K-112/dias-da-rotina.md` (as execuções do GitHub Ac
 - Não se mediu quantas das 1.398 Entradas repetem itens que já estavam no acervo por outro caminho.
 - O relatório da última execução de 12/11 (43203545917) não foi lido; o resultado vem só da mensagem do commit 063d2a1.
 - As fontes fora da rotina (seção 4) não foram consultadas: o que elas teriam não se sabe.
+
+> Nota da conferência do auditor (fechamento do K-112): por outro critério de contagem, cerveja dá 54 e suco 27 (aqui, 53 e 25); os códigos 429 e 503 da OpenAlex vêm das rodadas de 08/11 (commit a630862) e não foram reconferidos pelo auditor. Detalhe em `auditor-fechamento/achados.json`.
