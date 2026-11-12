@@ -6,6 +6,12 @@
   "esquema": "recorte",
   "mudancas": [
     {
+      "op": "apagar",
+      "caminho": [
+        "explicacao_total_visto"
+      ]
+    },
+    {
       "op": "set",
       "caminho": [
         "total_informado"
@@ -20,5 +26,5 @@
       "valor": 999999
     }
   ],
-  "nota": "o total informado fica fixo no caso (12/11): a rotina reescreve o RC-0010 real, e numa rodada interrompida ele ficou sem total numérico, o que fazia o caso passar no runner"
+  "nota": "o caso fixa o total informado e tira a explicação (12/11): a rotina reescreve o RC-0010 real e passou a gravar nele a explicacao_total_visto, o que fazia o caso passar no runner e reprovar o portão"
 }
