@@ -108,7 +108,7 @@ class Indice:
 def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, origem: dict,
               ambiente: str | None = None, recorte: str | None = None, localizador: str | None = None,
               nota: str | None = None, gravar: bool = True, id_: str | None = None,
-              extra: dict | None = None) -> tuple[str, bool]:
+              extra: dict | None = None, mesmo_item_pela_pegada: bool = False) -> tuple[str, bool]:
     """Grava a Entrada do item ou acrescenta o Recorte à que já existe. Devolve (id, nova?).
     Sem identificador (link trazido sem DOI, handle nem ambiente), a chave é o próprio link.
     `id_` reabre um item com o EN-nnnn que a pegada guardava; `extra` traz o título, o ano, a
@@ -125,6 +125,17 @@ def registrar(ind: Indice, *, identificador: str | None, url: str, canal: str, o
                 gravar_json(arq, e)
         return e["id"], False
     em_entrada = id_ and any(e["id"] == id_ for _, e in ind.por_chave.values())
+    if mesmo_item_pela_pegada and em_entrada and ind.pegadas.en_por_identificador.get(identificador or "") == id_:
+        # na coleta: a pegada desta chave já aponta a Entrada achada antes pelo link (agregador como o Oasisbr;
+        # rodadas de 09 a 11/11): é o mesmo item, e o Recorte se acrescenta a ela
+        arq, e = next((a, x) for a, x in ind.por_chave.values() if x["id"] == id_)
+        if identificador:
+            ind.por_chave.setdefault(identificador, (arq, e))
+        if recorte and recorte not in e.setdefault("recortes", []):
+            e["recortes"].append(recorte)
+            if gravar:
+                gravar_json(arq, e)
+        return e["id"], False
     if id_ and (em_entrada or (id_ in ind.ids and ind.pegadas.en_por_identificador.get(identificador or "") != id_)):
         raise ValueError(f"{id_} já é de outro item: só se reabre com o EN-nnnn da pegada do mesmo identificador (A-001)")
     e = {"id": id_ or proximo_id("EN", ind.ids), "canal": canal}

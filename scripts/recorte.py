@@ -244,7 +244,7 @@ def entradas(reg: Registro, r: dict, itens: list[dict]) -> tuple[int, int]:
             en, nova = deduplicar.registrar(
                 reg.indice, identificador=it["identificador"], url=it["url"], canal="monitoramento e escavação",
                 origem=reg.ex.origem("scripts/recorte.py", deduplicar.VERSAO), ambiente=r["ambiente"],
-                recorte=r["id"], gravar=reg.gravar, id_=en, extra=extra)
+                recorte=r["id"], gravar=reg.gravar, id_=en, extra=extra, mesmo_item_pela_pegada=True)
             if nova:
                 peg.ligar(it["identificador"], en, gravar=reg.gravar)
         linha = {"id_fonte": str(it.get("id_fonte") or it["identificador"]).replace(" ", "_"), "identificador": it["identificador"],
