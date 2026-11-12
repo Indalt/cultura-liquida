@@ -47,3 +47,11 @@ O curador mostrou o que de 05 a 07/11 já verifica o K-112, o que só os 7 dias 
 Depois do prompt de continuação do K-112:
 
 "se for essencial para que o piloto entregue o que a ferramenta precisa para finalizar a avaliação do sistema, vamos tratar os pontos. eu havia entendido que nao é essencial. nao sendo essencial esperamos os 7 dias. (na quinta, dia 05, não foi o primeiro dia? se foi hoje ja é o quarto dia, confirma?)"
+
+## O K-115 completo, em três cartões (D-053, 12/11/2026)
+
+Depois do fechamento do K-112, o curador mostrou que o K-115 completo e os outros três cartões não cabem na semana da conta e recomendou reduzir o K-115 às habilidades da rotina com IA. Vicente:
+
+"manter o k-115 completo, mas vamos fazer durante a semana e nao apenas em um cartao. como dividir esse cartao?"
+
+O curador propôs a divisão por agente (K-115a, K-115b, K-115c) e a ordem K-115a, K-113, K-115b, K-114, K-115c, K-116. Vicente: "estao certas. mande o proximo prompt"

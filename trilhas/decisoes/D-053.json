@@ -1,0 +1,21 @@
+{
+  "id": "D-053",
+  "data": "2026-11-12",
+  "essencia": "O K-115 fica completo, com as onze habilidades, mas dividido em três cartões ao longo das semanas, por agente: o K-115a (avaliador, arquivista e a triagem jurídica, com a base do teste), o K-115b (juridico e rastreador) e o K-115c (auditor, redator e o fecho). A ordem é K-115a, K-113, K-115b, K-114, K-115c e K-116.",
+  "diretriz": "(1) O K-115 (bloco 12 do brief) vira três cartões, cada um terminado antes do próximo (a regra de um cartão por vez segue): o K-115a faz a base do teste (o modelo por chamada, os registros de teste marcados, o banco de provas e o relatório de modelos) e testa extrair-evidencia (avaliador), registrar-termo, montar-ficha e gerar-grafo (arquivista) e triagem-juridica (juridico); o K-115b testa guia-de-liberacao e conferir-fato (juridico) e ficha-de-acesso e consulta (rastreador); o K-115c testa conferir-fato e verificar-fundacao (auditor) e escrever-secao-fundacao (redator), completa o relatório de modelos e atualiza a tabela de modelos do CLAUDE.md e do AGENTS.md. (2) Cada parte, ao fechar, troca no frontmatter, com Histórico, o modelo dos agentes que testou por inteiro; habilidade de agente ainda não fechado usa o modelo da tabela, passado por chamada. (3) Ordem: K-115a, K-113, K-115b, K-114, K-115c, K-116; o K-113 configura a rotina com IA pela tabela do K-115a (D-050, item 4), e o K-115c vem antes do K-116, que precisa da tabela inteira. (4) Seguem da D-051: o teste do kit no fechamento do K-114, os registros de teste marcados como teste de modelo, fora da estimativa de lote, do relatório do piloto e do K-005, e a saída dos agentes testados fora do acervo. (5) Cada cartão segue a D-040; pela estimativa do curador em 12/11 (não medida), o K-115a, o K-113 e o K-115b cabem até 18/11, e o resto entra a partir de 19/11, com o fim do piloto por volta de 20 ou 21/11.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-12",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-05_conversa/falas-vicente.md, seção 'O K-115 completo, em três cartões (D-053, 12/11/2026)'",
+  "palavras_conferidas": [
+    {
+      "palavra": "manter o k-115 completo",
+      "sentido_confirmado": "literal: as onze habilidades testadas, sem reduzir o bloco 12"
+    },
+    {
+      "palavra": "vamos fazer durante a semana e não apenas em um cartão",
+      "sentido_confirmado": "o K-115 dividido em três cartões, espalhados ao longo das semanas; a divisão por agente e a ordem foram propostas pelo curador e confirmadas por Vicente ('estão certas')"
+    }
+  ],
+  "substitui": "Muda o bloco 12 do brief de execuções de um cartão para três (K-115a, K-115b, K-115c), como sub-cartões do K-115, à maneira do K-108b. Encerra as condições da D-051 próprias de rodar o K-115 em paralelo com o K-112, que fechou em 12/11; seguem dela o kit no K-114, os registros de teste marcados e a saída fora do acervo.",
+  "marcador": "VIGENTE"
+}
