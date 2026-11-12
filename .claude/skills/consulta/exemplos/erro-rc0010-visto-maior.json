@@ -8,9 +8,17 @@
     {
       "op": "set",
       "caminho": [
+        "total_informado"
+      ],
+      "valor": 1295
+    },
+    {
+      "op": "set",
+      "caminho": [
         "total_visto"
       ],
       "valor": 999999
     }
-  ]
+  ],
+  "nota": "o total informado fica fixo no caso (12/11): a rotina reescreve o RC-0010 real, e numa rodada interrompida ele ficou sem total numérico, o que fazia o caso passar no runner"
 }
