@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-13T00:20:00-03:00",
+  "agente": "arquivista",
+  "habilidade": "gerar-grafo",
+  "versao_harness": "0.2.0",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova gg-pr0042-cadeia, modelo haiku, rodada 1 (banco-0.1, base 288c4b0)",
+  "acoes": ["leu o pedido, o SKILL.md do disco, PR-0042, PR-0059, Evidências, Trechos, Processos, Insumos, Compreensões locais e Faltas da fatia", "gravou 12 Elementos, 11 Arestas e uma Falta nova; calcular_mu_lambda.py --gravar e --conferir (código 0)"],
+  "resultados": ["banco: REPROVA; um Elemento por etapa do fluxograma (12; 3 sem Y), X em Falta, 11 Arestas (real: 6 Elementos, um por Processo, X IN-0001, 5 Arestas)", "o validar_acervo reprovou também por um defeito da prova (a F-0031 apontava para os Elementos retirados), corrigido na banco-0.2"],
+  "saidas": ["testes/modelos/resultados/gg-pr0042-cadeia__claude-haiku-5-5__r1.json"],
+  "decisoes": [{"item": "prova gg-pr0042-cadeia em Haiku 5.5, rodada 1", "decisao": "descartado", "motivo": "reprova no gabarito; a prova é corrigida (banco-0.2: a F-0031 e as 9 Proposições do gesto) e o harness reforçado (gerar-grafo 0.2.1) antes de subir de modelo (l. 698)"}],
+  "tokens": 155681,
+  "chamadas": 20,
+  "duracao_s": 327.6,
+  "erros": ["validar_acervo.py: 6 erros na F-0031 vindos da prova (banco-0.1), não do agente"],
+  "alcance": {"olhado": ["a fatia da prova: as Proposições dadas, Processos, Insumos, Compreensões locais, Faltas", "esquemas de Elemento, Aresta e Falta"], "fora": ["o acervo real e trilhas/, pela prova", "web"]}
+}

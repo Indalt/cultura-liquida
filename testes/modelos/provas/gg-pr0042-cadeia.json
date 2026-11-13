@@ -85,5 +85,20 @@
     "op": "remover"
    }
   ]
- }
+ },
+ "mudancas": [
+  {
+   "registro": "F-0031",
+   "op": "set",
+   "caminho": [
+    "onde_aparece"
+   ],
+   "valor": [
+    "EL-0037",
+    "EL-0038",
+    "EL-0072"
+   ]
+  }
+ ],
+ "nota": "banco-0.2 (13/11): a F-0031 sem os Elementos retirados (na 0.1, a prova reprovava o validar_acervo para qualquer agente); o pedido dá as 9 Proposições que os Elementos reais usam (na 0.1, só a PR-0042 e a PR-0059, que não dizem o insumo). A rodada 1 do Haiku correu na 0.1."
 }

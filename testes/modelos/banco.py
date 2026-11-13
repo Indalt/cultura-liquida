@@ -44,7 +44,7 @@ sys.path.insert(0, str(RAIZ / "testes" / "rodada-b"))
 from _acervo import arquivos_acervo, id_do_registro  # noqa: E402
 from caso_real import aplicar, fecho  # noqa: E402
 
-VERSAO = "banco-0.1"
+VERSAO = "banco-0.2"
 PROVAS = RAIZ / "testes" / "modelos" / "provas"
 RESULTADOS = RAIZ / "testes" / "modelos" / "resultados"
 CACHE = Path(tempfile.gettempdir()) / "cultura-liquida-banco"
