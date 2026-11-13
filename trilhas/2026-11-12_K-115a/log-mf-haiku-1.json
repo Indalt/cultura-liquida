@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-12T23:28:00-03:00",
+  "agente": "arquivista",
+  "habilidade": "montar-ficha",
+  "versao_harness": "0.2.0",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova mf-cl0001-temporalidade, modelo haiku, rodada 1 (banco-0.1, base 288c4b0)",
+  "acoes": ["leu o SKILL.md do disco, a ficha CL-0001 (l. 1-290), as 17 Proposições e as 28 Evidências; os Trechos não foram abertos", "escreveu a seção Temporalidade (20 itens) no lugar do marcador", "validar_acervo.py --raiz passa"],
+  "resultados": ["banco: PASSA (17 de 17 Proposições marcadas, nenhuma fora, μ citado bate)", "para a segunda leitura: 20 itens para 17 Proposições, com frases sobre as Faltas F-0027 a F-0031 marcadas com Proposições; a fidelidade aos Trechos não foi conferida pelo agente"],
+  "saidas": ["testes/modelos/resultados/mf-cl0001-temporalidade__claude-haiku-5-5__r1.json"],
+  "decisoes": [{"item": "prova mf-cl0001-temporalidade em Haiku 5.5", "decisao": "aceito", "motivo": "passa nos validadores e no gabarito; a leitura fiel vai ao auditor"}],
+  "tokens": 139247,
+  "chamadas": 18,
+  "duracao_s": 263.4,
+  "erros": [],
+  "alcance": {"olhado": ["a ficha da prova, 17 Proposições, 28 Evidências", "validar_acervo.py por faixas"], "fora": ["os Trechos (não abertos pelo agente)", "o acervo real e trilhas/, pela prova", "web"]}
+}

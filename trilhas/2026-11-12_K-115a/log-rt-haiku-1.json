@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-12T23:22:00-03:00",
+  "agente": "arquivista",
+  "habilidade": "registrar-termo",
+  "versao_harness": "0.2.0",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova rt-te0002, modelo haiku, rodada 1 (banco-0.1, base 288c4b0)",
+  "acoes": ["leu o pedido, o SKILL.md do disco, o esquema do Termo, TE-0001, TE-0004, CL-0001 e as 10 Evidências e Trechos existentes", "gravou TE-0002.json na raiz da prova", "validar.py termo, validar_acervo.py --raiz e gerar_termo.py --raiz passam"],
+  "resultados": ["banco: PASSA (estado atestado, designação cajuína, 'mocororó' marcado como termo ambíguo, abonações só das dadas)", "diferença do real para a segunda leitura: abonou a EV-0004 (leitura divergente), que o registro real deixa fora; EV-0020 não estava na fatia e ficou dita na nota"],
+  "saidas": ["testes/modelos/resultados/rt-te0002__claude-haiku-5-5__r1.json"],
+  "decisoes": [{"item": "prova rt-te0002 em Haiku 5.5", "decisao": "aceito", "motivo": "passa nos validadores e no gabarito; a abonação da EV-0004 vai ao auditor"}],
+  "tokens": 115825,
+  "chamadas": 15,
+  "duracao_s": 203.4,
+  "erros": [],
+  "alcance": {"olhado": ["a fatia da prova (TE-0001, TE-0004, CL-0001, 10 Evidências, 10 Trechos)", "esquemas/termo.schema.json", "gerar_termo.py e validar_acervo.py por faixas"], "fora": ["o acervo real e trilhas/, pela prova", "web"]}
+}

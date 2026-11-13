@@ -1,0 +1,37 @@
+{
+ "prova": "rt-te0002",
+ "habilidade": "registrar-termo",
+ "agente": "arquivista",
+ "modelo": "claude-haiku-5-5",
+ "rodada": 1,
+ "data": "2026-11-12",
+ "versao": "banco-0.1",
+ "base_commit": "288c4b0",
+ "passa": true,
+ "checagens": [
+  {
+   "ok": true,
+   "texto": "scripts/validar_acervo.py: código 0: acervo-0.4: 806 registros; válido"
+  },
+  {
+   "ok": true,
+   "texto": "scripts/gerar_termo.py: código 0: termo-0.2: 3 Termo(s)"
+  },
+  {
+   "ok": true,
+   "texto": "estado 'atestado' (real 'atestado')"
+  },
+  {
+   "ok": true,
+   "texto": "designação 'cajuína' presente"
+  },
+  {
+   "ok": true,
+   "texto": "variante 'mocororó' presente"
+  },
+  {
+   "ok": true,
+   "texto": "abonações só das Evidências dadas"
+  }
+ ]
+}

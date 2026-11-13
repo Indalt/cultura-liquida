@@ -1,0 +1,22 @@
+{
+  "data_hora": "2026-11-12T23:15:00-03:00",
+  "agente": "avaliador",
+  "habilidade": "extrair-evidencia",
+  "versao_harness": "0.2.1",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova ee-en1369-en1544, modelo haiku, rodada 3 (harness 0.2.1 lido do disco; banco-0.1, base 288c4b0)",
+  "acoes": ["leu o SKILL.md 0.2.1 do disco, as 2 Entradas e as 10 janelas", "10 localizar_trecho.py localizar (exatos)", "20 Evidências; gravar_extracao.py --simular reprovou uma vez (enum de tipo_evidencia e criterio_pratica_cultural) e passou na segunda", "nomes_provaveis.py não rodado (teto)"],
+  "resultados": ["banco: PASSA; os 10 Trechos reais cobertos; validadores passam", "pontos para a segunda leitura: 20 Evidências de 10 Trechos (afirmações separadas), duas marcas de aviso, saúde ou política 'por cautela' ('sem teor alcoólico', 'bens culturais'), o qualificativo 'Do ponto de vista histórico' fora do trecho; nomes_provaveis.py não rodado"],
+  "saidas": ["testes/modelos/resultados/ee-en1369-en1544__claude-haiku-5-5__r3.json"],
+  "decisoes": [
+    {"item": "EN-1369", "decisao": "aceito", "motivo": "valencias-0.1: lastro 2, trecho 2, voz 1", "automatica": true, "versao_regra": "valencias-0.1"},
+    {"item": "EN-1544", "decisao": "aceito", "motivo": "valencias-0.1: lastro 2, trecho 2, voz 1", "automatica": true, "versao_regra": "valencias-0.1"},
+    {"item": "prova ee-en1369-en1544 em Haiku 5.5, rodada 3", "decisao": "aceito", "motivo": "passa nos validadores e no gabarito com o harness reforçado (l. 698); a leitura fiel vai ao auditor"}
+  ],
+  "tokens": 131465,
+  "chamadas": 25,
+  "duracao_s": 367.5,
+  "erros": ["primeira validação reprovou por enum e foi corrigida pelo agente", "nomes_provaveis.py não rodado (teto de 25)"],
+  "alcance": {"olhado": ["a pasta da prova: 2 Entradas, 10 janelas", "o SKILL.md do disco", "esquemas/valores-provisorios.json, l. 75-125"], "fora": ["o acervo real e trilhas/, pela prova", "web"]}
+}

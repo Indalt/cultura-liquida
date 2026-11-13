@@ -1,0 +1,29 @@
+{
+ "prova": "mf-cl0001-temporalidade",
+ "habilidade": "montar-ficha",
+ "agente": "arquivista",
+ "modelo": "claude-haiku-5-5",
+ "rodada": 1,
+ "data": "2026-11-12",
+ "versao": "banco-0.1",
+ "base_commit": "288c4b0",
+ "passa": true,
+ "checagens": [
+  {
+   "ok": true,
+   "texto": "scripts/validar_acervo.py: código 0: acervo-0.4: 1282 registros; válido"
+  },
+  {
+   "ok": true,
+   "texto": "17 de 17 Proposições dadas marcadas"
+  },
+  {
+   "ok": true,
+   "texto": "nenhuma marca fora das dadas"
+  },
+  {
+   "ok": true,
+   "texto": "μ citado bate com a Proposição"
+  }
+ ]
+}
