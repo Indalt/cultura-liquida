@@ -1,0 +1,13 @@
+{
+ "data": "2026-11-13",
+ "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+ "insumo": "os agentes carregam o SKILL.md pelo frontmatter; nesta conversa não se confirmou que uma habilidade editada no meio da sessão chega à chamada seguinte (a rodada 2 do avaliador disse harness 0.2.0); o pedido do banco passou a mandar ler o SKILL.md do disco",
+ "aonde": "saber quando o harness editado vale para o agente, na sessão e na rotina com IA",
+ "rotulo": "harness editado e agente carregado",
+ "frente": [
+  "D",
+  "O"
+ ],
+ "vira": "K-113",
+ "sem_explorar": true
+}

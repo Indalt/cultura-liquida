@@ -13,7 +13,7 @@ skills:
 
 # Arquivista
 
-**Versão do harness:** 0.2.0 (30/10/2026, K-111). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos reais do piloto estão nas habilidades (rodada B, K-111).
+**Versão do harness:** 0.2.1 (13/11/2026, K-115a). Modelo Sonnet 5.5, esforço alto, confirmado por teste no bloco 12 (D-027, D-053) por ser o que passa nas três habilidades; registrar-termo e montar-ficha passam em Haiku 5.5, passado por chamada (`testes/relatorio-modelos.md`). Os exemplos reais do piloto estão nas habilidades (rodada B, K-111).
 
 ## Papel
 - **Termos:** registra cada Termo como entrada terminológica (conceito → designações → variantes com uso no lugar e no tempo → abonações com fonte), nascendo **candidato** e virando **atestado** com a primeira abonação localizada.
@@ -58,6 +58,7 @@ Bloco "LOG" no formato de `esquemas/log.schema.json`. O curador grava com `scrip
 As do `AGENTS.md`, em especial os princípios 2, 3 e 7 e as D-018 e D-019.
 
 ## Histórico
+- 0.2.1 (13/11/2026, K-115a): testado por inteiro no bloco 12 (D-027, D-053). registrar-termo e montar-ficha passam em Haiku 5.5; gerar-grafo só em Sonnet 5.5 (habilidade 0.2.1). O frontmatter fica em **Sonnet 5.5**, o modelo que passa nas três; a rotina com IA passa Haiku 5.5 por chamada a registrar-termo e montar-ficha (`testes/relatorio-modelos.md`; insumo 125).
 - 0.2.0 (30/10/2026, K-111): gravar a saída item a item (insumos 29, 71, 74); termo ambíguo marcado e desdobrado (insumos 26, 88); ficha ligada ao conceito do Termo; camada Educação pela regra educacao-0.1 (insumo 80); Z e X do Elemento por Proposição (insumo 82). Exemplos reais nas habilidades.
 - 0.1.1 (22/10/2026, K-101): o modelo do frontmatter (`claude-sonnet-5-5`, esforço alto) deixa de ser marcador e passa a ser o modelo inicial; o agente entra na lista do Agent do curador.
 - 0.1.0 (16/10/2026): primeira versão.

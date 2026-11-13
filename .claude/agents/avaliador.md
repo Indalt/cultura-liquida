@@ -2,7 +2,7 @@
 name: avaliador
 description: Avaliador do projeto Cultura Líquida (rodada B; harness 0.2.0 com exemplos reais do piloto). Faz a triagem por valências, a quarentena e a extração de evidência com trecho literal localizado por script.
 tools: Read, Grep, Glob, Bash
-model: claude-sonnet-5-5
+model: claude-haiku-5-5
 effort: high
 maxTurns: 25
 skills:
@@ -11,7 +11,7 @@ skills:
 
 # Avaliador
 
-**Versão do harness:** 0.2.0 (30/10/2026, K-111). Modelo inicial Sonnet 5.5, esforço alto (frontmatter; brief de execuções, seção 0), provisório até os testes do bloco 12 (D-027). Os exemplos reais do piloto estão nas habilidades (rodada B, K-111).
+**Versão do harness:** 0.2.1 (13/11/2026, K-115a). Modelo Haiku 5.5, esforço alto, escolhido por teste no bloco 12 (D-027, D-053): o mais barato que passa na única habilidade do agente (`testes/relatorio-modelos.md`). Os exemplos reais do piloto estão nas habilidades (rodada B, K-111).
 
 ## Papel
 Lê uma Entrada (documento, trecho, contribuição) e: (1) faz a triagem por valências equilibradas (P85–P87), sem zerar um critério ao ajustar outro; (2) põe em quarentena o que não passa, sem descartar (princípio 10); (3) extrai Evidências: trecho literal + localizador + voz (quem fala no trecho), ligadas a uma Proposição (CLB situada × atributo × valor × período).
@@ -57,6 +57,7 @@ Bloco "LOG" no formato de `esquemas/log.schema.json`, com cada Entrada em `decis
 As do `AGENTS.md`, em especial D-018, D-019 e o princípio 10.
 
 ## Histórico
+- 0.2.1 (13/11/2026, K-115a): modelo do frontmatter trocado de Sonnet 5.5 para **Haiku 5.5** pelo teste do bloco 12 (D-027, D-053): extrair-evidencia passa no banco de provas na 3ª rodada, com a habilidade 0.2.1 (cobertura; voz do autor que cita); a segunda leitura do auditor deu "serve com ressalvas" (três erros de leitura fiel, insumo 122).
 - 0.2.0 (30/10/2026, K-111): gravar a saída item a item, com `juntar_saida.py` e validação por arquivo (insumos 29, 71, 74); leitura fiel com os achados A1 a A5 do K-109 (insumo 72); rótulo só com a palavra do trecho e termo ambíguo (insumo 88); outra CLB separada no ato (insumo 89); nomes prováveis antes de devolver (insumo 76). Exemplos reais na habilidade.
 - 0.1.1 (22/10/2026, K-101): o modelo do frontmatter (`claude-sonnet-5-5`, esforço alto) deixa de ser marcador e passa a ser o modelo inicial; o agente entra na lista do Agent do curador. A quarentena sai pela regra versionada, registrada como Execução com a versão da regra e o motivo, nunca por veredito item a item (padrão A-05, D-038); `automatica` e `versao_regra` no bloco LOG.
 - 0.1.0 (16/10/2026): primeira versão.

@@ -1,0 +1,43 @@
+{
+ "prova": "extrair-evidencia",
+ "modelo": "claude-haiku-5-5",
+ "veredito": "serve com ressalvas",
+ "achados": [
+  {
+   "campo_ou_linha": "EN-1369, evidencia 1 (trechos/EN-1369-1.json, chave consumo|refrescante-sem-teor-alcoolico)",
+   "tipo": "erro",
+   "descricao": "Evidência de fragmento sem sujeito nem verbo: o Trecho começa no meio da frase (pelos piauienses por ser refrescante e sem teor alcoólico) e o atributo admite sujeito e verbo fora da janela. A Proposição atribuiria à CLB algo que o trecho não amarra. O real não extrai: o TR-0031 começa em A cajuína foi desenvolvida.",
+   "regra": "extrair-evidencia 0.2.1, passo 7 e passo 4 (D-018: o não captado é Falta)"
+  },
+  {
+   "campo_ou_linha": "EN-1544, evidencia finalidade|nao-visava-comercio (EN-1544-4.json)",
+   "tipo": "erro",
+   "descricao": "O Trecho abre depois de Do ponto de vista histórico (só em antes) e o valor perde o qualificativo; o real o mantém (TR-0041, PR-0025 historicamente). Erro leve, literal contra o passo 7.",
+   "regra": "extrair-evidencia 0.2.1, passo 7 (sem perder qualificativo)"
+  },
+  {
+   "campo_ou_linha": "EN-1369, evidencia reconhecimento|brasilia-e-nordeste (EN-1369-4.json)",
+   "tipo": "erro",
+   "descricao": "O Trecho começa após elisão da fonte ([…] , Brasília e principalmente na região Nordeste (Figura 22)); o predicado é conhecida vem do Trecho anterior, emendado por cima do corte. Sem verbo nem sujeito no Trecho. O real não extrai. O mesmo Trecho junta esse fragmento a uma frase completa (composição).",
+   "regra": "extrair-evidencia 0.2.1, passo 7 e passo 4"
+  },
+  {
+   "campo_ou_linha": "sustenta_aviso_saude_politica: EN-1369 e EN-1544 inteiras; evidência sem teor alcoólico; bens culturais",
+   "tipo": "diferença sem erro",
+   "descricao": "Marca por cautela em 2 das 20 Evidências e nas duas Entradas; o real marca falso nas 10. Manda a Proposição ao auditor fora da amostra (D-038): supermarcação, sem perda de informação. A de sem teor alcoólico nasce do fragmento do primeiro achado. Aceitável como cautela; custa auditor se virar padrão.",
+   "regra": "extrair-evidencia passos 2 e 7; D-038"
+  },
+  {
+   "campo_ou_linha": "voz.papel de EN-1544-2 e EN-1544-3 (citando o IPHAN)",
+   "tipo": "diferença sem erro",
+   "descricao": "A voz é autor, como manda a regra, e o deriva_de da Fonte bate com o texto. Só o papel acrescenta citando o IPHAN nos Trechos 2 e 3 a partir de um (IPHAN). que fecha a frase anterior: leitura do contexto, sem efeito na voz. No Trecho 5 o (IPHAN, 2014) vem logo depois e está certo.",
+   "regra": "extrair-evidencia 0.2.1, passo 7"
+  },
+  {
+   "campo_ou_linha": "20 Evidências de 10 Trechos; EN-1369-4",
+   "tipo": "diferença sem erro",
+   "descricao": "Cobertura: os 10 Trechos do real aparecem (TR-0031 a 35 e 38 a 42), uma Evidência por afirmação (passo 4); o real agrupa em 10. EN-1369-4 traz a frase inteira da composição (o TR-0034 real a corta em sabor característico), sem erro. Períodos conferem com o trecho; época das batalhas em EN-1369-2 é rótulo sem apoio no texto, sem efeito.",
+   "regra": "extrair-evidencia passo 4"
+  }
+ ]
+}

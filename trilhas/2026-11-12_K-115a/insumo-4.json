@@ -1,0 +1,13 @@
+{
+ "data": "2026-11-13",
+ "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+ "insumo": "no TE-0002 do Haiku, a EV-0004 (leitura divergente da PR-0001) foi abonada; o registro real a deixa fora, mas nenhuma regra escrita (registrar-termo, validar_acervo, gerar_termo) diz se Evidência de leitura divergente abona o nome",
+ "aonde": "uma regra escrita sobre a abonação por Evidência de leitura divergente",
+ "rotulo": "abonação por leitura divergente",
+ "frente": [
+  "P",
+  "D"
+ ],
+ "vira": "a definir pelo planejamento",
+ "sem_explorar": true
+}

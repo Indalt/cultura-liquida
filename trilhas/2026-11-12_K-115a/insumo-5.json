@@ -1,0 +1,13 @@
+{
+ "data": "2026-11-13",
+ "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+ "insumo": "o TR-0031 (Embrapa 2011) diz que a cajuína 'foi desenvolvida pelos indígenas'; a D-047 lê que nenhuma fonte atribui o saber da cajuína a povo como detentor; o juridico (Sonnet) fechou sem Falta pela D-047 e anotou a tensão; a lista de palavras da triagem fixa não pega 'índios' nem 'indígenas'; o exemplo falta-conhecimento-tradicional.json da triagem-juridica cita um guia que não existe (G-sisgen-cadastro-de-acesso)",
+ "aonde": "a premissa da D-047 relida diante de atribuição histórica de origem, e a triagem fixa e os exemplos coerentes com os guias",
+ "rotulo": "D-047 e atribuição de origem",
+ "frente": [
+  "P",
+  "D"
+ ],
+ "vira": "a definir pelo planejamento",
+ "sem_explorar": true
+}

@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-13T01:05:00-03:00",
+  "agente": "juridico",
+  "habilidade": "triagem-juridica",
+  "versao_harness": "0.2.1",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova tj-tr0018, modelo haiku, rodada 2 (triagem-juridica 0.2.1 lida do disco; banco-0.2, base 288c4b0)",
+  "acoes": ["leu o SKILL.md 0.2.1, os 4 Trechos, as 4 Fontes, a F-0025, os esquemas, o parecer do K-124 e a C1 por grep, o guia G-sisgen", "as oito perguntas; 3 Faltas validadas pelo esquema"],
+  "resultados": ["banco: REPROVA; acertou a Falta de conhecimento tradicional no TR-0018 e o 'sem Falta' do TR-0494 e do TR-0100, mas abriu Falta de conhecimento tradicional no TR-0031 (cajuína, que a D-047 lê como não sendo) e uma Falta de licença sobre a citação curta dos quatro (contra a D-042)"],
+  "saidas": ["testes/modelos/resultados/tj-tr0018__claude-haiku-5-5__r2.json"],
+  "decisoes": [{"item": "prova tj-tr0018 em Haiku 5.5, rodada 2", "decisao": "descartado", "motivo": "reprova no gabarito depois do reforço do harness; pela l. 698, sobe-se ao Sonnet 5.5"}],
+  "tokens": 127077,
+  "chamadas": 14,
+  "duracao_s": 242.4,
+  "erros": [],
+  "alcance": {"olhado": ["a fatia: 4 Trechos, 4 Fontes, F-0025", "falta.schema, triagem-fixa, parecer do K-124 e C1 por grep, guia G-sisgen"], "fora": ["o acervo real, pela prova", "web"]}
+}

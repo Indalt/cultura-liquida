@@ -1,0 +1,31 @@
+{
+ "prova": "montar-ficha (Temporalidade)",
+ "modelo": "claude-haiku-5-5",
+ "veredito": "serve com ressalvas",
+ "achados": [
+  {
+   "campo_ou_linha": "seção Faltas nestes períodos ([PR-0247; PR-0114; PR-0119; PR-0079; PR-0169; PR-0025])",
+   "tipo": "erro",
+   "descricao": "Frase sobre as Faltas F-0027 a F-0031 marcada com seis Proposições que não dizem o que ela diz (compreensão local não captada). O rastro de cada frase se confunde; o real não marca essa frase (linha 265 da ficha). Os períodos conferem com as Faltas. A PR-0247 tem Evidência de pessoa citada em fala direta, e a Falta vale onde as Proposições não têm fala: a marcação dela não se confirma.",
+   "regra": "montar-ficha: cada frase diz só o que a Proposição diz; D-018"
+  },
+  {
+   "campo_ou_linha": "seção Memória, comprovação e novidade (De outro lado, De outro lado também)",
+   "tipo": "erro",
+   "descricao": "Põe a PR-0114 (entrevistas, década de 1920) como contraponto à memória imemorial (PR-0111). Só a PR-0082 faz o contraste, com a PR-0081; a PR-0114 não se opõe a nada. A relação é do redator (D-019: a ficha documenta, não julga). Erro leve. PR-0081 e PR-0114 saem duas vezes (20 itens para 17 Proposições).",
+   "regra": "montar-ficha; D-019"
+  },
+  {
+   "campo_ou_linha": "item PR-0402 (mocororó dos Tremembés, termo ambíguo, D-039; ver TE-0002)",
+   "tipo": "diferença sem erro",
+   "descricao": "O vinho curtido ao sol e o mocororó dos Tremembés estão na PR-0402 (confere); o real omite o parêntese e a F-0033 diz que o trecho só nomeia (sem Falta, D-042). Termo ambíguo, outra CLB; ver TE-0002 é comentário do redator, correto mas além da Proposição.",
+   "regra": "montar-ficha; D-042"
+  },
+  {
+   "campo_ou_linha": "PR-0282, PR-0064, PR-0169, PR-0079, PR-0261 e graus μ",
+   "tipo": "diferença sem erro",
+   "descricao": "PR-0282 sai sem em Monsenhor Gil (o real acrescenta o lugar da Evidência; Haiku diz só o que a Proposição diz). PR-0064 e PR-0169 em itens separados (o real os junta). Períodos batem com o campo periodo; μ só onde é 0,5, como no real; conferi os 17 graus.",
+   "regra": "montar-ficha"
+  }
+ ]
+}

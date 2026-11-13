@@ -1,0 +1,64 @@
+{
+ "data_hora": "2026-11-13T01:25:00-03:00",
+ "agente": "auditor",
+ "habilidade": "conferir-fato",
+ "versao_harness": "0.2.0",
+ "modelo": "claude-sonnet-5-5",
+ "esforco": "high",
+ "entrada_ref": "[teste de modelo] K-115a, segunda leitura das provas que passaram (ee-haiku-3, rt-haiku, mf-haiku, gg-sonnet, tj-sonnet), comparadas com o acervo real",
+ "acoes": [
+  "leu as saídas das cinco provas e as comparou com os registros reais por script e por faixas",
+  "grep por 'diverg' nos scripts e na habilidade registrar-termo e pela citação do art. 12, §2º",
+  "5 arquivos e juntar_saida.py"
+ ],
+ "resultados": [
+  "extrair-evidencia, Haiku: serve com ressalvas (3 erros de leitura fiel: Evidência de fragmento sem sujeito nem verbo, Trecho emendado por cima de uma elisão, qualificativo 'Do ponto de vista histórico' perdido); supermarcação de aviso, saúde ou política",
+  "registrar-termo, Haiku: serve com ressalvas (1 erro: 'divergência' entre 'não diluída' e 'cortado' inventada; cortar é clarificar); a EV-0004 abonada sem regra escrita que a barre",
+  "montar-ficha, Haiku: serve com ressalvas (2 erros leves: frase sobre as Faltas F-0027 a F-0031 marcada com Proposições que não a dizem; contraponto atribuído à PR-0114)",
+  "gerar-grafo, Sonnet: serve com ressalvas (1 erro: AR-0027 com a PR-0059, que não diz a clarificação, e μ 1,0 em vez de 0,5)",
+  "triagem-juridica, Sonnet: serve (0 erros)"
+ ],
+ "saidas": [
+  "trilhas/2026-11-12_K-115a/auditor-leitura.json"
+ ],
+ "decisoes": [
+  {
+   "item": "citação literal do art. 12, §2º na F-9001",
+   "decisao": "falta",
+   "motivo": "sem web; não reaberta na lei"
+  },
+  {
+   "item": "nomes_provaveis.py nos Trechos do lote",
+   "decisao": "falta",
+   "motivo": "teto de 20"
+  },
+  {
+   "item": "recálculo de μ e λ da prova do grafo",
+   "decisao": "falta",
+   "motivo": "só o confronto com os valores reais"
+  },
+  {
+   "item": "EV-0004 abonada no TE-0002",
+   "decisao": "quarentena",
+   "motivo": "nenhuma regra escrita a proíbe; vai a insumo"
+  }
+ ],
+ "tokens": 125634,
+ "chamadas": 22,
+ "duracao_s": 366.5,
+ "erros": [
+  "uma gravação acima de uns 8 mil caracteres falhou e foi refeita menor"
+ ],
+ "alcance": {
+  "olhado": [
+   "as saídas das cinco provas na pasta temporária",
+   "o real: Evidências, Trechos e Proposições dos EN-1369 e EN-1544, TE-0002, a seção Temporalidade da CL-0001, os Elementos e Arestas reais da cadeia, F-0024, F-0025, F-0027 a F-0031, F-0033"
+  ],
+  "fora": [
+   "os logs das provas",
+   "o recálculo de μ e λ",
+   "a lei no Planalto (sem web)",
+   "nomes_provaveis.py"
+  ]
+ }
+}

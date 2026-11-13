@@ -53,7 +53,9 @@ def tabela() -> str:
     por_hab: dict[str, list[tuple[str, bool]]] = {}
     for d in sorted(registros(), key=lambda x: (x["habilidade"], ORDEM.get(x.get("modelo"), 9), x["data_hora"])):
         m = re.search(r"prova ([a-z0-9-]+)", d["entrada_ref"])
-        prova = m.group(1) if m else "?"
+        if not m:  # a segunda leitura do auditor é parte do teste, mas não é rodada de prova
+            continue
+        prova = m.group(1)
         mr = re.search(r"rodada ([0-9]+)", d["entrada_ref"])
         rodada = int(mr.group(1)) if mr else 1
         r = resultado(prova, d.get("modelo", ""), rodada)

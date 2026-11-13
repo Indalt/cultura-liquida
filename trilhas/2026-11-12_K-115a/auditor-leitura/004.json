@@ -1,0 +1,31 @@
+{
+ "prova": "gerar-grafo",
+ "modelo": "claude-sonnet-5-5",
+ "veredito": "serve com ressalvas",
+ "achados": [
+  {
+   "campo_ou_linha": "AR-0027 (EL-0075 clarificação para EL-0076 filtração): proposicoes [PR-0042, PR-0059], mu 1.0, estado verdadeiro",
+   "tipo": "erro",
+   "descricao": "A PR-0059 foi posta como segunda Proposição da aresta, e o μ sobe de 0,5 para 1,0. A nota da própria aresta diz que a PR-0059 dá a ordem coar, engarrafar e levar ao banho-maria, que não inclui a clarificação; a PR-0059 só traz suco clarificado como insumo. O real (AR-0012, mesma ligação) tem só PR-0042 e μ 0,5 intermediário. A aresta diz mais que as Proposições.",
+   "regra": "gerar-grafo 0.2.1, passo 5; D-041 (μ só por Evidência que diz a coisa)"
+  },
+  {
+   "campo_ou_linha": "EL-0075: PR-0059 entre as Proposições",
+   "tipo": "diferença sem erro",
+   "descricao": "O real (EL-0036) tem PR-0001, 0005, 0042, 0043; o Sonnet acrescenta a PR-0059 porque diz suco clarificado. Consistente com a PR-0043, que o real mantém pelo mesmo motivo (cita clarificado como estado, não como ato). Sem efeito em arestas além do AR-0027.",
+   "regra": "gerar-grafo 0.2.1"
+  },
+  {
+   "campo_ou_linha": "AR-0029 (EL-0077 enchimento para EL-0078 tratamento térmico): proposicoes inclui PR-0043",
+   "tipo": "diferença sem erro",
+   "descricao": "O real (AR-0017) tem PR-0042 e PR-0059; o Sonnet junta a PR-0043 (engarrafado e cozido em banho-maria, ordem certa). Mesmo μ 1,0. A nota da aresta só cita a PR-0059.",
+   "regra": "gerar-grafo 0.2.1"
+  },
+  {
+   "campo_ou_linha": "EL-0073 a EL-0078 e AR-0025, AR-0026, AR-0028",
+   "tipo": "diferença sem erro",
+   "descricao": "Batem 1 a 1 com EL-0007, 0014, 0036, 0053, 0059, 0066 e AR-0002, 0008, 0014, 0017 em X (IN-0001), Y (PC-0001 a 0006, nomes conferem), Z não datado, W F-0031, proposições (exceto o acima), proteção, μ e λ. As etapas sem Processo (sedimentação, resfriamento, rotulagem, armazenagem) ficam na nota, sem Elemento nem Processo novo, como pede o passo 5. A numeração EL-0073 em diante difere do real e não é erro.",
+   "regra": "gerar-grafo 0.2.1, passo 5"
+  }
+ ]
+}

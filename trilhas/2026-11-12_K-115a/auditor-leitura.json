@@ -1,0 +1,165 @@
+{
+  "itens": [
+    {
+      "prova": "extrair-evidencia",
+      "modelo": "claude-haiku-5-5",
+      "veredito": "serve com ressalvas",
+      "achados": [
+        {
+          "campo_ou_linha": "EN-1369, evidencia 1 (trechos/EN-1369-1.json, chave consumo|refrescante-sem-teor-alcoolico)",
+          "tipo": "erro",
+          "descricao": "Evidência de fragmento sem sujeito nem verbo: o Trecho começa no meio da frase (pelos piauienses por ser refrescante e sem teor alcoólico) e o atributo admite sujeito e verbo fora da janela. A Proposição atribuiria à CLB algo que o trecho não amarra. O real não extrai: o TR-0031 começa em A cajuína foi desenvolvida.",
+          "regra": "extrair-evidencia 0.2.1, passo 7 e passo 4 (D-018: o não captado é Falta)"
+        },
+        {
+          "campo_ou_linha": "EN-1544, evidencia finalidade|nao-visava-comercio (EN-1544-4.json)",
+          "tipo": "erro",
+          "descricao": "O Trecho abre depois de Do ponto de vista histórico (só em antes) e o valor perde o qualificativo; o real o mantém (TR-0041, PR-0025 historicamente). Erro leve, literal contra o passo 7.",
+          "regra": "extrair-evidencia 0.2.1, passo 7 (sem perder qualificativo)"
+        },
+        {
+          "campo_ou_linha": "EN-1369, evidencia reconhecimento|brasilia-e-nordeste (EN-1369-4.json)",
+          "tipo": "erro",
+          "descricao": "O Trecho começa após elisão da fonte ([…] , Brasília e principalmente na região Nordeste (Figura 22)); o predicado é conhecida vem do Trecho anterior, emendado por cima do corte. Sem verbo nem sujeito no Trecho. O real não extrai. O mesmo Trecho junta esse fragmento a uma frase completa (composição).",
+          "regra": "extrair-evidencia 0.2.1, passo 7 e passo 4"
+        },
+        {
+          "campo_ou_linha": "sustenta_aviso_saude_politica: EN-1369 e EN-1544 inteiras; evidência sem teor alcoólico; bens culturais",
+          "tipo": "diferença sem erro",
+          "descricao": "Marca por cautela em 2 das 20 Evidências e nas duas Entradas; o real marca falso nas 10. Manda a Proposição ao auditor fora da amostra (D-038): supermarcação, sem perda de informação. A de sem teor alcoólico nasce do fragmento do primeiro achado. Aceitável como cautela; custa auditor se virar padrão.",
+          "regra": "extrair-evidencia passos 2 e 7; D-038"
+        },
+        {
+          "campo_ou_linha": "voz.papel de EN-1544-2 e EN-1544-3 (citando o IPHAN)",
+          "tipo": "diferença sem erro",
+          "descricao": "A voz é autor, como manda a regra, e o deriva_de da Fonte bate com o texto. Só o papel acrescenta citando o IPHAN nos Trechos 2 e 3 a partir de um (IPHAN). que fecha a frase anterior: leitura do contexto, sem efeito na voz. No Trecho 5 o (IPHAN, 2014) vem logo depois e está certo.",
+          "regra": "extrair-evidencia 0.2.1, passo 7"
+        },
+        {
+          "campo_ou_linha": "20 Evidências de 10 Trechos; EN-1369-4",
+          "tipo": "diferença sem erro",
+          "descricao": "Cobertura: os 10 Trechos do real aparecem (TR-0031 a 35 e 38 a 42), uma Evidência por afirmação (passo 4); o real agrupa em 10. EN-1369-4 traz a frase inteira da composição (o TR-0034 real a corta em sabor característico), sem erro. Períodos conferem com o trecho; época das batalhas em EN-1369-2 é rótulo sem apoio no texto, sem efeito.",
+          "regra": "extrair-evidencia passo 4"
+        }
+      ]
+    },
+    {
+      "prova": "registrar-termo",
+      "modelo": "claude-haiku-5-5",
+      "veredito": "serve com ressalvas",
+      "achados": [
+        {
+          "campo_ou_linha": "conceito e nota (divergência: não diluída na EV-0028 x suco cortado na EV-0158)",
+          "tipo": "erro",
+          "descricao": "Divergência sem apoio. No acervo, cortar o suco é clarificar (PC-0003: cortar (clarificar) o suco do caju; TR-0158: o suco clarificado depois de cortado). Nada diz que cortado é diluído. O Termo registra contradição que as fontes não mostram; o real põe como variação só sem açúcar x açúcares do próprio suco.",
+          "regra": "registrar-termo 0.2.0, passo 4; D-018 (não completar por inferência)"
+        },
+        {
+          "campo_ou_linha": "abonacoes: EV-0004 (leitura divergente)",
+          "tipo": "diferença sem erro",
+          "descricao": "Abonou a EV-0004 e disse na nota que fica fora de μ e λ. O TR-0004 traz mesmo A cajuína é uma bebida obtida a partir do suco clarificado; a divergência é da PR-0001 (refrescante, esterilizado), não do nome. Nenhuma regra da habilidade nem do validar_acervo (grep diverg) proíbe; o real deixa fora. Vale decisão do curador, que a habilidade não traz.",
+          "regra": "registrar-termo 0.2.0, passo 4; D-041"
+        },
+        {
+          "campo_ou_linha": "formas_de_busca e booleanos",
+          "tipo": "diferença sem erro",
+          "descricao": "Só cajuina (o real tem cinco formas) e um booleano de 4 formas (o real tem dois, o segundo com termos de processo). Menos alcance de busca em OCR; não é erro de fidelidade. A nota explica maç ã como artefato de OCR.",
+          "regra": "registrar-termo 0.2.0, passos 2 e 5"
+        },
+        {
+          "campo_ou_linha": "variantes: suco de caju clarificado e mocororó",
+          "tipo": "diferença sem erro",
+          "descricao": "A primeira cita só a EV-0028 (o real põe também a EV-0051, também conhecido como cajuína). Na segunda, tipo regional, LU-0023 e período não datado (o real: alguns produtores do Piauí, cajuína crua, 2009-2014); a marca de termo ambíguo (D-039) e a ligação ao TE-0004 estão certas, mas o sentido do mocororó neste Termo só aparece na nota e para alguns produtores vira regional. Conceito: EV-0036, EV-0084 e EV-0001 batem com o texto.",
+          "regra": "registrar-termo 0.2.0, passo 6; D-039"
+        }
+      ]
+    },
+    {
+      "prova": "montar-ficha (Temporalidade)",
+      "modelo": "claude-haiku-5-5",
+      "veredito": "serve com ressalvas",
+      "achados": [
+        {
+          "campo_ou_linha": "seção Faltas nestes períodos ([PR-0247; PR-0114; PR-0119; PR-0079; PR-0169; PR-0025])",
+          "tipo": "erro",
+          "descricao": "Frase sobre as Faltas F-0027 a F-0031 marcada com seis Proposições que não dizem o que ela diz (compreensão local não captada). O rastro de cada frase se confunde; o real não marca essa frase (linha 265 da ficha). Os períodos conferem com as Faltas. A PR-0247 tem Evidência de pessoa citada em fala direta, e a Falta vale onde as Proposições não têm fala: a marcação dela não se confirma.",
+          "regra": "montar-ficha: cada frase diz só o que a Proposição diz; D-018"
+        },
+        {
+          "campo_ou_linha": "seção Memória, comprovação e novidade (De outro lado, De outro lado também)",
+          "tipo": "erro",
+          "descricao": "Põe a PR-0114 (entrevistas, década de 1920) como contraponto à memória imemorial (PR-0111). Só a PR-0082 faz o contraste, com a PR-0081; a PR-0114 não se opõe a nada. A relação é do redator (D-019: a ficha documenta, não julga). Erro leve. PR-0081 e PR-0114 saem duas vezes (20 itens para 17 Proposições).",
+          "regra": "montar-ficha; D-019"
+        },
+        {
+          "campo_ou_linha": "item PR-0402 (mocororó dos Tremembés, termo ambíguo, D-039; ver TE-0002)",
+          "tipo": "diferença sem erro",
+          "descricao": "O vinho curtido ao sol e o mocororó dos Tremembés estão na PR-0402 (confere); o real omite o parêntese e a F-0033 diz que o trecho só nomeia (sem Falta, D-042). Termo ambíguo, outra CLB; ver TE-0002 é comentário do redator, correto mas além da Proposição.",
+          "regra": "montar-ficha; D-042"
+        },
+        {
+          "campo_ou_linha": "PR-0282, PR-0064, PR-0169, PR-0079, PR-0261 e graus μ",
+          "tipo": "diferença sem erro",
+          "descricao": "PR-0282 sai sem em Monsenhor Gil (o real acrescenta o lugar da Evidência; Haiku diz só o que a Proposição diz). PR-0064 e PR-0169 em itens separados (o real os junta). Períodos batem com o campo periodo; μ só onde é 0,5, como no real; conferi os 17 graus.",
+          "regra": "montar-ficha"
+        }
+      ]
+    },
+    {
+      "prova": "gerar-grafo",
+      "modelo": "claude-sonnet-5-5",
+      "veredito": "serve com ressalvas",
+      "achados": [
+        {
+          "campo_ou_linha": "AR-0027 (EL-0075 clarificação para EL-0076 filtração): proposicoes [PR-0042, PR-0059], mu 1.0, estado verdadeiro",
+          "tipo": "erro",
+          "descricao": "A PR-0059 foi posta como segunda Proposição da aresta, e o μ sobe de 0,5 para 1,0. A nota da própria aresta diz que a PR-0059 dá a ordem coar, engarrafar e levar ao banho-maria, que não inclui a clarificação; a PR-0059 só traz suco clarificado como insumo. O real (AR-0012, mesma ligação) tem só PR-0042 e μ 0,5 intermediário. A aresta diz mais que as Proposições.",
+          "regra": "gerar-grafo 0.2.1, passo 5; D-041 (μ só por Evidência que diz a coisa)"
+        },
+        {
+          "campo_ou_linha": "EL-0075: PR-0059 entre as Proposições",
+          "tipo": "diferença sem erro",
+          "descricao": "O real (EL-0036) tem PR-0001, 0005, 0042, 0043; o Sonnet acrescenta a PR-0059 porque diz suco clarificado. Consistente com a PR-0043, que o real mantém pelo mesmo motivo (cita clarificado como estado, não como ato). Sem efeito em arestas além do AR-0027.",
+          "regra": "gerar-grafo 0.2.1"
+        },
+        {
+          "campo_ou_linha": "AR-0029 (EL-0077 enchimento para EL-0078 tratamento térmico): proposicoes inclui PR-0043",
+          "tipo": "diferença sem erro",
+          "descricao": "O real (AR-0017) tem PR-0042 e PR-0059; o Sonnet junta a PR-0043 (engarrafado e cozido em banho-maria, ordem certa). Mesmo μ 1,0. A nota da aresta só cita a PR-0059.",
+          "regra": "gerar-grafo 0.2.1"
+        },
+        {
+          "campo_ou_linha": "EL-0073 a EL-0078 e AR-0025, AR-0026, AR-0028",
+          "tipo": "diferença sem erro",
+          "descricao": "Batem 1 a 1 com EL-0007, 0014, 0036, 0053, 0059, 0066 e AR-0002, 0008, 0014, 0017 em X (IN-0001), Y (PC-0001 a 0006, nomes conferem), Z não datado, W F-0031, proposições (exceto o acima), proteção, μ e λ. As etapas sem Processo (sedimentação, resfriamento, rotulagem, armazenagem) ficam na nota, sem Elemento nem Processo novo, como pede o passo 5. A numeração EL-0073 em diante difere do real e não é erro.",
+          "regra": "gerar-grafo 0.2.1, passo 5"
+        }
+      ]
+    },
+    {
+      "prova": "triagem-juridica",
+      "modelo": "claude-sonnet-5-5",
+      "veredito": "serve",
+      "achados": [
+        {
+          "campo_ou_linha": "faltas.json, F-9001 (TR-0018)",
+          "tipo": "diferença sem erro",
+          "descricao": "Mesmo resultado da F-0024 na parte do TR-0018: conhecimento_tradicional, vale_para publicar, nativos sem povo identificado, bebida que não é a cajuína (D-047 não se estende), ler, localizar e linkar sem Falta (D-042), não autoriza (D-020), guia de liberação G-sisgen, F-0025 citada para a lacuna de autor (FO-0006 está em FO-0001 a 0015). A única Falta nova da saída é essa.",
+          "regra": "triagem-juridica 0.2.1; D-042, D-047, D-020"
+        },
+        {
+          "campo_ou_linha": "F-9001.norma (art. 12, §2º)",
+          "tipo": "diferença sem erro",
+          "descricao": "O real usa o art. 2º, II (definição de conhecimento tradicional) como referência principal; o Sonnet escolhe o §2º do art. 12 (cadastro antes da divulgação), que é o que barra a publicação. O texto citado está nos exemplos da habilidade (grep no repositório) e nível oficial é herdado do K-124: nesta prova não houve web, e eu também não reabri a lei. Citação literal não reconferida por mim.",
+          "regra": "triagem-juridica; conferir-fato"
+        },
+        {
+          "campo_ou_linha": "ausência de Falta para TR-0494, TR-0100 e TR-0031",
+          "tipo": "diferença sem erro",
+          "descricao": "Confere com o real: F-0033 diz que TR-0494 e TR-0100 só nomeiam (sem Falta pela regra, D-042) e o TR-0031 foi liberado pela D-047. O motivo sem Falta pela regra deve estar no log do Sonnet, que não li; no faltas.json só há a ausência. onde_aparece traz só o TR-0018 (o real traz também a PR-0011 e as Evidências ligadas), diferença de alcance, não de leitura.",
+          "regra": "triagem-juridica; D-042, D-047"
+        }
+      ]
+    }
+  ]
+}

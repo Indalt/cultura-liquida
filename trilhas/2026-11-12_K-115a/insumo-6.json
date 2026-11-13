@@ -1,0 +1,13 @@
+{
+ "data": "2026-11-13",
+ "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+ "insumo": "o arquivista fica com três habilidades em modelos diferentes (registrar-termo e montar-ficha passam em Haiku 5.5; gerar-grafo só em Sonnet 5.5) e o frontmatter tem um modelo por agente; a triagem-juridica passa só em Sonnet 5.5 (testes/relatorio-modelos.md)",
+ "aonde": "a rotina com IA chamando cada habilidade no modelo da tabela, por chamada",
+ "rotulo": "modelo por habilidade na rotina",
+ "frente": [
+  "D",
+  "O"
+ ],
+ "vira": "K-113",
+ "sem_explorar": true
+}

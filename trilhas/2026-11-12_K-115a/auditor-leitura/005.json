@@ -1,0 +1,25 @@
+{
+ "prova": "triagem-juridica",
+ "modelo": "claude-sonnet-5-5",
+ "veredito": "serve",
+ "achados": [
+  {
+   "campo_ou_linha": "faltas.json, F-9001 (TR-0018)",
+   "tipo": "diferença sem erro",
+   "descricao": "Mesmo resultado da F-0024 na parte do TR-0018: conhecimento_tradicional, vale_para publicar, nativos sem povo identificado, bebida que não é a cajuína (D-047 não se estende), ler, localizar e linkar sem Falta (D-042), não autoriza (D-020), guia de liberação G-sisgen, F-0025 citada para a lacuna de autor (FO-0006 está em FO-0001 a 0015). A única Falta nova da saída é essa.",
+   "regra": "triagem-juridica 0.2.1; D-042, D-047, D-020"
+  },
+  {
+   "campo_ou_linha": "F-9001.norma (art. 12, §2º)",
+   "tipo": "diferença sem erro",
+   "descricao": "O real usa o art. 2º, II (definição de conhecimento tradicional) como referência principal; o Sonnet escolhe o §2º do art. 12 (cadastro antes da divulgação), que é o que barra a publicação. O texto citado está nos exemplos da habilidade (grep no repositório) e nível oficial é herdado do K-124: nesta prova não houve web, e eu também não reabri a lei. Citação literal não reconferida por mim.",
+   "regra": "triagem-juridica; conferir-fato"
+  },
+  {
+   "campo_ou_linha": "ausência de Falta para TR-0494, TR-0100 e TR-0031",
+   "tipo": "diferença sem erro",
+   "descricao": "Confere com o real: F-0033 diz que TR-0494 e TR-0100 só nomeiam (sem Falta pela regra, D-042) e o TR-0031 foi liberado pela D-047. O motivo sem Falta pela regra deve estar no log do Sonnet, que não li; no faltas.json só há a ausência. onde_aparece traz só o TR-0018 (o real traz também a PR-0011 e as Evidências ligadas), diferença de alcance, não de leitura.",
+   "regra": "triagem-juridica; D-042, D-047"
+  }
+ ]
+}

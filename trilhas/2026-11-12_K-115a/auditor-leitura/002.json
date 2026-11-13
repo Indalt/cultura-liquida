@@ -1,0 +1,31 @@
+{
+ "prova": "registrar-termo",
+ "modelo": "claude-haiku-5-5",
+ "veredito": "serve com ressalvas",
+ "achados": [
+  {
+   "campo_ou_linha": "conceito e nota (divergência: não diluída na EV-0028 x suco cortado na EV-0158)",
+   "tipo": "erro",
+   "descricao": "Divergência sem apoio. No acervo, cortar o suco é clarificar (PC-0003: cortar (clarificar) o suco do caju; TR-0158: o suco clarificado depois de cortado). Nada diz que cortado é diluído. O Termo registra contradição que as fontes não mostram; o real põe como variação só sem açúcar x açúcares do próprio suco.",
+   "regra": "registrar-termo 0.2.0, passo 4; D-018 (não completar por inferência)"
+  },
+  {
+   "campo_ou_linha": "abonacoes: EV-0004 (leitura divergente)",
+   "tipo": "diferença sem erro",
+   "descricao": "Abonou a EV-0004 e disse na nota que fica fora de μ e λ. O TR-0004 traz mesmo A cajuína é uma bebida obtida a partir do suco clarificado; a divergência é da PR-0001 (refrescante, esterilizado), não do nome. Nenhuma regra da habilidade nem do validar_acervo (grep diverg) proíbe; o real deixa fora. Vale decisão do curador, que a habilidade não traz.",
+   "regra": "registrar-termo 0.2.0, passo 4; D-041"
+  },
+  {
+   "campo_ou_linha": "formas_de_busca e booleanos",
+   "tipo": "diferença sem erro",
+   "descricao": "Só cajuina (o real tem cinco formas) e um booleano de 4 formas (o real tem dois, o segundo com termos de processo). Menos alcance de busca em OCR; não é erro de fidelidade. A nota explica maç ã como artefato de OCR.",
+   "regra": "registrar-termo 0.2.0, passos 2 e 5"
+  },
+  {
+   "campo_ou_linha": "variantes: suco de caju clarificado e mocororó",
+   "tipo": "diferença sem erro",
+   "descricao": "A primeira cita só a EV-0028 (o real põe também a EV-0051, também conhecido como cajuína). Na segunda, tipo regional, LU-0023 e período não datado (o real: alguns produtores do Piauí, cajuína crua, 2009-2014); a marca de termo ambíguo (D-039) e a ligação ao TE-0004 estão certas, mas o sentido do mocororó neste Termo só aparece na nota e para alguns produtores vira regional. Conceito: EV-0036, EV-0084 e EV-0001 batem com o texto.",
+   "regra": "registrar-termo 0.2.0, passo 6; D-039"
+  }
+ ]
+}

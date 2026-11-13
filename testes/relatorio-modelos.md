@@ -18,3 +18,42 @@
 | `tj-tr0018` | triagem-juridica | K-109 e D-047: a F-0024 (TR-0018), e TR-0494, TR-0100 e TR-0031 sem Falta pela regra | cada Falta pelo esquema; Falta de conhecimento tradicional só para publicar no TR-0018; nenhuma que barre agora; nenhuma só sobre os três de controle |
 
 ## Tabela (calculada dos logs por `testes/modelos/relatorio.py`)
+
+<!-- tabela gerada por testes/modelos/relatorio.py: não editar à mão -->
+| Habilidade | Agente | Modelo | Esforço | Prova | Aprovação | Tokens | Chamadas | Execução |
+|---|---|---|---|---|---|---|---|---|
+| extrair-evidencia | avaliador | claude-haiku-5-5 | high | ee-en1369-en1544 (rodada 1) | reprova (4 checagem(ns): TR-0032 (EN-1369) NÃO coberto por um Trecho da saída) | 96.849 | 22 | EX-0129 |
+| extrair-evidencia | avaliador | claude-haiku-5-5 | high | ee-en1369-en1544 (rodada 2) | reprova (5 checagem(ns): TR-0032 (EN-1369) NÃO coberto por um Trecho da saída) | 108.689 | 22 | EX-0130 |
+| extrair-evidencia | avaliador | claude-haiku-5-5 | high | ee-en1369-en1544 (rodada 3) | passa | 131.465 | 25 | EX-0131 |
+| gerar-grafo | arquivista | claude-haiku-5-5 | high | gg-pr0042-cadeia (rodada 1) | reprova (4 checagem(ns): scripts/validar_acervo.py: código 1: ERRO acervo\faltas\F-0031.json: /onde_aparece/0 apont) | 155.681 | 20 | EX-0134 |
+| gerar-grafo | arquivista | claude-haiku-5-5 | high | gg-pr0042-cadeia (rodada 2) | reprova (1 checagem(ns): X de cada Elemento = ['IN-0001']) | 158.529 | 19 | EX-0135 |
+| gerar-grafo | arquivista | claude-sonnet-5-5 | high | gg-pr0042-cadeia (rodada 1) | passa | 81.323 | 12 | EX-0136 |
+| montar-ficha | arquivista | claude-haiku-5-5 | high | mf-cl0001-temporalidade (rodada 1) | passa | 139.247 | 18 | EX-0133 |
+| registrar-termo | arquivista | claude-haiku-5-5 | high | rt-te0002 (rodada 1) | passa | 115.825 | 15 | EX-0132 |
+| triagem-juridica | juridico | claude-haiku-5-5 | high | tj-tr0018 (rodada 1) | reprova (2 checagem(ns): Falta conhecimento_tradicional / publicar no TR-0018: 0) | 108.338 | 14 | EX-0137 |
+| triagem-juridica | juridico | claude-haiku-5-5 | high | tj-tr0018 (rodada 2) | reprova (1 checagem(ns): nenhuma Falta só sobre os itens sem Falta pela regra ['TR-0494', 'TR-0100', 'TR-0031']; ac) | 127.077 | 14 | EX-0138 |
+| triagem-juridica | juridico | claude-sonnet-5-5 | high | tj-tr0018 (rodada 1) | passa | 65.298 | 9 | EX-0139 |
+
+| Habilidade | Modelo mais barato que passa |
+|---|---|
+| extrair-evidencia | claude-haiku-5-5 |
+| gerar-grafo | claude-sonnet-5-5 |
+| montar-ficha | claude-haiku-5-5 |
+| registrar-termo | claude-haiku-5-5 |
+| triagem-juridica | claude-sonnet-5-5 |
+<!-- fim da tabela gerada -->
+
+## Resultado da parte 1 (K-115a, 12 e 13/11/2026)
+| Habilidade | Agente | Modelo que fica | Como chega à rotina com IA (K-113) |
+|---|---|---|---|
+| extrair-evidencia | avaliador | **Haiku 5.5** | frontmatter do avaliador (trocado, com Histórico) |
+| registrar-termo | arquivista | **Haiku 5.5** | `model: haiku` por chamada |
+| montar-ficha | arquivista | **Haiku 5.5** | `model: haiku` por chamada |
+| gerar-grafo | arquivista | **Sonnet 5.5** | frontmatter do arquivista (fica Sonnet, o modelo que passa nas três) |
+| triagem-juridica | juridico | **Sonnet 5.5** | frontmatter do juridico até o K-115b (que testa as outras habilidades dele) |
+
+- **Reforços do harness antes de subir (l. 698):** extrair-evidencia 0.2.1 (cobertura; voz do autor que cita outra obra) fez o Haiku passar na 3ª rodada. gerar-grafo 0.2.1 (Y pelos Processos registrados; X pelas Proposições do gesto) e triagem-juridica 0.2.1 (como ler o trecho na pergunta 2) não bastaram ao Haiku; o Sonnet passou na 1ª rodada com eles.
+- **Correção do banco:** a prova `gg-pr0042-cadeia` foi corrigida na banco-0.2 (a F-0031 apontava para os Elementos retirados, e o pedido não dava as Proposições que dizem o insumo); a rodada 1 do Haiku correu na 0.1 e fica na tabela como estava.
+- **Segunda leitura do auditor** (Sonnet 5.5 alto; `trilhas/2026-11-12_K-115a/auditor-leitura.json`): triagem-juridica (Sonnet) serve; as outras quatro servem com ressalvas, com erros de leitura fiel que nenhum validador pega: no Haiku, Evidência de fragmento sem sujeito nem verbo e Trecho emendado por cima de elisão (extrair-evidencia), divergência inventada (registrar-termo), frase sobre Faltas marcada com Proposições que não a dizem (montar-ficha); no Sonnet, uma Aresta com Proposição a mais e μ inflado (gerar-grafo). Erros do mesmo tipo apareceram com o Sonnet na produção do K-109 e do K-110. Pela regra, a escolha é a do validador; os erros vão ao insumo 122, para o reforço do harness e a segunda leitura da rotina com IA (D-038).
+- **Custo:** em tokens, o Haiku gastou mais que o Sonnet nas provas em que os dois rodaram (gerar-grafo: 158.529 contra 81.323; triagem-juridica: 127.077 contra 65.298); por token, custa cerca de 1/20 (C115.4). O peso de cada modelo no limite da assinatura não foi conferido, e o teto de 20% da D-050 é medido nela: a rotina de teste do K-113 mede.
+- **O que não foi feito:** as provas rodaram uma vez por modelo e rodada (sem repetição para medir variação); só os candidatos Haiku 5.5 e Sonnet 5.5; o esforço ficou o do frontmatter (alto) em todas.

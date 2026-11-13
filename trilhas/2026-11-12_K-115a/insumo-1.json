@@ -1,0 +1,13 @@
+{
+ "data": "2026-11-13",
+ "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+ "insumo": "o banco de provas dos testes de modelos (testes/modelos/banco.py, casos.json) fica fora do rodar_testes.py: a suíte é o portão da rotina diária, roda no runner, e o banco extrai um commit antigo por git archive (insumo 119)",
+ "aonde": "os casos do banco conferidos com regularidade sem pôr em risco o portão da rotina",
+ "rotulo": "banco de provas fora da suíte",
+ "frente": [
+  "D",
+  "O"
+ ],
+ "vira": "K-116",
+ "sem_explorar": true
+}

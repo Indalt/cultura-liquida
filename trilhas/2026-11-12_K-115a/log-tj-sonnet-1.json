@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-13T01:12:00-03:00",
+  "agente": "juridico",
+  "habilidade": "triagem-juridica",
+  "versao_harness": "0.2.1",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova tj-tr0018, modelo sonnet, rodada 1 (triagem-juridica 0.2.1 lida do disco; banco-0.2, base 288c4b0)",
+  "acoes": ["leu o SKILL.md 0.2.1, os 4 Trechos, as 4 Fontes, a F-0025, o falta.schema, a triagem-fixa e o parecer do K-124", "as oito perguntas; 1 Falta validada pelo esquema"],
+  "resultados": ["banco: PASSA (Falta de conhecimento tradicional só para publicar no TR-0018; TR-0494, TR-0100 e TR-0031 sem Falta pela regra; nenhuma que barra agora)", "nota ao planejamento: o TR-0031 atribui a origem da cajuína aos indígenas, o que toca a premissa da D-047"],
+  "saidas": ["testes/modelos/resultados/tj-tr0018__claude-sonnet-5-5__r1.json"],
+  "decisoes": [{"item": "prova tj-tr0018 em Sonnet 5.5", "decisao": "aceito", "motivo": "passa nos validadores e no gabarito, dentro do teto (9 de 15)"}],
+  "tokens": 65298,
+  "chamadas": 9,
+  "duracao_s": 68.7,
+  "erros": [],
+  "alcance": {"olhado": ["a fatia: 4 Trechos, 4 Fontes, F-0025", "falta.schema, triagem-fixa (l. 150-200), parecer do K-124 e C1 por grep"], "fora": ["o acervo real, pela prova", "web"]}
+}

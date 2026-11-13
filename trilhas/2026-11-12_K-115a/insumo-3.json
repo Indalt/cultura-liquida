@@ -1,0 +1,13 @@
+{
+ "data": "2026-11-13",
+ "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+ "insumo": "na segunda leitura do auditor, as saídas que passaram no banco trazem erros de leitura fiel que nenhum validador pega: Evidência de fragmento sem sujeito nem verbo e Trecho emendado por cima de elisão (extrair-evidencia, Haiku); divergência inventada entre 'não diluída' e 'cortado' (registrar-termo, Haiku); frase sobre Faltas marcada com Proposições que não a dizem (montar-ficha, Haiku); Aresta com Proposição que não diz o gesto e μ inflado (gerar-grafo, Sonnet) (trilhas/2026-11-12_K-115a/auditor-leitura.json)",
+ "aonde": "o reforço do harness e, onde der, um validador para cada tipo de erro de leitura fiel, antes de a rotina com IA juntar sem conversa",
+ "rotulo": "erros de leitura fiel fora dos validadores",
+ "frente": [
+  "D",
+  "O"
+ ],
+ "vira": "K-113",
+ "sem_explorar": true
+}
