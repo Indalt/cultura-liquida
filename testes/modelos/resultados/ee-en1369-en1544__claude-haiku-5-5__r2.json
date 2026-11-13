@@ -1,0 +1,77 @@
+{
+ "prova": "ee-en1369-en1544",
+ "habilidade": "extrair-evidencia",
+ "agente": "avaliador",
+ "modelo": "claude-haiku-5-5",
+ "rodada": 2,
+ "data": "2026-11-12",
+ "versao": "banco-0.1",
+ "base_commit": "288c4b0",
+ "passa": false,
+ "checagens": [
+  {
+   "ok": true,
+   "texto": "scripts/gravar_extracao.py: código 0: simulado: nada gravado"
+  },
+  {
+   "ok": true,
+   "texto": "conferir EN-1369-1.json: o Trecho se sustenta: localizado, grau 1.0, hash igual"
+  },
+  {
+   "ok": true,
+   "texto": "conferir EN-1369-2.json: o Trecho se sustenta: localizado, grau 1.0, hash igual"
+  },
+  {
+   "ok": true,
+   "texto": "conferir EN-1369-3.json: o Trecho se sustenta: localizado, grau 1.0, hash igual"
+  },
+  {
+   "ok": true,
+   "texto": "conferir EN-1544-1.json: o Trecho se sustenta: localizado, grau 1.0, hash igual"
+  },
+  {
+   "ok": true,
+   "texto": "conferir EN-1544-2.json: o Trecho se sustenta: localizado, grau 1.0, hash igual"
+  },
+  {
+   "ok": true,
+   "texto": "TR-0031 (EN-1369) coberto por um Trecho da saída"
+  },
+  {
+   "ok": false,
+   "texto": "TR-0032 (EN-1369) NÃO coberto por um Trecho da saída"
+  },
+  {
+   "ok": true,
+   "texto": "TR-0033 (EN-1369) coberto por um Trecho da saída"
+  },
+  {
+   "ok": true,
+   "texto": "TR-0034 (EN-1369) coberto por um Trecho da saída"
+  },
+  {
+   "ok": false,
+   "texto": "TR-0035 (EN-1369) NÃO coberto por um Trecho da saída"
+  },
+  {
+   "ok": true,
+   "texto": "TR-0038 (EN-1544) coberto por um Trecho da saída"
+  },
+  {
+   "ok": false,
+   "texto": "TR-0039 (EN-1544) NÃO coberto por um Trecho da saída"
+  },
+  {
+   "ok": false,
+   "texto": "TR-0040 (EN-1544) NÃO coberto por um Trecho da saída"
+  },
+  {
+   "ok": true,
+   "texto": "TR-0041 (EN-1544) coberto por um Trecho da saída"
+  },
+  {
+   "ok": false,
+   "texto": "TR-0042 (EN-1544) NÃO coberto por um Trecho da saída"
+  }
+ ]
+}

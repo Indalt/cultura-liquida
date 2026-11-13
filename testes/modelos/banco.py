@@ -15,7 +15,7 @@ saída pelos mesmos validadores, mais o confronto com a saída real do par (o ga
 
 Subcomandos:
     python testes/modelos/banco.py preparar <prova> --pasta <dir>      monta raiz/ e saida/ e grava pedido.md
-    python testes/modelos/banco.py avaliar <prova> --pasta <dir> [--modelo m] [--resumo]
+    python testes/modelos/banco.py avaliar <prova> --pasta <dir> [--modelo m] [--rodada n] [--resumo]
                                                                         validadores + gabarito; código 0 = passa
     python testes/modelos/banco.py autoteste <prova> [--erro]           prepara, põe a saída real (ou a real com o
                                                                         erro da prova) e avalia: 0 = passa
@@ -392,6 +392,7 @@ def main() -> int:
     ap.add_argument("--modelo")
     ap.add_argument("--resumo", action="store_true")
     ap.add_argument("--erro", action="store_true")
+    ap.add_argument("--rodada", type=int, default=1, help="o número da rodada da prova nesse modelo (depois de reforçar o harness)")
     a = ap.parse_args()
     if a.acao == "casos":
         casos = json.loads((RAIZ / "testes" / "modelos" / "casos.json").read_text(encoding="utf-8"))["casos"]
@@ -427,9 +428,9 @@ def main() -> int:
     imprimir(prova["nome"], ok, res)
     if a.resumo:
         RESULTADOS.mkdir(parents=True, exist_ok=True)
-        arq = RESULTADOS / f"{prova['nome']}__{a.modelo or 'sem-modelo'}__{date.today().isoformat()}.json"
+        arq = RESULTADOS / f"{prova['nome']}__{a.modelo or 'sem-modelo'}__r{a.rodada}.json"
         arq.write_text(json.dumps({"prova": prova["nome"], "habilidade": prova["habilidade"], "agente": prova["agente"],
-                                   "modelo": a.modelo, "versao": VERSAO, "base_commit": prova["base_commit"],
+                                   "modelo": a.modelo, "rodada": a.rodada, "data": date.today().isoformat(), "versao": VERSAO, "base_commit": prova["base_commit"],
                                    "passa": ok, "checagens": [{"ok": o, "texto": t} for o, t in res]},
                                   ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"resumo em {arq.relative_to(RAIZ)}")

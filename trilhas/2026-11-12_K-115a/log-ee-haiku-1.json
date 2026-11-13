@@ -1,0 +1,22 @@
+{
+  "data_hora": "2026-11-12T22:51:17-03:00",
+  "agente": "avaliador",
+  "habilidade": "extrair-evidencia",
+  "versao_harness": "0.2.0",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova ee-en1369-en1544, modelo haiku, rodada 1 (banco-0.1, base 288c4b0)",
+  "acoes": ["leu as 2 Entradas e as 2 fontes reduzidas às janelas de citação", "7 localizar_trecho.py localizar (todos exatos)", "saída juntada e gravar_extracao.py --simular (código 0)", "nomes_provaveis.py (0 nomes)"],
+  "resultados": ["7 Trechos, 7 Evidências e 7 Proposições no simulado; as 2 Entradas aceitas", "banco: REPROVA; validadores passam, mas 4 dos 10 Trechos reais não cobertos (TR-0032, TR-0035, TR-0038, TR-0041: a chegada dos portugueses e o uso indígena, a etimologia tupi, o servir aos visitantes, a produção não comercial)"],
+  "saidas": ["testes/modelos/resultados/ee-en1369-en1544__claude-haiku-5-5__2026-11-12.json"],
+  "decisoes": [
+    {"item": "EN-1369", "decisao": "aceito", "motivo": "valencias-0.1: lastro 2, trecho 2, voz 1; marca de aviso, saúde ou política", "automatica": true, "versao_regra": "valencias-0.1"},
+    {"item": "EN-1544", "decisao": "aceito", "motivo": "valencias-0.1: lastro 2, trecho 2, voz 1", "automatica": true, "versao_regra": "valencias-0.1"},
+    {"item": "prova ee-en1369-en1544 em Haiku 5.5", "decisao": "descartado", "motivo": "reprova no gabarito (cobertura 6 de 10); pela l. 698, reforça-se o harness antes de subir de modelo"}
+  ],
+  "tokens": 96849,
+  "chamadas": 22,
+  "duracao_s": 243.8,
+  "erros": [],
+  "alcance": {"olhado": ["a pasta da prova (2 Entradas, 2 fontes reduzidas)", "esquemas/valores-provisorios.json, l. 78-140", "esquemas/fonte e evidencia por grep", "--help de dois scripts"], "fora": ["o acervo real e trilhas/, pela prova", "web"]}
+}

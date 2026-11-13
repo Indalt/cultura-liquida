@@ -1,0 +1,22 @@
+{
+  "data_hora": "2026-11-12T23:02:00-03:00",
+  "agente": "avaliador",
+  "habilidade": "extrair-evidencia",
+  "versao_harness": "0.2.1",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova ee-en1369-en1544, modelo haiku, rodada 2 (harness 0.2.1 em disco; banco-0.1, base 288c4b0)",
+  "acoes": ["leu as 2 Entradas e as fontes reduzidas", "5 localizar_trecho.py localizar (exatos)", "saída juntada e gravar_extracao.py --simular (código 0)", "nomes_provaveis.py (0)"],
+  "resultados": ["5 Trechos, 5 Evidências; as 2 Entradas aceitas; 3 frases de EN-1544 deixadas de fora por voz 'não clara' (leitura excessiva do A2)", "banco: REPROVA; validadores passam, cobertura 5 de 10 Trechos reais", "o agente diz harness 0.2.0: não se confirmou que o SKILL.md 0.2.1 do disco chegou à chamada (a habilidade é carregada pelo frontmatter)"],
+  "saidas": ["testes/modelos/resultados/ee-en1369-en1544__claude-haiku-5-5__r2.json"],
+  "decisoes": [
+    {"item": "EN-1369", "decisao": "aceito", "motivo": "valencias-0.1: lastro 2, trecho 2, voz 1", "automatica": true, "versao_regra": "valencias-0.1"},
+    {"item": "EN-1544", "decisao": "aceito", "motivo": "valencias-0.1: lastro 2, trecho 2, voz 1", "automatica": true, "versao_regra": "valencias-0.1"},
+    {"item": "prova ee-en1369-en1544 em Haiku 5.5, rodada 2", "decisao": "descartado", "motivo": "reprova no gabarito (cobertura 5 de 10); o pedido seguinte manda ler o SKILL.md do disco"}
+  ],
+  "tokens": 108689,
+  "chamadas": 22,
+  "duracao_s": 244.1,
+  "erros": ["hash sem manifesto do ler_fonte.py (a prova não o usa)"],
+  "alcance": {"olhado": ["a pasta da prova: 2 Entradas, 10 janelas de citação"], "fora": ["o acervo real e trilhas/, pela prova", "web"]}
+}

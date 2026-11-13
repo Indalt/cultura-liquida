@@ -38,9 +38,9 @@ def registros() -> list[dict]:
     return saida
 
 
-def resultado(prova: str, modelo: str) -> dict | None:
-    achados = sorted((RAIZ / "testes" / "modelos" / "resultados").glob(f"{prova}__{modelo}__*.json"))
-    return json.loads(achados[-1].read_text(encoding="utf-8")) if achados else None
+def resultado(prova: str, modelo: str, rodada: int) -> dict | None:
+    arq = RAIZ / "testes" / "modelos" / "resultados" / f"{prova}__{modelo}__r{rodada}.json"
+    return json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else None
 
 
 def milhar(n: int) -> str:
@@ -54,13 +54,15 @@ def tabela() -> str:
     for d in sorted(registros(), key=lambda x: (x["habilidade"], ORDEM.get(x.get("modelo"), 9), x["data_hora"])):
         m = re.search(r"prova ([a-z0-9-]+)", d["entrada_ref"])
         prova = m.group(1) if m else "?"
-        r = resultado(prova, d.get("modelo", ""))
+        mr = re.search(r"rodada ([0-9]+)", d["entrada_ref"])
+        rodada = int(mr.group(1)) if mr else 1
+        r = resultado(prova, d.get("modelo", ""), rodada)
         passa = bool(r and r["passa"])
         aprov = "passa" if passa else ("reprova" if r else "sem resultado")
         if r and not passa:
             motivos = [c["texto"] for c in r["checagens"] if not c["ok"]]
             aprov += f" ({len(motivos)} checagem(ns): {motivos[0][:90]})"
-        linhas.append(f"| {d['habilidade']} | {d['agente']} | {d.get('modelo')} | {d.get('esforco')} | {prova} | {aprov} | "
+        linhas.append(f"| {d['habilidade']} | {d['agente']} | {d.get('modelo')} | {d.get('esforco')} | {prova} (rodada {rodada}) | {aprov} | "
                       f"{milhar(d['tokens'])} | {d.get('chamadas')} | {d.get('id', '—')} |")
         por_hab.setdefault(d["habilidade"], []).append((d.get("modelo"), passa))
     linhas += ["", "| Habilidade | Modelo mais barato que passa |", "|---|---|"]

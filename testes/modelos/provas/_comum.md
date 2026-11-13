@@ -12,6 +12,8 @@ Esta chamada é uma prova do banco de testes de modelos: a mesma prova roda em c
 
 **Gravar.** Sem a ferramenta Write: grave por Bash, um arquivo pequeno por vez (comando acima de uns 8 mil caracteres falha no Windows; nada de heredoc longo com texto de fonte). Python: `.venv/Scripts/python.exe`, a partir da raiz do repositório, com `PYTHONUTF8=1`. Nenhum dado pessoal de terceiros.
 
+**Harness.** Antes de tudo, leia do disco o `SKILL.md` da habilidade da prova (`.claude/skills/<habilidade>/SKILL.md`): é a versão em teste, que pode ser mais nova que a carregada com o agente.
+
 **Fim.** Rode a validação indicada abaixo, diga o resultado e termine com o bloco LOG do seu agente.
 
 ---
