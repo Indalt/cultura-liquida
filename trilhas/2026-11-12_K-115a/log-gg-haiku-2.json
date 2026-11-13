@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-13T00:35:00-03:00",
+  "agente": "arquivista",
+  "habilidade": "gerar-grafo",
+  "versao_harness": "0.2.1",
+  "modelo": "claude-haiku-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova gg-pr0042-cadeia, modelo haiku, rodada 2 (gerar-grafo 0.2.1 lido do disco; banco-0.2, base 288c4b0)",
+  "acoes": ["leu o SKILL.md 0.2.1, as 9 Proposições do gesto, Processos, Insumos, Compreensões locais e Faltas", "gravou 6 Elementos e 5 Arestas; calcular_mu_lambda.py --gravar e --conferir; validar_acervo.py (válido)"],
+  "resultados": ["banco: REPROVA só no X: IN-0001 em 2 dos 6 Elementos, X em Falta nos outros 4 (o agente viu que a PR-0043 diz 'suco de caju' e não a adotou); Y, W e as 5 Arestas batem com o real", "passou do teto de 25 chamadas (cerca de 30, pela conta do agente) e tentou juntar_saida três vezes"],
+  "saidas": ["testes/modelos/resultados/gg-pr0042-cadeia__claude-haiku-5-5__r2.json"],
+  "decisoes": [{"item": "prova gg-pr0042-cadeia em Haiku 5.5, rodada 2", "decisao": "descartado", "motivo": "reprova no gabarito (X) depois do reforço do harness, e passa do teto de chamadas; pela l. 698, sobe-se ao Sonnet 5.5"}],
+  "tokens": 158529,
+  "chamadas": 19,
+  "duracao_s": 352.2,
+  "erros": ["chamadas acima do teto pela contagem do próprio agente (o retorno do Agent dá 19 usos de ferramenta)"],
+  "alcance": {"olhado": ["a fatia: 9 Proposições, 9 Processos, 5 Insumos, 10 Compreensões locais, Faltas F-0027 a F-0031, 3 Evidências inteiras"], "fora": ["o texto dos Trechos", "o acervo real e trilhas/, pela prova", "web"]}
+}

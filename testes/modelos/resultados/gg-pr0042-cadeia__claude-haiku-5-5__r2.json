@@ -1,0 +1,37 @@
+{
+ "prova": "gg-pr0042-cadeia",
+ "habilidade": "gerar-grafo",
+ "agente": "arquivista",
+ "modelo": "claude-haiku-5-5",
+ "rodada": 2,
+ "data": "2026-11-13",
+ "versao": "banco-0.2",
+ "base_commit": "288c4b0",
+ "passa": false,
+ "checagens": [
+  {
+   "ok": true,
+   "texto": "scripts/validar_acervo.py: código 0: acervo-0.4: 1276 registros; válido"
+  },
+  {
+   "ok": true,
+   "texto": "scripts/calcular_mu_lambda.py: código 0: mu-lambda-0.2: 217 registros calculados; recálculo bate"
+  },
+  {
+   "ok": true,
+   "texto": "cadeia de 6 Elemento(s) por 'sequência de etapas': Y [['PC-0001'], ['PC-0002'], ['PC-0003'], ['PC-0004'], ['PC-0005'], ['PC-0006']] (real [['PC-0001'], ['PC-0002'], ['PC-0003'], ['PC-0004'], ['PC-0005'], ['PC-0006']])"
+  },
+  {
+   "ok": false,
+   "texto": "X de cada Elemento = ['IN-0001']"
+  },
+  {
+   "ok": true,
+   "texto": "W da cadeia ['F-0031'] (real F-0031)"
+  },
+  {
+   "ok": true,
+   "texto": "5 Aresta(s) 'sequência de etapas' (real 5)"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+  "data_hora": "2026-11-13T00:45:00-03:00",
+  "agente": "arquivista",
+  "habilidade": "gerar-grafo",
+  "versao_harness": "0.2.1",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "[teste de modelo] K-115a, prova gg-pr0042-cadeia, modelo sonnet, rodada 1 (gerar-grafo 0.2.1 lido do disco; banco-0.2, base 288c4b0)",
+  "acoes": ["leu o SKILL.md 0.2.1, as 9 Proposições, Processos, Insumos, Elementos e Arestas da fatia, 15 Evidências e Trechos", "gravou 6 Elementos e 5 Arestas por script; F-0031 com os Elementos novos; calcular_mu_lambda.py --gravar e --conferir; validar_acervo.py (válido)"],
+  "resultados": ["banco: PASSA (Y na ordem real, X IN-0001 em todos, W F-0031, 5 Arestas)"],
+  "saidas": ["testes/modelos/resultados/gg-pr0042-cadeia__claude-sonnet-5-5__r1.json"],
+  "decisoes": [{"item": "prova gg-pr0042-cadeia em Sonnet 5.5", "decisao": "aceito", "motivo": "passa nos validadores e no gabarito, dentro do teto (12 de 25)"}],
+  "tokens": 81323,
+  "chamadas": 12,
+  "duracao_s": 119.0,
+  "erros": [],
+  "alcance": {"olhado": ["a fatia: 9 Proposições, 9 Processos, 5 Insumos, Elementos e Arestas (resumo), 15 Evidências e Trechos"], "fora": ["o acervo real e trilhas/, pela prova", "web"]}
+}

@@ -1,0 +1,33 @@
+{
+ "prova": "tj-tr0018",
+ "habilidade": "triagem-juridica",
+ "agente": "juridico",
+ "modelo": "claude-haiku-5-5",
+ "rodada": 1,
+ "data": "2026-11-13",
+ "versao": "banco-0.2",
+ "base_commit": "288c4b0",
+ "passa": false,
+ "checagens": [
+  {
+   "ok": true,
+   "texto": "Falta 1 pelo esquema: PASSA  C:\\Users\\alqui\\AppData\\Local\\Temp\\claude\\3f130ac251194d50\\5a677059-31f6-4702-9ca6-b1fb55fffdf3\\scratchpad\\k115a\\tj-haiku\\saida\\_falta.json"
+  },
+  {
+   "ok": true,
+   "texto": "Falta 2 pelo esquema: PASSA  C:\\Users\\alqui\\AppData\\Local\\Temp\\claude\\3f130ac251194d50\\5a677059-31f6-4702-9ca6-b1fb55fffdf3\\scratchpad\\k115a\\tj-haiku\\saida\\_falta.json"
+  },
+  {
+   "ok": false,
+   "texto": "Falta conhecimento_tradicional / publicar no TR-0018: 0"
+  },
+  {
+   "ok": true,
+   "texto": "nenhuma Falta que barra agora (0)"
+  },
+  {
+   "ok": false,
+   "texto": "nenhuma Falta só sobre os itens sem Falta pela regra ['TR-0494', 'TR-0100', 'TR-0031']; achadas: [['TR-0494'], ['TR-0494']]"
+  }
+ ]
+}
