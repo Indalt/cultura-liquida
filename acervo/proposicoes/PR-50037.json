@@ -1,0 +1,20 @@
+{
+  "id": "PR-50037",
+  "clb": "CL-0001",
+  "atributo": "modo de fazer (processamento)",
+  "valor": "a clarificação e a pasteurização da cajuína reduzem o conteúdo fenólico",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50037"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

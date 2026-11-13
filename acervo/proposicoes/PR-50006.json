@@ -1,0 +1,20 @@
+{
+  "id": "PR-50006",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento oficial",
+  "valor": "registro como Patrimônio Cultural do Brasil, aprovado pelo Conselho Consultivo do Patrimônio Cultural na 75ª reunião, em 15 de maio de 2014",
+  "periodo": {
+    "referido": "2014"
+  },
+  "evidencias": [
+    "EV-50006"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

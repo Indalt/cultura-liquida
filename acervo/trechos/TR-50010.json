@@ -1,0 +1,29 @@
+{
+  "id": "TR-50010",
+  "fonte": "FO-50001",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 3137-3216 do texto normalizado (normalizacao-0.2)",
+  "hash": "845dcba4464379d2e54220be71556ba23ca7db7a7929fe9ed67cd09076f5ddca",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "O levantamento também registrou diferenças entre as formas de produzir a bebida",
+  "antes": "ência para alcançar a cor, a aparência e o sabor desejados. ",
+  "depois": " e a participação de mulheres na transmissão dos conheciment",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

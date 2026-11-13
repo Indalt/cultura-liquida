@@ -1,0 +1,20 @@
+{
+  "id": "PR-50013",
+  "clb": "CL-0001",
+  "atributo": "processo de registro",
+  "valor": "pedido de registro apresentado pela Cooperativa de Produtores de Cajuína do Piauí (Cajuespi), com apoio de cooperados",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50013"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

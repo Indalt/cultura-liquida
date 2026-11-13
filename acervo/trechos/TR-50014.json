@@ -1,0 +1,29 @@
+{
+  "id": "TR-50014",
+  "fonte": "FO-50002",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 2104-2264 do texto normalizado (normalizacao-0.2)",
+  "hash": "86e1452aca89e711cdd8325532fbad0f3a51909904cab262febf06f4648742d2",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "Entre os dias 6 e 8 de junho de 2024, foi realizado em Teresina/PI o Festival da Cajuína: 10 anos de Patrimônio Cultural do Brasil e o Fórum Nacional da Cajuína",
+  "antes": " da Cajuína. Identificação da ação de salvaguarda Descrição ",
+  "depois": ", com o objetivo de dar maior visibilidade à cajuína, formul",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

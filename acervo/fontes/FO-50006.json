@@ -1,0 +1,33 @@
+{
+  "id": "FO-50006",
+  "referencia": {
+    "titulo": "Realização do I Fórum Estadual de Salvaguarda da Produção Tradicional e Práticas Socioculturais associadas à Cajuína do Piauí",
+    "instituicao": "IPHAN",
+    "ano": "2015",
+    "tipo": "página de ação de salvaguarda (Bem Brasileiro, IPHAN)",
+    "link_permanente": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/realizacao-do-i-forum-estadual-de-salvaguarda-da-producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-do-piaui/"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2015",
+  "url": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/realizacao-do-i-forum-estadual-de-salvaguarda-da-producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-do-piaui/",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-11-13",
+  "perspectiva": "institucional (IPHAN)",
+  "deriva_de": [],
+  "entrada": "EN-1734",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://bcr.iphan.gov.br/acoes-de-salvaguarda/realizacao-do-i-forum-estadual-de-salvaguarda-da-producao-tradicional-e-praticas-socioculturais-associadas-a-cajuina-do-piaui/ (html)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

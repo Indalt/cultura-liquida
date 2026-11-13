@@ -1,0 +1,33 @@
+{
+  "id": "FO-50001",
+  "referencia": {
+    "titulo": "Registro da Produção Tradicional e das Práticas Socioculturais Associadas à Cajuína no Piauí como Patrimônio Cultural do Brasil",
+    "instituicao": "IPHAN",
+    "ano": "2014",
+    "tipo": "página de ação de salvaguarda (Bem Brasileiro, IPHAN)",
+    "link_permanente": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/registro-da-producao-tradicional-e-das-praticas-socioculturais-associadas-a-cajuina-no-piaui-como-patrimonio-cultural-do-brasil/"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2014",
+  "url": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/registro-da-producao-tradicional-e-das-praticas-socioculturais-associadas-a-cajuina-no-piaui-como-patrimonio-cultural-do-brasil/",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-11-13",
+  "perspectiva": "institucional (IPHAN)",
+  "deriva_de": [],
+  "entrada": "EN-1729",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://bcr.iphan.gov.br/acoes-de-salvaguarda/registro-da-producao-tradicional-e-das-praticas-socioculturais-associadas-a-cajuina-no-piaui-como-patrimonio-cultural-do-brasil/ (html)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "PR-50026",
+  "clb": "CL-0001",
+  "atributo": "salvaguarda (fórum estadual)",
+  "valor": "realização do I Fórum Estadual de Salvaguarda da Produção Tradicional e Práticas Socioculturais associadas à cajuína do Piauí",
+  "periodo": {
+    "referido": "2015"
+  },
+  "evidencias": [
+    "EV-50026"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

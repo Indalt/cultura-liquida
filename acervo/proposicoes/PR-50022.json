@@ -1,0 +1,20 @@
+{
+  "id": "PR-50022",
+  "clb": "CL-0001",
+  "atributo": "vínculo com o bem registrado",
+  "valor": "bem cultural relacionado: produção tradicional e práticas socioculturais associadas à cajuína no Piauí",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50022"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

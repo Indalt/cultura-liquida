@@ -1,0 +1,29 @@
+{
+  "id": "TR-50020",
+  "fonte": "FO-50003",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 2232-2334 do texto normalizado (normalizacao-0.2)",
+  "hash": "79e833f0b7667731a0d6d8be8e26b627d88ec4a2b299eeba1a398d6185b3d24c",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "revalidação do bem cultural Produção Artesanal e práticas socioculturais associadas à Cajuína no Piauí",
+  "antes": "dentificação da ação de salvaguarda Descrição O processo de ",
+  "depois": " foi subsidiado por um parecer técnico elaborado pela Superi",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

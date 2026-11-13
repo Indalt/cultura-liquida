@@ -1,0 +1,96 @@
+{
+ "versao_regra": "fila-ia-0.1",
+ "na_fila": 2370,
+ "lote": [
+  {
+   "id": "EN-1066",
+   "faixa": 1,
+   "ambiente": "AM-0021",
+   "motivo": "forma 'mocororó' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50674",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1729",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50675",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1730",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50676",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1731",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50677",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1732",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50678",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1733",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50679",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1734",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-50680",
+   "faixa": 1,
+   "ambiente": "AM-0022",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  },
+  {
+   "id": "EN-1735",
+   "faixa": 1,
+   "ambiente": "AM-0061",
+   "motivo": "forma 'cajuína' de Termo de bebida no título (CO-0002)"
+  }
+ ]
+}

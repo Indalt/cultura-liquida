@@ -1,0 +1,97 @@
+{
+ "versao_regra": "rotina-ia-0.1",
+ "lote": "RIA-2026-11-13-L1",
+ "execucao_avaliador": "EX-50033",
+ "execucao_auditor": "EX-50034",
+ "veredito": "não serve",
+ "amostra": "trilhas/amostras/2026-11-13_amostra.json",
+ "achados": [
+  {
+   "id": "RIA-A1",
+   "tipo": "outro",
+   "descricao": "As 6 Evidencias de EN-1066 (mocororo dos Kaninde/Tremembe; o avaliador as marcou 'outra: mocororo' em saida-avaliador.json) foram gravadas na CLB da cajuina (CL-0001): gravar_extracao.py sem --clb usa clb_cajuina(). Contraria D-039 (so CLB de outro termo vira candidata, em cartao de lista). Afeta PR-50000 a PR-50005 (clb CL-0001) e suas EV/TR.",
+   "linha": 258,
+   "trecho": "clb = clb_destino or self.clb_cajuina()",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n '\"clb\"' acervo/proposicoes/PR-5000[0-5].json; grep -n 'clb_destino or' scripts/gravar_extracao.py; python3 (saida-avaliador.json: clb das evidencias de EN-1066)",
+    "saida": "PR-50000..50005: \"clb\": \"CL-0001\"; saida-avaliador.json: 6 x 'outra: mocororo'; gravar_extracao.py:258 clb = clb_destino or self.clb_cajuina()"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "RIA-A2",
+   "tipo": "outro",
+   "descricao": "Texto exato e valor com detalhe ritual atribuido a povos nomeados (detalhe ritual, retirado) gravados no Git publico (TR-50000, TR-50001, TR-50003; PR-50000, PR-50001, PR-50003). A F-0033 e a D-043 (3) mandam o detalhe ritual de povo nomeado para a pasta local ate o K-010. Nenhuma Falta de conhecimento tradicional cobre os Kaninde: grep -l Kanind acervo/faltas/*.json nao acha nada; so F-0021 a F-0023 (lugar) foram alteradas. Decisao do juridico/curador, nao do auditor.",
+   "linha": 10,
+   "trecho": "[retirado do Git: detalhe ritual de povo nomeado; fica na pasta local, D-043]",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n 'Tremembe\\|Kaninde' acervo/trechos/TR-5000[0-5].json; grep -l 'Kanind' acervo/faltas/*.json",
+    "saida": "TR-50000.json:10, TR-50001.json:10, TR-50003.json:10 citam os povos; nenhuma Falta cita Kaninde"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "RIA-A3",
+   "tipo": "outro",
+   "descricao": "TR-50021 (EV-50021, na amostra): o texto exato e o titulo da pagina mais 'Informacoes gerais'; a Proposicao 'grupo detentor' se apoia na migalha 'Grupos detentores', fora do trecho. Leitura fiel fraca: o trecho nao diz 'detentor'.",
+   "linha": 10,
+   "trecho": "Cooperativa dos Produtores de Cajuina do Piaui (CAJUESPI) Informacoes gerais",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "python3 ctx.py 50021 (contexto em /tmp/cl-fontes/EN-1732.txt) e grep detentor",
+    "saida": "'Inicio Grupos detentores Cooperativa dos Produtores de Cajuina do Piaui (CAJUESPI) Informacoes gerais'; trecho localizado, mas sem a palavra"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "RIA-A4",
+   "tipo": "outro",
+   "descricao": "TR-50020/PR-50020 (sustenta aviso, fora da amostra): a pagina diz que o PROCESSO de revalidacao foi subsidiado por parecer, com atualizacao de dados e recomendacoes; a Proposicao 'reconhecimento oficial (revalidacao)' pode ser lida como titulo revalidado. A fonte nao diz o resultado sobre o titulo. Ressalva de leitura.",
+   "linha": 10,
+   "trecho": "revalidacao do bem cultural Producao Artesanal e praticas socioculturais associadas a Cajuina no Piaui",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "python3 ctx.py 50020 (EN-1731.txt)",
+    "saida": "'O processo de revalidacao do bem cultural ... foi subsidiado por um parecer tecnico ... obteve-se uma atualizacao de dados ... recomendacoes'"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "RIA-A5",
+   "tipo": "outro",
+   "descricao": "Procedimento: o pedido manda conferir contra /tmp/cl-fontes/<EN>.txt, mas o .txt traz marcas [[p. n]] e o hash nao bate: TR-50000..50005 e TR-50030..50038 deram 'hash diferente' com o .txt. Com o arquivo original (EN-1066.pdf, EN-50675.pdf) os 15 passam, grau 1.0, hash igual. Os outros 24 passam com o .txt. Nao e defeito do lote; e o pedido que deve dizer 'use o arquivo do manifesto'.",
+   "linha": null,
+   "trecho": "",
+   "confirmacao": {
+    "metodo": "script",
+    "comando": "localizar_trecho.py conferir acervo/trechos/TR-n.json --fonte /tmp/cl-fontes/EN-1066.pdf (e EN-50675.pdf)",
+    "saida": "'o Trecho se sustenta: localizado, grau 1.0, hash igual' em 39 de 39 (15 so pelo PDF)"
+   },
+   "estado": "confirmado"
+  },
+  {
+   "id": "RIA-A6",
+   "tipo": "outro",
+   "descricao": "Observacao menor: PR-50018 (adesao limitada dos produtores; avaliacao de politica de salvaguarda) esta sem a marca 'sustenta aviso, saude ou politica'; foi lida, mas fica fora da leitura obrigatoria. Nao confirmado como erro: depende da regra do avaliador.",
+   "linha": 10,
+   "trecho": "a adesao dos produtores de cajuina foi limitada",
+   "confirmacao": {
+    "metodo": "grep",
+    "comando": "grep -n sustenta_aviso acervo/evidencias/EV-50018.json",
+    "saida": "false"
+   },
+   "estado": "nao_confirmado"
+  }
+ ],
+ "lidos": [
+  "TR-50000..TR-50038 (39, todos conferidos por localizar_trecho)",
+  "EV-50000..EV-50038 (39)",
+  "PR-50000..PR-50038 (39)",
+  "FO-50000",
+  "FO-50010",
+  "amostra 2026-11-13 (semente 819993137: refeita, bate; universo 104 = tudo menos 28 marcados)",
+  "14 EV e 14 PR marcados 'sustenta aviso/saude/politica' (todos lidos; marca igual a lista da amostra)"
+ ]
+}

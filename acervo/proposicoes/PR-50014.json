@@ -1,0 +1,20 @@
+{
+  "id": "PR-50014",
+  "clb": "CL-0001",
+  "atributo": "evento (festival e fórum)",
+  "valor": "Festival da Cajuína (10 anos de Patrimônio Cultural do Brasil) e Fórum Nacional da Cajuína, em Teresina/PI, entre 6 e 8 de junho de 2024",
+  "periodo": {
+    "referido": "2024"
+  },
+  "evidencias": [
+    "EV-50014"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

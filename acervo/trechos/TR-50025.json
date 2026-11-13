@@ -1,0 +1,29 @@
+{
+  "id": "TR-50025",
+  "fonte": "FO-50005",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 2390-2516 do texto normalizado (normalizacao-0.2)",
+  "hash": "55ad1c61cc6dcded5f2550a80622b27f7986267320cde90fc2e373fa07073bed",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "O evento contou com a participação de instituições públicas das três esferas governamentais e produtores de cajuína do estado.",
+  "antes": "is Associadas à Cajuína no Piauí aos produtores de cajuína. ",
+  "depois": " ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

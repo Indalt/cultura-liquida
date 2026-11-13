@@ -1,0 +1,20 @@
+{
+  "id": "PR-50020",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento oficial (revalidação)",
+  "valor": "revalidação do bem cultural 'Produção Artesanal e práticas socioculturais associadas à Cajuína no Piauí' (designação usada pela própria página)",
+  "periodo": {
+    "referido": "2025 (ano de realização da ação, na página)"
+  },
+  "evidencias": [
+    "EV-50020"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

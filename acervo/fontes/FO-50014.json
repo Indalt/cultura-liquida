@@ -1,0 +1,33 @@
+{
+  "id": "FO-50014",
+  "referencia": {
+    "titulo": "Desconstruindo a 'Cajuína' - uma leitura do texto-canção de Caetano Veloso",
+    "instituicao": "Scripta (Pontifícia Universidade Católica de Minas Gerais)",
+    "ano": "2003",
+    "tipo": "artigo de análise literária",
+    "link_permanente": "https://oasisbr.ibict.br/vufind/Record/PUC_MINS-6_ec34678eed5aa1a8fee853ab90521824"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2003",
+  "url": "https://oasisbr.ibict.br/vufind/Record/PUC_MINS-6_ec34678eed5aa1a8fee853ab90521824",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-11-13",
+  "perspectiva": "crítica literária (análise de canção; não descreve a prática)",
+  "deriva_de": [],
+  "entrada": "EN-50680",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://periodicos.pucminas.br/scripta/article/download/12502/9814 (pdf)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

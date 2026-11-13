@@ -1,0 +1,20 @@
+{
+  "id": "PR-50028",
+  "clb": "CL-0001",
+  "atributo": "estratégias de preservação e incentivo",
+  "valor": "discussão sobre as estratégias de preservação da cajuína e o incentivo à sua produção e comercialização",
+  "periodo": {
+    "referido": "2016"
+  },
+  "evidencias": [
+    "EV-50028"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

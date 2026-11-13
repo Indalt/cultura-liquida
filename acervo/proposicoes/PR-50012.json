@@ -1,0 +1,20 @@
+{
+  "id": "PR-50012",
+  "clb": "CL-0001",
+  "atributo": "transmissão do conhecimento",
+  "valor": "conhecimentos transmitidos entre gerações em famílias e unidades produtoras piauienses",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50012"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

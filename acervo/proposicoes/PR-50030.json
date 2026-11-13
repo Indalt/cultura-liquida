@@ -1,0 +1,20 @@
+{
+  "id": "PR-50030",
+  "clb": "CL-0001",
+  "atributo": "composição (atividade antioxidante)",
+  "valor": "alta atividade antioxidante, sobretudo na marca A de cajuína",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50030"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

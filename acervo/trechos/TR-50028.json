@@ -1,0 +1,29 @@
+{
+  "id": "TR-50028",
+  "fonte": "FO-50007",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 2336-2459 do texto normalizado (normalizacao-0.2)",
+  "hash": "0541a6e351ddfc06c485b205aeb9fe929496e8eb6e1ff9f14816f1a9d73a91bb",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "O evento ensejou a discussão sobre as estratégias de preservação da cajuína e o incentivo à sua produção e comercialização.",
+  "antes": "a dos produtores de cajuína do Piauí e entidades parceiras. ",
+  "depois": " ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

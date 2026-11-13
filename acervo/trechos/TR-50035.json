@@ -1,0 +1,29 @@
+{
+  "id": "TR-50035",
+  "fonte": "FO-50009",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 3 do PDF; car. 6269-6491 do texto normalizado (normalizacao-0.2)",
+  "hash": "a371c730927dc6d02d421d747e7136ffd1b42756b7c1b9de34c501482ce4644f",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "Recently, the National Institute of Industrial Property (INPI) awarded the title of Geographical Indication (GI) of Cajuína of Piauí to the Union of Associations, Cooperatives and Producers of Cajuína of Piauí (Procajuína)",
+  "antes": "te to the development of studies that add value to cajuína. ",
+  "depois": ", which will be responsible for administering and supervisin",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

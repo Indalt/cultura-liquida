@@ -1,0 +1,33 @@
+{
+  "id": "FO-50007",
+  "referencia": {
+    "titulo": "Apoio à realização do IV Festival da Cajuína",
+    "instituicao": "IPHAN",
+    "ano": "2016",
+    "tipo": "página de ação de salvaguarda (Bem Brasileiro, IPHAN)",
+    "link_permanente": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/apoio-a-realizacao-do-iv-festival-da-cajuina-promovido-pela-cooperativa-dos-produtores-de-cajuina-do-piaui-em-teresina/"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "2016",
+  "url": "https://bcr.iphan.gov.br/acoes-de-salvaguarda/apoio-a-realizacao-do-iv-festival-da-cajuina-promovido-pela-cooperativa-dos-produtores-de-cajuina-do-piaui-em-teresina/",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-11-13",
+  "perspectiva": "institucional (IPHAN)",
+  "deriva_de": [],
+  "entrada": "EN-1735",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://bcr.iphan.gov.br/acoes-de-salvaguarda/apoio-a-realizacao-do-iv-festival-da-cajuina-promovido-pela-cooperativa-dos-produtores-de-cajuina-do-piaui-em-teresina/ (html)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

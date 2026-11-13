@@ -1,0 +1,20 @@
+{
+  "id": "PR-50019",
+  "clb": "CL-0001",
+  "atributo": "quem participa (festival)",
+  "valor": "associações de produtores de cajuína e integrantes da cadeia produtiva do caju participaram do festival",
+  "periodo": {
+    "referido": "2024"
+  },
+  "evidencias": [
+    "EV-50019"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

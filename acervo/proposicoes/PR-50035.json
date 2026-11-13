@@ -1,0 +1,20 @@
+{
+  "id": "PR-50035",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento (indicação geográfica)",
+  "valor": "INPI concedeu o título de Indicação Geográfica de Cajuína do Piauí à União de Associações, Cooperativas e Produtores de Cajuína do Piauí (Procajuína)",
+  "periodo": {
+    "referido": "não datado (\"recentemente\", em artigo de 2020)"
+  },
+  "evidencias": [
+    "EV-50035"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

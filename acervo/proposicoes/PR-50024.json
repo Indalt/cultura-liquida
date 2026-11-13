@@ -1,0 +1,20 @@
+{
+  "id": "PR-50024",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento oficial (entrega do título)",
+  "valor": "cerimônia pública de entrega do título de Produção Tradicional e Práticas Socioculturais Associadas à Cajuína no Piauí aos produtores de cajuína",
+  "periodo": {
+    "referido": "2015"
+  },
+  "evidencias": [
+    "EV-50024"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

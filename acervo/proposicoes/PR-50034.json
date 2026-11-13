@@ -1,0 +1,20 @@
+{
+  "id": "PR-50034",
+  "clb": "CL-0001",
+  "atributo": "definição legal (norma citada)",
+  "valor": "cajuína é definida pela legislação brasileira como bebida não diluída e não fermentada, obtida da parte comestível do caju (cashew apple), por técnica apropriada e com processo de clarificação física",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50034"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "FO-50004",
+  "referencia": {
+    "titulo": "Cooperativa dos Produtores de Cajuína do Piauí (CAJUESPI), grupo detentor",
+    "instituicao": "IPHAN",
+    "ano": "não informado pela fonte",
+    "tipo": "ficha de grupo detentor (Bem Brasileiro, IPHAN)",
+    "link_permanente": "https://bcr.iphan.gov.br/grupos-detentores/cooperativa-dos-produtores-de-cajuina-do-piaui-cajuespi/"
+  },
+  "tipo_evidencia": "escrito publicado, de arquivo ou oficial",
+  "data_fonte": "não informado pela fonte",
+  "url": "https://bcr.iphan.gov.br/grupos-detentores/cooperativa-dos-produtores-de-cajuina-do-piaui-cajuespi/",
+  "wayback": "não consultado (o wayback.py não passou pela Entrada)",
+  "data_acesso": "2026-11-13",
+  "perspectiva": "institucional (IPHAN)",
+  "deriva_de": [],
+  "entrada": "EN-1732",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "lida pelo ler_fonte.py: https://bcr.iphan.gov.br/grupos-detentores/cooperativa-dos-produtores-de-cajuina-do-piaui-cajuespi/ (html)",
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

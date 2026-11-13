@@ -1,0 +1,29 @@
+{
+  "id": "TR-50017",
+  "fonte": "FO-50002",
+  "grau_semelhanca": 1.0,
+  "localizador": "car. 3606-3656 do texto normalizado (normalizacao-0.2)",
+  "hash": "86e1452aca89e711cdd8325532fbad0f3a51909904cab262febf06f4648742d2",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "para discutir a elaboração do Plano de Salvaguarda",
+  "antes": "al da Cajuína, reunindo detentores e instituições parceiras ",
+  "depois": " da ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

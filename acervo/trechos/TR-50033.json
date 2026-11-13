@@ -1,0 +1,29 @@
+{
+  "id": "TR-50033",
+  "fonte": "FO-50009",
+  "grau_semelhanca": 1.0,
+  "localizador": "p. 11 do PDF; car. 28405-28531 do texto normalizado (normalizacao-0.2)",
+  "hash": "a371c730927dc6d02d421d747e7136ffd1b42756b7c1b9de34c501482ce4644f",
+  "versao_normalizacao": "normalizacao-0.2",
+  "data_conferencia": "2026-11-13",
+  "estado": "localizado",
+  "texto_exato": "the regular consumption of clarified cashew apple juice (cajuína) provides antioxidant compounds that are important for health",
+  "antes": "ave caused an increase in the bioaccessible fraction, thus, ",
+  "depois": ". 4 ",
+  "origem_texto": "fonte",
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "origem_registro": {
+    "criado_por": "scripts/localizar_trecho.py (pelo avaliador)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "normalizacao-0.2"
+  }
+}

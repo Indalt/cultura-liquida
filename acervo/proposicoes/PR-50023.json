@@ -1,0 +1,20 @@
+{
+  "id": "PR-50023",
+  "clb": "CL-0001",
+  "atributo": "localidade do grupo detentor",
+  "valor": "Teresina, Piauí",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50023"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

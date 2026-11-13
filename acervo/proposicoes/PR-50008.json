@@ -1,0 +1,20 @@
+{
+  "id": "PR-50008",
+  "clb": "CL-0001",
+  "atributo": "modo de fazer",
+  "valor": "seleção dos cajus, extração do suco, clarificação (chamada 'corte'), filtragem, engarrafamento e cozimento em banho-maria",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50008"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

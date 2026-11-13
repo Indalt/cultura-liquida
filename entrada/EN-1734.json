@@ -15,8 +15,8 @@
     "motivo": "forma 'cajuína' no título (CO-0002)",
     "versao_regra": "pretriagem-0.1"
   },
-  "estado": "bruto",
-  "sustenta_aviso_saude_politica": false,
+  "estado": "extraído",
+  "sustenta_aviso_saude_politica": true,
   "protecao": {
     "licenca": "não conferido",
     "consentimento": "não se aplica",
@@ -26,11 +26,27 @@
     "crianca_ou_adolescente": false,
     "pedido_de_retirada": "nenhum"
   },
-  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem. Triagem pela extrair-evidencia (RIA-2026-11-13-L1, EX-50033, valencias-0.1).",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-11-08",
     "execucao": "EX-0120",
     "versao_regra": "deduplicacao-0.2"
+  },
+  "valencias": {
+    "lastro": 2,
+    "trecho_localizado": 2,
+    "voz": 1,
+    "versao_regra": "valencias-0.1",
+    "criterio_em_falta": []
+  },
+  "gera": {
+    "fontes": [
+      "FO-50006"
+    ],
+    "trechos": [
+      "TR-50026",
+      "TR-50027"
+    ]
   }
 }

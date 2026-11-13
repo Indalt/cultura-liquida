@@ -1,0 +1,20 @@
+{
+  "id": "PR-50031",
+  "clb": "CL-0001",
+  "atributo": "composição",
+  "valor": "cajuína é fonte de compostos fenólicos como ácido elágico, epicatequina, ácido p-cumárico e ácido gálico, e tem alta atividade antioxidante",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50031"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

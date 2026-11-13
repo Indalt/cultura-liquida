@@ -1,0 +1,20 @@
+{
+  "id": "PR-50007",
+  "clb": "CL-0001",
+  "atributo": "reconhecimento oficial (livro de registro)",
+  "valor": "inscrito no Livro de Registro dos Saberes",
+  "periodo": {
+    "referido": "2014"
+  },
+  "evidencias": [
+    "EV-50007"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

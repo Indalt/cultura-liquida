@@ -1,0 +1,20 @@
+{
+  "id": "PR-50009",
+  "clb": "CL-0001",
+  "atributo": "modo de fazer (exigência)",
+  "valor": "as etapas exigem experiência para alcançar a cor, a aparência e o sabor desejados",
+  "periodo": {
+    "referido": "não informado pela fonte"
+  },
+  "evidencias": [
+    "EV-50009"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": false,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}

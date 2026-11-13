@@ -1,0 +1,20 @@
+{
+  "id": "PR-50017",
+  "clb": "CL-0001",
+  "atributo": "salvaguarda (plano)",
+  "valor": "o Fórum Nacional da Cajuína foi realizado para discutir a elaboração do Plano de Salvaguarda",
+  "periodo": {
+    "referido": "2024"
+  },
+  "evidencias": [
+    "EV-50017"
+  ],
+  "mu": null,
+  "lambda": null,
+  "sustenta_aviso_saude_politica": true,
+  "origem_registro": {
+    "criado_por": "scripts/gravar_extracao.py (gravar-extracao-0.3)",
+    "data": "2026-11-13",
+    "execucao": "EX-50033"
+  }
+}
