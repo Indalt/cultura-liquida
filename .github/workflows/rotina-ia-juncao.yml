@@ -1,0 +1,111 @@
+# Junção da proposta da rotina com IA (bloco 10b, camada 2; K-113; D-050; padrão A-10, D-038).
+# A rotina com IA (rotina do Claude Code, na assinatura de Vicente) propõe numa ramificação `claude/...`
+# e nunca junta. Este workflow é quem junta: monta a proposta já juntada ao main, roda o portão da
+# camada 2 com os scripts do **main** (nunca com os da proposta; insumo 119) e, se passa, envia ao main
+# pelo `ROTINAS_TOKEN` (o mesmo da camada 1, só Contents). Quem propõe não aprova (D-038).
+# Se reprova, a ramificação fica como está, e o motivo vai ao Issue do relatório do dia.
+name: rotina-ia-juncao
+on:
+  push:
+    branches: ["claude/**"]
+  workflow_dispatch:
+    inputs:
+      ramificacao:
+        description: "Ramificação claude/... a passar pelo portão"
+        type: string
+        required: true
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: rotina-ia-juncao
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+jobs:
+  juncao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+      TZ: America/Fortaleza
+      RAMO: ${{ inputs.ramificacao || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: O main (scripts e regras do portão)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+      - name: A proposta
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ramificacao || github.ref_name }}
+          path: proposta
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r main/requirements.txt
+      - name: A proposta juntada ao main (a árvore que entraria)
+        id: juntar
+        working-directory: proposta
+        run: |
+          git config user.name "Vicente"
+          git config user.email "vicente@dacaatinga.com.br"
+          git fetch -q origin main
+          BASE=$(git merge-base origin/main HEAD)
+          echo "base=$BASE" >> "$GITHUB_OUTPUT"
+          if git merge --no-edit -m "Junção da proposta da rotina com IA ($RAMO) pelo portão da camada 2" origin/main; then
+            echo "ok=1" >> "$GITHUB_OUTPUT"
+          else
+            git merge --abort || true
+            echo "ok=0" >> "$GITHUB_OUTPUT"
+            echo "a proposta não se junta ao main sem conflito" | tee "$RUNNER_TEMP/portao.out"
+          fi
+      - name: Portão da camada 2 (scripts do main)
+        id: portao
+        if: ${{ steps.juntar.outputs.ok == '1' }}
+        run: |
+          if python main/scripts/portao_camada2.py --proposta proposta --base origin/main --saida "$RUNNER_TEMP/portao.json" | tee "$RUNNER_TEMP/portao.out"; then
+            echo "passa=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "passa=0" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Junção ao main (só com o portão passando)
+        if: ${{ steps.portao.outputs.passa == '1' }}
+        working-directory: proposta
+        env:
+          TOKEN: ${{ secrets.ROTINAS_TOKEN }}
+        run: |
+          J="$RUNNER_TEMP/juncao.out"
+          if [ -z "$TOKEN" ]; then
+            echo "junção: sem o segredo ROTINAS_TOKEN" | tee "$J"; exit 1
+          fi
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
+          if git -c http.extraheader="$AUTH" push origin HEAD:main 2>&1 | tee "$J"; then
+            echo "junção: main em dia com $RAMO" | tee -a "$J"
+            git -c http.extraheader="$AUTH" push origin --delete "$RAMO" 2>&1 | tee -a "$J" || true
+          else
+            echo "junção: o push ao main falhou (o main andou?); a ramificação fica e o portão roda de novo no próximo envio" | tee -a "$J"
+            exit 1
+          fi
+      - name: Resultado no Issue do relatório do dia
+        if: ${{ always() }}
+        run: |
+          N=$(gh issue list --state open --search "Relatório do dia (rotinas) in:title" --json number --jq '.[0].number')
+          [ -z "$N" ] && exit 0
+          {
+            echo "**Rotina com IA — proposta \`$RAMO\`** — execução ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — portão da camada 2: ${{ steps.portao.outputs.passa == '1' && 'passa' || 'reprova ou não rodou' }}"
+            echo
+            echo '```'
+            cat "$RUNNER_TEMP/portao.out" 2>/dev/null || echo "(o portão não rodou)"
+            cat "$RUNNER_TEMP/juncao.out" 2>/dev/null || true
+            echo '```'
+          } > "$RUNNER_TEMP/c.md"
+          gh issue comment "$N" --body-file "$RUNNER_TEMP/c.md"
+      - name: Falhar se o portão reprovou
+        if: ${{ always() && steps.portao.outputs.passa != '1' }}
+        run: exit 1
