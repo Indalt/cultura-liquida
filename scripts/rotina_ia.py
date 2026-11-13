@@ -38,7 +38,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ  # noqa: E402
 
-VERSAO = "rotina-ia-0.1"
+VERSAO = "rotina-ia-0.2"
 PY = sys.executable
 S = Path(__file__).resolve().parent
 
@@ -68,7 +68,7 @@ def rodar(*cmd: str) -> subprocess.CompletedProcess:
 PEDIDO_AVALIADOR = """# Pedido ao avaliador — rotina com IA (K-113), lote {rotulo}
 
 Habilidade: extrair-evidencia (leia `.claude/skills/extrair-evidencia/SKILL.md` antes de tudo). Modelo: o
-da chamada (Haiku 5.5, tabela do K-115a). Teto: 45 chamadas, contadas como o harness conta; perto do teto,
+da rodada (`ambientes/rotinas-ia/rotinas.json`; K-115a, D-054). Teto: 45 chamadas, contadas como o harness conta; perto do teto,
 grave o que tiver, junte, valide e devolva.
 
 Entradas do lote (cada uma em `entrada/<EN>.json`): {ids}.
@@ -107,9 +107,9 @@ Termine com o resultado da validação e o bloco LOG (agente avaliador, habilida
 
 PEDIDO_AUDITOR = """# Pedido ao auditor — segunda leitura da rotina com IA (K-113), lote {rotulo}
 
-Habilidade: conferir-fato (olhar mecânico; quem produz não confere; D-026). Modelo: Sonnet 5.5. Teto: 30 chamadas.
+Habilidade: conferir-fato (olhar mecânico; quem produz não confere; D-026). Modelo: o da rodada (`ambientes/rotinas-ia/rotinas.json`; D-054). Teto: 30 chamadas.
 Leia: a amostra `{amostra}` (semente e itens sorteados; regra amostra-0.2), o que o lote gravou nesta
-ramificação (`git diff --stat origin/main...HEAD` e os arquivos novos de `acervo/`) e, fora da amostra,
+rodada (a lista em `{trab}/gravado.txt`, feita por script, e os arquivos novos de `acervo/` que ela aponta) e, fora da amostra,
 todo item marcado "sustenta aviso, saúde ou política" (D-038). Para cada Trecho lido, confira contra o arquivo lido
 da fonte (o campo `arquivo` da Entrada em `{tmp}/lote-{rotulo}.json`, o `.pdf` ou o `.html`; nunca o `.txt`):
 `{py} scripts/localizar_trecho.py conferir <TR.json> --fonte <arquivo>`
@@ -210,6 +210,10 @@ def amostra(a) -> int:
     am = novos[-1].relative_to(RAIZ).as_posix()
     t = trabalho(a.rotulo)
     (t / "amostra.txt").write_text(am + "\n", encoding="utf-8")
+    # o que o lote gravou (o executor do Gemini não tem git; K-125): arquivos mudados ou novos do acervo e de entrada/
+    g = subprocess.run(["git", "status", "--porcelain", "-uall"], cwd=RAIZ, capture_output=True, text=True, encoding="utf-8")
+    (t / "gravado.txt").write_text("\n".join(x[3:] for x in g.stdout.splitlines()
+                                             if x[3:].startswith(("acervo/", "entrada/"))) + "\n", encoding="utf-8")
     pedido = t / "pedido-auditor.md"
     pedido.write_text(PEDIDO_AUDITOR.format(rotulo=a.rotulo, amostra=am, tmp=tmp().as_posix(), trab=t.as_posix(), py=Path(PY).as_posix()),
                       encoding="utf-8")

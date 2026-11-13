@@ -29,6 +29,7 @@ from _comum import RAIZ  # noqa: E402
 PERMITIDOS = {
     "vicente@dacaatinga.com.br",       # Vicente, autor e responsável (regra 5 do brief)
     "noreply@anthropic.com",           # linha de atribuição dos commits
+    "rotina-ia-gemini@users.noreply.github.com",  # autor dos commits da rotina com IA pelo Gemini (K-125); endereço sem caixa, não é pessoa
     "atendimento@cinemateca.org.br",   # e-mail institucional, mantido no Bloco 1
     # JSON-LD e notação técnica, não são perfis:
     "@context", "@id", "@type", "@graph", "@value", "@language", "@vocab",

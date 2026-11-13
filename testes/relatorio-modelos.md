@@ -64,5 +64,9 @@ Pelo executor `scripts/gemini_agente.py` (gemini-agente-0.1), com o mesmo banco 
 | Habilidade | Modelo | Prova | Aprovação | Entrada | Saída | Pedidos à API | Chamadas | Execução |
 |---|---|---|---|---|---|---|---|---|
 | extrair-evidencia | gemini-4-hydrogen | ee-en1369-en1544 (rodada 1, 13/11) | reprova (TR-0035, TR-0039, TR-0040, TR-0041 não cobertos; teto de 25 chamadas atingido) | 299.975 | 28.037 | 7 | 25 | log de 13/11 em `trilhas/logs/2026-11-13_avaliador.jsonl` |
+| extrair-evidencia | gemini-4-hydrogen | ee-en1369-en1544 (rodada 2, 13/11; executor 0.2, histórico encurtado) | **interrompida** no 4º pedido pela cota diária (não conta como reprova do modelo) | 57.097 | 7.435 | 3 | 14 | EX-0145 |
+| gerar-grafo | gemini-4-argon | gg-pr0042-cadeia (rodada 1, 13/11) | **não rodou**: o primeiro pedido recusado (nível gratuito sem cota para o argon: limite 0 de tokens de entrada) | 0 | 0 | 0 | 0 | EX-0146 |
+
+**Cotas da chave (conferidas pela resposta da API em 13/11):** o projeto está no nível gratuito: o gemini-4-hydrogen tem 20 pedidos por dia por projeto (`GenerateRequestsPerDayPerProjectPerModel-FreeTier`; volta por volta das 05h de Brasília), e o gemini-4-argon não tem cota nenhuma (`generate_content_free_tier_input_token_count`, limite 0). As provas do argon e a segunda leitura da rotina só rodam com a cobrança ligada no projeto (passo de dono, K-125).
 
 Faltam: a rodada 2 do hydrogen na extrair-evidencia (a l. 698 pede o reforço do harness antes de trocar de modelo; o Haiku passou na rodada 3) e as provas rt, mf (hydrogen), gg, tj e a segunda leitura (argon). Insumos 133 e 134.

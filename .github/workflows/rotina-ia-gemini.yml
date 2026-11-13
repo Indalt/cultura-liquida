@@ -1,0 +1,182 @@
+# Rotina com IA semanal pela API do Gemini (bloco 10b, camada 2; K-125; D-054, D-050, D-038).
+# Substitui a rotina do Claude Code do K-113 (pausada pela D-054). Um lote de entrada/ pela fila
+# (fila_ia.py), extrair-evidencia no modelo da rodada, a segunda leitura (auditor) no outro, tudo pelo
+# executor scripts/gemini_agente.py; a proposta vai a uma ramificação claude/... com o token do workflow,
+# que a proteção do main barra (quem propõe não aprova); a junção é do rotina-ia-juncao.yml, disparado
+# aqui por workflow_dispatch. O contador do executor para a rodada antes do teto da semana (1 milhão de
+# entrada, 2 milhões de saída) e o aviso vai ao Issue do relatório do dia.
+# Configuração: ambientes/rotinas-ia/rotinas.json (a rotina "gemini"). A chave: segredo GEMINI_API_KEY.
+name: rotina-ia-gemini
+on:
+  schedule:
+    - cron: "0 23 * * 4"   # quinta, 20h em Brasília (D-050), depois da rotina diária sem IA
+  workflow_dispatch: {}
+permissions:
+  contents: write   # só a ramificação claude/...: o main é protegido contra o token do workflow
+  issues: write
+  actions: write    # disparar a junção (workflow_dispatch é o único evento que o token do workflow dispara)
+concurrency:
+  group: rotina-ia-gemini
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+jobs:
+  rodada:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      PYTHONUTF8: "1"
+      TZ: America/Fortaleza
+      CL_GRAVADOR: rotina
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Configuração da rodada
+        id: cfg
+        run: |
+          echo "CL_FONTES_TMP=$RUNNER_TEMP/cl-fontes" >> "$GITHUB_ENV"
+          python - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json
+          r = next(x for x in json.load(open("ambientes/rotinas-ia/rotinas.json", encoding="utf-8"))["rotinas"] if x.get("chave") == "gemini")
+          print(f"lote={r['lote']}")
+          print(f"modelo_avaliador={r['modelos_por_habilidade']['extrair-evidencia']}")
+          print(f"modelo_auditor={r['modelos_por_habilidade']['segunda leitura (auditor, conferir-fato)']}")
+          print(f"teto_avaliador={r['teto_chamadas']['avaliador']}")
+          print(f"teto_auditor={r['teto_chamadas']['auditor']}")
+          EOF
+          D=$(date +%F)
+          echo "rotulo=RIA-$D-G1" >> "$GITHUB_OUTPUT"
+          echo "ramo=claude/rotina-ia-gemini-$D" >> "$GITHUB_OUTPUT"
+          [ -n "$GEMINI_API_KEY" ] && echo "chave=1" >> "$GITHUB_OUTPUT" || echo "chave=0" >> "$GITHUB_OUTPUT"
+      - name: Sem a chave, para e avisa
+        if: ${{ steps.cfg.outputs.chave != '1' }}
+        run: |
+          echo "sem o segredo GEMINI_API_KEY: a rodada não roda" | tee "$RUNNER_TEMP/rodada.out"
+          exit 1
+      - name: Preparar o lote (fila, leitura das fontes, pedido ao avaliador)
+        id: prep
+        env:
+          R: ${{ steps.cfg.outputs.rotulo }}
+        run: |
+          git config user.name "Rotina IA Gemini"
+          git config user.email "rotina-ia-gemini@users.noreply.github.com"
+          git checkout -b "${{ steps.cfg.outputs.ramo }}"
+          python scripts/rotina_ia.py preparar --rotulo "$R" --lote "${{ steps.cfg.outputs.lote }}" | tee "$RUNNER_TEMP/prep.out"
+          if grep -q "fila vazia" "$RUNNER_TEMP/prep.out"; then echo "vazia=1" >> "$GITHUB_OUTPUT"; fi
+          echo "T=$CL_FONTES_TMP/rotina-ia/$R" >> "$GITHUB_ENV"
+      - name: Avaliador (extrair-evidencia) pelo executor do Gemini
+        id: aval
+        if: ${{ steps.prep.outputs.vazia != '1' }}
+        env:
+          R: ${{ steps.cfg.outputs.rotulo }}
+        run: |
+          set +e
+          python scripts/gemini_agente.py --modelo "${{ steps.cfg.outputs.modelo_avaliador }}" --agente avaliador \
+            --habilidade extrair-evidencia --pedido "$T/pedido-avaliador.md" --pasta "$T" --ler-tambem "$CL_FONTES_TMP" \
+            --teto-chamadas "${{ steps.cfg.outputs.teto_avaliador }}" --rotulo "$R-avaliador" --tipo rotina \
+            --scripts localizar_trecho.py juntar_saida.py gravar_extracao.py --resumo "$T/resumo-avaliador.json" \
+            --log "rotina com IA (K-125), lote $R: extrair-evidencia pelo executor do Gemini" | tee "$RUNNER_TEMP/aval.out"
+          C=${PIPESTATUS[0]}
+          echo "codigo=$C" >> "$GITHUB_OUTPUT"
+          echo "ex=$(grep -o '^EX: EX-[0-9]*' "$RUNNER_TEMP/aval.out" | tail -1 | cut -d' ' -f2)" >> "$GITHUB_OUTPUT"
+      - name: Filtrar e gravar o lote
+        id: grav
+        if: ${{ steps.aval.outputs.ex != '' && (steps.aval.outputs.codigo == '0' || steps.aval.outputs.codigo == '2') }}
+        env:
+          R: ${{ steps.cfg.outputs.rotulo }}
+          EX: ${{ steps.aval.outputs.ex }}
+        run: |
+          python scripts/rotina_ia.py filtrar --rotulo "$R"
+          if python scripts/gravar_extracao.py "$T/saida-filtrada.json" --execucao "$EX" --manifestos "$CL_FONTES_TMP" --privado "$T/privado" | tee "$RUNNER_TEMP/grav.out"; then
+            echo "ok=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "a gravação reprovou: nada do lote se grava" | tee -a "$RUNNER_TEMP/grav.out"
+          fi
+      - name: Segunda leitura (auditor) pelo executor do Gemini
+        id: aud
+        if: ${{ steps.grav.outputs.ok == '1' }}
+        env:
+          R: ${{ steps.cfg.outputs.rotulo }}
+        run: |
+          python scripts/rotina_ia.py amostra --rotulo "$R"
+          set +e
+          python scripts/gemini_agente.py --modelo "${{ steps.cfg.outputs.modelo_auditor }}" --agente auditor \
+            --habilidade conferir-fato --pedido "$T/pedido-auditor.md" --pasta "$T" --ler-tambem "$CL_FONTES_TMP" \
+            --teto-chamadas "${{ steps.cfg.outputs.teto_auditor }}" --rotulo "$R-auditor" --tipo rotina \
+            --scripts localizar_trecho.py validar.py --resumo "$T/resumo-auditor.json" \
+            --log "rotina com IA (K-125), lote $R: segunda leitura (conferir-fato) pelo executor do Gemini" | tee "$RUNNER_TEMP/aud.out"
+          C=${PIPESTATUS[0]}
+          echo "codigo=$C" >> "$GITHUB_OUTPUT"
+          echo "ex=$(grep -o '^EX: EX-[0-9]*' "$RUNNER_TEMP/aud.out" | tail -1 | cut -d' ' -f2)" >> "$GITHUB_OUTPUT"
+      - name: Fechar o lote (segunda leitura gravada; depois dela nada muda)
+        if: ${{ steps.grav.outputs.ok == '1' && steps.aud.outputs.ex != '' }}
+        env:
+          R: ${{ steps.cfg.outputs.rotulo }}
+        run: |
+          python scripts/rotina_ia.py fechar --rotulo "$R" --execucao "${{ steps.aval.outputs.ex }}" --auditor "${{ steps.aud.outputs.ex }}" --veredito "não serve"
+      - name: Relatório da rodada, conferências, commit e envio à ramificação
+        id: envio
+        if: ${{ always() && steps.prep.outputs.vazia != '1' && steps.cfg.outputs.chave == '1' }}
+        env:
+          R: ${{ steps.cfg.outputs.rotulo }}
+        run: |
+          D=$(date +%F)
+          REL="trilhas/rotina-ia/$D-rodada-gemini.md"
+          python - "$R" "$T" > "$REL" <<'EOF'
+          import json, sys
+          from pathlib import Path
+          r, t = sys.argv[1], Path(sys.argv[2])
+          print(f"# Rotina com IA pelo Gemini — lote {r} (K-125; D-054)\n")
+          for ag in ("avaliador", "auditor"):
+              p = t / f"resumo-{ag}.json"
+              if not p.exists():
+                  print(f"- **{ag}:** não rodou"); continue
+              d = json.loads(p.read_text(encoding="utf-8"))
+              k = d["tokens"]
+              print(f"- **{ag}** ({d['modelo']}): estado {d['estado']}; {k['entrada']} tokens de entrada, {k['saida']} de saída; "
+                    f"{d['chamadas_api']} pedidos à API, {d['chamadas_ferramenta']} chamadas; Execução {d.get('execucao') or '—'}"
+                    + (f"; motivo: {d['motivo'][:200]}" if d["motivo"] else ""))
+          s = Path(f"trilhas/rotina-ia/{r}/segunda-leitura.json")
+          print(f"- **veredito do auditor:** {json.loads(s.read_text(encoding='utf-8'))['veredito'] if s.exists() else 'sem segunda leitura'}")
+          f = Path(f"trilhas/rotina-ia/{r}/fora-pessoa-citada.json")
+          if f.exists():
+              d = json.loads(f.read_text(encoding="utf-8"))
+              print(f"- **ficam para a conversa:** {', '.join(d['entradas'] + d['outra_clb']) or 'nenhuma'}")
+          EOF
+          python scripts/gemini_agente.py --semana | tee -a "$RUNNER_TEMP/semana.out"
+          { echo; echo "Semana (contador do executor): \`$(cat "$RUNNER_TEMP/semana.out")\`"; } >> "$REL"
+          python scripts/validar_acervo.py | tail -5 | tee "$RUNNER_TEMP/validar.out"
+          python scripts/procurar_dado_pessoal.py --git | tail -3 | tee -a "$RUNNER_TEMP/validar.out"
+          git add -A acervo entrada trilhas
+          git commit -q -m "Rotina com IA (Gemini), lote $R" || { echo "nada a enviar"; exit 0; }
+          git push -q -u origin HEAD
+          echo "enviado=1" >> "$GITHUB_OUTPUT"
+      - name: Disparar a junção (portão da camada 2)
+        if: ${{ steps.envio.outputs.enviado == '1' }}
+        run: gh workflow run rotina-ia-juncao.yml -f ramificacao="${{ steps.cfg.outputs.ramo }}"
+      - name: Resultado e avisos no Issue do relatório do dia
+        if: ${{ always() }}
+        run: |
+          N=$(gh issue list --state open --search "Relatório do dia (rotinas) in:title" --json number --jq '.[0].number')
+          [ -z "$N" ] && exit 0
+          AV="${{ steps.aval.outputs.codigo }}"; AU="${{ steps.aud.outputs.codigo }}"
+          {
+            echo "**Rotina com IA (Gemini) — lote ${{ steps.cfg.outputs.rotulo }}** — ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            [ "$AV" = "3" ] || [ "$AU" = "3" ] && echo && echo "**Teto da semana (D-054): a rodada parou antes de passar de 1 milhão de tokens de entrada ou 2 milhões de saída.**"
+            [ "$AV" = "4" ] || [ "$AU" = "4" ] && echo && echo "**Cota diária da API do Gemini esgotada:** a rodada parou."
+            echo
+            echo '```'
+            cat "$RUNNER_TEMP/rodada.out" "$RUNNER_TEMP/grav.out" "$RUNNER_TEMP/semana.out" "$RUNNER_TEMP/validar.out" 2>/dev/null | tail -40
+            echo '```'
+            [ "${{ steps.envio.outputs.enviado }}" = "1" ] && echo "Proposta em \`${{ steps.cfg.outputs.ramo }}\`; a junção roda pelo portão da camada 2."
+          } > "$RUNNER_TEMP/c.md"
+          gh issue comment "$N" --body-file "$RUNNER_TEMP/c.md"

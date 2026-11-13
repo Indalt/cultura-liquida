@@ -28,7 +28,7 @@ jobs:
         run: |
           ANTES="${{ github.event.before }}"
           if [ "$ANTES" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$ANTES" 2>/dev/null; then exit 0; fi
-          git log --first-parent --format='%h %ae %s' "$ANTES..${{ github.sha }}" | grep ' noreply@anthropic.com ' > "$RUNNER_TEMP/diretos.txt" || true
+          git log --first-parent --format='%h %ae %s' "$ANTES..${{ github.sha }}" | grep -E ' (noreply@anthropic.com|rotina-ia-gemini@users.noreply.github.com) ' > "$RUNNER_TEMP/diretos.txt" || true
           if [ -s "$RUNNER_TEMP/diretos.txt" ]; then echo "achou=1" >> "$GITHUB_OUTPUT"; fi
       - name: Avisar
         if: ${{ steps.vigia.outputs.achou == '1' }}
