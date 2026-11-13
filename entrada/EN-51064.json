@@ -3,7 +3,9 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50012"
+    "RC-50012",
+    "RC-50013",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-12",
   "url_ou_arquivo": "https://doi.org/10.11606/D.11.2019.tde-20191218-144612",

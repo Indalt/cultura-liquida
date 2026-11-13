@@ -3,7 +3,9 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50012"
+    "RC-50012",
+    "RC-50013",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-12",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP-2_99ec8f75e8291a9368382d5c15151b03",

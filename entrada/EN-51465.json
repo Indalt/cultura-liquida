@@ -1,0 +1,37 @@
+{
+  "id": "EN-51465",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50013"
+  ],
+  "data_entrada": "2026-11-13",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/IAC-1_12fbdc6fc25cd2b35a7324b846a3ceda",
+  "identificador": "AM-0022:IAC-1_12fbdc6fc25cd2b35a7324b846a3ceda",
+  "titulo": "Cultivo e características nutricionais de Pleurotus em substrato pasteurizado",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…eficiência biológica, massa fresca, composição centesimal dos cogumelos Pleurotus ostreatus (BF24) e Pleurotus sajor-caju (PSC96/03 e PSC01/06) produzidos no substrato capim-elefante (Pennisetum purpureum) pasteurizado e a relação…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

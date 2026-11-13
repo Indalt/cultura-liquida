@@ -4,7 +4,9 @@
   "ambiente": "AM-0022",
   "recortes": [
     "RC-50007",
-    "RC-50008"
+    "RC-50008",
+    "RC-50013",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "http://dx.doi.org/10.1590/S0100-204X2007000400004",

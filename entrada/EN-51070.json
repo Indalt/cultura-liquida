@@ -3,7 +3,9 @@
   "canal": "monitoramento e escavação",
   "ambiente": "AM-0022",
   "recortes": [
-    "RC-50012"
+    "RC-50012",
+    "RC-50013",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-12",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UEM-6_6e7430c6cf2af779a2c87e1a35ef301a",

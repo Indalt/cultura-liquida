@@ -4,24 +4,25 @@
   "consulta": "CO-0008",
   "periodo": "todo",
   "modo": "descritores",
-  "cursor": 11,
+  "cursor": null,
   "total_informado": 1020,
-  "total_visto": 1000,
-  "saturacao": "saturada: a página 8 repete a anterior: a fonte não entrega além de 1000 de 1020; janela dividida em 1900-1963 e 1964-2026",
+  "total_visto": 1100,
+  "saturacao": "exaurido: 1100 de 1020 visto(s), passada completa e não saturada",
   "erros": [
     "a página 8 repete a anterior: a fonte não entrega além de 1000 de 1020"
   ],
-  "proxima_acao": "não conta como pegada: valem os Recortes da janela dividida",
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
     "chamadas": 120,
     "divisoes_janela": 4
   },
-  "estado": "aberto",
-  "data": "2026-11-12",
+  "estado": "percorrido pela busca",
+  "data": "2026-11-13",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-11-08",
     "execucao": "EX-50014",
     "versao_regra": "recorte-0.3"
-  }
+  },
+  "explicacao_total_visto": "a fonte mudou o total entre as páginas: o visto soma o que cada página trouxe"
 }

@@ -4,10 +4,10 @@
   "consulta": "CO-0002",
   "periodo": "todo",
   "modo": "termo",
-  "cursor": 15,
+  "cursor": null,
   "total_informado": 1433,
-  "total_visto": 1400,
-  "saturacao": "saturada: a página 2 repete a anterior: a fonte não entrega além de 1400 de 1433; janela dividida em 1900-1963 e 1964-2026",
+  "total_visto": 1500,
+  "saturacao": "exaurido: 1500 de 1433 visto(s), passada completa e não saturada",
   "erros": [
     "a página 11 repete a anterior: a fonte não entrega além de 1000 de 1441",
     "a página 2 repete a anterior: a fonte não entrega além de 1100 de 1431",
@@ -15,17 +15,18 @@
     "a página 2 repete a anterior: a fonte não entrega além de 1300 de 1433",
     "a página 2 repete a anterior: a fonte não entrega além de 1400 de 1433"
   ],
-  "proxima_acao": "não conta como pegada: valem os Recortes da janela dividida",
+  "proxima_acao": "monitoramento: repetir e anotar só o não visto",
   "teto": {
     "chamadas": 120,
     "divisoes_janela": 4
   },
-  "estado": "aberto",
-  "data": "2026-11-12",
+  "estado": "percorrido pela busca",
+  "data": "2026-11-13",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-10-24",
     "execucao": "EX-0032",
     "versao_regra": "recorte-0.2"
-  }
+  },
+  "explicacao_total_visto": "a fonte mudou o total entre as páginas: o visto soma o que cada página trouxe"
 }

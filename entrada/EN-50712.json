@@ -4,7 +4,9 @@
   "ambiente": "AM-0022",
   "recortes": [
     "RC-50007",
-    "RC-50008"
+    "RC-50008",
+    "RC-50013",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/USP_ebc2f5512b64caa132fc273e12140b8b",

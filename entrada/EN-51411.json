@@ -1,0 +1,37 @@
+{
+  "id": "EN-51411",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50013",
+    "RC-50017"
+  ],
+  "data_entrada": "2026-11-13",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BRCRIS_27432a053fd6a556d4835e99cc1e3deb",
+  "identificador": "AM-0022:BRCRIS_27432a053fd6a556d4835e99cc1e3deb",
+  "titulo": "Modelo RCP ¿ Recursos, Conduta e Performance- aplicado ao setor exportador brasileiro de Amêndoas de Castanha de Caju.",
+  "ano": "2007",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

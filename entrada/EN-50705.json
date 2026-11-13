@@ -4,7 +4,9 @@
   "ambiente": "AM-0022",
   "recortes": [
     "RC-50007",
-    "RC-50008"
+    "RC-50008",
+    "RC-50013",
+    "RC-50017"
   ],
   "data_entrada": "2026-11-08",
   "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/EMBRAPA-4_a40fbd9685081bb0df9b1c3092bd0395",

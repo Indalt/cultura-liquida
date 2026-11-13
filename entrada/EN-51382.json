@@ -1,0 +1,38 @@
+{
+  "id": "EN-51382",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50013",
+    "RC-50017"
+  ],
+  "data_entrada": "2026-11-13",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/UFMG-8_9859c28d583433e20a4d0dae5917e969",
+  "identificador": "AM-0022:UFMG-8_9859c28d583433e20a4d0dae5917e969",
+  "titulo": "Desempenho produtivo de ovinos em confinamento alimentados com diferentes dietas",
+  "ano": "2009",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no resumo (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "citacao_resumo": "…ao acaso com quatro tratamentos e cinco repetições: milho + soja + feno de Tifton 85 (DR); milho + soja + caju + feno de Tifton 850 (DC); milho + soja + maracujá + feno de Tifton 85 (DM); milho desintegrado com palha e sabugo…",
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

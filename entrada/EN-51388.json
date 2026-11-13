@@ -1,0 +1,37 @@
+{
+  "id": "EN-51388",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50013",
+    "RC-50017"
+  ],
+  "data_entrada": "2026-11-13",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BRCRIS_f0fcb9db80fefc9ef9f08736f081a87c",
+  "identificador": "AM-0022:BRCRIS_f0fcb9db80fefc9ef9f08736f081a87c",
+  "titulo": "VIABILIDADE DO PROCESSO DE LODO ATIVADO APLICADO AO TRATAMENTO DA ÁGUA RESIDUÁRIA DE UMA INDÚSTRIA DE BENEFICIAMENTO DA CASTANHA DE CAJÚ",
+  "ano": "1999",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'cajú' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

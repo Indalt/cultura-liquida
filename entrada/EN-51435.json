@@ -1,0 +1,37 @@
+{
+  "id": "EN-51435",
+  "canal": "monitoramento e escavação",
+  "ambiente": "AM-0022",
+  "recortes": [
+    "RC-50013",
+    "RC-50017"
+  ],
+  "data_entrada": "2026-11-13",
+  "url_ou_arquivo": "https://oasisbr.ibict.br/vufind/Record/BRCRIS_403d40c4d951601d4de1d2259700763b",
+  "identificador": "AM-0022:BRCRIS_403d40c4d951601d4de1d2259700763b",
+  "titulo": "\"Efeito de resina fenólica derivada do líquido da casca da castanha de caju-LCC em misturas PP/NBR\"",
+  "ano": "1997",
+  "pretriagem": {
+    "estado": "segue",
+    "motivo": "forma 'caju' no título (CO-0001)",
+    "versao_regra": "pretriagem-0.1"
+  },
+  "estado": "bruto",
+  "sustenta_aviso_saude_politica": false,
+  "protecao": {
+    "licenca": "não conferido",
+    "consentimento": "não se aplica",
+    "restricao_comunitaria": "nenhuma conhecida",
+    "precisao_lugar": "não se aplica",
+    "dado_sensivel": false,
+    "crianca_ou_adolescente": false,
+    "pedido_de_retirada": "nenhum"
+  },
+  "nota": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem",
+  "origem_registro": {
+    "criado_por": "scripts/recorte.py",
+    "data": "2026-11-13",
+    "execucao": "EX-50033",
+    "versao_regra": "deduplicacao-0.2"
+  }
+}

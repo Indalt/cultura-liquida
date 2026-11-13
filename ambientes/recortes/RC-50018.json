@@ -4,18 +4,18 @@
   "consulta": "CO-0002",
   "periodo": "2012-2026",
   "modo": "termo",
-  "cursor": null,
-  "total_informado": null,
-  "total_visto": 0,
-  "saturacao": "não exaurido: 0 de ? visto(s)",
+  "cursor": 6,
+  "total_informado": 5811,
+  "total_visto": 500,
+  "saturacao": "não exaurido: 500 de 5811 visto(s)",
   "erros": [],
-  "proxima_acao": "dividir a janela com teto novo",
+  "proxima_acao": "retomar do cursor 6 com teto novo",
   "teto": {
     "chamadas": 120,
     "divisoes_janela": 1
   },
   "estado": "interrompido por teto",
-  "data": "2026-11-12",
+  "data": "2026-11-13",
   "origem_registro": {
     "criado_por": "scripts/recorte.py",
     "data": "2026-11-12",
@@ -23,6 +23,7 @@
     "versao_regra": "recorte-0.3"
   },
   "faltas": [
-    "F-50007"
+    "F-50007",
+    "F-50011"
   ]
 }
