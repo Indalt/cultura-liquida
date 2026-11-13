@@ -112,6 +112,26 @@ Devolva em `{trab}/auditor.json`: {{"veredito": "serve" | "serve com ressalvas" 
 """
 
 
+AGREGADORES = {"AM-0022": "https://oasisbr.ibict.br/vufind/api/v1/record"}
+
+
+def original_do_agregador(en: dict) -> str | None:
+    """O Oasisbr é agregador (insumo 116), e a página do registro pede verificação de navegador (ficha do
+    AM-0022; nunca se contorna). O link do texto vem pela API do VuFind (a via da ficha): o primeiro `urls`
+    do registro, no repositório de origem. Sem link, a Entrada vai pela página (e fica sem texto)."""
+    from _coleta import Cliente  # noqa: E402
+    rid = en.get("identificador", "").split(":", 1)[-1]
+    if not rid:
+        return None
+    try:
+        resp = Cliente().pedir(f"{AGREGADORES[en['ambiente']]}?id={rid}&field[]=urls")
+        urls = (resp.json().get("records") or [{}])[0].get("urls") or []
+    except Exception as e:  # noqa: BLE001
+        print(f"{en['id']}: API do agregador sem resposta ({e})")
+        return None
+    return urls[0]["url"] if urls else None
+
+
 def preparar(a) -> int:
     lote = trilha(a.rotulo) / "lote.json"
     r = rodar(str(S / "fila_ia.py"), "--lote", str(a.lote), "--saida", str(lote))
@@ -121,7 +141,16 @@ def preparar(a) -> int:
     if not ids:
         print("fila vazia: nada a fazer nesta rodada")
         return 0
-    r = rodar(str(S / "ler_fonte.py"), "--rotulo", a.rotulo, "--entrada", ",".join(ids))
+    diretas, originais = [], []
+    for en_id in ids:
+        en = json.loads((RAIZ / "entrada" / f"{en_id}.json").read_text(encoding="utf-8"))
+        url = original_do_agregador(en) if en.get("ambiente") in AGREGADORES else None
+        if url:
+            originais += ["--url", f"{en_id}={url}"]
+        else:
+            diretas.append(en_id)
+    args = ["--rotulo", a.rotulo] + (["--entrada", ",".join(diretas)] if diretas else []) + originais
+    r = rodar(str(S / "ler_fonte.py"), *args)
     t = trabalho(a.rotulo)
     (t / "itens").mkdir(exist_ok=True)
     (t / "trechos").mkdir(exist_ok=True)

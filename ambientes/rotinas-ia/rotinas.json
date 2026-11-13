@@ -1,0 +1,34 @@
+{
+  "versao": "rotinas-ia-0.1",
+  "nota": "Configuração versionada das rotinas com IA (bloco 10b, camada 2; K-113; D-050, D-053). Cada rotina existe na conta de Vicente (claude.ai/code/routines) e é criada ou mudada pela sessão de desenvolvimento pela API de rotinas, a partir deste arquivo; o texto que a rotina recebe aponta para o roteiro versionado aqui. O portão da camada 2 barra a proposta que muda esta pasta.",
+  "rotinas": [
+    {
+      "nome": "CL rotina com IA semanal (K-113)",
+      "id_na_conta": "a criar",
+      "repositorio": "https://github.com/Indalt/cultura-liquida",
+      "roteiro": "ambientes/rotinas-ia/rotina-semanal.md",
+      "texto": "Leia e siga ambientes/rotinas-ia/rotina-semanal.md, do começo ao fim, com lotes_por_rodada de ambientes/rotinas-ia/rotinas.json.",
+      "cadencia": {"cron_utc": "0 23 * * 4", "local": "quinta, 20h em Brasília", "porque": "às quintas (D-050), à noite: depois da rotina diária sem IA do dia (06h17, que o GitHub às vezes atrasa para a tarde) ter juntado ao main, para as duas camadas não gravarem ao mesmo tempo na faixa de IDs da rotina"},
+      "modelo_sessao": "claude-sonnet-5-5",
+      "modelos_por_habilidade": {
+        "extrair-evidencia": "claude-haiku-5-5",
+        "registrar-termo": "claude-haiku-5-5",
+        "montar-ficha": "claude-haiku-5-5",
+        "gerar-grafo": "claude-sonnet-5-5",
+        "triagem-juridica": "claude-sonnet-5-5",
+        "segunda leitura (auditor, conferir-fato)": "claude-sonnet-5-5",
+        "fonte": "testes/relatorio-modelos.md (K-115a; D-053)"
+      },
+      "habilidade_em_uso": "extrair-evidencia",
+      "lotes_por_rodada": 1,
+      "lote": 15,
+      "ferramentas": ["Bash", "Read", "Write", "Edit", "Glob", "Grep", "Agent", "Skill"],
+      "conectores": "nenhum",
+      "dominios": {
+        "nota": "os das fontes das Entradas (o ler_fonte.py abre a página do item) e os de instalação; a lista exata vem da rotina de teste",
+        "precisa": ["pypi.org", "files.pythonhosted.org", "github.com", "bdtd.ibict.br", "oasisbr.ibict.br", "www.infoteca.cnptia.embrapa.br", "bcr.iphan.gov.br", "web.archive.org", "archive.org", "os repositórios institucionais das Entradas (handle, DSpace)"]
+      },
+      "teto": "D-050: a ferramenta e as automações até 20% do limite semanal e 50% de cada janela de 5 h; lotes_por_rodada calibrado pelo custo medido"
+    }
+  ]
+}

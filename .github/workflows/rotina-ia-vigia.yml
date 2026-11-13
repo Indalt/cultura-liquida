@@ -1,0 +1,39 @@
+# Vigia do main (bloco 10b; K-113): a rotina de teste mostrou que a rotina com IA consegue gravar direto
+# no main (o envio sai com a identidade do dono, e a proteção do main não exige pull request;
+# trilhas/2026-11-13_K-113/). Até haver barreira por regra (insumo), a rotina só propõe por instrução, e
+# este workflow vigia: a cada envio ao main, se um commit da linha principal (primeiro pai) tem autor
+# "noreply@anthropic.com" (o autor dos commits da rotina na nuvem), ele chegou sem passar pelo portão da
+# camada 2 (que junta por um commit de junção, autor Vicente). Então avisa no Issue do relatório do dia
+# e falha (o GitHub manda e-mail). Não desfaz nada: quem corrige é a sessão de desenvolvimento.
+name: rotina-ia-vigia
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  vigia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Commits da rotina na linha principal
+        id: vigia
+        run: |
+          ANTES="${{ github.event.before }}"
+          if [ "$ANTES" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$ANTES" 2>/dev/null; then exit 0; fi
+          git log --first-parent --format='%h %ae %s' "$ANTES..${{ github.sha }}" | grep ' noreply@anthropic.com ' > "$RUNNER_TEMP/diretos.txt" || true
+          if [ -s "$RUNNER_TEMP/diretos.txt" ]; then echo "achou=1" >> "$GITHUB_OUTPUT"; fi
+      - name: Avisar
+        if: ${{ steps.vigia.outputs.achou == '1' }}
+        run: |
+          N=$(gh issue list --state open --search "Relatório do dia (rotinas) in:title" --json number --jq '.[0].number')
+          { echo "**Vigia do main:** commit(s) da rotina com IA no main sem passar pelo portão da camada 2 (K-113):"; echo '```'; cat "$RUNNER_TEMP/diretos.txt"; echo '```'; } > "$RUNNER_TEMP/c.md"
+          [ -n "$N" ] && gh issue comment "$N" --body-file "$RUNNER_TEMP/c.md"
+          exit 1

@@ -56,9 +56,10 @@ jobs:
           git config user.name "Vicente"
           git config user.email "vicente@dacaatinga.com.br"
           git fetch -q origin main
-          BASE=$(git merge-base origin/main HEAD)
-          echo "base=$BASE" >> "$GITHUB_OUTPUT"
-          if git merge --no-edit -m "Junção da proposta da rotina com IA ($RAMO) pelo portão da camada 2" origin/main; then
+          PROP=$(git rev-parse HEAD)
+          # o main como primeiro pai: a linha principal fica só com as junções (o vigia confere isso)
+          git checkout -q -B juncao origin/main
+          if git merge --no-ff --no-edit -m "Junção da proposta da rotina com IA ($RAMO) pelo portão da camada 2" "$PROP"; then
             echo "ok=1" >> "$GITHUB_OUTPUT"
           else
             git merge --abort || true
