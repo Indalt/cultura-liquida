@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 125 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 130 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -459,6 +459,11 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 123, abonação por leitura divergente | P; D | a definir pelo planejamento |
 | 124, D-047 e atribuição de origem | P; D | a definir pelo planejamento |
 | 125, modelo por habilidade na rotina | D; O | K-113 |
+| 126, a rotina com IA pode gravar direto no main | P; D | a definir pelo planejamento |
+| 127, a linha de uso não vê a rotina na nuvem | P; O | a definir pelo planejamento |
+| 128, a rotina com IA não alcança a tabela de pessoas | P; O | a definir pelo planejamento |
+| 129, as duas camadas na mesma faixa de IDs | P; D | a definir pelo planejamento |
+| 130, agregador, página de verificação e amostra da camada 2 | P; D | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-043
 

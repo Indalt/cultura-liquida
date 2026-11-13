@@ -77,24 +77,31 @@ O texto lido de cada fonte está em `{tmp}/<EN>.txt` (marca `[[p. n]]` por pági
 Leia só por `grep -n` e faixas de linhas. Não leia `acervo/` além do que a habilidade pede, nem `trilhas/`. Sem web.
 
 Para cada Evidência, rode
-`python scripts/localizar_trecho.py localizar --fonte {tmp}/<EN>.txt --trecho "<texto exato>" --saida {trab}/trechos/<EN>-<n>.json`
-O Trecho vale pelo arquivo do script, nunca pelo texto que você escreve. Pessoa citada só por rótulo local
+`{py} scripts/localizar_trecho.py localizar --fonte <arquivo> --trecho "<texto exato>" --saida {trab}/trechos/<EN>-<n>.json`
+com `<arquivo>` = o campo `arquivo` da Entrada no manifesto (o `.pdf` ou o `.html` lido), **nunca o `.txt`**: o `.txt`
+traz as marcas `[[p. n]]` e o hash dele não bate com o do manifesto (a gravação reprova; rodada de 13/11). Leia o `.txt`
+para achar o trecho, e localize no `arquivo`. O Trecho vale pelo arquivo do script, nunca pelo texto que você escreve.
+Texto que é página de verificação de navegador ("Verificando seu navegador", captcha) não é fonte: a Entrada vai à
+quarentena, sem Evidência (anti-robô nunca se contorna). Pessoa citada só por rótulo local
 (`voz.rotulo_pessoa`), nunca pelo nome.
 
 Grave um arquivo pequeno por Entrada em `{trab}/itens/<EN>.json` (um objeto do formato abaixo) e, no fim,
-`python scripts/juntar_saida.py {trab}/itens --saida {trab}/saida-avaliador.json --chave entradas --base {trab}/base.json`.
+`{py} scripts/juntar_saida.py {trab}/itens --saida {trab}/saida-avaliador.json --chave entradas --base {trab}/base.json`.
 Formato de cada Entrada (o do bloco 7):
 {{"entrada": "EN-nnnn", "estado": "aceito" | "quarentena",
- "valencias": {{"lastro": 0-2, "trecho_localizado": 0-2, "voz": 0-2, "versao_regra": "valencias-0.1", "criterio_em_falta": []}},
+ "valencias": {{"lastro": 0 a 2, "trecho_localizado": 0 a 2, "voz": 0 ou 1, "versao_regra": "valencias-0.1", "criterio_em_falta": []}},
  "sustenta_aviso_saude_politica": true | false,
  "fonte": {{"titulo": "...", "tipo_documento": "...", "ano": "...", "instituicao": "...", "tipo_evidencia": "...", "perspectiva": "...", "deriva_de": "..."}},
  "evidencias": [{{"arquivo_trecho": "{trab}/trechos/EN-nnnn-1.json", "chave": "<tema>|<valor curto>", "atributo": "...", "valor": "...",
    "periodo_referido": "...", "sentido": "a favor" | "divergente", "voz": {{"tipo": "...", "papel": "..."}},
    "lugares": {{"pratica": null, "publicacao": null, "pesquisa": null}},
    "criterio_pratica_cultural": null, "sustenta_aviso_saude_politica": false}}]}}
+Domínios (escala `escala_valencias` de `esquemas/valores-provisorios.json`, valencias-0.1): `voz` só 0 ou 1;
+`criterio_em_falta` só com os nomes `"lastro"`, `"trecho_localizado"` e `"voz"` (os que ficaram em 0), sem texto livre;
+o motivo vai ao log. Entrada sem texto lido: os três em 0, estado "quarentena", `criterio_em_falta` com os três.
 A Evidência de outra CLB (outro termo; D-039) leva `"clb": "outra: <termo>"` e fica para o cartão de lista.
 
-Validação (tem de passar): `python scripts/gravar_extracao.py {trab}/saida-avaliador.json --execucao EX-0000 --simular --manifestos {tmp} --privado {trab}/privado`.
+Validação (tem de passar): `{py} scripts/gravar_extracao.py {trab}/saida-avaliador.json --execucao EX-0000 --simular --manifestos {tmp} --privado {trab}/privado`.
 Termine com o resultado da validação e o bloco LOG (agente avaliador, habilidade extrair-evidencia, decisões por Entrada, alcance).
 """
 
@@ -104,7 +111,7 @@ Habilidade: conferir-fato (olhar mecânico; quem produz não confere; D-026). Mo
 Leia: a amostra `{amostra}` (semente e itens sorteados; regra amostra-0.2), o que o lote gravou nesta
 ramificação (`git diff --stat origin/main...HEAD` e os arquivos novos de `acervo/`) e, fora da amostra,
 todo item marcado "sustenta aviso, saúde ou política" (D-038). Para cada Trecho lido, confira contra o texto
-da fonte em `{tmp}/<EN>.txt` (`python scripts/localizar_trecho.py conferir <TR.json> --fonte {tmp}/<EN>.txt`)
+da fonte em `{tmp}/<EN>.txt` (`{py} scripts/localizar_trecho.py conferir <TR.json> --fonte {tmp}/<EN>.txt`)
 e a leitura fiel (a Evidência diz o que o trecho diz; negação e sentido contrário). Sem web.
 Devolva em `{trab}/auditor.json`: {{"veredito": "serve" | "serve com ressalvas" | "não serve", "achados": [...],
 "lidos": [ids]}} (achados no formato de `esquemas/achado-verificacao.schema.json`) e termine com o bloco LOG
@@ -157,7 +164,7 @@ def preparar(a) -> int:
     (t / "base.json").write_text(json.dumps({"lote": a.rotulo}) + "\n", encoding="utf-8")
     pedido = t / "pedido-avaliador.md"
     pedido.write_text(PEDIDO_AVALIADOR.format(rotulo=a.rotulo, ids=", ".join(ids), tmp=tmp().as_posix(),
-                                              trab=t.as_posix()), encoding="utf-8")
+                                              trab=t.as_posix(), py=Path(PY).as_posix()), encoding="utf-8")
     print(f"{VERSAO}: lote {a.rotulo} com {len(ids)} Entrada(s); pedido ao avaliador em {pedido.as_posix()}")
     return r.returncode
 
@@ -179,7 +186,7 @@ def filtrar(a) -> int:
          "conversa de trabalho (fora do Git e fora da nuvem)", "entradas": sai}, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8")
     print(f"{VERSAO}: {len(fica)} Entrada(s) seguem para a gravação; {len(sai)} ficam para a conversa ({', '.join(sai) or '-'})")
-    print(f"gravar: python scripts/gravar_extracao.py {(t / 'saida-filtrada.json').as_posix()} --execucao <EX do avaliador> "
+    print(f"gravar: {Path(PY).as_posix()} scripts/gravar_extracao.py {(t / 'saida-filtrada.json').as_posix()} --execucao <EX do avaliador> "
           f"--manifestos {tmp().as_posix()} --privado {(t / 'privado').as_posix()}")
     return 0
 
@@ -195,7 +202,7 @@ def amostra(a) -> int:
     t = trabalho(a.rotulo)
     (t / "amostra.txt").write_text(am + "\n", encoding="utf-8")
     pedido = t / "pedido-auditor.md"
-    pedido.write_text(PEDIDO_AUDITOR.format(rotulo=a.rotulo, amostra=am, tmp=tmp().as_posix(), trab=t.as_posix()),
+    pedido.write_text(PEDIDO_AUDITOR.format(rotulo=a.rotulo, amostra=am, tmp=tmp().as_posix(), trab=t.as_posix(), py=Path(PY).as_posix()),
                       encoding="utf-8")
     print(f"{VERSAO}: amostra {am}; pedido ao auditor em {pedido.as_posix()}")
     return 0
