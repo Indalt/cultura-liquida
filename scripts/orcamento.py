@@ -16,7 +16,8 @@ De onde vem cada número:
   "desenvolvimento" na tabela "Semana da conta" do checklist do piloto, na semana da última linha
   (ou --semana). O que o projeto já usou: A0, menos as linhas "fora do projeto" da semana; todo
   uso sem linha conta como do projeto, como no K-005. --dev-usado e --projeto-usado substituem.
-- A estimativa do lote: a última medida do mesmo agente com a mesma habilidade nos logs
+- A estimativa do lote: a última medida do mesmo agente com a mesma habilidade nos logs, fora os testes de modelo
+  (entrada_ref começando por "[teste de modelo]"; orcamento-0.3, K-115a, D-051 e D-053)
   (trilhas/logs/*.jsonl, tokens do retorno do Agent); sem medida, estimativa_sem_medida. --estimativa substitui.
 - Com a janela de 5 h acima de janela_5h_lote_unico_pct: só um lote, e a conversa fecha com o estado salvo.
 
@@ -81,6 +82,14 @@ def usado_na_semana(checklist: Path, semana: str | None) -> tuple[str, float, fl
     return semana, dev, fora, avisos
 
 
+MARCA_TESTE = "[teste de modelo]"
+
+
+def teste_de_modelo(d: dict) -> bool:
+    """O registro de um teste de modelo (bloco 12; K-115a): a entrada_ref começa pela marca."""
+    return str(d.get("entrada_ref", "")).startswith(MARCA_TESTE)
+
+
 def estimativa_dos_logs(logs: Path, agente: str, habilidade: str) -> tuple[int, str]:
     """A última medida do mesmo agente com a mesma habilidade; sem medida, a do registro."""
     ultima = None
@@ -89,6 +98,8 @@ def estimativa_dos_logs(logs: Path, agente: str, habilidade: str) -> tuple[int, 
             if not l.strip():
                 continue
             d = json.loads(l)
+            if teste_de_modelo(d):  # K-115a (D-051, D-053): o teste de modelo não é medida de produção
+                continue
             if d.get("agente") == agente and d.get("habilidade") == habilidade and isinstance(d.get("tokens"), int):
                 if ultima is None or d.get("data_hora", "") >= ultima.get("data_hora", ""):
                     ultima = d

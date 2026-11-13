@@ -1,0 +1,120 @@
+{
+  "lote": "C115",
+  "data": "2026-11-12",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "chamadas_usadas": 12,
+  "nao_conferido": [
+    "ID literal do Sonnet 5.5 (claude-sonnet-5-5) em pagina oficial",
+    "Peso de cada modelo no limite de uso dos planos",
+    "Segundo caso de alias de familia resolvido para a conversa principal (sub-agents)"
+  ],
+  "itens": [
+    {
+      "id": "C115.1",
+      "pergunta": "A ferramenta Agent aceita model por chamada, com precedencia sobre o frontmatter?",
+      "resposta": "Sim. O parametro model da chamada aceita alias (sonnet, opus, haiku, fable), nao ID completo nem inherit, e vem antes do frontmatter na ordem de resolucao.",
+      "observacao": "Um hook agent.spawn de mod pode trocar o modelo; CLAUDE_CODE_SUBAGENT_MODEL_FORCE=1 anula o parametro (C115.2). Alias da mesma familia da conversa principal roda no modelo exato da principal; so esse primeiro dos dois casos citados foi lido.",
+      "partes": [
+        {
+          "afirmacao": "Parametro model por chamada, so alias.",
+          "citacao": "When Claude invokes a subagent, it can also pass a model parameter for that specific invocation. On an Agent tool call, that parameter takes a model alias: sonnet, opus, haiku, or fable. Claude can’t pass a full model ID or inherit on that call.",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Ordem: chamada, frontmatter, variavel, conversa.",
+          "citacao": "Claude Code resolves the subagent’s model in this order: The per-invocation model parameter. The subagent definition’s model frontmatter, where inherit selects the main conversation’s model. The CLAUDE_CODE_SUBAGENT_MODEL environment variable, when you set it to a model alias or model ID. The main conversation’s model.",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C115.2",
+      "pergunta": "Aliases haiku/sonnet: qual modelo e ID? Ha variavel que anule a escolha por chamada?",
+      "resposta": "Na API da Anthropic, sonnet = Sonnet 5.5 e haiku = Haiku 5.5; ID do Haiku 5.5: claude-haiku-5-5 (Claude Code v2.1.293+). O ID literal do Sonnet 5.5 nao apareceu nas paginas lidas. CLAUDE_CODE_SUBAGENT_MODEL e so padrao; com CLAUDE_CODE_SUBAGENT_MODEL_FORCE=1 anula a chamada e o frontmatter.",
+      "observacao": "Em Bedrock, Google, Foundry e AWS os aliases apontam versoes anteriores.",
+      "partes": [
+        {
+          "afirmacao": "Aliases na API da Anthropic.",
+          "citacao": "The opus, sonnet, and haiku aliases resolve to the newest version on the Anthropic API and to an earlier version on some other providers: Anthropic API Opus 5.5 Sonnet 5.5 Haiku 5.5",
+          "url": "https://code.claude.com/docs/en/model-config",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "ID do Haiku 5.5.",
+          "citacao": "Its model ID is claude-haiku-5-5. To use it, run /model claude-haiku-5-5 in a session, or start Claude Code from your shell with claude --model claude-haiku-5-5. Use v2.1.293 or later with Haiku 5.5.",
+          "url": "https://code.claude.com/docs/en/model-config",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Variavel e padrao; FORCE anula.",
+          "citacao": "CLAUDE_CODE_SUBAGENT_MODEL is a default, so a subagent’s definition or a model Claude passes still takes precedence over it. To apply one model to every subagent, teammate, and workflow agent, also set CLAUDE_CODE_SUBAGENT_MODEL_FORCE to 1. While CLAUDE_CODE_SUBAGENT_MODEL_FORCE is on, Claude Code ignores the model field in subagent definitions, and Claude can’t pass a model when it starts a subagent.",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "ID literal do Sonnet 5.5 (claude-sonnet-5-5): nao apareceu nas paginas lidas.",
+          "nivel": "não conferido"
+        }
+      ]
+    },
+    {
+      "id": "C115.3",
+      "pergunta": "O effort do frontmatter vale com o modelo trocado por chamada? O Haiku 5.5 aceita effort?",
+      "resposta": "Sim: com outro modelo o nivel da sessao nao se aplica e a pagina manda definir o campo effort do frontmatter. Ha tambem effort por chamada (v2.1.292+), que prevalece sobre o frontmatter; CLAUDE_CODE_EFFORT_LEVEL prevalece sobre os dois. O Haiku 5.5 aceita low, medium, high, xhigh e max (padrao medium).",
+      "observacao": "A pagina nao diz com todas as letras 'o frontmatter vale com modelo trocado por chamada'; e deducao da frase sobre outro modelo mais a descricao do campo. Linhas lidas em texto extraido da pagina (tags removidas).",
+      "partes": [
+        {
+          "afirmacao": "Campo effort do frontmatter.",
+          "citacao": "Effort level when this subagent is active. Overrides the session effort level, but not the CLAUDE_CODE_EFFORT_LEVEL environment variable. Options: low, medium, high, xhigh, max; available levels depend on the model.",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Em outro modelo o nivel da sessao nao se aplica.",
+          "citacao": "On another model, that level doesn’t apply. To choose its level, set the effort field.",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Effort por chamada.",
+          "citacao": "The parameter overrides the effort field and stays in effect when the subagent is resumed. The CLAUDE_CODE_EFFORT_LEVEL environment variable takes precedence over both. The per-invocation parameter requires Claude Code v2.1.292 or later.",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Haiku 5.5 aceita niveis.",
+          "citacao": "Opus 5.5, Sonnet 5.5, Haiku 5.5, Opus 5, Sonnet 5, Opus 4.8, and Opus 4.7 low, medium, high, xhigh, max. The model’s default effort: Fable 5.2, Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to medium",
+          "url": "https://code.claude.com/docs/en/model-config",
+          "nivel": "oficial"
+        }
+      ]
+    },
+    {
+      "id": "C115.4",
+      "pergunta": "Preco por MTok (entrada e saida) do Haiku 5.5 e do Sonnet 5.5; peso no limite dos planos.",
+      "resposta": "Sonnet 5.5: US$ 2 entrada, US$ 10 saida. Haiku 5.5: US$ 0,10 entrada, US$ 0,50 saida (prompt ate 100 mil tokens; acima, US$ 0,50 e US$ 2,50). Haiku 5.5 e o mais barato (cerca de 20 vezes menos que o Sonnet 5.5 ate 100 mil). Peso por modelo no limite da assinatura: nao conferido.",
+      "observacao": "Colunas lidas do HTML cru: entrada, saida, escrita de cache 5m, 1h, leitura. A pagina de planos (support.claude.com, artigo 11145838) abriu, mas a busca por Haiku, Sonnet e Opus nao achou linha de peso por modelo.",
+      "partes": [
+        {
+          "afirmacao": "Sonnet 5.5.",
+          "citacao": "Claude Sonnet 5.5 The best combination of speed and intelligence $2 / MTok $10 / MTok $2.50 / MTok $4 / MTok $0.10 / MTok",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Haiku 5.5, por tamanho do prompt.",
+          "citacao": "$0.10 / MTok for prompts up to 100,000 tokens ... $0.50 / MTok ... $0.50 / MTok for prompts over 100,000 tokens ... $2.50 / MTok",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "nivel": "oficial"
+        },
+        {
+          "afirmacao": "Peso de cada modelo no limite de uso da assinatura: a pagina de planos aberta nao trouxe a informacao.",
+          "nivel": "não conferido"
+        }
+      ]
+    }
+  ]
+}

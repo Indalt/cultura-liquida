@@ -14,7 +14,7 @@
     "versao_harness": {"type": "string", "pattern": "^([0-9]+\\.[0-9]+\\.[0-9]+|n/a)$"},
     "modelo": {"type": "string", "minLength": 1},
     "esforco": {"enum": ["low", "medium", "high", "xhigh", "max", "n/a"]},
-    "entrada_ref": {"type": "string", "minLength": 1, "description": "Caminho, commit ou ID da entrada; nunca o conteúdo."},
+    "entrada_ref": {"type": "string", "minLength": 1, "description": "Caminho, commit ou ID da entrada; nunca o conteúdo. O teste de modelo do bloco 12 começa por \"[teste de modelo]\" (K-115a; D-051, D-053): não é medida de produção (orcamento.py, relatório do piloto, K-005)."},
     "ambientes": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs dos Ambientes usados (brief, bloco 1; a l. 593 pede Recortes e Consultas)."},
     "consultas": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs das Consultas usadas (l. 593)."},
     "recortes": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "IDs dos Recortes usados (l. 593)."},

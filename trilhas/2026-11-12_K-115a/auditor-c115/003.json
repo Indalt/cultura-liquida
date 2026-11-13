@@ -1,0 +1,32 @@
+{
+ "id": "C115.3",
+ "pergunta": "O effort do frontmatter vale com o modelo trocado por chamada? O Haiku 5.5 aceita effort?",
+ "resposta": "Sim: com outro modelo o nivel da sessao nao se aplica e a pagina manda definir o campo effort do frontmatter. Ha tambem effort por chamada (v2.1.292+), que prevalece sobre o frontmatter; CLAUDE_CODE_EFFORT_LEVEL prevalece sobre os dois. O Haiku 5.5 aceita low, medium, high, xhigh e max (padrao medium).",
+ "observacao": "A pagina nao diz com todas as letras 'o frontmatter vale com modelo trocado por chamada'; e deducao da frase sobre outro modelo mais a descricao do campo. Linhas lidas em texto extraido da pagina (tags removidas).",
+ "partes": [
+  {
+   "afirmacao": "Campo effort do frontmatter.",
+   "citacao": "Effort level when this subagent is active. Overrides the session effort level, but not the CLAUDE_CODE_EFFORT_LEVEL environment variable. Options: low, medium, high, xhigh, max; available levels depend on the model.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Em outro modelo o nivel da sessao nao se aplica.",
+   "citacao": "On another model, that level doesn’t apply. To choose its level, set the effort field.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Effort por chamada.",
+   "citacao": "The parameter overrides the effort field and stays in effect when the subagent is resumed. The CLAUDE_CODE_EFFORT_LEVEL environment variable takes precedence over both. The per-invocation parameter requires Claude Code v2.1.292 or later.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Haiku 5.5 aceita niveis.",
+   "citacao": "Opus 5.5, Sonnet 5.5, Haiku 5.5, Opus 5, Sonnet 5, Opus 4.8, and Opus 4.7 low, medium, high, xhigh, max. The model’s default effort: Fable 5.2, Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to medium",
+   "url": "https://code.claude.com/docs/en/model-config",
+   "nivel": "oficial"
+  }
+ ]
+}

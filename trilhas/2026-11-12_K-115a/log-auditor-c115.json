@@ -1,0 +1,47 @@
+{
+  "data_hora": "2026-11-12T22:31:13-03:00",
+  "agente": "auditor",
+  "habilidade": "conferir-fato",
+  "versao_harness": "0.2.0",
+  "modelo": "claude-sonnet-5-5",
+  "esforco": "high",
+  "entrada_ref": "lote C115 (K-115a, bloco 12, item 1a): como escolher o modelo de um subagente a cada chamada; trilhas/2026-11-12_K-115a/conferencia-c115.json",
+  "acoes": [
+    "curl -sL com User-Agent de robô em code.claude.com/docs/en/sub-agents, code.claude.com/docs/en/model-config e platform.claude.com/docs/en/about-claude/pricing (HTTP 200)",
+    "página de planos do Claude Code (support.claude.com, artigo 11145838) por busca de nomes de modelo",
+    "4 itens e a base gravados; juntar_saida.py --esquema conferencia passou"
+  ],
+  "resultados": [
+    "C115.1 oficial: a ferramenta Agent aceita model por chamada (alias sonnet, opus, haiku ou fable), com precedência sobre o frontmatter; ressalvas: hook agent.spawn de mod e alias da mesma família da conversa principal",
+    "C115.2 oficial: haiku resolve para Haiku 5.5 (claude-haiku-5-5) e sonnet para Sonnet 5.5 na API; CLAUDE_CODE_SUBAGENT_MODEL_FORCE=1 anularia a escolha por chamada; ID literal do Sonnet 5.5 não conferido",
+    "C115.3 oficial: o effort do frontmatter vale em outro modelo; há effort por chamada; Haiku 5.5 aceita low a max",
+    "C115.4 oficial: Sonnet 5.5 US$ 2 / 10 por milhão (entrada/saída); Haiku 5.5 US$ 0,10 / 0,50 até 100 mil tokens de prompt; o peso de cada modelo no limite dos planos não conferido"
+  ],
+  "saidas": ["trilhas/2026-11-12_K-115a/conferencia-c115.json"],
+  "decisoes": [
+    {"item": "C115.1", "decisao": "aceito", "motivo": "citações literais da página oficial sub-agents"},
+    {"item": "C115.2", "decisao": "aceito", "motivo": "citações literais de model-config e sub-agents"},
+    {"item": "C115.2 (ID literal do Sonnet 5.5)", "decisao": "falta", "motivo": "claude-sonnet-5-5 não aparece nas páginas lidas"},
+    {"item": "C115.3", "decisao": "aceito", "motivo": "citações literais; o nexo com a troca de modelo por chamada é dedução, dita na observação"},
+    {"item": "C115.4 (preços)", "decisao": "aceito", "motivo": "tabela oficial de preços, colunas conferidas no HTML cru"},
+    {"item": "C115.4 (peso nos planos)", "decisao": "falta", "motivo": "a página de planos aberta não traz peso por modelo"}
+  ],
+  "tokens": 64677,
+  "chamadas": 10,
+  "duracao_s": 162.0,
+  "erros": ["um comando de gravação acima de uns 8 mil caracteres falhou (unexpected EOF) e foi refeito mais curto"],
+  "alcance": {
+    "olhado": [
+      "code.claude.com/docs/en/sub-agents (seções de modelo, esforço e quadro de campos)",
+      "code.claude.com/docs/en/model-config (aliases, ID do Haiku 5.5, tabela de esforço)",
+      "platform.claude.com/docs/en/about-claude/pricing (tabela de preços)",
+      "support.claude.com/en/articles/11145838 (busca por nomes de modelo e limites)"
+    ],
+    "fora": [
+      "ID literal do Sonnet 5.5 em página oficial (não achado)",
+      "peso por modelo no limite dos planos (não achado)",
+      "o segundo caso de alias da mesma família da conversa principal (não lido)",
+      "páginas de modelos e de créditos de API para assinantes (teto de chamadas)"
+    ]
+  }
+}

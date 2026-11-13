@@ -1,0 +1,20 @@
+{
+ "id": "C115.1",
+ "pergunta": "A ferramenta Agent aceita model por chamada, com precedencia sobre o frontmatter?",
+ "resposta": "Sim. O parametro model da chamada aceita alias (sonnet, opus, haiku, fable), nao ID completo nem inherit, e vem antes do frontmatter na ordem de resolucao.",
+ "observacao": "Um hook agent.spawn de mod pode trocar o modelo; CLAUDE_CODE_SUBAGENT_MODEL_FORCE=1 anula o parametro (C115.2). Alias da mesma familia da conversa principal roda no modelo exato da principal; so esse primeiro dos dois casos citados foi lido.",
+ "partes": [
+  {
+   "afirmacao": "Parametro model por chamada, so alias.",
+   "citacao": "When Claude invokes a subagent, it can also pass a model parameter for that specific invocation. On an Agent tool call, that parameter takes a model alias: sonnet, opus, haiku, or fable. Claude can’t pass a full model ID or inherit on that call.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Ordem: chamada, frontmatter, variavel, conversa.",
+   "citacao": "Claude Code resolves the subagent’s model in this order: The per-invocation model parameter. The subagent definition’s model frontmatter, where inherit selects the main conversation’s model. The CLAUDE_CODE_SUBAGENT_MODEL environment variable, when you set it to a model alias or model ID. The main conversation’s model.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "oficial"
+  }
+ ]
+}

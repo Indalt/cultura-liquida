@@ -1,0 +1,30 @@
+{
+ "id": "C115.2",
+ "pergunta": "Aliases haiku/sonnet: qual modelo e ID? Ha variavel que anule a escolha por chamada?",
+ "resposta": "Na API da Anthropic, sonnet = Sonnet 5.5 e haiku = Haiku 5.5; ID do Haiku 5.5: claude-haiku-5-5 (Claude Code v2.1.293+). O ID literal do Sonnet 5.5 nao apareceu nas paginas lidas. CLAUDE_CODE_SUBAGENT_MODEL e so padrao; com CLAUDE_CODE_SUBAGENT_MODEL_FORCE=1 anula a chamada e o frontmatter.",
+ "observacao": "Em Bedrock, Google, Foundry e AWS os aliases apontam versoes anteriores.",
+ "partes": [
+  {
+   "afirmacao": "Aliases na API da Anthropic.",
+   "citacao": "The opus, sonnet, and haiku aliases resolve to the newest version on the Anthropic API and to an earlier version on some other providers: Anthropic API Opus 5.5 Sonnet 5.5 Haiku 5.5",
+   "url": "https://code.claude.com/docs/en/model-config",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "ID do Haiku 5.5.",
+   "citacao": "Its model ID is claude-haiku-5-5. To use it, run /model claude-haiku-5-5 in a session, or start Claude Code from your shell with claude --model claude-haiku-5-5. Use v2.1.293 or later with Haiku 5.5.",
+   "url": "https://code.claude.com/docs/en/model-config",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Variavel e padrao; FORCE anula.",
+   "citacao": "CLAUDE_CODE_SUBAGENT_MODEL is a default, so a subagent’s definition or a model Claude passes still takes precedence over it. To apply one model to every subagent, teammate, and workflow agent, also set CLAUDE_CODE_SUBAGENT_MODEL_FORCE to 1. While CLAUDE_CODE_SUBAGENT_MODEL_FORCE is on, Claude Code ignores the model field in subagent definitions, and Claude can’t pass a model when it starts a subagent.",
+   "url": "https://code.claude.com/docs/en/sub-agents",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "ID literal do Sonnet 5.5 (claude-sonnet-5-5): nao apareceu nas paginas lidas.",
+   "nivel": "não conferido"
+  }
+ ]
+}

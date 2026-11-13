@@ -1,3 +1,4 @@
 {"data_hora": "2026-10-22T10:00:00-03:00", "agente": "auditor", "habilidade": "verificar-fundacao", "tokens": 73464, "chamadas": 18, "nota": "exemplo sintético (K-123)"}
 {"data_hora": "2026-10-22T23:47:00-03:00", "agente": "auditor", "habilidade": "verificar-fundacao", "tokens": 159897, "chamadas": 19, "nota": "exemplo sintético (K-123)"}
 {"data_hora": "2026-10-22T23:50:00-03:00", "agente": "auditor", "habilidade": "n/a", "tokens": null, "chamadas": null, "nota": "linha mínima do hook: não conta"}
+{"data_hora": "2026-10-23T09:00:00-03:00", "agente": "auditor", "habilidade": "verificar-fundacao", "entrada_ref": "[teste de modelo] K-115a, exemplo sintético", "modelo": "claude-haiku-5-5", "tokens": 11111, "chamadas": 3, "nota": "teste de modelo: não conta como medida de produção (K-115a)"}

@@ -1,0 +1,24 @@
+{
+ "id": "C115.4",
+ "pergunta": "Preco por MTok (entrada e saida) do Haiku 5.5 e do Sonnet 5.5; peso no limite dos planos.",
+ "resposta": "Sonnet 5.5: US$ 2 entrada, US$ 10 saida. Haiku 5.5: US$ 0,10 entrada, US$ 0,50 saida (prompt ate 100 mil tokens; acima, US$ 0,50 e US$ 2,50). Haiku 5.5 e o mais barato (cerca de 20 vezes menos que o Sonnet 5.5 ate 100 mil). Peso por modelo no limite da assinatura: nao conferido.",
+ "observacao": "Colunas lidas do HTML cru: entrada, saida, escrita de cache 5m, 1h, leitura. A pagina de planos (support.claude.com, artigo 11145838) abriu, mas a busca por Haiku, Sonnet e Opus nao achou linha de peso por modelo.",
+ "partes": [
+  {
+   "afirmacao": "Sonnet 5.5.",
+   "citacao": "Claude Sonnet 5.5 The best combination of speed and intelligence $2 / MTok $10 / MTok $2.50 / MTok $4 / MTok $0.10 / MTok",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Haiku 5.5, por tamanho do prompt.",
+   "citacao": "$0.10 / MTok for prompts up to 100,000 tokens ... $0.50 / MTok ... $0.50 / MTok for prompts over 100,000 tokens ... $2.50 / MTok",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "nivel": "oficial"
+  },
+  {
+   "afirmacao": "Peso de cada modelo no limite de uso da assinatura: a pagina de planos aberta nao trouxe a informacao.",
+   "nivel": "não conferido"
+  }
+ ]
+}

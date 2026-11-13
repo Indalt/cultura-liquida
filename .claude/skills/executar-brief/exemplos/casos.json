@@ -92,7 +92,7 @@
     "verificar-fundacao"
    ],
    "saida_contem": "159.897 tokens, última medida de auditor/verificar-fundacao",
-   "criterio": "D-040, diretriz 5: a última medida, tirada dos logs; a linha do hook com tokens nulos não conta"
+   "criterio": "D-040, diretriz 5: a última medida, tirada dos logs; a linha do hook com tokens nulos não conta; a linha de teste de modelo (entrada_ref com \"[teste de modelo]\", 11.111 tokens, mais nova) também não (K-115a, D-051, D-053)"
   },
   {
    "nome": "estimativa sem medida: 96.520",

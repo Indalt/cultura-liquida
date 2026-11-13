@@ -1,0 +1,12 @@
+{
+ "lote": "C115",
+ "data": "2026-11-12",
+ "modelo": "claude-sonnet-5-5",
+ "esforco": "high",
+ "chamadas_usadas": 12,
+ "nao_conferido": [
+  "ID literal do Sonnet 5.5 (claude-sonnet-5-5) em pagina oficial",
+  "Peso de cada modelo no limite de uso dos planos",
+  "Segundo caso de alias de familia resolvido para a conversa principal (sub-agents)"
+ ]
+}
