@@ -110,8 +110,9 @@ PEDIDO_AUDITOR = """# Pedido ao auditor — segunda leitura da rotina com IA (K-
 Habilidade: conferir-fato (olhar mecânico; quem produz não confere; D-026). Modelo: Sonnet 5.5. Teto: 30 chamadas.
 Leia: a amostra `{amostra}` (semente e itens sorteados; regra amostra-0.2), o que o lote gravou nesta
 ramificação (`git diff --stat origin/main...HEAD` e os arquivos novos de `acervo/`) e, fora da amostra,
-todo item marcado "sustenta aviso, saúde ou política" (D-038). Para cada Trecho lido, confira contra o texto
-da fonte em `{tmp}/<EN>.txt` (`{py} scripts/localizar_trecho.py conferir <TR.json> --fonte {tmp}/<EN>.txt`)
+todo item marcado "sustenta aviso, saúde ou política" (D-038). Para cada Trecho lido, confira contra o arquivo lido
+da fonte (o campo `arquivo` da Entrada em `{tmp}/lote-{rotulo}.json`, o `.pdf` ou o `.html`; nunca o `.txt`):
+`{py} scripts/localizar_trecho.py conferir <TR.json> --fonte <arquivo>`
 e a leitura fiel (a Evidência diz o que o trecho diz; negação e sentido contrário). Sem web.
 Devolva em `{trab}/auditor.json`: {{"veredito": "serve" | "serve com ressalvas" | "não serve", "achados": [...],
 "lidos": [ids]}} (achados no formato de `esquemas/achado-verificacao.schema.json`) e termine com o bloco LOG
@@ -173,19 +174,27 @@ def filtrar(a) -> int:
     t = trabalho(a.rotulo)
     arq = t / "saida-avaliador.json"
     s = json.loads(arq.read_text(encoding="utf-8"))
-    fica, sai = [], []
+    fica, sai, outra = [], [], []
     for en in s.get("entradas", []):
-        if any((ev.get("voz") or {}).get("rotulo_pessoa") for ev in en.get("evidencias", [])):
+        evs = en.get("evidencias", [])
+        if any((ev.get("voz") or {}).get("rotulo_pessoa") for ev in evs):
             sai.append(en["entrada"])
+        # Evidência de outra CLB (D-039): não entra na CLB do lote; a Entrada fica para a conversa, que grava com
+        # `--clb` na CLB candidata e manda o detalhe de povo nomeado à pasta local (D-043, 3; rodada de 13/11)
+        elif any(str(ev.get("clb", "")).startswith("outra") for ev in evs):
+            outra.append(en["entrada"])
         else:
             fica.append(en)
     s["entradas"] = fica
     (t / "saida-filtrada.json").write_text(json.dumps(s, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (trilha(a.rotulo) / "fora-pessoa-citada.json").write_text(json.dumps(
         {"versao_regra": VERSAO, "motivo": "pessoa citada por rótulo: a tabela código → nome só se grava na "
-         "conversa de trabalho (fora do Git e fora da nuvem)", "entradas": sai}, ensure_ascii=False, indent=1) + "\n",
+         "conversa de trabalho (fora do Git e fora da nuvem)", "entradas": sai,
+         "outra_clb": outra, "motivo_outra_clb": "Evidência de outra CLB (D-039): a conversa grava com --clb e manda o "
+         "detalhe de povo nomeado à pasta local (D-043, 3)"}, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8")
-    print(f"{VERSAO}: {len(fica)} Entrada(s) seguem para a gravação; {len(sai)} ficam para a conversa ({', '.join(sai) or '-'})")
+    print(f"{VERSAO}: {len(fica)} Entrada(s) seguem para a gravação; {len(sai) + len(outra)} ficam para a conversa "
+          f"({', '.join(sai + outra) or '-'})")
     print(f"gravar: {Path(PY).as_posix()} scripts/gravar_extracao.py {(t / 'saida-filtrada.json').as_posix()} --execucao <EX do avaliador> "
           f"--manifestos {tmp().as_posix()} --privado {(t / 'privado').as_posix()}")
     return 0

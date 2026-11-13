@@ -4,7 +4,7 @@
   "rotinas": [
     {
       "nome": "CL rotina com IA semanal (K-113)",
-      "id_na_conta": "a criar",
+      "id_na_conta": "trig_01VTM4aiUKUFmwewkJTtuem1 (ligada em 13/11; próxima: 19/11, 20h em Brasília)",
       "repositorio": "https://github.com/Indalt/cultura-liquida",
       "roteiro": "ambientes/rotinas-ia/rotina-semanal.md",
       "texto": "Leia e siga ambientes/rotinas-ia/rotina-semanal.md, do começo ao fim, com lotes_por_rodada de ambientes/rotinas-ia/rotinas.json.",
