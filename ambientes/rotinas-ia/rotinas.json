@@ -24,6 +24,7 @@
       "lote": 15,
       "ferramentas": ["Bash", "Read", "Write", "Edit", "Glob", "Grep", "Agent", "Skill"],
       "conectores": "nenhum",
+      "ambiente": {"nome": "cultura-liquida", "id": "env_01DzS5FMCpJN5sbeX57MsngB", "rede": "Full (criado por Vicente em 13/11); sonda de 13/11: BDTD, Oasisbr, Infoteca-e, BCR e repositorio.ufc.br com 200; web.archive.org e www.teses.usp.br com conexão recusada pelo outro lado"},
       "dominios": {
         "nota": "os das fontes das Entradas (o ler_fonte.py abre a página do item) e os de instalação; a lista exata vem da rotina de teste",
         "precisa": ["pypi.org", "files.pythonhosted.org", "github.com", "bdtd.ibict.br", "oasisbr.ibict.br", "www.infoteca.cnptia.embrapa.br", "bcr.iphan.gov.br", "web.archive.org", "archive.org", "os repositórios institucionais das Entradas (handle, DSpace)"]
