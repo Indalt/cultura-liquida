@@ -1,0 +1,66 @@
+{
+ "nome": "rt-te0002",
+ "habilidade": "registrar-termo",
+ "agente": "arquivista",
+ "base_commit": "288c4b0",
+ "teto_chamadas": 20,
+ "par_real": "K-110 e lote de correção de 30/10 (EX-0070, EX-0083): TE-0002 (cajuína), atestado, com 'mocororó' como termo ambíguo",
+ "registros": [
+  "TE-0002",
+  "TE-0004"
+ ],
+ "fecho": true,
+ "retirar": [
+  "TE-0002"
+ ],
+ "validadores": [
+  [
+   "scripts/validar_acervo.py",
+   "--raiz",
+   "{raiz}"
+  ],
+  [
+   "scripts/gerar_termo.py",
+   "--raiz",
+   "{raiz}"
+  ]
+ ],
+ "gabarito": [
+  {
+   "tipo": "termo",
+   "id": "TE-0002",
+   "designacao": "cajuína",
+   "variantes": [
+    "mocororó"
+   ],
+   "evidencias_dadas": [
+    "EV-0001",
+    "EV-0034",
+    "EV-0028",
+    "EV-0036",
+    "EV-0084",
+    "EV-0409",
+    "EV-0192",
+    "EV-0051",
+    "EV-0158",
+    "EV-0004",
+    "EV-0020"
+   ]
+  }
+ ],
+ "erro": {
+  "descricao": "'mocororó' sem a marca de termo ambíguo (o erro do K-110)",
+  "mudancas": [
+   {
+    "arquivo": "acervo/termos/TE-0002.json",
+    "op": "set",
+    "caminho": [
+     "variantes",
+     1,
+     "tipo_variacao"
+    ],
+    "valor": "designação local, de alguns produtores do Piauí, para a cajuína crua"
+   }
+  ]
+ }
+}

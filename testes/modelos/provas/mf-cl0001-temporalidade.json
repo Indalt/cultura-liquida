@@ -1,0 +1,66 @@
+{
+ "nome": "mf-cl0001-temporalidade",
+ "habilidade": "montar-ficha",
+ "agente": "arquivista",
+ "base_commit": "288c4b0",
+ "teto_chamadas": 20,
+ "par_real": "K-110 (EX-0072): a seção Temporalidade da ficha CL-0001, 17 Proposições",
+ "registros": [
+  "CL-0001"
+ ],
+ "fichas": [
+  "CL-0001.md"
+ ],
+ "fecho": true,
+ "mudancas": [
+  {
+   "op": "secao",
+   "arquivo": "acervo/fichas/CL-0001.md",
+   "titulo": "## Temporalidade",
+   "para": "<!-- seção a escrever: Temporalidade (K-115a) -->"
+  }
+ ],
+ "validadores": [
+  [
+   "scripts/validar_acervo.py",
+   "--raiz",
+   "{raiz}"
+  ]
+ ],
+ "gabarito": [
+  {
+   "tipo": "secao",
+   "ficha": "CL-0001.md",
+   "titulo": "## Temporalidade",
+   "proposicoes_dadas": [
+    "PR-0114",
+    "PR-0081",
+    "PR-0238",
+    "PR-0247",
+    "PR-0082",
+    "PR-0111",
+    "PR-0402",
+    "PR-0025",
+    "PR-0119",
+    "PR-0225",
+    "PR-0282",
+    "PR-0054",
+    "PR-0149",
+    "PR-0079",
+    "PR-0064",
+    "PR-0169",
+    "PR-0261"
+   ]
+  }
+ ],
+ "erro": {
+  "descricao": "uma frase factual sem a marca da Proposição",
+  "mudancas": [
+   {
+    "arquivo": "acervo/fichas/CL-0001.md",
+    "de": "inserção no mercado, sem perder o lugar no cotidiano familiar e o valor de reciprocidade (μ 0,5, intermediário) [PR-0119].",
+    "para": "inserção no mercado, sem perder o lugar no cotidiano familiar e o valor de reciprocidade (μ 0,5, intermediário)."
+   }
+  ]
+ }
+}

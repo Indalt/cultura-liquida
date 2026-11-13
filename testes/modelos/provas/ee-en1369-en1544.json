@@ -1,0 +1,154 @@
+{
+ "nome": "ee-en1369-en1544",
+ "habilidade": "extrair-evidencia",
+ "agente": "avaliador",
+ "base_commit": "288c4b0",
+ "teto_chamadas": 25,
+ "par_real": "K-109, lote K109-L1 (EX-0046): EN-1369 → FO-0010, TR-0031 a TR-0035; EN-1544 → FO-0014, TR-0038 a TR-0042",
+ "registros": [
+  "EN-1369",
+  "EN-1544",
+  "CL-0001",
+  "TE-0002"
+ ],
+ "caminhos": [
+  "acervo/lugares/ibge"
+ ],
+ "mudancas": [
+  {
+   "registro": "EN-1369",
+   "op": "set",
+   "caminho": [
+    "estado"
+   ],
+   "valor": "bruto"
+  },
+  {
+   "registro": "EN-1369",
+   "op": "set",
+   "caminho": [
+    "sustenta_aviso_saude_politica"
+   ],
+   "valor": false
+  },
+  {
+   "registro": "EN-1369",
+   "op": "set",
+   "caminho": [
+    "nota"
+   ],
+   "valor": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem"
+  },
+  {
+   "registro": "EN-1369",
+   "op": "apagar",
+   "caminho": [
+    "valencias"
+   ]
+  },
+  {
+   "registro": "EN-1369",
+   "op": "apagar",
+   "caminho": [
+    "gera"
+   ]
+  },
+  {
+   "registro": "EN-1544",
+   "op": "set",
+   "caminho": [
+    "estado"
+   ],
+   "valor": "bruto"
+  },
+  {
+   "registro": "EN-1544",
+   "op": "set",
+   "caminho": [
+    "sustenta_aviso_saude_politica"
+   ],
+   "valor": false
+  },
+  {
+   "registro": "EN-1544",
+   "op": "set",
+   "caminho": [
+    "nota"
+   ],
+   "valor": "a marca de aviso, saúde ou política é posta na triagem (bloco 7); licença e proteção a conferir na triagem"
+  },
+  {
+   "registro": "EN-1544",
+   "op": "apagar",
+   "caminho": [
+    "valencias"
+   ]
+  },
+  {
+   "registro": "EN-1544",
+   "op": "apagar",
+   "caminho": [
+    "gera"
+   ]
+  }
+ ],
+ "janelas": {
+  "EN-1369": [
+   "TR-0031",
+   "TR-0032",
+   "TR-0033",
+   "TR-0034",
+   "TR-0035"
+  ],
+  "EN-1544": [
+   "TR-0038",
+   "TR-0039",
+   "TR-0040",
+   "TR-0041",
+   "TR-0042"
+  ]
+ },
+ "validadores": [
+  [
+   "scripts/gravar_extracao.py",
+   "{saida}/saida-avaliador.json",
+   "--execucao",
+   "EX-0000",
+   "--raiz",
+   "{raiz}",
+   "--simular",
+   "--manifestos",
+   "{saida}"
+  ]
+ ],
+ "gabarito": [
+  {
+   "tipo": "trechos"
+  }
+ ],
+ "saida_real": {
+  "tipo": "extracao",
+  "valencias": {
+   "lastro": 2,
+   "trecho_localizado": 2,
+   "voz": 1,
+   "versao_regra": "valencias-0.1",
+   "criterio_em_falta": []
+  }
+ },
+ "erro": {
+  "descricao": "um Trecho da saída com 'fresco' trocado no texto exato (o achado A5 do K-109: palavra de outro trecho)",
+  "mudancas": [
+   {
+    "onde": "saida",
+    "arquivo": "trechos/EN-1369-4.json",
+    "op": "set",
+    "caminho": [
+     "trecho",
+     "texto_exato"
+    ],
+    "valor": "fresco"
+   }
+  ]
+ }
+}

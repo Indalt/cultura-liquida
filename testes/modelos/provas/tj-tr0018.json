@@ -1,0 +1,55 @@
+{
+ "nome": "tj-tr0018",
+ "habilidade": "triagem-juridica",
+ "agente": "juridico",
+ "base_commit": "288c4b0",
+ "teto_chamadas": 15,
+ "par_real": "K-109 (EX-0049, EX-0051) e K-110/D-047: F-0024 (a bebida 'caoi ou caoim' dos nativos, TR-0018, só para publicar); TR-0494 e TR-0100 sem Falta pela regra (F-0033); TR-0031 (cajuína) sem Falta de conhecimento tradicional pela D-047",
+ "registros": [
+  "TR-0018",
+  "TR-0494",
+  "TR-0100",
+  "TR-0031",
+  "FO-0006",
+  "FO-0034",
+  "FO-0033",
+  "FO-0010",
+  "F-0025"
+ ],
+ "validadores": [],
+ "gabarito": [
+  {
+   "tipo": "faltas",
+   "subtipo": "conhecimento_tradicional",
+   "vale_para": "publicar",
+   "item": "TR-0018",
+   "sem_falta": [
+    "TR-0494",
+    "TR-0100",
+    "TR-0031"
+   ]
+  }
+ ],
+ "saida_real": {
+  "tipo": "faltas",
+  "faltas": [
+   "F-0024"
+  ]
+ },
+ "erro": {
+  "descricao": "a Falta real com vale_para 'agora'",
+  "mudancas": [
+   {
+    "onde": "saida",
+    "arquivo": "faltas.json",
+    "op": "set",
+    "caminho": [
+     "faltas",
+     0,
+     "vale_para"
+    ],
+    "valor": "agora"
+   }
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "versao": "banco-0.1",
+ "nota": "K-115a: o banco confere a si mesmo com a saída real de cada par (passa) e com o erro da prova (reprova); fora do rodar_testes.py (insumo 119)",
+ "casos": [
+  {
+   "nome": "ee-en1369-en1544: a saída real do par passa",
+   "prova": "ee-en1369-en1544",
+   "espera": "passa"
+  },
+  {
+   "nome": "ee-en1369-en1544: um Trecho da saída com 'fresco' trocado no texto exato (o achado A5 do K-109: palavra de outro trecho) reprova",
+   "prova": "ee-en1369-en1544",
+   "erro": true,
+   "espera": "reprova"
+  },
+  {
+   "nome": "rt-te0002: a saída real do par passa",
+   "prova": "rt-te0002",
+   "espera": "passa"
+  },
+  {
+   "nome": "rt-te0002: 'mocororó' sem a marca de termo ambíguo (o erro do K-110) reprova",
+   "prova": "rt-te0002",
+   "erro": true,
+   "espera": "reprova"
+  },
+  {
+   "nome": "mf-cl0001-temporalidade: a saída real do par passa",
+   "prova": "mf-cl0001-temporalidade",
+   "espera": "passa"
+  },
+  {
+   "nome": "mf-cl0001-temporalidade: uma frase factual sem a marca da Proposição reprova",
+   "prova": "mf-cl0001-temporalidade",
+   "erro": true,
+   "espera": "reprova"
+  },
+  {
+   "nome": "gg-pr0042-cadeia: a saída real do par passa",
+   "prova": "gg-pr0042-cadeia",
+   "espera": "passa"
+  },
+  {
+   "nome": "gg-pr0042-cadeia: a Aresta da 4ª à 5ª etapa apagada (a cadeia se parte) reprova",
+   "prova": "gg-pr0042-cadeia",
+   "erro": true,
+   "espera": "reprova"
+  },
+  {
+   "nome": "tj-tr0018: a saída real do par passa",
+   "prova": "tj-tr0018",
+   "espera": "passa"
+  },
+  {
+   "nome": "tj-tr0018: a Falta real com vale_para 'agora' reprova",
+   "prova": "tj-tr0018",
+   "erro": true,
+   "espera": "reprova"
+  }
+ ]
+}

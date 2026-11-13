@@ -1,0 +1,89 @@
+{
+ "nome": "gg-pr0042-cadeia",
+ "habilidade": "gerar-grafo",
+ "agente": "arquivista",
+ "base_commit": "288c4b0",
+ "teto_chamadas": 25,
+ "par_real": "K-110 (EX-0071): a cadeia de etapas da PR-0042 e da PR-0059 (EL-0007, EL-0014, EL-0036, EL-0053, EL-0059, EL-0066; AR-0002, AR-0008, AR-0012, AR-0014, AR-0017)",
+ "registros": [
+  "PR-0042",
+  "PR-0059",
+  "IN-*",
+  "PC-*",
+  "CP-*",
+  "EL-*",
+  "AR-*",
+  "CL-0001"
+ ],
+ "fecho": true,
+ "retirar": [
+  "EL-0007",
+  "EL-0014",
+  "EL-0036",
+  "EL-0053",
+  "EL-0059",
+  "EL-0066",
+  "AR-0002",
+  "AR-0008",
+  "AR-0012",
+  "AR-0014",
+  "AR-0017"
+ ],
+ "validadores": [
+  [
+   "scripts/validar_acervo.py",
+   "--raiz",
+   "{raiz}"
+  ],
+  [
+   "scripts/calcular_mu_lambda.py",
+   "--raiz",
+   "{raiz}",
+   "--conferir",
+   "--sem-grafo"
+  ]
+ ],
+ "gabarito": [
+  {
+   "tipo": "grafo",
+   "proposicoes": [
+    "PR-0042",
+    "PR-0059"
+   ],
+   "x": [
+    "IN-0001"
+   ],
+   "w": "F-0031",
+   "ys": [
+    [
+     "PC-0001"
+    ],
+    [
+     "PC-0002"
+    ],
+    [
+     "PC-0003"
+    ],
+    [
+     "PC-0004"
+    ],
+    [
+     "PC-0005"
+    ],
+    [
+     "PC-0006"
+    ]
+   ],
+   "tipo_aresta": "sequência de etapas"
+  }
+ ],
+ "erro": {
+  "descricao": "a Aresta da 4ª à 5ª etapa apagada (a cadeia se parte)",
+  "mudancas": [
+   {
+    "arquivo": "acervo/arestas/AR-0014.json",
+    "op": "remover"
+   }
+  ]
+ }
+}
