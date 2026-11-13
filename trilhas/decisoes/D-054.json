@@ -1,0 +1,17 @@
+{
+  "id": "D-054",
+  "data": "2026-11-13",
+  "essencia": "A IA da automatização (as rotinas da operação) passa a ser a API do Gemini, com a chave de Vicente; o Claude fica só para a construção e a manutenção, nas sessões abertas por Vicente. O modelo das rotinas é o gemini-4-hydrogen, nas tarefas de esforço parecido com as que o Claude testou; o gemini-4-carbon não entra em rotina longa ou recorrente demais. O teto é de 1 milhão de tokens de entrada e 2 milhões de saída por semana, medido pelo texto enviado e recebido; se não der, Vicente é avisado.",
+  "diretriz": "(1) As rotinas com IA da operação rodam pela API do Gemini (chave e modelos em `.env`, fora do Git; D-021), não pela rotina do Claude Code na assinatura; a rotina do Claude ligada no K-113 fica pausada e não volta sem decisão. (2) O Claude (Opus e os subagentes de `.claude/agents/`) segue só nas conversas de desenvolvimento e de planejamento abertas por Vicente. (3) Modelo das rotinas: gemini-4-hydrogen nas habilidades que o K-115a testou em Claude, no lugar do modelo da tabela (Haiku 5.5 ou Sonnet 5.5), sem novo teste de modelo antes; o gemini-4-carbon só fora de rotina longa ou recorrente demais; os outros modelos do `.env` só por decisão. (4) Teto semanal da automatização: 1.000.000 tokens de entrada e 2.000.000 de saída, contados pelo que a API informa ou, sem isso, pelo texto enviado e recebido convertido em tokens; ao passar, a rotina para e avisa Vicente; se o teto não couber no trabalho, o aviso vai a Vicente. (5) Seguem o portão da camada 2, a segunda leitura (o auditor passa a ser chamada da API, quem propõe não aprova; D-038) e a junção pelo Actions do K-113. A construção é um cartão novo (K-125).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-13",
+  "fala_original_ref": "trilhas/2026-11-13_K-113/falas-vicente.md",
+  "palavras_conferidas": [
+    {"palavra": "pode já substituir", "sentido_confirmado": "pausar já a rotina do Claude; a automatização passa ao Gemini, e o Claude fica só para construir e manter nas sessões abertas"},
+    {"palavra": "apenas auto", "sentido_confirmado": "a troca vale só para a operação automática; os agentes das conversas seguem em Claude"},
+    {"palavra": "fixar o hydrogen nos esforços similares aos do claude que foram testados", "sentido_confirmado": "gemini-4-hydrogen nas habilidades testadas no K-115a, sem novo teste antes"},
+    {"palavra": "os limites podem ser de caracteres e você converte para o custo de tokens", "sentido_confirmado": "o teto é por tokens (1 milhão de entrada e 2 milhões de saída por semana), medido pelo texto quando a API não informar"}
+  ],
+  "substitui": "Muda a D-050 na IA da operação (de rotina do Claude Code na assinatura para a API do Gemini) e no teto da ferramenta (de 20% da semana e 50% da janela de 5 h para tokens da API); muda a D-053 nos modelos da rotina (a tabela do K-115a segue para os agentes das conversas). A cadência às quintas e a junção escolhida no K-113 seguem.",
+  "marcador": "VIGENTE"
+}
