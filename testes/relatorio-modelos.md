@@ -57,3 +57,12 @@
 - **Segunda leitura do auditor** (Sonnet 5.5 alto; `trilhas/2026-11-12_K-115a/auditor-leitura.json`): triagem-juridica (Sonnet) serve; as outras quatro servem com ressalvas, com erros de leitura fiel que nenhum validador pega: no Haiku, Evidência de fragmento sem sujeito nem verbo e Trecho emendado por cima de elisão (extrair-evidencia), divergência inventada (registrar-termo), frase sobre Faltas marcada com Proposições que não a dizem (montar-ficha); no Sonnet, uma Aresta com Proposição a mais e μ inflado (gerar-grafo). Erros do mesmo tipo apareceram com o Sonnet na produção do K-109 e do K-110. Pela regra, a escolha é a do validador; os erros vão ao insumo 122, para o reforço do harness e a segunda leitura da rotina com IA (D-038).
 - **Custo:** em tokens, o Haiku gastou mais que o Sonnet nas provas em que os dois rodaram (gerar-grafo: 158.529 contra 81.323; triagem-juridica: 127.077 contra 65.298); por token, custa cerca de 1/20 (C115.4). O peso de cada modelo no limite da assinatura não foi conferido, e o teto de 20% da D-050 é medido nela: a rotina de teste do K-113 mede.
 - **O que não foi feito:** as provas rodaram uma vez por modelo e rodada (sem repetição para medir variação); só os candidatos Haiku 5.5 e Sonnet 5.5; o esforço ficou o do frontmatter (alto) em todas.
+
+## Gemini (K-125; D-054)
+Pelo executor `scripts/gemini_agente.py` (gemini-agente-0.1), com o mesmo banco (base `288c4b0`) e os mesmos validadores; os tokens são os que a API informa (`usageMetadata`), somados por rodada em `trilhas/rotina-ia/consumo-gemini.jsonl`. Entrada = prompt + ferramentas; saída = resposta + pensamento. Chamadas = chamadas de ferramenta (pedidos à API à parte).
+
+| Habilidade | Modelo | Prova | Aprovação | Entrada | Saída | Pedidos à API | Chamadas | Execução |
+|---|---|---|---|---|---|---|---|---|
+| extrair-evidencia | gemini-4-hydrogen | ee-en1369-en1544 (rodada 1, 13/11) | reprova (TR-0035, TR-0039, TR-0040, TR-0041 não cobertos; teto de 25 chamadas atingido) | 299.975 | 28.037 | 7 | 25 | log de 13/11 em `trilhas/logs/2026-11-13_avaliador.jsonl` |
+
+Faltam: a rodada 2 do hydrogen na extrair-evidencia (a l. 698 pede o reforço do harness antes de trocar de modelo; o Haiku passou na rodada 3) e as provas rt, mf (hydrogen), gg, tj e a segunda leitura (argon). Insumos 133 e 134.
