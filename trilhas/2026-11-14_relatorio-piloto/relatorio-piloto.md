@@ -2,11 +2,12 @@
 
 **Para:** a reunião do K-004, que abre a sessão de planejamento de melhorias (D-046).
 **Cartão:** K-116, bloco 14 do brief de execuções (`trilhas/2026-10-17_caminhos/brief-execucoes-v0.1.md`, l. 408-414), na parte "Antes da v0.3" (l. 412). Pela D-035, este texto **não é** a v0.3 nem seção da Fundação: durante a execução não se escreve versão nova, que é da sessão de planejamento, e se faz uma tarefa por vez. Pela D-056, fecha a entrega do piloto, depois do kit (K-114).
-**Escrito por:** redator, em 14/11/2026. **A conferir:** o auditor confere cada número.
+**Escrito por:** redator, em 14/11/2026. **Conferido** pelo auditor, com os 8 achados aplicados (seção "Conferência").
 
-**De onde vêm os números.** Quase todos vêm de `trilhas/2026-11-14_relatorio-piloto/dados.json`, gerado por `scripts/relatorio_piloto.py` (versão relatorio-piloto-0.1, sem IA). Neste texto, "dados.json, `chave`" aponta o lugar do número no arquivo. Os outros números vêm de um arquivo citado com caminho e linha. Onde o dado não existe, o texto diz **não medido** e trata a lacuna como **Falta**: uma lacuna dita, que não se completa por inferência.
+**De onde vêm os números.** Quase todos vêm de `trilhas/2026-11-14_relatorio-piloto/dados.json`, gerado por `scripts/relatorio_piloto.py` (versão relatorio-piloto-0.2, sem IA), no instantâneo de 14/11/2026, 10h53 (`logs.gerado_em`). Neste texto, "dados.json, `chave`" aponta o lugar do número no arquivo. Os outros números vêm de um arquivo citado com caminho e linha. Onde o dado não existe, o texto diz **não medido** e trata a lacuna como **Falta**: uma lacuna dita, que não se completa por inferência.
 
-**Regras da conta do script** (docstring, `scripts/relatorio_piloto.py`, l. 7-12):
+**Regras da conta do script** (docstring de `scripts/relatorio_piloto.py`):
+- as linhas do agente "curador" (executar-brief, registrar-decisao, planejamento) agregam os agentes da conversa, que já têm linha própria: desde a 0.2, ficam fora da soma (seção 5.1);
 - tokens e chamadas de agente só das linhas de log que não vêm do hook `SubagentStop` (o hook grava só uma linha mínima de segurança);
 - os registros de teste de modelo (com "[teste de modelo]" na `entrada_ref`, D-051) ficam à parte, fora da produção;
 - os pp por frente são a soma da coluna pp da tabela "Semana da conta" do checklist; "não lido" e "—" não somam.
@@ -78,7 +79,7 @@ Uma **Proposição** é uma afirmação sobre a prática, sustentada por Evidên
 
 A CLB com ficha é a CL-0001. As três candidatas são CLB de outro termo (D-039), na lista de baixa prioridade do K-207.
 
-**A conferir:** a pasta `acervo/termos` tem 6 arquivos (`acervo_arquivos.termos`), e o script conta 5 Termos (`termos.total`). O que é o sexto arquivo não foi olhado.
+A pasta `acervo/termos` tem 6 arquivos (`acervo_arquivos.termos`): os 5 Termos e o `glossario.md`, gerado por `scripts/gerar_termo.py` (conferência do auditor).
 
 ### 2.5 Faltas
 | Medida | Número | Fonte |
@@ -89,7 +90,7 @@ A CLB com ficha é a CL-0001. As três candidatas são CLB de outro termo (D-039
 | por `vale_para`: publicar / agora / sem o campo | 4 / 2 / 38 | `faltas.por_vale_para` |
 | caminho de liberação: não iniciado / em andamento / sem o campo | 5 / 1 / 38 | `faltas.caminho_de_liberacao_estado` |
 
-O campo `vale_para` diz se a Falta barra o trabalho agora ou só a publicação (D-042). Só 6 Faltas o têm; o script não diz se são as 6 jurídicas.
+O campo `vale_para` diz se a Falta barra o trabalho agora ou só a publicação (D-042). Só 6 Faltas o têm, e são exatamente as 6 jurídicas (conferência do auditor): F-0004 e F-0034 valem agora; F-0024, F-0025, F-0032 e F-0033, só para publicar.
 
 ---
 
@@ -151,17 +152,18 @@ O kit de fonte primária (K-114) é um rascunho em `campo_de_acao/`, sem publica
 ## 5. Custos
 
 ### 5.1 Tokens e chamadas de agentes, produção
-Fonte: dados.json, `logs.producao_por_agente_habilidade`. Total de produção: **14.753.953 tokens** e **2.306 chamadas** (`logs.producao_total_tokens`, `logs.producao_total_chamadas`). Linhas de log lidas: 321 (curador 133, hook 115, script 68, pessoa 5; `logs.por_fonte_do_registro`).
+Fonte: dados.json, `logs.producao_por_agente_habilidade`. Total de produção: **6.912.130 tokens** e **1.130 chamadas** (`logs.producao_total_tokens`, `logs.producao_total_chamadas`). Linhas de log lidas: 327 (curador 135, hook 119, script 68, pessoa 5; `logs.por_fonte_do_registro`).
+
+**A regra do script mudou na 0.2.** A primeira versão deste relatório dava 14.753.953 tokens e 2.306 chamadas: **somava em dobro**. As linhas do agente "curador" nos logs medem o consumo dos agentes lançados na conversa, o mesmo da coluna "Tokens de agentes" do checklist; não medem a conversa principal. Esses agentes já têm linha própria. Provas do auditor: o K-109 em 29/10 (1.064.272 tokens e 166 chamadas, a soma exata de 10 linhas de agentes do dia) e o registrar-decisao de 05/11 (401.790 tokens e 65 chamadas, a soma de 5 linhas do auditor). Na 0.2, as linhas do curador saem da soma e ficam em `logs.agregados_do_curador_nao_somados` (8.058.244 tokens, `logs.agregados_do_curador_total_tokens`).
+
+**A produção é um piso, não o total exato.** Há consumos registrados na linha do curador que podem não ter linha própria de agente: o workflow de 17/10 (1.920.145 tokens), o K-113 (561.185, a rotina na nuvem) e parte do K-112 (55.558) (ressalva do auditor). O que não tiver linha própria ficou fora dos 6.912.130.
 
 | Agente / habilidade | Execuções | Tokens | Chamadas | Modelo |
 |---|---|---|---|---|
-| curador / executar-brief | 20 | 6.859.879 | 1.011 | Opus 5.5 |
 | auditor / conferir-fato | 20 | 1.432.808 | 242 | Sonnet 5.5 |
 | avaliador / extrair-evidencia | 7 | 1.212.590 | 155 | Sonnet 5.5 |
 | auditor / verificar-fundacao | 10 | 1.080.247 | 158 | Sonnet 5.5 |
 | redator / escrever-secao-fundacao | 11 | 895.134 | 182 | Opus 5.5 |
-| curador / registrar-decisao | 16 | 716.661 | 130 | Opus 5.5 |
-| curador / planejamento de melhorias | 6 | 481.704 | 71 | Opus 5.5 |
 | juridico / triagem-juridica | 5 | 361.104 | 67 | Sonnet 5.5 |
 | juridico / guia-de-liberacao | 3 | 278.283 | 47 | Sonnet 5.5 |
 | rastreador / ficha-de-acesso | 3 | 273.890 | 36 | Sonnet 5.5 |
@@ -170,27 +172,37 @@ Fonte: dados.json, `logs.producao_por_agente_habilidade`. Total de produção: *
 | juridico / conferir-fato + triagem-juridica | 1 | 145.933 | 15 | Sonnet 5.5 |
 | juridico / triagem-juridica e guia-de-liberacao | 1 | 132.441 | 21 | Sonnet 5.5 |
 | juridico / conferir-fato e triagem-juridica | 1 | 130.428 | 20 | Sonnet 5.5 |
+| auditor / verificar-fundacao + conferir-fato | 1 | 112.866 | 18 | Sonnet 5.5 |
 | arquivista / montar-ficha | 1 | 111.618 | 18 | Sonnet 5.5 |
 | arquivista / gerar-grafo | 1 | 104.796 | 15 | Sonnet 5.5 |
 | campo-de-acao / kit-fonte-primaria | 1 | 103.960 | 14 | Sonnet 5.5 |
+| redator / escrever-relatorio-piloto (a primeira versão deste relatório) | 1 | 103.555 | 18 | Opus 5.5 |
 | juridico / n/a | 1 | 82.949 | 24 | Sonnet 5.5 |
 | rastreador / consulta | 1 | 51.898 | 8 | Sonnet 5.5 |
 
-**A conferir:** as linhas do curador somam a maior parte dos tokens. O que cada uma mede (agentes lançados pelo curador ou outra coisa) não foi olhado neste relatório. O juridico aparece com cinco nomes de habilidade para combinações parecidas: é como os logs gravaram.
+**Agregados do curador, fora da soma** (`logs.agregados_do_curador_nao_somados`):
+
+| Linha do curador | Execuções | Tokens | Chamadas |
+|---|---|---|---|
+| executar-brief | 14 | 6.859.879 | 1.011 |
+| registrar-decisao | 4 | 716.661 | 130 |
+| planejamento de melhorias | 2 | 481.704 | 71 |
+
+O juridico aparece com cinco nomes de habilidade para combinações parecidas: é como os logs gravaram.
 
 ### 5.2 Teste de modelo, à parte
-Fonte: dados.json, `logs.teste_de_modelo_por_agente_habilidade`. Total: **2.256.949 tokens** (`logs.teste_total_tokens`).
+Fonte: dados.json, `logs.teste_de_modelo_por_agente_habilidade`. Total: **2.256.949 tokens** (`logs.teste_total_tokens`). Por família (`logs.teste_tokens_por_familia`): **Claude 1.413.955; Gemini 842.994**. No log, o token do Gemini é a soma de entrada e saída que a API informa; o do Claude é o que o Agent informa. As linhas de 0 token (as provas do Gemini que não rodaram, como a do argon) não contam como execução.
 
 | Agente / habilidade | Execuções | Tokens | Chamadas | Modelos |
 |---|---|---|---|---|
 | avaliador / extrair-evidencia | 6 | 962.624 | 133 | Haiku 5.5, gemini-4-hydrogen |
-| arquivista / gerar-grafo | 5 | 525.224 | 76 | Haiku 5.5, Sonnet 5.5, gemini-3.8-flash, gemini-4-argon |
+| arquivista / gerar-grafo | 4 | 525.224 | 76 | Haiku 5.5, Sonnet 5.5, gemini-3.8-flash |
 | juridico / triagem-juridica | 3 | 300.713 | 37 | Haiku 5.5, Sonnet 5.5 |
 | arquivista / registrar-termo | 2 | 203.507 | 35 | Haiku 5.5, gemini-4-hydrogen |
-| arquivista / montar-ficha | 2 | 139.247 | 18 | Haiku 5.5, gemini-4-hydrogen |
+| arquivista / montar-ficha | 1 | 139.247 | 18 | Haiku 5.5 |
 | auditor / conferir-fato | 1 | 125.634 | 22 | Sonnet 5.5 |
 
-**A conferir:** algumas linhas de teste são do Gemini. Se o script somou nelas tokens do Gemini com os do Claude, o total mistura duas medidas diferentes. O consumo do Gemini tem registro próprio em `trilhas/rotina-ia/consumo-gemini.jsonl`. Em `testes/relatorio-modelos.md`, l. 74, a semana do Gemini estava em 764.943 tokens de entrada (76% do teto da D-054).
+O consumo semanal do Gemini tem registro próprio em `trilhas/rotina-ia/consumo-gemini.jsonl`. Em `testes/relatorio-modelos.md`, l. 74, a semana do Gemini estava em 764.943 tokens de entrada (76% do teto da D-054).
 
 ### 5.3 Pontos da conta (pp)
 **pp** são pontos percentuais do limite semanal da conta da assinatura (D-040). A fonte é dados.json, `semana_da_conta`, que soma a tabela do checklist (`trilhas/2026-10-17_execucao-piloto.md`, l. 459-496).
@@ -200,18 +212,18 @@ Fonte: dados.json, `logs.teste_de_modelo_por_agente_habilidade`. Total: **2.256.
 | 21/10–28/10/2026 | 54 | 33 | 4 |
 | 28/10–04/11/2026 | 61 | 6 | — |
 | 04/11–11/11/2026 | não medido | não medido | — |
-| 11/11–18/11/2026 (em curso) | 63 | — | — |
-| **Soma por frente** | **178** | **39** | **4** |
+| 11/11–18/11/2026 (em curso) | 59 medidos (63 com 4 estimados) | — | — |
+| **Soma por frente** | **174 medidos (178 com a estimativa)** | **39** | **4** |
 
-- Linhas da tabela: 32; sem pp: 6 (`semana_da_conta.linhas`, `linhas_sem_pp`).
+- Linhas da tabela: 32; sem pp medido: 7 (`semana_da_conta.linhas`, `linhas_sem_pp_medido`).
 - **04/11–11/11:** nenhuma linha tem pp somável. O K-112 abriu em 5% e o fechamento não foi lido ("a semana renovou"; checklist, linha do K-112).
-- **11/11–18/11:** os 63 pp incluem 4 pp **estimados** da linha do K-114 ("4 (estimado: 2 da conversa + 1,66 do lote)"). O `relatorio_dia.py` de 14/11 não conta essa linha e dá **59 pp** de desenvolvimento. A diferença entre os dois scripts fica a conferir.
-- Nos tetos (D-040: desenvolvimento até 50, projeto até 60), o desenvolvimento passou de 50 nas três semanas medidas. A tabela registra suspensões dos tetos por Vicente em várias linhas (checklist, linhas do K-107, K-108, K-111 e K-112). Em 14/11, Vicente suspendeu os tetos de 50 e 60 pp e manteve a linha de 90% (AGENTS.md, Passo corrente).
+- **11/11–18/11:** os 4 pp do K-114 são estimados ("4 (estimado: 2 da conversa + 1,66 do lote)") e ficam fora da soma (`semana_da_conta.pp_estimados_nao_somados`). O `relatorio_dia.py` de 14/11 dá os mesmos 59. Os 9 pp da l. 488 do checklist incluem a conversa de planejamento de 12/11 (D-053), lançada no desenvolvimento.
+- Nos tetos (D-040: desenvolvimento até 50, projeto até 60), o desenvolvimento passou de 50 nas três semanas medidas. A tabela registra suspensões dos tetos por Vicente (checklist, l. 476, 478-479, 485 e 496; a última é a do K-114). Em 14/11, Vicente suspendeu os tetos de 50 e 60 pp e manteve a linha de 90% (AGENTS.md, Passo corrente).
 - Antes da tabela em pp, a semana de 12–18/10 tem 3.352.741 tokens de agentes (checklist, l. 435).
 
 ### 5.4 O que não está medido
 - **Tokens da conversa principal:** não registrados por linha (dados.json, `alcance.fora`). A única medida dela são os pp lidos por Vicente.
-- **Gemini:** fora do script (contador próprio, seção 5.2).
+- **Gemini:** só os testes de modelo estão no script (seção 5.2); o consumo semanal fica no contador próprio.
 - **Minutos do GitHub Actions:** a coluna existe na tabela de horas, com "—" nas duas linhas (checklist, l. 456-457). Não medido.
 - **Peso de cada modelo no limite da assinatura:** não conferido (`testes/relatorio-modelos.md`, l. 9 e 58).
 
@@ -278,7 +290,7 @@ A Fundação (l. 676-679, [PROPOSTA]) pede **as três condições juntas**. A av
 |---|---|---|
 | 1. o caso-piloto foi do bruto à ficha com a trilha completa | **atende na ficha; trilha completa não medida** | A CL-0001 está em "ficha montada", com a ficha em `acervo/fichas/CL-0001.md` (dados.json, `gatilho_fase2_dados.1_...`). Há 520 Evidências com Trecho localizado e todas as Proposições com a versão da regra (seção 2). O script não mede se a trilha está completa, item a item. |
 | 2. as horas reais de 4 semanas couberam em 1 a 3 h | **não medido** | Só 2 semanas têm linha, sem horas de revisão ou de juízo ("não informado"; "não registrado") (`gatilho_fase2_dados.2_...`; seção 6). |
-| 3. as decisões do degrau 2 do §5.4 estão tomadas (licença, aviso de privacidade, canal com o titular) | **não atende** | Nenhuma das decisões vigentes listadas no AGENTS.md (da D-015, que levou a Fundação à v0.2, à D-056) trata desses três pontos. A licença do acervo está no K-010, "A fazer" (quadro, l. 20). O degrau 2 é [PROPOSTA] na Fundação (l. 475-481). Pelo brief (l. 406), essa condição é de Vicente e não trava o piloto. |
+| 3. as decisões do degrau 2 do §5.4 estão tomadas (licença, aviso de privacidade, canal com o titular) | **não decidida** | A busca por "aviso de privacidade" ou "canal com o titular" em `trilhas/decisoes/` (grep -rli) acha 0 arquivos (conferência do auditor). Nenhuma das decisões vigentes listadas no AGENTS.md (da D-015, que levou a Fundação à v0.2, à D-056) trata desses pontos. A licença do acervo está no K-010, "A fazer" (quadro, l. 20). O degrau 2 é [PROPOSTA] na Fundação (l. 475-481). Pelo brief (l. 406), essa condição é de Vicente e não trava o piloto. |
 
 ---
 
@@ -299,7 +311,7 @@ O §10 da Fundação (l. 871-899) tem 22 perguntas para compreender. A seção 6
 | 12. tamanho de lote e ritmo de revisão | Entradas por mês: 1.006 em outubro e 1.572 em novembro; fila de curadoria em 14/11: 1 cartão e 7 itens que pedem cartão; horas de Vicente não medidas (seções 2.1 e 6) |
 | 13. o risco como Falta | 18 Proposições do atributo "risco"; 69 que sustentam aviso, saúde ou política; 44 Faltas (seção 2) |
 | 14. a Educação e o campo de ação | 1 camada Educação (CL-0001); 1 kit em rascunho, sem publicar (seções 4 e 8) |
-| 16. o consumo com rotinas na nuvem | produção: 14.753.953 tokens de agentes; pp por frente: desenvolvimento 178, planejamento 39; a conversa principal e o Gemini não medidos em tokens (seção 5) |
+| 16. o consumo com rotinas na nuvem | produção: pelo menos 6.912.130 tokens de agentes (um piso, seção 5.1); pp por frente: desenvolvimento 174 medidos (178 com 4 estimados), planejamento 39; a conversa principal e o Gemini não medidos em tokens (seção 5) |
 | 17. quem reconhece o revisionismo | sem número no piloto |
 | 18. o que ancora W | 10 arquivos de compreensão local; 5 Faltas de "compreensão local não captada"; 88 Evidências na voz de pessoa citada em fala direta (seções 2 e 4) |
 | 19. a pergunta de pesquisa no grafo 4D | o grafo tem 72 nós e 24 arestas (17 intermediárias, 6 verdadeiras, 1 paracompleta); a divisão por eixo não foi medida (seção 4) |
@@ -318,19 +330,26 @@ A reunião reúne os insumos abertos, este relatório e `trilhas/planejamento/pr
 1. O estado dos 69 ambientes está desatualizado ("não iniciado" e "proposto") diante das rotinas que rodam (seção 3.1).
 2. A lista dos ambientes não automatizados, com o motivo de cada um (D-052), não sai do script (seção 3.3).
 3. As horas de Vicente não estão medidas, e a tabela não tem as colunas do bloco 13; a condição 2 do gatilho depende delas (seções 6 e 9).
-4. A semana 04/11–11/11 não tem pp somável, e os dois scripts divergem na semana 11/11–18/11 (63 contra 59 pp) (seção 5.3).
-5. Os tokens da conversa principal e do Gemini ficam fora da conta de agentes; as linhas de teste podem misturar os dois (seção 5).
-6. 38 das 44 Faltas não têm o campo `vale_para` (seção 2.5).
-7. Os nós do grafo não têm campo de tipo que o script leia (seção 4).
-8. A pasta de Termos tem 6 arquivos, e o script conta 5 Termos (seção 2.4).
-9. Os cartões estacionados (K-125, K-115b, K-115c), a reconfiguração da rotina do K-113 e o gatilho da fase 2 (K-007) (seções 7 a 9).
+4. A semana 04/11–11/11 não tem pp somável (seção 5.3).
+5. As linhas do curador nos logs agregam os agentes da conversa, que têm linha própria: a soma antiga contava em dobro, e a regra do script mudou na 0.2. A produção de agentes é um piso (seção 5.1). Os tokens da conversa principal ficam fora; o Gemini só entra pelos testes (seção 5.2).
+6. Os nós do grafo não têm campo de tipo que o script leia (seção 4).
+7. Os cartões estacionados (K-125, K-115b, K-115c), a reconfiguração da rotina do K-113 e o gatilho da fase 2 (K-007) (seções 7 a 9).
+
+---
+
+## Conferência
+
+- **Auditor:** 8 achados, todos aplicados nesta versão (registro em `trilhas/logs/2026-11-14_auditor.jsonl`), com os números do dados.json regerado pela relatorio-piloto-0.2.
+- **BNCC:** as 7 habilidades citadas na camada Educação da CL-0001 conferem em código, texto e página no PDF oficial do MEC (https://www.gov.br/mec/pt-br/cne/arquivos/bncc_ensino_medio.pdf; p. 82, 115, 119, 134 e 137). Nível: oficial.
+- **Fora da conferência:** a coluna "Por que serve" da camada Educação (é interpretação) e o consumo semanal do Gemini.
 
 ---
 
 ## Faltas deste relatório (não medido)
+- o total exato de tokens de agentes (a produção é um piso, seção 5.1);
 - horas de Vicente em qualquer semana;
 - tokens da conversa principal;
-- consumo do Gemini dentro do script;
+- consumo semanal do Gemini dentro do script;
 - minutos do GitHub Actions;
 - pp da semana 04/11–11/11;
 - a lista dos ambientes não automatizados, com o motivo;
