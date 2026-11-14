@@ -6,7 +6,7 @@
 ## 1. Para quem é
 Educadores, inclusive de escolas indígenas e quilombolas, que querem ensinar com fontes primárias e mostrar aos estudantes como uma informação se rastreia até a origem. O kit usa um caso real do piloto, a **cajuína**, só com o que o acervo já tem.
 
-- **Falta à vista (escuta da comunidade):** este kit **não foi feito com a escuta de comunidades**, e a Fundação (l. 576) pede registrar isso como Falta antes de qualquer material para escolas indígenas e quilombolas. Para este rascunho não consegui conferir, nos arquivos que li, a Falta que a ficha diz ter sido tratada no K-110; o curador confere.
+- **Falta à vista (escuta da comunidade):** este kit **não foi feito com a escuta de comunidades**, e a Fundação (l. 576) pede registrar isso como Falta antes de qualquer material para escolas indígenas e quilombolas. A Falta já está aberta na camada Educação da cajuína (`acervo/fichas/educacao/CL-0001.md`, l. 76, do K-110): nenhuma comunidade foi ouvida, e ela vale também para este kit.
 - **Não é currículo:** não alinha à BNCC nem à LDB (art. 26-A, a conferir).
 
 ## 2. O que é fonte primária aqui
@@ -45,7 +45,7 @@ Preencha uma ficha por fonte e **uma afirmação por linha**. Se um campo não s
 - **Objeto:** descreva (material, tamanho, estado, uso conhecido), cite o catálogo do acervo e **não publique foto sem licença**: sem ela, só o link.
 
 ## 4. Consentimento e licença de quem contribui
-Quando houver porta (fase 2, [PROPOSTA] da Fundação, §5.4), a pessoa que contribui deverá, no mínimo:
+Quando houver porta (fase 2, [PROPOSTA] da Fundação, §5.4), ela será o formulário público de 8 perguntas curtas, até 500 caracteres e links, mapeadas aos eixos X, Y, Z e W (P53; Fundação, l. 186 e 450). O texto das 8 perguntas não está na Fundação e não é reproduzido aqui. A pessoa que contribui deverá, no mínimo:
 - dar **consentimento** sobre o que envia, quando há pessoa na fonte (a de terceiros, só com o consentimento dela; o projeto vira **controlador** dos dados, LGPD, art. 5º, V, a conferir);
 - dar uma **licença curta e simples** para o projeto usar o que enviou (arts. 49 e 50 da Lei 9.610, a conferir);
 - **escolher a atribuição**: nome, pseudônimo, anônimo ou coletivo;
@@ -101,7 +101,7 @@ Aviso de precaução: a Falta **F-0025** (aberta, **só para publicar**) diz que
 **O agente da clarificação (o corte) foi a resina do cajueiro, depois a cola de sapateiro e, mais recentemente, a gelatina em pó** [PR-0058]. Uma Evidência vem da página do Iphan (FO-0031), cuja síntese, segundo a própria página, foi feita com auxílio de IA e revisada por especialistas: no campo **Perspectiva** isso se anota, porque nenhuma fonte, nem a institucional, é fonte de verdade única (D-039). Esta Proposição **sustenta aviso** (composição, produto, segurança): passa por **segunda leitura** do auditor, e o kit **não dá conselho de preparo ou de saúde**. O mesmo vale para [PR-0002] (a bebida é leve, sem álcool, fermento e aditivos químicos) e [PR-0003] (teor de vitamina C e outros): o kit só mostra que **existem na ficha como o que as fontes dizem**.
 
 ### 6.4 Objeto (hipotético, a partir de uma Proposição real)
-A ficha diz que **o suco filtrado é envasado em garrafas de vidro, tampadas de preferência com tampinhas de metal; rolhas de cortiça já não são consideradas ideais** [PR-0100]. Hoje o acervo tem só Evidência **escrita** para isso (EV-0128, FO-0032, p. 27; EV-0403, FO-0034, p. 177, ambas com voz de instituição ou de equipe, não de pessoa). Uma garrafa antiga numa coleção de museu seria Evidência do tipo **objeto**: registre o **código no catálogo do acervo**, a descrição (vidro escuro, tipo de tampa, estado) e o link; **foto só com licença**. *Este caso é uma ilustração do preenchimento; nenhuma garrafa foi registrada.*
+A ficha diz que **o suco filtrado é envasado em garrafas de vidro, tampadas de preferência com tampinhas de metal; rolhas de cortiça já não são consideradas ideais** [PR-0100]. Hoje o acervo tem só Evidência **escrita** para isso (EV-0128, FO-0032, p. 27; EV-0403, FO-0034, p. 177, ambas com voz de instituição ou de equipe, sem pessoa registrada; por isso a F-0032, que trata das falas de detentoras e detentores, não as alcança). Uma garrafa antiga numa coleção de museu seria Evidência do tipo **objeto**: registre o **código no catálogo do acervo**, a descrição (vidro escuro, tipo de tampa, estado) e o link; **foto só com licença**. *Este caso é uma ilustração do preenchimento; nenhuma garrafa foi registrada.*
 
 ### 6.5 Depoimento já gravado (modelo vazio, sem caso real)
 ```
@@ -151,6 +151,6 @@ Sem Falta registrada, mas pendentes: ilustração técnica (K-120), tradução d
 
 **Alcance (D-030): o que se olhou e o que ficou fora**
 - **Olhado:** da ficha CL-0001 (473 linhas), as linhas 1-120 (cabeçalho, definição, compreensão local, início do modo de fazer) e 247-320 (avisos, faltas, fontes, como citar); as 34 Fontes (tipo de evidência, link e proteção); 24 Proposições com suas Evidências e Trechos (estado, voz, localizador, Falta); a lista das 44 Faltas (id, tipo, vale_para, primeira linha); de F-0025, F-0024 e F-0032, só o que a ficha resume e parte do texto; o esquema da Fonte (tipos de evidência) e parte do esquema comum (proteção); a Fundação, l. 450-475 e 576.
-- **Fora:** o texto das fontes (não abri nenhuma página: sem web; os links não foram reconferidos); as linhas 121-246 e 321-473 da ficha (utensílios, temporalidade, quem ensina, critérios, tensões); as outras 400 Proposições; a licença de todas as fontes (**"não conferido"**); a camada Educação; a Falta sobre a escuta de comunidades (K-110); as 8 perguntas do formulário (P53), que não li e por isso o kit não as reproduz.
+- **Fora:** o texto das fontes (não abri nenhuma página: sem web; os links não foram reconferidos); as linhas 121-246 e 321-473 da ficha (utensílios, temporalidade, quem ensina, critérios, tensões); as outras 400 Proposições; a licença de todas as fontes (**"não conferido"**); a camada Educação, salvo a Falta da escuta da comunidade (l. 76, conferida pelo curador); o texto das 8 perguntas do formulário (P53), que a Fundação não traz.
 
 **Como citar este kit:** CULTURA LÍQUIDA BRASILEIRA. Kit de fonte primária, exemplo da cajuína (rascunho de teste, não publicado). Repositório Indalt/cultura-liquida, `campo_de_acao/kit-fonte-primaria-cajuina.md`, 14/11/2026. Cite também as Fontes FO-nnnn e a Proposição PR-nnnn de cada frase.

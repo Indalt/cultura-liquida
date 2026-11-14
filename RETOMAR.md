@@ -15,7 +15,7 @@ Leitura de uso informada por Vicente em 14/11: semana em 66%, janela de 5 h em 8
   a linha da conversa na tabela "Semana da conta" e a linha do K-114 no checklist.
 
 ## Falta
-1. **K-114 (fecho):** Vicente revisa o rascunho (pronto-quando do bloco 11). Antes, o curador confere, sem
+1. **K-114 (fecho):** Vicente revisa o rascunho. Pontos (a) a (c) conferidos e corrigidos no kit em 14/11 (Educação l. 76; P53 na Fundação l. 186 e 450, sem o texto das perguntas; EV-0128 e EV-0403 sem pessoa, fora da F-0032); (d) fica dito. Texto antigo: (pronto-quando do bloco 11). Antes, o curador confere, sem
    agente, os quatro pontos do agente: (a) a Falta da escuta de comunidades, do K-110, que o agente não achou
    (`grep -rn "escuta" acervo/faltas trilhas/logs`); (b) as 8 perguntas do formulário (P53), se o kit deve
    trazê-las; (c) se a F-0032 alcança EV-0128 e EV-0403 (PR-0100, seção 6.4 do kit), para o juridico se a
