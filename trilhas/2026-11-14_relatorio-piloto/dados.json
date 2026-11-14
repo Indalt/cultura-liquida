@@ -1,0 +1,575 @@
+{
+  "versao": "relatorio-piloto-0.1",
+  "alcance": {
+    "olhado": [
+      "acervo/ (todas as pastas, contagem de arquivos; Proposições, Evidências, Trechos, CLB, Termos e Fontes lidos por inteiro)",
+      "entrada/EN-*.json e ambientes/pegadas/*.jsonl (contagem)",
+      "trilhas/logs/*.jsonl (todas as linhas)",
+      "trilhas/2026-10-17_execucao-piloto.md: tabelas 'Semana da conta' e 'Horas de Vicente'"
+    ],
+    "fora": [
+      "o bruto fora do Git (D-045) e o wiki local",
+      "tokens da conversa principal (não registrados por linha; só os pp da tabela) e o consumo do Gemini (contador próprio do K-125)"
+    ]
+  },
+  "acervo_arquivos": {
+    "arestas": 24,
+    "clb": 4,
+    "compreensoes-locais": 10,
+    "elementos": 72,
+    "evidencias": 520,
+    "faltas": 44,
+    "fichas": 2,
+    "fontes": 34,
+    "insumos-x": 5,
+    "lugares": 59,
+    "pessoas": 34,
+    "processos": 9,
+    "proposicoes": 427,
+    "termos": 6,
+    "trechos": 520
+  },
+  "proposicoes": {
+    "total": 427,
+    "por_estado": {
+      "intermediário": 371,
+      "verdadeiro": 52,
+      "paracompleto": 4
+    },
+    "por_atributo": {
+      "processo e modo de fazer": 66,
+      "transmissão": 49,
+      "uso e consumo": 48,
+      "significados": 38,
+      "utensílio": 26,
+      "quem pratica": 25,
+      "insumo": 24,
+      "recipiente": 23,
+      "época": 23,
+      "reconhecimento": 22,
+      "lugar": 22,
+      "mudança": 20,
+      "risco": 18,
+      "nomes e variantes": 11,
+      "salvaguarda": 9,
+      "composição": 3
+    },
+    "sustentam_aviso_saude_politica": 69,
+    "com_evidencia_fora_da_conta": 3,
+    "com_tensao_interna": 2,
+    "versao_regra": {
+      "mu-lambda-0.2": 427
+    }
+  },
+  "evidencias": {
+    "total": 520,
+    "por_tipo_de_voz": [
+      [
+        "autor",
+        272
+      ],
+      [
+        "instituição",
+        160
+      ],
+      [
+        "pessoa citada em fala direta",
+        88
+      ]
+    ]
+  },
+  "trechos": {
+    "total": 520,
+    "por_estado": {
+      "localizado": 520
+    }
+  },
+  "clb": {
+    "total": 4,
+    "por_estado": {
+      "candidata": 3,
+      "ficha montada": 1
+    }
+  },
+  "termos": {
+    "total": 5,
+    "por_estado": {
+      "candidato": 3,
+      "atestado": 2
+    }
+  },
+  "fontes": {
+    "total": 34,
+    "por_tipo_de_evidencia": {
+      "escrito publicado, de arquivo ou oficial": 34
+    }
+  },
+  "fichas": [
+    "acervo/fichas/educacao/CL-0001.md"
+  ],
+  "faltas": {
+    "total": 44,
+    "por_tipo": {
+      "outro": 32,
+      "impedimento_juridico": 6,
+      "compreensao_local_nao_captada": 5,
+      "fonte_inacessivel": 1
+    },
+    "por_subtipo_juridico": {
+      "direito_autoral": 2,
+      "conhecimento_tradicional": 2,
+      "lgpd": 1,
+      "outro": 1
+    },
+    "por_vale_para": {
+      "(sem campo)": 38,
+      "publicar": 4,
+      "agora": 2
+    },
+    "caminho_de_liberacao_estado": {
+      "(sem campo)": 38,
+      "não iniciado": 5,
+      "em andamento": 1
+    }
+  },
+  "entradas": {
+    "total": 2578,
+    "por_estado": {
+      "bruto": 2544,
+      "extraído": 28,
+      "quarentena": 6
+    },
+    "por_ambiente": {
+      "AM-0022": 1531,
+      "AM-0021": 803,
+      "AM-0029": 220,
+      "AM-0061": 24
+    },
+    "por_pretriagem": {
+      "segue": 2574,
+      "(sem campo)": 4
+    },
+    "por_mes_de_entrada": {
+      "2026-10": 1006,
+      "2026-11": 1572
+    }
+  },
+  "pegadas": {
+    "arquivos": 50,
+    "itens_vistos": 22872
+  },
+  "ambientes": {
+    "total": 69,
+    "por_estado_monitoramento": {
+      "não iniciado": 69
+    },
+    "por_estado_escavacao": {
+      "proposto": 69
+    },
+    "por_via": {
+      "Aberto; respondeu ao nosso leitor.": 2,
+      "Aberta, por OAI-PMH.": 2,
+      "via humana": 1,
+      "Web gratuita (DocReader).": 1,
+      "Web. O site recusou nosso leitor (403) em 15/10.": 1,
+      "Aberto, com PDF de cada item.": 1,
+      "Aberto. Respondeu ao nosso leitor.": 1,
+      "Aberto; a API exige chave. O site principal recusou nosso leitor (403).": 1,
+      "Aberto; obras com direitos só por empréstimo.": 1,
+      "Busca aberta; leitura limitada por direitos e por país. Recusou nosso leitor (403).": 1,
+      "Aberto, com APIs SRU e Document. A API SRU recusou nosso leitor (403).": 1,
+      "API com chave ou token; leitura conforme os direitos de cada obra.": 1,
+      "Aberto.": 1,
+      "Gratuito, pelo Memorial da Imprensa do SIAAPM.": 1,
+      "Variado.": 1,
+      "Por assinatura. No Estadão, quem não assina vê partes limitadas depois de se cadastrar (segundo o CRL).": 1,
+      "Cadastro obrigatório ou login gov.br, com aceite de termos. Captcha ao acesso automatizado (15/10).": 1,
+      "cnfcp.gov.br/tesauro recusou nosso leitor (403); o estado on-line não foi conferido.": 1,
+      "digitalcollections.crl.edu; recusou nosso leitor (403).": 1,
+      "PDFs na Biblioteca do IBGE": 1,
+      "API VuFind v1 em JSON (https": 1,
+      "Aberta, com API do VuFind em JSON. Em 15/10/2026 a página inicial pediu verificação de navegador ao robô; a API respondeu.": 1,
+      "Aberta, pelo portal CKAN (software de dados abertos), que tem API. O site catalogodeteses.capes.gov.br não documenta API.": 1,
+      "Aberta, pela API CKAN.": 1,
+      "Aberta, com OAI-PMH, a API ArticleMeta e um feed Atom por revista. A busca search.scielo.org recusou o robô (HTTP 403).": 1,
+      "Por API. Sem chave, US$ 0,10 por dia; com chave grátis, US$ 1 por dia. A paginação por cursor exige chave.": 1,
+      "Aberta, sem cadastro. Pôr um e-mail no parâmetro mailto dá acesso ao pool polite, a fila de quem se identifica.": 1,
+      "OAI-PMH em https": 1,
+      "Aberta, com API do VuFind.": 1,
+      "OAI-PMH documentado na página oficial. Não foi testado aqui, porque o endereço é só HTTP e usa um IP.": 1,
+      "Só manual. O robots.txt (arquivo em que o site diz o que robôs podem acessar) proíbe robôs em /scholar. Não há API nem acesso em lote; os alertas chegam por e-mail.": 1,
+      "O conteúdo assinado só abre nos IPs das instituições participantes ou pelo login CAFe; o gratuito abre para todos, sem login.": 1,
+      "Aberta, na SciELO (conjunto OAI 1981-8122), com feed Atom do último fascículo.": 1,
+      "Aberta, com feed Atom e OAI-PMH próprios do software.": 1,
+      "Aberta": 1,
+      "Aberta. A busca é só por título e autor, e não há RSS.": 1,
+      "Aberta na maioria. Os links vêm da BDTD, do Oasisbr e da CAPES.": 1,
+      "Feed público sem chave, mas o robots.txt de news.google.com não libera /rss, e os termos do Google proíbem o acesso automatizado que contrarie o robots.txt.": 1,
+      "A ajuda oficial descreve a entrega por e-mail. Segundo fontes secundárias, também existe um feed RSS, mas ele fica sob /alerts/, que o robots.txt bloqueia. Se é preciso conta Google": 1,
+      "Sem chave, mas limita o ritmo de pedidos": 1,
+      "Exige conta (termos de 16/05/2023); a API tem cota padrão de 4.000 pedidos por semana, e alguns métodos aceitam só 2 pedidos por minuto.": 1,
+      "Feed oficial de cada site; robots.txt e termos conferidos um a um. A Agência Brasil oferece RSS (rss.ebc.com.br), e o rodapé atual diz '© Todos os direitos reservados pela EBC'.": 1,
+      "Feed em /feed de cada publicação, segundo a ajuda da Substack vista em resultado de busca (a página respondeu 403 à leitura automática).": 1,
+      "Chave num projeto do Google Cloud; por padrão, 100 buscas por dia, mais 10.000 unidades diárias para os outros métodos.": 1,
+      "Aberta, sem chave citada na página; cerca de 20 chamadas por minuto.": 1,
+      "Chave e segredo gratuitos, segundo fontes secundárias; o site oficial respondeu 403 à leitura automática.": 1,
+      "Só pela API, com o recurso 'Instagram Public Content Access', e no máximo 30 hashtags únicas a cada 7 dias. Fora disso, os termos da Meta proíbem a coleta automática.": 1,
+      "Exige vínculo com instituição acadêmica ou organização sem fins lucrativos cuja atividade principal seja a pesquisa; não cobra taxas. O pedido é feito pelo Meta Research Tools Manager.": 1,
+      "Os termos proíbem 'usar scripts automatizados para colher informações dos Serviços'. No Brasil, a Research API só aceita estudos sobre a segurança de jovens online.": 1,
+      "query.wikidata.org; dados estruturados, inclusive Lexemas, em CC0. O serviço está mais lento desde 2026-05.": 1,
+      "API MediaWiki; texto em CC BY-SA 4.0 (e GFDL).": 1,
+      "O site respondeu 403 à leitura automática em 15/10/2026": 1,
+      "A maior parte do acervo está aberta, em áudio, transcrição ou audiovisual. Só se abrem as entrevistas autorizadas formalmente pelos entrevistados, e o acesso a documentos exige, em regra, cadastro.": 1,
+      "Mais de 20 mil itens guardados pela Discoteca. O acesso online não foi confirmado; a consulta é presencial ou por contato com a Discoteca.": 1,
+      "Catálogo online com busca; os termos de uso não foram lidos nesta rodada.": 1,
+      "A base Filmografia tem cerca de 56 mil títulos (inclui cinejornais e obras institucionais), e há 6.775 filmes digitais de acesso público. As condições de reprodução são tratadas por atendimento@cinemateca.org.br.": 1,
+      "API REST aberta, JSON, sem chave. Em 3 de 5 chamadas funcionou. Houve 'Internal Server Error' e 'no available server'. A WebFetch falhou por SSL, só o curl funcionou. Documentação Swagger em api.queridodiario.org.br/docs.": 1,
+      "Busca web atrás de verificação anti-robô (Senado). A API SRU não foi testada.": 1,
+      "API REST do Tainacan e páginas HTML, abertas ao robô pelo robots.txt (29/10/2026); sem adaptador no projeto (protocolo novo, parado para Vicente no K-109); via humana até lá": 1,
+      "Site aberto em inrc.iphan.gov.br, mas a busca não foi testada.": 1,
+      "Cadastro com e-mail e senha. Entrega XML e PDF por dia. O XML também sai no dados.gov.br.": 1,
+      "Arquivos em lote e API RESTful, em CSV, JSON, XML, XLSX e ODS.": 1,
+      "Não aberta nesta rodada.": 1,
+      "WFS aberto em geoserver.funai.gov.br, com download em shapefile, KML, CSV e XLSX.": 1,
+      "Lista de comunidades certificadas numa planilha Google Sheets, atualizada mensalmente, exportável.": 1,
+      "Página aberta em gov.br com PDFs. A consulta de estabelecimentos registrados não foi encontrada nesta rodada.": 1,
+      "Não abertos nesta rodada.": 1
+    },
+    "por_tipo": {
+      "outro": 52,
+      "documento oficial": 7,
+      "hemeroteca": 3,
+      "repositório de teses": 2,
+      "periódico científico": 2,
+      "rede social": 2,
+      "blog": 1
+    }
+  },
+  "recortes": {
+    "total": 52,
+    "por_estado": {
+      "percorrido pela busca": 34,
+      "aberto": 12,
+      "interrompido por teto": 6
+    },
+    "por_ambiente": {
+      "AM-0022": 24,
+      "AM-0021": 19,
+      "AM-0029": 6,
+      "AM-0061": 2,
+      "AM-0026": 1
+    },
+    "soma_total_informado": 418775.0,
+    "soma_total_visto": 383457.0,
+    "sem_total_informado": 1
+  },
+  "consultas": 8,
+  "rotinas": {
+    "versao": "rotinas-0.1",
+    "chaves": [
+      "nota",
+      "versao",
+      "AM-0021",
+      "AM-0029",
+      "AM-0001",
+      "AM-0061",
+      "AM-0022",
+      "AM-0026"
+    ]
+  },
+  "grafo": {
+    "versao_regra": "mu-lambda-0.2",
+    "nos": 72,
+    "arestas": 24,
+    "nos_por_tipo": {
+      "(sem campo)": 72
+    },
+    "arestas_por_estado": {
+      "intermediário": 17,
+      "verdadeiro": 6,
+      "paracompleto": 1
+    }
+  },
+  "logs": {
+    "linhas": 321,
+    "por_fonte_do_registro": {
+      "curador": 133,
+      "hook-SubagentStop": 115,
+      "script": 68,
+      "pessoa": 5
+    },
+    "producao_por_agente_habilidade": {
+      "curador / executar-brief": {
+        "execucoes": 20,
+        "tokens": 6859879,
+        "chamadas": 1011,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
+      "auditor / conferir-fato": {
+        "execucoes": 20,
+        "tokens": 1432808,
+        "chamadas": 242,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "avaliador / extrair-evidencia": {
+        "execucoes": 7,
+        "tokens": 1212590,
+        "chamadas": 155,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "auditor / verificar-fundacao": {
+        "execucoes": 10,
+        "tokens": 1080247,
+        "chamadas": 158,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "redator / escrever-secao-fundacao": {
+        "execucoes": 11,
+        "tokens": 895134,
+        "chamadas": 182,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
+      "curador / registrar-decisao": {
+        "execucoes": 16,
+        "tokens": 716661,
+        "chamadas": 130,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
+      "curador / planejamento de melhorias (estado-planejamento.md)": {
+        "execucoes": 6,
+        "tokens": 481704,
+        "chamadas": 71,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
+      "juridico / triagem-juridica": {
+        "execucoes": 5,
+        "tokens": 361104,
+        "chamadas": 67,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "juridico / guia-de-liberacao": {
+        "execucoes": 3,
+        "tokens": 278283,
+        "chamadas": 47,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "rastreador / ficha-de-acesso": {
+        "execucoes": 3,
+        "tokens": 273890,
+        "chamadas": 36,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "arquivista / registrar-termo": {
+        "execucoes": 3,
+        "tokens": 149782,
+        "chamadas": 32,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "juridico / conferir-fato": {
+        "execucoes": 2,
+        "tokens": 147848,
+        "chamadas": 40,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "juridico / conferir-fato + triagem-juridica": {
+        "execucoes": 1,
+        "tokens": 145933,
+        "chamadas": 15,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "juridico / triagem-juridica e guia-de-liberacao": {
+        "execucoes": 1,
+        "tokens": 132441,
+        "chamadas": 21,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "juridico / conferir-fato e triagem-juridica": {
+        "execucoes": 1,
+        "tokens": 130428,
+        "chamadas": 20,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "arquivista / montar-ficha": {
+        "execucoes": 1,
+        "tokens": 111618,
+        "chamadas": 18,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "arquivista / gerar-grafo": {
+        "execucoes": 1,
+        "tokens": 104796,
+        "chamadas": 15,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "campo-de-acao / kit-fonte-primaria": {
+        "execucoes": 1,
+        "tokens": 103960,
+        "chamadas": 14,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "juridico / n/a": {
+        "execucoes": 1,
+        "tokens": 82949,
+        "chamadas": 24,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "rastreador / consulta": {
+        "execucoes": 1,
+        "tokens": 51898,
+        "chamadas": 8,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      }
+    },
+    "producao_total_tokens": 14753953,
+    "producao_total_chamadas": 2306,
+    "teste_de_modelo_por_agente_habilidade": {
+      "avaliador / extrair-evidencia": {
+        "execucoes": 6,
+        "tokens": 962624,
+        "chamadas": 133,
+        "modelos": [
+          "claude-haiku-5-5",
+          "gemini-4-hydrogen"
+        ]
+      },
+      "arquivista / gerar-grafo": {
+        "execucoes": 5,
+        "tokens": 525224,
+        "chamadas": 76,
+        "modelos": [
+          "claude-haiku-5-5",
+          "claude-sonnet-5-5",
+          "gemini-3.8-flash",
+          "gemini-4-argon"
+        ]
+      },
+      "juridico / triagem-juridica": {
+        "execucoes": 3,
+        "tokens": 300713,
+        "chamadas": 37,
+        "modelos": [
+          "claude-haiku-5-5",
+          "claude-sonnet-5-5"
+        ]
+      },
+      "arquivista / registrar-termo": {
+        "execucoes": 2,
+        "tokens": 203507,
+        "chamadas": 35,
+        "modelos": [
+          "claude-haiku-5-5",
+          "gemini-4-hydrogen"
+        ]
+      },
+      "arquivista / montar-ficha": {
+        "execucoes": 2,
+        "tokens": 139247,
+        "chamadas": 18,
+        "modelos": [
+          "claude-haiku-5-5",
+          "gemini-4-hydrogen"
+        ]
+      },
+      "auditor / conferir-fato": {
+        "execucoes": 1,
+        "tokens": 125634,
+        "chamadas": 22,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      }
+    },
+    "teste_total_tokens": 2256949,
+    "primeira_data": "2026-10-16",
+    "ultima_data": "2026-11-14"
+  },
+  "semana_da_conta": {
+    "linhas": 32,
+    "linhas_sem_pp": 6,
+    "pp_por_semana_e_frente": {
+      "21/10–28/10/2026 | não atribuído": 4.0,
+      "21/10–28/10/2026 | planejamento": 33.0,
+      "21/10–28/10/2026 | desenvolvimento": 54.0,
+      "28/10–04/11/2026 | desenvolvimento": 61.0,
+      "28/10–04/11/2026 | planejamento": 6.0,
+      "11/11–18/11/2026 | desenvolvimento": 63.0
+    },
+    "pp_por_frente": {
+      "desenvolvimento": 178.0,
+      "não atribuído": 4.0,
+      "planejamento": 39.0
+    }
+  },
+  "horas_de_vicente": [
+    {
+      "Semana": "12–18/10",
+      "Revisões (h)": "não informado",
+      "Juízo de itens (h)": "—",
+      "Busca assistida (h)": "—",
+      "Uso da conta antes / depois": "não informado",
+      "Minutos do Actions": "—"
+    },
+    {
+      "Semana": "19–25/10",
+      "Revisões (h)": "não registrado (Vicente, 29/10: não precisa)",
+      "Juízo de itens (h)": "—",
+      "Busca assistida (h)": "0",
+      "Uso da conta antes / depois": "ver \"Semana da conta\"",
+      "Minutos do Actions": "—"
+    }
+  ],
+  "gatilho_fase2_dados": {
+    "1_caso_piloto_do_bruto_a_ficha": {
+      "CL-0001_estado": "ficha montada",
+      "ficha": "acervo/fichas/CL-0001.md"
+    },
+    "2_horas_reais_4_semanas": {
+      "semanas_com_linha": 2,
+      "valores": [
+        "não informado",
+        "não registrado (Vicente, 29/10: não precisa)"
+      ]
+    },
+    "3_decisoes_degrau_2": "sem campo no acervo; conferir no §5.4 e nas decisões (licença, aviso de privacidade, canal com o titular)"
+  }
+}
