@@ -9,20 +9,24 @@ Leitura de uso informada por Vicente em 14/11: semana em 66%, janela de 5 h em 8
   a linha no checklist do piloto.
 - A vistoria da casa (`scripts/manutencao.py`) e a limpeza de 14/11.
 
+## Feito em 14/11 (conversa 1 do K-114, janela de 5 h em 83%: um lote só)
+- O rascunho do kit em `campo_de_acao/kit-fonte-primaria-cajuina.md` (campo-de-acao, EX-0151, 103.960 tokens,
+  14 chamadas); o caso real e dois casos que reprovam em `.claude/skills/kit-fonte-primaria/exemplos/casos.json`;
+  a linha da conversa na tabela "Semana da conta" e a linha do K-114 no checklist.
+
 ## Falta
-1. **K-114:** o pedido ao campo-de-acao com a habilidade kit-fonte-primaria (Sonnet 5.5 alto, teto de 15
-   chamadas, 1 a 2 chamadas previstas), pelos critérios do bloco 11 do brief (l. 381-387): toda afirmação
-   sobre a cajuína aponta para uma Proposição da ficha; só fontes do acervo do piloto, com link e nível;
-   nenhum dado pessoal de terceiros; o alcance dito; as Faltas à vista; rascunho em `campo_de_acao/`, sem
-   publicar. O kit usa só conteúdo sem Falta jurídica aberta (a regra do campo-de-acao vale como está). O
-   curador grava o log (`registrar_log.py`) e o par real da habilidade; Vicente revisa o rascunho. Sem
-   teste de modelo (D-056).
+1. **K-114 (fecho):** Vicente revisa o rascunho (pronto-quando do bloco 11). Antes, o curador confere, sem
+   agente, os quatro pontos do agente: (a) a Falta da escuta de comunidades, do K-110, que o agente não achou
+   (`grep -rn "escuta" acervo/faltas trilhas/logs`); (b) as 8 perguntas do formulário (P53), se o kit deve
+   trazê-las; (c) se a F-0032 alcança EV-0128 e EV-0403 (PR-0100, seção 6.4 do kit), para o juridico se a
+   leitura não bastar; (d) a licença das fontes, "não conferido" (fica dito). As correções vão ao rascunho, e o
+   K-114 fecha no quadro.
 2. **K-116:** o relatório do piloto, calculado dos logs, escrito pelo redator e conferido pelo auditor
    (bloco 14, "Antes da v0.3"), com o que foi estacionado dito às claras. Fecha a entrega.
 3. Depois da entrega: reconfigurar a rotina do Claude do K-113 para propor e reler (D-056, item 4), como
    primeiro ato da operação; a reunião do K-004.
 
 ## Próximo comando
-Conversa nova em Opus 5.5 médio, depois das 10h: `python scripts/relatorio_dia.py`; a conta com
-`python scripts/orcamento.py --a0 66 --janela <leitura> --agente campo-de-acao --habilidade kit-fonte-primaria`;
-depois, o pedido do K-114.
+Conversa nova em Opus 5.5 médio, com a janela de 5 h renovada: `python scripts/relatorio_dia.py`; conferir os
+pontos (a) a (d) do item 1; levar o rascunho a Vicente. O `orcamento.py` ainda soma os tetos de 50 e 60 pp, que
+Vicente suspendeu em 14/11: vale só a linha de 90%.

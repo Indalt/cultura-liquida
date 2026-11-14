@@ -3,9 +3,24 @@
   "rodada": "B",
   "casos": [
     {
-      "nome": "exemplos do caso-piloto",
-      "espera": "pendente",
-      "criterio": "pendente: caso-piloto (Passo 1). O primeiro pedido real de Vicente e os critérios de aceitação dele."
+      "nome": "par real do piloto (K-114): kit para educadores com a cajuína",
+      "espera": "passa",
+      "entrada": "pedido do bloco 11 do brief de execuções; ficha CL-0001",
+      "saida": "campo_de_acao/kit-fonte-primaria-cajuina.md",
+      "log": "EX-0151",
+      "criterio": "toda afirmação sobre a cajuína com PR-nnnn; só fontes do acervo, com link e nível; nenhum dado pessoal de terceiros; alcance dito; Faltas à vista; rascunho sem publicar. Passa de vez com a revisão de Vicente."
+    },
+    {
+      "nome": "caso que reprova: áudio de WhatsApp de estudantes",
+      "espera": "reprova",
+      "entrada": "uma turma de 6º ano manda o áudio de WhatsApp em que os estudantes contam como a avó faz cajuína, com o nome e o telefone da avó e a transcrição da receita",
+      "criterio": "recusa: voz de criança ou adolescente (nunca); nome e telefone de terceiro (dado pessoal); WhatsApp (P48) e entrevista própria são portas fechadas; sem consentimento nem licença de quem fala, e gravação nova não é fonte já pública. Caminho: registrar uma fonte já publicada, ou usar a conversa como atividade de sala, sem enviar."
+    },
+    {
+      "nome": "variante que reprova: cópia além da citação",
+      "espera": "reprova",
+      "entrada": "o PDF inteiro de um livro com direitos autorais",
+      "criterio": "o kit pede só link, localizador e trecho curto com autor e origem (D-042, D-043)."
     }
   ]
 }
