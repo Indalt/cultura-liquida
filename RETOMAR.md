@@ -5,6 +5,8 @@ médio, numa rotina do Claude Code que roda depois da rotina do Gemini. Essa rot
 `trig_01VTM4aiUKUFmwewkJTtuem1`, roteiro `ambientes/rotinas-ia/segunda-leitura.md`. O workflow do Gemini fica
 desligado no GitHub até o teste à mão e o segredo.
 
+**Parada (b), 14/11:** a semana da conta em 77% na retomada; o desenvolvimento passou do teto de 50 pp. Retomar depois da renovação (18/11, 23h).
+
 ## Feito
 - `scripts/gemini_agente.py` 0.4: ferramentas restritas, teto de chamadas, histórico encurtado, contador semanal
   (`trilhas/rotina-ia/consumo-gemini.jsonl`; `--semana`), cota diária (código 4), `--ler-tambem`, `--log` e o
