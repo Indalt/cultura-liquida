@@ -6,10 +6,15 @@ conferir. Não muda nada fora da pasta de saída.
 
 Regras da conta:
   - tokens e chamadas de agente: só as linhas com tokens que não vêm do hook SubagentStop (o hook grava
-    só uma linha mínima de segurança; o número oficial é o do curador, CLAUDE.md);
+    só uma linha mínima de segurança) e que não são do agente "curador": as linhas do curador agregam
+    os subagentes da conversa, que já têm linha própria (achado A1 do auditor no K-116, 0.2); elas ficam
+    à parte, em "agregados_do_curador", sem somar;
+  - linhas com 0 tokens (prova que não rodou) não contam como execução;
   - os registros de teste de modelo (entrada_ref com "[teste de modelo]", D-051) ficam à parte, fora da
     medida de produção;
-  - pp por frente: a soma da coluna pp da tabela "Semana da conta" do checklist; "não lido" e "—" não somam.
+  - pp por frente: a soma da coluna pp da tabela "Semana da conta" do checklist, só a célula inteiramente
+    numérica, como no orcamento.py ("não lido", "—" e "4 (estimado...)" não somam; a estimada fica à parte).
+  - teste de modelo: separado por família (claude, gemini).
 
 Uso:
     python scripts/relatorio_piloto.py [--saida trilhas/2026-11-14_relatorio-piloto]
@@ -22,7 +27,7 @@ import os
 import re
 import sys
 
-VERSAO = "relatorio-piloto-0.1"
+VERSAO = "relatorio-piloto-0.2"
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHECKLIST = "trilhas/2026-10-17_execucao-piloto.md"
 
@@ -61,6 +66,11 @@ def numero(s):
     s = (s or "").strip().replace(".", "").replace(",", ".")
     m = re.match(r"^-?\d+(\.\d+)?", s)
     return float(m.group(0)) if m else None
+
+
+def numero_estrito(s):
+    s = (s or "").strip().replace(".", "").replace(",", ".")
+    return float(s) if re.fullmatch(r"-?\d+(\.\d+)?", s) else None
 
 
 def tabela_md(texto, cabecalho_inicio):
@@ -198,14 +208,22 @@ def main():
                         linhas.append(json.loads(l))
                     except json.JSONDecodeError:
                         pass
-    prod = collections.defaultdict(lambda: {"execucoes": 0, "tokens": 0, "chamadas": 0, "modelos": set()})
-    teste = collections.defaultdict(lambda: {"execucoes": 0, "tokens": 0, "chamadas": 0, "modelos": set()})
+    novo = lambda: {"execucoes": 0, "tokens": 0, "chamadas": 0, "modelos": set()}  # noqa: E731
+    prod = collections.defaultdict(novo)
+    teste = collections.defaultdict(novo)
+    curador = collections.defaultdict(novo)
+    teste_familia = collections.Counter()
     por_fonte = collections.Counter()
     for d in linhas:
         por_fonte[d.get("fonte_do_registro", "(sem campo)")] += 1
         if d.get("fonte_do_registro") == "hook-SubagentStop" or not isinstance(d.get("tokens"), int):
             continue
-        alvo = teste if "[teste de modelo]" in str(d.get("entrada_ref", "")) else prod
+        if d["tokens"] == 0:
+            continue
+        e_teste = "[teste de modelo]" in str(d.get("entrada_ref", ""))
+        alvo = teste if e_teste else (curador if d.get("agente") == "curador" else prod)
+        if e_teste:
+            teste_familia["gemini" if "gemini" in str(d.get("modelo", "")) else "claude"] += d["tokens"]
         k = f'{d.get("agente")} / {d.get("habilidade")}'
         alvo[k]["execucoes"] += 1
         alvo[k]["tokens"] += d["tokens"]
@@ -223,10 +241,14 @@ def main():
         "producao_total_chamadas": sum(v["chamadas"] for v in prod.values()),
         "teste_de_modelo_por_agente_habilidade": fechar(teste),
         "teste_total_tokens": sum(v["tokens"] for v in teste.values()),
+        "teste_tokens_por_familia": dict(teste_familia),
+        "agregados_do_curador_nao_somados": fechar(curador),
+        "agregados_do_curador_total_tokens": sum(v["tokens"] for v in curador.values()),
         "primeira_data": min((str(d.get("data_hora", ""))[:10] for d in linhas if d.get("data_hora")), default=None),
         "ultima_data": max((str(d.get("data_hora", ""))[:10] for d in linhas if d.get("data_hora")), default=None),
     }
     r["alcance"]["olhado"].append("trilhas/logs/*.jsonl (todas as linhas)")
+    r["logs"]["gerado_em"] = __import__("datetime").datetime.now().isoformat(timespec="minutes")
     r["alcance"]["fora"].append("tokens da conversa principal (não registrados por linha; só os pp da tabela) e o consumo do Gemini (contador próprio do K-125)")
 
     # Checklist: Semana da conta e horas
@@ -235,15 +257,20 @@ def main():
     sem = tabela_md(ck, "| Semana da conta |")
     pp = collections.defaultdict(float)
     sem_pp = 0
+    estimados = []
     for l in sem:
-        v = numero(l.get("pp", ""))
+        v = numero_estrito(l.get("pp", ""))
         if v is None:
             sem_pp += 1
+            if numero(l.get("pp", "")) is not None:
+                estimados.append({"semana": l.get("Semana da conta"), "frente": l.get("Frente"),
+                                  "cartao": l.get("Cartão"), "pp": l.get("pp")})
             continue
         pp[(l.get("Semana da conta"), l.get("Frente"))] += v
     r["semana_da_conta"] = {
         "linhas": len(sem),
-        "linhas_sem_pp": sem_pp,
+        "linhas_sem_pp_medido": sem_pp,
+        "pp_estimados_nao_somados": estimados,
         "pp_por_semana_e_frente": {f"{s} | {fr}": round(v, 2) for (s, fr), v in pp.items()},
         "pp_por_frente": {fr: round(sum(v for (s2, f2), v in pp.items() if f2 == fr), 2) for fr in sorted({f for _, f in pp})},
     }

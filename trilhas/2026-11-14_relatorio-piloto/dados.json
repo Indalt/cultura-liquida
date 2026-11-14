@@ -1,5 +1,5 @@
 {
-  "versao": "relatorio-piloto-0.1",
+  "versao": "relatorio-piloto-0.2",
   "alcance": {
     "olhado": [
       "acervo/ (todas as pastas, contagem de arquivos; Proposições, Evidências, Trechos, CLB, Termos e Fontes lidos por inteiro)",
@@ -291,22 +291,14 @@
     }
   },
   "logs": {
-    "linhas": 321,
+    "linhas": 327,
     "por_fonte_do_registro": {
-      "curador": 133,
-      "hook-SubagentStop": 115,
+      "curador": 135,
+      "hook-SubagentStop": 119,
       "script": 68,
       "pessoa": 5
     },
     "producao_por_agente_habilidade": {
-      "curador / executar-brief": {
-        "execucoes": 20,
-        "tokens": 6859879,
-        "chamadas": 1011,
-        "modelos": [
-          "claude-opus-5-5"
-        ]
-      },
       "auditor / conferir-fato": {
         "execucoes": 20,
         "tokens": 1432808,
@@ -335,22 +327,6 @@
         "execucoes": 11,
         "tokens": 895134,
         "chamadas": 182,
-        "modelos": [
-          "claude-opus-5-5"
-        ]
-      },
-      "curador / registrar-decisao": {
-        "execucoes": 16,
-        "tokens": 716661,
-        "chamadas": 130,
-        "modelos": [
-          "claude-opus-5-5"
-        ]
-      },
-      "curador / planejamento de melhorias (estado-planejamento.md)": {
-        "execucoes": 6,
-        "tokens": 481704,
-        "chamadas": 71,
         "modelos": [
           "claude-opus-5-5"
         ]
@@ -419,6 +395,14 @@
           "claude-sonnet-5-5"
         ]
       },
+      "auditor / verificar-fundacao + conferir-fato": {
+        "execucoes": 1,
+        "tokens": 112866,
+        "chamadas": 18,
+        "modelos": [
+          "claude-sonnet-5-5"
+        ]
+      },
       "arquivista / montar-ficha": {
         "execucoes": 1,
         "tokens": 111618,
@@ -443,6 +427,14 @@
           "claude-sonnet-5-5"
         ]
       },
+      "redator / escrever-relatorio-piloto (fora da lista de habilidades; com as regras de escrever-secao-fundacao)": {
+        "execucoes": 1,
+        "tokens": 103555,
+        "chamadas": 18,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
       "juridico / n/a": {
         "execucoes": 1,
         "tokens": 82949,
@@ -460,8 +452,8 @@
         ]
       }
     },
-    "producao_total_tokens": 14753953,
-    "producao_total_chamadas": 2306,
+    "producao_total_tokens": 6912130,
+    "producao_total_chamadas": 1130,
     "teste_de_modelo_por_agente_habilidade": {
       "avaliador / extrair-evidencia": {
         "execucoes": 6,
@@ -473,14 +465,13 @@
         ]
       },
       "arquivista / gerar-grafo": {
-        "execucoes": 5,
+        "execucoes": 4,
         "tokens": 525224,
         "chamadas": 76,
         "modelos": [
           "claude-haiku-5-5",
           "claude-sonnet-5-5",
-          "gemini-3.8-flash",
-          "gemini-4-argon"
+          "gemini-3.8-flash"
         ]
       },
       "juridico / triagem-juridica": {
@@ -502,12 +493,11 @@
         ]
       },
       "arquivista / montar-ficha": {
-        "execucoes": 2,
+        "execucoes": 1,
         "tokens": 139247,
         "chamadas": 18,
         "modelos": [
-          "claude-haiku-5-5",
-          "gemini-4-hydrogen"
+          "claude-haiku-5-5"
         ]
       },
       "auditor / conferir-fato": {
@@ -520,22 +510,62 @@
       }
     },
     "teste_total_tokens": 2256949,
+    "teste_tokens_por_familia": {
+      "claude": 1413955,
+      "gemini": 842994
+    },
+    "agregados_do_curador_nao_somados": {
+      "curador / executar-brief": {
+        "execucoes": 14,
+        "tokens": 6859879,
+        "chamadas": 1011,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
+      "curador / registrar-decisao": {
+        "execucoes": 4,
+        "tokens": 716661,
+        "chamadas": 130,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      },
+      "curador / planejamento de melhorias (estado-planejamento.md)": {
+        "execucoes": 2,
+        "tokens": 481704,
+        "chamadas": 71,
+        "modelos": [
+          "claude-opus-5-5"
+        ]
+      }
+    },
+    "agregados_do_curador_total_tokens": 8058244,
     "primeira_data": "2026-10-16",
-    "ultima_data": "2026-11-14"
+    "ultima_data": "2026-11-14",
+    "gerado_em": "2026-11-14T10:53"
   },
   "semana_da_conta": {
     "linhas": 32,
-    "linhas_sem_pp": 6,
+    "linhas_sem_pp_medido": 7,
+    "pp_estimados_nao_somados": [
+      {
+        "semana": "11/11–18/11/2026",
+        "frente": "desenvolvimento",
+        "cartao": "K-114 (conversa 1, 14/11)",
+        "pp": "4 (estimado: 2 da conversa + 1,66 do lote)"
+      }
+    ],
     "pp_por_semana_e_frente": {
       "21/10–28/10/2026 | não atribuído": 4.0,
       "21/10–28/10/2026 | planejamento": 33.0,
       "21/10–28/10/2026 | desenvolvimento": 54.0,
       "28/10–04/11/2026 | desenvolvimento": 61.0,
       "28/10–04/11/2026 | planejamento": 6.0,
-      "11/11–18/11/2026 | desenvolvimento": 63.0
+      "11/11–18/11/2026 | desenvolvimento": 59.0
     },
     "pp_por_frente": {
-      "desenvolvimento": 178.0,
+      "desenvolvimento": 174.0,
       "não atribuído": 4.0,
       "planejamento": 39.0
     }
