@@ -5,7 +5,7 @@ médio, numa rotina do Claude Code que roda depois da rotina do Gemini. Essa rot
 `trig_01VTM4aiUKUFmwewkJTtuem1`, roteiro `ambientes/rotinas-ia/segunda-leitura.md`. O workflow do Gemini fica
 desligado no GitHub até o teste à mão e o segredo.
 
-**Parada (b), 14/11:** a semana da conta em 77% na retomada; o desenvolvimento passou do teto de 50 pp. Retomar depois da renovação (18/11, 23h).
+**14/11:** Vicente mandou ignorar as medições e retomar (tetos de 50 e 60 pp suspensos; fica a linha de 90%). Provas do hydrogen: ee r3 e rt r1 reprovam pelo teto de chamadas gasto em leituras uma a uma; mf sem cota do dia. Executor 0.6 com `ler_varios` e `rodar_varios`. Semana do Gemini em 76% da entrada: as próximas provas depois de 18/11, 23h (cota do hydrogen: 20 pedidos por dia, desde 05h de Brasília).
 
 ## Feito
 - `scripts/gemini_agente.py` 0.4: ferramentas restritas, teto de chamadas, histórico encurtado, contador semanal

@@ -52,7 +52,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-VERSAO = "gemini-agente-0.4"
+VERSAO = "gemini-agente-0.6"
 RAIZ = Path(__file__).resolve().parents[1]
 API = "https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
 REGISTRO = RAIZ / "trilhas" / "rotina-ia" / "consumo-gemini.jsonl"
@@ -83,14 +83,24 @@ FERRAMENTAS = [{"functionDeclarations": [
      "parameters": {"type": "object", "properties": {
          "script": {"type": "string", "description": "nome do arquivo em scripts/, por exemplo localizar_trecho.py"},
          "argumentos": {"type": "array", "items": {"type": "string"}}}, "required": ["script", "argumentos"]}},
+    {"name": "ler_varios", "description": "Lê vários arquivos inteiros (ou até 400 linhas de cada) numa só chamada, como um `cat a b c`. Até 12 arquivos e 1.500 linhas no total.",
+     "parameters": {"type": "object", "properties": {
+         "caminhos": {"type": "array", "items": {"type": "string"}}}, "required": ["caminhos"]}},
+    {"name": "rodar_varios", "description": "Roda em sequência várias execuções de scripts liberados numa só chamada, como um laço no shell (por exemplo, um localizar_trecho.py por trecho). Até 20 execuções; devolve o código e a saída de cada uma.",
+     "parameters": {"type": "object", "properties": {
+         "execucoes": {"type": "array", "items": {"type": "object", "properties": {
+             "script": {"type": "string"}, "argumentos": {"type": "array", "items": {"type": "string"}}},
+             "required": ["script", "argumentos"]}}}, "required": ["execucoes"]}},
 ]}]
 
 PONTE = """# Como trabalhar nesta execução (executor {versao}, API do Gemini; K-125, D-054)
-Você roda fora do Claude Code. As ferramentas que o pedido cita (Bash, Read, Write, Grep, Glob) **não existem aqui**; use as cinco ferramentas desta execução:
-- ler arquivo por faixa: `ler_arquivo`; procurar: `grep`; ver pasta: `listar`;
+Você roda fora do Claude Code. As ferramentas que o pedido cita (Bash, Read, Write, Grep, Glob) **não existem aqui**; use as sete ferramentas desta execução:
+- ler arquivo por faixa: `ler_arquivo`; **vários arquivos de uma vez: `ler_varios`** (uma chamada só); procurar: `grep`; ver pasta: `listar`;
+- **várias execuções de script de uma vez: `rodar_varios`** (uma chamada só; por exemplo, todos os `localizar_trecho.py` de um lote);
 - gravar: `gravar_arquivo`, só dentro da pasta de trabalho `{pasta}` (um arquivo por chamada, qualquer tamanho);
 - onde o pedido mandar rodar `<python> scripts/X.py <args>`, chame `rodar_script` com `script` = "X.py" e `argumentos` = a lista dos args, sem o python e sem aspas de shell (cada argumento um item). Scripts liberados: {scripts}.
 O arquivo do agente e o SKILL.md abaixo **já foram lidos do disco agora** (a versão em teste): não os releia. Leia só o que o pedido exige; o formato da saída está no pedido, e um script diz na mensagem de erro o que falta (rode-o em vez de ler o código dele). Para poupar tokens, os resultados de ferramenta das rodadas antigas são encurtados no histórico: guarde no seu raciocínio o que precisar ou releia a faixa. Agrupe chamadas independentes num mesmo turno.
+Ordem do trabalho: leia só o que o pedido indica, **grave a saída cedo** (`gravar_arquivo`, na metade do teto no máximo), rode a validação e corrija pelo que ela disser. Não explore pastas nem valide antes de gravar: validar o que você não mudou não é resultado. Se o teto chegar sem gravação, diga isso na resposta final, sem apresentar como feito o que não fez.
 Teto: {teto} chamadas de ferramenta nesta execução. Termine com uma resposta em texto (sem ferramenta) que diga o resultado da validação e traga o bloco LOG que o seu agente pede.
 """
 
@@ -244,8 +254,32 @@ class Caixa:
             saida = saida[:MAX_SAIDA] + "\n[… cortado]"
         return f"código {r.returncode}\n{saida}"
 
+    def ler_varios(self, caminhos: list) -> str:
+        partes, total = [], 0
+        for c in list(caminhos)[:12]:
+            if total >= 1500:
+                partes.append(f"=== {c}\n[não lido: limite de 1.500 linhas da chamada; leia em outra]")
+                continue
+            txt = self.ler_arquivo(c, 1, min(MAX_LINHAS, 1500 - total))
+            total += txt.count("\n") + 1
+            partes.append(f"=== {c}\n{txt}")
+        if len(caminhos) > 12:
+            partes.append(f"[{len(caminhos) - 12} arquivo(s) além do limite de 12 não lidos]")
+        return "\n".join(partes)
+
+    def rodar_varios(self, execucoes: list) -> str:
+        saida = []
+        for i, e in enumerate(list(execucoes)[:20], 1):
+            e = e if isinstance(e, dict) else {}
+            saida.append(f"=== {i}: {e.get('script')} {' '.join(map(str, e.get('argumentos') or []))[:200]}\n"
+                         + self.rodar_script(str(e.get("script", "")), [str(x) for x in e.get("argumentos") or []])[:MAX_SAIDA // 4])
+        if len(execucoes) > 20:
+            saida.append(f"[{len(execucoes) - 20} execução(ões) além do limite de 20 não rodadas]")
+        return "\n".join(saida)[:MAX_SAIDA * 2]
+
     def chamar(self, nome: str, args: dict) -> str:
-        f = getattr(self, nome, None) if nome in {"ler_arquivo", "grep", "listar", "gravar_arquivo", "rodar_script"} else None
+        f = getattr(self, nome, None) if nome in {"ler_arquivo", "grep", "listar", "gravar_arquivo", "rodar_script",
+                                                   "ler_varios", "rodar_varios"} else None
         if f is None:
             return f"ERRO: ferramenta inexistente: {nome}"
         try:
@@ -358,7 +392,7 @@ def espera_429(texto: str) -> float | None:
     return float(m.group(1)) if m else None
 
 
-def uso(resp: dict) -> tuple[int, int, int]:
+def uso(resp: dict) -> tuple[int, int, int, int]:
     u = resp.get("usageMetadata", {})
     entrada = u.get("promptTokenCount", 0) + u.get("toolUsePromptTokenCount", 0)
     pens = u.get("thoughtsTokenCount", 0)
