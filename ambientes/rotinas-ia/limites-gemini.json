@@ -1,0 +1,23 @@
+{
+  "versao": "limites-gemini-0.1",
+  "fonte": "tela de limites de taxa do AI Studio do projeto da chave (nível gratuito), lida por Vicente em 13/11/2026 e colada na conversa do K-125; nível: oficial pela tela do dono, não conferido pela documentação pública",
+  "nivel": "gratuito",
+  "renovacao_diaria": "meia-noite do Pacífico; o executor conta desde as 07h UTC (o lado seguro: no horário de inverno a renovação é às 08h UTC)",
+  "nota": "rpm = pedidos por minuto; tpm = tokens de entrada por minuto; rpd = pedidos por dia, por projeto e por modelo. 0 = sem cota no nível gratuito. Os pedidos recusados pela API (429) também contam na tela; o executor conta cada tentativa HTTP.",
+  "modelos": {
+    "gemini-4-hydrogen": {"rpm": 5, "tpm": 250000, "rpd": 20},
+    "gemini-4-argon": {"rpm": 0, "tpm": 0, "rpd": 0},
+    "gemini-4-carbon": {"rpm": 0, "tpm": 0, "rpd": 0, "nota": "nunca (D-054)"},
+    "gemini-3.8-flash": {"rpm": 5, "tpm": 250000, "rpd": 20},
+    "gemini-3.6-flash": {"rpm": 5, "tpm": 250000, "rpd": 20},
+    "gemini-3-flash-preview": {"rpm": 5, "tpm": 250000, "rpd": 20, "nota": "na tela, \"Gemini 3 Flash\"; o ID da API é o da lista de modelos da chave"},
+    "gemini-2.5-flash": {"rpm": 5, "tpm": 250000, "rpd": 20},
+    "gemini-3.5-flash-lite": {"rpm": 15, "tpm": 250000, "rpd": 500},
+    "gemini-3.1-flash-lite": {"rpm": 15, "tpm": 250000, "rpd": 500},
+    "gemini-2.5-flash-lite": {"rpm": 10, "tpm": 250000, "rpd": 20},
+    "gemini-2.5-pro": {"rpm": 0, "tpm": 0, "rpd": 0},
+    "gemini-3.1-pro-preview": {"rpm": 0, "tpm": 0, "rpd": 0, "nota": "na tela, \"Gemini 3.1 Pro\""},
+    "gemma-4-31b-it": {"rpm": 30, "tpm": 16000, "rpd": 14400, "nota": "16 mil tokens por minuto: menos que o pedido do sistema de uma habilidade"},
+    "gemma-4-26b-a4b-it": {"rpm": 30, "tpm": 16000, "rpd": 14400, "nota": "idem"}
+  }
+}

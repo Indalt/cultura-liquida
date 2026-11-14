@@ -38,13 +38,14 @@ def id_do_registro(obj) -> str | None:
 
 
 def arquivos_acervo(raiz: Path = RAIZ) -> list[Path]:
-    """Os JSON do acervo, fora os arquivos de configuração do layout (tradução, rotinas)."""
+    """Os JSON do acervo, fora os arquivos de configuração do layout (tradução, rotinas, limites do Gemini)."""
     saida = []
     for nome in PASTAS_ACERVO:
         pasta = raiz / nome
         if pasta.exists():
             saida += sorted(p for p in pasta.rglob("*.json")
-                            if p.name not in ("traducao-consultas.json", "rotinas.json", "adaptadores.json"))
+                            if p.name not in ("traducao-consultas.json", "rotinas.json", "adaptadores.json",
+                                                       "limites-gemini.json"))
     return saida
 
 

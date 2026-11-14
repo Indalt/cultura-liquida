@@ -33,7 +33,10 @@ Uso:
 `--log`: grava o log da Execução (`registrar_log.py`, formato de `esquemas/log.schema.json`) com os tokens da API;
 o EX dado vai ao resumo (`execucao`) e à última linha impressa (`EX: EX-nnnn`).
 Código de saída: 0 = o modelo terminou; 2 = teto de chamadas; 3 = teto da semana; 4 = cota diária da API
-(nível gratuito: 20 pedidos por dia, por projeto e por modelo; K-125, 13/11); 1 = erro.
+(nível gratuito: 20 pedidos por dia, por projeto e por modelo; K-125, 13/11) ou modelo sem cota; 1 = erro.
+Ritmo (0.4): `--limites` (padrão `ambientes/rotinas-ia/limites-gemini.json`, a tela do dono) dá, por modelo, os
+pedidos por minuto, os tokens de entrada por minuto e os pedidos por dia; o executor espera antes de passar do
+minuto e para (estado `cota_dia`) antes de passar do dia, contando cada tentativa HTTP (`pedidos_http`).
 """
 from __future__ import annotations
 
@@ -49,10 +52,11 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-VERSAO = "gemini-agente-0.3"
+VERSAO = "gemini-agente-0.4"
 RAIZ = Path(__file__).resolve().parents[1]
 API = "https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
 REGISTRO = RAIZ / "trilhas" / "rotina-ia" / "consumo-gemini.jsonl"
+LIMITES = RAIZ / "ambientes" / "rotinas-ia" / "limites-gemini.json"
 TETO_ENTRADA = 1_000_000
 TETO_SAIDA = 2_000_000
 BRT = timezone(timedelta(hours=-3))
@@ -252,10 +256,64 @@ class Caixa:
             return f"ERRO: {type(e).__name__}: {e}"
 
 
-def pedir(modelo: str, corpo: dict, chave: str) -> dict:
+def inicio_dia(agora: datetime | None = None) -> datetime:
+    """Início do dia da cota (meia-noite do Pacífico), contado das 07h UTC: o lado seguro do ano todo."""
+    agora = agora or datetime.now(timezone.utc)
+    ini = agora.replace(hour=7, minute=0, second=0, microsecond=0)
+    return ini if agora >= ini else ini - timedelta(days=1)
+
+
+def pedidos_hoje(registro: Path, modelo: str) -> int:
+    """Pedidos HTTP do modelo no dia da cota, pelo registro (as linhas antigas, sem `pedidos_http`, pelas chamadas)."""
+    ini, n = inicio_dia(), 0
+    if registro.exists():
+        for l in registro.read_text(encoding="utf-8").splitlines():
+            try:
+                d = json.loads(l)
+                if d.get("modelo") == modelo and datetime.fromisoformat(d["fim"]) >= ini:
+                    n += int(d.get("pedidos_http", d.get("chamadas_api", 0)))
+            except (ValueError, KeyError, TypeError):
+                continue
+    return n
+
+
+class Ritmo:
+    """O ritmo do nível da chave (`ambientes/rotinas-ia/limites-gemini.json`): pedidos por minuto, tokens de entrada
+    por minuto e pedidos por dia, por modelo. Espera antes de passar do minuto; para antes de passar do dia."""
+
+    def __init__(self, modelo: str, registro: Path, arquivo: Path):
+        lim = {}
+        try:
+            lim = json.loads(Path(arquivo).read_text(encoding="utf-8"))["modelos"].get(modelo, {})
+        except (OSError, ValueError, KeyError):
+            pass
+        self.rpm, self.tpm, self.rpd = lim.get("rpm"), lim.get("tpm"), lim.get("rpd")
+        self.hoje = pedidos_hoje(registro, modelo)
+        self.tentativas = 0
+        self.janela: list[tuple[float, int]] = []
+
+    def antes(self, tokens: int) -> None:
+        if self.rpd is not None and self.hoje + self.tentativas + 1 > self.rpd:
+            raise RuntimeError(f"PerDay: o contador do executor dá {self.hoje + self.tentativas} de {self.rpd} pedidos "
+                               f"hoje para o modelo (limites-gemini.json); o próximo passaria")
+        while self.rpm or self.tpm:
+            agora = time.monotonic()
+            self.janela = [(t, k) for t, k in self.janela if agora - t < 60]
+            ok_rpm = not self.rpm or len(self.janela) < self.rpm
+            ok_tpm = not self.tpm or not self.janela or sum(k for _, k in self.janela) + tokens <= self.tpm
+            if ok_rpm and ok_tpm:
+                break
+            time.sleep(max(1.0, 60.5 - (agora - self.janela[0][0])))
+        self.janela.append((time.monotonic(), tokens))
+        self.tentativas += 1
+
+
+def pedir(modelo: str, corpo: dict, chave: str, ritmo: Ritmo | None = None, tokens: int = 0) -> dict:
     dados = json.dumps(corpo).encode("utf-8")
     ultimo = ""
     for tentativa in range(5):
+        if ritmo:
+            ritmo.antes(tokens)
         req = urllib.request.Request(API.format(modelo=modelo), data=dados, method="POST",
                                      headers={"Content-Type": "application/json", "x-goog-api-key": chave})
         try:
@@ -312,6 +370,10 @@ def executar(a) -> int:
     if "carbon" in a.modelo.lower():
         print("ERRO: o gemini-4-carbon nunca roda (D-054).")
         return 1
+    ritmo = Ritmo(a.modelo, Path(a.registro), Path(a.limites))
+    if ritmo.rpd == 0:
+        print(f"ERRO: {a.modelo} sem cota no nível da chave ({Path(a.limites).name}); nenhum pedido feito.")
+        return 4
     chave = os.environ.get("GEMINI_API_KEY", "")
     if not chave:
         print("ERRO: sem GEMINI_API_KEY (ambiente ou .env).")
@@ -348,7 +410,7 @@ def executar(a) -> int:
                      "generationConfig": {"temperature": a.temperatura}}
             if not sem_ferr:
                 corpo["tools"] = FERRAMENTAS
-            resp = pedir(a.modelo, corpo, chave)
+            resp = pedir(a.modelo, corpo, chave, ritmo, prox)
             chamadas_api += 1
             e_, s_, p_, c_ = uso(resp)
             tot["em_cache"] += c_  # já contados na entrada; ficam à parte para a calibração (insumo do K-125)
@@ -398,7 +460,8 @@ def executar(a) -> int:
     linha = {"versao": VERSAO, "inicio": inicio.isoformat(), "fim": datetime.now(timezone.utc).isoformat(),
              "tipo": a.tipo, "rotulo": a.rotulo, "modelo": a.modelo, "agente": a.agente, "habilidade": a.habilidade,
              "tokens": tot, "chamadas_api": chamadas_api, "chamadas_ferramenta": min(chamadas_ferr, a.teto_chamadas),
-             "teto_chamadas": a.teto_chamadas, "estado": estado, "motivo": motivo[:1200]}
+             "teto_chamadas": a.teto_chamadas, "pedidos_http": ritmo.tentativas,
+             "pedidos_hoje_antes": ritmo.hoje, "rpd": ritmo.rpd, "estado": estado, "motivo": motivo[:1200]}
     registro.parent.mkdir(parents=True, exist_ok=True)
     with registro.open("a", encoding="utf-8") as f:
         f.write(json.dumps(linha, ensure_ascii=False) + "\n")
@@ -466,6 +529,7 @@ def main() -> int:
     ap.add_argument("--ler-tambem", nargs="*", default=[])
     ap.add_argument("--log", help="entrada_ref do log da Execução (grava o log)")
     ap.add_argument("--temperatura", type=float, default=1.0)
+    ap.add_argument("--limites", default=str(LIMITES), help="limites de taxa por modelo (rpm, tpm, rpd)")
     ap.add_argument("--teto-entrada", type=int, default=TETO_ENTRADA)
     ap.add_argument("--teto-saida", type=int, default=TETO_SAIDA)
     a = ap.parse_args()
