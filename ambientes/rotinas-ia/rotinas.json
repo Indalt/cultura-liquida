@@ -1,31 +1,26 @@
 {
-  "versao": "rotinas-ia-0.2",
+  "versao": "rotinas-ia-0.3",
   "nota": "Configuração versionada das rotinas com IA (bloco 10b, camada 2; K-113; D-050, D-053). Cada rotina existe na conta de Vicente (claude.ai/code/routines) e é criada ou mudada pela sessão de desenvolvimento pela API de rotinas, a partir deste arquivo; o texto que a rotina recebe aponta para o roteiro versionado aqui. O portão da camada 2 barra a proposta que muda esta pasta.",
   "rotinas": [
     {
-      "nome": "CL rotina com IA semanal (K-113)",
-      "id_na_conta": "trig_01VTM4aiUKUFmwewkJTtuem1 (ligada em 13/11 e pausada no mesmo dia pela D-054: a automatização passa à API do Gemini, cartão K-125)",
+      "nome": "CL segunda leitura semanal (Claude; D-055)",
+      "id_na_conta": "trig_01VTM4aiUKUFmwewkJTtuem1 (a rotina do K-113, ligada em 13/11, pausada pela D-054 e reconfigurada pela D-055 em 13/11 para a segunda leitura da proposta do Gemini)",
       "repositorio": "https://github.com/Indalt/cultura-liquida",
-      "roteiro": "ambientes/rotinas-ia/rotina-semanal.md",
-      "texto": "Leia e siga ambientes/rotinas-ia/rotina-semanal.md, do começo ao fim, com lotes_por_rodada de ambientes/rotinas-ia/rotinas.json.",
+      "roteiro": "ambientes/rotinas-ia/segunda-leitura.md",
+      "texto": "Leia e siga ambientes/rotinas-ia/segunda-leitura.md, do começo ao fim.",
       "cadencia": {
-        "cron_utc": "0 23 * * 4",
-        "local": "quinta, 20h em Brasília",
-        "porque": "às quintas (D-050), à noite: depois da rotina diária sem IA do dia (06h17, que o GitHub às vezes atrasa para a tarde) ter juntado ao main, para as duas camadas não gravarem ao mesmo tempo na faixa de IDs da rotina"
+        "cron_utc": "0 3 * * 5",
+        "local": "sexta, 00h em Brasília",
+        "porque": "D-055: na ordem, depois da rotina do Gemini (quinta, 20h em Brasília; o workflow tem até 150 minutos) e antes da rotina diária sem IA (06h17 UTC), para as camadas não gravarem ao mesmo tempo; sem proposta à espera, termina sem gravar, e a proposta que chegar atrasada é relida na sexta seguinte"
       },
-      "modelo_sessao": "claude-sonnet-5-5",
+      "modelo_sessao": "claude-opus-5-5",
       "modelos_por_habilidade": {
-        "extrair-evidencia": "claude-haiku-5-5",
-        "registrar-termo": "claude-haiku-5-5",
-        "montar-ficha": "claude-haiku-5-5",
-        "gerar-grafo": "claude-sonnet-5-5",
-        "triagem-juridica": "claude-sonnet-5-5",
-        "segunda leitura (auditor, conferir-fato)": "claude-sonnet-5-5",
-        "fonte": "testes/relatorio-modelos.md (K-115a; D-053)"
+        "segunda leitura (auditor, conferir-fato)": "claude-opus-5-5, esforço médio (Agent auditor com model opus e effort medium)",
+        "gerar-grafo": "claude-opus-5-5, esforço médio, quando entrar na rotina",
+        "triagem-juridica": "claude-opus-5-5, esforço médio, quando entrar na rotina",
+        "fonte": "D-055"
       },
-      "habilidade_em_uso": "extrair-evidencia",
-      "lotes_por_rodada": 1,
-      "lote": 15,
+      "habilidade_em_uso": "conferir-fato (segunda leitura)",
       "ferramentas": [
         "Bash",
         "Read",
@@ -57,15 +52,15 @@
           "os repositórios institucionais das Entradas (handle, DSpace)"
         ]
       },
-      "teto": "D-050: a ferramenta e as automações até 20% do limite semanal e 50% de cada janela de 5 h; lotes_por_rodada calibrado pelo custo medido",
-      "estado": "pausada pela D-054 (13/11)"
+      "teto": "D-055: o consumo do Claude medido em cada rodada; pela leitura do curador, o da D-050 (20% da semana e 50% de cada janela de 5 h), a conferir por Vicente",
+      "estado": "ligada pela D-055 (13/11), para a segunda leitura"
     },
     {
       "nome": "CL rotina com IA semanal pelo Gemini (K-125)",
       "chave": "gemini",
-      "onde": ".github/workflows/rotina-ia-gemini.yml (GitHub Actions; D-054: a automatização pela API do Gemini, sem o Claude)",
-      "executor": "scripts/gemini_agente.py (gemini-agente-0.3)",
-      "roteiro": "o próprio workflow: rotina_ia.py preparar → executor (avaliador) → filtrar e gravar → amostra → executor (auditor) → fechar → validar_acervo e procurar_dado_pessoal → commit e envio a claude/rotina-ia-gemini-<data> → junção pelo rotina-ia-juncao.yml",
+      "onde": ".github/workflows/rotina-ia-gemini.yml (GitHub Actions; D-054, D-055)",
+      "executor": "scripts/gemini_agente.py (gemini-agente-0.4)",
+      "roteiro": "o próprio workflow: sem proposta à espera, rotina_ia.py preparar → executor (avaliador) → filtrar e gravar → marca aguarda-segunda-leitura.json → validar_acervo e procurar_dado_pessoal → commit e envio a claude/rotina-ia-gemini-<data>; depois, na ordem, a rotina do Claude (segunda leitura) envia à mesma ramificação, e o envio dispara a junção (rotina-ia-juncao.yml)",
       "cadencia": {
         "cron_utc": "0 23 * * 4",
         "local": "quinta, 20h em Brasília",
@@ -75,19 +70,18 @@
         "extrair-evidencia": "gemini-4-hydrogen",
         "registrar-termo": "gemini-4-hydrogen",
         "montar-ficha": "gemini-4-hydrogen",
-        "gerar-grafo": "gemini-4-argon",
-        "triagem-juridica": "gemini-4-argon",
-        "segunda leitura (auditor, conferir-fato)": "gemini-4-argon",
+        "gerar-grafo": "claude-opus-5-5 médio, pela rotina do Claude (D-055; o gemini-4-argon não tem cota no nível gratuito da chave)",
+        "triagem-juridica": "claude-opus-5-5 médio, pela rotina do Claude (D-055; o gemini-4-argon não tem cota no nível gratuito da chave)",
+        "segunda leitura (auditor, conferir-fato)": "claude-opus-5-5 médio, pela rotina do Claude (D-055; o gemini-4-argon não tem cota no nível gratuito da chave)",
         "nunca": "gemini-4-carbon",
-        "fonte": "D-054; as provas do banco do K-115a como métrica (testes/relatorio-modelos.md, seção Gemini)"
+        "fonte": "D-054, D-055; as provas do banco do K-115a como métrica (testes/relatorio-modelos.md, seção Gemini)"
       },
       "habilidade_em_uso": "extrair-evidencia",
       "lotes_por_rodada": 1,
       "lote": 5,
       "lote_porque": "calibrado pelo custo medido (insumo 134): uma prova de 2 Entradas gastou de 57 mil (com o histórico encurtado, interrompida) a 300 mil tokens de entrada; 5 Entradas para a primeira rodada medida, a recalibrar",
       "teto_chamadas": {
-        "avaliador": 45,
-        "auditor": 30
+        "avaliador": 45
       },
       "segredos": [
         "GEMINI_API_KEY (passo de dono, K-125)",
@@ -95,7 +89,8 @@
       ],
       "autor_dos_commits": "Rotina IA Gemini <rotina-ia-gemini@users.noreply.github.com> (o vigia do main o reconhece)",
       "teto": "D-054: 1 milhão de tokens de entrada e 2 milhões de saída por semana (semana do projeto, de quarta 23h), contados por trilhas/rotina-ia/consumo-gemini.jsonl; o executor para antes de passar e o aviso vai ao Issue do relatório do dia",
-      "estado": "não ligada: espera a rodada de teste no Actions e o segredo (K-125)"
+      "estado": "não ligada: espera a rodada de teste no Actions e o segredo (K-125)",
+      "limites": "ambientes/rotinas-ia/limites-gemini.json (nível gratuito: 20 pedidos por dia e 5 por minuto no hydrogen); o executor para antes da cota do dia"
     }
   ]
 }

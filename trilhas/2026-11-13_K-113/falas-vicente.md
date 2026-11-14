@@ -9,3 +9,4 @@ A chave da API não entra aqui: está só no `.env`, fora do Git.
   3. "pode fixar o hydrogen nos esforços similares aos do claude que foram testados."
   4. "não tem limites como os setados para o claude; os limites podem ser de caracteres e você converte para o custo de tokens 1 milhão de entrada e 2 milhões de saída por semana. isso deve funcionar para o que estamos construindo, se não der me avise."
 - **Correção (13/11):** "o modelo carbon nunca entra. apenas o argon em raciocínio avançado." Pergunta: "não podemos usar as métricas que foram feitas pro claude de acordo com os testes para o gemini?"
+- **K-125, 13/11 (noite), sobre a tela de limites da chave:** "vamos buscar viabilizar com coerencia ao sistema". Depois de saber as tarefas do argon: "entao nao é uma rotina pesada. ela pode ficar conosco aqui no claude opus esforço medium". Conferido o "aqui": "Fica em uma rotina automatizada que deve acontecer na ordem. agende a rotina ou me de os passos" (D-055).

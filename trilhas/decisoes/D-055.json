@@ -1,0 +1,15 @@
+{
+  "id": "D-055",
+  "data": "2026-11-13",
+  "essencia": "A chave do Gemini está no nível gratuito, e o gemini-4-argon não tem cota nele. A parte do argon não é pesada e fica com o Claude Opus 5.5, esforço médio, numa rotina automatizada que roda na ordem: primeiro o Gemini propõe, depois o Claude faz a segunda leitura, e então o portão decide.",
+  "diretriz": "(1) A segunda leitura do auditor na rotina semanal passa do gemini-4-argon a uma rotina do Claude Code na conta de Vicente (a do K-113, reconfigurada), com o Claude Opus 5.5 em esforço médio, que roda depois da rotina do Gemini e só sobre uma proposta dela que aguarda a segunda leitura; sem proposta à espera, termina sem fazer nada. (2) A rotina do Gemini (Actions, quintas) segue com o gemini-4-hydrogen na extrair-evidencia, propõe numa ramificação claude/... e não abre lote novo enquanto houver proposta sem segunda leitura. (3) gerar-grafo e triagem-juridica, as outras duas tarefas do argon, ficam também com o Claude Opus 5.5 médio quando entrarem na rotina. (4) O portão da camada 2 e a junção do K-113 seguem; quem propõe (Gemini) não aprova (Claude e portão; D-038). (5) O teto do Gemini segue o da D-054; o consumo do Claude na rotina é medido em cada rodada e, na leitura do curador, volta a valer para ele o teto da D-050 (20% da semana e 50% de cada janela de 5 h), a conferir por Vicente. (6) O argon só volta à rotina por decisão nova (por exemplo, com a cobrança ligada).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-13",
+  "fala_original_ref": "trilhas/2026-11-13_K-113/falas-vicente.md",
+  "palavras_conferidas": [
+    {"palavra": "pode ficar conosco aqui no claude opus esforço medium", "sentido_confirmado": "a parte do argon (a segunda leitura e, quando entrarem, gerar-grafo e triagem-juridica) roda no Claude Opus 5.5, esforço médio, não no Gemini"},
+    {"palavra": "fica em uma rotina automatizada que deve acontecer na ordem", "sentido_confirmado": "não nas sessões abertas por Vicente, e sim numa rotina do Claude Code que roda sozinha, depois da rotina do Gemini e antes do portão"}
+  ],
+  "substitui": "Muda a D-054 no item (3) (a vaga do argon) e no (1) e (2) só para a segunda leitura e as tarefas do argon (o Claude volta à automatização nelas); a rotina do Claude do K-113 deixa de estar pausada, reconfigurada para a segunda leitura.",
+  "marcador": "VIGENTE"
+}

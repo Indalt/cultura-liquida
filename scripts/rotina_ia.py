@@ -12,6 +12,8 @@ Subcomandos:
                                     fica em "bruto", dita no relatório; volta numa conversa de trabalho.
   amostra --rotulo R                sorteia a amostra da segunda leitura (`sortear_amostra.py --gravar`,
                                     regra amostra-0.2, semente gravada) e escreve o pedido ao auditor.
+                                    Sem mudanças por gravar, o lote é o que a ramificação mudou desde o main.
+  reler --rotulo R                  relê as fontes do lote já proposto (rotina da segunda leitura, D-055).
   fechar --rotulo R --execucao EX --auditor EX --veredito V
                                     grava `trilhas/rotina-ia/R/segunda-leitura.json` (o que o portão da
                                     camada 2 confere) e o relatório do lote (`fila_curadoria.py`).
@@ -38,7 +40,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ  # noqa: E402
 
-VERSAO = "rotina-ia-0.2"
+VERSAO = "rotina-ia-0.3"
 PY = sys.executable
 S = Path(__file__).resolve().parent
 
@@ -149,16 +151,7 @@ def preparar(a) -> int:
     if not ids:
         print("fila vazia: nada a fazer nesta rodada")
         return 0
-    diretas, originais = [], []
-    for en_id in ids:
-        en = json.loads((RAIZ / "entrada" / f"{en_id}.json").read_text(encoding="utf-8"))
-        url = original_do_agregador(en) if en.get("ambiente") in AGREGADORES else None
-        if url:
-            originais += ["--url", f"{en_id}={url}"]
-        else:
-            diretas.append(en_id)
-    args = ["--rotulo", a.rotulo] + (["--entrada", ",".join(diretas)] if diretas else []) + originais
-    r = rodar(str(S / "ler_fonte.py"), *args)
+    r = ler_fontes(a.rotulo, ids)
     t = trabalho(a.rotulo)
     (t / "itens").mkdir(exist_ok=True)
     (t / "trechos").mkdir(exist_ok=True)
@@ -167,6 +160,29 @@ def preparar(a) -> int:
     pedido.write_text(PEDIDO_AVALIADOR.format(rotulo=a.rotulo, ids=", ".join(ids), tmp=tmp().as_posix(),
                                               trab=t.as_posix(), py=Path(PY).as_posix()), encoding="utf-8")
     print(f"{VERSAO}: lote {a.rotulo} com {len(ids)} Entrada(s); pedido ao avaliador em {pedido.as_posix()}")
+    return r.returncode
+
+
+def ler_fontes(rotulo: str, ids: list[str]) -> subprocess.CompletedProcess:
+    """Lê o texto das fontes das Entradas (ler_fonte.py) na pasta temporária, fora do Git."""
+    diretas, originais = [], []
+    for en_id in ids:
+        en = json.loads((RAIZ / "entrada" / f"{en_id}.json").read_text(encoding="utf-8"))
+        url = original_do_agregador(en) if en.get("ambiente") in AGREGADORES else None
+        if url:
+            originais += ["--url", f"{en_id}={url}"]
+        else:
+            diretas.append(en_id)
+    args = ["--rotulo", rotulo] + (["--entrada", ",".join(diretas)] if diretas else []) + originais
+    return rodar(str(S / "ler_fonte.py"), *args)
+
+
+def reler(a) -> int:
+    """Na rotina da segunda leitura (D-055): relê as fontes do lote já proposto (o texto não vai ao Git)."""
+    ids = [x["id"] for x in json.loads((trilha(a.rotulo) / "lote.json").read_text(encoding="utf-8"))["lote"]]
+    r = ler_fontes(a.rotulo, ids)
+    trabalho(a.rotulo)
+    print(f"{VERSAO}: fontes do lote {a.rotulo} relidas ({len(ids)} Entrada(s)) em {tmp().as_posix()}")
     return r.returncode
 
 
@@ -212,8 +228,12 @@ def amostra(a) -> int:
     (t / "amostra.txt").write_text(am + "\n", encoding="utf-8")
     # o que o lote gravou (o executor do Gemini não tem git; K-125): arquivos mudados ou novos do acervo e de entrada/
     g = subprocess.run(["git", "status", "--porcelain", "-uall"], cwd=RAIZ, capture_output=True, text=True, encoding="utf-8")
-    (t / "gravado.txt").write_text("\n".join(x[3:] for x in g.stdout.splitlines()
-                                             if x[3:].startswith(("acervo/", "entrada/"))) + "\n", encoding="utf-8")
+    gravado = [x[3:] for x in g.stdout.splitlines() if x[3:].startswith(("acervo/", "entrada/"))]
+    if not gravado:  # proposta já enviada (rotina da segunda leitura, D-055): o que a ramificação mudou desde o main
+        g = subprocess.run(["git", "diff", "--name-only", "origin/main...HEAD"], cwd=RAIZ, capture_output=True,
+                           text=True, encoding="utf-8")
+        gravado = [x for x in g.stdout.splitlines() if x.startswith(("acervo/", "entrada/"))]
+    (t / "gravado.txt").write_text("\n".join(gravado) + "\n", encoding="utf-8")
     pedido = t / "pedido-auditor.md"
     pedido.write_text(PEDIDO_AUDITOR.format(rotulo=a.rotulo, amostra=am, tmp=tmp().as_posix(), trab=t.as_posix(), py=Path(PY).as_posix()),
                       encoding="utf-8")
@@ -241,7 +261,7 @@ def main() -> int:
     p = sub.add_parser("preparar")
     p.add_argument("--rotulo", required=True)
     p.add_argument("--lote", type=int, default=15)
-    for nome in ("filtrar", "amostra"):
+    for nome in ("filtrar", "amostra", "reler"):
         sub.add_parser(nome).add_argument("--rotulo", required=True)
     f = sub.add_parser("fechar")
     f.add_argument("--rotulo", required=True)
@@ -249,7 +269,7 @@ def main() -> int:
     f.add_argument("--auditor", required=True)
     f.add_argument("--veredito", default="")
     a = ap.parse_args()
-    return {"preparar": preparar, "filtrar": filtrar, "amostra": amostra, "fechar": fechar}[a.cmd](a)
+    return {"preparar": preparar, "filtrar": filtrar, "amostra": amostra, "fechar": fechar, "reler": reler}[a.cmd](a)
 
 
 if __name__ == "__main__":
