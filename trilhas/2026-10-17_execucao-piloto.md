@@ -419,6 +419,12 @@
 - **Retomada (14/11, 05h24):** Vicente: "ignore as medicoes e retome" (semana 79%, janela de 5 h 28% pelo hook). Os tetos de 50 pp (desenvolvimento) e 60 pp (projeto) ficam suspensos nesta retomada, como nas semanas de 21/10 e 28/10; fica a linha de 90% da conta. Executor 0.5: a ponte manda gravar cedo e não apresentar a validação da raiz intocada como resultado (o padrão da prova gg no 3.8 Flash).
 - [ ] **Provas do hydrogen (14/11, 05h24 a 05h32), executor 0.5:** ee rodada 3 reprova (211.432 de entrada; EX-0148); rt rodada 1 reprova (74.954; EX-0149); mf não rodou pela cota do dia (EX-0150). Nas duas, o teto de chamadas se foi em leituras de um arquivo por chamada; o modelo disse o que não fez. **Executor 0.6:** `ler_varios` e `rodar_varios`, uma chamada cada, como o Bash do Claude (testados à mão: o `.env` segue recusado; script não liberado, recusado). Semana do Gemini: 764.943 de entrada (76%) e 78.051 de saída; as próximas provas, na semana que abre em 18/11, 23h.
 
+## Conversa de limpeza e D-056 — 14/11/2026 (sábado), sem agentes
+
+- [x] **Vistoria da casa:** `scripts/manutencao.py` (manutencao-0.1, sem IA, só avisa), com casos em `testes/manutencao/`; relatório em `trilhas/relatorios/manutencao-2026-11-14.md`; o Passo corrente do AGENTS.md enxugado (texto antigo em `trilhas/2026-11-14_manutencao/`); o arquivo solto `-` fora do Git e o `juntar_saida.py` consertado; insumo 135. Bateria no `.venv`: OK 261 · FALHA 0 · PENDENTE 1 (o kit).
+- [x] **D-056 (14/11):** essência devolvida em `trilhas/planejamento/caminho-entrega-piloto.md` (seção 6) e confirmada por Vicente ("Confirmo a essência da d-056"). O piloto se entrega com o K-114 e o K-116; K-125, K-115b e K-115c estacionados para a reunião do K-004; a IA da operação volta à rotina do Claude do K-113 até haver financiamento. Quadro: K-114 em Fazendo.
+- [ ] **K-114** e **K-116**: ver `RETOMAR.md`.
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |

@@ -1,0 +1,15 @@
+{
+  "id": "D-056",
+  "data": "2026-11-14",
+  "essencia": "O piloto se entrega com o kit (K-114) e o relatório (K-116). O K-125, o K-115b e o K-115c ficam estacionados, com o estado salvo, e vão à reunião do K-004; o teste de modelo do kit sai do K-114. Até haver financiamento, a IA da operação é a rotina do Claude do K-113, nos tetos da D-050; o Gemini volta com cota paga. O rigor (trecho localizado, validador, portão, segunda leitura, triagem jurídica, logs) fica como está. A primeira execução em escala é da operação, depois da entrega.",
+  "diretriz": "(1) A entrega do piloto são dois cartões, nesta ordem: K-114 (o kit de fonte primária, rascunho com fontes, revisado por Vicente, sem publicar) e K-116 (o relatório do piloto, conferido pelo auditor, com o que foi estacionado dito às claras). Com o relatório conferido, o piloto está entregue e abre-se a reunião do K-004 (D-046). (2) Estacionados, sem apagar nada: o K-125 no ponto em que está (executor, workflow desligado, medidas e provas gravados; estado em trilhas/2026-11-14_manutencao/retomar-K-125.md), o K-115b e o K-115c. Os três vão à reunião do K-004 com os insumos 119 a 134 e a tabela de testes/relatorio-modelos.md; os agentes seguem nos modelos do frontmatter. (3) O teste de modelo do kit (D-051) sai do fechamento do K-114. (4) Até haver financiamento, a IA da operação é a rotina do Claude Code do K-113 (o avaliador propõe, o auditor relê, o portão decide; D-038), nos tetos da D-050 (20% da semana e 50% de cada janela de 5 h). O Gemini só volta com cota paga, por decisão nova (mesma lógica da D-049). A reconfiguração da rotina para essa ordem é o primeiro ato da operação, depois da entrega, e não entra no K-114 nem no K-116. (5) O rigor não muda: trecho literal localizado por script, validar_acervo.py no pre-commit, portão, segunda leitura por quem não propôs, triagem jurídica e Faltas, log com alcance, busca de dado pessoal antes do commit, rotina diária sem IA. (6) A primeira execução em escala (a fila da rotina com IA) é da operação, pela rotina semanal, depois da entrega; não é condição dela.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-14",
+  "fala_original_ref": "trilhas/2026-11-14_manutencao/falas-vicente.md",
+  "palavras_conferidas": [
+    {"palavra": "entregar o piloto nessa semana", "sentido_confirmado": "entregar é fechar o que falta dos cinco verbos do piloto (o kit) e o relatório; não é publicar (D-032) nem processar a fila inteira"},
+    {"palavra": "limpar as propostas que nos impedem", "sentido_confirmado": "estacionar, com o estado salvo, o que é economia da operação (testes de modelo e o segundo fornecedor de IA); nada se apaga e o rigor não se toca"}
+  ],
+  "substitui": "Muda a D-053 na ordem (K-115b e K-115c saem do caminho do piloto) e a D-051 no teste de modelo do kit; muda a D-054 e a D-055 na IA da operação (o Gemini fica estacionado até haver cota paga; a rotina do Claude do K-113 propõe e relê, nos tetos da D-050).",
+  "marcador": "VIGENTE"
+}

@@ -1,7 +1,8 @@
-# Caminho curto para entregar o piloto — [PROPOSTA]
+# Caminho curto para entregar o piloto — decidido pela D-056
 
-**Estado:** proposta de 14/11/2026, escrita a pedido de Vicente. **Não é plano**: só vale depois da decisão
-dele registrada (seria a D-056). Até lá valem a D-053, a D-054 e a D-055 como estão.
+**Estado:** proposta de 14/11/2026, escrita a pedido de Vicente e **confirmada por ele no mesmo dia: é a
+D-056** (`trilhas/decisoes/D-056.json`). A seção 5 foi escrita com a semana estimada em 81%; a leitura de
+Vicente deu 66%, e os dois passos cabem antes da virada de 18/11.
 
 **Alcance desta leitura:** o quadro, o `RETOMAR.md`, os blocos 11 e 14 do brief, a tabela de
 `testes/relatorio-modelos.md`, os insumos 133 e 134, a fila (`fila_ia.py --resumo`) e a contagem das
