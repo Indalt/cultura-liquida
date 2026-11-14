@@ -1,0 +1,33 @@
+{
+  "habilidade": "manutenção da casa (scripts/manutencao.py, manutencao-0.1)",
+  "rodada": "A",
+  "casos": [
+    {
+      "nome": "manutenção: casa limpa não gera achado",
+      "espera": "passa",
+      "comando": ["testes/manutencao/teste_manutencao.py", "casa-limpa"],
+      "saida_contem": "casa limpa: 0 achado(s)",
+      "criterio": "numa casa em ordem, nenhum olhar pede arrumação nem atenção (sem falso alarme)"
+    },
+    {
+      "nome": "manutenção: casa suja tem cada sujeira vista",
+      "espera": "passa",
+      "comando": ["testes/manutencao/teste_manutencao.py", "casa-suja"],
+      "saida_contem": "10 de 10 sujeiras vistas",
+      "criterio": "arquivo solto na raiz, sobra no Git, contexto inchado, decisão sem linha, dois cartões em Fazendo, RETOMAR de cartão fechado, modelo divergente, caminho citado que não existe, script que nada chama e arquivo fora do Git: cada um aparece no olhar certo"
+    },
+    {
+      "nome": "manutenção: a vistoria não muda a pasta",
+      "espera": "passa",
+      "comando": ["testes/manutencao/teste_manutencao.py", "nao-muda-nada"],
+      "saida_contem": "a vistoria não mudou nada",
+      "criterio": "sem --gravar, o conteúdo da pasta é o mesmo antes e depois (princípio 12: avisar, nunca apagar)"
+    },
+    {
+      "nome": "manutenção: --estrito reprova a casa suja",
+      "espera": "reprova",
+      "comando": ["testes/manutencao/teste_manutencao.py", "estrito-suja"],
+      "criterio": "com --estrito, havendo o que arrumar, o código de saída é 1"
+    }
+  ]
+}

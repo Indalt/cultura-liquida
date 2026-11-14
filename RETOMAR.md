@@ -1,5 +1,14 @@
 # RETOMAR — K-125 (rotina com IA na API do Gemini; D-054)
 
+> **14/11, conversa de limpeza (sem agentes):** antes de retomar o K-125, ler
+> `trilhas/planejamento/caminho-entrega-piloto.md`. É uma [PROPOSTA] à espera de Vicente: entregar o piloto
+> com o K-114 e o K-116 e estacionar o K-125, o K-115b e o K-115c. Se ele confirmar a essência (seção 6 do
+> arquivo), o primeiro passo é registrar a D-056 (habilidade registrar-decisao), acertar o quadro e abrir o
+> K-114. Se não, vale o que está abaixo. Feito nesta conversa: `scripts/manutencao.py` (vistoria da casa,
+> sem IA, com casos em `testes/manutencao/`), o Passo corrente do AGENTS.md enxugado (o texto antigo em
+> `trilhas/2026-11-14_manutencao/`), a tabela de modelos acertada, o arquivo solto `-` fora do Git e o
+> insumo 135.
+
 Conversa 2, continuação (13/11/2026, noite): **D-055** registrada. A segunda leitura fica com o Claude Opus 5.5
 médio, numa rotina do Claude Code que roda depois da rotina do Gemini. Essa rotina está ligada: sextas às 03h UTC,
 `trig_01VTM4aiUKUFmwewkJTtuem1`, roteiro `ambientes/rotinas-ia/segunda-leitura.md`. O workflow do Gemini fica

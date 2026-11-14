@@ -1,5 +1,5 @@
 """Roda os casos de teste de todas as habilidades (.claude/skills/*/exemplos/casos.json e, da rodada B, casos-rodada-b.json)
-e dos contratos do §6 (esquemas/exemplos/casos.json) e dos scripts do núcleo (testes/nucleo/casos.json) da coleta (testes/coleta/casos.json) do bloco 7 (testes/extracao/casos.json) e das menções incidentais (testes/mencoes/casos.json, K-102) e dos scripts do harness 0.2.0 (testes/rodada-b/casos.json, K-111) e das rotinas sem IA (testes/rotinas/casos.json, K-112).
+e dos contratos do §6 (esquemas/exemplos/casos.json) e dos scripts do núcleo (testes/nucleo/casos.json) da coleta (testes/coleta/casos.json) do bloco 7 (testes/extracao/casos.json) e das menções incidentais (testes/mencoes/casos.json, K-102) e dos scripts do harness 0.2.0 (testes/rodada-b/casos.json, K-111) e das rotinas sem IA (testes/rotinas/casos.json, K-112) e da manutenção da casa (testes/manutencao/casos.json).
 
 Formato de casos.json:
     {"habilidade": "...", "rodada": "A"|"B", "casos": [
@@ -59,7 +59,7 @@ def main() -> int:
     a = ap.parse_args()
     linhas_rel = []
     cont = {"ok": 0, "falha": 0, "pendente": 0}
-    arquivos = sorted((RAIZ / ".claude" / "skills").glob("*/exemplos/casos*.json")) + [RAIZ / "esquemas" / "exemplos" / "casos.json", RAIZ / "testes" / "nucleo" / "casos.json", RAIZ / "testes" / "coleta" / "casos.json", RAIZ / "testes" / "extracao" / "casos.json", RAIZ / "testes" / "mencoes" / "casos.json", RAIZ / "testes" / "rodada-b" / "casos.json", RAIZ / "testes" / "rotinas" / "casos.json"]
+    arquivos = sorted((RAIZ / ".claude" / "skills").glob("*/exemplos/casos*.json")) + [RAIZ / "esquemas" / "exemplos" / "casos.json", RAIZ / "testes" / "nucleo" / "casos.json", RAIZ / "testes" / "coleta" / "casos.json", RAIZ / "testes" / "extracao" / "casos.json", RAIZ / "testes" / "mencoes" / "casos.json", RAIZ / "testes" / "rodada-b" / "casos.json", RAIZ / "testes" / "rotinas" / "casos.json", RAIZ / "testes" / "manutencao" / "casos.json"]
     for arq in [x for x in arquivos if x.exists()]:
         spec = carregar_json(arq)
         if a.rodada and spec.get("rodada") != a.rodada:

@@ -49,6 +49,10 @@ def main() -> int:
         if erros:
             print("REPROVA (nada gravado):", *erros[:10], sep="\n  ")
             return 1
+    if str(a.saida) == "-":  # só mostra, como o cabeçalho diz; antes gravava um arquivo chamado "-" na pasta
+        print(json.dumps(final, ensure_ascii=False, indent=2))
+        print(f"{len(itens)} item(ns), sem gravar")
+        return 0
     a.saida.write_text(json.dumps(final, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{len(itens)} item(ns) em {a.saida}")
     return 0
