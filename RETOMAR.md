@@ -6,12 +6,12 @@ números de `scripts/relatorio_piloto.py` 0.2, conferido pelo auditor) estão em
 do K-125 segue em `trilhas/2026-11-14_manutencao/retomar-K-125.md` (estacionado para o K-004).
 
 **14/11, conversa seguinte (planejamento):** Vicente pediu para incluir no piloto as Entradas já coletadas de
-outras bebidas, sem coleta nova e sem triagem jurídica, para ver o que a ferramenta faz além da cajuína. A
-essência foi devolvida e **espera a confirmação** dele (seria a D-057): falas, essência e palavras a conferir em
-`trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md`; o escopo proposto (199 Entradas da Consulta geral
-e 7 das candidatas, 14 lotes de 15) em `escopo-proposto.json`, na mesma pasta. Nada mudou na ferramenta; nada
-roda antes de 18/11, 23h. Confirmada a essência: registrar a D-057, marcar as Entradas, a fila nova e a rotina
-voltando a propor (item 1 abaixo). Insumo 140 gravado (o alcance da Consulta geral).
+outras bebidas, para ver o que a ferramenta faz além da cajuína. Ele respondeu à essência: as 199 da Consulta
+geral, sem rotina, com a marca de piloto, antes da nova versão, com tudo o que a ferramenta oferece, sem
+verificação nem teste. A **essência v2 espera a confirmação** (seria a D-057), com as leituras e o custo (5 a 7
+milhões de tokens), em `trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md`; a lista em
+`escopo-proposto.json`. Nada mudou na ferramenta; nada roda antes de 18/11, 23h. Confirmada: registrar a D-057,
+o cartão (K-126), a marca nas 199 e os lotes em conversas de trabalho, extração primeiro. Insumo 140 gravado.
 
 ## Falta
 1. **Operação, primeiro ato (D-056, item 4):** reconfigurar a rotina do Claude do K-113 (hoje só segunda leitura,
