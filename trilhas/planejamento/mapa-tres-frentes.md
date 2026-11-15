@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 139 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 140 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -473,6 +473,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 137, Estado dos ambientes desatualizado | D; O | K-004 |
 | 138, Horas de Vicente sem medida | P | K-004 |
 | 139, Leitura da coluna pp por scripts | D | K-004 |
+| 140, a Consulta geral traz tecnologia de alimentos; nomes de bebidas nativas não aparecem | P; D; O | K-004 |
 
 ## 7. Decisões D-001 a D-043
 

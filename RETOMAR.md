@@ -5,6 +5,14 @@ revisado por Vicente) e K-116 (relatório em `trilhas/2026-11-14_relatorio-pilot
 números de `scripts/relatorio_piloto.py` 0.2, conferido pelo auditor) estão em Concluído no quadro. O estado
 do K-125 segue em `trilhas/2026-11-14_manutencao/retomar-K-125.md` (estacionado para o K-004).
 
+**14/11, conversa seguinte (planejamento):** Vicente pediu para incluir no piloto as Entradas já coletadas de
+outras bebidas, para ver o que a ferramenta faz além da cajuína. Ele respondeu à essência: as 199 da Consulta
+geral, sem rotina, com a marca de piloto, antes da nova versão, com tudo o que a ferramenta oferece, sem
+verificação nem teste. A **essência v2 espera a confirmação** (seria a D-057), com as leituras e o custo (5 a 7
+milhões de tokens), em `trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md`; a lista em
+`escopo-proposto.json`. Nada mudou na ferramenta; nada roda antes de 18/11, 23h. Confirmada: registrar a D-057,
+o cartão (K-126), a marca nas 199 e os lotes em conversas de trabalho, extração primeiro. Insumo 140 gravado.
+
 ## Falta
 1. **Operação, primeiro ato (D-056, item 4):** reconfigurar a rotina do Claude do K-113 (hoje só segunda leitura,
    D-055) para o avaliador propor e o auditor reler, com o portão decidindo, nos tetos da D-050. Mexe numa rotina

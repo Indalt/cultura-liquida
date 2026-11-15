@@ -1,0 +1,1286 @@
+{
+ "estado": "escopo dito por Vicente em 14/11 ('199'): só as Entradas de 'geral'; essência v2 à espera de confirmação; nada foi mudado na ferramenta",
+ "data": "2026-11-14",
+ "regra_da_selecao": "Entradas de entrada/EN-*.json (main de 14/11) cujo título ou citacao_resumo, sem acento e por palavra inteira (plural com s), traz um dos nomes; 'geral': só as da Consulta geral CO-0008 (motivo da pré-triagem) com um dos 10 nomes que a conversa listou; 'candidatas': as de qualquer Consulta com o nome de uma CLB candidata (TE-0003, TE-0004, TE-0005)",
+ "nomes_geral": [
+  "cerveja",
+  "suco",
+  "refrigerante",
+  "bebida lactea",
+  "cachaca",
+  "vinho",
+  "agua de coco",
+  "caldo de cana",
+  "nectar",
+  "hidromel"
+ ],
+ "nomes_candidatas": [
+  "vinho de caju",
+  "mocororo",
+  "caoi"
+ ],
+ "geral": [
+  {
+   "id": "EN-0065",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-0069",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50001",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50002",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50756",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50763",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50767",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50773",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50780",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50781",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50783",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50786",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50790",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50791",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50795",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50798",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50802",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50805",
+   "nomes": [
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-50807",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50808",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50813",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50817",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50818",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50819",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50820",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50829",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50834",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50841",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50842",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50843",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50845",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50847",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50848",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50849",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50856",
+   "nomes": [
+    "suco",
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-50858",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50870",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50881",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50891",
+   "nomes": [
+    "cerveja",
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50893",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50894",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50895",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50896",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50897",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50898",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50900",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50901",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50903",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50906",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50908",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50911",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50913",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50916",
+   "nomes": [
+    "suco",
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-50919",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50920",
+   "nomes": [
+    "suco",
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-50924",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50925",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50927",
+   "nomes": [
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-50929",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50931",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50932",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50937",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-50941",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50948",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50949",
+   "nomes": [
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-50952",
+   "nomes": [
+    "suco",
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-50953",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50956",
+   "nomes": [
+    "suco",
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-50957",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50964",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50970",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50971",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50972",
+   "nomes": [
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-50975",
+   "nomes": [
+    "cerveja",
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-50976",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50977",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-50978",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50979",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50980",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-50981",
+   "nomes": [
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-50982",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-50987",
+   "nomes": [
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-50991",
+   "nomes": [
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-50995",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-50996",
+   "nomes": [
+    "suco",
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-51006",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51012",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-51013",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-51015",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51020",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51021",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51079",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51080",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51082",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51084",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51085",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51086",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51087",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51089",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51090",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51091",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51092",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51094",
+   "nomes": [
+    "suco",
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51095",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51096",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51097",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51102",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51103",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51104",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-51105",
+   "nomes": [
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-51107",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51108",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51109",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51111",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51112",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51114",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51116",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51117",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51118",
+   "nomes": [
+    "cerveja",
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51120",
+   "nomes": [
+    "cerveja",
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51122",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51124",
+   "nomes": [
+    "suco",
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51125",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51126",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51129",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51132",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51133",
+   "nomes": [
+    "cerveja",
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51134",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51137",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-51139",
+   "nomes": [
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-51141",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51142",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51143",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51144",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51146",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51147",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51148",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51150",
+   "nomes": [
+    "suco",
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51152",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51154",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51156",
+   "nomes": [
+    "bebida lactea"
+   ]
+  },
+  {
+   "id": "EN-51157",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51158",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51159",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51160",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51161",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51162",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51168",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51172",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51179",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51189",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51190",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51192",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51193",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51196",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51198",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51199",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51202",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51203",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51209",
+   "nomes": [
+    "suco",
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51210",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51215",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51216",
+   "nomes": [
+    "cerveja",
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-51221",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51222",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51224",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51229",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51230",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51232",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51233",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51240",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51241",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51244",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51247",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51250",
+   "nomes": [
+    "cachaca",
+    "caldo de cana"
+   ]
+  },
+  {
+   "id": "EN-51254",
+   "nomes": [
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51255",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51260",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51261",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51263",
+   "nomes": [
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51264",
+   "nomes": [
+    "cerveja",
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51271",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51275",
+   "nomes": [
+    "cachaca"
+   ]
+  },
+  {
+   "id": "EN-51280",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51286",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51297",
+   "nomes": [
+    "suco",
+    "vinho"
+   ]
+  },
+  {
+   "id": "EN-51305",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51308",
+   "nomes": [
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51325",
+   "nomes": [
+    "refrigerante"
+   ]
+  },
+  {
+   "id": "EN-51344",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51345",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51351",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51352",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51353",
+   "nomes": [
+    "hidromel"
+   ]
+  },
+  {
+   "id": "EN-51358",
+   "nomes": [
+    "agua de coco"
+   ]
+  },
+  {
+   "id": "EN-51359",
+   "nomes": [
+    "suco"
+   ]
+  },
+  {
+   "id": "EN-51361",
+   "nomes": [
+    "nectar"
+   ]
+  },
+  {
+   "id": "EN-51364",
+   "nomes": [
+    "cerveja"
+   ]
+  },
+  {
+   "id": "EN-51366",
+   "nomes": [
+    "cerveja"
+   ]
+  }
+ ],
+ "candidatas": [
+  {
+   "id": "EN-0112",
+   "nomes": [
+    "vinho de caju"
+   ]
+  },
+  {
+   "id": "EN-0184",
+   "nomes": [
+    "vinho de caju"
+   ]
+  },
+  {
+   "id": "EN-1066",
+   "nomes": [
+    "mocororo"
+   ]
+  },
+  {
+   "id": "EN-1069",
+   "nomes": [
+    "mocororo"
+   ]
+  },
+  {
+   "id": "EN-50204",
+   "nomes": [
+    "vinho de caju"
+   ]
+  },
+  {
+   "id": "EN-50256",
+   "nomes": [
+    "vinho de caju"
+   ]
+  },
+  {
+   "id": "EN-50910",
+   "nomes": [
+    "mocororo"
+   ]
+  }
+ ],
+ "totais": {
+  "geral": 199,
+  "lotes_de_15": 14
+ },
+ "candidatas_fora": "as 7 Entradas das candidatas ficaram fora do escopo (Vicente, 14/11: '199')"
+}
