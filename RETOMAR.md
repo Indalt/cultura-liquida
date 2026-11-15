@@ -5,6 +5,11 @@ revisado por Vicente) e K-116 (relatório em `trilhas/2026-11-14_relatorio-pilot
 números de `scripts/relatorio_piloto.py` 0.2, conferido pelo auditor) estão em Concluído no quadro. O estado
 do K-125 segue em `trilhas/2026-11-14_manutencao/retomar-K-125.md` (estacionado para o K-004).
 
+**15/11: ler primeiro `trilhas/planejamento/rodadas/2026-11-15_antes-do-K-004/passagem.md`.** Ela guarda o que a
+conversa de 14 e 15/11 mediu e o que espera Vicente, para uma sessão nova em Opus 5.5: a pergunta dele sobre o
+gasto e a dependência de IA (sem resposta registrada), a D-057 pendente e em dúvida, o K-004 em sete etapas
+(conferido, não decidido) e os custos. Insumos 140 e 141 gravados. Próximo passo: a seção 6 da passagem.
+
 **14/11, conversa seguinte (planejamento):** Vicente pediu para incluir no piloto as Entradas já coletadas de
 outras bebidas, para ver o que a ferramenta faz além da cajuína. Ele respondeu à essência: as 199 da Consulta
 geral, sem rotina, com a marca de piloto, antes da nova versão, com tudo o que a ferramenta oferece, sem
