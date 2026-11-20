@@ -1,0 +1,1 @@
+{"data": "2026-11-20T13:09:24-03:00", "versao": "trava-testes-0.1", "caso": "testes/nucleo/casos.json::a", "antes": "2caef135b6636cd3", "depois": "180cad77d4a48236", "motivo": "fixture: o arquivo de teste do caso a mudou de propósito", "verificado_por": "caso de teste da trava", "confirmado_por": "vicente", "onde": "fixture (testes/trava), sem conversa"}

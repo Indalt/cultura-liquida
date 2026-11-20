@@ -1,0 +1,29 @@
+{
+  "habilidade": "trava dos testes (scripts/trava_testes.py, D-059)",
+  "rodada": "A",
+  "casos": [
+    {"nome": "trava em ordem", "espera": "passa",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/ok"],
+     "criterio": "nenhum caso mudou desde a trava: passa"},
+    {"nome": "arquivo de teste mudado sem confirmação", "espera": "reprova",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/mudado"],
+     "criterio": "o arquivo que o caso usa mudou e ninguém confirmou: reprova"},
+    {"nome": "espera do caso mudada sem confirmação", "espera": "reprova",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/espera-mudada"],
+     "criterio": "o caminho circular (mudar o esperado para o teste passar) reprova"},
+    {"nome": "caso tirado sem confirmação", "espera": "reprova",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/tirado"],
+     "criterio": "tirar um caso enfraquece a suíte: reprova sem confirmação"},
+    {"nome": "caso novo fora da trava", "espera": "reprova",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/novo"],
+     "criterio": "caso novo entra pela trava (--gravar-novos), sem confirmação, mas não fica de fora dela"},
+    {"nome": "mudança confirmada por Vicente", "espera": "passa",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/confirmado"],
+     "criterio": "com a confirmação gravada (motivo, quem verificou, Vicente e onde), a mudança entra"},
+    {"nome": "confirmação sem Vicente recusada", "espera": "reprova",
+     "comando": ["scripts/trava_testes.py", "--raiz", "testes/trava/fixtures/mudado", "--confirmar",
+                 "--caso", "testes/nucleo/casos.json::a", "--motivo", "teste", "--verificado-por", "auditor",
+                 "--confirmado-por", "curador", "--onde", "teste"],
+     "criterio": "só Vicente confirma mudança de teste (D-059); a recusa não grava nada"}
+  ]
+}

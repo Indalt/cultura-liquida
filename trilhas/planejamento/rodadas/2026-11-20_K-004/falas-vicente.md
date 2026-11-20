@@ -43,3 +43,13 @@ Fora da limpeza: o resto dos 32 (achar outras CLB, ler a fonte, receber, jurídi
 3. o insumo fecha quando o seu "aonde se quer chegar" é conferido, numa linha (cumprido ou não), e não quando o cartão fecha;
 4. regra ou número novo não nasce escondido num conserto: vai ao registro de valores como provisório e a Vicente como regra (D-038);
 5. a regra da D-058 vale também na porta: só vira insumo o que é problema para a promessa; o resto é nota (proposta de regra nova, para Vicente).
+
+## Fala 3 (resposta à organização)
+
+> ok. adicione isso aos testes para que quando um teste nao passar por mudanças somos obrigados a verificar e confirmar antes de admitir a mudança
+
+Leitura do curador: o "ok" confirma a essência e a organização devolvidas na fala 2, com as leituras de "o sistema", "o primeiro passo" e "o que deve fazer tb"; não responde ao lugar do K-126, que segue [ABERTO] (a resposta que confirma a lista não se lê como resposta a uma pergunta que ela não toca; insumo 142). Registrada como D-059 (`trilhas/decisoes/D-059.json`), com o cartão K-127.
+
+O pedido da trava foi feito na mesma conversa (D-059, item 6): `scripts/trava_testes.py` guarda a impressão dos 271 casos da suíte; o `rodar_testes.py` (o que valida no GitHub e o portão da rotina) e o pre-commit reprovam caso mudado ou tirado sem confirmação; o pre-commit também roda a suíte quando o commit toca código, esquemas, testes ou harness.
+
+Devolvido a Vicente como leitura, a confirmar: quem confirma a mudança de um teste é ele (a trava pede "--confirmado-por vicente" e onde ele confirmou); o caso novo entra sem confirmação; a suíte só roda no pre-commit quando o commit toca código, esquemas, testes ou harness.
