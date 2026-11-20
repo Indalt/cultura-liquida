@@ -1,0 +1,1362 @@
+{
+  "total_insumos": 142,
+  "contagem": {
+    "aberto_cartao": 38,
+    "fechado_por_cartao": 55,
+    "fechado_por_decisao": 5,
+    "a_definir": 44
+  },
+  "abertos_por_script": 82,
+  "itens": [
+    {
+      "insumo": 1,
+      "data": "17/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "`proxima-versao.md`; K-004",
+      "frente": "P"
+    },
+    {
+      "insumo": 2,
+      "data": "17/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004 (V-36)",
+      "frente": "P"
+    },
+    {
+      "insumo": 3,
+      "data": "17/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005",
+        "K-004",
+        "K-113",
+        "K-010",
+        "K-120",
+        "K-111",
+        "K-002"
+      ],
+      "vira": "item 1 → K-005; 2 → K-004 (com a D-037); 3 → K-113 e V-12; 4 → K-010 (Vicente) e V-12; 5 → V-13; 6 → V-23 e K-120; 7 → K-111 (só com pares reais); 8 → K-002; 9 → V-20; 10 → V-20 e V-30; 11 → V-29 (perguntas do §10) e V-13 (sentido de \"ambiente\")",
+      "frente": "P; o item 3 também D (teste no bloco 10b); o item 9 também D (Fonte sem nome no bloco 2)"
+    },
+    {
+      "insumo": 4,
+      "data": "17/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005"
+      ],
+      "vira": "K-005",
+      "frente": "P"
+    },
+    {
+      "insumo": 5,
+      "data": "16–17/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-003",
+        "K-101"
+      ],
+      "vira": "K-003 (o que cabe no bloco 1), K-101; V-23, V-35",
+      "frente": "D (bloco 1: lista exata de campos do log, teto de chamadas contado como o harness conta); PDO (o número oficial é o do Agent; agente novo só em sessão nova); P (termos-chave das decisões no `checar_fundacao.py`)"
+    },
+    {
+      "insumo": 6,
+      "data": "16–17/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005"
+      ],
+      "vira": "K-005; V-30",
+      "frente": "P; D (a estimativa no registro de valores, bloco 2)"
+    },
+    {
+      "insumo": 7,
+      "data": "17/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112",
+        "K-003"
+      ],
+      "vira": "K-112; K-003 (regra no bloco 1); V-23",
+      "frente": "D (reconferência em Sonnet no bloco 10); P (tipo de agente preso ao harness)"
+    },
+    {
+      "insumo": 8,
+      "data": "17/10/2026",
+      "classe": "fechado_por_decisao",
+      "refs": [
+        "D-050",
+        "D-040"
+      ],
+      "vira": "respondido pela D-050 (o planejamento como está, D-040)",
+      "frente": "P"
+    },
+    {
+      "insumo": 9,
+      "data": "18/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-008"
+      ],
+      "vira": "K-008",
+      "frente": "P"
+    },
+    {
+      "insumo": 10,
+      "data": "18/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-103",
+        "K-006"
+      ],
+      "vira": "K-103 (primeira habilidade); K-006",
+      "frente": "P (desenho); D (habilidades)"
+    },
+    {
+      "insumo": 11,
+      "data": "18/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004 (V-35)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 12,
+      "data": "20/10/2026",
+      "classe": "fechado_por_decisao",
+      "refs": [
+        "D-050"
+      ],
+      "vira": "respondido pela D-050 (05/11)",
+      "frente": "P"
+    },
+    {
+      "insumo": 13,
+      "data": "20/10/2026",
+      "classe": "fechado_por_decisao",
+      "refs": [
+        "D-050"
+      ],
+      "vira": "respondido pela D-050 (como estão)",
+      "frente": "P"
+    },
+    {
+      "insumo": 14,
+      "data": "20/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-001",
+        "K-008"
+      ],
+      "vira": "K-001 (seção 9 deste mapa); K-008",
+      "frente": "P"
+    },
+    {
+      "insumo": 15,
+      "data": "22/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento (a D-050 toma os usos medidos como métrica)",
+      "frente": "P"
+    },
+    {
+      "insumo": 16,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005"
+      ],
+      "vira": "K-005; a D-050 toma os usos medidos como métrica",
+      "frente": "P"
+    },
+    {
+      "insumo": 17,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-003",
+        "K-101"
+      ],
+      "vira": "K-003 (o que cabe no bloco 1), K-101",
+      "frente": "D"
+    },
+    {
+      "insumo": 18,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-006"
+      ],
+      "vira": "K-006",
+      "frente": "P (ferramenta do planejamento); D (construir)"
+    },
+    {
+      "insumo": 19,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "respondido pela D-050 (a configuração; o planejamento como está; o desenvolvimento depois do K-113 pela D-040, insumo 114)",
+      "frente": "P"
+    },
+    {
+      "insumo": 20,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113, pela D-050 (com a D-038)",
+      "frente": "P; D (teste na 10b)"
+    },
+    {
+      "insumo": 21,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-102",
+        "K-117"
+      ],
+      "vira": "K-102, K-117",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 22,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-006"
+      ],
+      "vira": "K-006",
+      "frente": "P (ferramenta do planejamento); D (construir)"
+    },
+    {
+      "insumo": 23,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-115"
+      ],
+      "vira": "K-115; V-24",
+      "frente": "P; D (bloco 12)"
+    },
+    {
+      "insumo": 24,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113 (D-050: depois dele, a rodada de quinta); antes, a lacuna continua",
+      "frente": "P; O"
+    },
+    {
+      "insumo": 25,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-114"
+      ],
+      "vira": "K-114",
+      "frente": "P; D (bloco 11)"
+    },
+    {
+      "insumo": 26,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-110",
+        "K-111"
+      ],
+      "vira": "K-110, K-111",
+      "frente": "D (blocos 8 e 9); P"
+    },
+    {
+      "insumo": 27,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-101"
+      ],
+      "vira": "K-101",
+      "frente": "D"
+    },
+    {
+      "insumo": 28,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-104"
+      ],
+      "vira": "K-104",
+      "frente": "D"
+    },
+    {
+      "insumo": 29,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 30,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-106"
+      ],
+      "vira": "K-106",
+      "frente": "D"
+    },
+    {
+      "insumo": 31,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-107"
+      ],
+      "vira": "K-107",
+      "frente": "D"
+    },
+    {
+      "insumo": 32,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-109"
+      ],
+      "vira": "K-109",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 33,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-110"
+      ],
+      "vira": "K-110",
+      "frente": "D"
+    },
+    {
+      "insumo": 34,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005",
+        "K-123"
+      ],
+      "vira": "K-005 (regra pela D-041); K-123 (no script, feito em 23/10: mu-lambda-0.2)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 35,
+      "data": "22/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 36,
+      "data": "22/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005",
+        "K-123"
+      ],
+      "vira": "K-005 (regra pela D-041); K-123 (no script, feito em 23/10: normalizacao-0.2 e mu-lambda-0.2)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 37,
+      "data": "23/10/2026",
+      "classe": "fechado_por_decisao",
+      "refs": [
+        "D-050",
+        "D-040"
+      ],
+      "vira": "respondido pela D-050 (o planejamento como está, D-040)",
+      "frente": "P"
+    },
+    {
+      "insumo": 38,
+      "data": "23/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento (a D-050 toma os usos medidos como métrica)",
+      "frente": "P; O"
+    },
+    {
+      "insumo": 39,
+      "data": "23/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-107"
+      ],
+      "vira": "K-107",
+      "frente": "D"
+    },
+    {
+      "insumo": 40,
+      "data": "23/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-108"
+      ],
+      "vira": "K-108",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 41,
+      "data": "23/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-107"
+      ],
+      "vira": "K-107",
+      "frente": "D"
+    },
+    {
+      "insumo": 42,
+      "data": "23/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-122"
+      ],
+      "vira": "K-122",
+      "frente": "D"
+    },
+    {
+      "insumo": 43,
+      "data": "23/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005"
+      ],
+      "vira": "K-005",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 44,
+      "data": "23/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-108"
+      ],
+      "vira": "K-108",
+      "frente": "D"
+    },
+    {
+      "insumo": 45,
+      "data": "23/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 46,
+      "data": "23/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 47,
+      "data": "23/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-108"
+      ],
+      "vira": "K-108",
+      "frente": "D"
+    },
+    {
+      "insumo": 48,
+      "data": "23/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-108"
+      ],
+      "vira": "K-108",
+      "frente": "D"
+    },
+    {
+      "insumo": 49,
+      "data": "23/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 50,
+      "data": "24/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "P"
+    },
+    {
+      "insumo": 51,
+      "data": "24/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-108"
+      ],
+      "vira": "K-108",
+      "frente": "D"
+    },
+    {
+      "insumo": 52,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 53,
+      "data": "24/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005"
+      ],
+      "vira": "K-005",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 54,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 55,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 56,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 57,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 58,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 59,
+      "data": "24/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 60,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-002"
+      ],
+      "vira": "K-002",
+      "frente": "P; D; O"
+    },
+    {
+      "insumo": 61,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D; O"
+    },
+    {
+      "insumo": 62,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 63,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 64,
+      "data": "29/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-010"
+      ],
+      "vira": "K-010",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 65,
+      "data": "29/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-010"
+      ],
+      "vira": "K-010",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 66,
+      "data": "29/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-010"
+      ],
+      "vira": "K-010",
+      "frente": "P"
+    },
+    {
+      "insumo": 67,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 68,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 69,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 70,
+      "data": "29/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005"
+      ],
+      "vira": "K-005",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 71,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 72,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 73,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112"
+      ],
+      "vira": "K-112, pela D-048 (o BCR se abre às rotinas com o adaptador do Tainacan; decidido na conversa de planejamento de 30/10)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 74,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 75,
+      "data": "29/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-005",
+        "K-004"
+      ],
+      "vira": "K-005 (3ª passada, na reunião do K-004)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 76,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 77,
+      "data": "29/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P"
+    },
+    {
+      "insumo": 78,
+      "data": "29/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112"
+      ],
+      "vira": "K-112",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 79,
+      "data": "29/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-118"
+      ],
+      "vira": "K-118",
+      "frente": "D"
+    },
+    {
+      "insumo": 80,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 81,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-116"
+      ],
+      "vira": "K-116",
+      "frente": "D"
+    },
+    {
+      "insumo": 82,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 83,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 84,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "a definir pelo planejamento, com o insumo 93 (era K-111; mudado na conversa de planejamento de 30/10)",
+      "frente": "D"
+    },
+    {
+      "insumo": 85,
+      "data": "30/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-010"
+      ],
+      "vira": "K-010",
+      "frente": "P"
+    },
+    {
+      "insumo": 86,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 87,
+      "data": "30/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-010"
+      ],
+      "vira": "K-010",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 88,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 89,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 90,
+      "data": "30/10/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-010"
+      ],
+      "vira": "K-010",
+      "frente": "P"
+    },
+    {
+      "insumo": 91,
+      "data": "30/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 92,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-111"
+      ],
+      "vira": "K-111",
+      "frente": "D"
+    },
+    {
+      "insumo": 93,
+      "data": "30/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 94,
+      "data": "30/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 95,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-116"
+      ],
+      "vira": "K-116",
+      "frente": "P"
+    },
+    {
+      "insumo": 96,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112"
+      ],
+      "vira": "K-112, pela D-048 (só consulta, sem cadastro; a cópia nova saiu do plano)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 97,
+      "data": "30/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 98,
+      "data": "30/10/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-002"
+      ],
+      "vira": "K-002",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 99,
+      "data": "30/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 100,
+      "data": "30/10/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 101,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 102,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 103,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 104,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "O"
+    },
+    {
+      "insumo": 105,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 106,
+      "data": "05/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112"
+      ],
+      "vira": "K-112; respondido pela D-049 (05/11)",
+      "frente": "D"
+    },
+    {
+      "insumo": 107,
+      "data": "05/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112"
+      ],
+      "vira": "K-112",
+      "frente": "D"
+    },
+    {
+      "insumo": 108,
+      "data": "05/11/2026",
+      "classe": "fechado_por_decisao",
+      "refs": [
+        "D-049"
+      ],
+      "vira": "respondido pela D-049 (05/11)",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 109,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 110,
+      "data": "05/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-116"
+      ],
+      "vira": "K-116",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 111,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D"
+    },
+    {
+      "insumo": 112,
+      "data": "05/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P"
+    },
+    {
+      "insumo": 113,
+      "data": "05/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-008"
+      ],
+      "vira": "K-008",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 114,
+      "data": "05/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "em parte, D-050: o planejamento como está; o teto do desenvolvimento depois do K-113 segue a D-040 até ser fixado",
+      "frente": "P"
+    },
+    {
+      "insumo": 115,
+      "data": "06/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-112"
+      ],
+      "vira": "K-112",
+      "frente": "D"
+    },
+    {
+      "insumo": 116,
+      "data": "08/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 117,
+      "data": "12/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-116"
+      ],
+      "vira": "K-116",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 118,
+      "data": "12/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 119,
+      "data": "12/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113",
+      "frente": "D"
+    },
+    {
+      "insumo": 120,
+      "data": "13/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-116"
+      ],
+      "vira": "K-116",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 121,
+      "data": "13/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 122,
+      "data": "13/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 123,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 124,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 125,
+      "data": "13/11/2026",
+      "classe": "fechado_por_cartao",
+      "refs": [
+        "K-113"
+      ],
+      "vira": "K-113",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 126,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 127,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; O"
+    },
+    {
+      "insumo": 128,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; O"
+    },
+    {
+      "insumo": 129,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 130,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 131,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 132,
+      "data": "13/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; O"
+    },
+    {
+      "insumo": 133,
+      "data": "13/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-125"
+      ],
+      "vira": "K-125",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 134,
+      "data": "13/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-125"
+      ],
+      "vira": "K-125",
+      "frente": "D; P"
+    },
+    {
+      "insumo": 135,
+      "data": "14/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; O"
+    },
+    {
+      "insumo": 136,
+      "data": "14/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 137,
+      "data": "14/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "D; O"
+    },
+    {
+      "insumo": 138,
+      "data": "14/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "P"
+    },
+    {
+      "insumo": 139,
+      "data": "14/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "D"
+    },
+    {
+      "insumo": 140,
+      "data": "14/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "P; D; O"
+    },
+    {
+      "insumo": 141,
+      "data": "15/11/2026",
+      "classe": "aberto_cartao",
+      "refs": [
+        "K-004"
+      ],
+      "vira": "K-004",
+      "frente": "P; D"
+    },
+    {
+      "insumo": 142,
+      "data": "20/11/2026",
+      "classe": "a_definir",
+      "refs": [],
+      "vira": "a definir pelo planejamento",
+      "frente": "P; D"
+    }
+  ]
+}
