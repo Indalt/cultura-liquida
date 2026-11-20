@@ -86,7 +86,13 @@ Depois da pergunta "posso registrar a D-057 com o texto da mensagem anterior?", 
 
 "Pode" confirma a essência v5: registrada como D-057 (`trilhas/decisoes/D-057.json`), com o K-126 no quadro.
 
-## Essência devolvida do comentário da fala 11 (pendente; seria a D-058)
+## Essência devolvida do comentário da fala 11 (confirmada pela fala 12; registrada como D-058)
+Devolvida a essência com as leituras e a pergunta "o que precisa estar pronto para a ferramenta ser liberada para as automatizações?", Vicente respondeu:
+12. "correto"
+
+"Correto" confirma a essência e as leituras (a) a (d): registrada como D-058 (`trilhas/decisoes/D-058.json`). A pergunta ficou sem resposta própria: segue [ABERTO] na D-058 se a liberação espera a fila montada ou a fila resolvida.
+
+Texto devolvido:
 Na correção da ferramenta (a reunião do K-004), a lista do que foi anotado se limpa antes de virar fila: sai o que é repetido e o que não é problema de fato para a ferramenta cumprir o que promete. Só com a lista limpa se monta a fila do que é preciso fazer, e só depois a ferramenta é liberada para as automatizações.
 
 Leituras a conferir: (a) "fila de problemas": os insumos abertos (uns 85 dos 142) e os cartões que sairiam deles (etapa 5 do K-004); (b) "limpeza": o repetido se junta ao insumo que já trata do assunto, e o que não é problema para a promessa sai da fila, sem se apagar: cada saída fica com o motivo (acordo 4); (c) "o que a ferramenta promete": o que a v0.2 descreve e o piloto testou (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda; D-035), com cada informação rastreável até a origem; (d) "automatizações": a operação com IA em escala, que a D-056 punha logo depois da entrega (a rotina do Claude do K-113 reconfigurada para propor e reler); a rotina diária sem IA segue como está. [ABERTO], perguntado: o que precisa estar pronto para liberar as automatizações.
