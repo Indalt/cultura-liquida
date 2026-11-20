@@ -1,5 +1,5 @@
 {
- "estado": "escopo dito por Vicente em 14/11 ('199'): só as Entradas de 'geral'; essência v2 à espera de confirmação; nada foi mudado na ferramenta",
+ "estado": "escopo lido pela conversa de 14/11 a partir do '199' de Vicente; os dez nomes de 'nomes_geral' foram escolhidos pela contagem da conversa, não por Vicente, que em 20/11 disse não ter incluído cerveja e refrigerante (falas-vicente.md, fala 7); o escopo por esses nomes saiu da essência e o escopo da D-057 está [ABERTO]; nada foi mudado na ferramenta",
  "data": "2026-11-14",
  "regra_da_selecao": "Entradas de entrada/EN-*.json (main de 14/11) cujo título ou citacao_resumo, sem acento e por palavra inteira (plural com s), traz um dos nomes; 'geral': só as da Consulta geral CO-0008 (motivo da pré-triagem) com um dos 10 nomes que a conversa listou; 'candidatas': as de qualquer Consulta com o nome de uma CLB candidata (TE-0003, TE-0004, TE-0005)",
  "nomes_geral": [

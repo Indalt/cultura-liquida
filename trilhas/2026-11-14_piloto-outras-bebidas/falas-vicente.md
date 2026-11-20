@@ -34,5 +34,24 @@ Custo previsto: extração em 14 lotes de 15, de 180 a 260 mil tokens por lote n
 
 Devolvido a Vicente sobre a fala 4, sem confirmação ainda: "IA só onde é preciso ler texto; todo o resto por regra e script"; pergunta em aberto: a leitura também deve dispensar IA? Com a fala 4, a essência v2 acima deixa de estar confirmada por si. O que se respondeu e o que fica para a próxima sessão estão em `trilhas/planejamento/rodadas/2026-11-15_antes-do-K-004/passagem.md`.
 
+## Falas de 19/11 (sessão nova, Opus 5.5, seção 6 da passagem)
+Na sessão, a explicação do gasto foi devolvida com os números de `dados.json` (conteúdo 23% dos 6.912.130 tokens; Fundação e fatos 51%; juridico 18%; o que não foi medido) e a pergunta aberta foi como Vicente vê a leitura da fonte numa ferramenta quase independente de IA.
+6. "no momento eu prefiro continuar para finalizar o piloto para falar dos aprimoramentos depois. este ja esta anotado?"
+
+Resposta: a questão está no insumo 141 (custo por bebida e por parte, IA só onde regra e script não alcançam; essência da fala 4 não confirmada). A pergunta sobre a leitura sem IA fica para a conversa dos aprimoramentos (K-004), sem resposta e sem decisão. A essência v3 da D-057, abaixo, foi devolvida a Vicente.
+
+## Essência v3 (pendente; vira a D-057 com a confirmação)
+A essência v2, com a fala 6: o piloto termina com a ferramenta como ela está hoje, agentes com IA incluídos; o enxugamento (menos IA, custo medido por parte) é aprimoramento para depois do piloto, no K-004 (insumo 141). [ABERTO]: o que é "o que falta" em "o que falta vem na próxima semana" (fala 3); a leitura (b) da v2, só de data, perdeu o sentido depois de 18/11.
+
+## Fala de 20/11 (mesma sessão, Opus 5.5)
+Devolvida a essência v3 com os dez nomes por extenso e o custo, Vicente respondeu:
+7. "Sucos, refrescos, bebidas lacteas e hidromel podem ser consideradas bebidas brasileiras se são parte da cultura. Falamos de culturas líquidas. de onde veio cerveja, refrigerantes etc.? eu nao lembro de ter incluido isso."
+
+**Conferido na trilha:** os dez nomes não vieram de Vicente; nenhuma das falas 1 a 6 nomeia bebida. Vieram (1) da Consulta geral CO-0008 (`scripts/gerar_termo.py --gerais`, 05/11, regra consultas-gerais-0.1: "bebida" e um descritor do processo da cajuína: extração do suco, clarificação, filtração, envase, tratamento térmico, higienização), que trouxe sobretudo tecnologia de alimentos; e (2) da conversa de 14/11, que escolheu os nomes a contar no levantamento e leu "estas entradas" (fala 2) e "199" (fala 3) como as Entradas com os dez nomes mais frequentes. Os nomes estavam nas palavras a conferir, mas não foram discutidos como critério: uma contagem de frequência virou escopo, sem regra. Nada foi aplicado: nenhuma marca, nenhuma leitura.
+
+**Medido em 20/11** (script avulso, não gravado; título e `citacao_resumo` de `entrada/EN-*.json`, sem acento, palavra inteira): as 199 tratam quase todas de processo industrial (higienização e clarificação na cervejaria, linha de envase de refrigerante, bebida láctea UHT, filtração de cachaça). Das 567 Entradas da CO-0008, 31 têm ao menos uma de 28 palavras ligadas a cultura (tradicional, artesanal, cultura, comunidade, indígena, quilombola, patrimônio, memória, história, festa, ritual, saber, regional, etnobotânica, etnografia e variações); a maioria por "artesanal", quase toda cerveja artesanal como produto, e várias por acaso ("cultura microbiana"); "refresco" não aparece. Entre as 7 Entradas das CLB candidatas, que ficaram fora com o "199", estão os únicos estudos sobre cultura deste material: EN-1066 e EN-50910 (mocororó e o povo Kanindé de Aratuba) e EN-1069 (o Torém, dos Tremembé). Alcance: só título e trecho do resumo; o resumo inteiro e o bruto fora do Git não foram lidos.
+
+**Leitura, sem decisão:** o critério da fala 7, "se são parte da cultura", já é a regra da ferramenta (D-022: os quatro critérios de prática cultural na CLB, cada um com Evidência ou Falta; a Falta nunca recusa; nenhuma bebida entra ou sai pelo nome); não se registra de novo. O escopo por dez nomes sai da essência v3; o escopo da D-057 fica [ABERTO], perguntado a Vicente. Segue [ABERTO] "o que falta vem na próxima semana".
+
 ## Estado
 Nada mudou na ferramenta. Custo previsto: 14 lotes de 15 Entradas; um lote da rotina com IA custou de 270 a 350 mil tokens em 13/11 (insumo 132). Nada roda antes de 18/11, 23h: a semana da conta está em 88% (estimada), e o limite é 90%.
