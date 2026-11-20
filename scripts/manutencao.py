@@ -62,7 +62,7 @@ LIMITES = {k: v for k, v in json.loads((RAIZ_PADRAO / "esquemas" / "valores-prov
 ESPERADOS_RAIZ = {
     "00_Fundacao_Cultura_Liquida.md", "AGENTS.md", "CLAUDE.md", "README.md", "RETOMAR.md", "requirements.txt",
     ".git", ".gitignore", ".gitattributes", ".githooks", ".github", ".claude", ".venv", ".env", ".vscode",
-    "acervo", "ambientes", "entrada", "esquemas", "grafo", "legado", "scripts", "testes", "trilhas", "wiki-local",
+    "acervo", "ambientes", "campo_de_acao", "entrada", "esquemas", "grafo", "legado", "scripts", "testes", "trilhas", "wiki-local",
 }
 RAMIFICACOES_FIXAS = {"origin/main", "origin/HEAD", "origin/rotinas"}
 # Caminhos citados de propósito como coisa que não existe ou que fica fora da pasta
