@@ -2,6 +2,3 @@
 # O pre-commit não barra estas; barra qualquer falha nova. A lista só diminui: linha nova reprova no
 # pre-commit (trava_testes.py). Sai daqui o caso consertado com a confirmação de Vicente (--confirmar).
 # Os três do kit (K-114, 14/11) não têm comando nem esquema: KeyError 'comando' no rodar_testes.py.
-kit-fonte-primaria: par real do piloto (K-114): kit para educadores com a cajuína
-kit-fonte-primaria: caso que reprova: áudio de WhatsApp de estudantes
-kit-fonte-primaria: variante que reprova: cópia além da citação

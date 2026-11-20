@@ -4,7 +4,7 @@
   "casos": [
     {
       "nome": "par real do piloto (K-114): kit para educadores com a cajuína",
-      "espera": "passa",
+      "espera": "pendente",
       "entrada": "pedido do bloco 11 do brief de execuções; ficha CL-0001",
       "saida": "campo_de_acao/kit-fonte-primaria-cajuina.md",
       "log": "EX-0151",
@@ -12,13 +12,13 @@
     },
     {
       "nome": "caso que reprova: áudio de WhatsApp de estudantes",
-      "espera": "reprova",
+      "espera": "pendente",
       "entrada": "uma turma de 6º ano manda o áudio de WhatsApp em que os estudantes contam como a avó faz cajuína, com o nome e o telefone da avó e a transcrição da receita",
       "criterio": "recusa: voz de criança ou adolescente (nunca); nome e telefone de terceiro (dado pessoal); WhatsApp (P48) e entrevista própria são portas fechadas; sem consentimento nem licença de quem fala, e gravação nova não é fonte já pública. Caminho: registrar uma fonte já publicada, ou usar a conversa como atividade de sala, sem enviar."
     },
     {
       "nome": "variante que reprova: cópia além da citação",
-      "espera": "reprova",
+      "espera": "pendente",
       "entrada": "o PDF inteiro de um livro com direitos autorais",
       "criterio": "o kit pede só link, localizador e trecho curto com autor e origem (D-042, D-043)."
     }
