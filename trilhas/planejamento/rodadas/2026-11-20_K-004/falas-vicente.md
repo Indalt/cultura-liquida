@@ -53,3 +53,9 @@ Leitura do curador: o "ok" confirma a essência e a organização devolvidas na 
 O pedido da trava foi feito na mesma conversa (D-059, item 6): `scripts/trava_testes.py` guarda a impressão dos 271 casos da suíte; o `rodar_testes.py` (o que valida no GitHub e o portão da rotina) e o pre-commit reprovam caso mudado ou tirado sem confirmação; o pre-commit também roda a suíte quando o commit toca código, esquemas, testes ou harness.
 
 Devolvido a Vicente como leitura, a confirmar: quem confirma a mudança de um teste é ele (a trava pede "--confirmado-por vicente" e onde ele confirmou); o caso novo entra sem confirmação; a suíte só roda no pre-commit quando o commit toca código, esquemas, testes ou harness.
+
+## Fala 4 (confirmação e agendamento)
+
+> ok, confirmo. quem confirmo tudo. agende a limpeza e organizacao para 15h30 para que ela ja seja executada no automatico apos esse horario aqui mesmo nesta sessao
+
+Leitura do curador: confirma o conserto dos 3 casos do kit (voltar a "pendente", como estavam antes do K-114) e as leituras devolvidas sobre a trava: quem confirma a mudança de um teste é Vicente ("quem confirmo tudo"); o caso novo entra sem confirmação; a suíte roda no commit que toca código ou testes. Pede o K-127 (limpeza e organização, D-059) agendado para depois das 15h30 de 20/11, no automático, nesta mesma sessão (depois que a janela de 5 h renova, perto das 15h29). Agendado na sessão (CronCreate, uma vez). O lugar do K-126 segue [ABERTO]: esta fala não o toca.
