@@ -47,7 +47,7 @@ PASTAS_DE_TESTE = ("testes/", "esquemas/exemplos/", ".claude/skills/")
 def arquivos_de_casos(raiz: Path) -> list[Path]:
     """Os casos.json que a suíte roda (a mesma lista do rodar_testes.py, que a importa daqui)."""
     fixos = ["esquemas/exemplos", "testes/nucleo", "testes/coleta", "testes/extracao", "testes/mencoes",
-             "testes/rodada-b", "testes/rotinas", "testes/manutencao", "testes/trava"]
+             "testes/rodada-b", "testes/rotinas", "testes/manutencao", "testes/trava", "testes/cabecalhos"]
     arqs = sorted((raiz / ".claude" / "skills").glob("*/exemplos/casos*.json"))
     arqs += [raiz / p / "casos.json" for p in fixos]
     return [a for a in arqs if a.exists()]

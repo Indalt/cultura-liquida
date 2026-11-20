@@ -1,0 +1,44 @@
+{
+ "habilidade": "cabeçalhos de agentes e habilidades (scripts/checar_cabecalhos.py, insumo 105, K-127)",
+ "rodada": "A",
+ "casos": [
+  {
+   "nome": "cabeçalhos do projeto carregam",
+   "espera": "passa",
+   "comando": [
+    "scripts/checar_cabecalhos.py"
+   ],
+   "criterio": "todo agente e toda habilidade do projeto têm cabeçalho que o Claude Code carrega"
+  },
+  {
+   "nome": "cabeçalho em ordem",
+   "espera": "passa",
+   "comando": [
+    "scripts/checar_cabecalhos.py",
+    "--claude",
+    "testes/cabecalhos/fixtures/ok"
+   ],
+   "criterio": "dois-pontos só entre aspas: passa"
+  },
+  {
+   "nome": "dois-pontos sem aspas",
+   "espera": "reprova",
+   "comando": [
+    "scripts/checar_cabecalhos.py",
+    "--claude",
+    "testes/cabecalhos/fixtures/dois-pontos"
+   ],
+   "criterio": "o caso de 30/10 (o rastreador sumiu da sessão): reprova"
+  },
+  {
+   "nome": "name diferente da pasta",
+   "espera": "reprova",
+   "comando": [
+    "scripts/checar_cabecalhos.py",
+    "--claude",
+    "testes/cabecalhos/fixtures/nome-errado"
+   ],
+   "criterio": "a habilidade se chama pela pasta: reprova"
+  }
+ ]
+}
