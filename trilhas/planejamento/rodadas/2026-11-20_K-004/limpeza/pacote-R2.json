@@ -1,0 +1,532 @@
+{
+ "lote": "R2",
+ "regra": "D-058: o insumo repetido se junta ao que já trata do assunto; o que não é problema de fato para a ferramenta cumprir o que promete (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda, tudo rastreável até a origem) sai da fila, com o motivo; nada se apaga.",
+ "acoes": {
+  "fica": "problema de fato para a promessa, distinto dos outros; recebe destino na etapa 5 (D-046)",
+  "junta": "o mesmo problema (o mesmo defeito; o conserto de um resolve o outro) de um insumo que fica, de um cartão que já o leva no escopo ou de um item do proxima-versao.md; sai da contagem e segue escrito no alvo",
+  "sai_resolvido": "o problema já foi resolvido por trabalho posterior, com a prova no repositório",
+  "sai_fora_da_promessa": "não impede a ferramenta de cumprir a promessa da fase 1 (fase 2, publicação, estacionado, processo do planejamento ou não é problema hoje); segue no cartão que o leva, quando há"
+ },
+ "itens": [
+  {
+   "n": 4,
+   "insumo": {
+    "data": "17/10/2026",
+    "origem": "checklist do piloto, \"Parada por orçamento\"",
+    "insumo": "com 300 mil tokens por semana e folga de 2× o maior lote, cabem 1 a 2 agentes por semana em lotes de 100 mil ou mais; o brief prevê 40 a 60 chamadas",
+    "aonde": "um ritmo do piloto que Vicente aceite, com o teto e a regra de folga calibrados pela medida"
+   },
+   "vira_no_mapa": "K-005",
+   "proposta": {
+    "acao": "sai_resolvido",
+    "alvo": "D-040; K-123",
+    "motivo": "O ritmo em pontos da conta foi aceito por Vicente na 1ª passada do K-005 (D-040), sem a folga de 2× (orcamento.py, K-123); o piloto foi entregue (D-056). O que resta de calibração com medida nova é a 3ª passada do K-005, que já é cartão.",
+    "evidencia": [
+     "quadro, K-005 ('um ritmo do piloto que Vicente aceite (aceito pela D-040)')",
+     "scripts/orcamento.py --help"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "D-040",
+     "agents_md": "- **D-040:** o ritmo do piloto em **pontos percentuais (pp) do limite semanal da conta**: o projeto usa até **60 pp por semana**, somadas as três frentes; o desenvolvimento, até 50; o planejamento, o resto; a conta nunca passa de 90%. A conversa não para antes do teto; a guarda é **não perder trabalho**: commit e push a cada lote e, ao abrir, Vicente informa também a janela de 5 h; acima de 70% dela, só um lote e a conversa fecha com o estado salvo. No fim do K-113 (operação autônoma), o teto volta a um valor de manutenção, fixado no K-002. Muda-se só o que está em vigor."
+    },
+    {
+     "alvo": "K-123",
+     "quadro": {
+      "coluna": "Concluído (23/10/2026)",
+      "texto": "**K-123** As decisões do K-005 na ferramenta. D-040: o `orcamento.py` em pontos da conta (a folga da conversa pela leitura de Vicente; os 2 pp da conversa principal e o 1,6 pp por 100 mil tokens lidos do registro; a estimativa por agente e habilidade tirada dos logs, com 96.520 sem medida; sem a folga de 2×), o cabeçalho e a tabela da semana da conta no checklist do piloto, o `executar-brief` e o `curador.md` em dia (até a D-041) e os casos de teste da conta. D-041: o `localizar_trecho.py` e o `calcular_mu_lambda.py` com as regras novas e as versões novas no registro (normalização e μ e λ), com os casos A-010 e A-015 do auditor entre os que passam e os que reprovam; a leitura de \"sem pesar dos dois lados\" se confirma com Vicente antes de gravar. *Antes do K-106* | D-040, D-041; insumos 34 e 36 | a conta de cada conversa feita por script; os blocos 7 e 8 rodando com as regras da D-041; `rodar_testes.py` sem FALHA; feito: `orcamento.py` em pp com a tabela \"Semana da conta\" do checklist, normalizacao-0.2 e mu-lambda-0.2 (a linhagem mista em nenhum lado, `tensao_interna`), `rodar_testes.py` OK 132 · FALHA 0"
+     }
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "insumo": {
+    "data": "16–17/10/2026",
+    "origem": "checklist v0.2, l. 119, 188-190; logs em `trilhas/logs/`",
+    "insumo": "custos medidos: redator 53 a 141 mil por chamada; auditor 77 a 112 mil; juridico 146 mil; escrita da v0.2 593.217, verificação 443.033, correções 191.092",
+    "aonde": "estimativas de lote tiradas da medida, por agente e habilidade"
+   },
+   "vira_no_mapa": "K-005; V-30",
+   "proposta": {
+    "acao": "sai_resolvido",
+    "alvo": "K-123",
+    "motivo": "As estimativas de lote saem da medida, por agente e habilidade: o orcamento.py toma a última medida do mesmo agente com a mesma habilidade nos logs (K-123).",
+    "evidencia": [
+     "scripts/orcamento.py --help ('A estimativa do lote: a última medida do mesmo agente com a mesma habilidade nos logs')",
+     "quadro, K-123"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-123",
+     "quadro": {
+      "coluna": "Concluído (23/10/2026)",
+      "texto": "**K-123** As decisões do K-005 na ferramenta. D-040: o `orcamento.py` em pontos da conta (a folga da conversa pela leitura de Vicente; os 2 pp da conversa principal e o 1,6 pp por 100 mil tokens lidos do registro; a estimativa por agente e habilidade tirada dos logs, com 96.520 sem medida; sem a folga de 2×), o cabeçalho e a tabela da semana da conta no checklist do piloto, o `executar-brief` e o `curador.md` em dia (até a D-041) e os casos de teste da conta. D-041: o `localizar_trecho.py` e o `calcular_mu_lambda.py` com as regras novas e as versões novas no registro (normalização e μ e λ), com os casos A-010 e A-015 do auditor entre os que passam e os que reprovam; a leitura de \"sem pesar dos dois lados\" se confirma com Vicente antes de gravar. *Antes do K-106* | D-040, D-041; insumos 34 e 36 | a conta de cada conversa feita por script; os blocos 7 e 8 rodando com as regras da D-041; `rodar_testes.py` sem FALHA; feito: `orcamento.py` em pp com a tabela \"Semana da conta\" do checklist, normalizacao-0.2 e mu-lambda-0.2 (a linhagem mista em nenhum lado, `tensao_interna`), `rodar_testes.py` OK 132 · FALHA 0"
+     }
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "rodada K-001, consumo (`trilhas/planejamento/rodadas/2026-10-21_K-001/relatorio.md`)",
+    "insumo": "o número do Workflow (267.700) soma o contexto de entrada do último turno de cada agente e deixa de fora a saída desse turno; pelo contexto final de cada auditor no transcript, o lote daria 329.448, e a rodada passaria do teto de 300 mil",
+    "aonde": "um teto do planejamento medido por uma conta só, comparável à do Agent, para workflow e agente; cartão K-002"
+   },
+   "vira_no_mapa": "a definir pelo planejamento (a D-050 toma os usos medidos como métrica)",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "136",
+    "motivo": "Mesmo problema: o consumo de tokens não tem uma medida só (o número do Workflow não é o do Agent). O 136 pede 'uma única medida de tokens por agente, sem dupla contagem e sem consumo perdido' e já cita o workflow de 17/10 entre os consumos que só existem na linha do curador.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 15 e 136"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "136",
+     "insumo": {
+      "data": "14/11/2026",
+      "origem": "K-116, achado A1 do auditor (trilhas/logs/2026-11-14_auditor.jsonl); scripts/relatorio_piloto.py 0.2",
+      "insumo": "As linhas de log do agente curador guardam a soma dos subagentes da conversa, que já têm linha própria; somadas, contam em dobro (14,75 milhões contra o piso de 6,9 milhões). A regra do CLAUDE.md (o número oficial é o do curador) e o esquema de log não dizem se a linha do curador é agregado ou consumo próprio, e alguns consumos só existem nela (workflow de 17/10, rotina do K-113, parte do K-112).",
+      "aonde": "uma única medida de tokens por agente, sem dupla contagem e sem consumo perdido, que o K-005 e a operação possam somar"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O consumo de tokens não tem medida única: a linha do curador soma os subagentes (conta em dobro), o Workflow mede diferente do Agent, o agente retomado conta a releitura, e a tabela da conta mistura medido e estimado."
+     }
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "rodada K-001, conta do orçamento",
+    "insumo": "a estimativa do lote de verificação usou a referência genérica (60 mil por agente Sonnet) e não a última medida do auditor (77 a 112 mil), contra o brief (l. 40); o lote veio 49% acima",
+    "aonde": "estimativa tirada por script dos logs, por agente e habilidade, antes de cada lote, também no planejamento; cartões K-002 e K-005"
+   },
+   "vira_no_mapa": "K-005; a D-050 toma os usos medidos como métrica",
+   "proposta": {
+    "acao": "sai_resolvido",
+    "alvo": "K-123",
+    "motivo": "A estimativa sai por script dos logs, por agente e habilidade, antes de cada lote, também no planejamento (orcamento.py com --frente planejamento; K-123).",
+    "evidencia": [
+     "scripts/orcamento.py --help (--frente {desenvolvimento,planejamento}; estimativa pelos logs)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-123",
+     "quadro": {
+      "coluna": "Concluído (23/10/2026)",
+      "texto": "**K-123** As decisões do K-005 na ferramenta. D-040: o `orcamento.py` em pontos da conta (a folga da conversa pela leitura de Vicente; os 2 pp da conversa principal e o 1,6 pp por 100 mil tokens lidos do registro; a estimativa por agente e habilidade tirada dos logs, com 96.520 sem medida; sem a folga de 2×), o cabeçalho e a tabela da semana da conta no checklist do piloto, o `executar-brief` e o `curador.md` em dia (até a D-041) e os casos de teste da conta. D-041: o `localizar_trecho.py` e o `calcular_mu_lambda.py` com as regras novas e as versões novas no registro (normalização e μ e λ), com os casos A-010 e A-015 do auditor entre os que passam e os que reprovam; a leitura de \"sem pesar dos dois lados\" se confirma com Vicente antes de gravar. *Antes do K-106* | D-040, D-041; insumos 34 e 36 | a conta de cada conversa feita por script; os blocos 7 e 8 rodando com as regras da D-041; `rodar_testes.py` sem FALHA; feito: `orcamento.py` em pp com a tabela \"Semana da conta\" do checklist, normalizacao-0.2 e mu-lambda-0.2 (a linhagem mista em nenhum lado, `tensao_interna`), `rodar_testes.py` OK 132 · FALHA 0"
+     }
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "rodada K-003, verificação (achado F-07 do auditor B, `rodadas/2026-10-22_K-003/verificacao.json`)",
+    "insumo": "o auditor, que lê a amostra que audita a ferramenta, usa o mesmo modelo e o mesmo esforço (Sonnet 5.5 alto) do avaliador, do arquivista e do juridico, que produzem os itens; a l. 200 da Fundação aponta \"o mesmo modelo que produzia\" como falha do legado, e o remédio do plano é o harness diferente, a checagem por script e a amostra (D-026)",
+    "aonde": "um verificador que não repita o erro do produtor, com a diferença entre os dois medida; cartões K-115 (bloco 12) e K-004 (V-24)"
+   },
+   "vira_no_mapa": "K-115; V-24",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-115c; V-24",
+    "motivo": "Resolvido em parte: o avaliador, que produz as Evidências, passou a Haiku 5.5 no K-115a, e o auditor, que relê, segue em Sonnet 5.5 (D-055, D-056: o avaliador propõe, o auditor relê). O que resta (o auditor no mesmo modelo do arquivista e do juridico) é o teste do K-115c, estacionado para a reunião do K-004, e o texto do V-24.",
+    "evidencia": [
+     ".claude/agents/avaliador.md (model: claude-haiku-5-5); auditor.md, arquivista.md e juridico.md (claude-sonnet-5-5)",
+     "quadro, K-115a (concluído) e K-115c (estacionado)",
+     "proxima-versao.md, V-24"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-115c",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-115c** *Estacionado pela D-056 (14/11/2026), com o estado salvo: vai à reunião do K-004.* Bloco 12, parte 3 (D-053): conferir-fato e verificar-fundacao (auditor), escrever-secao-fundacao (redator) e o fecho do bloco. *Depois do K-114; antes do K-116* | brief, bloco 12; D-053 | a tabela inteira (o kit vem do K-114); frontmatters do auditor e do redator e a tabela de modelos do CLAUDE.md e do AGENTS.md, com Histórico"
+     }
+    },
+    {
+     "alvo": "V-24",
+     "proxima_versao": "| V-24 | §1, l. 76; §3.4, l. 200; §5, l. 376; §5.1, l. 396; §7, l. 667, 732, 752 e 795; §9, l. 861 | a amostra sorteada passa a auditar a ferramenta, e o que ela acha vai à trilha de melhorias; quem a lê é o auditor, depois dos scripts, fora da cota de Vicente, com 15 itens por amostra até o K-005 (A-04, D-038) | D-037, D-038 | D-037; mapa K-001, atrito 4 |"
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "cartão K-105 (scripts/calcular_mu_lambda.py, função graus; esquemas/valores-provisorios.json, mu_lambda e eixo3)",
+    "insumo": "o registro mu_lambda conta as linhagens a favor e divergentes sem dizer se uma Evidência com leitura divergente (eixo 3) ou com Trecho não localizado entra na conta; o script conta todas as Evidências ativas, pela letra do registro",
+    "aonde": "a regra de μ e λ dizendo quais Evidências entram, pelo eixo 2 e pelo eixo 3"
+   },
+   "vira_no_mapa": "K-005 (regra pela D-041); K-123 (no script, feito em 23/10: mu-lambda-0.2)",
+   "proposta": {
+    "acao": "sai_resolvido",
+    "alvo": "D-041; K-123",
+    "motivo": "A regra diz quais Evidências entram: só a de trecho localizado e leitura fiel; a divergente ou não localizada fica visível, fora da conta (D-041). Está no registro (mu-lambda-0.2) e no calcular_mu_lambda.py, que lê a versão do registro (K-123).",
+    "evidencia": [
+     "esquemas/valores-provisorios.json, l. 261 e 282 (mu-lambda-0.2)",
+     "scripts/calcular_mu_lambda.py, l. 37",
+     "AGENTS.md, D-041"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "D-041",
+     "agents_md": "- **D-041:** no `localizar_trecho.py`, palavras de negação e de sentido contrário batem **exatamente**; a semelhança tolera só OCR e grafia. Em μ e λ só conta Evidência com trecho localizado e leitura fiel; a divergente ou não localizada fica visível, fora da conta; cada linhagem conta uma vez, e a que tiver Evidência a favor e divergente vira tensão interna sinalizada, sem pesar dos dois lados. Regras com versão e recálculo por script (no registro e nos scripts pelo K-123)."
+    },
+    {
+     "alvo": "K-123",
+     "quadro": {
+      "coluna": "Concluído (23/10/2026)",
+      "texto": "**K-123** As decisões do K-005 na ferramenta. D-040: o `orcamento.py` em pontos da conta (a folga da conversa pela leitura de Vicente; os 2 pp da conversa principal e o 1,6 pp por 100 mil tokens lidos do registro; a estimativa por agente e habilidade tirada dos logs, com 96.520 sem medida; sem a folga de 2×), o cabeçalho e a tabela da semana da conta no checklist do piloto, o `executar-brief` e o `curador.md` em dia (até a D-041) e os casos de teste da conta. D-041: o `localizar_trecho.py` e o `calcular_mu_lambda.py` com as regras novas e as versões novas no registro (normalização e μ e λ), com os casos A-010 e A-015 do auditor entre os que passam e os que reprovam; a leitura de \"sem pesar dos dois lados\" se confirma com Vicente antes de gravar. *Antes do K-106* | D-040, D-041; insumos 34 e 36 | a conta de cada conversa feita por script; os blocos 7 e 8 rodando com as regras da D-041; `rodar_testes.py` sem FALHA; feito: `orcamento.py` em pp com a tabela \"Semana da conta\" do checklist, normalizacao-0.2 e mu-lambda-0.2 (a linhagem mista em nenhum lado, `tensao_interna`), `rodar_testes.py` OK 132 · FALHA 0"
+     }
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "cartão K-105, auditor (trilhas/2026-10-22_K-105/achados-auditor.json, achados A-010 e A-015)",
+    "insumo": "pela regra vigente, um trecho com uma palavra de sentido contrário inserida ('nunca') fica localizado por semelhança (grau 0,955 contra o limiar 0,9 de normalizacao-0.1); e uma mesma linhagem com uma Evidência a favor e outra divergente conta nos dois lados de μ e λ, sem o script sinalizar",
+    "aonde": "um limiar de semelhança e uma contagem por linhagem que não deixem passar uma leitura invertida nem contem a mesma linhagem dos dois lados sem aviso"
+   },
+   "vira_no_mapa": "K-005 (regra pela D-041); K-123 (no script, feito em 23/10: normalizacao-0.2 e mu-lambda-0.2)",
+   "proposta": {
+    "acao": "sai_resolvido",
+    "alvo": "D-041; K-123",
+    "motivo": "Negação e sentido contrário batem exatamente (normalizacao-0.2; localizar_trecho.py, l. 53), e cada linhagem conta uma vez, com a linhagem mista sinalizada como tensão interna, fora de μ e λ (mu-lambda-0.2).",
+    "evidencia": [
+     "esquemas/valores-provisorios.json, l. 202, 257, 261 e 282",
+     "scripts/localizar_trecho.py, l. 10 e 53"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "D-041",
+     "agents_md": "- **D-041:** no `localizar_trecho.py`, palavras de negação e de sentido contrário batem **exatamente**; a semelhança tolera só OCR e grafia. Em μ e λ só conta Evidência com trecho localizado e leitura fiel; a divergente ou não localizada fica visível, fora da conta; cada linhagem conta uma vez, e a que tiver Evidência a favor e divergente vira tensão interna sinalizada, sem pesar dos dois lados. Regras com versão e recálculo por script (no registro e nos scripts pelo K-123)."
+    },
+    {
+     "alvo": "K-123",
+     "quadro": {
+      "coluna": "Concluído (23/10/2026)",
+      "texto": "**K-123** As decisões do K-005 na ferramenta. D-040: o `orcamento.py` em pontos da conta (a folga da conversa pela leitura de Vicente; os 2 pp da conversa principal e o 1,6 pp por 100 mil tokens lidos do registro; a estimativa por agente e habilidade tirada dos logs, com 96.520 sem medida; sem a folga de 2×), o cabeçalho e a tabela da semana da conta no checklist do piloto, o `executar-brief` e o `curador.md` em dia (até a D-041) e os casos de teste da conta. D-041: o `localizar_trecho.py` e o `calcular_mu_lambda.py` com as regras novas e as versões novas no registro (normalização e μ e λ), com os casos A-010 e A-015 do auditor entre os que passam e os que reprovam; a leitura de \"sem pesar dos dois lados\" se confirma com Vicente antes de gravar. *Antes do K-106* | D-040, D-041; insumos 34 e 36 | a conta de cada conversa feita por script; os blocos 7 e 8 rodando com as regras da D-041; `rodar_testes.py` sem FALHA; feito: `orcamento.py` em pp com a tabela \"Semana da conta\" do checklist, normalizacao-0.2 e mu-lambda-0.2 (a linhagem mista em nenhum lado, `tensao_interna`), `rodar_testes.py` OK 132 · FALHA 0"
+     }
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "insumo": {
+    "data": "23/10/2026",
+    "origem": "cartão K-005 (trilhas/planejamento/rodadas/2026-10-23_K-005/dados-ritmo.json, leituras L1 a L7; checklist do piloto, conversa do K-101)",
+    "insumo": "a leitura do uso da conta só existe quando Vicente a informa: o fim de cada conversa vem da abertura da seguinte e pode misturar uso de fora do projeto, e a do início do K-101 veio em branco; não foi conferido se o Claude Code mostra o uso da conta à sessão, e a medida das rotinas (bloco 10b) depende da mesma leitura",
+    "aonde": "cada conversa e cada rodada de rotina medida em pp no início e no fim, sem depender da memória de Vicente nem misturar outros usos"
+   },
+   "vira_no_mapa": "a definir pelo planejamento (a D-050 toma os usos medidos como métrica)",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "132",
+    "motivo": "Resolvido para as conversas: a leitura de uso vem da linha [Uso do plano] do hook (oficial quando há, estimada senão), sem perguntar a Vicente e separada por pasta (AGENTS.md, Orçamento). O que resta é a rodada da rotina na nuvem, que o hook não vê: o mesmo problema do 127, que se junta ao 132.",
+    "evidencia": [
+     "AGENTS.md, Passo corrente, Orçamento ('a leitura de uso vem da linha [Uso do plano] do hook, sem perguntar a Vicente')",
+     "trilhas/insumos-planejamento.md, insumo 127"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "132",
+     "insumo": {
+      "data": "13/11/2026",
+      "origem": "cartão K-113, rodadas da rotina com IA de 13/11 (logs EX-50033 e EX-50034 na ramificação claude/rotina-ia-2026-11-13)",
+      "insumo": "custo medido de um lote de 15 Entradas na rotina com IA: avaliador em Haiku 5.5 de 181.491 a 260.510 tokens (26 a 35 chamadas); auditor em Sonnet 5.5 ao menos 89.320 tokens (26 chamadas, a segunda volta sem medida); a sessão da rotina (Sonnet 5.5) sem medida; a rotina semanal ficou ligada com 1 lote por rodada, às quintas 20h (Brasília)",
+      "aonde": "o número de lotes por rodada calibrado pelo uso medido da conta, dentro dos 20% da semana e 50% da janela (D-050)"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O custo da rotina com IA está medido só pelos tokens dos agentes (a sessão da rotina sem medida, a nuvem fora do hook), e o número de lotes por rodada (1) não está calibrado pelo uso medido da conta; a fonte longa não cabe num lote."
+     }
+    }
+   ]
+  },
+  {
+   "n": 43,
+   "insumo": {
+    "data": "23/10/2026",
+    "origem": "cartão K-106, retomada do rastreador por SendMessage (trilhas/logs/2026-10-23_rastreador.jsonl, EX-0016, erros)",
+    "insumo": "a retomada do mesmo agente para 10 pedidos deu 79.311 tokens e 2 chamadas no retorno, mais que o lote original (72.903 tokens, 12 chamadas); o número parece incluir a releitura do contexto do lote, e não se separou; o log somou os dois (152.214)",
+    "aonde": "a conta de cada lote igual para agente novo e agente retomado, com a escolha entre retomar e abrir outro feita pelo custo medido"
+   },
+   "vira_no_mapa": "K-005",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "136",
+    "motivo": "A conta do agente retomado é parte da medida única de tokens por agente (136): o mesmo lote medido igual, aberto ou retomado.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 43 e 136"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "136",
+     "insumo": {
+      "data": "14/11/2026",
+      "origem": "K-116, achado A1 do auditor (trilhas/logs/2026-11-14_auditor.jsonl); scripts/relatorio_piloto.py 0.2",
+      "insumo": "As linhas de log do agente curador guardam a soma dos subagentes da conversa, que já têm linha própria; somadas, contam em dobro (14,75 milhões contra o piso de 6,9 milhões). A regra do CLAUDE.md (o número oficial é o do curador) e o esquema de log não dizem se a linha do curador é agregado ou consumo próprio, e alguns consumos só existem nela (workflow de 17/10, rotina do K-113, parte do K-112).",
+      "aonde": "uma única medida de tokens por agente, sem dupla contagem e sem consumo perdido, que o K-005 e a operação possam somar"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O consumo de tokens não tem medida única: a linha do curador soma os subagentes (conta em dobro), o Workflow mede diferente do Agent, o agente retomado conta a releitura, e a tabela da conta mistura medido e estimado."
+     }
+    }
+   ]
+  },
+  {
+   "n": 75,
+   "insumo": {
+    "data": "29/10/2026",
+    "origem": "cartão K-110, registro do IPHAN (trilhas/2026-10-29_K-110/saida-avaliador-A1.json a A5.json; checklist do piloto, bloco 8)",
+    "insumo": "uma fonte longa não cabe numa chamada do avaliador (limite de 25 turnos): os dois pareceres pediram dois lotes e o dossiê de 207 páginas, três; cada lote custou de 190 a 215 mil tokens, e o A1, com 22 chamadas, deixou metade do que leu sem extrair",
+    "aonde": "a regra de lote diz como uma fonte longa se divide e quanto custa, e a estimativa da conta usa essa medida"
+   },
+   "vira_no_mapa": "K-005 (3ª passada, na reunião do K-004)",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "132",
+    "motivo": "A fonte longa que não cabe numa chamada é parte do lote calibrado pelo custo medido (132): a regra de lote dizendo como dividir e quanto custa, dentro dos tetos da rotina com IA (D-050).",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 75 e 132"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "132",
+     "insumo": {
+      "data": "13/11/2026",
+      "origem": "cartão K-113, rodadas da rotina com IA de 13/11 (logs EX-50033 e EX-50034 na ramificação claude/rotina-ia-2026-11-13)",
+      "insumo": "custo medido de um lote de 15 Entradas na rotina com IA: avaliador em Haiku 5.5 de 181.491 a 260.510 tokens (26 a 35 chamadas); auditor em Sonnet 5.5 ao menos 89.320 tokens (26 chamadas, a segunda volta sem medida); a sessão da rotina (Sonnet 5.5) sem medida; a rotina semanal ficou ligada com 1 lote por rodada, às quintas 20h (Brasília)",
+      "aonde": "o número de lotes por rodada calibrado pelo uso medido da conta, dentro dos 20% da semana e 50% da janela (D-050)"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O custo da rotina com IA está medido só pelos tokens dos agentes (a sessão da rotina sem medida, a nuvem fora do hook), e o número de lotes por rodada (1) não está calibrado pelo uso medido da conta; a fonte longa não cabe num lote."
+     }
+    }
+   ]
+  },
+  {
+   "n": 91,
+   "insumo": {
+    "data": "30/10/2026",
+    "origem": "cartão K-102, varredura de 30/10/2026 (grafo/mencoes-incidentais.json; trilhas/logs/2026-10-30_mencoes-incidentais.jsonl, EX-0087)",
+    "insumo": "a varredura só vê as formas do registro: nos 34 textos, 'vinho de caju' bateu 43 vezes, mas 'vinho do caju' (9) e 'vinho-de-caju' (2) ficaram fora, porque o TE-0003 nasceu candidato só com a forma declarada; o TE-0003 e o TE-0004 esperam o arquivista para atestar e ganhar as variantes que as fontes mostram",
+    "aonde": "os Termos candidatos atestados, com as variantes das fontes, e a varredura refeita com eles"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-126",
+    "motivo": "O K-126 (D-057) leva as três CLB por 'tudo o que a ferramenta oferece', com 'Termos pela regra de termos', e cita o insumo 91 na origem: os Termos atestados ganham as variantes das fontes, e a varredura de menções se refaz com eles.",
+    "evidencia": [
+     "quadro, K-126 (origem: 'D-057; insumos 91 e 142')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-126",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-126** Piloto com as três CLB candidatas (D-057, 20/11/2026): vinho de caju (CL-0002), mocororó (CL-0003) e a CL-0004 (\"caoi ou caoim\" na Embrapa 2009; \"caium\", a forma de Vicente), com as 7 Entradas que as citam (EN-0112, EN-0184, EN-50204, EN-50256, EN-1066, EN-1069, EN-50910), por tudo o que a ferramenta oferece: extração, Termos pela regra de termos, CLB, ficha com os quatro critérios, Educação, grafo 4D e wiki local; com a marca de piloto, sem verificação nem teste, em conversas de trabalho, sem rotina; cerca de dez chamadas de agente, de 1 a 1,4 milhão de tokens (teto). *Antes da etapa 6 do K-004 (escrever a Fundação); exceção à D-046 pela D-057* | D-057; insumos 91 e 142 | as três CLB com Termo, ficha, Educação, grafo e página no wiki local, marcadas de piloto, como proposta e não como conhecimento aprovado"
+     }
+    }
+   ]
+  },
+  {
+   "n": 93,
+   "insumo": {
+    "data": "30/10/2026",
+    "origem": "conversa de planejamento de 30/10/2026, depois do lote de correção do K-110 e do K-102 (commit 52ccaa4): reflexão de Vicente sobre o papel do juridico, ligada aos insumos 84, 87 e 90, à D-020 e à D-042",
+    "insumo": "o juridico é um agente de IA que roda nos lotes, com custo e tempo, e cada dúvida dele retém o item ou o detalhe dele até alguém decidir; com o número de termos e de casos que a coleta traz, decidir item a item não acompanha o ritmo da ferramenta",
+    "aonde": "o barrar e o julgar continuam, sem travar o trabalho da ferramenta: um juridico sem IA, por regra e script, corre junto dos procedimentos e junta, para cada questão, o item, a fonte, a norma e a dúvida, organizados para que um corpo jurídico ajude a julgar, avisar e educar"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "141",
+    "motivo": "Mesmo rumo: a IA só onde a regra e o script não alcançam (141); o juridico por regra e script, juntando item, fonte, norma e dúvida para um corpo jurídico, é um dos casos, dito no 141.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 93 e 141"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "141",
+     "insumo": {
+      "data": "15/11/2026",
+      "origem": "conversa de planejamento de 14 e 15/11/2026 (fala 4 de Vicente em trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md); trilhas/2026-11-14_relatorio-piloto/dados.json, logs.producao_por_agente_habilidade; insumo 132; trilhas/planejamento/rodadas/2026-11-15_antes-do-K-004/passagem.md, seção 4",
+      "insumo": "O custo de escala por bebida só apareceu depois do piloto: para as 199 Entradas da Consulta geral e umas dez bebidas, sem verificação, a previsão é de 5 a 7 milhões de tokens, teto tirado da cajuína (1.212.590 tokens do avaliador para 520 Evidências, perto de 2.300 por Evidência; 366 mil em Termos, ficha e grafo). Não se mediu quanto de um lote é leitura da fonte e quanto é peso do agente (instruções, exemplos, 26 a 35 chamadas), nem se testou montar a ficha e os pontos do grafo por script a partir das Proposições. Vicente estranhou o gasto e disse que deseja a ferramenta quase independente de IA; a essência dessa fala ainda não foi confirmada.",
+      "aonde": "o custo por Entrada e por CLB medido por parte (leitura, peso do agente, escrita), mostrado junto com cada resultado, e a IA usada só onde a regra e o script não alcançam"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O custo por Entrada e por CLB não é medido por parte (leitura da fonte, peso do agente, escrita), e não se testou montar ficha e grafo por script a partir das Proposições; Vicente quer a ferramenta quase independente de IA (essência ainda a confirmar)."
+     }
+    }
+   ]
+  },
+  {
+   "n": 99,
+   "insumo": {
+    "data": "30/10/2026",
+    "origem": "cartão K-111, insumo 80 (scripts/validar_acervo.py, checar_educacao, regra educacao-0.1)",
+    "insumo": "a conferência da camada Educação ficou por item de lista (o item termina com a marca da Proposição), mais leve que a da ficha, que é por frase; na camada há frases didáticas antes da frase marcada (ex.: 'Clarificar é separar o suco turvo...'), que a regra por frase reprovaria",
+    "aonde": "a regra da camada Educação confirmada ou ajustada pelo planejamento: por item ou por frase, e o que conta como frase sobre a CLB"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "—",
+    "motivo": "Não é problema para a promessa: a conferência da camada Educação existe e passa (validar_acervo.py, checar_educacao, educacao-0.1, K-111), sem falha medida; escolher entre item e frase é ajuste de uma regra que funciona.",
+    "evidencia": [
+     "scripts/validar_acervo.py (checar_educacao)",
+     "quadro, K-111 (FALHA 0)"
+    ]
+   },
+   "texto_do_alvo": []
+  },
+  {
+   "n": 101,
+   "insumo": {
+    "data": "05/11/2026",
+    "origem": "cartão K-112, scripts/agendar.py (agenda-0.1) e ambientes/rotinas.json",
+    "insumo": "a cadência da D-048 ficou numa regra com números que o plano não fixa: o intervalo começa no mínimo da linha do ambiente (1 dia sem limite publicado; 7 dias para a colheita OAI-PMH inteira da Infoteca-e), dobra a cada rodada sem novidade até o máximo de 28 dias e volta ao mínimo com novidade; o erro da fonte não mede rendimento",
+    "aonde": "a cadência de cada fonte medida e fixada por regra versionada que Vicente aprovou, com os números conferidos pelo rendimento dos primeiros 7 dias"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-005",
+    "motivo": "Os números da cadência (o mínimo da linha, a dobra até 28 dias, a volta com novidade) são valores provisórios a calibrar pela medida do rendimento, que é a 3ª passada do K-005 ('os números provisórios calibrados pela medida'). A regra roda versionada (agenda-0.1), pela D-048.",
+    "evidencia": [
+     "scripts/agendar.py, l. 53 (cadencia_max_dias 28)",
+     "quadro, K-005"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-005",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-005** Ritmo do piloto: o teto semanal da execução e a regra de folga calibrados pela medida, com estimativas por agente e habilidade. A 1ª passada fechou em 23/10/2026 com a D-040 (o ritmo em pontos da conta, aceito por Vicente) e a D-041 (as regras dos insumos 34 e 36), que dispensou a 2ª (`rodadas/2026-10-23_K-005/`). *Falta a 3ª passada, que entra na reunião do K-004 (D-046): os números da D-038 e do registro (amostra, fila, lote de máquina, valências) calibrados pela medida dos blocos 7 e 8 e das horas do bloco 13, e o ritmo refeito com as medidas novas* | insumos 3 (item 1), 4, 6 e 16; D-023; D-038 (os números); D-040, D-041 | um ritmo do piloto que Vicente aceite (aceito pela D-040); os números provisórios calibrados pela medida"
+     }
+    }
+   ]
+  },
+  {
+   "n": 127,
+   "insumo": {
+    "data": "13/11/2026",
+    "origem": "cartão K-113: linha [Uso do plano] do hook antes e depois da rotina de teste e da primeira rodada",
+    "insumo": "a linha de uso do hook estima o uso só pelas transcrições desta máquina e não vê a rotina na nuvem; sem leitura oficial nem declarada, o custo de cada rodada da rotina com IA (D-050: até 20% da semana e 50% da janela) fica medido só pelos tokens que os agentes informam, sem a sessão da própria rotina",
+    "aonde": "o custo de cada rodada da rotina com IA medido em pontos da conta, antes e depois, sem perguntar a Vicente"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "132",
+    "motivo": "Mesmo problema: medir o custo de cada rodada da rotina com IA em pontos da conta, para calibrar os lotes dentro da D-050 (132).",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 127 e 132"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "132",
+     "insumo": {
+      "data": "13/11/2026",
+      "origem": "cartão K-113, rodadas da rotina com IA de 13/11 (logs EX-50033 e EX-50034 na ramificação claude/rotina-ia-2026-11-13)",
+      "insumo": "custo medido de um lote de 15 Entradas na rotina com IA: avaliador em Haiku 5.5 de 181.491 a 260.510 tokens (26 a 35 chamadas); auditor em Sonnet 5.5 ao menos 89.320 tokens (26 chamadas, a segunda volta sem medida); a sessão da rotina (Sonnet 5.5) sem medida; a rotina semanal ficou ligada com 1 lote por rodada, às quintas 20h (Brasília)",
+      "aonde": "o número de lotes por rodada calibrado pelo uso medido da conta, dentro dos 20% da semana e 50% da janela (D-050)"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O custo da rotina com IA está medido só pelos tokens dos agentes (a sessão da rotina sem medida, a nuvem fora do hook), e o número de lotes por rodada (1) não está calibrado pelo uso medido da conta; a fonte longa não cabe num lote."
+     }
+    }
+   ]
+  },
+  {
+   "n": 131,
+   "insumo": {
+    "data": "13/11/2026",
+    "origem": "cartão K-113, segunda rodada da rotina com IA (ramificação claude/rotina-ia-2026-11-13; trilhas/rotina-ia/ na ramificação; Actions 43455697285)",
+    "insumo": "na rodada de 13/11 o portão da camada 2 reprovou como devia (veredito do auditor 'não serve': as Evidências do mocororó dos Kanindé e Tremembé, da EN-1066, caíram na CLB da cajuína, e o detalhe ritual de povo nomeado ia ao Git público); a junção positiva pelo ROTINAS_TOKEN ainda não rodou; o filtro já separa a Evidência de outra CLB, e a EN-1066 fica para uma conversa de trabalho (gravar com --clb na CL-0003 e o detalhe na pasta local, D-043); as ressalvas A3 e A4 do auditor são de leitura fiel do avaliador em Haiku",
+    "aonde": "a primeira junção da rotina com IA passando pelo portão sem Vicente, e a EN-1066 tratada na conversa"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-126",
+    "motivo": "A EN-1066 é uma das 7 Entradas do K-126 (D-057), com o detalhe na pasta local. A primeira junção positiva da rotina com IA é a primeira execução em escala, que a D-058 já põe depois da fila: não há conserto a fazer antes dela.",
+    "evidencia": [
+     "quadro, K-126 (EN-1066)",
+     "AGENTS.md, D-058"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-126",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-126** Piloto com as três CLB candidatas (D-057, 20/11/2026): vinho de caju (CL-0002), mocororó (CL-0003) e a CL-0004 (\"caoi ou caoim\" na Embrapa 2009; \"caium\", a forma de Vicente), com as 7 Entradas que as citam (EN-0112, EN-0184, EN-50204, EN-50256, EN-1066, EN-1069, EN-50910), por tudo o que a ferramenta oferece: extração, Termos pela regra de termos, CLB, ficha com os quatro critérios, Educação, grafo 4D e wiki local; com a marca de piloto, sem verificação nem teste, em conversas de trabalho, sem rotina; cerca de dez chamadas de agente, de 1 a 1,4 milhão de tokens (teto). *Antes da etapa 6 do K-004 (escrever a Fundação); exceção à D-046 pela D-057* | D-057; insumos 91 e 142 | as três CLB com Termo, ficha, Educação, grafo e página no wiki local, marcadas de piloto, como proposta e não como conhecimento aprovado"
+     }
+    }
+   ]
+  },
+  {
+   "n": 139,
+   "insumo": {
+    "data": "14/11/2026",
+    "origem": "K-116, achado A2 do auditor; scripts/relatorio_piloto.py 0.1 e scripts/orcamento.py (numero, l. 48-50)",
+    "insumo": "Dois scripts liam a coluna pp da tabela Semana da conta de modos diferentes (um somava a linha estimada, o outro não); a 0.2 do relatorio_piloto.py passou a seguir o orcamento.py. A tabela mistura número medido e estimado na mesma célula, e não há leitor único.",
+    "aonde": "uma só leitura da tabela da conta, compartilhada pelos scripts, com o estimado num campo próprio"
+   },
+   "vira_no_mapa": "K-004",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "136",
+    "motivo": "Mesmo problema: uma medida única do consumo, lida de um só modo por todos os scripts, com o estimado à parte (136).",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 136 e 139"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "136",
+     "insumo": {
+      "data": "14/11/2026",
+      "origem": "K-116, achado A1 do auditor (trilhas/logs/2026-11-14_auditor.jsonl); scripts/relatorio_piloto.py 0.2",
+      "insumo": "As linhas de log do agente curador guardam a soma dos subagentes da conversa, que já têm linha própria; somadas, contam em dobro (14,75 milhões contra o piso de 6,9 milhões). A regra do CLAUDE.md (o número oficial é o do curador) e o esquema de log não dizem se a linha do curador é agregado ou consumo próprio, e alguns consumos só existem nela (workflow de 17/10, rotina do K-113, parte do K-112).",
+      "aonde": "uma única medida de tokens por agente, sem dupla contagem e sem consumo perdido, que o K-005 e a operação possam somar"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O consumo de tokens não tem medida única: a linha do curador soma os subagentes (conta em dobro), o Workflow mede diferente do Agent, o agente retomado conta a releitura, e a tabela da conta mistura medido e estimado."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+  "lote": "R2",
+  "itens": [
+    {
+      "insumo": 4,
+      "veredito": "confirma",
+      "motivo": "O ritmo em pontos da conta existe, foi aceito por Vicente (D-040) e a regra de folga vigente é a do orcamento.py, sem a folga de 2x; o que falta (recalibrar com medida nova) já é a 3a passada do K-005.",
+      "conferido": [
+        "AGENTS.md, D-040 (ritmo em pp, 60/50, conta nunca acima de 90%)",
+        "scripts/orcamento.py --help: 'sem folga de 2x nem margem'; H = menor entre teto e linha da conta; estimativa pelos logs",
+        "quadro.md l. 17, K-005: 'um ritmo do piloto que Vicente aceite (aceito pela D-040)'; 3a passada na reunião do K-004",
+        "proxima-versao.md, V-30 ainda lista os insumos 4, 6 e 8 como origem do texto da Fundação: sair da fila não apaga esse vínculo"
+      ]
+    },
+    {
+      "insumo": 6,
+      "veredito": "confirma",
+      "motivo": "A estimativa de lote por agente e habilidade tirada da medida dos logs está feita por script (K-123).",
+      "conferido": [
+        "comando: orcamento.py --a0 40 --janela 20 --frente planejamento --agente auditor --habilidade verificar-fundacao -> 'estimativa do lote: 86.715 tokens, última medida de auditor/verificar-fundacao (2026-11-12T08:31)'",
+        "scripts/orcamento.py --help: 'A estimativa do lote: a última medida do mesmo agente com a mesma habilidade nos logs'",
+        "V-30 segue citando os insumos 4, 6 e 8 para o texto da Fundação (vínculo mantido)"
+      ]
+    },
+    {
+      "insumo": 15,
+      "veredito": "confirma_em_parte",
+      "motivo": "É a mesma família do 136 (não há uma medida única de tokens), e o 'aonde' do 15 cabe no 'sem consumo perdido' do 136, mas o defeito específico do 15 (o número do Workflow soma o contexto de entrada do último turno e omite a saída) não está escrito no texto original do 136; só aparece na reescrita da proposta.",
+      "conferido": [
+        "trilhas/insumos-planejamento.md, linha do insumo 136: o 136 trata da linha do curador que soma os subagentes (dupla contagem) e cita o workflow de 17/10 só como consumo que existe apenas na linha do curador",
+        "o teto do planejamento hoje é em pp da conta (D-040, orcamento.py), o que tira do 15 a parte do 'teto em tokens' e deixa só a medida do Workflow"
+      ],
+      "parte_nao_coberta": "A regra de contar o Workflow (entrada do último turno sem a saída, 267.700 contra 329.448) comparável à do Agent: ao juntar, escrever no texto do 136 que a medida única inclui o Workflow.",
+      "acao_sugerida": "Juntar ao 136, mas gravar no 136 a cláusula do Workflow; Workflow só roda a pedido (AGENTS.md), então o peso é baixo."
+    },
+    {
+      "insumo": 16,
+      "veredito": "confirma",
+      "motivo": "A estimativa sai por script dos logs, por agente e habilidade, antes de cada lote e também no planejamento.",
+      "conferido": [
+        "comando: orcamento.py ... --frente planejamento --agente auditor --habilidade verificar-fundacao rodou e usou 86.715 tokens, a última medida, e não a referência genérica de 60 mil",
+        "orcamento.py --help: opção --frente {desenvolvimento,planejamento}"
+      ]
+    },
+    {
+      "insumo": 23,
+      "veredito": "confirma_em_parte",
+      "motivo": "Na cadeia da operação (avaliador propõe, auditor relê, D-056) os modelos hoje são diferentes (Haiku e Sonnet) e a diferença foi medida no K-115a; mas o K-115c e o V-24 não levam o que sobra, que é o auditor no mesmo modelo do arquivista e do juridico.",
+      "conferido": [
+        ".claude/agents/*.md, linha model: avaliador claude-haiku-5-5; auditor, arquivista e juridico claude-sonnet-5-5",
+        "testes/relatorio-modelos.md l. 57: a segunda leitura do auditor (Sonnet) achou erros de leitura fiel nas saídas do Haiku que nenhum validador pega (a diferença entre produtor e verificador foi medida para o avaliador)",
+        "quadro.md K-115c: testa conferir-fato, verificar-fundacao e escrever-secao-fundacao pelo modelo mais barato que passa, não a diferença entre verificador e produtor; V-24 trata da amostra, não do modelo"
+      ],
+      "parte_nao_coberta": "O verificador de modelo diferente do produtor para as saídas do arquivista e do juridico (ambos Sonnet, como o auditor); nem o K-115c nem o V-24 dizem isso no escopo.",
+      "acao_sugerida": "Sair da contagem com a nota de que o caso do avaliador está resolvido; levar a sobra (arquivista/juridico contra o auditor) à reunião do K-004 junto ao K-115c, escrita no texto do cartão."
+    },
+    {
+      "insumo": 34,
+      "veredito": "confirma",
+      "motivo": "A regra diz quais Evidências entram em mu e lambda e o script a aplica lendo o registro.",
+      "conferido": [
+        "esquemas/valores-provisorios.json l. 257, 261 e 282: mu-lambda-0.2 vigente ('só Evidência localizada e de leitura fiel conta; linhagem mista sinalizada, fora de μ e λ')",
+        "scripts/calcular_mu_lambda.py l. 6-10 (docstring) e l. 92-96 (só Trecho 'localizado'; 'leitura divergente' vai a fora_da_conta); l. 36-37 lê REGRA e VERSAO do registro",
+        "AGENTS.md, D-041"
+      ]
+    },
+    {
+      "insumo": 36,
+      "veredito": "confirma",
+      "motivo": "Negação e sentido contrário batem exatamente e a linhagem mista é sinalizada e fica fora da conta; as duas metades do insumo estão resolvidas.",
+      "conferido": [
+        "esquemas/valores-provisorios.json l. 202 (normalizacao-0.2) e l. 261/282 (mu-lambda-0.2)",
+        "scripts/localizar_trecho.py l. 10 (docstring D-041) e l. 53: EXATAS vem de REGRA['palavras_exatas'] negacao e sentido_contrario",
+        "scripts/calcular_mu_lambda.py linhas 108-109, 184 e 213: tensao_interna e fora_da_conta saem no resultado"
+      ]
+    },
+    {
+      "insumo": 38,
+      "veredito": "confirma",
+      "motivo": "Para as conversas, a leitura de uso vem do hook e ficou por pasta, sem perguntar a Vicente; a rodada da rotina na nuvem, que o hook não vê, é o 127, que segue para o 132.",
+      "conferido": [
+        "C:/Users/alqui/.claude/uso/ existe com consumo.jsonl, estado.json, leituras.jsonl e ultima_oficial.json; leituras.jsonl tem linhas 'tipo: oficial' com p5, p7 e pasta (a de 19/11 é a última)",
+        "AGENTS.md l. 94 (Passo corrente, Orçamento): 'a leitura de uso vem da linha [Uso do plano] do hook, sem perguntar a Vicente'",
+        "AGENTS.md l. 114 (seção Orçamento) e orcamento.py --a0/--janela ainda dizem 'Vicente informa ao abrir': resíduo de texto contraditório, não bloqueia"
+      ],
+      "parte_nao_coberta": "Resíduo menor: o AGENTS.md l. 114 e a ajuda do orcamento.py ainda falam em leitura de Vicente ao abrir; a prova do hook está em ~/.claude (fora do repositório). A rodada de rotina na nuvem fica no 132."
+    },
+    {
+      "insumo": 43,
+      "veredito": "confirma_em_parte",
+      "motivo": "O número do agente retomado que inclui a releitura é caso de 'sem dupla contagem' da medida única do 136, mas o 136 não menciona o agente retomado e o 43 pede também a escolha entre retomar e abrir outro pelo custo medido.",
+      "conferido": [
+        "trilhas/insumos-planejamento.md, linhas dos insumos 43 e 136: o 136 fala só da linha do curador que soma subagentes e de consumos que existem só nela",
+        "a medida do 43 (79.311 tokens e 2 chamadas na retomada contra 72.903 e 12 do lote) é do K-106; os subagentes agora rodam um por vez (CLAUDE.md), o que reduz a chance de repetir"
+      ],
+      "parte_nao_coberta": "A regra de escolha entre retomar e abrir agente novo pelo custo medido; escrever no 136 que a medida única vale igual para agente aberto e retomado.",
+      "acao_sugerida": "Juntar ao 136 acrescentando a cláusula do agente retomado."
+    },
+    {
+      "insumo": 75,
+      "veredito": "confirma_em_parte",
+      "motivo": "O custo de um lote de fonte longa cabe na calibração de custo por lote (lote_maquina do registro, calibração no K-005 e 132), mas a regra de como uma fonte longa se divide em lotes não está no 132 nem em script ou habilidade nenhuma.",
+      "conferido": [
+        "esquemas/valores-provisorios.json l. 447-456: lote_maquina 15, 'calibracao: K-005, com o custo medido por lote'",
+        "grep em scripts/fila_ia.py, scripts/rotina_ia.py, .claude/agents/avaliador.md e skills/extrair-evidencia/SKILL.md por 'fonte longa', 'dividir', 'fatia': nada achado; ler_fonte.py só registra páginas e caracteres, não divide",
+        "o 132 pede o número de lotes por rodada pelo uso medido da conta; não fala em dividir fonte longa"
+      ],
+      "parte_nao_coberta": "A regra de divisão de uma fonte longa em lotes (o limite de 25 turnos do avaliador e o dossiê de 207 páginas): é desenho de regra, não só calibração de número.",
+      "acao_sugerida": "O destino melhor é o K-005, 3a passada (lote de máquina, onde o mapa já punha o 75), não o 132; e escrever lá a regra de divisão. A operação com IA em escala só vem depois da fila (D-058), então não trava a promessa antes disso."
+    },
+    {
+      "insumo": 91,
+      "veredito": "confirma_em_parte",
+      "motivo": "O K-126 cita o insumo 91 na origem e leva os Termos das três CLB pela regra de termos, o que atesta o TE-0003 e o TE-0004 com as variantes das fontes; a varredura de menções refeita com eles não está escrita no K-126.",
+      "conferido": [
+        "acervo/termos/TE-0003.json (vinho de caju) e TE-0004.json (mocororó): estado candidato, só a forma declarada, 0 variantes, 0 abonações; TE-0005 (caoi) também candidato",
+        "quadro.md K-126: 'Termos pela regra de termos', origem 'D-057; insumos 91 e 142'",
+        "scripts/mencoes_incidentais.py existe, mas o texto do K-126 não pede a nova varredura"
+      ],
+      "parte_nao_coberta": "Refazer a varredura de menções incidentais (scripts/mencoes_incidentais.py) com os Termos atestados.",
+      "acao_sugerida": "Juntar ao K-126 e pôr a nova varredura no pronto-quando do cartão."
+    },
+    {
+      "insumo": 93,
+      "veredito": "confirma_em_parte",
+      "motivo": "O 141 trata do custo e da IA só onde regra e script não alcançam, e o juridico por regra e script já existe em parte (triagem_fixa.py), mas o 141 não leva a preparação de cada questão para um corpo jurídico nem o 'não travar o item'; a razão certa de sair é em boa parte 'resolvido em parte', não 'mesmo problema do 141'.",
+      "conferido": [
+        "scripts/triagem_fixa.py l. 1-25: triagem fixa do Jurídico por regra, sem IA, cria a Falta com norma, vale_para e caminho de liberação (guia), 'sem Falta pela regra' quando não há caso; D-042 tirou do juridico o ler, linkar e citar trecho curto",
+        "mapa-tres-frentes.md l. 429: 93 está como 'a definir pelo planejamento'",
+        "quadro.md K-201 a K-204: os guias de liberação e as Faltas a liberar existem como cartões, ligados à decisão de publicar (K-010)"
+      ],
+      "parte_nao_coberta": "Os casos que a regra fixa não resolve ainda dependem da habilidade triagem-juridica com IA e retêm o item; e o pacote organizado para um corpo jurídico externo é fase de publicação.",
+      "acao_sugerida": "Sair da contagem registrando que o juridico por regra e script já existe (triagem_fixa.py) e que o resto é publicação (K-201 a K-204); manter a ligação com o 141 para a IA só onde a regra não alcança."
+    },
+    {
+      "insumo": 99,
+      "veredito": "confirma_em_parte",
+      "motivo": "A conferência da camada Educação existe e passa (acervo-0.4, 4.473 registros, válido), então não bloqueia; mas a pergunta do insumo (por item ou por frase) é uma regra para Vicente decidir e não tem cartão nem decisão que a leve.",
+      "conferido": [
+        "scripts/validar_acervo.py l. 101-137, checar_educacao: confere por item de lista com a marca da Proposição ao fim",
+        "acervo/fichas/educacao/CL-0001.md l. 21: 'Clarificar é separar o suco turvo de uma parte que assenta. ... [PR-0093].' passa na regra: a primeira frase didática não tem marca própria",
+        "comando validar_acervo.py: 'acervo-0.4: 4473 registros; válido'",
+        "grep 'educa' em proxima-versao.md: V-18 e V-23 tratam da camada, não da regra por item ou por frase"
+      ],
+      "parte_nao_coberta": "A escolha entre regra por item e por frase, e o que conta como frase sobre a CLB; nenhum cartão ou V a leva (a proposta traz alvo vazio).",
+      "acao_sugerida": "O K-126 gera a Educação de três CLB e rodará a regra: levar a pergunta para lá como caso de teste, ou ao V-18; sem isso a decisão fica sem dono."
+    },
+    {
+      "insumo": 101,
+      "veredito": "refuta",
+      "motivo": "O K-005 não leva a cadência: o escopo escrito dele é 'os números da D-038 e do registro (amostra, fila, lote de máquina, valências)' e a cadência da D-048 não está no registro de valores; os números moram em scripts/agendar.py e em ambientes/rotinas.json, e a rotina diária que o insumo trata é coleta (promessa).",
+      "conferido": [
+        "grep 'agenda-0|cadencia' em esquemas/valores-provisorios.json: nenhuma ocorrência",
+        "scripts/agendar.py l. 50-56: cadencia_min_dias (padrão 1) e cadencia_max_dias (padrão 28) lidos do arquivo de ambientes",
+        "quadro.md K-005 l. 17: o escopo cita D-038, registro, amostra, fila, lote de máquina e valências; a cadência não aparece"
+      ],
+      "acao_sugerida": "Manter na fila. Destino possível: ampliar o escopo do K-005 (3a passada) com a regra agenda-0.1 e levá-la ao registro de valores, ou juntar ao 135 (limites no script e não no registro), por decisão do planejamento."
+    },
+    {
+      "insumo": 127,
+      "veredito": "confirma",
+      "motivo": "É o mesmo problema do 132: calibrar os lotes por rodada dentro da D-050 exige o custo da rodada medido em pontos da conta, que o hook não vê na nuvem.",
+      "conferido": [
+        "trilhas/insumos-planejamento.md, linhas dos insumos 127 e 132: o 132 pede 'o número de lotes por rodada calibrado pelo uso medido da conta, dentro dos 20% da semana e 50% da janela' e cita a sessão da rotina sem medida",
+        "AGENTS.md D-056: a IA da operação segue a rotina do Claude do K-113 nos tetos da D-050, e a operação em escala espera a fila (D-058)"
+      ],
+      "acao_sugerida": "Ao juntar, escrever no 132 que a medida em pp inclui a sessão da rotina na nuvem."
+    },
+    {
+      "insumo": 131,
+      "veredito": "confirma_em_parte",
+      "motivo": "A EN-1066 está no K-126, mas a primeira junção da rotina com IA pelo portão sem Vicente nunca rodou e não é do K-126.",
+      "conferido": [
+        "quadro.md K-126: a EN-1066 está entre as 7 Entradas; D-057 deixa o detalhe de saber indígena na pasta local",
+        "trilhas/2026-10-17_execucao-piloto.md l. 397-399: a segunda rodada de 13/11 não gravou (esquema reprovado), o envio deu 403 e a primeira rodada continua com a caixa aberta; o portão só foi visto reprovando",
+        "AGENTS.md, Próximo: a reconfiguração da rotina do Claude do K-113 e a operação com IA em escala esperam a fila do K-004 (D-058)"
+      ],
+      "parte_nao_coberta": "A primeira junção positiva da rotina com IA pelo portão (sem Vicente) nunca foi exercitada ponta a ponta; é parte da operação com IA em escala, depois da fila.",
+      "acao_sugerida": "Juntar a EN-1066 ao K-126 e levar a junção positiva junto do 132 (rotina com IA), como passo de abertura da operação em escala, para não se perder."
+    },
+    {
+      "insumo": 139,
+      "veredito": "refuta",
+      "motivo": "O defeito do 139 (a tabela Semana da conta lida por duas cópias da função numero(), com o estimado na mesma célula) não é o do 136 (tokens dos logs contados em dobro); o conserto de um não resolve o outro. O 'a tabela mistura medido e estimado' só aparece na reescrita da proposta, não no texto original do 136.",
+      "conferido": [
+        "scripts/relatorio_piloto.py l. 15-16, 65 e 71 (numero, numero_estrito) e scripts/orcamento.py l. 45-48 (numero): duas implementações separadas da leitura da mesma tabela; o relatorio apenas imita o orcamento",
+        "trilhas/insumos-planejamento.md, linha do 136: fala da linha do curador nos logs, sem a tabela da conta"
+      ],
+      "acao_sugerida": "Manter na fila, como defeito próprio de manutenção do orçamento (um leitor único da tabela), ou sair como 'fora da promessa' por ser um erro já alinhado na 0.2 e sem efeito na coleta; a decisão é do planejamento. Se quiserem agrupar, juntar ao 136 só como mesma família de consumo, com o texto do 136 estendido."
+    }
+  ],
+  "alcance": {
+    "olhado": "pacote-R2.json inteiro (17 itens); linhas dos insumos 126-142 de trilhas/insumos-planejamento.md; quadro.md (K-005, K-115c, K-126, K-201-204 por grep); proxima-versao.md V-24 e V-30; mapa-tres-frentes.md l. 429; scripts/orcamento.py (--help e uma execução de teste), localizar_trecho.py, calcular_mu_lambda.py, validar_acervo.py (checar_educacao e uma execução completa), agendar.py, triagem_fixa.py, relatorio_piloto.py; esquemas/valores-provisorios.json (linhas 202, 257-282, 447-456 e grep de cadência); frontmatter de .claude/agents/*.md; testes/relatorio-modelos.md l. 57; acervo/termos TE-0003 a TE-0005 e acervo/fichas/educacao/CL-0001.md; C:/Users/alqui/.claude/uso/ (existência e fim de leituras.jsonl); trilhas/2026-10-17_execucao-piloto.md l. 395-399.",
+    "fora": "Não abri os arquivos de log por insumo (trilhas/logs) para refazer as medidas citadas; não conferi o insumo 142 nem os insumos 84, 87 e 90 citados no 93; não li o texto completo da decisão D-042 no JSON (usei o resumo do AGENTS.md e o docstring de triagem_fixa.py); não verifiquei o conteúdo do hook em ~/.claude/settings.json; não rodei os testes (rodar_testes.py); sem web. Cerca de 27 chamadas de ferramenta."
+  }
+}

@@ -121,10 +121,23 @@ def main():
         })
     total = len(insumos)
     abertos = [r for r in resultado if not r["classe"].startswith("fechado")]
+    # Limpeza dos abertos (D-058), quando já relida: limpeza/resultado.json (limpeza.py resultado).
+    limpeza = {}
+    arq_limpeza = PASTA / "limpeza" / "resultado.json"
+    if arq_limpeza.exists():
+        for x in json.loads(arq_limpeza.read_text(encoding="utf-8"))["itens"]:
+            limpeza[x["n"]] = x
+    for r in abertos:
+        if r["insumo"] in limpeza:
+            x = limpeza[r["insumo"]]
+            r["limpeza"] = {"acao": x["acao"], "alvo": x.get("alvo"), "familia": x.get("familia"),
+                            "estado": x.get("estado")}
+    ficam = [r for r in abertos if r.get("limpeza", {}).get("acao", "fica") == "fica"]
     dados = {
         "total_insumos": total,
         "contagem": dict(contagem),
         "abertos_por_script": len(abertos),
+        "abertos_depois_da_limpeza": len(ficam) if limpeza else None,
         "itens": resultado,
     }
     (PASTA / "lista_abertos.json").write_text(
@@ -138,6 +151,11 @@ def main():
         f"- Total de insumos: {total}",
         f"- Contagem por classe: {dict(contagem)}",
         f"- Abertos para a proposta de limpeza (não fechados por script): {len(abertos)}",
+    ]
+    if limpeza:
+        linhas.append(f"- Depois da limpeza (D-058; `limpeza/resultado.md`): **{len(ficam)} ficam** "
+                      f"({', '.join(str(r['insumo']) for r in ficam)})")
+    linhas += [
         "",
         "## Fechados por cartão concluído (saem da fila, com o motivo)",
         "",
@@ -165,8 +183,8 @@ def main():
                 vira = (r["vira"] or "").replace("|", "/")
                 linhas.append(f"| {r['insumo']} | {refs} | {vira} |")
     (PASTA / "lista_abertos.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
-    print(json.dumps({"total": total, "contagem": dict(contagem),
-                      "abertos": len(abertos)}, ensure_ascii=False))
+    print(json.dumps({"total": total, "contagem": dict(contagem), "abertos": len(abertos),
+                      "ficam_depois_da_limpeza": len(ficam) if limpeza else None}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

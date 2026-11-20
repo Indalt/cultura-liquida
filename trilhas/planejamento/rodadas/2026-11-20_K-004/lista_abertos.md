@@ -5,6 +5,7 @@ Gerado por `lista_abertos.py`, sem IA. Nenhum insumo foi alterado.
 - Total de insumos: 142
 - Contagem por classe: {'aberto_cartao': 38, 'fechado_por_cartao': 55, 'fechado_por_decisao': 5, 'a_definir': 44}
 - Abertos para a proposta de limpeza (não fechados por script): 82
+- Depois da limpeza (D-058; `limpeza/resultado.md`): **32 ficam** (46, 49, 52, 53, 55, 58, 61, 62, 63, 68, 69, 70, 77, 87, 94, 97, 101, 104, 105, 111, 112, 123, 126, 128, 129, 132, 135, 136, 137, 139, 140, 141)
 
 ## Fechados por cartão concluído (saem da fila, com o motivo)
 

@@ -7,6 +7,7 @@
     "a_definir": 44
   },
   "abertos_por_script": 82,
+  "abertos_depois_da_limpeza": 32,
   "itens": [
     {
       "insumo": 1,
@@ -16,7 +17,13 @@
         "K-004"
       ],
       "vira": "`proxima-versao.md`; K-004",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "proxima-versao.md",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 2,
@@ -26,7 +33,13 @@
         "K-004"
       ],
       "vira": "K-004 (V-36)",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "V-36",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 3,
@@ -42,7 +55,13 @@
         "K-002"
       ],
       "vira": "item 1 → K-005; 2 → K-004 (com a D-037); 3 → K-113 e V-12; 4 → K-010 (Vicente) e V-12; 5 → V-13; 6 → V-23 e K-120; 7 → K-111 (só com pares reais); 8 → K-002; 9 → V-20; 10 → V-20 e V-30; 11 → V-29 (perguntas do §10) e V-13 (sentido de \"ambiente\")",
-      "frente": "P; o item 3 também D (teste no bloco 10b); o item 9 também D (Fonte sem nome no bloco 2)"
+      "frente": "P; o item 3 também D (teste no bloco 10b); o item 9 também D (Fonte sem nome no bloco 2)",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "V-12; V-13; V-20; V-23; V-29; V-30; K-005; K-010; K-120",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 4,
@@ -52,7 +71,13 @@
         "K-005"
       ],
       "vira": "K-005",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "sai_resolvido",
+        "alvo": "D-040; K-123",
+        "familia": "A",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 5,
@@ -73,7 +98,13 @@
         "K-005"
       ],
       "vira": "K-005; V-30",
-      "frente": "P; D (a estimativa no registro de valores, bloco 2)"
+      "frente": "P; D (a estimativa no registro de valores, bloco 2)",
+      "limpeza": {
+        "acao": "sai_resolvido",
+        "alvo": "K-123",
+        "familia": "A",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 7,
@@ -105,7 +136,13 @@
         "K-008"
       ],
       "vira": "K-008",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-008",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 10,
@@ -116,7 +153,13 @@
         "K-006"
       ],
       "vira": "K-103 (primeira habilidade); K-006",
-      "frente": "P (desenho); D (habilidades)"
+      "frente": "P (desenho); D (habilidades)",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-006",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 11,
@@ -126,7 +169,13 @@
         "K-004"
       ],
       "vira": "K-004 (V-35)",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "V-35",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 12,
@@ -157,7 +206,13 @@
         "K-008"
       ],
       "vira": "K-001 (seção 9 deste mapa); K-008",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-008",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 15,
@@ -165,7 +220,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento (a D-050 toma os usos medidos como métrica)",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "136",
+        "familia": "A",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 16,
@@ -175,7 +236,13 @@
         "K-005"
       ],
       "vira": "K-005; a D-050 toma os usos medidos como métrica",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "sai_resolvido",
+        "alvo": "K-123",
+        "familia": "A",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 17,
@@ -196,7 +263,13 @@
         "K-006"
       ],
       "vira": "K-006",
-      "frente": "P (ferramenta do planejamento); D (construir)"
+      "frente": "P (ferramenta do planejamento); D (construir)",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-006",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 19,
@@ -227,7 +300,13 @@
         "K-117"
       ],
       "vira": "K-102, K-117",
-      "frente": "D; P"
+      "frente": "D; P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "140",
+        "familia": "D",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 22,
@@ -237,7 +316,13 @@
         "K-006"
       ],
       "vira": "K-006",
-      "frente": "P (ferramenta do planejamento); D (construir)"
+      "frente": "P (ferramenta do planejamento); D (construir)",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-006",
+        "familia": "P",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 23,
@@ -247,7 +332,13 @@
         "K-115"
       ],
       "vira": "K-115; V-24",
-      "frente": "P; D (bloco 12)"
+      "frente": "P; D (bloco 12)",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-115c; V-24",
+        "familia": "X",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 24,
@@ -359,7 +450,13 @@
         "K-123"
       ],
       "vira": "K-005 (regra pela D-041); K-123 (no script, feito em 23/10: mu-lambda-0.2)",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "sai_resolvido",
+        "alvo": "D-041; K-123",
+        "familia": "L",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 35,
@@ -380,7 +477,13 @@
         "K-123"
       ],
       "vira": "K-005 (regra pela D-041); K-123 (no script, feito em 23/10: normalizacao-0.2 e mu-lambda-0.2)",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "sai_resolvido",
+        "alvo": "D-041; K-123",
+        "familia": "L",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 37,
@@ -399,7 +502,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento (a D-050 toma os usos medidos como métrica)",
-      "frente": "P; O"
+      "frente": "P; O",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "132",
+        "familia": "A",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 39,
@@ -439,7 +548,13 @@
         "K-122"
       ],
       "vira": "K-122",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-122",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 43,
@@ -449,7 +564,13 @@
         "K-005"
       ],
       "vira": "K-005",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "136",
+        "familia": "A",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 44,
@@ -467,7 +588,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; P"
+      "frente": "D; P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "55",
+        "familia": "F",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 46,
@@ -475,7 +602,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "G",
+        "estado": null
+      }
     },
     {
       "insumo": 47,
@@ -503,7 +636,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "F",
+        "estado": null
+      }
     },
     {
       "insumo": 50,
@@ -513,7 +652,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "V-39",
+        "familia": "P",
+        "estado": "ajustado: junta ao V-39, criado na limpeza"
+      }
     },
     {
       "insumo": 51,
@@ -531,7 +676,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "H",
+        "estado": null
+      }
     },
     {
       "insumo": 53,
@@ -541,7 +692,13 @@
         "K-005"
       ],
       "vira": "K-005",
-      "frente": "D; P"
+      "frente": "D; P",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "I",
+        "estado": null
+      }
     },
     {
       "insumo": 54,
@@ -549,7 +706,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "—",
+        "familia": "F",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 55,
@@ -557,7 +720,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "F",
+        "estado": null
+      }
     },
     {
       "insumo": 56,
@@ -565,7 +734,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "sai_resolvido",
+        "alvo": "D-048; F-0034",
+        "familia": "H",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 57,
@@ -573,7 +748,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "140",
+        "familia": "D",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 58,
@@ -581,7 +762,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "D",
+        "estado": null
+      }
     },
     {
       "insumo": 59,
@@ -589,7 +776,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "D-045",
+        "familia": "F",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 60,
@@ -607,7 +800,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D; O"
+      "frente": "P; D; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "K",
+        "estado": null
+      }
     },
     {
       "insumo": 62,
@@ -615,7 +814,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "K",
+        "estado": null
+      }
     },
     {
       "insumo": 63,
@@ -623,7 +828,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "G",
+        "estado": null
+      }
     },
     {
       "insumo": 64,
@@ -633,7 +844,13 @@
         "K-010"
       ],
       "vira": "K-010",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-010",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 65,
@@ -643,7 +860,13 @@
         "K-010"
       ],
       "vira": "K-010",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-010; F-0025; K-204",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 66,
@@ -653,7 +876,13 @@
         "K-010"
       ],
       "vira": "K-010",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "87",
+        "familia": "I",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 67,
@@ -661,7 +890,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "53",
+        "familia": "I",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 68,
@@ -669,7 +904,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "E",
+        "estado": null
+      }
     },
     {
       "insumo": 69,
@@ -677,7 +918,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "E",
+        "estado": null
+      }
     },
     {
       "insumo": 70,
@@ -687,7 +934,13 @@
         "K-005"
       ],
       "vira": "K-005",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "B",
+        "estado": null
+      }
     },
     {
       "insumo": 71,
@@ -738,7 +991,13 @@
         "K-004"
       ],
       "vira": "K-005 (3ª passada, na reunião do K-004)",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-005",
+        "familia": "A",
+        "estado": "ajustado: junta ao K-005, 3ª passada"
+      }
     },
     {
       "insumo": 76,
@@ -756,7 +1015,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "J",
+        "estado": null
+      }
     },
     {
       "insumo": 78,
@@ -776,7 +1041,13 @@
         "K-118"
       ],
       "vira": "K-118",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-118",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 80,
@@ -836,7 +1107,13 @@
         "K-010"
       ],
       "vira": "K-010",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-010; F-0025; K-204",
+        "familia": "X",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 86,
@@ -856,7 +1133,13 @@
         "K-010"
       ],
       "vira": "K-010",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "I",
+        "estado": null
+      }
     },
     {
       "insumo": 88,
@@ -886,7 +1169,13 @@
         "K-010"
       ],
       "vira": "K-010",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "87",
+        "familia": "I",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 91,
@@ -894,7 +1183,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-126",
+        "familia": "L",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 92,
@@ -912,7 +1207,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "141",
+        "familia": "A",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 94,
@@ -920,7 +1221,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; P"
+      "frente": "D; P",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "M",
+        "estado": null
+      }
     },
     {
       "insumo": 95,
@@ -948,7 +1255,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "L",
+        "estado": null
+      }
     },
     {
       "insumo": 98,
@@ -966,7 +1279,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "—",
+        "familia": "L",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 100,
@@ -974,7 +1293,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "—",
+        "familia": "J",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 101,
@@ -982,7 +1307,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "B",
+        "estado": "refutado na releitura: fica"
+      }
     },
     {
       "insumo": 102,
@@ -990,7 +1321,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-208",
+        "familia": "H",
+        "estado": "ajustado: junta ao K-208"
+      }
     },
     {
       "insumo": 103,
@@ -998,7 +1335,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "140",
+        "familia": "D",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 104,
@@ -1006,7 +1349,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "O"
+      "frente": "O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "B",
+        "estado": null
+      }
     },
     {
       "insumo": 105,
@@ -1014,7 +1363,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "M",
+        "estado": null
+      }
     },
     {
       "insumo": 106,
@@ -1052,7 +1407,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "112",
+        "familia": "H",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 110,
@@ -1070,7 +1431,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "G",
+        "estado": null
+      }
     },
     {
       "insumo": 112,
@@ -1078,7 +1445,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "H",
+        "estado": null
+      }
     },
     {
       "insumo": 113,
@@ -1088,7 +1461,13 @@
         "K-008"
       ],
       "vira": "K-008",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "126",
+        "familia": "X",
+        "estado": "ajustado: junta ao 126"
+      }
     },
     {
       "insumo": 114,
@@ -1186,7 +1565,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "L",
+        "estado": null
+      }
     },
     {
       "insumo": 124,
@@ -1194,7 +1579,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "87",
+        "familia": "I",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 125,
@@ -1212,7 +1603,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "B",
+        "estado": null
+      }
     },
     {
       "insumo": 127,
@@ -1220,7 +1617,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; O"
+      "frente": "P; O",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "132",
+        "familia": "A",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 128,
@@ -1228,7 +1631,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; O"
+      "frente": "P; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "J",
+        "estado": null
+      }
     },
     {
       "insumo": 129,
@@ -1236,7 +1645,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "B",
+        "estado": null
+      }
     },
     {
       "insumo": 130,
@@ -1244,7 +1659,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "68",
+        "familia": "E",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 131,
@@ -1252,7 +1673,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "junta",
+        "alvo": "K-126",
+        "familia": "L",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 132,
@@ -1260,7 +1687,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; O"
+      "frente": "P; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "A",
+        "estado": null
+      }
     },
     {
       "insumo": 133,
@@ -1270,7 +1703,13 @@
         "K-125"
       ],
       "vira": "K-125",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-125",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 134,
@@ -1280,7 +1719,13 @@
         "K-125"
       ],
       "vira": "K-125",
-      "frente": "D; P"
+      "frente": "D; P",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-125",
+        "familia": "X",
+        "estado": "confirmado na releitura"
+      }
     },
     {
       "insumo": 135,
@@ -1288,7 +1733,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; O"
+      "frente": "P; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "M",
+        "estado": "refutado na releitura: fica"
+      }
     },
     {
       "insumo": 136,
@@ -1298,7 +1749,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "A",
+        "estado": null
+      }
     },
     {
       "insumo": 137,
@@ -1308,7 +1765,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "D; O"
+      "frente": "D; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "G",
+        "estado": null
+      }
     },
     {
       "insumo": 138,
@@ -1318,7 +1781,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "P"
+      "frente": "P",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "K-007",
+        "familia": "X",
+        "estado": "confirmado em parte na releitura"
+      }
     },
     {
       "insumo": 139,
@@ -1328,7 +1797,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "D"
+      "frente": "D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "A",
+        "estado": "refutado na releitura: fica"
+      }
     },
     {
       "insumo": 140,
@@ -1338,7 +1813,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "P; D; O"
+      "frente": "P; D; O",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "D",
+        "estado": null
+      }
     },
     {
       "insumo": 141,
@@ -1348,7 +1829,13 @@
         "K-004"
       ],
       "vira": "K-004",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "fica",
+        "alvo": null,
+        "familia": "A",
+        "estado": null
+      }
     },
     {
       "insumo": 142,
@@ -1356,7 +1843,13 @@
       "classe": "a_definir",
       "refs": [],
       "vira": "a definir pelo planejamento",
-      "frente": "P; D"
+      "frente": "P; D",
+      "limpeza": {
+        "acao": "sai_fora_da_promessa",
+        "alvo": "—",
+        "familia": "P",
+        "estado": "confirmado em parte na releitura"
+      }
     }
   ]
 }

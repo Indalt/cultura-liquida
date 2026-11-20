@@ -1,0 +1,529 @@
+{
+ "lote": "R1",
+ "regra": "D-058: o insumo repetido se junta ao que já trata do assunto; o que não é problema de fato para a ferramenta cumprir o que promete (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda, tudo rastreável até a origem) sai da fila, com o motivo; nada se apaga.",
+ "acoes": {
+  "fica": "problema de fato para a promessa, distinto dos outros; recebe destino na etapa 5 (D-046)",
+  "junta": "o mesmo problema (o mesmo defeito; o conserto de um resolve o outro) de um insumo que fica, de um cartão que já o leva no escopo ou de um item do proxima-versao.md; sai da contagem e segue escrito no alvo",
+  "sai_resolvido": "o problema já foi resolvido por trabalho posterior, com a prova no repositório",
+  "sai_fora_da_promessa": "não impede a ferramenta de cumprir a promessa da fase 1 (fase 2, publicação, estacionado, processo do planejamento ou não é problema hoje); segue no cartão que o leva, quando há"
+ },
+ "itens": [
+  {
+   "n": 1,
+   "insumo": {
+    "data": "17/10/2026",
+    "origem": "brief, seção 6A (tabela, l. 389-407)",
+    "insumo": "o que a v0.2.1 levaria ao texto: precedência, rotinas e Actions no piloto, IA por rotina na fase 1, saída de reserva pela D-033, fim do \"único bloqueio\", teto das rotinas, §8 e §10 reescritos, fatos de 17/10 no §5.5 e no Anexo C, §9 com as D-031 a D-035",
+    "aonde": "a próxima versão da Fundação alinhada às decisões D-031 a D-035 e ao que o piloto mostrar"
+   },
+   "vira_no_mapa": "`proxima-versao.md`; K-004",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "proxima-versao.md",
+    "motivo": "É a lista do que a v0.2.1 levaria ao texto; o proxima-versao.md nasceu dela no K-001 e a detalha nos V-01 a V-38 (precedência no V-03, rotinas e Actions no V-11, saída de reserva no V-12, IA por rotina no V-16, §8 no V-27, §9 no V-28, §10 no V-29). É a entrada da etapa 6 do K-004 (escrever a Fundação), não conserto da ferramenta.",
+    "evidencia": [
+     "trilhas/planejamento/proxima-versao.md, V-03, V-11, V-12, V-16, V-27, V-28, V-29",
+     "mapa §6, insumo 1: 'proxima-versao.md; K-004'"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "proxima-versao.md"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "insumo": {
+    "data": "17/10/2026",
+    "origem": "checklist do piloto, \"Pedido ao redator para a v0.2.1\"",
+    "insumo": "o pedido ao redator já preparado (entrada, teto, validadores, verificação pelo auditor)",
+    "aonde": "ponto de partida pronto para escrever a próxima versão"
+   },
+   "vira_no_mapa": "K-004 (V-36)",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "V-36",
+    "motivo": "O pedido ao redator já preparado está no V-36, que o põe como entrada da escrita com o teto, os validadores e a verificação pelo auditor.",
+    "evidencia": [
+     "trilhas/planejamento/proxima-versao.md, V-36 ('o pedido já preparado (insumo 2)')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "V-36",
+     "proxima_versao": "| V-36 | fora do texto: o pedido ao redator | o pedido já preparado (insumo 2) passa a ter esta lista como entrada, com o teto, os validadores e a verificação pelo auditor | D-035 | insumo 2 |"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "insumo": {
+    "data": "17/10/2026",
+    "origem": "brief, seção 6C (insumos 1 a 11, l. 411-422)",
+    "insumo": "ritmo; rotinas para todas as CLB × 1 a 3 h; rotina com o harness inteiro e a principal protegida; material do piloto fora do Git público; bola de neve; Educação e ilustração sem habilidade; divergência e fala de quem pratica; lugar das rotinas (D-033); autoria nas fontes; calibrações; perguntas do §10",
+    "aonde": "cada um, com o número real que o piloto trouxer"
+   },
+   "vira_no_mapa": "item 1 → K-005; 2 → K-004 (com a D-037); 3 → K-113 e V-12; 4 → K-010 (Vicente) e V-12; 5 → V-13; 6 → V-23 e K-120; 7 → K-111 (só com pares reais); 8 → K-002; 9 → V-20; 10 → V-20 e V-30; 11 → V-29 (perguntas do §10) e V-13 (sentido de \"ambiente\")",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "V-12; V-13; V-20; V-23; V-29; V-30; K-005; K-010; K-120",
+    "motivo": "Os 11 itens da 6C foram distribuídos no K-001 (mapa §6): 1 → K-005; 2 → K-004 com a D-037; 3 → K-113 (concluído) e V-12; 4 → K-010 e V-12; 5 → V-13; 6 → V-23 e K-120; 7 → K-111 (concluído); 8 → K-002 (concluído); 9 → V-20; 10 → V-20 e V-30; 11 → V-29 e V-13. Cada parte está num cartão ou num V. O que o K-113 deixou do item 3 (a principal protegida só por instrução) é o 126, que fica.",
+    "evidencia": [
+     "mapa §6, insumo 3",
+     "trilhas/planejamento/proxima-versao.md, V-12, V-13, V-20, V-23, V-29, V-30",
+     "quadro: K-111, K-113 e K-002 concluídos"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "V-12",
+     "proxima_versao": "| V-12 | §5.1, l. 393-409; §7, l. 742 | saída de reserva: outra nuvem, com o GitHub como repositório (l. 393); proteção do `main` com as rotinas (insumo 3, item 3); a amostra no portão da fase 1 (l. 396), relida pela D-037 (V-24); lugar do material do piloto (insumo 3, item 4), que é de Vicente; tabela código → nome antes do Passo 4 (l. 406 e 742); o portão da fase 1 por camada (A-10) | D-033, D-032, D-021, D-037, D-038 | 6A; 6C |"
+    },
+    {
+     "alvo": "V-13",
+     "proxima_versao": "| V-13 | §5.2 e §5.3, l. 413, 430, 438 | adaptadores além dos que o piloto pede, para as rotinas de CLB em geral (l. 430); bola de neve com os números do piloto (l. 438); o sentido de \"ambiente\" (l. 413, [ABERTO]) | D-032 | 6A; 6C, itens 5 e 11 |"
+    },
+    {
+     "alvo": "V-20",
+     "proxima_versao": "| V-20 | §6, l. 584-641; §7, l. 696 e 723; §2, princípio 1, l. 100; §5.1, l. 407; §5.3, l. 426 | os valores provisórios calibrados pelo piloto (valências e `PENDENTE_JULGAMENTO`, unidade da ficha, eixo 5, limiar e normalização, regra de μ e λ, prefixos de ID, marcação frase → Proposição, lote de máquina, fila e semana, tamanho da amostra); a unidade da ficha e o que a escala de valências mede, pela D-039 (V-38); o eixo 5 com \"candidata\" e quem o muda (l. 628; A-09 b); a estrutura fixada e os números até o K-005, pela D-038 (V-37); o registro único `esquemas/valores-provisorios.json`, o layout das pastas, a pasta temporária e a tradução das Consultas; a Fonte sem nome de pessoa no Git (insumo 3, item 9) | D-034, D-038, D-039 | 6B; 6C, itens 9 e 10 |"
+    },
+    {
+     "alvo": "V-23",
+     "proxima_versao": "| V-23 | §7, l. 690 e 697-701 | o inventário de agentes e habilidades (8 e 14) com o que vier (registrar-melhoria, agente de melhorias, Educação: insumo 3, item 6); as lições de harness (lista exata de campos do log; o número oficial é o do Agent; agente novo só em sessão nova; teto de chamadas contado como o harness conta; tipo de agente preso ao harness) | D-027, D-036 | insumos 5, 7 e 10; 6C, item 6 |"
+    },
+    {
+     "alvo": "V-29",
+     "proxima_versao": "| V-29 | §10, l. 871-896 | as perguntas viram insumos para reavaliar o plano, cada uma dizendo aonde quer chegar (texto em `trilhas/2026-10-17_caminhos/mapas/mapa-decisoes-e-perguntas.json`), com os números do piloto; a pergunta 12 relida com a D-037; as respondidas vão para a trilha | D-034, D-032 | 6A; 6C, item 11; insumo 3 |"
+    },
+    {
+     "alvo": "V-30",
+     "proxima_versao": "| V-30 | §11, l. 900-929; l. 511 e 858 | um teto por frente: o da D-023 (\"na operação da fase 1\", que o brief aplica às sessões de trabalho, com as rotinas na mesma guarda), lido com as frentes no K-002; o do planejamento, por rodada (D-036); a cota com a D-037; os 600 mil por janela viram histórico (l. 906); as medidas do piloto por agente e habilidade, as horas reais e os minutos do Actions; a medida das rotinas e a parada da conversa principal (6B) | D-023, D-036, D-037 | 6A; 6B; insumos 4, 6 e 8; mapa K-001, atrito 13 |"
+    },
+    {
+     "alvo": "K-005",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-005** Ritmo do piloto: o teto semanal da execução e a regra de folga calibrados pela medida, com estimativas por agente e habilidade. A 1ª passada fechou em 23/10/2026 com a D-040 (o ritmo em pontos da conta, aceito por Vicente) e a D-041 (as regras dos insumos 34 e 36), que dispensou a 2ª (`rodadas/2026-10-23_K-005/`). *Falta a 3ª passada, que entra na reunião do K-004 (D-046): os números da D-038 e do registro (amostra, fila, lote de máquina, valências) calibrados pela medida dos blocos 7 e 8 e das horas do bloco 13, e o ritmo refeito com as medidas novas* | insumos 3 (item 1), 4, 6 e 16; D-023; D-038 (os números); D-040, D-041 | um ritmo do piloto que Vicente aceite (aceito pela D-040); os números provisórios calibrados pela medida"
+     }
+    },
+    {
+     "alvo": "K-010",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-010** Decisões para publicar, antes do Passo 6: caminho na Lei 13.123, licença do acervo, enquadramento (Res. CNS 510), lugar e visibilidade do que fica no repositório (F-0003), grupos (tiers) e modo de expor a ferramenta. *Depois do K-004* | §8, l. 808-810, 817 e 819; §10, perguntas 1, 5 e 22; D-032 | o Passo 6 destravado"
+     }
+    },
+    {
+     "alvo": "K-120",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-120** Passo 8: ilustrações técnicas (dono a definir) | §7, Passo 8; insumo 3, item 6 | cada ilustração com a origem dita, conferida contra a ficha"
+     }
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "insumo": {
+    "data": "18/10/2026",
+    "origem": "Vicente, comentário da D-035",
+    "insumo": "contribuição de outras pessoas com os próprios tokens (fase 2)",
+    "aonde": "outras pessoas rodando a ferramenta na própria conta, sem gastar o teto de Vicente"
+   },
+   "vira_no_mapa": "K-008",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-008",
+    "motivo": "Contribuição de outras pessoas com os próprios tokens é da fase 2 (K-008, depois do K-007); a fase 1 é só Vicente e os agentes (D-026).",
+    "evidencia": [
+     "quadro, K-008 ('tokens próprios')",
+     "AGENTS.md, D-026"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-008",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-008** Contribuição de outras pessoas na fase 2: a porta pelo quadro (Issues, Projects, formulários), quem não usa GitHub, tokens próprios, LGPD e consentimento, dados pessoais dos canais, P48 para entrevistas. *Depois do K-007* | insumos 9 e 14; D-011; D-037, diretriz 3; §5.4, degraus 2 e 3; §8, l. 815-816; lote C3 | contribuidores vendo o que falta e sugerindo pelo quadro, com a triagem jurídica"
+     }
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "insumo": {
+    "data": "18/10/2026",
+    "origem": "Vicente, comentário da D-035",
+    "insumo": "um agente de melhorias e contribuições, com as habilidades registrar-melhoria, consolidar-para-planejamento, preparar-tarefa, triar-contribuicao (fase 2) e medir-custo",
+    "aonde": "o ciclo execução → insumo → planejamento → tarefa conduzido por um agente com harness próprio"
+   },
+   "vira_no_mapa": "K-103 (primeira habilidade); K-006",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-006",
+    "motivo": "É o próprio K-006 (agente de melhorias e contribuições, com consolidar-para-planejamento, preparar-tarefa, medir-custo e triar-contribuicao); a primeira habilidade, registrar-melhoria, foi feita no K-103. O K-006 entra na reunião do K-004 (D-046). Ferramenta do planejamento, não da promessa.",
+    "evidencia": [
+     "quadro, K-006 (origem: insumos 10 e 18) e K-103 (concluído)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-006",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-006** Agente de melhorias e contribuições: desenho e habilidades (consolidar-para-planejamento, preparar-tarefa, medir-custo; triar-contribuicao na fase 2). *Entra na reunião do K-004 (D-046)* | insumos 10 e 18; D-036; P36 | o ciclo execução → insumo → planejamento → tarefa conduzido por um agente com harness próprio"
+     }
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "insumo": {
+    "data": "18/10/2026",
+    "origem": "D-035, diretriz (5); `scripts/checar_fundacao.py`",
+    "insumo": "o script deixou de cobrar as D-031 em diante no texto da v0.2; volta a cobrá-las quando a próxima versão sair (`DECISOES` e o caso da v0.1 em `verificar-fundacao/exemplos/casos.json`)",
+    "aonde": "a checagem mecânica cobrindo todas as decisões vigentes na próxima versão"
+   },
+   "vira_no_mapa": "K-004 (V-35)",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "V-35",
+    "motivo": "Está no V-35: o checar_fundacao.py volta a cobrar as D-031 em diante quando a próxima versão sair.",
+    "evidencia": [
+     "trilhas/planejamento/proxima-versao.md, V-35 (origem: insumo 11)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "V-35",
+     "proxima_versao": "| V-35 | fora do texto: `scripts/checar_fundacao.py` | volta a cobrar as D-031 em diante no texto; `essencias.json` ganha os termos-chave das D-036 a D-039 | D-035, diretriz 5 | insumo 11 |"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "insumo": {
+    "data": "20/10/2026",
+    "origem": "sessão de planejamento de melhorias (D-036, D-037)",
+    "insumo": "o quadro como porta de contribuição na fase 2: Issues e Projects do GitHub (formulários de issue), a gratuidade do Projects (a conferir), a LGPD com o nome de usuário público e o consentimento no formulário; e quem não usa GitHub",
+    "aonde": "contribuidores vendo o que falta e sugerindo pelo quadro; decisão no K-001"
+   },
+   "vira_no_mapa": "K-001 (seção 9 deste mapa); K-008",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-008",
+    "motivo": "O lugar do quadro na fase 1 foi decidido no K-001 (concluído: o quadro mora no arquivo); Issues, Projects, formulários e a LGPD do contribuidor são a porta da fase 2 (K-008).",
+    "evidencia": [
+     "quadro, cabeçalho ('Onde o quadro mora ... A porta de contribuição da fase 2 é o K-008')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-008",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-008** Contribuição de outras pessoas na fase 2: a porta pelo quadro (Issues, Projects, formulários), quem não usa GitHub, tokens próprios, LGPD e consentimento, dados pessoais dos canais, P48 para entrevistas. *Depois do K-007* | insumos 9 e 14; D-011; D-037, diretriz 3; §5.4, degraus 2 e 3; §8, l. 815-816; lote C3 | contribuidores vendo o que falta e sugerindo pelo quadro, com a triagem jurídica"
+     }
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "rodada K-001, checagem mecânica",
+    "insumo": "a completude do mapa foi conferida por um script sem IA que hoje mora na trilha (`trilhas/planejamento/rodadas/2026-10-21_K-001/checar_mapa.py`)",
+    "aonde": "um script do planejamento, com caso que passa e caso que reprova, que confere o mapa e o quadro a cada rodada; cartão K-006"
+   },
+   "vira_no_mapa": "K-006",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-006",
+    "motivo": "O script do planejamento que confere o mapa e o quadro a cada rodada é do K-006 (o quadro o lista na origem). Ferramenta do planejamento, não da promessa.",
+    "evidencia": [
+     "quadro, K-006 (origem: insumos 10 e 18)",
+     "mapa §6, insumo 18"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-006",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-006** Agente de melhorias e contribuições: desenho e habilidades (consolidar-para-planejamento, preparar-tarefa, medir-custo; triar-contribuicao na fase 2). *Entra na reunião do K-004 (D-046)* | insumos 10 e 18; D-036; P36 | o ciclo execução → insumo → planejamento → tarefa conduzido por um agente com harness próprio"
+     }
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "rodada K-003, checagem mecânica",
+    "insumo": "`rodadas/2026-10-21_K-001/checar_mapa.py` lê a seção 6A do brief por linhas fixas (l. 400-417); com os ajustes do K-003, a 6A desceu para a l. 429, e a checagem 10 do script passa sem olhar nada",
+    "aonde": "o script do planejamento acha as seções pelo título, e não pela linha, e reprova quando uma seção some; cartão K-006, com o insumo 18"
+   },
+   "vira_no_mapa": "K-006",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "K-006",
+    "motivo": "É o mesmo script do 18 (checar_mapa.py), que o mapa já leva ao K-006 'com o insumo 18'.",
+    "evidencia": [
+     "mapa §6, insumo 22 ('cartão K-006, com o insumo 18')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-006",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-006** Agente de melhorias e contribuições: desenho e habilidades (consolidar-para-planejamento, preparar-tarefa, medir-custo; triar-contribuicao na fase 2). *Entra na reunião do K-004 (D-046)* | insumos 10 e 18; D-036; P36 | o ciclo execução → insumo → planejamento → tarefa conduzido por um agente com harness próprio"
+     }
+    }
+   ]
+  },
+  {
+   "n": 42,
+   "insumo": {
+    "data": "23/10/2026",
+    "origem": "cartão K-106, auditor (trilhas/2026-10-23_K-106/conferencia-C6.json, item C6.3; esquemas/termo.schema.json 0.2.0, designacoes)",
+    "insumo": "o Termo 0.2.0 leva a língua da designação, mas não marca a designação preferida; o curador pôs na descrição do contrato que a primeira de cada língua vai ao skos:prefLabel (o SKOS aceita no máximo um por etiqueta de língua, oficial no C6.3); a estrutura do TBX (langSec, xml:lang, und) e o destino das variantes e das formas de busca (altLabel, hiddenLabel) ficaram não conferidos",
+    "aonde": "a exportação do Termo para TBX e SKOS sem perda, com a regra da designação preferida dita e as correspondências conferidas na fonte"
+   },
+   "vira_no_mapa": "K-122",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-122",
+    "motivo": "A exportação do Termo para TBX e SKOS é da fase 2 (K-122: 'exportações SKOS, TBX e PROV'); o Termo da fase 1 funciona sem ela.",
+    "evidencia": [
+     "quadro, K-122"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-122",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-122** Fase 2: o que o §7 deixa para ela (mutirão, bola de neve, relatório do funil, Wikidata, fichas das demais fontes, mapa e território, outros grupos e ferramentas, exportações SKOS, TBX e PROV). *Depois do K-007* | §7, l. 674 | a detalhar quando o gatilho abrir"
+     }
+    }
+   ]
+  },
+  {
+   "n": 50,
+   "insumo": {
+    "data": "24/10/2026",
+    "origem": "cartão K-124 (trilhas/decisoes/D-043.json; 00_Fundacao_Cultura_Liquida.md, l. 509; brief de execuções, bloco 5, 'Antes da primeira captura')",
+    "insumo": "a D-043 troca, no piloto, a cópia de cada item no Wayback pelo Save Page Now (Fundação l. 509 e bloco 5 do brief) pelo registro só da captura que já existe, com a Falta 'sem cópia arquivada'; a Fundação e o brief seguem com o texto antigo, pela D-035",
+    "aonde": "a próxima versão da Fundação e o brief dizendo o que vale para a cópia arquivada no piloto e o que volta no K-010"
+   },
+   "vira_no_mapa": "K-004",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "proxima-versao.md",
+    "motivo": "É alinhamento do texto (Fundação, l. 509; brief, bloco 5) à D-043 e à D-048, que tirou a captura nova do plano; o wayback.py já segue as decisões. O proxima-versao.md ainda não tem essa linha: entra como V novo na etapa 6. Não é conserto da ferramenta.",
+    "evidencia": [
+     "grep sem resultado de 'D-043|Wayback' em trilhas/planejamento/proxima-versao.md",
+     "AGENTS.md, D-043 e D-048"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "proxima-versao.md"
+    }
+   ]
+  },
+  {
+   "n": 79,
+   "insumo": {
+    "data": "29/10/2026",
+    "origem": "cartão K-110, wiki local (wiki-local/quartz, fora do Git; npm ci do Quartz v4.5.2)",
+    "insumo": "o npm 11 não rodou o script de instalação do sharp (allow-scripts), que o Quartz usa para as imagens de prévia; o curador desligou esse plugin, as análises de acesso e as fontes do Google, e o wiki local gerou sem eles",
+    "aonde": "o wiki público do Passo 6 decide quais plugins e scripts de instalação aceita, com o porquê"
+   },
+   "vira_no_mapa": "K-118",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-118",
+    "motivo": "Os plugins do Quartz e os scripts de instalação são decisão do wiki público (Passo 6, K-118); o wiki local, que é a promessa da fase 1, gerou sem eles no K-110.",
+    "evidencia": [
+     "quadro, K-118 e K-110"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-118",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-118** Passo 6: acervo e wiki público. *Depois do K-010* | §7, Passo 6 | o site publicando sozinho, e só fichas aprovadas"
+     }
+    }
+   ]
+  },
+  {
+   "n": 113,
+   "insumo": {
+    "data": "05/11/2026",
+    "origem": "cartão K-112, junção da rotina ao main (trilhas/2026-11-04_K-112/passo-a-passo-juncao.md); proteção do main mudada por Vicente em 05/11 (pull request e aprovação não exigidos; push forçado e exclusão bloqueados; administradores dispensados), conferida pela API",
+    "insumo": "para a rotina juntar ao main só com o token de conteúdo, a proteção do main deixou de exigir pull request e aprovação; hoje só Vicente e a rotina gravam; quando outra pessoa tiver escrita no repositório, nada barra um envio direto dela ao main",
+    "aonde": "a proteção do main exigindo de novo pull request quando houver outra pessoa com escrita, com a junção da rotina mantida por um caminho que a proteção aceite"
+   },
+   "vira_no_mapa": "K-008",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-008",
+    "motivo": "Só vale quando houver outra pessoa com escrita no repositório (fase 2); o CLAUDE.md já diz que a proteção volta a exigir pull request então (K-008).",
+    "evidencia": [
+     "CLAUDE.md, Commits ('Volta a exigir pull request quando houver outra pessoa com escrita (insumo, K-008)')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-008",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-008** Contribuição de outras pessoas na fase 2: a porta pelo quadro (Issues, Projects, formulários), quem não usa GitHub, tokens próprios, LGPD e consentimento, dados pessoais dos canais, P48 para entrevistas. *Depois do K-007* | insumos 9 e 14; D-011; D-037, diretriz 3; §5.4, degraus 2 e 3; §8, l. 815-816; lote C3 | contribuidores vendo o que falta e sugerindo pelo quadro, com a triagem jurídica"
+     }
+    }
+   ]
+  },
+  {
+   "n": 133,
+   "insumo": {
+    "data": "13/11/2026",
+    "origem": "cartão K-125, prova ee-en1369-en1544 no gemini-4-hydrogen (log em trilhas/logs/2026-11-13_avaliador.jsonl; trilhas/rotina-ia/consumo-gemini.jsonl)",
+    "insumo": "A chave do .env está num projeto do Google no nível gratuito: o 8º pedido da prova recebeu HTTP 429 pela métrica generate_content_free_tier_requests (limite 20; a janela da cota, por minuto ou por dia, não foi conferida), e um pedido avulso logo depois passou. Os termos do nível gratuito da API sobre o uso dos dados enviados também não foram conferidos.",
+    "aonde": "A rotina semanal e as dez provas rodarem na API do Gemini sem parar por cota de pedidos, nos termos de uso que Vicente aceitar."
+   },
+   "vira_no_mapa": "K-125",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-125",
+    "motivo": "O Gemini está estacionado pela D-056: a IA da operação é a rotina do Claude; o Gemini volta só com cota paga e decisão nova.",
+    "evidencia": [
+     "AGENTS.md, D-056",
+     "quadro, K-125 (estacionado)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-125",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-125** *Estacionado pela D-056 (14/11/2026), com o estado salvo: vai à reunião do K-004.* *Estado em `trilhas/2026-11-14_manutencao/retomar-K-125.md`.* Rotina com IA na API do Gemini (D-054): o executor da rotina semanal sem o Claude Code (no GitHub Actions, com a chave como segredo do repositório), extrair-evidencia e a segunda leitura em gemini-4-hydrogen, o contador semanal de tokens (1 milhão de entrada, 2 milhões de saída) que para e avisa, sobre o mesmo portão da camada 2 e a mesma junção do K-113. *Antes do K-115b* | D-054; K-113 | uma rodada sobre um lote de `entrada/` proposta em `claude/`, com a segunda leitura e o portão; o consumo da semana medido e abaixo do teto"
+     }
+    }
+   ]
+  },
+  {
+   "n": 134,
+   "insumo": {
+    "data": "13/11/2026",
+    "origem": "cartão K-125, prova ee-en1369-en1544 no gemini-4-hydrogen (trilhas/rotina-ia/consumo-gemini.jsonl, rodada prova-ee-h-r1)",
+    "insumo": "Uma prova de 2 Entradas gastou 299.975 tokens de entrada e 28.037 de saída em 7 pedidos: a entrada cresce a cada pedido porque o histórico inteiro (harness e resultados das ferramentas) volta à API. Na mesma proporção, um lote de 15 Entradas passaria sozinho do teto semanal de 1 milhão de tokens de entrada da D-054, e as dez provas (cinco em cada modelo) ficam perto de 3 milhões.",
+    "aonde": "A rotina semanal e as provas caberem no teto da D-054, com o lote calibrado pelo custo medido, ou o teto revisto por Vicente."
+   },
+   "vira_no_mapa": "K-125",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-125",
+    "motivo": "O Gemini está estacionado pela D-056: a IA da operação é a rotina do Claude; o Gemini volta só com cota paga e decisão nova.",
+    "evidencia": [
+     "AGENTS.md, D-056",
+     "quadro, K-125 (estacionado)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-125",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-125** *Estacionado pela D-056 (14/11/2026), com o estado salvo: vai à reunião do K-004.* *Estado em `trilhas/2026-11-14_manutencao/retomar-K-125.md`.* Rotina com IA na API do Gemini (D-054): o executor da rotina semanal sem o Claude Code (no GitHub Actions, com a chave como segredo do repositório), extrair-evidencia e a segunda leitura em gemini-4-hydrogen, o contador semanal de tokens (1 milhão de entrada, 2 milhões de saída) que para e avisa, sobre o mesmo portão da camada 2 e a mesma junção do K-113. *Antes do K-115b* | D-054; K-113 | uma rodada sobre um lote de `entrada/` proposta em `claude/`, com a segunda leitura e o portão; o consumo da semana medido e abaixo do teto"
+     }
+    }
+   ]
+  },
+  {
+   "n": 135,
+   "insumo": {
+    "data": "14/11/2026",
+    "origem": "pedido de Vicente em 14/11/2026 (conversa de limpeza); scripts/manutencao.py (manutencao-0.1) e trilhas/relatorios/manutencao-2026-11-14.md",
+    "insumo": "A vistoria da casa (scripts/manutencao.py, sem IA, só avisa) foi criada e rodou uma vez, à mão. Ficam por decidir: quando ela roda sozinha (na rotina diária, na abertura de cada conversa ou só a pedido); os limites provisórios (24 mil caracteres para o AGENTS.md com o CLAUDE.md, 3 mil para o Passo corrente), que estão no script e não no registro de valores; a seção de decisões do AGENTS.md, que sozinha passa de 16 mil caracteres carregados em toda conversa e em todo agente e que só Vicente pode encurtar; o scripts/resumo_coleta.py, que nada chama; e a ramificação remota claude/rotina-ia-2026-11-13, que ficou no repositório.",
+    "aonde": "A pasta dizer sempre a verdade sobre si mesma e custar pouco para abrir, sem depender de uma conversa lembrar de arrumar."
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "94",
+    "motivo": "Mesmo problema: a casa simples e verdadeira sobre si mesma. O 94 pede o passo de limpeza ao fim do piloto; o 135, a vistoria que mantém a limpeza (quando roda, os limites no registro, o AGENTS.md que pesa em toda conversa, o script sem uso, a ramificação que sobrou).",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 94 e 135"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "94",
+     "insumo": {
+      "data": "30/10/2026",
+      "origem": "conversa de planejamento de 30/10/2026: reflexão de Vicente sobre o fim do ciclo do piloto",
+      "insumo": "cada cartão deixa no código e na trilha passos, comentários e arquivos temporários que serviram ao caminho, mas não à forma final da ferramenta",
+      "aonde": "ao fim do piloto e dos primeiros retornos ao planejamento, um passo de limpeza deixa a ferramenta simples, funcional e profissional: o código guarda as funções necessárias e as inovações, com menos passos, pelos caminhos mais simples já achados, e saem os comentários desnecessários e os arquivos temporários sem uso; é o último passo do plano antes de voltar às melhorias e ao desenvolvimento"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "Cada cartão deixou no código e na trilha passos, comentários e arquivos que serviram ao caminho e não à forma final; Vicente pediu um passo de limpeza ao fim do piloto."
+     }
+    }
+   ]
+  },
+  {
+   "n": 138,
+   "insumo": {
+    "data": "14/11/2026",
+    "origem": "K-116, relatório do piloto, seções 6 e 9 (gatilho da fase 2, condição 2); checklist do piloto, tabela 'Horas de Vicente'",
+    "insumo": "A condição 2 do gatilho da fase 2 (horas reais de 4 semanas em 1 a 3 h) não tem número: a tabela de horas tem 2 semanas, sem horas, e Vicente disse em 29/10 que não precisava registrar. O gatilho fica sem como ser avaliado nessa condição.",
+    "aonde": "o gatilho da fase 2 avaliável, com a medida de horas que o plano pedir ou com a condição revista"
+   },
+   "vira_no_mapa": "K-004",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-007",
+    "motivo": "É a condição 2 do gatilho da fase 2 (horas de Vicente); avaliar o gatilho é o K-007, não conserto da ferramenta.",
+    "evidencia": [
+     "quadro, K-007"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-007",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-007** Avaliar o gatilho da fase 2 (as três condições do §7, l. 676-679). *Depois do K-116 e de 4 semanas medidas* | §7; brief, blocos 13 e 14 | a fase 2 aberta, ou o que falta dito"
+     }
+    }
+   ]
+  },
+  {
+   "n": 142,
+   "insumo": {
+    "data": "20/11/2026",
+    "origem": "conversa de planejamento de 14 a 20/11/2026: trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md (falas 3, 7, 8 e 9; palavras a conferir da essência devolvida) e escopo-proposto.json (campos estado e candidatas_fora); log do curador EX-0158",
+    "insumo": "na essência da D-057, os dez nomes de bebida que a própria sessão escolheu contar na Consulta geral viraram escopo, e uma resposta de Vicente que só dava um número (199) foi lida como confirmação desses nomes e como corte das 7 Entradas das CLB candidatas; os nomes e as 7 estavam nas palavras a conferir, mas a registrar-decisao não separa a resposta que confirma a lista da que responde só uma parte, e Vicente disse depois que não incluiu cerveja nem refrigerante e não entendeu a saída das candidatas",
+    "aonde": "a essência só fecha o escopo com o que Vicente disse; o que a sessão põe ou tira por leitura própria volta a ele dito como leitura, antes de valer"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "—",
+    "motivo": "É do harness do planejamento (habilidade registrar-decisao), não do que a ferramenta promete; o erro concreto já foi corrigido na D-057, e o K-126 cita o insumo 142 na origem.",
+    "evidencia": [
+     "quadro, K-126 (origem)",
+     "trilhas/decisoes/D-057.json"
+    ]
+   },
+   "texto_do_alvo": []
+  }
+ ]
+}

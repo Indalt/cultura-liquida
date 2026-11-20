@@ -1,0 +1,577 @@
+{
+ "lote": "R3",
+ "regra": "D-058: o insumo repetido se junta ao que já trata do assunto; o que não é problema de fato para a ferramenta cumprir o que promete (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda, tudo rastreável até a origem) sai da fila, com o motivo; nada se apaga.",
+ "acoes": {
+  "fica": "problema de fato para a promessa, distinto dos outros; recebe destino na etapa 5 (D-046)",
+  "junta": "o mesmo problema (o mesmo defeito; o conserto de um resolve o outro) de um insumo que fica, de um cartão que já o leva no escopo ou de um item do proxima-versao.md; sai da contagem e segue escrito no alvo",
+  "sai_resolvido": "o problema já foi resolvido por trabalho posterior, com a prova no repositório",
+  "sai_fora_da_promessa": "não impede a ferramenta de cumprir a promessa da fase 1 (fase 2, publicação, estacionado, processo do planejamento ou não é problema hoje); segue no cartão que o leva, quando há"
+ },
+ "itens": [
+  {
+   "n": 21,
+   "insumo": {
+    "data": "22/10/2026",
+    "origem": "rodada K-003, seção do script de menções no brief (K-102)",
+    "insumo": "o script de menções incidentais só vê as CLB cujo nome está no registro de Termos; no piloto, o registro tem os Termos de caju e de cajuína e as variantes que as fontes trouxerem, e semear outros nomes antes da fase 2 ou do Passo 3 muda o plano (l. 438; brief, bloco 10a)",
+    "aonde": "menções a outras CLB percebidas já no piloto, sem semear Termos fora do plano; cartões K-102 e K-117"
+   },
+   "vira_no_mapa": "K-102, K-117",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "140",
+    "motivo": "Mesmo problema: a ferramenta só percebe CLB cujo nome já conhece (o script de menções só vê os Termos do registro). O 140 pede as rotinas achando CLB nativas e de outros termos e diz que complementa os insumos 21, 103 e 118.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 21 e 140 ('Complementa os insumos 21, 103 e 118')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "140",
+     "insumo": {
+      "data": "14/11/2026",
+      "origem": "conversa de 14/11/2026 depois da entrega do piloto (pergunta de Vicente sobre o que o piloto achou); contagem por script fora da ferramenta, não gravado, nos campos titulo e citacao_resumo de entrada/EN-*.json (2.578 Entradas no main de 14/11); ambientes/consultas/CO-0008.json; scripts/fila_ia.py --resumo",
+      "insumo": "Fora a cajuína, nenhuma CLB foi do bruto à ficha, e as 2.544 Entradas brutas esperam a rotina com IA, que hoje não propõe (D-055, D-056). A Consulta geral CO-0008 ('bebida' com os descritores do processo da cajuína: extração do suco, clarificação, filtração, envase, tratamento térmico, higienização) trouxe sobretudo tecnologia de alimentos: na contagem crua de nomes em título e resumo das 2.578 Entradas (sem acento, palavra inteira), suco 205, cerveja 63, refrigerante 25, vinho 20, água de coco 19, bebida láctea 19, cachaça 19; nomes de bebidas nativas testados como exemplo (D-017), cauim, caxiri, aluá, chicha, tarubá e jurema, dão 0, e tiquira 1. Na fila_ia.py, a faixa 2 (forma 'bebida' no título, 56 Entradas) vem depois das 49 da faixa 1: com 1 lote de 15 por quinta, a primeira Entrada de outra bebida seria lida na 4ª rodada. Complementa os insumos 21, 103 e 118.",
+      "aonde": "as rotinas achando também CLB nativas e de outros termos (princípio 6; D-032), com o alcance de cada Consulta geral medido e dito (D-030)"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "As rotinas só acham CLB cujo nome a ferramenta já conhece: a Consulta geral trouxe sobretudo tecnologia de alimentos, nomes de bebidas nativas dão 0, e o alcance de cada Consulta não é medido nem dito."
+     }
+    }
+   ]
+  },
+  {
+   "n": 45,
+   "insumo": {
+    "data": "23/10/2026",
+    "origem": "cartão K-107 (esquemas/falta.schema.json, tipo; scripts/recorte.py, fechar; acervo/faltas/F-0006 a F-0010)",
+    "insumo": "as Faltas 'busca interrompida por teto' e 'total desconhecido' da l. 427 e 432 não têm tipo próprio no contrato da Falta e entram como tipo 'outro', reconhecidas só pelo texto de o_que_falta; o relatório do dia as conta juntas com qualquer outra Falta 'outro'",
+    "aonde": "cada Falta de busca contada e filtrada pelo tipo, sem depender do texto"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "55",
+    "motivo": "Mesmo problema: a Falta de busca não existe como tal no contrato da Falta (sem tipo próprio nem estado de encerramento); o conserto é um só, no contrato. O 55 é o mais completo (dita enquanto vale e encerrada quando o Recorte a resolve).",
+    "evidencia": [
+     "esquemas/falta.schema.json: tipo ∈ {compreensao_local_nao_captada, impedimento_juridico, fonte_inacessivel, trecho_nao_verificavel, outro}; nenhum campo de estado"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "55",
+     "insumo": {
+      "data": "24/10/2026",
+      "origem": "cartão K-108, lote 2 (acervo/faltas/F-0006.json a F-0011.json; ambientes/recortes/RC-0003.json e RC-0022.json)",
+      "insumo": "as Faltas 'busca interrompida por teto' não mudam quando o Recorte depois se completa ou passa a outro estado: a F-0011 segue como está com o RC-0022 percorrido, e as F-0006 a F-0010 seguem com os Recortes da Infoteca-e em curso; o contrato da Falta só tem estado de liberação para a jurídica",
+      "aonde": "a Falta de busca dita enquanto vale e encerrada, com trilha, quando o Recorte a resolve"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "A Falta de busca (interrompida por teto, total desconhecido) entra como 'outro', sem tipo próprio, e não se encerra quando o Recorte se completa."
+     }
+    }
+   ]
+  },
+  {
+   "n": 54,
+   "insumo": {
+    "data": "24/10/2026",
+    "origem": "cartão K-108, lote 1 e conferência do rastreador (trilhas/2026-10-24_K-108/conferencia-rastreador.json, paginacao_bdtd e propostas_de_divisao; ambientes/adaptadores.json, AM-0021, limite_fonte nulo)",
+    "insumo": "a BDTD não entrega além do item 1.000 de uma consulta (da página 11 em diante repete a 10), e o adaptador tem limite_fonte nulo: o recorte.py só percebe a saturação depois de 11 páginas, que se refazem nas janelas divididas; o RC-0014 (926 de 1.000) satura no próximo monitoramento se crescer 75 itens, e o rastreador propôs dividi-lo antes",
+    "aonde": "a saturação percebida na primeira página, com o limite da fonte registrado na ficha de acesso e no adaptador"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "—",
+    "motivo": "A coleta da BDTD se completa: o recorte.py detecta a página repetida depois do item 1.000 e divide a janela; com o limite_fonte nulo, só faz pedidos a mais antes de perceber. Não impede a promessa. É o mesmo do 44, fechado pelo K-108 sem o limite gravado.",
+    "evidencia": [
+     "ambientes/adaptadores.json, l. 8 ('limite_fonte': null)",
+     "scripts/recorte.py, l. 12-15 e 299"
+    ]
+   },
+   "texto_do_alvo": []
+  },
+  {
+   "n": 56,
+   "insumo": {
+    "data": "24/10/2026",
+    "origem": "cartão K-108, Wayback (scripts/wayback.py, wayback-0.2; trilhas/logs/2026-10-24_wayback.jsonl, EX-0034)",
+    "insumo": "com 1.677 Entradas e no máximo 20 consultas por rodada, o wayback.py precisa de 84 rodadas para passar por todas, e cada Entrada sem captura vira uma Falta própria (8 de 20 na primeira rodada real), o que daria centenas de Faltas 'sem cópia arquivada' no acervo",
+    "aonde": "toda Entrada com a cópia que existe registrada ou a falta dela dita, num ritmo que acompanhe a coleta e sem inflar o acervo"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "sai_resolvido",
+    "alvo": "D-048; F-0034",
+    "motivo": "Superado: a D-048 tirou das rotinas diárias a consulta da cópia da página do registro, e a F-0034 barra agora a consulta automática do Internet Archive (Availability API e leitura da cópia). As rotinas não chamam o wayback.py, e as centenas de Faltas 'sem cópia arquivada' não nascem.",
+    "evidencia": [
+     "AGENTS.md, D-048",
+     "acervo/faltas/F-0034.json (vale_para 'agora')",
+     "grep sem 'wayback' em ambientes/rotinas.json e .github/workflows/"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "D-048",
+     "agents_md": "- **D-048:** as rotinas sem IA rodam **todo dia**, numa nuvem (hoje, o GitHub; D-033 se ele impedir) até haver um servidor dedicado, sem depender do ambiente de desenvolvimento e de planejamento: cada fonte no ritmo que aceita e que rende novidade, medido pela ferramenta (substitui o \"cada ambiente toda semana\" da D-012); a rotina só grava com novidade; a ferramenta junta a ramificação das rotinas quando o portão passa, sem esperar Vicente (substitui o padrão A-10 do brief, bloco 10a), que acompanha pelo relatório do dia. A ferramenta **torna acessível às rotinas** o que hoje não está: abre todo local de busca possível pelas vias permitidas, **incluindo o BCR** (adaptador do Tainacan; insumo 73) e o **Internet Archive** (livros e periódicos; insumo 96), e dá a elas as ações e a nuvem de que precisam, sem contornar proteção (D-044). A fonte que não abre é lida pela cópia arquivada no Wayback, só nessa falha; a consulta da cópia da página do registro sai das rotinas diárias. O Internet Archive serve **só para consulta**, sem cadastro: o projeto não registra nada nele, e a captura nova sai do plano (não volta no K-010; muda a D-043 nesse ponto). Entra no K-112."
+    },
+    {
+     "alvo": "F-0034"
+    }
+   ]
+  },
+  {
+   "n": 57,
+   "insumo": {
+    "data": "24/10/2026",
+    "origem": "cartão K-108, lote 2 (ambientes/recortes/RC-0015.json a RC-0023.json; trilhas/logs/2026-10-24_recorte.jsonl, EX-0032)",
+    "insumo": "na BDTD, a Consulta da bebida (CO-0002, cajuína e variantes, 1.441) trouxe só 14 itens que a do insumo (CO-0001, caju, 1.306) não tinha trazido; não se conferiu se a busca AllFields da fonte reduz 'cajuína' a 'caju' ou se os conjuntos de fato quase coincidem",
+    "aonde": "saber o que cada fonte faz com o termo antes de ler o rendimento de uma Consulta como dado sobre a CLB"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "140",
+    "motivo": "O que cada fonte faz com o termo (se a BDTD reduz 'cajuína' a 'caju') é parte do alcance de cada Consulta medido e dito (140, D-030): saber o que a busca alcança antes de ler o rendimento como dado sobre a CLB.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 57 e 140"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "140",
+     "insumo": {
+      "data": "14/11/2026",
+      "origem": "conversa de 14/11/2026 depois da entrega do piloto (pergunta de Vicente sobre o que o piloto achou); contagem por script fora da ferramenta, não gravado, nos campos titulo e citacao_resumo de entrada/EN-*.json (2.578 Entradas no main de 14/11); ambientes/consultas/CO-0008.json; scripts/fila_ia.py --resumo",
+      "insumo": "Fora a cajuína, nenhuma CLB foi do bruto à ficha, e as 2.544 Entradas brutas esperam a rotina com IA, que hoje não propõe (D-055, D-056). A Consulta geral CO-0008 ('bebida' com os descritores do processo da cajuína: extração do suco, clarificação, filtração, envase, tratamento térmico, higienização) trouxe sobretudo tecnologia de alimentos: na contagem crua de nomes em título e resumo das 2.578 Entradas (sem acento, palavra inteira), suco 205, cerveja 63, refrigerante 25, vinho 20, água de coco 19, bebida láctea 19, cachaça 19; nomes de bebidas nativas testados como exemplo (D-017), cauim, caxiri, aluá, chicha, tarubá e jurema, dão 0, e tiquira 1. Na fila_ia.py, a faixa 2 (forma 'bebida' no título, 56 Entradas) vem depois das 49 da faixa 1: com 1 lote de 15 por quinta, a primeira Entrada de outra bebida seria lida na 4ª rodada. Complementa os insumos 21, 103 e 118.",
+      "aonde": "as rotinas achando também CLB nativas e de outros termos (princípio 6; D-032), com o alcance de cada Consulta geral medido e dito (D-030)"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "As rotinas só acham CLB cujo nome a ferramenta já conhece: a Consulta geral trouxe sobretudo tecnologia de alimentos, nomes de bebidas nativas dão 0, e o alcance de cada Consulta não é medido nem dito."
+     }
+    }
+   ]
+  },
+  {
+   "n": 59,
+   "insumo": {
+    "data": "24/10/2026",
+    "origem": "cartão K-108b (ambientes/pegadas/, 9.782 linhas para 1.723 itens; scripts/guarda.py --medir)",
+    "insumo": "cada item deixa uma pegada em cada Recorte de origem, inclusive nos pais saturados que não contam como pegada da busca: 1.723 itens viraram 9.782 linhas (cerca de 430 bytes cada, 4,2 MB), e o repositório passou de 5,8 para 9,5 MB, mesmo com 694 arquivos a menos; a compressão das pegadas de Recortes fechados, que a D-045 permite, não foi feita",
+    "aonde": "a pegada compacta de verdade, crescendo com os itens vistos e não com as janelas divididas, longe do alarme de 200 MB"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "D-045",
+    "motivo": "Não é problema hoje: as pegadas somam 9,4 MB em 50 arquivos e o .git 13 MB, longe do alarme de 200 MB da D-045, que o relatório do dia já vigia.",
+    "evidencia": [
+     "du -sh ambientes/pegadas (9,4 MB, 50 arquivos); du -sh .git (13 MB) em 20/11/2026",
+     "AGENTS.md, D-045 (alarme)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "D-045",
+     "agents_md": "- **D-045:** a guarda das Entradas em escala (K-108b): a pegada compacta de todo item visto, um arquivo por Recorte (`ambientes/pegadas/`); a Entrada de trabalho só do que segue na pré-triagem por regra, sem IA (forma do Termo ou descritor da Consulta no título ou no resumo); o bruto fora do Git; o item fora fica como pegada com o mesmo EN-nnnn e reabre se a regra mudar; alarme acima de 20 mil arquivos ou 200 MB."
+    }
+   ]
+  },
+  {
+   "n": 64,
+   "insumo": {
+    "data": "29/10/2026",
+    "origem": "cartão K-109, lote 1 (trilhas/2026-10-29_K-109/relatorio-lote-1.md; triagem do juridico, dúvida 1; esquemas/triagem-fixa.json, caso licenca_ausente)",
+    "insumo": "no ato publicar, a triagem fixa emite uma Falta de licença ausente por registro (103 para as 15 Fontes, 44 Trechos e 44 Evidências do lote 1); a regra não diz se a Falta é por registro, por Fonte ou se a F-0003 a cobre, e a licença é da obra; as 103 não foram gravadas",
+    "aonde": "a falta de licença dita uma vez por obra, sem inflar o acervo, pronta para a decisão de publicar"
+   },
+   "vira_no_mapa": "K-010",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-010",
+    "motivo": "A Falta de licença ausente é do ato publicar (as 103 nem foram gravadas); se ela é por obra, por registro ou coberta pela F-0003 se decide com a licença do acervo no K-010.",
+    "evidencia": [
+     "quadro, K-010 ('licença do acervo')",
+     "AGENTS.md, D-042 (licença ausente barra só a publicação)"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-010",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-010** Decisões para publicar, antes do Passo 6: caminho na Lei 13.123, licença do acervo, enquadramento (Res. CNS 510), lugar e visibilidade do que fica no repositório (F-0003), grupos (tiers) e modo de expor a ferramenta. *Depois do K-004* | §8, l. 808-810, 817 e 819; §10, perguntas 1, 5 e 22; D-032 | o Passo 6 destravado"
+     }
+    }
+   ]
+  },
+  {
+   "n": 65,
+   "insumo": {
+    "data": "29/10/2026",
+    "origem": "cartão K-109, lote 1 (trilhas/2026-10-29_K-109/relatorio-lote-1.md; triagem do juridico, dúvida 2; acervo/faltas/F-0025.json)",
+    "insumo": "as Fontes guardam título, instituição, ano, tipo e link, sem o nome do autor da obra; a Lei 9.610, art. 46, III pede o nome do autor e a origem na citação, e a regra não diz se a instituição basta; o contrato da Fonte só aceita autoria como código de Pessoa",
+    "aonde": "a citação curta de cada Fonte com autor e origem na forma que a lei pede, sem pôr dado pessoal de quem não é autor citado"
+   },
+   "vira_no_mapa": "K-010",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-010; F-0025; K-204",
+    "motivo": "A forma da citação com o autor da obra é questão da F-0025 (direito autoral), que espera a decisão de publicar (K-204, K-010); o Git público segue o padrão da F-0003 até o K-010 (D-043; K-201).",
+    "evidencia": [
+     "quadro, K-204 e K-201",
+     "AGENTS.md, D-042 e D-043"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-010",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-010** Decisões para publicar, antes do Passo 6: caminho na Lei 13.123, licença do acervo, enquadramento (Res. CNS 510), lugar e visibilidade do que fica no repositório (F-0003), grupos (tiers) e modo de expor a ferramenta. *Depois do K-004* | §8, l. 808-810, 817 e 819; §10, perguntas 1, 5 e 22; D-032 | o Passo 6 destravado"
+     }
+    },
+    {
+     "alvo": "F-0025"
+    },
+    {
+     "alvo": "K-204",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-204** Falta jurídica a liberar: F-0025 (direito_autoral). *Espera a decisão de publicar (K-010)* | triagem do juridico; D-037, diretriz 1 | a Falta liberada pelo caminho do guia, ou mantida com o porquê"
+     }
+    }
+   ]
+  },
+  {
+   "n": 66,
+   "insumo": {
+    "data": "29/10/2026",
+    "origem": "cartão K-109, lote 1 (trilhas/2026-10-29_K-109/relatorio-lote-1.md; triagem do juridico, dúvida 3; acervo/faltas/F-0024.json)",
+    "insumo": "três trechos de fontes publicadas dizem que indígenas usavam o caju como bebida fermentada ou desenvolveram a cajuína, sem nomear povo; a regra não decide se a menção histórica em fonte secundária é acesso a conhecimento tradicional associado (Lei 13.123, art. 2º, IX) nem se a origem é não identificável (art. 2º, III); abriu a F-0024, só para publicar",
+    "aonde": "uma leitura de Vicente, com profissional se a lei pedir, sobre a menção histórica a uso indígena em fonte publicada, aplicada pela regra a todos os trechos iguais"
+   },
+   "vira_no_mapa": "K-010",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "87",
+    "motivo": "Mesmo problema: a regra de conhecimento tradicional para as CLB além da cajuína. A D-047 resolveu só a cajuína; a menção histórica a uso indígena em fonte publicada é o caso típico da regra geral que o 87 pede.",
+    "evidencia": [
+     "AGENTS.md, D-047",
+     "trilhas/insumos-planejamento.md, insumos 66 e 87"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "87",
+     "insumo": {
+      "data": "30/10/2026",
+      "origem": "cartão K-110, lote de correção de 30/10/2026 (fala de Vicente, item d, proposta dele; D-047, diretriz 5; princípio 12)",
+      "insumo": "proposta de Vicente: em vez de barrar a descrição do saber público, o juridico avisa sempre da lei e do que fazer em cada uso que a ferramenta propõe (educação, pesquisa e o resto do campo de ação), como pede o princípio 12; a D-047 vale para a cajuína e, no K-110, para a CLB que as regras mostrarem do mesmo tipo; a regra geral para as CLB seguintes ficou como proposta para o planejamento",
+      "aonde": "uma regra geral de conhecimento tradicional para as CLB seguintes, com aviso da lei e do caminho em cada uso, no lugar da barreira à descrição do saber público"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "Não há regra geral de conhecimento tradicional para as CLB seguintes: a D-047 vale só para a cajuína e a D-057 só para as três candidatas; a proposta de Vicente é avisar sempre da lei e do caminho em cada uso, sem barrar a descrição do saber público."
+     }
+    }
+   ]
+  },
+  {
+   "n": 67,
+   "insumo": {
+    "data": "29/10/2026",
+    "origem": "cartão K-109, lote 1 (trilhas/2026-10-29_K-109/relatorio-lote-1.md; triagem do juridico, dúvida 4; esquemas/triagem-fixa.json)",
+    "insumo": "a triagem fixa só olha substâncias das listas da Portaria 344; bebida alcoólica (o fermentado de cajuína de uma dissertação; a bebida fermentada dos nativos) não tem pergunta própria, e nenhum trecho guardado traz modo de preparar",
+    "aonde": "a regra dizendo o que fazer quando um trecho trouxer o modo de preparar uma bebida alcoólica, com a norma conferida"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "53",
+    "motivo": "Mesmo problema: as perguntas e listas da triagem fixa calibradas com o que o piloto mostrou e com a norma conferida; a bebida alcoólica é a pergunta que falta.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 53 e 67"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "53",
+     "insumo": {
+      "data": "24/10/2026",
+      "origem": "cartão K-124 (esquemas/triagem-fixa.json, triagem-fixa-0.3, listas 'palavras_modo' e 'palavras')",
+      "insumo": "a lista do modo de obter ou de preparar (que leva a substância de 'publicar' para 'agora') e a lista reduzida de substâncias e plantas da Lista E foram montadas pelo curador a partir do parecer, sem medida; a Lista E e a F2 vêm de cópia de 2022 (secundária)",
+      "aonde": "as listas da triagem fixa calibradas com o que o piloto mostrar, e a lista oficial e atual da Anvisa conferida"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "As listas e perguntas da triagem fixa foram montadas sem medida (substâncias, modo de preparar, palavras de conhecimento tradicional), com normas não conferidas na fonte oficial."
+     }
+    }
+   ]
+  },
+  {
+   "n": 85,
+   "insumo": {
+    "data": "30/10/2026",
+    "origem": "cartão K-110, lote de correção de 30/10/2026 (fala de Vicente, item b; trilhas/2026-10-29_K-110/triagem-juridica-K110.json; acervo/faltas/F-0025.json)",
+    "insumo": "o juridico deixou a Vicente se 448 citações curtas do mesmo registro do Iphan, juntas, ficam 'na medida justificada' (Lei 9.610, art. 46, III); a regra da D-042 olha cada citação, não o conjunto tirado de uma mesma obra",
+    "aonde": "uma regra para o conjunto de citações de uma mesma obra, antes de publicar"
+   },
+   "vira_no_mapa": "K-010",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "K-010; F-0025; K-204",
+    "motivo": "Se 448 citações curtas de uma mesma obra, juntas, ficam na medida justificada é questão da F-0025, que espera a decisão de publicar (K-204, K-010).",
+    "evidencia": [
+     "quadro, K-204",
+     "acervo/faltas/F-0025.json"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "K-010",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-010** Decisões para publicar, antes do Passo 6: caminho na Lei 13.123, licença do acervo, enquadramento (Res. CNS 510), lugar e visibilidade do que fica no repositório (F-0003), grupos (tiers) e modo de expor a ferramenta. *Depois do K-004* | §8, l. 808-810, 817 e 819; §10, perguntas 1, 5 e 22; D-032 | o Passo 6 destravado"
+     }
+    },
+    {
+     "alvo": "F-0025"
+    },
+    {
+     "alvo": "K-204",
+     "quadro": {
+      "coluna": "A fazer",
+      "texto": "**K-204** Falta jurídica a liberar: F-0025 (direito_autoral). *Espera a decisão de publicar (K-010)* | triagem do juridico; D-037, diretriz 1 | a Falta liberada pelo caminho do guia, ou mantida com o porquê"
+     }
+    }
+   ]
+  },
+  {
+   "n": 90,
+   "insumo": {
+    "data": "30/10/2026",
+    "origem": "cartão K-110, lote de correção de 30/10/2026 (acervo/faltas/F-0024.json, nota de 29/10 e reexame de 30/10; D-043, item 3)",
+    "insumo": "a nota da F-0024 diz que, se a origem for identificável, o detalhe não se aprofunda e espera numa pasta local até o K-010; o reexame manteve na F-0024 o vinho de caju nas falas de quem o fazia no Piauí, de origem identificável, e esse modo de fazer segue no Git, como a cajuína seguia antes da D-047; a regra não diz se a dúvida de conhecimento tradicional (Falta só para publicar) já leva o detalhe à pasta local ou só quando a fonte nomeia o povo, como na F-0033",
+    "aonde": "uma regra única para onde fica o detalhe de uma prática com dúvida de conhecimento tradicional, antes de publicar"
+   },
+   "vira_no_mapa": "K-010",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "87",
+    "motivo": "Onde fica o detalhe de uma prática com dúvida de conhecimento tradicional é parte da regra geral (87); hoje só a cajuína (D-047) e as três CLB do K-126 (D-057: detalhe de saber indígena na pasta local) têm leitura.",
+    "evidencia": [
+     "AGENTS.md, D-043, D-047 e D-057"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "87",
+     "insumo": {
+      "data": "30/10/2026",
+      "origem": "cartão K-110, lote de correção de 30/10/2026 (fala de Vicente, item d, proposta dele; D-047, diretriz 5; princípio 12)",
+      "insumo": "proposta de Vicente: em vez de barrar a descrição do saber público, o juridico avisa sempre da lei e do que fazer em cada uso que a ferramenta propõe (educação, pesquisa e o resto do campo de ação), como pede o princípio 12; a D-047 vale para a cajuína e, no K-110, para a CLB que as regras mostrarem do mesmo tipo; a regra geral para as CLB seguintes ficou como proposta para o planejamento",
+      "aonde": "uma regra geral de conhecimento tradicional para as CLB seguintes, com aviso da lei e do caminho em cada uso, no lugar da barreira à descrição do saber público"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "Não há regra geral de conhecimento tradicional para as CLB seguintes: a D-047 vale só para a cajuína e a D-057 só para as três candidatas; a proposta de Vicente é avisar sempre da lei e do caminho em cada uso, sem barrar a descrição do saber público."
+     }
+    }
+   ]
+  },
+  {
+   "n": 100,
+   "insumo": {
+    "data": "30/10/2026",
+    "origem": "cartão K-111, insumo 76 (scripts/nomes_provaveis.py, nomes-0.1; gravar_extracao.py --recortar-contextos, 72 Trechos cortados)",
+    "insumo": "a lista de nomes prováveis é larga: corta o contexto também em nomes de instituição, de lugar fora da tabela do IBGE e em títulos ('Cajuína do Piauí', 'Estado do Piauí'), e o seletor de citação de 72 Trechos ficou mais curto; no texto exato restou só autor citado com a obra",
+    "aonde": "um corte de nomes que proteja as pessoas sem encurtar o contexto por instituição, lugar ou título"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "sai_fora_da_promessa",
+    "alvo": "—",
+    "motivo": "Não impede a promessa: o texto exato do Trecho fica inteiro e localizado; o corte largo só encurta o contexto em volta, em favor de proteger pessoas (K-111, nomes-0.1).",
+    "evidencia": [
+     "scripts/nomes_provaveis.py (nomes-0.1)",
+     "trilhas/insumos-planejamento.md, insumo 100 ('no texto exato restou só autor citado com a obra')"
+    ]
+   },
+   "texto_do_alvo": []
+  },
+  {
+   "n": 102,
+   "insumo": {
+    "data": "05/11/2026",
+    "origem": "cartão K-112, scripts/ler_fonte.py (ler-fonte-0.2, IA_INTERVALO_S) e insumos 78 e 96",
+    "insumo": "a leitura da cópia arquivada, só na falha, usa 1 pedido a cada 10 s ao Internet Archive e para no primeiro HTTP 429 do lote; os 10 s são valor provisório, porque a página do Internet Archive sobre ritmo não foi lida",
+    "aonde": "o ritmo que o Internet Archive aceita conferido na fonte e gravado no registro de valores"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "112",
+    "motivo": "O ritmo que o Internet Archive aceita só volta a importar se a F-0034 (termos não lidos pelo robô; vale agora) se liberar, e isso depende do [ABERTO] da D-049, que é o 112 (com o 109).",
+    "evidencia": [
+     "acervo/faltas/F-0034.json",
+     "scripts/ler_fonte.py, l. 51 (IA_INTERVALO_S = 10.0)",
+     "AGENTS.md, D-049 [ABERTO]"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "112",
+     "insumo": {
+      "data": "05/11/2026",
+      "origem": "conversa de planejamento de 05/11/2026; trilhas/decisoes/D-049.json, diretriz (5); trilhas/planejamento/rodadas/2026-11-05_conversa/falas-vicente.md",
+      "insumo": "a D-049 ficou com o alcance de 'intervenção humana' em aberto: a pergunta de 05/11 sobre a busca à mão nas fontes que barram o robô (D-044), o pedido de acesso a uma instituição (D-048, item 4), a entrada por link de Vicente, a leitura de termos no navegador (K-208) e a caixa de e-mail que receberia os Alertas do Google ficou sem resposta; até ela, esses casos seguem como o plano os tem",
+      "aonde": "o alcance de 'intervenção humana' na D-049 dito por Vicente caso a caso, para a ferramenta aplicar sem dúvida"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O [ABERTO] da D-049: se 'intervenção humana' alcança a busca à mão, o pedido de acesso a instituição, a entrada por link, a leitura de termos no navegador e a caixa dos Alertas; e a fonte cujos termos o robô não lê."
+     }
+    }
+   ]
+  },
+  {
+   "n": 103,
+   "insumo": {
+    "data": "05/11/2026",
+    "origem": "cartão K-112, scripts/gerar_termo.py --gerais (consultas-gerais-0.1) e ambientes/consultas/CO-0008.json",
+    "insumo": "a regra das Consultas gerais tira do acervo os tipos dos Processos (menos coleta, circulação e adição, tidos por genéricos) e usa a classe 'bebida' da Fundação; a mista de CLB em geral só nasce de Termo atestado de outro termo, e hoje não há nenhum (vinho de caju, mocororó e caoi são candidatos); a busca do qualificador da classe no conceito ('bebida fermentada') foi tentada e tirada, porque o primeiro Termo deu 'bebida obtida'",
+    "aonde": "Consultas gerais que acham CLB de outros termos sem depender de escolha manual de palavras, com a lista de genéricos e a classe aprovadas como regra"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "140",
+    "motivo": "Mesmo problema, e o 140 o cita: Consultas gerais que achem CLB de outros termos sem escolha manual de palavras.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumo 140 ('Complementa os insumos 21, 103 e 118')"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "140",
+     "insumo": {
+      "data": "14/11/2026",
+      "origem": "conversa de 14/11/2026 depois da entrega do piloto (pergunta de Vicente sobre o que o piloto achou); contagem por script fora da ferramenta, não gravado, nos campos titulo e citacao_resumo de entrada/EN-*.json (2.578 Entradas no main de 14/11); ambientes/consultas/CO-0008.json; scripts/fila_ia.py --resumo",
+      "insumo": "Fora a cajuína, nenhuma CLB foi do bruto à ficha, e as 2.544 Entradas brutas esperam a rotina com IA, que hoje não propõe (D-055, D-056). A Consulta geral CO-0008 ('bebida' com os descritores do processo da cajuína: extração do suco, clarificação, filtração, envase, tratamento térmico, higienização) trouxe sobretudo tecnologia de alimentos: na contagem crua de nomes em título e resumo das 2.578 Entradas (sem acento, palavra inteira), suco 205, cerveja 63, refrigerante 25, vinho 20, água de coco 19, bebida láctea 19, cachaça 19; nomes de bebidas nativas testados como exemplo (D-017), cauim, caxiri, aluá, chicha, tarubá e jurema, dão 0, e tiquira 1. Na fila_ia.py, a faixa 2 (forma 'bebida' no título, 56 Entradas) vem depois das 49 da faixa 1: com 1 lote de 15 por quinta, a primeira Entrada de outra bebida seria lida na 4ª rodada. Complementa os insumos 21, 103 e 118.",
+      "aonde": "as rotinas achando também CLB nativas e de outros termos (princípio 6; D-032), com o alcance de cada Consulta geral medido e dito (D-030)"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "As rotinas só acham CLB cujo nome a ferramenta já conhece: a Consulta geral trouxe sobretudo tecnologia de alimentos, nomes de bebidas nativas dão 0, e o alcance de cada Consulta não é medido nem dito."
+     }
+    }
+   ]
+  },
+  {
+   "n": 109,
+   "insumo": {
+    "data": "05/11/2026",
+    "origem": "conversa de planejamento de 05/11/2026; trilhas/2026-11-04_K-112/triagem-fontes.json (itens AM-0007 e AM-0026); acervo/faltas/F-0034.json; trilhas/decisoes/D-042.json, diretriz (1)",
+    "insumo": "quando a página de termos de uso de uma fonte não abre para o robô (casca de JavaScript), a triagem do K-112 decidiu de dois jeitos: no Internet Archive, Falta que barra agora (F-0034), porque sem ler os termos não se descarta proibição expressa; na OpenAlex, sem Falta, porque a documentação para desenvolvedores convida o uso sem chave; a página de bots do Internet Archive também dá regras ao acesso automatizado (User-Agent descritivo, respeito ao 429); a D-042 nomeia como barreira a proibição expressa nos termos ou no robots.txt e não diz o que vale quando os termos não abrem",
+    "aonde": "uma regra única para a fonte cujos termos de uso o robô não consegue ler, aplicada igual a toda fonte pela triagem jurídica"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "112",
+    "motivo": "A D-049 pôs a fonte cujos termos o robô não lê no mesmo [ABERTO] do alcance de 'intervenção humana' ('a fonte cujos termos o robô não lê (insumo 109)'); a leitura de termos no navegador é um dos casos do 112.",
+    "evidencia": [
+     "AGENTS.md, D-049 [ABERTO]"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "112",
+     "insumo": {
+      "data": "05/11/2026",
+      "origem": "conversa de planejamento de 05/11/2026; trilhas/decisoes/D-049.json, diretriz (5); trilhas/planejamento/rodadas/2026-11-05_conversa/falas-vicente.md",
+      "insumo": "a D-049 ficou com o alcance de 'intervenção humana' em aberto: a pergunta de 05/11 sobre a busca à mão nas fontes que barram o robô (D-044), o pedido de acesso a uma instituição (D-048, item 4), a entrada por link de Vicente, a leitura de termos no navegador (K-208) e a caixa de e-mail que receberia os Alertas do Google ficou sem resposta; até ela, esses casos seguem como o plano os tem",
+      "aonde": "o alcance de 'intervenção humana' na D-049 dito por Vicente caso a caso, para a ferramenta aplicar sem dúvida"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O [ABERTO] da D-049: se 'intervenção humana' alcança a busca à mão, o pedido de acesso a instituição, a entrada por link, a leitura de termos no navegador e a caixa dos Alertas; e a fonte cujos termos o robô não lê."
+     }
+    }
+   ]
+  },
+  {
+   "n": 124,
+   "insumo": {
+    "data": "13/11/2026",
+    "origem": "cartão K-115a (bloco 12): testes/relatorio-modelos.md e trilhas/2026-11-12_K-115a/",
+    "insumo": "o TR-0031 (Embrapa 2011) diz que a cajuína 'foi desenvolvida pelos indígenas'; a D-047 lê que nenhuma fonte atribui o saber da cajuína a povo como detentor; o juridico (Sonnet) fechou sem Falta pela D-047 e anotou a tensão; a lista de palavras da triagem fixa não pega 'índios' nem 'indígenas'; o exemplo falta-conhecimento-tradicional.json da triagem-juridica cita um guia que não existe (G-sisgen-cadastro-de-acesso)",
+    "aonde": "a premissa da D-047 relida diante de atribuição histórica de origem, e a triagem fixa e os exemplos coerentes com os guias"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "87",
+    "motivo": "A releitura da premissa da D-047 diante de atribuição histórica de origem ('foi desenvolvida pelos indígenas') é parte da regra geral de conhecimento tradicional (87). Vão junto, ditas no 87: a lista da triagem fixa sem 'índios' e 'indígenas' (também do 53) e o exemplo da triagem-juridica que cita um guia que não existe (conserto de harness).",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 87 e 124",
+     "AGENTS.md, D-047"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "87",
+     "insumo": {
+      "data": "30/10/2026",
+      "origem": "cartão K-110, lote de correção de 30/10/2026 (fala de Vicente, item d, proposta dele; D-047, diretriz 5; princípio 12)",
+      "insumo": "proposta de Vicente: em vez de barrar a descrição do saber público, o juridico avisa sempre da lei e do que fazer em cada uso que a ferramenta propõe (educação, pesquisa e o resto do campo de ação), como pede o princípio 12; a D-047 vale para a cajuína e, no K-110, para a CLB que as regras mostrarem do mesmo tipo; a regra geral para as CLB seguintes ficou como proposta para o planejamento",
+      "aonde": "uma regra geral de conhecimento tradicional para as CLB seguintes, com aviso da lei e do caminho em cada uso, no lugar da barreira à descrição do saber público"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "Não há regra geral de conhecimento tradicional para as CLB seguintes: a D-047 vale só para a cajuína e a D-057 só para as três candidatas; a proposta de Vicente é avisar sempre da lei e do caminho em cada uso, sem barrar a descrição do saber público."
+     }
+    }
+   ]
+  },
+  {
+   "n": 130,
+   "insumo": {
+    "data": "13/11/2026",
+    "origem": "cartão K-113: scripts/fila_ia.py (fila-ia-0.1) e scripts/ler_fonte.py (teste do Oasisbr em 13/11)",
+    "insumo": "o Oasisbr só se lê pelo link de origem que a API dá (a página do registro pede verificação de navegador), e o link pode cair num host que o robots.txt veda (Sucupira); o ler_fonte.py grava a página de verificação como texto (123 caracteres) em vez de tratá-la como bloqueio; e a amostra sorteada (amostra-0.2) mistura no universo as Entradas da camada 1, que a segunda leitura da camada 2 não precisa ler",
+    "aonde": "a leitura das Entradas do agregador e a amostra da camada 2 medindo só o que a IA produziu"
+   },
+   "vira_no_mapa": "a definir pelo planejamento",
+   "proposta": {
+    "acao": "junta",
+    "alvo": "68",
+    "motivo": "A leitura do agregador (só pelo link de origem, às vezes em host vedado; a página de verificação gravada como texto) é o mesmo problema do 68: ler cada fonte pela via que ela permite e dizer o bloqueio como Falta, nunca gravá-lo como texto. A parte da amostra da camada 2 é a do 70, dita lá.",
+    "evidencia": [
+     "trilhas/insumos-planejamento.md, insumos 68, 70 e 130"
+    ]
+   },
+   "texto_do_alvo": [
+    {
+     "alvo": "68",
+     "insumo": {
+      "data": "29/10/2026",
+      "origem": "cartão K-109, leitura das Fontes (scripts/ler_fonte.py, ler-fonte-0.1; manifestos K109-L1 e K109-L2)",
+      "insumo": "o repositório da UFRN (DSpace 7, página em Angular) devolve ao robô uma página com só 'DSpace', sem meta citation_pdf_url nem link do PDF: 4 das 30 Entradas lidas ficaram sem texto e em quarentena ou a caminho dela; a UFCG não respondeu, e um PDF da Infoteca-e é imagem sem texto",
+      "aonde": "o texto das teses de cada repositório lido pela via que a ficha de acesso dele mostrar, com o que não se lê dito como Falta e caminho"
+     },
+     "na_proposta": {
+      "acao": "fica",
+      "problema": "O texto de cada repositório não se lê pela mesma via (DSpace 7 em Angular sem link do PDF, servidor fora do ar, PDF em imagem, agregador que só dá o link de origem), e o que não se lê nem sempre vira Falta com caminho."
+     }
+    }
+   ]
+  }
+ ]
+}
