@@ -428,6 +428,13 @@
 - [x] **K-114 fechado (14/11):** Vicente revisou o rascunho ("revisado e de acordo para o piloto"); quadro com o K-114 em Concluído e o K-116 em Fazendo.
 - [x] **K-116 fechado (14/11):** relatório do piloto em `trilhas/2026-11-14_relatorio-piloto/relatorio-piloto.md`, com os números de `scripts/relatorio_piloto.py` 0.2 (`dados.json`); redator (EX-0152 e correção) e auditor (8 achados aplicados, entre eles a dupla contagem das linhas do curador; BNCC 7 de 7, nível oficial); checar_fundacao (0 achados) e comparar_anexos (idênticos) passam; insumos 136 a 139. **A entrega do piloto (D-056) está completa.**
 
+## Conversa de planejamento de 19 e 20/11/2026 (D-057), sem agentes
+
+- [x] **Abertura (19/11):** a passagem de 15/11 lida e seguida (seção 6); modelo conferido (Opus 5.5); `relatorio_dia.py` sem novidade. A explicação do gasto foi devolvida com os números de `dados.json`; Vicente deixou a pergunta sobre a leitura sem IA para os aprimoramentos (insumo 141).
+- [x] **Escopo da D-057 refeito (20/11):** os dez nomes das 199 Entradas vinham da contagem da conversa de 14/11, não de Vicente, e a leitura do "199" tirou sem pergunta as 7 Entradas das CLB candidatas (insumo 142; logs EX-0158 e EX-0159). Medida por script avulso: das 567 Entradas da CO-0008, 31 têm palavra ligada a cultura no título ou resumo, a maioria "cerveja artesanal". "Caium" não está em nenhum arquivo da base, e "cauim" só no dossiê do Iphan; o nome da CL-0004 é o assunto do insumo 91.
+- [x] **D-057 (20/11):** essência v5 confirmada por Vicente ("pode"); `trilhas/decisoes/D-057.json`; o K-126 no quadro (desenvolvimento, A fazer, primeiro). **Conflito registrado:** muda, só para as três CLB, a D-039, a D-038 (leitura do auditor), a D-056 (triagem jurídica e segunda leitura) e a D-046 (cartão fora do K-004).
+- [ ] **Comentário da fala 11** (limpar a lista do que foi anotado antes da fila do K-004; automatizações só depois): essência devolvida, à espera de confirmação (seria a D-058).
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |
@@ -495,3 +502,4 @@ Uma linha por conversa do projeto, nas três frentes. A0 e A1 são o uso semanal
 | 11/11–18/11/2026 | desenvolvimento | K-125 (conversa 2, continuação: limites da chave, 13/11) | 53 | 77 | 24 | 0 (sem agentes do Claude; o Gemini pelo contador próprio) | 0 | janela de 5 h: 1% ao abrir (linha [Uso do plano] do hook, estimada); Opus 5.5 médio; A1 pela linha [Uso do plano] do hook na retomada de 14/11 (o hook dava ~7% para a sessão: os 24 pp podem misturar uso de fora do projeto, contados aqui para não subestimar) |
 | 11/11–18/11/2026 | desenvolvimento | K-114 (conversa 1, 14/11) | 83 | não lido | 4 (estimado: 2 da conversa + 1,66 do lote) | 103.960 | 14 | janela de 5 h: 83% ao abrir (linha [Uso do plano] do hook, estimada; vira ~10h10): um lote só e a conversa fecha com o estado salvo; Opus 5.5 médio; tetos de 50 e 60 pp suspensos por Vicente (14/11), vale a linha de 90%; agente campo-de-acao, EX-0151 |
 | 11/11–18/11/2026 | desenvolvimento | K-116 (mesma conversa do K-114, 14/11) | 83 | 85 | 2 | 348.996 (redator 103.555 e 132.575 na correção; auditor 112.866) | 46 | A0 e A1 pela linha [Uso do plano] do hook, estimadas (a semana do hook, de 83% a 85%, cobre também o K-114); janela de 5 h renovada às 10h10; Opus 5.5 médio |
+| 18/11–25/11/2026 | planejamento | conversa de 19 e 20/11 (D-057; fora do quadro) | 25 | em curso | — | 0 | 0 | A0 pela linha [Uso do plano] do hook em 19/11, estimada (a da abertura, 177%, ainda era da semana anterior); 38% (estimado) ao registrar a D-057; Opus 5.5, esforço máximo e ultracode desde 20/11; sem agentes |

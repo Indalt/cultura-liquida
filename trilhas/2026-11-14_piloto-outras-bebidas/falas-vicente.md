@@ -72,8 +72,24 @@ Perguntado o que mais quer ver passar pela ferramenta, Vicente respondeu:
 
 **Leitura pela regra, sem decisão:** a regra de termos não impõe nome de cima nem trata variação como ruído (registrar-termo; princípio 2): "caoi" fica, porque está na fonte. Resolver o nome é registrar no mesmo Termo as formas da mesma bebida, cada uma com a origem: "caoi" e "caoim" (Embrapa 2009), "cauim" (dossiê do Iphan, se o trecho falar da mesma bebida) e "caium", a forma de Vicente, candidata até uma fonte a abonar. Grafia "caium" registrada como Vicente escreveu, salvo correção dele.
 
-## Essência v5 (pendente; vira a D-057 com a confirmação)
+## Essência v5 (confirmada em 20/11 pela fala 11; registrada como D-057)
 Antes da nova versão da Fundação, o piloto termina com as três CLB que a ferramenta já achou pela regra além da cajuína, e com nada além delas: vinho de caju (CL-0002), mocororó (CL-0003) e a bebida que a Embrapa chama "caoi ou caoim" (CL-0004). Elas passam, com as 7 Entradas que as citam e o que o acervo já tem, por tudo o que a ferramenta oferece hoje, agentes com IA incluídos: Evidências e Proposições; Termo (o da CL-0004 pela regra de termos, com as formas das fontes e a de Vicente, "caium"); CLB; ficha com os quatro critérios de prática cultural; Educação; grafo 4D; página no wiki local. O trabalho se faz em conversas de trabalho, num cartão próprio (K-126), sem rotina, com a marca de piloto, sem verificação nem teste (sem triagem jurídica, segunda leitura, amostra nem teste de modelo); o resultado sai como proposta, não como conhecimento aprovado (D-038). Ficam o trecho localizado e μ e λ por script, o validador, a busca de dado pessoal e o detalhe de saber indígena na pasta local, fora do Git (D-043). Muda, só para as três: a D-039 (no piloto, só a cajuína ia até a ficha), a leitura do auditor (segunda leitura e o que sustenta aviso, saúde ou política, D-038), a triagem jurídica e a segunda leitura da lista de rigor da D-056, e a D-046 (cartão fora da reunião do K-004). Custo, teto pelos números da cajuína: de 1 a 1,4 milhão de tokens, de 16 a 22 pp, em cerca de dez chamadas de agente, uma por vez. [ABERTO]: "o que falta vem na próxima semana" (fala 3).
+
+## Falas 10 e 11 (20/11): passagem aos aprendizados, confirmação e comentário novo
+Devolvida a essência v5, Vicente escreveu:
+10. "o que faltava eram as os. se ja terminamos agora podemos passar para o visto de passagem e o que coletamos de aprendizado para correcao do cultura liquida."
+
+Resposta: as três bebidas ainda não passaram pela ferramenta (nada roda sem a D-057 registrada); o aprendizado está na passagem de 15/11, nos insumos (142, o último gravado nesta conversa) e no roteiro do K-004; pedida a confirmação da D-057. "As os" (falas 8 e 10) foi lido como as tarefas em segundo plano (busca de dado pessoal, commit e envio), que terminaram, e "visto de passagem" como o que se viu pelo caminho e a passagem de 15/11; nenhuma das duas leituras foi conferida com ele.
+
+Depois da pergunta "posso registrar a D-057 com o texto da mensagem anterior?", Vicente respondeu:
+11. "pode. so nao podemos fazer uma fila enorme com problemas a serem resolvidos que sao duplicados, que nao sao problemas de fato para que a ferramenta cumpra o que promete e que a limpeza destas tarefas seja feita antes de fazer a fila do que precisamos para so depois liberar o cultura liquida para automatizacoes."
+
+"Pode" confirma a essência v5: registrada como D-057 (`trilhas/decisoes/D-057.json`), com o K-126 no quadro.
+
+## Essência devolvida do comentário da fala 11 (pendente; seria a D-058)
+Na correção da ferramenta (a reunião do K-004), a lista do que foi anotado se limpa antes de virar fila: sai o que é repetido e o que não é problema de fato para a ferramenta cumprir o que promete. Só com a lista limpa se monta a fila do que é preciso fazer, e só depois a ferramenta é liberada para as automatizações.
+
+Leituras a conferir: (a) "fila de problemas": os insumos abertos (uns 85 dos 142) e os cartões que sairiam deles (etapa 5 do K-004); (b) "limpeza": o repetido se junta ao insumo que já trata do assunto, e o que não é problema para a promessa sai da fila, sem se apagar: cada saída fica com o motivo (acordo 4); (c) "o que a ferramenta promete": o que a v0.2 descreve e o piloto testou (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda; D-035), com cada informação rastreável até a origem; (d) "automatizações": a operação com IA em escala, que a D-056 punha logo depois da entrega (a rotina do Claude do K-113 reconfigurada para propor e reler); a rotina diária sem IA segue como está. [ABERTO], perguntado: o que precisa estar pronto para liberar as automatizações.
 
 ## Estado
 Nada mudou na ferramenta. Custo previsto: 14 lotes de 15 Entradas; um lote da rotina com IA custou de 270 a 350 mil tokens em 13/11 (insumo 132). Nada roda antes de 18/11, 23h: a semana da conta está em 88% (estimada), e o limite é 90%.
