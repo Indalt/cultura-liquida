@@ -1,6 +1,9 @@
 #!/bin/sh
-# Gancho de pre-commit do projeto Cultura Líquida (K-105, bloco 3; l. 707).
-# Roda o validar_acervo.py antes de cada commit; acervo inválido não entra.
+# Gancho de pre-commit do projeto Cultura Líquida (K-105, bloco 3; l. 707; D-059).
+# 1. O validar_acervo.py antes de cada commit; acervo inválido não entra.
+# 2. A trava dos testes (D-059): caso de teste mudado ou tirado só entra com confirmação de Vicente.
+# 3. A suíte de testes, quando o commit toca código, esquemas, testes ou harness (D-059): teste que
+#    deixa de passar barra a mudança até ela ser verificada e confirmada (ou desfeita).
 # Instalação (uma vez por cópia do repositório): git config core.hooksPath .githooks
 RAIZ="$(git rev-parse --show-toplevel)"
 if [ -x "$RAIZ/.venv/Scripts/python.exe" ]; then PY="$RAIZ/.venv/Scripts/python.exe"
@@ -11,3 +14,26 @@ PYTHONUTF8=1 "$PY" "$RAIZ/scripts/validar_acervo.py" || {
   echo "pre-commit: o validar_acervo.py reprovou; corrija o acervo antes do commit." >&2
   exit 1
 }
+PYTHONUTF8=1 "$PY" "$RAIZ/scripts/trava_testes.py" --pre-commit || {
+  echo "pre-commit: a trava dos testes reprovou (D-059): verifique por que o caso mudou e grave a confirmação de Vicente (scripts/trava_testes.py --confirmar), ou desfaça a mudança." >&2
+  exit 1
+}
+if git diff --cached --name-only | grep -qE '^(scripts|esquemas|testes|\.claude|\.githooks|\.github)/'; then
+  SAIDA="$(mktemp)"
+  if ! PYTHONUTF8=1 "$PY" "$RAIZ/scripts/rodar_testes.py" > "$SAIDA" 2>&1; then
+    # só a falha nova barra; a de antes da trava fica em testes/falhas-conhecidas.txt (a lista só diminui)
+    NOVAS="$(grep -E '^FALHA' "$SAIDA" | sed -E 's/^FALHA +//; s/ — .*$//' | grep -vxF -f "$RAIZ/testes/falhas-conhecidas.txt")"
+    TRAVA="$(grep -E '^TRAVA' "$SAIDA")"
+    if [ -n "$NOVAS$TRAVA" ]; then
+      printf '%s
+%s
+' "$NOVAS" "$TRAVA" >&2
+      rm -f "$SAIDA"
+      echo "pre-commit: a suíte de testes reprovou (D-059): a mudança não entra sem verificar e confirmar; desfaça, conserte o código ou confirme a mudança do teste." >&2
+      exit 1
+    fi
+    echo "pre-commit: só as falhas conhecidas (testes/falhas-conhecidas.txt)"
+  fi
+  tail -1 "$SAIDA"
+  rm -f "$SAIDA"
+fi

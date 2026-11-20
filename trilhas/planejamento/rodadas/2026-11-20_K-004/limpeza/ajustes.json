@@ -1,0 +1,47 @@
+{
+  "versao": "limpeza-0.1",
+  "data": "2026-11-20",
+  "nota": "Ajustes depois da releitura (D-038: quem propõe não aprova). Cada ajuste foi proposto por quem não é o curador (um releitor ou o agrupador cego) e aprovado pelo curador; ou é a volta à fila de um item refutado, que só precisa do problema escrito. A proposta original fica em proposta.json; nada se apaga.",
+  "itens": [
+    {"n": 50, "acao": "junta", "alvo": "V-39", "estado": "ajustado: junta ao V-39, criado na limpeza",
+     "proposto_por": "releitor R1 (criar um V novo e só então juntar)", "aprovado_por": "curador",
+     "motivo": "A proposta juntava ao proxima-versao.md sem linha que levasse o assunto; o V-39 foi escrito no proxima-versao.md (Fundação l. 509 e brief, bloco 5, diante das D-043 e D-048), e o 50 se junta a ele."},
+    {"n": 75, "acao": "junta", "alvo": "K-005", "estado": "ajustado: junta ao K-005, 3ª passada",
+     "proposto_por": "releitor R2", "aprovado_por": "curador",
+     "motivo": "O lote de máquina está no escopo escrito da 3ª passada do K-005 ('amostra, fila, lote de máquina, valências'), onde o mapa já punha o 75; o 132 não leva a regra de divisão de fonte longa. A regra de divisão vai escrita no K-005 na etapa 5."},
+    {"n": 102, "acao": "junta", "alvo": "K-208", "estado": "ajustado: junta ao K-208",
+     "proposto_por": "releitor R3", "aprovado_por": "curador",
+     "motivo": "O ritmo do Internet Archive só importa quando a F-0034 se liberar; liberar a F-0034 (ler os termos e a página de bots do Internet Archive) é o K-208. O 112 fica como contexto (o [ABERTO] da D-049)."},
+    {"n": 113, "acao": "junta", "alvo": "126", "estado": "ajustado: junta ao 126",
+     "proposto_por": "agrupador cego (mesmo problema que o 126) e releitor R1 (anotar no 126 a volta do pull request)", "aprovado_por": "curador",
+     "motivo": "A proteção do main por regra, com a junção da rotina mantida por um caminho que a proteção aceite, é um conserto só: o 126 o pede agora (a rotina com IA) e o 113 na fase 2 (outra pessoa com escrita). No lugar de sair como fase 2, junta-se ao 126, que deve já prever a volta do pull request."},
+    {"n": 101, "acao": "fica", "familia": "B", "estado": "refutado na releitura: fica",
+     "proposto_por": "releitor R2 (refutação)", "aprovado_por": "não se aplica (o item volta à fila)",
+     "problema": "A cadência da D-048 roda por uma regra com números que o plano não fixa (o mínimo da linha, a dobra até 28 dias, a volta com novidade), guardados em scripts/agendar.py e ambientes/rotinas.json, fora do registro de valores, sem a calibração pelo rendimento dos primeiros 7 dias.",
+     "motivo": "O K-005 não leva a cadência no escopo escrito (os números da D-038 e do registro), e a rotina diária é coleta: fica na fila, com destino na etapa 5."},
+    {"n": 135, "acao": "fica", "familia": "M", "estado": "refutado na releitura: fica",
+     "proposto_por": "releitor R1 (refutação)", "aprovado_por": "não se aplica (o item volta à fila)",
+     "problema": "A vistoria da casa (scripts/manutencao.py) rodou uma vez, à mão: falta decidir quando ela roda sozinha; os limites provisórios estão no script e não no registro de valores; a seção de decisões do AGENTS.md pesa em toda conversa e em todo agente (só Vicente pode encurtá-la); o scripts/resumo_coleta.py não é chamado; a ramificação remota claude/rotina-ia-2026-11-13 sobrou.",
+     "motivo": "O 94 limpa uma vez o que sobrou; o 135 mantém a casa limpa. Só o script sem uso e a ramificação são resíduo do tipo do 94; o essencial do 135 não cabe nele."},
+    {"n": 139, "acao": "fica", "familia": "A", "estado": "refutado na releitura: fica",
+     "proposto_por": "releitor R2 (refutação)", "aprovado_por": "não se aplica (o item volta à fila)",
+     "problema": "A tabela 'Semana da conta' do checklist é lida por duas cópias da função numero() (orcamento.py e relatorio_piloto.py), com o medido e o estimado na mesma célula; não há leitor único.",
+     "motivo": "O defeito não é o do 136 (tokens dos logs contados em dobro): o conserto de um não resolve o outro. Fica na fila, perto do 136."}
+  ],
+  "cruzamento": [
+    {"insumo": 2, "decisao": "Mesmo destino do 1: a lista do proxima-versao.md (o 2 no V-36), material da etapa 6."},
+    {"insumo": 11, "decisao": "Mesmo destino do 1: a lista do proxima-versao.md (o 11 no V-35), material da etapa 6."},
+    {"insumo": 50, "decisao": "Mesmo destino do 1: a lista do proxima-versao.md (o 50 no V-39, criado na limpeza), material da etapa 6."},
+    {"insumo": 21, "decisao": "Fica junto ao 140: o 91 se resolve no K-126 atestando os Termos de três CLB, o que não resolve o 21 em geral (CLB cujo nome nenhum Termo registra). Na etapa 5, escrever no 140 que o script de menções só vê o registro de Termos."},
+    {"insumo": 130, "decisao": "Fica junto ao 68 (a leitura do agregador e o bloqueio dito como Falta); a parte da amostra da camada 2 vai escrita no 70 na etapa 5, como pede a releitura R3."}
+  ],
+  "leitura": [
+    "Leitura do curador, sobre o que a releitura e o cruzamento cego mostraram; não é decisão.",
+    "A hipótese de Vicente se confirma: dos 82 abertos, 50 saem da contagem (29 se juntam ao que já trata do assunto, 6 já estavam resolvidos e 15 não são problema da promessa da fase 1) e 32 ficam, em 12 famílias. As famílias, não os insumos, são o tamanho real da fila que a etapa 5 vai montar.",
+    "O mesmo problema foi anotado de novo à medida que a construção avançava, cada vez por um cartão: a medida de tokens (15 no K-001, 43 no K-106, 136 no K-116); as Consultas que não acham outras CLB (21 no K-003, 103 no K-112, 140 no K-116); a regra de conhecimento tradicional (66 no K-109, 87 e 90 no K-110, 124 no K-115a); a proteção do main (insumo 3, item 3, na 6C; 113 no K-112; 126 no K-113); a Falta de busca (45 no K-107, 55 no K-108).",
+    "Fechar o insumo quando o cartão fecha não prova que o problema acabou: o agrupador cego achou 15 abertos que repetem um insumo fechado cujo problema continuou depois do cartão (entre eles 137 e 47, do K-108; 54 e 44, do K-108; 140 e 118, do K-113; 97 e 89, do K-111; 141 e 60, do K-002; 136 e 5, do K-101). O lista_abertos.py fecha pela coluna do quadro, não pelo problema; isso vale ler junto com a etapa 5, que dá o destino de tudo de uma vez.",
+    "Outra parte do acúmulo são regras e números que a construção teve de criar onde o plano não dizia, e que a ferramenta usa sem a aprovação de Vicente nem a calibração pela medida: a cadência das rotinas (101), as listas e perguntas da triagem fixa (53, com o 67 e o 124), a regra das Consultas gerais (103, junto ao 140), os limites da vistoria (135) e o ritmo do Internet Archive (102). Vários moram em scripts, fora do registro de valores.",
+    "Pelas próprias palavras dos insumos, cinco dos 32 tocam a operação com IA em escala que a D-058 libera depois da fila: a principal protegida por regra (126, com o 113), a colisão de IDs entre camadas (129), a amostra que audita cada lote e camada (70), o custo da rodada medido e o lote calibrado (132) e a tabela de nomes ao alcance da rotina (128). É leitura para a etapa 5 e para o [ABERTO] da D-058, não decisão.",
+    "O agrupador cego marcou o 94 (passo de limpeza da ferramenta) e o 135 (vistoria da casa) como fora da promessa; ficam por serem pedido de Vicente (94, de 30/10) e porque a releitura do 135 o deixou na fila. Se arrumar a casa conta como parte do que a ferramenta promete é regra, e a regra é de Vicente."
+  ]
+}

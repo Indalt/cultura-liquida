@@ -1,0 +1,8 @@
+{
+ "versao": "trava-testes-0.1",
+ "nota": "Impressão de cada caso de teste. Não se edita à mão: casos novos entram por trava_testes.py --gravar-novos; caso mudado ou tirado, por --confirmar (D-059).",
+ "casos": {
+  "testes/nucleo/casos.json::a": "2caef135b6636cd3",
+  "testes/nucleo/casos.json::b": "cd410ed80704d3b2"
+ }
+}

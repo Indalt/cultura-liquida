@@ -1,0 +1,17 @@
+{
+  "id": "D-058",
+  "data": "2026-11-20",
+  "essencia": "Na correção da ferramenta, a lista do que foi anotado se limpa antes de virar fila: sai o que é repetido e o que não é problema de fato para a ferramenta cumprir o que promete. Só com a lista limpa se monta a fila do que é preciso fazer, e só depois a ferramenta é liberada para as automatizações.",
+  "diretriz": "(1) A reunião do K-004 (D-046) começa pela limpeza dos insumos abertos (uns 85 dos 142 em 20/11), antes de qualquer cartão novo: o insumo repetido se junta ao que já trata do assunto, e o que não é problema de fato para a ferramenta cumprir o que promete sai da fila. Nada se apaga: cada junção e cada saída fica com o motivo (acordo 4). (2) O que a ferramenta promete é o que a Fundação v0.2 descreve e o piloto testou: coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D e criar propostas sob demanda (D-035), com cada informação rastreável até a origem (o propósito e o princípio 1). (3) Só com a lista limpa se monta a fila do que é preciso fazer: os cartões novos e o destino de cada insumo que fica, de uma vez (etapa 5 do K-004, D-046). (4) As automatizações, isto é, a operação com IA em escala (a rotina do Claude do K-113 com o avaliador propondo e o auditor relendo, D-056, itens 4 e 6), só são liberadas depois dessa fila. A rotina diária sem IA segue como está, e a rotina do Claude segue como está hoje (só a segunda leitura, sem ninguém propondo). [ABERTO]: se a liberação espera a fila montada ou a fila resolvida (perguntado a Vicente em 20/11, sem resposta).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-20",
+  "fala_original_ref": "trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md (fala 11, a essência devolvida com as leituras e a fala 12, de confirmação)",
+  "palavras_conferidas": [
+    {"palavra": "fila enorme com problemas a serem resolvidos", "sentido_confirmado": "os insumos abertos (uns 85 dos 142) e os cartões que sairiam deles na etapa 5 do K-004"},
+    {"palavra": "limpeza destas tarefas", "sentido_confirmado": "o repetido se junta ao insumo que já trata do assunto; o que não é problema para a promessa sai da fila com o motivo escrito; nada se apaga"},
+    {"palavra": "o que a ferramenta promete", "sentido_confirmado": "o que a v0.2 descreve e o piloto testou: coletar, receber, organizar no wiki, gerar os grafos 4D e criar propostas sob demanda, com tudo rastreável até a origem"},
+    {"palavra": "liberar o cultura líquida para automatizações", "sentido_confirmado": "a operação com IA em escala (a rotina semanal do Claude, que propõe e relê); a rotina diária sem IA segue como está"}
+  ],
+  "substitui": "Muda a D-056 nos itens 4 e 6: a reconfiguração da rotina com IA e a primeira execução em escala deixam de vir logo depois da entrega do piloto e esperam a fila do K-004. Acrescenta à D-046 a limpeza dos insumos antes dos cartões novos.",
+  "marcador": "VIGENTE"
+}

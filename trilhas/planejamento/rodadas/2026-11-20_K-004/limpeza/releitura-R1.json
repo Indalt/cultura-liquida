@@ -1,0 +1,206 @@
+{
+  "lote": "R1",
+  "itens": [
+    {
+      "insumo": 1,
+      "veredito": "confirma",
+      "motivo": "O insumo 1 é a lista do que a v0.2.1 levaria ao texto; cada linha dela tem hoje um V no proxima-versao.md: precedência V-03, rotinas e Actions V-11, saída de reserva V-12, IA por rotina e teto das rotinas V-16, §8 V-27, §9 V-28, §10 V-29, fatos de 17/10 V-17 e V-31, 'único bloqueio' V-21. A etapa 6 do K-004 escreve a Fundação a partir desse arquivo. Não é defeito da ferramenta.",
+      "conferido": [
+        "grep -n '^| V-(03|11|12|16|27|28|29|35|36) ' trilhas/planejamento/proxima-versao.md: as linhas V-03 (l. 15), V-11 (l. 23), V-12 (l. 24), V-16 (l. 28), V-27 (l. 39), V-28 (l. 40), V-29 (l. 41) existem e tratam do que o insumo lista",
+        "grep -n -i 'único bloqueio' em Fundação, brief e mapa: o 'único bloqueio' está em V-21 (proxima-versao.md l. 33) e no mapa l. 181 ('defasado (D-031) -> V-21'); brief l. 451 traz a mesma linha da 6A",
+        "grep 'Anexo C|5.5' em proxima-versao.md: V-17 (l. 29) e V-31 (l. 43) levam os fatos de 17/10 ao §5.5 e ao Anexo C",
+        "quadro.md l. 18: K-004 cita os insumos 1, 2 e 11 e o proxima-versao.md como entrada"
+      ]
+    },
+    {
+      "insumo": 2,
+      "veredito": "confirma",
+      "motivo": "O pedido ao redator já preparado está nomeado no V-36 como o que passa a ter a lista como entrada, com o teto, os validadores e a verificação pelo auditor; é o mesmo insumo, e a etapa 6 do K-004 o usa. Não impede coletar, organizar ou gerar grafo.",
+      "conferido": [
+        "proxima-versao.md l. 48: V-36 'fora do texto: o pedido ao redator | o pedido já preparado (insumo 2) ...' com origem D-035 e 'insumo 2'",
+        "quadro.md l. 18: K-004 cita o insumo 2 na origem"
+      ]
+    },
+    {
+      "insumo": 3,
+      "veredito": "confirma",
+      "motivo": "Os 11 itens da 6C foram distribuídos no mapa §6 e cada parte tem hoje lugar escrito: item 1 no K-005 (cuja origem cita 'insumos 3 (item 1)' e que ainda tem a 3ª passada), 3 em V-12 (e o que o K-113 deixou é o 126, que fica), 4 em K-010 e V-12, 5 em V-13, 6 em V-23 e K-120, 9 e 10 em V-20 e V-30, 11 em V-29 e V-13; os itens 7 (K-111) e 8 (K-002) estão em cartões concluídos; o item 2 vai ao K-004 com a D-037, que tirou a revisão de rotina da base. Ressalva de leitura: o item 8 (lugar das rotinas) e o item 2 estão ancorados no K-002 e na D-037 por decisão e não por texto de cartão; o lugar das rotinas hoje está em D-033, D-048 e V-12.",
+      "conferido": [
+        "mapa-tres-frentes.md l. 339 (linha do insumo 3) lida: 'item 1 -> K-005; 2 -> K-004 (com a D-037); 3 -> K-113 e V-12; 4 -> K-010 e V-12; 5 -> V-13; 6 -> V-23 e K-120; 7 -> K-111; 8 -> K-002; 9...'",
+        "proxima-versao.md: V-12 (l. 24: proteção do main, lugar do material do piloto, 'insumo 3, item 3/4'), V-13, V-20 (autoria 'insumo 3, item 9'), V-23 ('Educação: insumo 3, item 6'), V-29, V-30 existem",
+        "quadro.md: K-005 (l. 17) cita 'insumos 3 (item 1)'; K-010 (l. 20) cobre lugar e visibilidade do repositório (F-0003); K-120 (l. 47) cita 'insumo 3, item 6'; K-110, K-111, K-113 'Concluído'",
+        "insumos-planejamento.md l. 132: o insumo 126 (principal protegida só por instrução) existe e fica na fila"
+      ]
+    },
+    {
+      "insumo": 9,
+      "veredito": "confirma",
+      "motivo": "Contribuição de outras pessoas com os próprios tokens é fase 2: o K-008 cita os insumos 9 e 14 na origem e lista 'tokens próprios' no escopo, vem depois do K-007; a fase 1 é só Vicente e os agentes (D-026).",
+      "conferido": [
+        "quadro.md l. 21: K-008 'Depois do K-007', escopo inclui 'tokens próprios', origem 'insumos 9 e 14'",
+        "AGENTS.md: D-026 'fase 1 só com Vicente e agentes'",
+        "mapa-tres-frentes.md: linha do insumo 9 vira K-008"
+      ]
+    },
+    {
+      "insumo": 10,
+      "veredito": "confirma",
+      "motivo": "É o K-006, com as mesmas habilidades (consolidar-para-planejamento, preparar-tarefa, medir-custo, triar-contribuicao na fase 2); o K-006 cita os insumos 10 e 18 na origem, entra na reunião do K-004 e a primeira habilidade (registrar-melhoria) já está feita no K-103. É ferramenta do planejamento, não da promessa.",
+      "conferido": [
+        "quadro.md l. 16: K-006 'insumos 10 e 18; D-036; P36', habilidades idênticas às do insumo",
+        "mapa-tres-frentes.md l. 346: insumo 10 -> 'K-103 (primeira habilidade); K-006'"
+      ]
+    },
+    {
+      "insumo": 11,
+      "veredito": "confirma",
+      "motivo": "O V-35 diz exatamente isto: checar_fundacao.py volta a cobrar as D-031 em diante quando a próxima versão sair, e o essencias.json ganha termos-chave. A origem do V-35 é o insumo 11. O K-004 também o cita no destino ('o checar_fundacao.py cobrando todas as decisões').",
+      "conferido": [
+        "proxima-versao.md l. 47: V-35 '... volta a cobrar as D-031 em diante no texto ...' origem 'insumo 11'",
+        "quadro.md l. 18: K-004 cita insumo 11 e o destino 'checar_fundacao.py cobrando todas as decisões'"
+      ]
+    },
+    {
+      "insumo": 14,
+      "veredito": "confirma",
+      "motivo": "O lugar do quadro na fase 1 foi decidido (o quadro mora no arquivo, K-001 concluído); Issues, Projects, formulários, LGPD do contribuidor e quem não usa GitHub estão todos listados no escopo do K-008 (fase 2), que cita o insumo 14. Não impede a promessa da fase 1.",
+      "conferido": [
+        "quadro.md l. 11 (cabeçalho): 'Onde o quadro mora: neste arquivo, na fase 1 ... A porta de contribuição da fase 2 é o K-008'",
+        "quadro.md l. 21: K-008 lista 'a porta pelo quadro (Issues, Projects, formulários), quem não usa GitHub, ... LGPD e consentimento'; origem 'insumos 9 e 14'"
+      ]
+    },
+    {
+      "insumo": 18,
+      "veredito": "confirma",
+      "motivo": "O script de conferência do mapa e do quadro é do K-006 (origem 'insumos 10 e 18'; mapa §6 l. 354 'K-006'). O script existe hoje em rodadas/2026-10-21_K-001/checar_mapa.py. É ferramenta do planejamento. Observação: o texto do escopo do K-006 não nomeia o script; o vínculo está na origem e no mapa.",
+      "conferido": [
+        "quadro.md l. 16: K-006 origem 'insumos 10 e 18'",
+        "mapa-tres-frentes.md l. 354: '18, script de checagem do mapa ... | P (ferramenta do planejamento); D (construir) | K-006'",
+        "ls trilhas/planejamento/rodadas/2026-10-21_K-001/checar_mapa.py: existe"
+      ],
+      "acao_sugerida": "Ao montar a fila, escrever 'script que confere o mapa e o quadro' no escopo do K-006, não só na origem."
+    },
+    {
+      "insumo": 22,
+      "veredito": "confirma",
+      "motivo": "É o mesmo script do 18 (checar_mapa.py) com um defeito específico (lê a 6A por linhas fixas e passa sem olhar); o mapa §6 já o leva ao K-006 e o conserto do script do 18 (achar a seção pelo título, reprovar se sumir) resolve este. Ferramenta do planejamento, não da promessa. Observação: a origem escrita do K-006 cita só 10 e 18; o 22 chega pelo mapa.",
+      "conferido": [
+        "mapa-tres-frentes.md l. 358: '22, checar_mapa.py lê a 6A do brief por linhas fixas (K-003) | P ...; D (construir) | K-006'",
+        "quadro.md l. 16: origem do K-006 'insumos 10 e 18' (22 não aparece)",
+        "ls checar_mapa.py: existe"
+      ],
+      "acao_sugerida": "Acrescentar o 22 à origem do K-006 ao montar a fila."
+    },
+    {
+      "insumo": 42,
+      "veredito": "confirma",
+      "motivo": "A exportação para SKOS e TBX é fase 2 (Fundação l. 674 e K-122, 'exportações SKOS, TBX e PROV', depois do K-007). O Termo da fase 1 funciona sem ela. A regra da designação preferida já está dita no esquema (a ordem conta; a primeira de cada língua vai ao skos:prefLabel) e o que ficou 'não conferido' (estrutura TBX, altLabel/hiddenLabel) está marcado como F-13 'não conferido' no Anexo C.",
+      "conferido": [
+        "00_Fundacao l. 674: 'exportações para SKOS, TBX e PROV ... com os campos já compatíveis desde a fase 1' na lista da fase 2",
+        "quadro.md l. 49: K-122 inclui 'exportações SKOS, TBX e PROV', 'Depois do K-007'",
+        "esquemas/termo.schema.json l. 5 e l. 56: estrutura compatível com TBX/SKOS, 'não conferido', e a regra de ordem das designações escrita",
+        "mapa-tres-frentes.md l. 378: '42 ... | D | K-122'"
+      ],
+      "acao_sugerida": "Quando o K-122 abrir, conferir F-13 na fonte antes de exportar; nada a fazer na fase 1."
+    },
+    {
+      "insumo": 50,
+      "veredito": "refuta",
+      "motivo": "A proposta junta ao proxima-versao.md, mas a própria proposta admite que o arquivo 'ainda não tem essa linha': não há V sobre D-043/Wayback/captura. A Fundação l. 509 ainda traz o texto antigo (Save Page Now). Sem V escrito, o insumo sairia da contagem sem estar escrito em lugar nenhum que o leve; a regra da junção exige que o assunto 'siga escrito no alvo'. O K-004 cita só os insumos 1, 2 e 11. O problema em si é de alinhamento de texto (etapa 6), não da ferramenta, mas a prova do alvo não se confirma.",
+      "conferido": [
+        "grep -n -i 'D-043|wayback|captura|509' trilhas/planejamento/proxima-versao.md: nenhuma linha",
+        "00_Fundacao_Cultura_Liquida.md l. 509: 'Cópia no Wayback pelo Save Page Now 2' segue com o texto antigo",
+        "quadro.md l. 18: K-004 cita 'insumos 1, 2 e 11', não o 50",
+        "mapa-tres-frentes.md l. 386: '50, Wayback na Fundação depois da D-043 | P | K-004'"
+      ],
+      "parte_nao_coberta": "Todo o conteúdo: não existe V que leve o alinhamento da Fundação l. 509 e do brief bloco 5 à D-043 e à D-048 (captura nova fora do plano).",
+      "acao_sugerida": "Criar um V novo em proxima-versao.md (Fundação l. 509 e brief bloco 5 diante das D-043 e D-048; origem insumo 50) e só então juntar o 50 a esse V; ou deixar o 50 na fila até a etapa 5 com destino K-004."
+    },
+    {
+      "insumo": 79,
+      "veredito": "confirma",
+      "motivo": "A decisão sobre plugins do Quartz e scripts de instalação é do wiki público (Passo 6, K-118, depois do K-010). O wiki local, que é a promessa da fase 1, gerou: K-110 concluído com 'o wiki abrindo na máquina', e a configuração tem CustomOgImages comentado e analytics nulo. Observação: o texto do K-118 não nomeia o assunto; o vínculo está no mapa.",
+      "conferido": [
+        "wiki-local/quartz/quartz.config.ts l. 15 (analytics: null) e l. 89-90 (Plugin.CustomOgImages comentado 'desligado no K-110: pede o sharp')",
+        "quadro.md l. 32: K-110 'Concluído', destino 'o wiki abrindo na máquina, fora do Git'",
+        "quadro.md l. 45: K-118 'Passo 6: acervo e wiki público. Depois do K-010'; mapa l. 415: '79 ... | D | K-118'"
+      ],
+      "acao_sugerida": "Ao montar a fila, anotar no K-118 que decide os plugins e scripts de instalação (insumo 79)."
+    },
+    {
+      "insumo": 113,
+      "veredito": "confirma_em_parte",
+      "motivo": "Hoje só Vicente e a rotina gravam no main, então a falta de regra contra outra pessoa com escrita só pesa na fase 2 (CLAUDE.md l. 26 diz que a proteção volta a exigir pull request nesse caso, com '(insumo, K-008)'). Mas o K-008 não leva o 113 no escrito (origem: insumos 9 e 14), e o assunto é vizinho do 126 (proteção do main contra a rotina com IA), que fica na fila: ambos são regra de proteção do main com a junção da rotina mantida. Sair como fora da promessa vale; deixar sem portador escrito não.",
+      "conferido": [
+        "CLAUDE.md l. 26: 'Volta a exigir pull request quando houver outra pessoa com escrita (insumo, K-008)'",
+        "quadro.md l. 21: origem do K-008 'insumos 9 e 14' (113 não aparece)",
+        "insumos-planejamento.md l. 132: insumo 126 (proteção do main contra a rotina) permanece aberto",
+        "mapa-tres-frentes.md l. 449: '113, proteção do main com outra pessoa | P; D | K-008'"
+      ],
+      "parte_nao_coberta": "Nenhum cartão ou V cita o 113 no escrito; o vínculo com o K-008 está só no mapa e numa frase do CLAUDE.md. A decisão sobre como a junção da rotina sobrevive à proteção que exige pull request é a mesma conversa do 126.",
+      "acao_sugerida": "Sair do 113 como fora da promessa, mas acrescentar o 113 à origem do K-008 e anotar no 126 que a regra de proteção do main deve já prever a volta do pull request."
+    },
+    {
+      "insumo": 133,
+      "veredito": "confirma",
+      "motivo": "A cota e os termos do nível gratuito do Gemini só importam para a rotina com IA no Gemini, que a D-056 estacionou: a IA da operação é a rotina do Claude, e o Gemini volta só com cota paga e decisão nova. O K-125 está estacionado, com estado salvo, e vai à reunião do K-004.",
+      "conferido": [
+        "AGENTS.md, D-056: 'Até haver financiamento, a IA da operação é a rotina do Claude do K-113 ... o Gemini volta com cota paga, por decisão nova'; K-125 estacionado",
+        "quadro.md l. 40: K-125 'Estacionado pela D-056 ... vai à reunião do K-004'",
+        "ls trilhas/2026-11-14_manutencao/retomar-K-125.md e trilhas/decisoes/D-056.json: existem"
+      ]
+    },
+    {
+      "insumo": 134,
+      "veredito": "confirma",
+      "motivo": "É sobre o custo de entrada do executor do Gemini contra o teto semanal da D-054; o executor é o K-125, estacionado pela D-056. A medida (histórico inteiro volta a cada pedido) fica guardada no insumo. Observação: se a rotina do Claude do K-113 mostrar o mesmo crescimento de contexto, será outro insumo, no cartão dela.",
+      "conferido": [
+        "AGENTS.md, D-056 e D-054: teto do Gemini e estacionamento",
+        "quadro.md l. 40: K-125 estacionado, escopo inclui 'o contador semanal de tokens (1 milhão de entrada, 2 milhões de saída)'",
+        "mapa-tres-frentes.md l. 470: '134 ... | D; P | K-125'"
+      ]
+    },
+    {
+      "insumo": 135,
+      "veredito": "refuta",
+      "motivo": "O 94 pede um passo de limpeza único ao fim do piloto (comentários, passos e arquivos temporários sem uso). O 135 junta cinco coisas: quando a vistoria (manutencao.py) roda sozinha, os limites no registro de valores, o peso do AGENTS.md carregado em toda conversa, o script sem uso e a ramificação remota. Só as duas últimas (resumo_coleta.py sem chamada, ramificação sobrada) são resíduo do tipo do 94; o essencial do 135 (vistoria recorrente e peso do AGENTS.md) não cabe no 94. O defeito do peso segue real: o AGENTS.md tem 30.812 bytes e o limite provisório citado é de 24 mil caracteres com o CLAUDE.md. Também o 94 não tem cartão (mapa: 'a definir pelo planejamento'), então juntar não dá destino.",
+      "conferido": [
+        "wc -c AGENTS.md CLAUDE.md: 30812 e 2332 bytes (o AGENTS.md sozinho passa do limite de 24 mil citado no insumo)",
+        "ls scripts/manutencao.py e scripts/resumo_coleta.py: existem; grep 'resumo_coleta' fora de trilhas/logs: só o próprio arquivo cita o nome (nada o chama)",
+        "git branch -r: existe origin/claude/rotina-ia-2026-11-13",
+        "insumos-planejamento.md l. 100: o 94 é limpeza de resíduos no fim do piloto; mapa l. 430 e l. 471: ambos 'a definir pelo planejamento'"
+      ],
+      "parte_nao_coberta": "Quando a vistoria roda sozinha; os limites no registro de valores; o peso do AGENTS.md em toda conversa (só Vicente pode encurtá-lo).",
+      "acao_sugerida": "Deixar o 135 na fila como insumo próprio e relacioná-lo ao 94 (o 94 limpa o que sobrou; o 135 mantém a casa limpa); se quiser reduzir a contagem, só o resumo_coleta.py e a ramificação remota se juntam ao 94."
+    },
+    {
+      "insumo": 138,
+      "veredito": "confirma_em_parte",
+      "motivo": "Avaliar o gatilho da fase 2 é o K-007, e a fase 2 não é a promessa da fase 1. Mas o K-007 só avalia ('a fase 2 aberta, ou o que falta dito') e se apoia em '4 semanas medidas'; ninguém decide como medir as horas de Vicente ou se a condição 2 muda: o K-108 diz que a medição de horas 'segue como registro, não como cartão', e o relatório do piloto confirma que a tabela não tem as colunas do bloco 13. A mesma medida de horas entra no K-005 (3ª passada, 'horas do bloco 13').",
+      "conferido": [
+        "00_Fundacao l. 676-679: condição 2 'as horas reais de 4 semanas couberam em 1 a 3 h' [PROPOSTA]",
+        "relatorio-piloto.md l. 241 e l. 292: horas 'não medidas'; 2 semanas com linha, sem horas; tabela sem as colunas do bloco 13",
+        "quadro.md l. 19: K-007 'Depois do K-116 e de 4 semanas medidas'; l. 51: K-108 'medição de horas ... segue como registro, não como cartão'; l. 17: K-005 cita 'horas do bloco 13'"
+      ],
+      "parte_nao_coberta": "A escolha de como medir as horas ou de rever a condição 2: o K-007 não a decide, ela só aparece como 'o que falta dito'.",
+      "acao_sugerida": "Sair do 138 como fora da promessa, mas ligá-lo também ao K-005 (3ª passada, horas) e escrever no K-007 que a condição 2 precisa de medida ou de revisão antes de avaliar."
+    },
+    {
+      "insumo": 142,
+      "veredito": "confirma_em_parte",
+      "motivo": "Registrar decisões é do harness do planejamento, não da promessa da fase 1, e o erro concreto está corrigido no D-057, que traz as palavras conferidas ('199' e 'estas entradas' com o sentido confirmado). Mas a causa que o insumo aponta (a habilidade registrar-decisao não separa a resposta que confirma a lista da que responde só uma parte) não foi tocada: a habilidade não foi alterada desde o K-111 e não tem texto sobre isso. Como o alvo é '—', sair da fila deixa a falha sem nenhum portador.",
+      "conferido": [
+        "trilhas/decisoes/D-057.json l. 10-11: palavras a conferir com 'sentido_confirmado' (as 7 Entradas; não as 199; insumo 142), confirmada_por_vicente true em 2026-11-20",
+        "git log -3 -- .claude/skills/registrar-decisao/SKILL.md: últimos commits do K-111 e do bloco 2.5; grep por 'separa|confirm|resposta parcial|escopo' no SKILL.md sem resultado",
+        "quadro.md l. 39: K-126 cita 'insumos 91 e 142' na origem; mapa l. 478: '142 ... | a definir pelo planejamento'"
+      ],
+      "parte_nao_coberta": "O conserto da habilidade registrar-decisao (separar a resposta que confirma a lista da que responde parte; o que a sessão põe ou tira por leitura própria volta a Vicente dito como leitura) não tem cartão.",
+      "acao_sugerida": "Sair da fila como fora da promessa, mas juntar o 142 ao K-006 (ciclo execução, insumo, planejamento) ou deixar marcado 'processo do planejamento' na reunião do K-004, para não se perder."
+    }
+  ],
+  "alcance": {
+    "olhado": "O pacote pacote-R1.json (18 itens). No repositório, por grep e faixas de linhas: proxima-versao.md (V-03, 11, 12, 16, 17, 21, 27, 28, 29, 31, 35, 36 e busca por D-043/Wayback), quadro.md (K-004 a K-008, K-010, K-110, K-111, K-113, K-116, K-118, K-120, K-122, K-125, K-126, cabeçalho), mapa-tres-frentes.md (§6, linhas de 3, 10, 18, 22, 42, 50, 79, 94, 113, 133 a 135, 138, 142), insumos-planejamento.md (3, 9, 13, 94, 126), CLAUDE.md l. 26, AGENTS.md (D-026, D-054, D-056 por tamanho e resumo), Fundação l. 509, 662, 674-680, 1688-1691, relatorio-piloto.md (seções 6 e 9, por grep), esquemas/termo.schema.json (grep), wiki-local/quartz/quartz.config.ts (grep), D-057.json (grep), SKILL.md do registrar-decisao (grep e git log), scripts manutencao.py e resumo_coleta.py (existência e grep de uso), ramificações remotas (git branch -r), wc -c de AGENTS.md e CLAUDE.md.",
+    "fora": "Não abri o texto completo de nenhum insumo além dos já no pacote, nem o brief de execuções inteiro (só as linhas 451-452 por grep), nem a ata das D-043, D-047, D-048. Não rodei validadores nem o checar_mapa.py. Não verifiquei se o wiki local ainda gera hoje (confiei no K-110 concluído e na configuração). Não conferi no conteúdo do retomar-K-125.md, só a existência. Os insumos 4 a 8, 12 e outros do lote R2 e R3 estão fora. Sem web."
+  },
+  "chamadas_usadas": 16
+}

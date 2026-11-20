@@ -23,4 +23,5 @@ Só o Claude Code opera os agentes deste projeto (D-029): pasta `.claude/`, sem 
 - Autor configurado **só neste repositório**: `Vicente <vicente@dacaatinga.com.br>` ("assinado" = autoria, não GPG).
 - Mensagem em português, terminando com a linha de atribuição que o sistema indicar na sessão.
 - Antes do commit: `scripts/procurar_dado_pessoal.py --git`. **Push depois de cada commit.**
+- **Trava dos testes (D-059):** o pre-commit roda a suíte quando o commit toca código, esquemas, testes ou harness; teste que deixa de passar barra a mudança até ser desfeita ou consertada. Caso de teste mudado ou tirado só entra com `scripts/trava_testes.py --confirmar` (motivo, quem verificou, Vicente e onde ele confirmou); caso novo entra com `--gravar-novos`. Nunca mudar o teste para ele passar sem essa confirmação.
 - A proteção do `main` (desde 05/11/2026) não exige pull request nem aprovação; push forçado e exclusão seguem bloqueados; administradores dispensados. O dono e a rotina (`ROTINAS_TOKEN`, só Contents) gravam direto, sem aviso. Volta a exigir pull request quando houver outra pessoa com escrita (insumo, K-008).

@@ -1,0 +1,1959 @@
+{
+ "versao": "limpeza-0.1",
+ "tipo": "resultado",
+ "data": "2026-11-20",
+ "regra": "D-058: o insumo repetido se junta ao que já trata do assunto; o que não é problema de fato para a ferramenta cumprir o que promete (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda, tudo rastreável até a origem) sai da fila, com o motivo; nada se apaga.",
+ "acoes": {
+  "fica": "problema de fato para a promessa, distinto dos outros; recebe destino na etapa 5 (D-046)",
+  "junta": "o mesmo problema (o mesmo defeito; o conserto de um resolve o outro) de um insumo que fica, de um cartão que já o leva no escopo ou de um item do proxima-versao.md; sai da contagem e segue escrito no alvo",
+  "sai_resolvido": "o problema já foi resolvido por trabalho posterior, com a prova no repositório",
+  "sai_fora_da_promessa": "não impede a ferramenta de cumprir a promessa da fase 1 (fase 2, publicação, estacionado, processo do planejamento ou não é problema hoje); segue no cartão que o leva, quando há"
+ },
+ "familias": {
+  "A": "Medida e custo",
+  "B": "Rotinas: segurança, continuidade e auditoria",
+  "D": "Achar outras CLB",
+  "E": "Ler a fonte",
+  "F": "Coleta: Faltas de busca e retirada",
+  "G": "Registros e relatórios fiéis",
+  "H": "Acesso às fontes",
+  "I": "Jurídico: conhecimento tradicional e triagem fixa",
+  "J": "Pessoas citadas",
+  "K": "Receber (portas da fase 1)",
+  "L": "Regras de organização (Termos e CLB)",
+  "M": "Casa e harness",
+  "P": "Plano e planejamento (fora da fila da ferramenta)",
+  "X": "Fase 2, publicação e estacionados"
+ },
+ "contagem": {
+  "junta": 29,
+  "sai_resolvido": 6,
+  "sai_fora_da_promessa": 15,
+  "fica": 32
+ },
+ "ficam": 32,
+ "sem_releitura": [],
+ "itens": [
+  {
+   "n": 1,
+   "acao": "junta",
+   "alvo": "proxima-versao.md",
+   "familia": "P",
+   "motivo": "É a lista do que a v0.2.1 levaria ao texto; o proxima-versao.md nasceu dela no K-001 e a detalha nos V-01 a V-38 (precedência no V-03, rotinas e Actions no V-11, saída de reserva no V-12, IA por rotina no V-16, §8 no V-27, §9 no V-28, §10 no V-29). É a entrada da etapa 6 do K-004 (escrever a Fundação), não conserto da ferramenta.",
+   "evidencia": [
+    "trilhas/planejamento/proxima-versao.md, V-03, V-11, V-12, V-16, V-27, V-28, V-29",
+    "mapa §6, insumo 1: 'proxima-versao.md; K-004'"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "O insumo 1 é a lista do que a v0.2.1 levaria ao texto; cada linha dela tem hoje um V no proxima-versao.md: precedência V-03, rotinas e Actions V-11, saída de reserva V-12, IA por rotina e teto das rotinas V-16, §8 V-27, §9 V-28, §10 V-29, fatos de 17/10 V-17 e V-31, 'único bloqueio' V-21. A etapa 6 do K-004 escreve a Fundação a partir desse arquivo. Não é defeito da ferramenta.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "grep -n '^| V-(03|11|12|16|27|28|29|35|36) ' trilhas/planejamento/proxima-versao.md: as linhas V-03 (l. 15), V-11 (l. 23), V-12 (l. 24), V-16 (l. 28), V-27 (l. 39), V-28 (l. 40), V-29 (l. 41) existem e tratam do que o insumo lista",
+     "grep -n -i 'único bloqueio' em Fundação, brief e mapa: o 'único bloqueio' está em V-21 (proxima-versao.md l. 33) e no mapa l. 181 ('defasado (D-031) -> V-21'); brief l. 451 traz a mesma linha da 6A",
+     "grep 'Anexo C|5.5' em proxima-versao.md: V-17 (l. 29) e V-31 (l. 43) levam os fatos de 17/10 ao §5.5 e ao Anexo C",
+     "quadro.md l. 18: K-004 cita os insumos 1, 2 e 11 e o proxima-versao.md como entrada"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 2,
+   "acao": "junta",
+   "alvo": "V-36",
+   "familia": "P",
+   "motivo": "O pedido ao redator já preparado está no V-36, que o põe como entrada da escrita com o teto, os validadores e a verificação pelo auditor.",
+   "evidencia": [
+    "trilhas/planejamento/proxima-versao.md, V-36 ('o pedido já preparado (insumo 2)')"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "O pedido ao redator já preparado está nomeado no V-36 como o que passa a ter a lista como entrada, com o teto, os validadores e a verificação pelo auditor; é o mesmo insumo, e a etapa 6 do K-004 o usa. Não impede coletar, organizar ou gerar grafo.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "proxima-versao.md l. 48: V-36 'fora do texto: o pedido ao redator | o pedido já preparado (insumo 2) ...' com origem D-035 e 'insumo 2'",
+     "quadro.md l. 18: K-004 cita o insumo 2 na origem"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 3,
+   "acao": "junta",
+   "alvo": "V-12; V-13; V-20; V-23; V-29; V-30; K-005; K-010; K-120",
+   "familia": "P",
+   "motivo": "Os 11 itens da 6C foram distribuídos no K-001 (mapa §6): 1 → K-005; 2 → K-004 com a D-037; 3 → K-113 (concluído) e V-12; 4 → K-010 e V-12; 5 → V-13; 6 → V-23 e K-120; 7 → K-111 (concluído); 8 → K-002 (concluído); 9 → V-20; 10 → V-20 e V-30; 11 → V-29 e V-13. Cada parte está num cartão ou num V. O que o K-113 deixou do item 3 (a principal protegida só por instrução) é o 126, que fica.",
+   "evidencia": [
+    "mapa §6, insumo 3",
+    "trilhas/planejamento/proxima-versao.md, V-12, V-13, V-20, V-23, V-29, V-30",
+    "quadro: K-111, K-113 e K-002 concluídos"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Os 11 itens da 6C foram distribuídos no mapa §6 e cada parte tem hoje lugar escrito: item 1 no K-005 (cuja origem cita 'insumos 3 (item 1)' e que ainda tem a 3ª passada), 3 em V-12 (e o que o K-113 deixou é o 126, que fica), 4 em K-010 e V-12, 5 em V-13, 6 em V-23 e K-120, 9 e 10 em V-20 e V-30, 11 em V-29 e V-13; os itens 7 (K-111) e 8 (K-002) estão em cartões concluídos; o item 2 vai ao K-004 com a D-037, que tirou a revisão de rotina da base. Ressalva de leitura: o item 8 (lugar das rotinas) e o item 2 estão ancorados no K-002 e na D-037 por decisão e não por texto de cartão; o lugar das rotinas hoje está em D-033, D-048 e V-12.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "mapa-tres-frentes.md l. 339 (linha do insumo 3) lida: 'item 1 -> K-005; 2 -> K-004 (com a D-037); 3 -> K-113 e V-12; 4 -> K-010 e V-12; 5 -> V-13; 6 -> V-23 e K-120; 7 -> K-111; 8 -> K-002; 9...'",
+     "proxima-versao.md: V-12 (l. 24: proteção do main, lugar do material do piloto, 'insumo 3, item 3/4'), V-13, V-20 (autoria 'insumo 3, item 9'), V-23 ('Educação: insumo 3, item 6'), V-29, V-30 existem",
+     "quadro.md: K-005 (l. 17) cita 'insumos 3 (item 1)'; K-010 (l. 20) cobre lugar e visibilidade do repositório (F-0003); K-120 (l. 47) cita 'insumo 3, item 6'; K-110, K-111, K-113 'Concluído'",
+     "insumos-planejamento.md l. 132: o insumo 126 (principal protegida só por instrução) existe e fica na fila"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 4,
+   "acao": "sai_resolvido",
+   "alvo": "D-040; K-123",
+   "familia": "A",
+   "motivo": "O ritmo em pontos da conta foi aceito por Vicente na 1ª passada do K-005 (D-040), sem a folga de 2× (orcamento.py, K-123); o piloto foi entregue (D-056). O que resta de calibração com medida nova é a 3ª passada do K-005, que já é cartão.",
+   "evidencia": [
+    "quadro, K-005 ('um ritmo do piloto que Vicente aceite (aceito pela D-040)')",
+    "scripts/orcamento.py --help"
+   ],
+   "proposto": "sai_resolvido",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "O ritmo em pontos da conta existe, foi aceito por Vicente (D-040) e a regra de folga vigente é a do orcamento.py, sem a folga de 2x; o que falta (recalibrar com medida nova) já é a 3a passada do K-005.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "AGENTS.md, D-040 (ritmo em pp, 60/50, conta nunca acima de 90%)",
+     "scripts/orcamento.py --help: 'sem folga de 2x nem margem'; H = menor entre teto e linha da conta; estimativa pelos logs",
+     "quadro.md l. 17, K-005: 'um ritmo do piloto que Vicente aceite (aceito pela D-040)'; 3a passada na reunião do K-004",
+     "proxima-versao.md, V-30 ainda lista os insumos 4, 6 e 8 como origem do texto da Fundação: sair da fila não apaga esse vínculo"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 6,
+   "acao": "sai_resolvido",
+   "alvo": "K-123",
+   "familia": "A",
+   "motivo": "As estimativas de lote saem da medida, por agente e habilidade: o orcamento.py toma a última medida do mesmo agente com a mesma habilidade nos logs (K-123).",
+   "evidencia": [
+    "scripts/orcamento.py --help ('A estimativa do lote: a última medida do mesmo agente com a mesma habilidade nos logs')",
+    "quadro, K-123"
+   ],
+   "proposto": "sai_resolvido",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A estimativa de lote por agente e habilidade tirada da medida dos logs está feita por script (K-123).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "comando: orcamento.py --a0 40 --janela 20 --frente planejamento --agente auditor --habilidade verificar-fundacao -> 'estimativa do lote: 86.715 tokens, última medida de auditor/verificar-fundacao (2026-11-12T08:31)'",
+     "scripts/orcamento.py --help: 'A estimativa do lote: a última medida do mesmo agente com a mesma habilidade nos logs'",
+     "V-30 segue citando os insumos 4, 6 e 8 para o texto da Fundação (vínculo mantido)"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 9,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-008",
+   "familia": "X",
+   "motivo": "Contribuição de outras pessoas com os próprios tokens é da fase 2 (K-008, depois do K-007); a fase 1 é só Vicente e os agentes (D-026).",
+   "evidencia": [
+    "quadro, K-008 ('tokens próprios')",
+    "AGENTS.md, D-026"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Contribuição de outras pessoas com os próprios tokens é fase 2: o K-008 cita os insumos 9 e 14 na origem e lista 'tokens próprios' no escopo, vem depois do K-007; a fase 1 é só Vicente e os agentes (D-026).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "quadro.md l. 21: K-008 'Depois do K-007', escopo inclui 'tokens próprios', origem 'insumos 9 e 14'",
+     "AGENTS.md: D-026 'fase 1 só com Vicente e agentes'",
+     "mapa-tres-frentes.md: linha do insumo 9 vira K-008"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 10,
+   "acao": "junta",
+   "alvo": "K-006",
+   "familia": "P",
+   "motivo": "É o próprio K-006 (agente de melhorias e contribuições, com consolidar-para-planejamento, preparar-tarefa, medir-custo e triar-contribuicao); a primeira habilidade, registrar-melhoria, foi feita no K-103. O K-006 entra na reunião do K-004 (D-046). Ferramenta do planejamento, não da promessa.",
+   "evidencia": [
+    "quadro, K-006 (origem: insumos 10 e 18) e K-103 (concluído)"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "É o K-006, com as mesmas habilidades (consolidar-para-planejamento, preparar-tarefa, medir-custo, triar-contribuicao na fase 2); o K-006 cita os insumos 10 e 18 na origem, entra na reunião do K-004 e a primeira habilidade (registrar-melhoria) já está feita no K-103. É ferramenta do planejamento, não da promessa.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "quadro.md l. 16: K-006 'insumos 10 e 18; D-036; P36', habilidades idênticas às do insumo",
+     "mapa-tres-frentes.md l. 346: insumo 10 -> 'K-103 (primeira habilidade); K-006'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 11,
+   "acao": "junta",
+   "alvo": "V-35",
+   "familia": "P",
+   "motivo": "Está no V-35: o checar_fundacao.py volta a cobrar as D-031 em diante quando a próxima versão sair.",
+   "evidencia": [
+    "trilhas/planejamento/proxima-versao.md, V-35 (origem: insumo 11)"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "O V-35 diz exatamente isto: checar_fundacao.py volta a cobrar as D-031 em diante quando a próxima versão sair, e o essencias.json ganha termos-chave. A origem do V-35 é o insumo 11. O K-004 também o cita no destino ('o checar_fundacao.py cobrando todas as decisões').",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "proxima-versao.md l. 47: V-35 '... volta a cobrar as D-031 em diante no texto ...' origem 'insumo 11'",
+     "quadro.md l. 18: K-004 cita insumo 11 e o destino 'checar_fundacao.py cobrando todas as decisões'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 14,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-008",
+   "familia": "X",
+   "motivo": "O lugar do quadro na fase 1 foi decidido no K-001 (concluído: o quadro mora no arquivo); Issues, Projects, formulários e a LGPD do contribuidor são a porta da fase 2 (K-008).",
+   "evidencia": [
+    "quadro, cabeçalho ('Onde o quadro mora ... A porta de contribuição da fase 2 é o K-008')"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "O lugar do quadro na fase 1 foi decidido (o quadro mora no arquivo, K-001 concluído); Issues, Projects, formulários, LGPD do contribuidor e quem não usa GitHub estão todos listados no escopo do K-008 (fase 2), que cita o insumo 14. Não impede a promessa da fase 1.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "quadro.md l. 11 (cabeçalho): 'Onde o quadro mora: neste arquivo, na fase 1 ... A porta de contribuição da fase 2 é o K-008'",
+     "quadro.md l. 21: K-008 lista 'a porta pelo quadro (Issues, Projects, formulários), quem não usa GitHub, ... LGPD e consentimento'; origem 'insumos 9 e 14'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 15,
+   "acao": "junta",
+   "alvo": "136",
+   "familia": "A",
+   "motivo": "Mesmo problema: o consumo de tokens não tem uma medida só (o número do Workflow não é o do Agent). O 136 pede 'uma única medida de tokens por agente, sem dupla contagem e sem consumo perdido' e já cita o workflow de 17/10 entre os consumos que só existem na linha do curador.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 15 e 136"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "É a mesma família do 136 (não há uma medida única de tokens), e o 'aonde' do 15 cabe no 'sem consumo perdido' do 136, mas o defeito específico do 15 (o número do Workflow soma o contexto de entrada do último turno e omite a saída) não está escrito no texto original do 136; só aparece na reescrita da proposta.",
+    "parte_nao_coberta": "A regra de contar o Workflow (entrada do último turno sem a saída, 267.700 contra 329.448) comparável à do Agent: ao juntar, escrever no texto do 136 que a medida única inclui o Workflow.",
+    "acao_sugerida": "Juntar ao 136, mas gravar no 136 a cláusula do Workflow; Workflow só roda a pedido (AGENTS.md), então o peso é baixo.",
+    "conferido": [
+     "trilhas/insumos-planejamento.md, linha do insumo 136: o 136 trata da linha do curador que soma os subagentes (dupla contagem) e cita o workflow de 17/10 só como consumo que existe apenas na linha do curador",
+     "o teto do planejamento hoje é em pp da conta (D-040, orcamento.py), o que tira do 15 a parte do 'teto em tokens' e deixa só a medida do Workflow"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 16,
+   "acao": "sai_resolvido",
+   "alvo": "K-123",
+   "familia": "A",
+   "motivo": "A estimativa sai por script dos logs, por agente e habilidade, antes de cada lote, também no planejamento (orcamento.py com --frente planejamento; K-123).",
+   "evidencia": [
+    "scripts/orcamento.py --help (--frente {desenvolvimento,planejamento}; estimativa pelos logs)"
+   ],
+   "proposto": "sai_resolvido",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A estimativa sai por script dos logs, por agente e habilidade, antes de cada lote e também no planejamento.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "comando: orcamento.py ... --frente planejamento --agente auditor --habilidade verificar-fundacao rodou e usou 86.715 tokens, a última medida, e não a referência genérica de 60 mil",
+     "orcamento.py --help: opção --frente {desenvolvimento,planejamento}"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 18,
+   "acao": "junta",
+   "alvo": "K-006",
+   "familia": "P",
+   "motivo": "O script do planejamento que confere o mapa e o quadro a cada rodada é do K-006 (o quadro o lista na origem). Ferramenta do planejamento, não da promessa.",
+   "evidencia": [
+    "quadro, K-006 (origem: insumos 10 e 18)",
+    "mapa §6, insumo 18"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "O script de conferência do mapa e do quadro é do K-006 (origem 'insumos 10 e 18'; mapa §6 l. 354 'K-006'). O script existe hoje em rodadas/2026-10-21_K-001/checar_mapa.py. É ferramenta do planejamento. Observação: o texto do escopo do K-006 não nomeia o script; o vínculo está na origem e no mapa.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Ao montar a fila, escrever 'script que confere o mapa e o quadro' no escopo do K-006, não só na origem.",
+    "conferido": [
+     "quadro.md l. 16: K-006 origem 'insumos 10 e 18'",
+     "mapa-tres-frentes.md l. 354: '18, script de checagem do mapa ... | P (ferramenta do planejamento); D (construir) | K-006'",
+     "ls trilhas/planejamento/rodadas/2026-10-21_K-001/checar_mapa.py: existe"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 21,
+   "acao": "junta",
+   "alvo": "140",
+   "familia": "D",
+   "motivo": "Mesmo problema: a ferramenta só percebe CLB cujo nome já conhece (o script de menções só vê os Termos do registro). O 140 pede as rotinas achando CLB nativas e de outros termos e diz que complementa os insumos 21, 103 e 118.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 21 e 140 ('Complementa os insumos 21, 103 e 118')"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O defeito de fundo é o mesmo do 140 (a ferramenta só percebe CLB cujo nome já conhece), e o próprio 140 se diz complemento do 21. Mas o 21 é sobre o script de menções (mencoes_incidentais.py), que lê só os Termos do registro, e o conserto das Consultas gerais (140) não muda esse script; o K-102 está concluído e declara 'Fora' as CLB de termo não registrado.",
+    "parte_nao_coberta": "O script de menções continuar só vendo nomes do registro de Termos (e a restrição 'sem semear Termos fora do plano') não está no texto do 140, que fala das Consultas.",
+    "acao_sugerida": "Juntar ao 140, escrevendo nele que o script de menções depende do registro de Termos (K-102 concluído; K-117 é só legado, Passo 3).",
+    "conferido": [
+     "quadro.md l.33 (K-102 concluído; 'Fora: as CLB de termo não registrado')",
+     "scripts/mencoes_incidentais.py l.6-14 (forma que o registro não tem nasce como Termo candidato, só via declaração)",
+     "lista_abertos.json: 140 aberto_cartao K-004"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 22,
+   "acao": "junta",
+   "alvo": "K-006",
+   "familia": "P",
+   "motivo": "É o mesmo script do 18 (checar_mapa.py), que o mapa já leva ao K-006 'com o insumo 18'.",
+   "evidencia": [
+    "mapa §6, insumo 22 ('cartão K-006, com o insumo 18')"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "É o mesmo script do 18 (checar_mapa.py) com um defeito específico (lê a 6A por linhas fixas e passa sem olhar); o mapa §6 já o leva ao K-006 e o conserto do script do 18 (achar a seção pelo título, reprovar se sumir) resolve este. Ferramenta do planejamento, não da promessa. Observação: a origem escrita do K-006 cita só 10 e 18; o 22 chega pelo mapa.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Acrescentar o 22 à origem do K-006 ao montar a fila.",
+    "conferido": [
+     "mapa-tres-frentes.md l. 358: '22, checar_mapa.py lê a 6A do brief por linhas fixas (K-003) | P ...; D (construir) | K-006'",
+     "quadro.md l. 16: origem do K-006 'insumos 10 e 18' (22 não aparece)",
+     "ls checar_mapa.py: existe"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 23,
+   "acao": "junta",
+   "alvo": "K-115c; V-24",
+   "familia": "X",
+   "motivo": "Resolvido em parte: o avaliador, que produz as Evidências, passou a Haiku 5.5 no K-115a, e o auditor, que relê, segue em Sonnet 5.5 (D-055, D-056: o avaliador propõe, o auditor relê). O que resta (o auditor no mesmo modelo do arquivista e do juridico) é o teste do K-115c, estacionado para a reunião do K-004, e o texto do V-24.",
+   "evidencia": [
+    ".claude/agents/avaliador.md (model: claude-haiku-5-5); auditor.md, arquivista.md e juridico.md (claude-sonnet-5-5)",
+    "quadro, K-115a (concluído) e K-115c (estacionado)",
+    "proxima-versao.md, V-24"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Na cadeia da operação (avaliador propõe, auditor relê, D-056) os modelos hoje são diferentes (Haiku e Sonnet) e a diferença foi medida no K-115a; mas o K-115c e o V-24 não levam o que sobra, que é o auditor no mesmo modelo do arquivista e do juridico.",
+    "parte_nao_coberta": "O verificador de modelo diferente do produtor para as saídas do arquivista e do juridico (ambos Sonnet, como o auditor); nem o K-115c nem o V-24 dizem isso no escopo.",
+    "acao_sugerida": "Sair da contagem com a nota de que o caso do avaliador está resolvido; levar a sobra (arquivista/juridico contra o auditor) à reunião do K-004 junto ao K-115c, escrita no texto do cartão.",
+    "conferido": [
+     ".claude/agents/*.md, linha model: avaliador claude-haiku-5-5; auditor, arquivista e juridico claude-sonnet-5-5",
+     "testes/relatorio-modelos.md l. 57: a segunda leitura do auditor (Sonnet) achou erros de leitura fiel nas saídas do Haiku que nenhum validador pega (a diferença entre produtor e verificador foi medida para o avaliador)",
+     "quadro.md K-115c: testa conferir-fato, verificar-fundacao e escrever-secao-fundacao pelo modelo mais barato que passa, não a diferença entre verificador e produtor; V-24 trata da amostra, não do modelo"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 34,
+   "acao": "sai_resolvido",
+   "alvo": "D-041; K-123",
+   "familia": "L",
+   "motivo": "A regra diz quais Evidências entram: só a de trecho localizado e leitura fiel; a divergente ou não localizada fica visível, fora da conta (D-041). Está no registro (mu-lambda-0.2) e no calcular_mu_lambda.py, que lê a versão do registro (K-123).",
+   "evidencia": [
+    "esquemas/valores-provisorios.json, l. 261 e 282 (mu-lambda-0.2)",
+    "scripts/calcular_mu_lambda.py, l. 37",
+    "AGENTS.md, D-041"
+   ],
+   "proposto": "sai_resolvido",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A regra diz quais Evidências entram em mu e lambda e o script a aplica lendo o registro.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "esquemas/valores-provisorios.json l. 257, 261 e 282: mu-lambda-0.2 vigente ('só Evidência localizada e de leitura fiel conta; linhagem mista sinalizada, fora de μ e λ')",
+     "scripts/calcular_mu_lambda.py l. 6-10 (docstring) e l. 92-96 (só Trecho 'localizado'; 'leitura divergente' vai a fora_da_conta); l. 36-37 lê REGRA e VERSAO do registro",
+     "AGENTS.md, D-041"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 36,
+   "acao": "sai_resolvido",
+   "alvo": "D-041; K-123",
+   "familia": "L",
+   "motivo": "Negação e sentido contrário batem exatamente (normalizacao-0.2; localizar_trecho.py, l. 53), e cada linhagem conta uma vez, com a linhagem mista sinalizada como tensão interna, fora de μ e λ (mu-lambda-0.2).",
+   "evidencia": [
+    "esquemas/valores-provisorios.json, l. 202, 257, 261 e 282",
+    "scripts/localizar_trecho.py, l. 10 e 53"
+   ],
+   "proposto": "sai_resolvido",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Negação e sentido contrário batem exatamente e a linhagem mista é sinalizada e fica fora da conta; as duas metades do insumo estão resolvidas.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "esquemas/valores-provisorios.json l. 202 (normalizacao-0.2) e l. 261/282 (mu-lambda-0.2)",
+     "scripts/localizar_trecho.py l. 10 (docstring D-041) e l. 53: EXATAS vem de REGRA['palavras_exatas'] negacao e sentido_contrario",
+     "scripts/calcular_mu_lambda.py linhas 108-109, 184 e 213: tensao_interna e fora_da_conta saem no resultado"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 38,
+   "acao": "junta",
+   "alvo": "132",
+   "familia": "A",
+   "motivo": "Resolvido para as conversas: a leitura de uso vem da linha [Uso do plano] do hook (oficial quando há, estimada senão), sem perguntar a Vicente e separada por pasta (AGENTS.md, Orçamento). O que resta é a rodada da rotina na nuvem, que o hook não vê: o mesmo problema do 127, que se junta ao 132.",
+   "evidencia": [
+    "AGENTS.md, Passo corrente, Orçamento ('a leitura de uso vem da linha [Uso do plano] do hook, sem perguntar a Vicente')",
+    "trilhas/insumos-planejamento.md, insumo 127"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Para as conversas, a leitura de uso vem do hook e ficou por pasta, sem perguntar a Vicente; a rodada da rotina na nuvem, que o hook não vê, é o 127, que segue para o 132.",
+    "parte_nao_coberta": "Resíduo menor: o AGENTS.md l. 114 e a ajuda do orcamento.py ainda falam em leitura de Vicente ao abrir; a prova do hook está em ~/.claude (fora do repositório). A rodada de rotina na nuvem fica no 132.",
+    "acao_sugerida": null,
+    "conferido": [
+     "C:/Users/alqui/.claude/uso/ existe com consumo.jsonl, estado.json, leituras.jsonl e ultima_oficial.json; leituras.jsonl tem linhas 'tipo: oficial' com p5, p7 e pasta (a de 19/11 é a última)",
+     "AGENTS.md l. 94 (Passo corrente, Orçamento): 'a leitura de uso vem da linha [Uso do plano] do hook, sem perguntar a Vicente'",
+     "AGENTS.md l. 114 (seção Orçamento) e orcamento.py --a0/--janela ainda dizem 'Vicente informa ao abrir': resíduo de texto contraditório, não bloqueia"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 42,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-122",
+   "familia": "X",
+   "motivo": "A exportação do Termo para TBX e SKOS é da fase 2 (K-122: 'exportações SKOS, TBX e PROV'); o Termo da fase 1 funciona sem ela.",
+   "evidencia": [
+    "quadro, K-122"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A exportação para SKOS e TBX é fase 2 (Fundação l. 674 e K-122, 'exportações SKOS, TBX e PROV', depois do K-007). O Termo da fase 1 funciona sem ela. A regra da designação preferida já está dita no esquema (a ordem conta; a primeira de cada língua vai ao skos:prefLabel) e o que ficou 'não conferido' (estrutura TBX, altLabel/hiddenLabel) está marcado como F-13 'não conferido' no Anexo C.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Quando o K-122 abrir, conferir F-13 na fonte antes de exportar; nada a fazer na fase 1.",
+    "conferido": [
+     "00_Fundacao l. 674: 'exportações para SKOS, TBX e PROV ... com os campos já compatíveis desde a fase 1' na lista da fase 2",
+     "quadro.md l. 49: K-122 inclui 'exportações SKOS, TBX e PROV', 'Depois do K-007'",
+     "esquemas/termo.schema.json l. 5 e l. 56: estrutura compatível com TBX/SKOS, 'não conferido', e a regra de ordem das designações escrita",
+     "mapa-tres-frentes.md l. 378: '42 ... | D | K-122'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 43,
+   "acao": "junta",
+   "alvo": "136",
+   "familia": "A",
+   "motivo": "A conta do agente retomado é parte da medida única de tokens por agente (136): o mesmo lote medido igual, aberto ou retomado.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 43 e 136"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O número do agente retomado que inclui a releitura é caso de 'sem dupla contagem' da medida única do 136, mas o 136 não menciona o agente retomado e o 43 pede também a escolha entre retomar e abrir outro pelo custo medido.",
+    "parte_nao_coberta": "A regra de escolha entre retomar e abrir agente novo pelo custo medido; escrever no 136 que a medida única vale igual para agente aberto e retomado.",
+    "acao_sugerida": "Juntar ao 136 acrescentando a cláusula do agente retomado.",
+    "conferido": [
+     "trilhas/insumos-planejamento.md, linhas dos insumos 43 e 136: o 136 fala só da linha do curador que soma subagentes e de consumos que existem só nela",
+     "a medida do 43 (79.311 tokens e 2 chamadas na retomada contra 72.903 e 12 do lote) é do K-106; os subagentes agora rodam um por vez (CLAUDE.md), o que reduz a chance de repetir"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 45,
+   "acao": "junta",
+   "alvo": "55",
+   "familia": "F",
+   "motivo": "Mesmo problema: a Falta de busca não existe como tal no contrato da Falta (sem tipo próprio nem estado de encerramento); o conserto é um só, no contrato. O 55 é o mais completo (dita enquanto vale e encerrada quando o Recorte a resolve).",
+   "evidencia": [
+    "esquemas/falta.schema.json: tipo ∈ {compreensao_local_nao_captada, impedimento_juridico, fonte_inacessivel, trecho_nao_verificavel, outro}; nenhum campo de estado"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Mesmo conserto no contrato da Falta: a Falta de busca entra como tipo 'outro', sem tipo próprio. O 55 traz o mesmo defeito (a proposta o escreve com 'sem tipo próprio' e 'não se encerra'), e o schema confirma que não há tipo de busca nem estado de encerramento.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "No texto do 55, incluir 'contar e filtrar por tipo no relatório do dia', que é o aonde do 45.",
+    "conferido": [
+     "esquemas/falta.schema.json l.21-28: tipo = compreensao_local_nao_captada, impedimento_juridico, fonte_inacessivel, trecho_nao_verificavel, outro",
+     "esquemas/falta.schema.json l.100-105: 'estado' só dentro de caminho_de_liberacao (não há encerramento da Falta de busca)",
+     "scripts/recorte.py l.201: reg.falta('outro', 'busca interrompida por teto...')",
+     "scripts/relatorio_dia.py l.114: conta Faltas sem filtrar por tipo"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 46,
+   "acao": "fica",
+   "familia": "G",
+   "problema": "A Execução descartada não se marca no log, e IDs de registro foram reemitidos por outra Execução (RC-0001 a RC-0007): a trilha diz uma coisa e o acervo outra.",
+   "motivo": "Rastreabilidade: o log é a trilha. O esquema de log não tem campo de Execução descartada (só a 'decisao' de cada item).",
+   "evidencia": [
+    "esquemas/log.schema.json, l. 32"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 49,
+   "acao": "fica",
+   "familia": "F",
+   "problema": "A Entrada retirada guarda só id, origem e fundido_em, sem o identificador; o deduplicar.py não olha 'retirado', e a coleta seguinte recria o item. A regex de barreira das fichas é mais estreita que o vocabulário delas.",
+   "motivo": "Retirada que volta pela coleta fere o princípio 12 quando houver pedido. A parte do wayback.py olhar a proteção já foi feita (protecao_barra, K-124).",
+   "evidencia": [
+    "esquemas/entrada.schema.json, l. 146-175",
+    "scripts/deduplicar.py (só 'pedido_de_retirada', l. 42)",
+    "scripts/wayback.py, l. 100-107 e 198"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 50,
+   "acao": "junta",
+   "alvo": "V-39",
+   "familia": "P",
+   "motivo": "É alinhamento do texto (Fundação, l. 509; brief, bloco 5) à D-043 e à D-048, que tirou a captura nova do plano; o wayback.py já segue as decisões. O proxima-versao.md ainda não tem essa linha: entra como V novo na etapa 6. Não é conserto da ferramenta.",
+   "evidencia": [
+    "grep sem resultado de 'D-043|Wayback' em trilhas/planejamento/proxima-versao.md",
+    "AGENTS.md, D-043 e D-048"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "refuta",
+    "motivo": "A proposta junta ao proxima-versao.md, mas a própria proposta admite que o arquivo 'ainda não tem essa linha': não há V sobre D-043/Wayback/captura. A Fundação l. 509 ainda traz o texto antigo (Save Page Now). Sem V escrito, o insumo sairia da contagem sem estar escrito em lugar nenhum que o leve; a regra da junção exige que o assunto 'siga escrito no alvo'. O K-004 cita só os insumos 1, 2 e 11. O problema em si é de alinhamento de texto (etapa 6), não da ferramenta, mas a prova do alvo não se confirma.",
+    "parte_nao_coberta": "Todo o conteúdo: não existe V que leve o alinhamento da Fundação l. 509 e do brief bloco 5 à D-043 e à D-048 (captura nova fora do plano).",
+    "acao_sugerida": "Criar um V novo em proxima-versao.md (Fundação l. 509 e brief bloco 5 diante das D-043 e D-048; origem insumo 50) e só então juntar o 50 a esse V; ou deixar o 50 na fila até a etapa 5 com destino K-004.",
+    "conferido": [
+     "grep -n -i 'D-043|wayback|captura|509' trilhas/planejamento/proxima-versao.md: nenhuma linha",
+     "00_Fundacao_Cultura_Liquida.md l. 509: 'Cópia no Wayback pelo Save Page Now 2' segue com o texto antigo",
+     "quadro.md l. 18: K-004 cita 'insumos 1, 2 e 11', não o 50",
+     "mapa-tres-frentes.md l. 386: '50, Wayback na Fundação depois da D-043 | P | K-004'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "ajustado: junta ao V-39, criado na limpeza",
+   "ajuste": {
+    "n": 50,
+    "acao": "junta",
+    "alvo": "V-39",
+    "estado": "ajustado: junta ao V-39, criado na limpeza",
+    "proposto_por": "releitor R1 (criar um V novo e só então juntar)",
+    "aprovado_por": "curador",
+    "motivo": "A proposta juntava ao proxima-versao.md sem linha que levasse o assunto; o V-39 foi escrito no proxima-versao.md (Fundação l. 509 e brief, bloco 5, diante das D-043 e D-048), e o 50 se junta a ele."
+   }
+  },
+  {
+   "n": 52,
+   "acao": "fica",
+   "familia": "H",
+   "problema": "A proibição expressa dos termos de uso barra agora (D-042), mas a ficha de acesso a guarda em texto livre e nenhum script a lê; só o robots.txt se cumpre por máquina.",
+   "motivo": "Abrir todo local de busca possível (D-048) pede que a coleta cumpra os termos sem leitura humana a cada rodada.",
+   "evidencia": [
+    "esquemas/ficha-acesso.schema.json, l. 56-62 ('termos' e 'robots' como texto)",
+    "grep sem 'proibi' em scripts/_coleta.py"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 53,
+   "acao": "fica",
+   "familia": "I",
+   "problema": "As listas e perguntas da triagem fixa foram montadas sem medida (substâncias, modo de preparar, palavras de conhecimento tradicional), com normas não conferidas na fonte oficial.",
+   "motivo": "A triagem fixa barra ou libera itens por regra; listas sem medida erram nos dois sentidos (o 124 mostra 'índios' e 'indígenas' fora da lista; o 67, a bebida alcoólica sem pergunta).",
+   "evidencia": [
+    "esquemas/triagem-fixa.json (triagem-fixa-0.3)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 54,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "—",
+   "familia": "F",
+   "motivo": "A coleta da BDTD se completa: o recorte.py detecta a página repetida depois do item 1.000 e divide a janela; com o limite_fonte nulo, só faz pedidos a mais antes de perceber. Não impede a promessa. É o mesmo do 44, fechado pelo K-108 sem o limite gravado.",
+   "evidencia": [
+    "ambientes/adaptadores.json, l. 8 ('limite_fonte': null)",
+    "scripts/recorte.py, l. 12-15 e 299"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A coleta da BDTD se completa: o recorte.py detecta página repetida e divide a janela; o limite_fonte nulo só custa pedidos a mais. Não impede a promessa.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Nota: o 44 foi fechado pelo script como fechado_por_cartao K-108, mas o limite_fonte segue nulo; o defeito é o mesmo e igualmente inofensivo.",
+    "conferido": [
+     "ambientes/adaptadores.json l.3-9: AM-0021 com limite_fonte null",
+     "scripts/recorte.py l.12-16 e l.294-304: página repetida tratada como saturada, janela dividida",
+     "ambientes/recortes: RC-0008 e RC-0010 saturadas por página repetida e divididas; RC-0014 'exaurido: 915 de 915'",
+     "lista_abertos.json: o 44 (mesmo defeito) está fechado_por_cartao K-108"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 55,
+   "acao": "fica",
+   "familia": "F",
+   "problema": "A Falta de busca (interrompida por teto, total desconhecido) entra como 'outro', sem tipo próprio, e não se encerra quando o Recorte se completa.",
+   "motivo": "O alcance da ferramenta (D-030) precisa da Falta de busca dita enquanto vale e encerrada com trilha; as F-0006 a F-0011 seguem abertas com Recortes resolvidos.",
+   "evidencia": [
+    "esquemas/falta.schema.json (tipo e campos)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 56,
+   "acao": "sai_resolvido",
+   "alvo": "D-048; F-0034",
+   "familia": "H",
+   "motivo": "Superado: a D-048 tirou das rotinas diárias a consulta da cópia da página do registro, e a F-0034 barra agora a consulta automática do Internet Archive (Availability API e leitura da cópia). As rotinas não chamam o wayback.py, e as centenas de Faltas 'sem cópia arquivada' não nascem.",
+   "evidencia": [
+    "AGENTS.md, D-048",
+    "acervo/faltas/F-0034.json (vale_para 'agora')",
+    "grep sem 'wayback' em ambientes/rotinas.json e .github/workflows/"
+   ],
+   "proposto": "sai_resolvido",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Superado pela D-048: a consulta da cópia da página do registro saiu das rotinas diárias; a F-0034 barra agora a consulta automática ao Internet Archive; nenhuma rotina chama wayback.py. As centenas de Faltas 'sem cópia arquivada' não nascem. A rastreabilidade segue por link, trecho, hash e data (D-043).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Nenhuma; reabrir a cópia fica no K-208.",
+    "conferido": [
+     "AGENTS.md D-048 ('a consulta da cópia da página do registro sai das rotinas diárias')",
+     "acervo/faltas/F-0034.json: vale_para 'agora'; a nota diz que ler_fonte.py não consulta cópia enquanto aberta",
+     "grep -il wayback em .github/workflows/* e ambientes/rotinas.json: nenhum; wayback.py só é importado por scripts de conversa (ler_fonte.py etc.)",
+     "scripts/ler_fonte.py l.140: wayback.falta_que_barra barra a consulta"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 57,
+   "acao": "junta",
+   "alvo": "140",
+   "familia": "D",
+   "motivo": "O que cada fonte faz com o termo (se a BDTD reduz 'cajuína' a 'caju') é parte do alcance de cada Consulta medido e dito (140, D-030): saber o que a busca alcança antes de ler o rendimento como dado sobre a CLB.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 57 e 140"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Cabe no 'alcance de cada Consulta medido e dito' (D-030) do 140, mas o 140 é das Consultas gerais, e o 57 é uma pergunta concreta e sem resposta sobre a BDTD (se AllFields reduz 'cajuína' a 'caju'); não achei resposta no repositório.",
+    "parte_nao_coberta": "A verificação concreta do que a busca da BDTD faz com 'cajuína' (radical/AllFields) não está escrita no 140; sem ela o rendimento de CO-0002 segue sem leitura.",
+    "acao_sugerida": "Juntar ao 140 acrescentando 'conferir o que cada fonte faz com o termo (BDTD, caju x cajuína)' como parte do alcance.",
+    "conferido": [
+     "ambientes/consultas/CO-0001.json e CO-0002.json: booleano só de formas do termo, sem nota sobre o que a fonte faz",
+     "grep AllFields: aparece só em AM-0021/AM-0022.json, traducao-consultas.json e na pesquisa de 15/10, sem teste de radical",
+     "texto do 140: 'alcance de cada Consulta geral medido e dito'"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 58,
+   "acao": "fica",
+   "familia": "D",
+   "problema": "A pré-triagem só lê as formas dos Termos da Consulta; palavras do processo do caju que não são variantes (cajueiro, cajucultura, LCC) ficam fora sem regra que diga o que deve seguir.",
+   "motivo": "Coletar sem perder nem inflar o que segue para a leitura.",
+   "evidencia": [
+    "scripts/pretriagem.py (pretriagem-0.1)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 59,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "D-045",
+   "familia": "F",
+   "motivo": "Não é problema hoje: as pegadas somam 9,4 MB em 50 arquivos e o .git 13 MB, longe do alarme de 200 MB da D-045, que o relatório do dia já vigia.",
+   "evidencia": [
+    "du -sh ambientes/pegadas (9,4 MB, 50 arquivos); du -sh .git (13 MB) em 20/11/2026",
+    "AGENTS.md, D-045 (alarme)"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Hoje as pegadas somam 9,4 MB em 50 arquivos e o repositório está longe do alarme de 200 MB / 20 mil arquivos da D-045; o relatório do dia imprime o alarme. Não cresceu desde 24/10 (9,5 MB).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Nenhuma.",
+    "conferido": [
+     "du -sh ambientes/pegadas = 9,4M; ls | wc -l = 50; du -sh .git = 13M; git size-pack 6,71 MiB",
+     "scripts/relatorio_dia.py l.110: 'tamanho: N arquivos, X MB (alarme acima de ...)'",
+     "AGENTS.md D-045"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 61,
+   "acao": "fica",
+   "familia": "K",
+   "problema": "As portas da fase 1 que dependem de Vicente (busca assistida e link ou documento trazido por ele) são comandos de terminal; um link só entra por uma conversa de trabalho.",
+   "motivo": "Receber pelas formas da fase 1 é a promessa (D-035); nenhum workflow abre a entrada por link sem sessão.",
+   "evidencia": [
+    "ls .github/workflows (rotinas, rotina-ia-*, testar-fichas, validar; nenhum de entrada por link)",
+    "scripts/entrada_link.py, scripts/assistido.py"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 62,
+   "acao": "fica",
+   "familia": "K",
+   "problema": "A oralidade gravada em acervo público é porta aberta (§5.4), mas a ferramenta não transcreve: o trecho vira Falta, e a W, que se ancora na fala de quem pratica, fica Falta.",
+   "motivo": "Receber pelas formas da fase 1 e a W (D-018) dependem da fala de quem pratica.",
+   "evidencia": [
+    "Fundação §5.4 (citada no insumo)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 63,
+   "acao": "fica",
+   "familia": "G",
+   "problema": "O relatório do lote conta as Entradas pela Execução que as criou ou pela data; a triagem muda Entradas antigas, e o relatório diz 0 (o curador completou à mão).",
+   "motivo": "A rotina com IA usa o mesmo relatório (rotina_ia.py chama fila_curadoria.py --execucao).",
+   "evidencia": [
+    "scripts/fila_curadoria.py, l. 160-168 (do_lote)",
+    "scripts/rotina_ia.py, l. 253"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 64,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-010",
+   "familia": "X",
+   "motivo": "A Falta de licença ausente é do ato publicar (as 103 nem foram gravadas); se ela é por obra, por registro ou coberta pela F-0003 se decide com a licença do acervo no K-010.",
+   "evidencia": [
+    "quadro, K-010 ('licença do acervo')",
+    "AGENTS.md, D-042 (licença ausente barra só a publicação)"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A Falta de licença ausente só nasce no ato 'publicar'; as 103 nem foram gravadas, e a escolha por obra, por registro ou coberta pela F-0003 se decide com a licença do acervo, que está no escopo do K-010 (A fazer).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "No K-010, anotar a granularidade da Falta de licença (por obra, por registro ou coberta pela F-0003).",
+    "conferido": [
+     "quadro.md l.20: K-010 inclui 'licença do acervo' e 'lugar e visibilidade do que fica no repositório (F-0003)'",
+     "esquemas/triagem-fixa.json l.87-95: licenca_ausente, 'para publicar'",
+     "scripts/triagem_fixa.py l.83-84: só no ato informado; nenhum workflow chama triagem_fixa",
+     "AGENTS.md D-042 (licença ausente barra só a publicação)"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 65,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-010; F-0025; K-204",
+   "familia": "X",
+   "motivo": "A forma da citação com o autor da obra é questão da F-0025 (direito autoral), que espera a decisão de publicar (K-204, K-010); o Git público segue o padrão da F-0003 até o K-010 (D-043; K-201).",
+   "evidencia": [
+    "quadro, K-204 e K-201",
+    "AGENTS.md, D-042 e D-043"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A forma da citação com autor e origem é a questão da F-0025 (vale_para publicar), em espera no K-204 e no K-010; o Git público segue o padrão da F-0003 (K-201). O contrato da Fonte só aceita autoria como código opaco por desenho provisório, e a F-0025 diz que a regra permite acrescentar o nome do autor: é decisão a tomar, não defeito que impeça coletar, organizar ou rastrear até a origem (link, título, instituição, ano seguem).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "O K-204 deve dizer que a decisão pode exigir campo de nome do autor no contrato da Fonte.",
+    "conferido": [
+     "acervo/faltas/F-0025.json: impedimento_juridico, vale_para publicar; o_que_falta = decidir se instituição basta ou se acrescenta o nome do autor",
+     "esquemas/fonte.schema.json l.5 e l.48 (autoria só por código opaco; valores-provisórios fonte_no_git)",
+     "quadro.md l.68 (K-201, F-0003) e l.71 (K-204, 'Espera a decisão de publicar (K-010)')"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 66,
+   "acao": "junta",
+   "alvo": "87",
+   "familia": "I",
+   "motivo": "Mesmo problema: a regra de conhecimento tradicional para as CLB além da cajuína. A D-047 resolveu só a cajuína; a menção histórica a uso indígena em fonte publicada é o caso típico da regra geral que o 87 pede.",
+   "evidencia": [
+    "AGENTS.md, D-047",
+    "trilhas/insumos-planejamento.md, insumos 66 e 87"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A leitura sobre menção histórica a uso indígena em fonte publicada, aplicada pela regra a trechos iguais, é a regra geral de conhecimento tradicional que o 87 pede; a D-047 resolveu só a cajuína e a D-057 só as três candidatas.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Nenhuma.",
+    "conferido": [
+     "AGENTS.md D-047 ('a regra geral é proposta para o planejamento') e D-057",
+     "acervo/faltas/F-0024.json: vale_para publicar; K-203 (quadro l.70) leva a F-0024 das outras bebidas de caju",
+     "proposta.json: 87 fica"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 67,
+   "acao": "junta",
+   "alvo": "53",
+   "familia": "I",
+   "motivo": "Mesmo problema: as perguntas e listas da triagem fixa calibradas com o que o piloto mostrou e com a norma conferida; a bebida alcoólica é a pergunta que falta.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 53 e 67"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Junta ao 53 só em parte: o 53 é calibrar listas e perguntas existentes (substâncias, modo, palavras de CT) e conferir a lista da Anvisa; o 67 pede uma pergunta nova (bebida alcoólica) com norma conferida, que o 53 não escreve. Conferi que a triagem fixa não tem nada de bebida alcoólica.",
+    "parte_nao_coberta": "A pergunta nova sobre modo de preparar bebida alcoólica e a norma a conferir (precisa do juridico); nenhum Trecho guardado traz modo de preparar, então é dormente.",
+    "acao_sugerida": "Juntar ao 53, escrevendo nele 'incluir a pergunta de bebida alcoólica com norma conferida'.",
+    "conferido": [
+     "grep -i 'alcool|fermentad|cachaca' em esquemas/triagem-fixa.json: sem resultado",
+     "esquemas/triagem-fixa.json l.238 e l.275: só palavras_modo de substância",
+     "texto do 53: 'listas e perguntas ... montadas sem medida'"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 68,
+   "acao": "fica",
+   "familia": "E",
+   "problema": "O texto de cada repositório não se lê pela mesma via (DSpace 7 em Angular sem link do PDF, servidor fora do ar, PDF em imagem, agregador que só dá o link de origem), e o que não se lê nem sempre vira Falta com caminho.",
+   "motivo": "Sem texto não há trecho localizado nem Evidência.",
+   "evidencia": [
+    "scripts/ler_fonte.py"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 69,
+   "acao": "fica",
+   "familia": "E",
+   "problema": "PDF com fonte mal mapeada dá texto com caracteres trocados ('pedœnculo'); o trecho localiza exato contra o texto errado e entra assim no acervo, sem aviso.",
+   "motivo": "O trecho literal tem de ser o da obra; a troca precisa ser detectada por regra e dita, sem corrigir por inferência.",
+   "evidencia": [
+    "scripts/localizar_trecho.py (normalizacao-0.2)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 70,
+   "acao": "fica",
+   "familia": "B",
+   "problema": "A amostra sorteada tem por universo tudo o que se produziu desde a anterior (amostra-0.2), e não o lote nem a camada: o acúmulo dilui o lote, e a amostra da camada 2 mistura Entradas da camada 1 (parte do 130).",
+   "motivo": "A amostra audita a ferramenta (D-037) e será o olho da operação com IA em escala (D-058).",
+   "evidencia": [
+    "scripts/sortear_amostra.py, l. 6 e 32 (amostra-0.2)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 75,
+   "acao": "junta",
+   "alvo": "K-005",
+   "familia": "A",
+   "motivo": "A fonte longa que não cabe numa chamada é parte do lote calibrado pelo custo medido (132): a regra de lote dizendo como dividir e quanto custa, dentro dos tetos da rotina com IA (D-050).",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 75 e 132"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O custo de um lote de fonte longa cabe na calibração de custo por lote (lote_maquina do registro, calibração no K-005 e 132), mas a regra de como uma fonte longa se divide em lotes não está no 132 nem em script ou habilidade nenhuma.",
+    "parte_nao_coberta": "A regra de divisão de uma fonte longa em lotes (o limite de 25 turnos do avaliador e o dossiê de 207 páginas): é desenho de regra, não só calibração de número.",
+    "acao_sugerida": "O destino melhor é o K-005, 3a passada (lote de máquina, onde o mapa já punha o 75), não o 132; e escrever lá a regra de divisão. A operação com IA em escala só vem depois da fila (D-058), então não trava a promessa antes disso.",
+    "conferido": [
+     "esquemas/valores-provisorios.json l. 447-456: lote_maquina 15, 'calibracao: K-005, com o custo medido por lote'",
+     "grep em scripts/fila_ia.py, scripts/rotina_ia.py, .claude/agents/avaliador.md e skills/extrair-evidencia/SKILL.md por 'fonte longa', 'dividir', 'fatia': nada achado; ler_fonte.py só registra páginas e caracteres, não divide",
+     "o 132 pede o número de lotes por rodada pelo uso medido da conta; não fala em dividir fonte longa"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "ajustado: junta ao K-005, 3ª passada",
+   "ajuste": {
+    "n": 75,
+    "acao": "junta",
+    "alvo": "K-005",
+    "estado": "ajustado: junta ao K-005, 3ª passada",
+    "proposto_por": "releitor R2",
+    "aprovado_por": "curador",
+    "motivo": "O lote de máquina está no escopo escrito da 3ª passada do K-005 ('amostra, fila, lote de máquina, valências'), onde o mapa já punha o 75; o 132 não leva a regra de divisão de fonte longa. A regra de divisão vai escrita no K-005 na etapa 5."
+   }
+  },
+  {
+   "n": 77,
+   "acao": "fica",
+   "familia": "J",
+   "problema": "O avaliador juntou formas do nome de uma pessoa num só código por idade, data e município, sem regra que diga quando a junção vale nem quem confere.",
+   "motivo": "A voz de quem pratica (W) se conta pelas pessoas; junção por palpite muda o que se conta.",
+   "evidencia": [
+    "saídas A3 e A4 do K-110 (citadas no insumo)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 79,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-118",
+   "familia": "X",
+   "motivo": "Os plugins do Quartz e os scripts de instalação são decisão do wiki público (Passo 6, K-118); o wiki local, que é a promessa da fase 1, gerou sem eles no K-110.",
+   "evidencia": [
+    "quadro, K-118 e K-110"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A decisão sobre plugins do Quartz e scripts de instalação é do wiki público (Passo 6, K-118, depois do K-010). O wiki local, que é a promessa da fase 1, gerou: K-110 concluído com 'o wiki abrindo na máquina', e a configuração tem CustomOgImages comentado e analytics nulo. Observação: o texto do K-118 não nomeia o assunto; o vínculo está no mapa.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Ao montar a fila, anotar no K-118 que decide os plugins e scripts de instalação (insumo 79).",
+    "conferido": [
+     "wiki-local/quartz/quartz.config.ts l. 15 (analytics: null) e l. 89-90 (Plugin.CustomOgImages comentado 'desligado no K-110: pede o sharp')",
+     "quadro.md l. 32: K-110 'Concluído', destino 'o wiki abrindo na máquina, fora do Git'",
+     "quadro.md l. 45: K-118 'Passo 6: acervo e wiki público. Depois do K-010'; mapa l. 415: '79 ... | D | K-118'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 85,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-010; F-0025; K-204",
+   "familia": "X",
+   "motivo": "Se 448 citações curtas de uma mesma obra, juntas, ficam na medida justificada é questão da F-0025, que espera a decisão de publicar (K-204, K-010).",
+   "evidencia": [
+    "quadro, K-204",
+    "acervo/faltas/F-0025.json"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Sai da fila para o K-010/K-204, mas a prova citada não se confirma: a F-0025 não carrega a pergunta do conjunto de 448 citações (trata do nome do autor). A pergunta só está na triagem do K-110 ('leitura de Vicente') e no próprio insumo; se sair sem ser anotada no K-204 ou no K-010, se perde. É publicação, não coleta.",
+    "parte_nao_coberta": "A pergunta do conjunto de citações de uma mesma obra não está escrita na F-0025 nem no K-204/K-010.",
+    "acao_sugerida": "Sair, desde que a pergunta seja escrita no escopo do K-204 (ou K-010) ao fechar a limpeza.",
+    "conferido": [
+     "grep '448' em acervo/faltas/*.json: nenhum resultado",
+     "trilhas/2026-10-29_K-110/triagem-juridica-K110.json l.17: 'na medida justificada para o conjunto é leitura de Vicente'",
+     "acervo/faltas/F-0025.json por_que: só autor e origem (art. 46, III), nada sobre conjunto",
+     "quadro.md l.71 (K-204) e l.20 (K-010)"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 87,
+   "acao": "fica",
+   "familia": "I",
+   "problema": "Não há regra geral de conhecimento tradicional para as CLB seguintes: a D-047 vale só para a cajuína e a D-057 só para as três candidatas; a proposta de Vicente é avisar sempre da lei e do caminho em cada uso, sem barrar a descrição do saber público.",
+   "motivo": "Organizar outras CLB com precaução jurídica, decidindo o que vai ao Git e o que fica na pasta local (D-043), depende dessa regra.",
+   "evidencia": [
+    "AGENTS.md, D-047 e D-057"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 90,
+   "acao": "junta",
+   "alvo": "87",
+   "familia": "I",
+   "motivo": "Onde fica o detalhe de uma prática com dúvida de conhecimento tradicional é parte da regra geral (87); hoje só a cajuína (D-047) e as três CLB do K-126 (D-057: detalhe de saber indígena na pasta local) têm leitura.",
+   "evidencia": [
+    "AGENTS.md, D-043, D-047 e D-057"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "Onde fica o detalhe de prática com dúvida de CT (Git ou pasta local) é faceta da regra geral do 87: a proposta de Vicente (avisar em vez de barrar) a resolve ou a torna explícita; hoje só a cajuína (D-047) e as três CLB do K-126 (D-057) têm leitura. A Falta é só para publicar.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "No 87, dizer que a regra inclui o destino do detalhe (Git ou pasta local).",
+    "conferido": [
+     "AGENTS.md D-043 (CT em detalhe em pasta local até o K-010), D-047, D-057 (saber indígena na pasta local)",
+     "acervo/faltas/F-0024.json e F-0033.json: vale_para publicar",
+     "texto do 87: regra geral de CT 'no lugar da barreira'"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 91,
+   "acao": "junta",
+   "alvo": "K-126",
+   "familia": "L",
+   "motivo": "O K-126 (D-057) leva as três CLB por 'tudo o que a ferramenta oferece', com 'Termos pela regra de termos', e cita o insumo 91 na origem: os Termos atestados ganham as variantes das fontes, e a varredura de menções se refaz com eles.",
+   "evidencia": [
+    "quadro, K-126 (origem: 'D-057; insumos 91 e 142')"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O K-126 cita o insumo 91 na origem e leva os Termos das três CLB pela regra de termos, o que atesta o TE-0003 e o TE-0004 com as variantes das fontes; a varredura de menções refeita com eles não está escrita no K-126.",
+    "parte_nao_coberta": "Refazer a varredura de menções incidentais (scripts/mencoes_incidentais.py) com os Termos atestados.",
+    "acao_sugerida": "Juntar ao K-126 e pôr a nova varredura no pronto-quando do cartão.",
+    "conferido": [
+     "acervo/termos/TE-0003.json (vinho de caju) e TE-0004.json (mocororó): estado candidato, só a forma declarada, 0 variantes, 0 abonações; TE-0005 (caoi) também candidato",
+     "quadro.md K-126: 'Termos pela regra de termos', origem 'D-057; insumos 91 e 142'",
+     "scripts/mencoes_incidentais.py existe, mas o texto do K-126 não pede a nova varredura"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 93,
+   "acao": "junta",
+   "alvo": "141",
+   "familia": "A",
+   "motivo": "Mesmo rumo: a IA só onde a regra e o script não alcançam (141); o juridico por regra e script, juntando item, fonte, norma e dúvida para um corpo jurídico, é um dos casos, dito no 141.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 93 e 141"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O 141 trata do custo e da IA só onde regra e script não alcançam, e o juridico por regra e script já existe em parte (triagem_fixa.py), mas o 141 não leva a preparação de cada questão para um corpo jurídico nem o 'não travar o item'; a razão certa de sair é em boa parte 'resolvido em parte', não 'mesmo problema do 141'.",
+    "parte_nao_coberta": "Os casos que a regra fixa não resolve ainda dependem da habilidade triagem-juridica com IA e retêm o item; e o pacote organizado para um corpo jurídico externo é fase de publicação.",
+    "acao_sugerida": "Sair da contagem registrando que o juridico por regra e script já existe (triagem_fixa.py) e que o resto é publicação (K-201 a K-204); manter a ligação com o 141 para a IA só onde a regra não alcança.",
+    "conferido": [
+     "scripts/triagem_fixa.py l. 1-25: triagem fixa do Jurídico por regra, sem IA, cria a Falta com norma, vale_para e caminho de liberação (guia), 'sem Falta pela regra' quando não há caso; D-042 tirou do juridico o ler, linkar e citar trecho curto",
+     "mapa-tres-frentes.md l. 429: 93 está como 'a definir pelo planejamento'",
+     "quadro.md K-201 a K-204: os guias de liberação e as Faltas a liberar existem como cartões, ligados à decisão de publicar (K-010)"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 94,
+   "acao": "fica",
+   "familia": "M",
+   "problema": "Cada cartão deixou no código e na trilha passos, comentários e arquivos que serviram ao caminho e não à forma final; Vicente pediu um passo de limpeza ao fim do piloto.",
+   "motivo": "Infraestrutura simples e fidedigna (princípio 16) e reconstituição por qualquer IA (princípio 11); pedido de Vicente de 30/10.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumo 94"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 97,
+   "acao": "fica",
+   "familia": "L",
+   "problema": "Não há regra para a Proposição cujo trecho não nomeia termo e cujo contexto aponta outra CLB (a PR-0412 ficou na cajuína, em dúvida).",
+   "motivo": "Organizar as CLB pela D-039 pede essa regra; o K-126 vai encontrar o caso no mocororó.",
+   "evidencia": [
+    "acervo/proposicoes/PR-0412.json"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 99,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "—",
+   "familia": "L",
+   "motivo": "Não é problema para a promessa: a conferência da camada Educação existe e passa (validar_acervo.py, checar_educacao, educacao-0.1, K-111), sem falha medida; escolher entre item e frase é ajuste de uma regra que funciona.",
+   "evidencia": [
+    "scripts/validar_acervo.py (checar_educacao)",
+    "quadro, K-111 (FALHA 0)"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "A conferência da camada Educação existe e passa (acervo-0.4, 4.473 registros, válido), então não bloqueia; mas a pergunta do insumo (por item ou por frase) é uma regra para Vicente decidir e não tem cartão nem decisão que a leve.",
+    "parte_nao_coberta": "A escolha entre regra por item e por frase, e o que conta como frase sobre a CLB; nenhum cartão ou V a leva (a proposta traz alvo vazio).",
+    "acao_sugerida": "O K-126 gera a Educação de três CLB e rodará a regra: levar a pergunta para lá como caso de teste, ou ao V-18; sem isso a decisão fica sem dono.",
+    "conferido": [
+     "scripts/validar_acervo.py l. 101-137, checar_educacao: confere por item de lista com a marca da Proposição ao fim",
+     "acervo/fichas/educacao/CL-0001.md l. 21: 'Clarificar é separar o suco turvo de uma parte que assenta. ... [PR-0093].' passa na regra: a primeira frase didática não tem marca própria",
+     "comando validar_acervo.py: 'acervo-0.4: 4473 registros; válido'",
+     "grep 'educa' em proxima-versao.md: V-18 e V-23 tratam da camada, não da regra por item ou por frase"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 100,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "—",
+   "familia": "J",
+   "motivo": "Não impede a promessa: o texto exato do Trecho fica inteiro e localizado; o corte largo só encurta o contexto em volta, em favor de proteger pessoas (K-111, nomes-0.1).",
+   "evidencia": [
+    "scripts/nomes_provaveis.py (nomes-0.1)",
+    "trilhas/insumos-planejamento.md, insumo 100 ('no texto exato restou só autor citado com a obra')"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O insumo é sobre contexto encurtado para proteger pessoas e, pelo próprio texto, o texto exato permanece (só autor citado com a obra, permitido pela D-042); não impede a promessa. Não rodei o validador nem o localizar_trecho para confirmar que os 72 Trechos cortados continuam localizáveis.",
+    "parte_nao_coberta": "Não conferi se o contexto mais curto mantém a localização única dos 72 Trechos (validar_acervo.py não rodou aqui).",
+    "acao_sugerida": "Sair; se o validador acusar Trecho não localizável, reabrir.",
+    "conferido": [
+     "trilhas/insumos-planejamento.md, insumo 100 ('no texto exato restou só autor citado com a obra')",
+     "scripts/gravar_extracao.py l.27 e l.129 (recortar_contextos)",
+     "AGENTS.md D-042 (nome do autor citado não é dado pessoal a barrar)"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 101,
+   "acao": "fica",
+   "familia": "B",
+   "motivo": "Os números da cadência (o mínimo da linha, a dobra até 28 dias, a volta com novidade) são valores provisórios a calibrar pela medida do rendimento, que é a 3ª passada do K-005 ('os números provisórios calibrados pela medida'). A regra roda versionada (agenda-0.1), pela D-048.",
+   "evidencia": [
+    "scripts/agendar.py, l. 53 (cadencia_max_dias 28)",
+    "quadro, K-005"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "refuta",
+    "motivo": "O K-005 não leva a cadência: o escopo escrito dele é 'os números da D-038 e do registro (amostra, fila, lote de máquina, valências)' e a cadência da D-048 não está no registro de valores; os números moram em scripts/agendar.py e em ambientes/rotinas.json, e a rotina diária que o insumo trata é coleta (promessa).",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Manter na fila. Destino possível: ampliar o escopo do K-005 (3a passada) com a regra agenda-0.1 e levá-la ao registro de valores, ou juntar ao 135 (limites no script e não no registro), por decisão do planejamento.",
+    "conferido": [
+     "grep 'agenda-0|cadencia' em esquemas/valores-provisorios.json: nenhuma ocorrência",
+     "scripts/agendar.py l. 50-56: cadencia_min_dias (padrão 1) e cadencia_max_dias (padrão 28) lidos do arquivo de ambientes",
+     "quadro.md K-005 l. 17: o escopo cita D-038, registro, amostra, fila, lote de máquina e valências; a cadência não aparece"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "refutado na releitura: fica",
+   "ajuste": {
+    "n": 101,
+    "acao": "fica",
+    "familia": "B",
+    "estado": "refutado na releitura: fica",
+    "proposto_por": "releitor R2 (refutação)",
+    "aprovado_por": "não se aplica (o item volta à fila)",
+    "problema": "A cadência da D-048 roda por uma regra com números que o plano não fixa (o mínimo da linha, a dobra até 28 dias, a volta com novidade), guardados em scripts/agendar.py e ambientes/rotinas.json, fora do registro de valores, sem a calibração pelo rendimento dos primeiros 7 dias.",
+    "motivo": "O K-005 não leva a cadência no escopo escrito (os números da D-038 e do registro), e a rotina diária é coleta: fica na fila, com destino na etapa 5."
+   },
+   "problema": "A cadência da D-048 roda por uma regra com números que o plano não fixa (o mínimo da linha, a dobra até 28 dias, a volta com novidade), guardados em scripts/agendar.py e ambientes/rotinas.json, fora do registro de valores, sem a calibração pelo rendimento dos primeiros 7 dias.",
+   "alvo_proposto": "K-005"
+  },
+  {
+   "n": 102,
+   "acao": "junta",
+   "alvo": "K-208",
+   "familia": "H",
+   "motivo": "O ritmo que o Internet Archive aceita só volta a importar se a F-0034 (termos não lidos pelo robô; vale agora) se liberar, e isso depende do [ABERTO] da D-049, que é o 112 (com o 109).",
+   "evidencia": [
+    "acervo/faltas/F-0034.json",
+    "scripts/ler_fonte.py, l. 51 (IA_INTERVALO_S = 10.0)",
+    "AGENTS.md, D-049 [ABERTO]"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O ritmo de 10 s só importa se o ler_fonte consultar a cópia, e hoje a F-0034 impede isso (wayback.falta_que_barra); o destino real é o K-208 (liberar a F-0034 lendo os termos), não o 112, cujo texto trata do alcance de 'intervenção humana' e não menciona ritmo.",
+    "parte_nao_coberta": "Conferir o ritmo do Internet Archive e gravá-lo no registro de valores não está no 112.",
+    "acao_sugerida": "Juntar ao K-208 (junto da leitura dos termos e da página de bots), com o 112 como contexto.",
+    "conferido": [
+     "scripts/ler_fonte.py l.50-51 (IA_INTERVALO_S = 10.0, provisório) e l.140 (falta_que_barra)",
+     "acervo/faltas/F-0034.json nota: 'ler_fonte.py não consulta cópia; a saída é Vicente ler os termos no navegador'",
+     "quadro.md l.75: K-208 'Falta jurídica a liberar: F-0034'",
+     "texto do 112 (sem ritmo)"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "ajustado: junta ao K-208",
+   "ajuste": {
+    "n": 102,
+    "acao": "junta",
+    "alvo": "K-208",
+    "estado": "ajustado: junta ao K-208",
+    "proposto_por": "releitor R3",
+    "aprovado_por": "curador",
+    "motivo": "O ritmo do Internet Archive só importa quando a F-0034 se liberar; liberar a F-0034 (ler os termos e a página de bots do Internet Archive) é o K-208. O 112 fica como contexto (o [ABERTO] da D-049)."
+   }
+  },
+  {
+   "n": 103,
+   "acao": "junta",
+   "alvo": "140",
+   "familia": "D",
+   "motivo": "Mesmo problema, e o 140 o cita: Consultas gerais que achem CLB de outros termos sem escolha manual de palavras.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumo 140 ('Complementa os insumos 21, 103 e 118')"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "O problema é vizinho do 140 (Consultas gerais que achem CLB de outros termos), mas o 140 se escreve como 'complementa os insumos 21, 103 e 118', não como o mesmo; falta no 140 a aprovação, como regra, da lista de genéricos e da classe 'bebida' (valores fixos no código).",
+    "parte_nao_coberta": "Lista de genéricos e classe 'bebida' como regra aprovada por Vicente (D-038) e a regra de que a mista só nasce de Termo atestado de outro termo.",
+    "acao_sugerida": "Juntar ao 140 acrescentando essa regra no escopo.",
+    "conferido": [
+     "scripts/gerar_termo.py l.51-52 e l.109 (VERSAO_GERAIS, GENERICOS = {coleta, circulação, adição}); l.19-23 (classe 'bebida' + descritor)",
+     "insumo 140: 'Complementa os insumos 21, 103 e 118'",
+     "lista_abertos.json: 118 fechado_por_cartao K-113"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 104,
+   "acao": "fica",
+   "familia": "B",
+   "problema": "Não se sabe se o agendamento das rotinas no GitHub se desliga depois de 60 dias sem 'atividade' em repositório público, nem se o commit da própria rotina conta.",
+   "motivo": "Coletar todo dia (D-048) depende de a rotina seguir ligada; os 60 dias da primeira rodada se completam no começo de janeiro de 2027.",
+   "evidencia": [
+    "trilhas/2026-11-04_K-112/conferencia-termos-actions.json (C112.5)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 105,
+   "acao": "fica",
+   "familia": "M",
+   "problema": "Agente ou habilidade cujo cabeçalho YAML não carrega some sem aviso (o rastreador ficou fora de 30/10 a 05/11); a suíte e o portão não percebem.",
+   "motivo": "A rotina com IA chama agentes e habilidades; a manutencao.py confere o modelo por regex, não se o cabeçalho carrega, e só roda à mão.",
+   "evidencia": [
+    "scripts/manutencao.py, l. 22 e 265-270"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 109,
+   "acao": "junta",
+   "alvo": "112",
+   "familia": "H",
+   "motivo": "A D-049 pôs a fonte cujos termos o robô não lê no mesmo [ABERTO] do alcance de 'intervenção humana' ('a fonte cujos termos o robô não lê (insumo 109)'); a leitura de termos no navegador é um dos casos do 112.",
+   "evidencia": [
+    "AGENTS.md, D-049 [ABERTO]"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A D-049 já registra no seu [ABERTO] 'a fonte cujos termos o robô não lê (insumo 109)', e o 112 é o próprio [ABERTO]; a regra única pedida decide-se junto com o alcance de 'intervenção humana'.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Nenhuma; no 112, escrever a assimetria Internet Archive x OpenAlex.",
+    "conferido": [
+     "AGENTS.md D-049 ('[ABERTO]: ... a fonte cujos termos o robô não lê (insumo 109)')",
+     "proposta.json: 112 fica; texto do 112 inclui 'leitura de termos no navegador (K-208)'",
+     "acervo/faltas/F-0034.json (caso Internet Archive x OpenAlex)"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 111,
+   "acao": "fica",
+   "familia": "G",
+   "problema": "No relatório do dia, os commits da ramificação rotinas à frente do main se contam antes do commit da própria rodada (um a menos).",
+   "motivo": "Vicente acompanha a rotina pelo relatório do dia (D-048); o número tem de ser o real.",
+   "evidencia": [
+    "scripts/relatorio_dia.py, l. 44-50 (relatorio-dia-0.4, sem mudança desde 05/11)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 112,
+   "acao": "fica",
+   "familia": "H",
+   "problema": "O [ABERTO] da D-049: se 'intervenção humana' alcança a busca à mão, o pedido de acesso a instituição, a entrada por link, a leitura de termos no navegador e a caixa dos Alertas; e a fonte cujos termos o robô não lê.",
+   "motivo": "É regra que só Vicente decide; a resposta abre ou fecha fontes (Internet Archive, Hemeroteca) para a coleta.",
+   "evidencia": [
+    "AGENTS.md, D-049 [ABERTO]"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 113,
+   "acao": "junta",
+   "alvo": "126",
+   "familia": "X",
+   "motivo": "Só vale quando houver outra pessoa com escrita no repositório (fase 2); o CLAUDE.md já diz que a proteção volta a exigir pull request então (K-008).",
+   "evidencia": [
+    "CLAUDE.md, Commits ('Volta a exigir pull request quando houver outra pessoa com escrita (insumo, K-008)')"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Hoje só Vicente e a rotina gravam no main, então a falta de regra contra outra pessoa com escrita só pesa na fase 2 (CLAUDE.md l. 26 diz que a proteção volta a exigir pull request nesse caso, com '(insumo, K-008)'). Mas o K-008 não leva o 113 no escrito (origem: insumos 9 e 14), e o assunto é vizinho do 126 (proteção do main contra a rotina com IA), que fica na fila: ambos são regra de proteção do main com a junção da rotina mantida. Sair como fora da promessa vale; deixar sem portador escrito não.",
+    "parte_nao_coberta": "Nenhum cartão ou V cita o 113 no escrito; o vínculo com o K-008 está só no mapa e numa frase do CLAUDE.md. A decisão sobre como a junção da rotina sobrevive à proteção que exige pull request é a mesma conversa do 126.",
+    "acao_sugerida": "Sair do 113 como fora da promessa, mas acrescentar o 113 à origem do K-008 e anotar no 126 que a regra de proteção do main deve já prever a volta do pull request.",
+    "conferido": [
+     "CLAUDE.md l. 26: 'Volta a exigir pull request quando houver outra pessoa com escrita (insumo, K-008)'",
+     "quadro.md l. 21: origem do K-008 'insumos 9 e 14' (113 não aparece)",
+     "insumos-planejamento.md l. 132: insumo 126 (proteção do main contra a rotina) permanece aberto",
+     "mapa-tres-frentes.md l. 449: '113, proteção do main com outra pessoa | P; D | K-008'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "ajustado: junta ao 126",
+   "ajuste": {
+    "n": 113,
+    "acao": "junta",
+    "alvo": "126",
+    "estado": "ajustado: junta ao 126",
+    "proposto_por": "agrupador cego (mesmo problema que o 126) e releitor R1 (anotar no 126 a volta do pull request)",
+    "aprovado_por": "curador",
+    "motivo": "A proteção do main por regra, com a junção da rotina mantida por um caminho que a proteção aceite, é um conserto só: o 126 o pede agora (a rotina com IA) e o 113 na fase 2 (outra pessoa com escrita). No lugar de sair como fase 2, junta-se ao 126, que deve já prever a volta do pull request."
+   }
+  },
+  {
+   "n": 123,
+   "acao": "fica",
+   "familia": "L",
+   "problema": "Nenhuma regra escrita diz se Evidência de leitura divergente abona o nome do Termo (o registro real a deixa fora; o teste em Haiku a usou).",
+   "motivo": "A D-041 tira a divergente de μ e λ, mas não fala de abonação; estender a decisão é de Vicente.",
+   "evidencia": [
+    ".claude/skills/registrar-termo/SKILL.md",
+    "scripts/gerar_termo.py"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 124,
+   "acao": "junta",
+   "alvo": "87",
+   "familia": "I",
+   "motivo": "A releitura da premissa da D-047 diante de atribuição histórica de origem ('foi desenvolvida pelos indígenas') é parte da regra geral de conhecimento tradicional (87). Vão junto, ditas no 87: a lista da triagem fixa sem 'índios' e 'indígenas' (também do 53) e o exemplo da triagem-juridica que cita um guia que não existe (conserto de harness).",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 87 e 124",
+    "AGENTS.md, D-047"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Só a releitura da premissa da D-047 cabe no 87. A lista da triagem fixa vai ao 53 (só 'indigena' no singular, palavra inteira, confirmado) e o exemplo da triagem-juridica é conserto de harness; o guia citado existe só como exemplo em guia-de-liberacao/exemplos, não como guia real (G-sisgen-lei-13123).",
+    "parte_nao_coberta": "A lista de palavras (indígenas, índios) e o exemplo com guia inexistente: a lista vai ao 53; o exemplo é conserto pequeno de harness, fora da promessa.",
+    "acao_sugerida": "Premissa da D-047 ao 87; lista ao 53; exemplo como anotação de harness.",
+    "conferido": [
+     "esquemas/triagem-fixa.json l.177 ('indigena') e scripts/triagem_fixa.py l.54-58 (casa palavra inteira): 'indigenas' e 'indios' não casam",
+     "grep: G-sisgen-cadastro-de-acesso em .claude/skills/guia-de-liberacao/exemplos/guia-sisgen.json e nos exemplos da triagem-juridica; guia real em trilhas/2026-10-29_K-109/guias/G-sisgen-lei-13123.json",
+     "AGENTS.md D-047"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 126,
+   "acao": "fica",
+   "familia": "B",
+   "problema": "A rotina com IA consegue gravar direto no main, com a identidade do dono; a barreira é só por instrução, com o vigia avisando depois.",
+   "motivo": "A operação com IA em escala (D-058) sem a principal protegida por regra; é o que o K-113 deixou do item 3 do insumo 3.",
+   "evidencia": [
+    ".github/workflows/rotina-ia-vigia.yml",
+    "CLAUDE.md, Commits (proteção do main)"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 127,
+   "acao": "junta",
+   "alvo": "132",
+   "familia": "A",
+   "motivo": "Mesmo problema: medir o custo de cada rodada da rotina com IA em pontos da conta, para calibrar os lotes dentro da D-050 (132).",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 127 e 132"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "É o mesmo problema do 132: calibrar os lotes por rodada dentro da D-050 exige o custo da rodada medido em pontos da conta, que o hook não vê na nuvem.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Ao juntar, escrever no 132 que a medida em pp inclui a sessão da rotina na nuvem.",
+    "conferido": [
+     "trilhas/insumos-planejamento.md, linhas dos insumos 127 e 132: o 132 pede 'o número de lotes por rodada calibrado pelo uso medido da conta, dentro dos 20% da semana e 50% da janela' e cita a sessão da rotina sem medida",
+     "AGENTS.md D-056: a IA da operação segue a rotina do Claude do K-113 nos tetos da D-050, e a operação em escala espera a fila (D-058)"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 128,
+   "acao": "fica",
+   "familia": "J",
+   "problema": "A tabela código → nome das pessoas citadas fica na máquina de Vicente; a rotina com IA não a alcança, e a Entrada com fala direta de pessoa fica em bruto, à espera de conversa.",
+   "motivo": "A operação com IA em escala não trata as Entradas com fala de quem pratica, que sustentam a W.",
+   "evidencia": [
+    "scripts/rotina_ia.py (filtrar)",
+    "scripts/gravar_extracao.py"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 129,
+   "acao": "fica",
+   "familia": "B",
+   "problema": "As duas camadas das rotinas gravam na mesma faixa de IDs; a colisão se evita pelo horário e se pega no portão.",
+   "motivo": "Operação com IA em escala sem colisão de ID, sem depender do horário.",
+   "evidencia": [
+    "esquemas/valores-provisorios.json (numeracao_id)",
+    "scripts/portao_camada2.py"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 130,
+   "acao": "junta",
+   "alvo": "68",
+   "familia": "E",
+   "motivo": "A leitura do agregador (só pelo link de origem, às vezes em host vedado; a página de verificação gravada como texto) é o mesmo problema do 68: ler cada fonte pela via que ela permite e dizer o bloqueio como Falta, nunca gravá-lo como texto. A parte da amostra da camada 2 é a do 70, dita lá.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 68, 70 e 130"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "A leitura do agregador só pelo link de origem (e o bloqueio dito como Falta, não gravado como texto) é o mesmo problema do 68; a parte da amostra da camada 2 é do 70. Não confirmei se a página de verificação ainda é gravada como texto: há SINAIS_ANTIROBO em _coleta.py, mas o caso do Oasisbr (123 caracteres) não foi retestado.",
+    "parte_nao_coberta": "A amostra da camada 2 (não mede só o que a IA produziu) fica no 70, não no 68; o caso Oasisbr/Sucupira com robots vedado deve constar no 68.",
+    "acao_sugerida": "Juntar ao 68 (leitura) e ao 70 (amostra), dizendo as duas partes.",
+    "conferido": [
+     "scripts/_coleta.py l.30 (SINAIS_ANTIROBO) e ler_fonte.py l.134 (anti-robô vira erro)",
+     "scripts/sortear_amostra.py l.6 (universo desde a anterior, amostra-0.2)",
+     "proposta.json: 68 e 70 ficam, e o 70 cita 'parte do 130'"
+    ],
+    "arquivo": "releitura-R3.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 131,
+   "acao": "junta",
+   "alvo": "K-126",
+   "familia": "L",
+   "motivo": "A EN-1066 é uma das 7 Entradas do K-126 (D-057), com o detalhe na pasta local. A primeira junção positiva da rotina com IA é a primeira execução em escala, que a D-058 já põe depois da fila: não há conserto a fazer antes dela.",
+   "evidencia": [
+    "quadro, K-126 (EN-1066)",
+    "AGENTS.md, D-058"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "A EN-1066 está no K-126, mas a primeira junção da rotina com IA pelo portão sem Vicente nunca rodou e não é do K-126.",
+    "parte_nao_coberta": "A primeira junção positiva da rotina com IA pelo portão (sem Vicente) nunca foi exercitada ponta a ponta; é parte da operação com IA em escala, depois da fila.",
+    "acao_sugerida": "Juntar a EN-1066 ao K-126 e levar a junção positiva junto do 132 (rotina com IA), como passo de abertura da operação em escala, para não se perder.",
+    "conferido": [
+     "quadro.md K-126: a EN-1066 está entre as 7 Entradas; D-057 deixa o detalhe de saber indígena na pasta local",
+     "trilhas/2026-10-17_execucao-piloto.md l. 397-399: a segunda rodada de 13/11 não gravou (esquema reprovado), o envio deu 403 e a primeira rodada continua com a caixa aberta; o portão só foi visto reprovando",
+     "AGENTS.md, Próximo: a reconfiguração da rotina do Claude do K-113 e a operação com IA em escala esperam a fila do K-004 (D-058)"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 132,
+   "acao": "fica",
+   "familia": "A",
+   "problema": "O custo da rotina com IA está medido só pelos tokens dos agentes (a sessão da rotina sem medida, a nuvem fora do hook), e o número de lotes por rodada (1) não está calibrado pelo uso medido da conta; a fonte longa não cabe num lote.",
+   "motivo": "A operação com IA em escala tem teto (D-050: 20% da semana e 50% da janela); sem a medida, não se calibra.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 38, 75, 127 e 132"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 133,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-125",
+   "familia": "X",
+   "motivo": "O Gemini está estacionado pela D-056: a IA da operação é a rotina do Claude; o Gemini volta só com cota paga e decisão nova.",
+   "evidencia": [
+    "AGENTS.md, D-056",
+    "quadro, K-125 (estacionado)"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "A cota e os termos do nível gratuito do Gemini só importam para a rotina com IA no Gemini, que a D-056 estacionou: a IA da operação é a rotina do Claude, e o Gemini volta só com cota paga e decisão nova. O K-125 está estacionado, com estado salvo, e vai à reunião do K-004.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "AGENTS.md, D-056: 'Até haver financiamento, a IA da operação é a rotina do Claude do K-113 ... o Gemini volta com cota paga, por decisão nova'; K-125 estacionado",
+     "quadro.md l. 40: K-125 'Estacionado pela D-056 ... vai à reunião do K-004'",
+     "ls trilhas/2026-11-14_manutencao/retomar-K-125.md e trilhas/decisoes/D-056.json: existem"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 134,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-125",
+   "familia": "X",
+   "motivo": "O Gemini está estacionado pela D-056: a IA da operação é a rotina do Claude; o Gemini volta só com cota paga e decisão nova.",
+   "evidencia": [
+    "AGENTS.md, D-056",
+    "quadro, K-125 (estacionado)"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma",
+    "motivo": "É sobre o custo de entrada do executor do Gemini contra o teto semanal da D-054; o executor é o K-125, estacionado pela D-056. A medida (histórico inteiro volta a cada pedido) fica guardada no insumo. Observação: se a rotina do Claude do K-113 mostrar o mesmo crescimento de contexto, será outro insumo, no cartão dela.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": null,
+    "conferido": [
+     "AGENTS.md, D-056 e D-054: teto do Gemini e estacionamento",
+     "quadro.md l. 40: K-125 estacionado, escopo inclui 'o contador semanal de tokens (1 milhão de entrada, 2 milhões de saída)'",
+     "mapa-tres-frentes.md l. 470: '134 ... | D; P | K-125'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado na releitura"
+  },
+  {
+   "n": 135,
+   "acao": "fica",
+   "familia": "M",
+   "motivo": "Mesmo problema: a casa simples e verdadeira sobre si mesma. O 94 pede o passo de limpeza ao fim do piloto; o 135, a vistoria que mantém a limpeza (quando roda, os limites no registro, o AGENTS.md que pesa em toda conversa, o script sem uso, a ramificação que sobrou).",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 94 e 135"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "refuta",
+    "motivo": "O 94 pede um passo de limpeza único ao fim do piloto (comentários, passos e arquivos temporários sem uso). O 135 junta cinco coisas: quando a vistoria (manutencao.py) roda sozinha, os limites no registro de valores, o peso do AGENTS.md carregado em toda conversa, o script sem uso e a ramificação remota. Só as duas últimas (resumo_coleta.py sem chamada, ramificação sobrada) são resíduo do tipo do 94; o essencial do 135 (vistoria recorrente e peso do AGENTS.md) não cabe no 94. O defeito do peso segue real: o AGENTS.md tem 30.812 bytes e o limite provisório citado é de 24 mil caracteres com o CLAUDE.md. Também o 94 não tem cartão (mapa: 'a definir pelo planejamento'), então juntar não dá destino.",
+    "parte_nao_coberta": "Quando a vistoria roda sozinha; os limites no registro de valores; o peso do AGENTS.md em toda conversa (só Vicente pode encurtá-lo).",
+    "acao_sugerida": "Deixar o 135 na fila como insumo próprio e relacioná-lo ao 94 (o 94 limpa o que sobrou; o 135 mantém a casa limpa); se quiser reduzir a contagem, só o resumo_coleta.py e a ramificação remota se juntam ao 94.",
+    "conferido": [
+     "wc -c AGENTS.md CLAUDE.md: 30812 e 2332 bytes (o AGENTS.md sozinho passa do limite de 24 mil citado no insumo)",
+     "ls scripts/manutencao.py e scripts/resumo_coleta.py: existem; grep 'resumo_coleta' fora de trilhas/logs: só o próprio arquivo cita o nome (nada o chama)",
+     "git branch -r: existe origin/claude/rotina-ia-2026-11-13",
+     "insumos-planejamento.md l. 100: o 94 é limpeza de resíduos no fim do piloto; mapa l. 430 e l. 471: ambos 'a definir pelo planejamento'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "refutado na releitura: fica",
+   "ajuste": {
+    "n": 135,
+    "acao": "fica",
+    "familia": "M",
+    "estado": "refutado na releitura: fica",
+    "proposto_por": "releitor R1 (refutação)",
+    "aprovado_por": "não se aplica (o item volta à fila)",
+    "problema": "A vistoria da casa (scripts/manutencao.py) rodou uma vez, à mão: falta decidir quando ela roda sozinha; os limites provisórios estão no script e não no registro de valores; a seção de decisões do AGENTS.md pesa em toda conversa e em todo agente (só Vicente pode encurtá-la); o scripts/resumo_coleta.py não é chamado; a ramificação remota claude/rotina-ia-2026-11-13 sobrou.",
+    "motivo": "O 94 limpa uma vez o que sobrou; o 135 mantém a casa limpa. Só o script sem uso e a ramificação são resíduo do tipo do 94; o essencial do 135 não cabe nele."
+   },
+   "problema": "A vistoria da casa (scripts/manutencao.py) rodou uma vez, à mão: falta decidir quando ela roda sozinha; os limites provisórios estão no script e não no registro de valores; a seção de decisões do AGENTS.md pesa em toda conversa e em todo agente (só Vicente pode encurtá-la); o scripts/resumo_coleta.py não é chamado; a ramificação remota claude/rotina-ia-2026-11-13 sobrou.",
+   "alvo_proposto": "94"
+  },
+  {
+   "n": 136,
+   "acao": "fica",
+   "familia": "A",
+   "problema": "O consumo de tokens não tem medida única: a linha do curador soma os subagentes (conta em dobro), o Workflow mede diferente do Agent, o agente retomado conta a releitura, e a tabela da conta mistura medido e estimado.",
+   "motivo": "O teto da operação (D-050) e a 3ª passada do K-005 somam esses números.",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 15, 43, 136 e 139"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 137,
+   "acao": "fica",
+   "familia": "G",
+   "problema": "Os 69 ambientes seguem 'não iniciado' e 'proposto', embora a rotina consulte quatro todo dia; nada calcula o estado do Ambiente dos seus Recortes (o mesmo do 47, fechado pelo K-108 sem o cálculo).",
+   "motivo": "O alcance da ferramenta (D-030) e o relatório do dia leem esse estado.",
+   "evidencia": [
+    "ambientes/AM-*.json: 69 com ('não iniciado', 'proposto') em 20/11/2026"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 138,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "K-007",
+   "familia": "X",
+   "motivo": "É a condição 2 do gatilho da fase 2 (horas de Vicente); avaliar o gatilho é o K-007, não conserto da ferramenta.",
+   "evidencia": [
+    "quadro, K-007"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Avaliar o gatilho da fase 2 é o K-007, e a fase 2 não é a promessa da fase 1. Mas o K-007 só avalia ('a fase 2 aberta, ou o que falta dito') e se apoia em '4 semanas medidas'; ninguém decide como medir as horas de Vicente ou se a condição 2 muda: o K-108 diz que a medição de horas 'segue como registro, não como cartão', e o relatório do piloto confirma que a tabela não tem as colunas do bloco 13. A mesma medida de horas entra no K-005 (3ª passada, 'horas do bloco 13').",
+    "parte_nao_coberta": "A escolha de como medir as horas ou de rever a condição 2: o K-007 não a decide, ela só aparece como 'o que falta dito'.",
+    "acao_sugerida": "Sair do 138 como fora da promessa, mas ligá-lo também ao K-005 (3ª passada, horas) e escrever no K-007 que a condição 2 precisa de medida ou de revisão antes de avaliar.",
+    "conferido": [
+     "00_Fundacao l. 676-679: condição 2 'as horas reais de 4 semanas couberam em 1 a 3 h' [PROPOSTA]",
+     "relatorio-piloto.md l. 241 e l. 292: horas 'não medidas'; 2 semanas com linha, sem horas; tabela sem as colunas do bloco 13",
+     "quadro.md l. 19: K-007 'Depois do K-116 e de 4 semanas medidas'; l. 51: K-108 'medição de horas ... segue como registro, não como cartão'; l. 17: K-005 cita 'horas do bloco 13'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  },
+  {
+   "n": 139,
+   "acao": "fica",
+   "familia": "A",
+   "motivo": "Mesmo problema: uma medida única do consumo, lida de um só modo por todos os scripts, com o estimado à parte (136).",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumos 136 e 139"
+   ],
+   "proposto": "junta",
+   "releitura": {
+    "veredito": "refuta",
+    "motivo": "O defeito do 139 (a tabela Semana da conta lida por duas cópias da função numero(), com o estimado na mesma célula) não é o do 136 (tokens dos logs contados em dobro); o conserto de um não resolve o outro. O 'a tabela mistura medido e estimado' só aparece na reescrita da proposta, não no texto original do 136.",
+    "parte_nao_coberta": null,
+    "acao_sugerida": "Manter na fila, como defeito próprio de manutenção do orçamento (um leitor único da tabela), ou sair como 'fora da promessa' por ser um erro já alinhado na 0.2 e sem efeito na coleta; a decisão é do planejamento. Se quiserem agrupar, juntar ao 136 só como mesma família de consumo, com o texto do 136 estendido.",
+    "conferido": [
+     "scripts/relatorio_piloto.py l. 15-16, 65 e 71 (numero, numero_estrito) e scripts/orcamento.py l. 45-48 (numero): duas implementações separadas da leitura da mesma tabela; o relatorio apenas imita o orcamento",
+     "trilhas/insumos-planejamento.md, linha do 136: fala da linha do curador nos logs, sem a tabela da conta"
+    ],
+    "arquivo": "releitura-R2.json"
+   },
+   "estado": "refutado na releitura: fica",
+   "ajuste": {
+    "n": 139,
+    "acao": "fica",
+    "familia": "A",
+    "estado": "refutado na releitura: fica",
+    "proposto_por": "releitor R2 (refutação)",
+    "aprovado_por": "não se aplica (o item volta à fila)",
+    "problema": "A tabela 'Semana da conta' do checklist é lida por duas cópias da função numero() (orcamento.py e relatorio_piloto.py), com o medido e o estimado na mesma célula; não há leitor único.",
+    "motivo": "O defeito não é o do 136 (tokens dos logs contados em dobro): o conserto de um não resolve o outro. Fica na fila, perto do 136."
+   },
+   "problema": "A tabela 'Semana da conta' do checklist é lida por duas cópias da função numero() (orcamento.py e relatorio_piloto.py), com o medido e o estimado na mesma célula; não há leitor único.",
+   "alvo_proposto": "136"
+  },
+  {
+   "n": 140,
+   "acao": "fica",
+   "familia": "D",
+   "problema": "As rotinas só acham CLB cujo nome a ferramenta já conhece: a Consulta geral trouxe sobretudo tecnologia de alimentos, nomes de bebidas nativas dão 0, e o alcance de cada Consulta não é medido nem dito.",
+   "motivo": "Coletar CLB em geral é a promessa das rotinas (D-032; princípio 6, nativos primeiro).",
+   "evidencia": [
+    "trilhas/insumos-planejamento.md, insumo 140"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 141,
+   "acao": "fica",
+   "familia": "A",
+   "problema": "O custo por Entrada e por CLB não é medido por parte (leitura da fonte, peso do agente, escrita), e não se testou montar ficha e grafo por script a partir das Proposições; Vicente quer a ferramenta quase independente de IA (essência ainda a confirmar).",
+   "motivo": "Escalar a outras CLB depende de saber onde a IA é preciso.",
+   "evidencia": [
+    "trilhas/2026-11-14_relatorio-piloto/dados.json",
+    "rodadas/2026-11-15_antes-do-K-004/passagem.md, seção 4"
+   ],
+   "proposto": "fica"
+  },
+  {
+   "n": 142,
+   "acao": "sai_fora_da_promessa",
+   "alvo": "—",
+   "familia": "P",
+   "motivo": "É do harness do planejamento (habilidade registrar-decisao), não do que a ferramenta promete; o erro concreto já foi corrigido na D-057, e o K-126 cita o insumo 142 na origem.",
+   "evidencia": [
+    "quadro, K-126 (origem)",
+    "trilhas/decisoes/D-057.json"
+   ],
+   "proposto": "sai_fora_da_promessa",
+   "releitura": {
+    "veredito": "confirma_em_parte",
+    "motivo": "Registrar decisões é do harness do planejamento, não da promessa da fase 1, e o erro concreto está corrigido no D-057, que traz as palavras conferidas ('199' e 'estas entradas' com o sentido confirmado). Mas a causa que o insumo aponta (a habilidade registrar-decisao não separa a resposta que confirma a lista da que responde só uma parte) não foi tocada: a habilidade não foi alterada desde o K-111 e não tem texto sobre isso. Como o alvo é '—', sair da fila deixa a falha sem nenhum portador.",
+    "parte_nao_coberta": "O conserto da habilidade registrar-decisao (separar a resposta que confirma a lista da que responde parte; o que a sessão põe ou tira por leitura própria volta a Vicente dito como leitura) não tem cartão.",
+    "acao_sugerida": "Sair da fila como fora da promessa, mas juntar o 142 ao K-006 (ciclo execução, insumo, planejamento) ou deixar marcado 'processo do planejamento' na reunião do K-004, para não se perder.",
+    "conferido": [
+     "trilhas/decisoes/D-057.json l. 10-11: palavras a conferir com 'sentido_confirmado' (as 7 Entradas; não as 199; insumo 142), confirmada_por_vicente true em 2026-11-20",
+     "git log -3 -- .claude/skills/registrar-decisao/SKILL.md: últimos commits do K-111 e do bloco 2.5; grep por 'separa|confirm|resposta parcial|escopo' no SKILL.md sem resultado",
+     "quadro.md l. 39: K-126 cita 'insumos 91 e 142' na origem; mapa l. 478: '142 ... | a definir pelo planejamento'"
+    ],
+    "arquivo": "releitura-R1.json"
+   },
+   "estado": "confirmado em parte na releitura"
+  }
+ ],
+ "notas_cruzamento": {
+  "2": "Mesmo destino do 1: a lista do proxima-versao.md (o 2 no V-36), material da etapa 6.",
+  "11": "Mesmo destino do 1: a lista do proxima-versao.md (o 11 no V-35), material da etapa 6.",
+  "50": "Mesmo destino do 1: a lista do proxima-versao.md (o 50 no V-39, criado na limpeza), material da etapa 6.",
+  "21": "Fica junto ao 140: o 91 se resolve no K-126 atestando os Termos de três CLB, o que não resolve o 21 em geral (CLB cujo nome nenhum Termo registra). Na etapa 5, escrever no 140 que o script de menções só vê o registro de Termos.",
+  "130": "Fica junto ao 68 (a leitura do agregador e o bloqueio dito como Falta); a parte da amostra da camada 2 vai escrita no 70 na etapa 5, como pede a releitura R3."
+ },
+ "leitura": [
+  "Leitura do curador, sobre o que a releitura e o cruzamento cego mostraram; não é decisão.",
+  "A hipótese de Vicente se confirma: dos 82 abertos, 50 saem da contagem (29 se juntam ao que já trata do assunto, 6 já estavam resolvidos e 15 não são problema da promessa da fase 1) e 32 ficam, em 12 famílias. As famílias, não os insumos, são o tamanho real da fila que a etapa 5 vai montar.",
+  "O mesmo problema foi anotado de novo à medida que a construção avançava, cada vez por um cartão: a medida de tokens (15 no K-001, 43 no K-106, 136 no K-116); as Consultas que não acham outras CLB (21 no K-003, 103 no K-112, 140 no K-116); a regra de conhecimento tradicional (66 no K-109, 87 e 90 no K-110, 124 no K-115a); a proteção do main (insumo 3, item 3, na 6C; 113 no K-112; 126 no K-113); a Falta de busca (45 no K-107, 55 no K-108).",
+  "Fechar o insumo quando o cartão fecha não prova que o problema acabou: o agrupador cego achou 15 abertos que repetem um insumo fechado cujo problema continuou depois do cartão (entre eles 137 e 47, do K-108; 54 e 44, do K-108; 140 e 118, do K-113; 97 e 89, do K-111; 141 e 60, do K-002; 136 e 5, do K-101). O lista_abertos.py fecha pela coluna do quadro, não pelo problema; isso vale ler junto com a etapa 5, que dá o destino de tudo de uma vez.",
+  "Outra parte do acúmulo são regras e números que a construção teve de criar onde o plano não dizia, e que a ferramenta usa sem a aprovação de Vicente nem a calibração pela medida: a cadência das rotinas (101), as listas e perguntas da triagem fixa (53, com o 67 e o 124), a regra das Consultas gerais (103, junto ao 140), os limites da vistoria (135) e o ritmo do Internet Archive (102). Vários moram em scripts, fora do registro de valores.",
+  "Pelas próprias palavras dos insumos, cinco dos 32 tocam a operação com IA em escala que a D-058 libera depois da fila: a principal protegida por regra (126, com o 113), a colisão de IDs entre camadas (129), a amostra que audita cada lote e camada (70), o custo da rodada medido e o lote calibrado (132) e a tabela de nomes ao alcance da rotina (128). É leitura para a etapa 5 e para o [ABERTO] da D-058, não decisão.",
+  "O agrupador cego marcou o 94 (passo de limpeza da ferramenta) e o 135 (vistoria da casa) como fora da promessa; ficam por serem pedido de Vicente (94, de 30/10) e porque a releitura do 135 o deixou na fila. Se arrumar a casa conta como parte do que a ferramenta promete é regra, e a regra é de Vicente."
+ ],
+ "cruzamento_cego": {
+  "divergencias": [
+   {
+    "tema": "Fundação e brief atrás das decisões (próxima versão)",
+    "insumo": 2,
+    "mae_no_cego": 1,
+    "no_resultado": "V-36",
+    "mae_no_resultado": "proxima-versao.md",
+    "porque": "O conserto é um só: escrever a próxima versão da Fundação. Insumo 1: 'a próxima versão da Fundação alinhada às decisões D-031 a D-035'; insumo 50: 'a Fundação e o brief seguem com o texto antigo, pela D-035'; insumo 11: 'volta a cobrá-las quando a próxima versão sair'; insumo 2: 'ponto de partida pronto para escrever a próxima versão'. O 1 é a mãe porque lista o conjunto do que a versão levaria; 2, 11 e 50 são partes dele."
+   },
+   {
+    "tema": "Fundação e brief atrás das decisões (próxima versão)",
+    "insumo": 11,
+    "mae_no_cego": 1,
+    "no_resultado": "V-35",
+    "mae_no_resultado": "proxima-versao.md",
+    "porque": "O conserto é um só: escrever a próxima versão da Fundação. Insumo 1: 'a próxima versão da Fundação alinhada às decisões D-031 a D-035'; insumo 50: 'a Fundação e o brief seguem com o texto antigo, pela D-035'; insumo 11: 'volta a cobrá-las quando a próxima versão sair'; insumo 2: 'ponto de partida pronto para escrever a próxima versão'. O 1 é a mãe porque lista o conjunto do que a versão levaria; 2, 11 e 50 são partes dele."
+   },
+   {
+    "tema": "Fundação e brief atrás das decisões (próxima versão)",
+    "insumo": 50,
+    "mae_no_cego": 1,
+    "no_resultado": "V-39",
+    "mae_no_resultado": "proxima-versao.md",
+    "porque": "O conserto é um só: escrever a próxima versão da Fundação. Insumo 1: 'a próxima versão da Fundação alinhada às decisões D-031 a D-035'; insumo 50: 'a Fundação e o brief seguem com o texto antigo, pela D-035'; insumo 11: 'volta a cobrá-las quando a próxima versão sair'; insumo 2: 'ponto de partida pronto para escrever a próxima versão'. O 1 é a mãe porque lista o conjunto do que a versão levaria; 2, 11 e 50 são partes dele."
+   },
+   {
+    "tema": "Descoberta de CLB além da cajuína presa a Termos, listas e Consultas gerais",
+    "insumo": 21,
+    "mae_no_cego": 91,
+    "no_resultado": "140",
+    "mae_no_resultado": "K-126",
+    "porque": "A varredura de menções só vê o que o registro de Termos lista. 21: 'só vê as CLB cujo nome está no registro de Termos'; 91: 'a varredura só vê as formas do registro: ... vinho de caju bateu 43 vezes, mas vinho do caju (9) e vinho-de-caju (2) ficaram fora'. O 91 traz a medida e o conserto (Termos atestados com as variantes das fontes, varredura refeita)."
+   },
+   {
+    "tema": "Rotina com IA: junção, protegida do main e amostra",
+    "insumo": 130,
+    "mae_no_cego": 70,
+    "no_resultado": "68",
+    "mae_no_resultado": "70",
+    "porque": "Mesmo defeito do universo da amostra. 70: 'uma amostra que audite cada lote do que a ferramenta produziu nele, sem que o acúmulo de uma etapa anterior dilua o lote'; 130 (segunda parte): 'a amostra da camada 2 medindo só o que a IA produziu'. O 130 também trata da leitura do Oasisbr (outro assunto, ver o tema de leitura de fontes)."
+   }
+  ],
+  "fora_no_cego_e_fica_no_resultado": [
+   {
+    "insumo": 94,
+    "no_resultado": "94",
+    "porque": "Arrumação do código ao fim do piloto, passo do plano e não defeito para cumprir a promessa."
+   },
+   {
+    "insumo": 135,
+    "no_resultado": "135",
+    "porque": "Manutenção da casa (vistoria, tamanho do AGENTS.md, ramificação sobrando), não a promessa da ferramenta."
+   }
+  ],
+  "repete_fechado": [
+   {
+    "aberto": 136,
+    "fechado": 5,
+    "cartao_do_fechado": "K-003, K-101 (o número oficial é o do Agent; o transcript com cache difere)",
+    "problema_continuou": "sim",
+    "porque": "O 136 (14/11) diz que a regra do CLAUDE.md ('o número oficial é o do curador') e o esquema de log não dizem se a linha do curador é agregado, e as somas contam em dobro (14,75 milhões contra 6,9)."
+   },
+   {
+    "aberto": 15,
+    "fechado": 5,
+    "cartao_do_fechado": "K-003, K-101",
+    "problema_continuou": "nao_sei",
+    "porque": "Ambos tratam de o número do Workflow e o do transcript diferirem do número do Agent; o 15 é de 22/10 e o texto não mostra se persistiu depois do K-101 (o 136 mostra a forma posterior)."
+   },
+   {
+    "aberto": 42,
+    "fechado": 30,
+    "cartao_do_fechado": "K-106",
+    "problema_continuou": "sim",
+    "porque": "O 30 pedia exportação para TBX e SKOS sem perda; o 42 nasce da conferência do próprio K-106 e diz que o Termo 0.2.0 leva a língua mas não marca a designação preferida e que a estrutura do TBX ficou 'não conferida'."
+   },
+   {
+    "aberto": 53,
+    "fechado": 32,
+    "cartao_do_fechado": "K-109",
+    "problema_continuou": "sim",
+    "porque": "O 32 pedia as listas da triagem fixa calibradas e as normas conferidas; o 53 repete para a versão 0.3 ('montadas pelo curador ... sem medida'), o 67 (29/10) acha caso sem pergunta e o 124 (13/11) diz que a lista não pega 'índios' nem 'indígenas'."
+   },
+   {
+    "aberto": 54,
+    "fechado": 44,
+    "cartao_do_fechado": "K-108",
+    "problema_continuou": "sim",
+    "porque": "O 44 pedia a saturação detectada pela regra, com o limite da fonte na ficha; o 54, escrito dentro do K-108, diz que o limite_fonte da BDTD segue nulo e a saturação só se percebe depois de 11 páginas."
+   },
+   {
+    "aberto": 57,
+    "fechado": 39,
+    "cartao_do_fechado": "K-107",
+    "problema_continuou": "sim",
+    "porque": "O 39 dizia que as formas de hífen levam CO-0002 de 25 a 1441 (cajuí-na 1305, quase o total de caju, 1306); o 57 vê o mesmo total 1.441 trazendo só 14 itens que o caju não tinha e ainda não conferiu o que a busca AllFields faz com o termo."
+   },
+   {
+    "aberto": 56,
+    "fechado": 96,
+    "cartao_do_fechado": "K-112 (D-048: a consulta da página do registro sai das rotinas diárias)",
+    "problema_continuou": "nao_sei",
+    "porque": "O 56 (24/10) trata das 84 rodadas e das centenas de Faltas 'sem cópia arquivada'; o vira do 96 diz que essa consulta sai das rotinas diárias, o que provavelmente esvazia o 56, mas o texto do 56 é anterior e não o confirma."
+   },
+   {
+    "aberto": 102,
+    "fechado": 78,
+    "cartao_do_fechado": "K-112",
+    "problema_continuou": "sim",
+    "porque": "O 78 era o HTTP 429 do Internet Archive; o 102 (05/11, no K-112) diz que o ritmo de 1 pedido a cada 10 s é 'valor provisório, porque a página do Internet Archive sobre ritmo não foi lida'. Continua só o valor."
+   },
+   {
+    "aberto": 97,
+    "fechado": 89,
+    "cartao_do_fechado": "K-111",
+    "problema_continuou": "sim",
+    "porque": "O 97 vem do próprio K-111: das quatro Proposições do 89, a PR-0412 'ficou na CL-0001 em dúvida' porque o trecho não nomeia bebida nem termo e o contexto aponta outra CLB."
+   },
+   {
+    "aberto": 131,
+    "fechado": 89,
+    "cartao_do_fechado": "K-111",
+    "problema_continuou": "sim",
+    "porque": "Em 13/11 as Evidências do mocororó (EN-1066) caíram de novo na CLB da cajuína e só o portão da camada 2 as barrou; o texto diz 'o filtro já separa a Evidência de outra CLB', então o conserto é parcial."
+   },
+   {
+    "aberto": 131,
+    "fechado": 122,
+    "cartao_do_fechado": "K-113",
+    "problema_continuou": "nao_sei",
+    "porque": "As ressalvas A3 e A4 do auditor são 'de leitura fiel do avaliador em Haiku', tema do 122 (erros de leitura fiel que nenhum validador pega); o 131 é do mesmo cartão K-113 e o texto não diz se algo mudou depois."
+   },
+   {
+    "aberto": 99,
+    "fechado": 80,
+    "cartao_do_fechado": "K-111",
+    "problema_continuou": "sim",
+    "porque": "O 99 nasce do conserto do 80: a conferência da Educação ficou 'por item de lista ... mais leve que a da ficha' e pede que o planejamento confirme ou ajuste a regra."
+   },
+   {
+    "aberto": 90,
+    "fechado": 84,
+    "cartao_do_fechado": "K-111 (mas o vira do 84 diz 'a definir pelo planejamento, com o insumo 93')",
+    "problema_continuou": "sim",
+    "porque": "O 90 pede a regra de onde fica o detalhe de prática com dúvida de conhecimento tradicional, o mesmo ponto do 84 (o saber atribuído a povo nomeado não chega ao Git antes da triagem)."
+   },
+   {
+    "aberto": 93,
+    "fechado": 84,
+    "cartao_do_fechado": "K-111 (idem)",
+    "problema_continuou": "sim",
+    "porque": "O 93 cita o 84 ('ligada aos insumos 84, 87 e 90') e o vira do 84 manda o assunto ao planejamento com o 93: o fechamento por cartão parece só formal."
+   },
+   {
+    "aberto": 137,
+    "fechado": 47,
+    "cartao_do_fechado": "K-108",
+    "problema_continuou": "sim",
+    "porque": "O 47 pedia o estado do Ambiente calculado dos Recortes; o 137 (14/11) diz que os 69 ambientes seguem 'não iniciado' e 'proposto' embora a rotina consulte quatro todo dia, e 'nada atualiza esses campos'."
+   },
+   {
+    "aberto": 140,
+    "fechado": 118,
+    "cartao_do_fechado": "K-113",
+    "problema_continuou": "sim",
+    "porque": "O 118 pedia a pré-triagem das Consultas gerais segurando o que não é bebida; o 140 (14/11, depois da entrega) conta 205 'suco', 63 'cerveja' etc. na CO-0008 e diz que 'Complementa os insumos 21, 103 e 118'."
+   },
+   {
+    "aberto": 132,
+    "fechado": 116,
+    "cartao_do_fechado": "K-113",
+    "problema_continuou": "nao_sei",
+    "porque": "O 116 pedia o K-113 dimensionado pelo volume medido nos 20% da semana; o 132 (13/11, dentro do K-113) mede o lote de 15 e ainda pede o número de lotes calibrado, sem dizer se foi feito depois."
+   },
+   {
+    "aberto": 141,
+    "fechado": 60,
+    "cartao_do_fechado": "K-002",
+    "problema_continuou": "sim",
+    "porque": "O 60 pedia a triagem de todas as Entradas num ritmo e custo previstos; o 141 (15/11) diz que 'o custo de escala por bebida só apareceu depois do piloto' (5 a 7 milhões de tokens para 199 Entradas)."
+   },
+   {
+    "aberto": 112,
+    "fechado": 108,
+    "cartao_do_fechado": "D-049",
+    "problema_continuou": "sim",
+    "porque": "O 108 foi respondido pela D-049; o 112 diz que a D-049 'ficou com o alcance de intervenção humana em aberto' e lista os casos sem resposta."
+   },
+   {
+    "aberto": 100,
+    "fechado": 76,
+    "cartao_do_fechado": "K-111",
+    "problema_continuou": "nao",
+    "porque": "O 76 era nome de pessoa chegando ao Git pelo Trecho; o 100 cita o 76 e trata de efeito colateral do conserto (a lista nomes_provaveis é larga e encurta o contexto), não de nome vazando."
+   }
+  ]
+ }
+}

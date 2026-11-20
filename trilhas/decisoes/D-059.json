@@ -1,0 +1,29 @@
+{
+  "id": "D-059",
+  "data": "2026-11-20",
+  "essencia": "Limpar e arrumar a ferramenta é o primeiro passo da correção: fica o que serve à forma final, pelo caminho mais simples, e a casa passa a dizer a verdade sobre si mesma. A limpeza tem lista fechada e hora de parar, e nenhum conserto pode criar problema novo. Os testes guardam isso: quando uma mudança faz um teste deixar de passar, ela só entra depois de verificada e confirmada.",
+  "diretriz": "(1) 'O sistema' é a ferramenta e a casa (scripts, esquemas, habilidades, agentes, rotinas, AGENTS.md e CLAUDE.md, a raiz da pasta); não a base (acervo e Entradas) nem a trilha (logs, decisões, insumos, falas), que não se limpam. (2) A limpeza e a arrumação são o primeiro cartão da fila do desenvolvimento (K-127), aberto já, antes da etapa 5 do K-004: o escopo são os insumos 94, 105, 135, 46, 63, 111 e 137 e a vistoria da casa de 20/11/2026. (3) Como: inventário por script, numa lista fechada de uma linha por item (fica, sai ou muda de lugar, com o porquê); fica o que algo vivo usa e toda a trilha; sair do código não é apagar (fica no histórico do Git, com o porquê no commit); lotes pequenos, cada um passando na suíte, no validador do acervo e no portão da rotina, e conferido por quem não o fez (D-038). (4) Contra o overthinking: a lista do começo é o escopo; o que surgir no caminho vira uma linha em 'depois', sem explorar (D-035); cada lote tem um pronto-quando de uma linha, medido por script; para quando a lista acaba, não quando fica perfeito; nenhum documento de análise novo. (5) Contra a circularidade: limpar não muda comportamento (só tira e muda de lugar); o lote que quebra algo volta inteiro, sem conserto por cima; o insumo fecha quando o seu 'aonde se quer chegar' é conferido, e não quando o cartão fecha; regra ou número novo não nasce escondido num conserto (vai ao registro de valores como provisório e a Vicente como regra, D-038); a regra da D-058 vale também na porta: só vira insumo o que é problema para a promessa, e o resto é nota. (6) Os testes guardam a regra: quando uma mudança faz um teste deixar de passar, ela não entra antes de verificada e confirmada; o teste que muda ou sai só entra com a confirmação registrada, com o motivo e quem verificou, que não é quem mudou; o caso novo entra livre. Quem confirma a mudança de um teste é Vicente (confirmado na fala 4). Na ferramenta: scripts/trava_testes.py (trava-testes-0.1, valores provisórios pela D-034), chamado pelo rodar_testes.py (o que valida no GitHub e o portão da rotina) e pelo pre-commit, que também roda a suíte quando o commit toca código, esquemas, testes ou harness. [ABERTO]: o lugar do K-126 em relação à limpeza (perguntado a Vicente em 20/11, sem resposta; até ela, o K-126 segue a D-057).",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-20",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md (fala 2, a essência e a organização devolvidas; fala 3, 'ok' e o pedido da trava nos testes; fala 4, 'ok, confirmo', com o conserto do kit e a confirmação de que quem confirma é Vicente)",
+  "palavras_conferidas": [
+    {
+      "palavra": "o sistema",
+      "sentido_confirmado": "a ferramenta e a casa; não a base (acervo e Entradas) nem a trilha"
+    },
+    {
+      "palavra": "o primeiro passo",
+      "sentido_confirmado": "o primeiro cartão da fila do desenvolvimento, antes dos outros consertos"
+    },
+    {
+      "palavra": "o que deve fazer tb",
+      "sentido_confirmado": "as regras contra o overthinking: escopo fechado no começo e hora de parar"
+    },
+    {
+      "palavra": "adicione isso aos testes",
+      "sentido_confirmado": "a trava dos testes: mudança que faz teste deixar de passar não entra sem verificação e confirmação; teste mudado ou tirado pede confirmação registrada de Vicente (confirmado na fala 4: 'quem confirmo tudo')"
+    }
+  ],
+  "substitui": "Acrescenta à D-058: a limpeza da ferramenta vem antes dos outros consertos da fila, e o cartão dela (K-127) abre antes da etapa 5 do K-004 (exceção ao 'de uma vez' da D-058, item 3, e à D-046). Não muda a D-057: o lugar do K-126 fica [ABERTO].",
+  "marcador": "VIGENTE"
+}

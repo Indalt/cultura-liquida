@@ -34,5 +34,68 @@ Custo previsto: extração em 14 lotes de 15, de 180 a 260 mil tokens por lote n
 
 Devolvido a Vicente sobre a fala 4, sem confirmação ainda: "IA só onde é preciso ler texto; todo o resto por regra e script"; pergunta em aberto: a leitura também deve dispensar IA? Com a fala 4, a essência v2 acima deixa de estar confirmada por si. O que se respondeu e o que fica para a próxima sessão estão em `trilhas/planejamento/rodadas/2026-11-15_antes-do-K-004/passagem.md`.
 
+## Falas de 19/11 (sessão nova, Opus 5.5, seção 6 da passagem)
+Na sessão, a explicação do gasto foi devolvida com os números de `dados.json` (conteúdo 23% dos 6.912.130 tokens; Fundação e fatos 51%; juridico 18%; o que não foi medido) e a pergunta aberta foi como Vicente vê a leitura da fonte numa ferramenta quase independente de IA.
+6. "no momento eu prefiro continuar para finalizar o piloto para falar dos aprimoramentos depois. este ja esta anotado?"
+
+Resposta: a questão está no insumo 141 (custo por bebida e por parte, IA só onde regra e script não alcançam; essência da fala 4 não confirmada). A pergunta sobre a leitura sem IA fica para a conversa dos aprimoramentos (K-004), sem resposta e sem decisão. A essência v3 da D-057, abaixo, foi devolvida a Vicente.
+
+## Essência v3 (pendente; vira a D-057 com a confirmação)
+A essência v2, com a fala 6: o piloto termina com a ferramenta como ela está hoje, agentes com IA incluídos; o enxugamento (menos IA, custo medido por parte) é aprimoramento para depois do piloto, no K-004 (insumo 141). [ABERTO]: o que é "o que falta" em "o que falta vem na próxima semana" (fala 3); a leitura (b) da v2, só de data, perdeu o sentido depois de 18/11.
+
+## Fala de 20/11 (mesma sessão, Opus 5.5)
+Devolvida a essência v3 com os dez nomes por extenso e o custo, Vicente respondeu:
+7. "Sucos, refrescos, bebidas lacteas e hidromel podem ser consideradas bebidas brasileiras se são parte da cultura. Falamos de culturas líquidas. de onde veio cerveja, refrigerantes etc.? eu nao lembro de ter incluido isso."
+
+**Conferido na trilha:** os dez nomes não vieram de Vicente; nenhuma das falas 1 a 6 nomeia bebida. Vieram (1) da Consulta geral CO-0008 (`scripts/gerar_termo.py --gerais`, 05/11, regra consultas-gerais-0.1: "bebida" e um descritor do processo da cajuína: extração do suco, clarificação, filtração, envase, tratamento térmico, higienização), que trouxe sobretudo tecnologia de alimentos; e (2) da conversa de 14/11, que escolheu os nomes a contar no levantamento e leu "estas entradas" (fala 2) e "199" (fala 3) como as Entradas com os dez nomes mais frequentes. Os nomes estavam nas palavras a conferir, mas não foram discutidos como critério: uma contagem de frequência virou escopo, sem regra. Nada foi aplicado: nenhuma marca, nenhuma leitura.
+
+**Medido em 20/11** (script avulso, não gravado; título e `citacao_resumo` de `entrada/EN-*.json`, sem acento, palavra inteira): as 199 tratam quase todas de processo industrial (higienização e clarificação na cervejaria, linha de envase de refrigerante, bebida láctea UHT, filtração de cachaça). Das 567 Entradas da CO-0008, 31 têm ao menos uma de 28 palavras ligadas a cultura (tradicional, artesanal, cultura, comunidade, indígena, quilombola, patrimônio, memória, história, festa, ritual, saber, regional, etnobotânica, etnografia e variações); a maioria por "artesanal", quase toda cerveja artesanal como produto, e várias por acaso ("cultura microbiana"); "refresco" não aparece. Entre as 7 Entradas das CLB candidatas, que ficaram fora com o "199", estão os únicos estudos sobre cultura deste material: EN-1066 e EN-50910 (mocororó e o povo Kanindé de Aratuba) e EN-1069 (o Torém, dos Tremembé). Alcance: só título e trecho do resumo; o resumo inteiro e o bruto fora do Git não foram lidos.
+
+**Leitura, sem decisão:** o critério da fala 7, "se são parte da cultura", já é a regra da ferramenta (D-022: os quatro critérios de prática cultural na CLB, cada um com Evidência ou Falta; a Falta nunca recusa; nenhuma bebida entra ou sai pelo nome); não se registra de novo. O escopo por dez nomes sai da essência v3; o escopo da D-057 fica [ABERTO], perguntado a Vicente. Segue [ABERTO] "o que falta vem na próxima semana".
+
+## Fala de 20/11, seguinte
+Perguntado o que quer ver passar pela ferramenta para dar o piloto por terminado, Vicente respondeu:
+8. "nao entendi o porque de ter saido 7 entradas das 3 bebidas que achou pela regra. é cultura liquida. caoi é um nome nunca lido por mim e esse precisaria de desambiguacao para entender se é erro de digitacao ou compreensao. As os terminaram?"
+
+**Conferido na trilha:** as 7 Entradas das CLB candidatas estavam na essência devolvida em 14/11 ("e as 7 das CLB candidatas"); a conversa leu o "199" da fala 3 como "só as 199" e as tirou, sem perguntar (`escopo-proposto.json`, campo `candidatas_fora`). Foi leitura da conversa, não regra nem fala de Vicente. Nada se perdeu: as 7 seguem brutas no acervo, e as três CLB seguem candidatas.
+
+**Caoi:** a forma está na fonte, não é erro da ferramenta. Embrapa 2009 (FO-0006, Infoteca-e, handle doc/697354), p. 1, trecho TR-0018 localizado por script com semelhança 1,0: "como bebida fermentada (o caoi ou caoim), a qual era utilizada em comemorações e em ocasiões especiais". A fonte dá duas formas. No acervo, só o dossiê do Iphan (FO-0034) fala de cauim, no contexto de dois trechos (a etimologia de cajuína, com "cauinagem", e "as beberagens do cauim"), sem ligar a caoi. O TE-0005 segue candidato; atestar e ver as variantes é da regra de termos (registrar-termo, do arquivista), que não completa por inferência: com uma fonte só e sem coleta nova, a dúvida tende a ficar como Falta dita.
+
+## Essência v4 (pendente; vira a D-057 com a confirmação)
+Antes da nova versão da Fundação, o piloto termina com as CLB que a ferramenta achou pela regra além da cajuína: vinho de caju (CL-0002), mocororó (CL-0003) e caoi (CL-0004), com as 7 Entradas que as citam e o que o acervo já tem delas. Passam por tudo o que a ferramenta oferece hoje, agentes com IA incluídos: Evidências e Proposições, Termo (o caoi pela regra de termos), CLB, ficha com os quatro critérios de prática cultural, Educação, grafo 4D e página no wiki local. Em conversas de trabalho, sem rotina, com a marca de piloto, sem verificação nem teste; saem como proposta, não como conhecimento aprovado. Ficam o trecho localizado, μ e λ, o validador, a busca de dado pessoal e o detalhe de conhecimento tradicional na pasta local, fora do Git (D-043, como já está o do mocororó). Custo, teto pelos números da cajuína: um lote de extração (180 a 260 mil tokens) e perto de 270 mil por CLB mais a Educação; de 1 a 1,4 milhão de tokens, de 16 a 22 pp. [ABERTO]: o que mais entra (a busca geral, pelo critério de ser parte da cultura, fala 7); "o que falta vem na próxima semana".
+
+## Fala de 20/11, terceira
+Perguntado o que mais quer ver passar pela ferramenta, Vicente respondeu:
+9. "Para o piloto nao precisamos de nada alem das que ja foram encontradas e documentadas de acordo com tudo o que a ferramenta nos proporciona. O nome correto já deveria ter sido resolvido a essa altura. é caium."
+
+**Conferido:** "caium" não está em nenhum arquivo da base (entrada/, acervo/, ambientes/, trilhas/). "Cauim" está só no dossiê do Iphan (FO-0034), no contexto de dois trechos (TR-0363: a ligação etimológica entre acayo, cauinagem e cajuína; TR-0403: "as beberagens do cauim"), na p. 165 pela saída do avaliador do K-110 (A4), e na F-0024. O TE-0005 nasceu candidato em 30/10 só com "caoi"; o "caoim" e o atestado ficaram para o arquivista (`trilhas/2026-10-30_K-111/separadas-caoi.json`) e nunca se fizeram. O assunto é o do insumo 91 (Termos candidatos à espera do arquivista para atestar e ganhar as variantes das fontes; aberto, a definir pelo planejamento): não se abre insumo novo.
+
+**Leitura pela regra, sem decisão:** a regra de termos não impõe nome de cima nem trata variação como ruído (registrar-termo; princípio 2): "caoi" fica, porque está na fonte. Resolver o nome é registrar no mesmo Termo as formas da mesma bebida, cada uma com a origem: "caoi" e "caoim" (Embrapa 2009), "cauim" (dossiê do Iphan, se o trecho falar da mesma bebida) e "caium", a forma de Vicente, candidata até uma fonte a abonar. Grafia "caium" registrada como Vicente escreveu, salvo correção dele.
+
+## Essência v5 (confirmada em 20/11 pela fala 11; registrada como D-057)
+Antes da nova versão da Fundação, o piloto termina com as três CLB que a ferramenta já achou pela regra além da cajuína, e com nada além delas: vinho de caju (CL-0002), mocororó (CL-0003) e a bebida que a Embrapa chama "caoi ou caoim" (CL-0004). Elas passam, com as 7 Entradas que as citam e o que o acervo já tem, por tudo o que a ferramenta oferece hoje, agentes com IA incluídos: Evidências e Proposições; Termo (o da CL-0004 pela regra de termos, com as formas das fontes e a de Vicente, "caium"); CLB; ficha com os quatro critérios de prática cultural; Educação; grafo 4D; página no wiki local. O trabalho se faz em conversas de trabalho, num cartão próprio (K-126), sem rotina, com a marca de piloto, sem verificação nem teste (sem triagem jurídica, segunda leitura, amostra nem teste de modelo); o resultado sai como proposta, não como conhecimento aprovado (D-038). Ficam o trecho localizado e μ e λ por script, o validador, a busca de dado pessoal e o detalhe de saber indígena na pasta local, fora do Git (D-043). Muda, só para as três: a D-039 (no piloto, só a cajuína ia até a ficha), a leitura do auditor (segunda leitura e o que sustenta aviso, saúde ou política, D-038), a triagem jurídica e a segunda leitura da lista de rigor da D-056, e a D-046 (cartão fora da reunião do K-004). Custo, teto pelos números da cajuína: de 1 a 1,4 milhão de tokens, de 16 a 22 pp, em cerca de dez chamadas de agente, uma por vez. [ABERTO]: "o que falta vem na próxima semana" (fala 3).
+
+## Falas 10 e 11 (20/11): passagem aos aprendizados, confirmação e comentário novo
+Devolvida a essência v5, Vicente escreveu:
+10. "o que faltava eram as os. se ja terminamos agora podemos passar para o visto de passagem e o que coletamos de aprendizado para correcao do cultura liquida."
+
+Resposta: as três bebidas ainda não passaram pela ferramenta (nada roda sem a D-057 registrada); o aprendizado está na passagem de 15/11, nos insumos (142, o último gravado nesta conversa) e no roteiro do K-004; pedida a confirmação da D-057. "As os" (falas 8 e 10) foi lido como as tarefas em segundo plano (busca de dado pessoal, commit e envio), que terminaram, e "visto de passagem" como o que se viu pelo caminho e a passagem de 15/11; nenhuma das duas leituras foi conferida com ele.
+
+Depois da pergunta "posso registrar a D-057 com o texto da mensagem anterior?", Vicente respondeu:
+11. "pode. so nao podemos fazer uma fila enorme com problemas a serem resolvidos que sao duplicados, que nao sao problemas de fato para que a ferramenta cumpra o que promete e que a limpeza destas tarefas seja feita antes de fazer a fila do que precisamos para so depois liberar o cultura liquida para automatizacoes."
+
+"Pode" confirma a essência v5: registrada como D-057 (`trilhas/decisoes/D-057.json`), com o K-126 no quadro.
+
+## Essência devolvida do comentário da fala 11 (confirmada pela fala 12; registrada como D-058)
+Devolvida a essência com as leituras e a pergunta "o que precisa estar pronto para a ferramenta ser liberada para as automatizações?", Vicente respondeu:
+12. "correto"
+
+"Correto" confirma a essência e as leituras (a) a (d): registrada como D-058 (`trilhas/decisoes/D-058.json`). A pergunta ficou sem resposta própria: segue [ABERTO] na D-058 se a liberação espera a fila montada ou a fila resolvida.
+
+Texto devolvido:
+Na correção da ferramenta (a reunião do K-004), a lista do que foi anotado se limpa antes de virar fila: sai o que é repetido e o que não é problema de fato para a ferramenta cumprir o que promete. Só com a lista limpa se monta a fila do que é preciso fazer, e só depois a ferramenta é liberada para as automatizações.
+
+Leituras a conferir: (a) "fila de problemas": os insumos abertos (uns 85 dos 142) e os cartões que sairiam deles (etapa 5 do K-004); (b) "limpeza": o repetido se junta ao insumo que já trata do assunto, e o que não é problema para a promessa sai da fila, sem se apagar: cada saída fica com o motivo (acordo 4); (c) "o que a ferramenta promete": o que a v0.2 descreve e o piloto testou (coletar, receber pelas formas da fase 1, organizar no wiki, gerar os grafos 4D, criar propostas sob demanda; D-035), com cada informação rastreável até a origem; (d) "automatizações": a operação com IA em escala, que a D-056 punha logo depois da entrega (a rotina do Claude do K-113 reconfigurada para propor e reler); a rotina diária sem IA segue como está. [ABERTO], perguntado: o que precisa estar pronto para liberar as automatizações.
+
 ## Estado
 Nada mudou na ferramenta. Custo previsto: 14 lotes de 15 Entradas; um lote da rotina com IA custou de 270 a 350 mil tokens em 13/11 (insumo 132). Nada roda antes de 18/11, 23h: a semana da conta está em 88% (estimada), e o limite é 90%.

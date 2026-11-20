@@ -1,5 +1,5 @@
 {
- "estado": "escopo dito por Vicente em 14/11 ('199'): só as Entradas de 'geral'; essência v2 à espera de confirmação; nada foi mudado na ferramenta",
+ "estado": "superado pela D-057 (20/11): o escopo são as 7 Entradas das CLB candidatas (campo 'candidatas'); a lista 'geral' (199) não entra: os dez nomes de 'nomes_geral' vinham da contagem da conversa de 14/11, não de Vicente (falas 7 a 9; insumo 142); fica como trilha; nada foi mudado na ferramenta",
  "data": "2026-11-14",
  "regra_da_selecao": "Entradas de entrada/EN-*.json (main de 14/11) cujo título ou citacao_resumo, sem acento e por palavra inteira (plural com s), traz um dos nomes; 'geral': só as da Consulta geral CO-0008 (motivo da pré-triagem) com um dos 10 nomes que a conversa listou; 'candidatas': as de qualquer Consulta com o nome de uma CLB candidata (TE-0003, TE-0004, TE-0005)",
  "nomes_geral": [
@@ -1282,5 +1282,5 @@
   "geral": 199,
   "lotes_de_15": 14
  },
- "candidatas_fora": "as 7 Entradas das candidatas ficaram fora do escopo (Vicente, 14/11: '199')"
+ "candidatas_fora": "as 7 Entradas das candidatas ficaram fora pela leitura que a conversa de 14/11 fez do '199' (fala 3), sem perguntar; voltaram pela D-057 (20/11), que as põe no escopo do K-126"
 }

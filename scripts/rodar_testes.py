@@ -28,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _comum import RAIZ, carregar_esquema, carregar_json  # noqa: E402
 from procurar_dado_pessoal import achar  # noqa: E402
 from validar import validar_arquivo  # noqa: E402
+from trava_testes import arquivos_de_casos, conferir as conferir_trava  # noqa: E402
 
 
 def rodar_caso(c: dict) -> tuple[str, str]:
@@ -59,7 +60,11 @@ def main() -> int:
     a = ap.parse_args()
     linhas_rel = []
     cont = {"ok": 0, "falha": 0, "pendente": 0}
-    arquivos = sorted((RAIZ / ".claude" / "skills").glob("*/exemplos/casos*.json")) + [RAIZ / "esquemas" / "exemplos" / "casos.json", RAIZ / "testes" / "nucleo" / "casos.json", RAIZ / "testes" / "coleta" / "casos.json", RAIZ / "testes" / "extracao" / "casos.json", RAIZ / "testes" / "mencoes" / "casos.json", RAIZ / "testes" / "rodada-b" / "casos.json", RAIZ / "testes" / "rotinas" / "casos.json", RAIZ / "testes" / "manutencao" / "casos.json"]
+    arquivos = arquivos_de_casos(RAIZ)  # a mesma lista que a trava dos testes guarda (D-059)
+    # trava dos testes (D-059): caso mudado ou tirado sem confirmação reprova a suíte inteira
+    trava = conferir_trava(RAIZ)
+    for prob in trava:
+        print(f"TRAVA                        {prob}")
     for arq in [x for x in arquivos if x.exists()]:
         spec = carregar_json(arq)
         if a.rodada and spec.get("rodada") != a.rodada:
@@ -95,11 +100,13 @@ def main() -> int:
             f"**Totais:** {total}.",
             "",
             "\"OK (reprovou como esperado)\" = o caso com erro foi recusado pelo validador, como deve ser.",
-        ]
+        ] + (["", "**Trava dos testes (D-059):** " + "; ".join(trava)] if trava else [])
         a.relatorio.parent.mkdir(parents=True, exist_ok=True)
         a.relatorio.write_text("\n".join(cab + linhas_rel) + "\n", encoding="utf-8")
         print(f"relatório: {a.relatorio}")
-    return 1 if cont["falha"] else 0
+    if trava:
+        print(f"TRAVA: {len(trava)} problema(s) na trava dos testes: verificar e confirmar antes de admitir a mudança (D-059)")
+    return 1 if cont["falha"] or trava else 0
 
 
 if __name__ == "__main__":

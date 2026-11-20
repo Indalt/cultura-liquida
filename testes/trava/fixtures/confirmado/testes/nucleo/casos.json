@@ -1,0 +1,23 @@
+{
+ "habilidade": "mini (fixture da trava)",
+ "rodada": "A",
+ "casos": [
+  {
+   "nome": "a",
+   "espera": "passa",
+   "esquema": "x",
+   "entrada": "testes/nucleo/a.json",
+   "criterio": "caso com arquivo de teste"
+  },
+  {
+   "nome": "b",
+   "espera": "reprova",
+   "comando": [
+    "scripts/x.py",
+    "--entrada",
+    "testes/nucleo/b.json"
+   ],
+   "criterio": "caso de comando"
+  }
+ ]
+}
