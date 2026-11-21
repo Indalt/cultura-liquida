@@ -1,8 +1,8 @@
 {
   "$schema": "valores-provisorios.schema.json",
-  "versao": "0.3.0",
+  "versao": "0.4.0",
   "data": "2026-10-23",
-  "cartao": "K-104 (bloco 2 do brief de execuções); 0.2.0: K-005, D-040 (orcamento e parada_conversa_principal); 0.3.0: K-123, D-041 (normalizacao-0.2 e mu-lambda-0.2) e D-040 no orcamento.py (teto_semanal fora)",
+  "cartao": "K-104 (bloco 2 do brief de execuções); 0.2.0: K-005, D-040 (orcamento e parada_conversa_principal); 0.3.0: K-123, D-041 (normalizacao-0.2 e mu-lambda-0.2) e D-040 no orcamento.py (teto_semanal fora); 0.4.0: K-127, D-059 (cadencia_rotinas, ritmo_internet_archive e vistoria_casa saem dos scripts para cá, sem mudar valor; insumos 101, 102 e 135)",
   "descricao": "Registro único dos valores provisórios ([PROPOSTA]) que a execução usa (brief, bloco 2; Fundação l. 696). Esquemas e scripts leem daqui, sem cópia: os esquemas por $ref (resolvido por scripts/_comum.py), os scripts por carregar_valores(). Pela D-038, a 'estrutura' é fixada e não muda com a calibração; os 'valores' são provisórios e cada um diz a linha da Fundação que o permite, a decisão que o cobre, quem o usa e quando se calibra. Mudar um valor é versão nova deste arquivo e, quando o valor é uma regra, versão nova da regra (o campo versao_regra), que toda decisão automática grava na Execução.",
   "estrutura": {
     "base": "D-038 (estrutura fixada); Fundação §6, l. 620-641",
@@ -619,6 +619,49 @@
         "scripts/relatorio_dia.py (K-108b)"
       ],
       "calibracao": "K-005, com o crescimento medido nas rotinas"
+    },
+    "cadencia_rotinas": {
+      "valor": {
+        "min_dias_padrao": 1,
+        "max_dias_padrao": 28,
+        "regra": "o intervalo começa no mínimo da linha do ambiente (cadencia_min_dias; sem ela, min_dias_padrao), dobra a cada rodada sem novidade até o máximo (cadencia_max_dias; sem ela, max_dias_padrao) e volta ao mínimo com novidade; o erro da fonte não mede rendimento"
+      },
+      "linha_fundacao": "não fixado pela Fundação (D-048: cada fonte no ritmo que aceita e que rende novidade)",
+      "base": "D-048; agenda-0.1 (K-112); insumo 101",
+      "quem_usa": [
+        "scripts/agendar.py"
+      ],
+      "calibracao": "pelo rendimento medido das rotinas; regra a aprovar por Vicente (D-038)"
+    },
+    "ritmo_internet_archive": {
+      "valor": {
+        "intervalo_s": 10.0,
+        "regra": "um pedido a cada intervalo_s ao Internet Archive, só na leitura da cópia arquivada quando a fonte não abre; para no primeiro HTTP 429 do lote"
+      },
+      "linha_fundacao": "l. 100 (cópia arquivada lida quando a fonte não abre)",
+      "base": "insumos 78, 96 e 102; D-048; ler-fonte-0.2 (K-112)",
+      "quem_usa": [
+        "scripts/ler_fonte.py"
+      ],
+      "calibracao": "conferir na página do Internet Archive sobre acesso automatizado quando a F-0034 se liberar (K-208)"
+    },
+    "vistoria_casa": {
+      "valor": {
+        "contexto_caracteres": 24000,
+        "passo_corrente_caracteres": 3000,
+        "tamanho_arquivos": 20000,
+        "tamanho_mb": 200,
+        "tamanho_aviso_fracao": 0.5,
+        "ramificacao_parada_dias": 7,
+        "retomar_velho_dias": 7,
+        "regra": "contexto: AGENTS.md e CLAUDE.md, carregados em toda conversa e em todo agente; tamanho: o alarme da D-045 (o guarda_alarme vale sobre estes); aviso a partir da fração do alarme"
+      },
+      "linha_fundacao": "não fixado pela Fundação (princípios 11 e 16)",
+      "base": "manutencao-0.1 (14/11/2026); insumo 135",
+      "quem_usa": [
+        "scripts/manutencao.py"
+      ],
+      "calibracao": "pelo uso; o limite de contexto se revê quando Vicente encurtar a seção de decisões do AGENTS.md"
     }
   }
 }

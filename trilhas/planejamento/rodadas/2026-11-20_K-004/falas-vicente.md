@@ -59,3 +59,9 @@ Devolvido a Vicente como leitura, a confirmar: quem confirma a mudança de um te
 > ok, confirmo. quem confirmo tudo. agende a limpeza e organizacao para 15h30 para que ela ja seja executada no automatico apos esse horario aqui mesmo nesta sessao
 
 Leitura do curador: confirma o conserto dos 3 casos do kit (voltar a "pendente", como estavam antes do K-114) e as leituras devolvidas sobre a trava: quem confirma a mudança de um teste é Vicente ("quem confirmo tudo"); o caso novo entra sem confirmação; a suíte roda no commit que toca código ou testes. Pede o K-127 (limpeza e organização, D-059) agendado para depois das 15h30 de 20/11, no automático, nesta mesma sessão (depois que a janela de 5 h renova, perto das 15h29). Agendado na sessão (CronCreate, uma vez). O lugar do K-126 segue [ABERTO]: esta fala não o toca.
+
+## Fala 5 (sobre o que ficou para ele decidir)
+
+> pode encurtar sem perder essencia / que vistoria? / nao entendo porque isso importa. simplifique sem desorganizar. / contextualize k-126
+
+Leitura do curador: autoriza encurtar as decisões do AGENTS.md mantendo a essência (feito: uma linha por decisão, com o texto inteiro nos registros); pede explicação da vistoria; sobre a pasta `campo_de_acao/` na raiz, simplificar sem desorganizar (feito: a pasta fica, e a vistoria passa a esperá-la); pede o contexto do K-126 (dado na resposta). Quando a vistoria roda sozinha segue em aberto.

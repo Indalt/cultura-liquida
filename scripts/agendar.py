@@ -28,7 +28,9 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _comum import RAIZ, carregar_json  # noqa: E402
+from _comum import RAIZ, carregar_json, carregar_valores  # noqa: E402
+
+CADENCIA = carregar_valores()["valores"]["cadencia_rotinas"]["valor"]  # registro de valores (K-127; insumo 101)
 
 VERSAO = "agenda-0.1"
 RODADAS = Path("trilhas") / "relatorios" / "rodadas.jsonl"
@@ -49,8 +51,8 @@ def rodadas(raiz: Path) -> list[dict]:
 
 def intervalo(linha: dict, hist: list[dict]) -> int:
     """O intervalo em dias depois das rodadas dadas (em ordem de data), pela regra agenda-0.1."""
-    mini = int(linha.get("cadencia_min_dias", 1))
-    maxi = max(mini, int(linha.get("cadencia_max_dias", 28)))
+    mini = int(linha.get("cadencia_min_dias", CADENCIA["min_dias_padrao"]))
+    maxi = max(mini, int(linha.get("cadencia_max_dias", CADENCIA["max_dias_padrao"])))
     n = mini
     for r in hist:
         if r.get("erro"):
@@ -77,7 +79,7 @@ def plano(raiz: Path, hoje: date, fila: int | None = None, fila_max: int = 15) -
             if fila is not None and fila > fila_max:
                 item["motivo"] = f"porta nova fechada: fila cheia ({fila} cartões, acima de {fila_max}; l. 472)"
             else:
-                item.update(roda=True, motivo="porta nova: primeira rodada", intervalo=int(linha.get("cadencia_min_dias", 1)))
+                item.update(roda=True, motivo="porta nova: primeira rodada", intervalo=int(linha.get("cadencia_min_dias", CADENCIA["min_dias_padrao"])))
         else:
             n = intervalo(linha, hist)
             ultima = date.fromisoformat(hist[-1]["data"])

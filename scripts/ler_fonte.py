@@ -42,13 +42,13 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _comum import RAIZ, carregar_json  # noqa: E402
+from _comum import RAIZ, carregar_json, carregar_valores  # noqa: E402
 from _coleta import BloqueioAntiRobo, BloqueioRobos, Cliente, Execucao  # noqa: E402
 from localizar_trecho import extrair_texto, pasta_temporaria, sha256  # noqa: E402
 import wayback  # noqa: E402
 
 VERSAO = "ler-fonte-0.2"
-IA_INTERVALO_S = 10.0  # ritmo provisório para o Internet Archive (insumos 78 e 96: 429 a 1 pedido por segundo); para no primeiro 429
+IA_INTERVALO_S = float(carregar_valores()["valores"]["ritmo_internet_archive"]["valor"]["intervalo_s"])  # registro de valores (K-127; insumo 102)
 
 
 class _Links(HTMLParser):

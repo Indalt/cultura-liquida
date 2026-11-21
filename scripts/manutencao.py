@@ -55,21 +55,14 @@ if hasattr(sys.stdout, "reconfigure"):
 VERSAO = "manutencao-0.1"
 RAIZ_PADRAO = Path(__file__).resolve().parent.parent
 
-# Limites provisórios (D-034). Mudar aqui muda a regra: subir a versão e dizer o porquê no Histórico.
-LIMITES = {
-    "contexto_caracteres": 24000,      # AGENTS.md + CLAUDE.md: carregados em toda conversa e em todo agente
-    "passo_corrente_caracteres": 3000,  # a seção "Passo corrente" do AGENTS.md
-    "tamanho_arquivos": 20000,          # D-045; o registro de valores (guarda_alarme) vale sobre estes
-    "tamanho_mb": 200,
-    "tamanho_aviso_fracao": 0.5,        # avisa a partir de metade do alarme
-    "ramificacao_parada_dias": 7,
-    "retomar_velho_dias": 7,
-}
+# Limites provisórios (D-034), no registro de valores (vistoria_casa; K-127, insumo 135): mudar lá muda a regra.
+LIMITES = {k: v for k, v in json.loads((RAIZ_PADRAO / "esquemas" / "valores-provisorios.json").read_text(encoding="utf-8"))
+           ["valores"]["vistoria_casa"]["valor"].items() if k != "regra"}
 
 ESPERADOS_RAIZ = {
     "00_Fundacao_Cultura_Liquida.md", "AGENTS.md", "CLAUDE.md", "README.md", "RETOMAR.md", "requirements.txt",
     ".git", ".gitignore", ".gitattributes", ".githooks", ".github", ".claude", ".venv", ".env", ".vscode",
-    "acervo", "ambientes", "entrada", "esquemas", "grafo", "legado", "scripts", "testes", "trilhas", "wiki-local",
+    "acervo", "ambientes", "campo_de_acao", "entrada", "esquemas", "grafo", "legado", "scripts", "testes", "trilhas", "wiki-local",
 }
 RAMIFICACOES_FIXAS = {"origin/main", "origin/HEAD", "origin/rotinas"}
 # Caminhos citados de propósito como coisa que não existe ou que fica fora da pasta
