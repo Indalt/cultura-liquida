@@ -65,3 +65,20 @@ Leitura do curador: confirma o conserto dos 3 casos do kit (voltar a "pendente",
 > pode encurtar sem perder essencia / que vistoria? / nao entendo porque isso importa. simplifique sem desorganizar. / contextualize k-126
 
 Leitura do curador: autoriza encurtar as decisões do AGENTS.md mantendo a essência (feito: uma linha por decisão, com o texto inteiro nos registros); pede explicação da vistoria; sobre a pasta `campo_de_acao/` na raiz, simplificar sem desorganizar (feito: a pasta fica, e a vistoria passa a esperá-la); pede o contexto do K-126 (dado na resposta). Quando a vistoria roda sozinha segue em aberto.
+
+## Fala 6 (fim da tarde, depois do contexto do K-126)
+
+> ja havia sido decidido que a cajuina sozinha serviria para que a construcao até o piloto pudesse nos fornecer os insumos necessario para que o sistema fosse pleno. onde nos perdemos?
+>
+> temos diversas sessoes que geram trabalho sem parar gasto de tokens para resolver problemas ja resolvidos manutencao em cima de manutencao que gera mais problemas. hoje fiz uma limpeza contigo para ter clareza sobre o que fazer como e quando. e estao surgindo perguntas repetitivas e novas que parecem gerar mais necessidade de reflexao. sao semanas trabalhando sem chegar ao objetivo simples. entendo que desejo construir algo que nao seja simplista, mas é necessario chegar a algum lugar ao trabalhar.
+
+### Onde nos perdemos (leitura do curador, com as fontes)
+
+- A decisão existia: D-032 (o piloto leva uma CLB de ponta a ponta) e D-039 (no piloto, só a cajuína; as outras CLB ficam candidatas). O piloto foi entregue em 14/11 (D-056); o passo seguinte era o K-004, que usa o relatório e os insumos para a nova versão da Fundação.
+- 14/11 (falas 1 a 3 em `trilhas/2026-11-14_piloto-outras-bebidas/falas-vicente.md`): o pedido de ver a ferramenta além da cajuína virou, na leitura da sessão, dez bebidas e 199 Entradas (contagem da sessão, não de Vicente; insumo 142), de 5 a 7 milhões de tokens, apresentado como exceção pontual à D-039. Cinco versões de essência até 20/11.
+- 20/11, D-057: "Antes da nova versão da Fundação, o piloto termina com as três CLB". A nova versão passou a esperar o K-126.
+- O que repete o desvio: exceções a regras que já o impediam (D-035 e D-046: o K-126 nasceu fora da reunião do K-004; D-034 e D-038: perguntas a Vicente sobre itens que a lista confirmada já resolvia, como a vistoria e a pasta da raiz, fala 5); cada fala vira decisão e cartão (só em 20/11: D-057, D-058 e D-059; K-126 e K-127); cada lote fecha com insumos novos (142); consertos que geram problemas (5 insumos nascidos de outro conserto; os 3 casos do kit, de 14/11, que barraram o portão da rotina de 17 a 19/11).
+
+### Essência devolvida (à espera de confirmação; trocaria a D-057)
+
+O piloto é o entregue em 14/11, só com a cajuína: o K-126 não roda e as três CLB seguem candidatas (D-039). A próxima conversa de trabalho é o K-004, com um fim só: a nova versão da Fundação escrita. Até lá, sem exceção às regras que já existem (D-034, D-035, D-038, D-046); o K-127 termina só a lista que já tem e não segura o K-004.

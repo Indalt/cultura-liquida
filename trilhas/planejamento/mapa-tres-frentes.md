@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 142 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 144 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -476,6 +476,8 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 140, a Consulta geral traz tecnologia de alimentos; nomes de bebidas nativas não aparecem | P; D; O | K-004 |
 | 141, custo de escala por bebida e dependência de IA não medidos por parte | P; D | K-004 |
 | 142, contagem da sessão e resposta parcial viraram escopo da D-057 (registrar-decisao) | P; D | a definir pelo planejamento |
+| 143, investigar onde há inconsistência real antes de usar a lógica paraconsistente | P; D | K-004 |
+| 144, a lógica paraconsistente como possível regra do sistema, além da ferramenta (substitui o critério do 143) | P; D | K-004 |
 
 ## 7. Decisões D-001 a D-043
 
