@@ -1,0 +1,33 @@
+{
+  "id": "D-060",
+  "data": "2026-11-24",
+  "essencia": "O Antigravity (Gemini) e o Claude Code passam a operar juntos o projeto de forma estritamente sequencial (um por vez, sem paralelismo), lendo diretamente o AGENTS.md e os agentes e habilidades em .claude/, sem criar espelho .agents/ nem GEMINI.md na raiz. As duas LLMs conversam e passam o bastão por registro explícito em RETOMAR.md e em trilhas/. Habilidades e agentes podem ser incluídos ou ajustados em .claude/ para resolver problemas contextuais que scripts Python não resolvem, sem adaptar o scripts/orcamento.py (que permanece intacto até ser descontinuado quando o Claude retornar) e sem quebrar a suíte nem a trava de testes. A triagem de viabilidade fecha antes da reunião do K-004, levando a síntese pronta; o projeto paralelo clb coleta fica para os próximos passos.",
+  "diretriz": "(1) Operação conjunta e estritamente sequencial (sem paralelismo) entre Claude Code e Antigravity (Gemini), mantendo uma tarefa/cartão por vez (D-035). (2) Fonte única de agentes e habilidades em .claude/ (sem criar .agents/ nem GEMINI.md na raiz, preservando manutencao.py); ambas as LLMs leem diretamente AGENTS.md, .claude/agents/*.md e .claude/skills/*/SKILL.md, traduzindo na execução os nomes de ferramentas do ambiente. (3) Conversa e passagem de bastão entre as duas LLMs registradas explicitamente em RETOMAR.md e em trilhas/ (quem está com o bastão, o que foi feito e validado, o que pede ação ou segunda leitura da outra LLM). (4) Podem ser incluídas ou ajustadas habilidades e agentes em .claude/ para resolver problemas semânticos, culturais ou contextuais que scripts Python não resolvem bem, sempre com cabeçalhos YAML válidos (checar_cabecalhos.py) e casos novos gravados na trava (trava_testes.py --gravar-novos), sem quebrar a suíte nem alterar casos existentes sem confirmação de Vicente (D-059). (5) Não adaptar scripts/orcamento.py para duas LLMs: o arquivo permanece intacto no disco (preservando os 6 casos da trava) até ser formalmente descontinuado quando o Claude retomar. Execuções seguem registradas via scripts/registrar_log.py com o modelo real e o alcance (D-030). (6) Antes da reunião do K-004, realiza-se a verificação da limpeza e da viabilidade (scripts Python vs. habilidades/agentes e fundamentos lógicos), levando ao K-004 a síntese fechada para decisão e escrita da próxima Fundação. (7) O ensaio anterior via API REST (K-125, D-054) não prende este acordo; o projeto paralelo clb coleta e uma eventual fusão ficam fora do passo atual, reservados para etapa posterior.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-24",
+  "fala_original_ref": "trilhas/2026-11-24_acordo-llm/falas-vicente.md (falas 1 a 4)",
+  "palavras_conferidas": [
+    {
+      "palavra": "o ensaio",
+      "sentido_confirmado": "a tentativa anterior com Gemini via script de API REST (scripts/gemini_agente.py, K-125), que não resolveu bem e não limita o novo formato de trabalho direto no Antigravity"
+    },
+    {
+      "palavra": "esse script sera descontinuado quando o claude voltar",
+      "sentido_confirmado": "scripts/orcamento.py não é adaptado para duas LLMs e permanece intacto no disco (preservando os 6 casos da trava de testes) até ser formalmente descontinuado quando a conta do Claude retornar"
+    },
+    {
+      "palavra": "incluir habilidades e agentes",
+      "sentido_confirmado": "criar ou ajustar habilidades e agentes na pasta única .claude/ (com cabeçalho validado e casos novos na trava), para leitura direta por ambos os ambientes sem criar espelho .agents/"
+    },
+    {
+      "palavra": "conversar e trabalhar juntos",
+      "sentido_confirmado": "alternância estritamente sequencial (bastão único em RETOMAR.md e trilhas/), com uma LLM executando ou propondo e a outra podendo revisar ou prosseguir sem paralelismo"
+    },
+    {
+      "palavra": "clb coleta",
+      "sentido_confirmado": "projeto paralelo mencionado por Vicente para futura reflexão sobre merge, mantido explicitamente fora deste passo até o fechamento das etapas atuais"
+    }
+  ],
+  "substitui": "Altera a D-029 (o Claude Code deixa de ser o único operador de .claude/: passa a cooperar sequencialmente com o Antigravity, mantendo .claude/ sem espelho .agents/) e dispensa a adaptação do orcamento.py (D-040) para duas LLMs, prevendo sua descontinuação futura; não reativa o formato antigo do K-125 (D-054/D-056).",
+  "marcador": "VIGENTE"
+}
