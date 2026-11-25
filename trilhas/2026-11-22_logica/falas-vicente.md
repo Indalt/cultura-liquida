@@ -130,3 +130,9 @@ Trilha das falas (acordo 4). Uma essência só vale como diretriz depois de conf
 **Custo e ordem.**
 - Custo: a conversa principal, uns 2 pp; o releitor, um agente Sonnet 5.5 alto com teto declarado, uns 100 mil tokens (1,6 pp). Com a semana em 87% (estimativa), o releitor fica para depois da virada da semana (25/11, 23h, pela contagem de semanas do AGENTS.md; não conferido com a leitura oficial).
 - Ordem: o K-011 vem antes da reunião do K-004. O K-127 (Fazendo) para onde está até o K-011 fechar (uma tarefa por vez, D-035); os insumos dele passam pela releitura como os outros. O K-126 não roda até a confirmação da fala 6, no passo 2.
+
+## Fala 12 (25/11/2026 — confirmação da fala 11 e esclarecimento sobre linguagem)
+
+> Confirma fala 11. mas isso é uma resposta sobre linguagem, sobre termos que sao usados como regras de sistema que fecham o sistema apenas em poucos casos. Isso não estava evidente?
+
+Leitura do curador: confirma a abertura do K-011 nos quatro passos desenhados acima e a regra de que exemplos e linguagem ilustrativa não entram no sistema, nos códigos nem nas ferramentas, explicitando o núcleo do ponto: termos e exemplos usados para explicar não podem virar regras fechadas de sistema que reduzam o sistema a poucos casos conhecidos (princípio já presente em D-017, P5 e P24, mas violado na prática em listas fixas e escopos). Seguindo o alerta da fala 7 de 25/11 (não multiplicar D-xx) e o passo 2 acima (l. 114), o K-011 abre no quadro já com o passo 1 executado em `trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md`, deixando todas as mudanças de regra (fala 6, fala 11 e os itens "a confirmar" de `base.md`) para uma única decisão consolidada no fechamento do passo 2.
