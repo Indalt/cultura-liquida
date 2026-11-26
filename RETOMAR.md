@@ -1,5 +1,10 @@
 # RETOMAR — depois da entrega do piloto (D-056) e da D-061
 
+**Bastão (D-060, 26/11/2026, Claude Code → quem fizer a comparação):** cartão em `Fazendo`: **K-011**.
+- **Feito pelo Claude Code (Opus 5.5, esforço médio):** a releitura cega do Passo 3 em `trilhas/planejamento/rodadas/2026-11-25_K-011/passo3-releitura.jsonl` (35 linhas, mesmos campos da §4 de `revisao-claude-26-11.md`), gravada **sem abrir** `passo3-proposta.jsonl` (D-038). Os 4 achados da §3 da revisão entraram nas linhas 136 (logs com 0 e `orcamento.py`), 139 e 132 (`orcamento.py`), 143 (o gatilho do estado "inconsistente") e 53 e 140 (exemplos das habilidades). Resumo: 30 ficam como problema da ferramenta, 2 já resolvidos depois de 20/11 (101, 105), 2 se dissolvem num fundamento (142 no 10; 144 no 6) e 1 se junta (143 ao 144); 135 resolvido só em parte (fica quando a vistoria roda sozinha). Nada mudou em código, esquemas, testes ou acervo. Sem log de execução: o esquema exige número de tokens e o consumo da conversa não é informado (o mesmo problema da §3 item 1 da revisão); a trilha é o arquivo e o commit.
+- **Próximo:** a comparação por script, sem IA, entre `passo3-proposta.jsonl` e `passo3-releitura.jsonl` (divergência fica com "fica como problema da ferramenta" e vai ao documento da reunião); depois o Passo 4. Modelo e esforço: a comparação é script (sem LLM); o Passo 4, Opus 5.5 ou o modelo da Antigravity, esforço médio, com a linha `[Uso do plano]` abaixo de 90%.
+
+
 **Bastão (D-060, 26/11/2026, Antigravity → Claude Code):** cartão em `Fazendo`: **K-011**.
 - **Feito pela Antigravity (Gemini 4 Argon, esforço médio):**
   1. Registrou a Fala 14 de Vicente em `trilhas/2026-11-22_logica/falas-vicente.md`, sem criar decisão nova: `scripts/orcamento.py` será formalmente descontinuado na reunião do K-004 (junto com a confirmação de Vicente para os 6 casos da trava, D-059), mas toda tarefa continua indicando o modelo e o esforço da LLM que vai executá-la.
