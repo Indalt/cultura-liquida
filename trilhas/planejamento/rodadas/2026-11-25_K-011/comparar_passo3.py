@@ -28,10 +28,9 @@ def main():
     itens = []
     for n in sorted(p):
         dif = [c for c in CAMPOS if p[n].get(c) != r[n].get(c)]
+        final = {c: (p[n][c] if c not in dif else None) for c in CAMPOS}
         if "destino" in dif:
-            final = {"destino": CONSERVADOR, "fundamento": None, "via": None, "junta_a": None}
-        else:
-            final = {c: (p[n][c] if c not in dif else None) for c in CAMPOS}
+            final["destino"] = CONSERVADOR
         itens.append({"insumo": n, "concorda": not dif, "divergem": dif, "final": final,
                       "proposta": {c: p[n].get(c) for c in CAMPOS}, "releitura": {c: r[n].get(c) for c in CAMPOS},
                       "evidencia_proposta": p[n].get("evidencia"), "evidencia_releitura": r[n].get("evidencia")})

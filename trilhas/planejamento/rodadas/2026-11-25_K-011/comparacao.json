@@ -165,7 +165,7 @@
    ],
    "final": {
     "destino": "fica como problema da ferramenta",
-    "fundamento": null,
+    "fundamento": 10,
     "via": null,
     "junta_a": null
    },
@@ -563,7 +563,7 @@
    "final": {
     "destino": "fica como problema da ferramenta",
     "fundamento": null,
-    "via": null,
+    "via": "nenhum dos dois",
     "junta_a": null
    },
    "proposta": {
@@ -696,7 +696,7 @@
    ],
    "final": {
     "destino": "fica como problema da ferramenta",
-    "fundamento": null,
+    "fundamento": "nenhum",
     "via": null,
     "junta_a": null
    },
@@ -723,8 +723,8 @@
    ],
    "final": {
     "destino": "fica como problema da ferramenta",
-    "fundamento": null,
-    "via": null,
+    "fundamento": "nenhum",
+    "via": "script",
     "junta_a": null
    },
    "proposta": {
