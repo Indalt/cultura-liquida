@@ -43,10 +43,11 @@
 ## 3. Depois (o que surgiu no caminho; sem explorar, D-035)
 
 - Conferir as 9 referências lógicas ainda marcadas `"não conferido"` em `trilhas/2026-11-22_logica/base.md` (§7, l. 91–102) antes de incorporá-las ao texto da nova versão da Fundação (Passo 4 / `K-004`).
+- No `K-127`, alinhar a mensagem do validador mínimo sem `jsonschema` no caso `"F-0024 completada por inferência"` (`trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md`, §7, l. 113–116) e atualizar o nome do guia citado em `.claude/skills/triagem-juridica/exemplos/falta-conhecimento-tradicional.json:15` (`G-sisgen-cadastro-de-acesso` → `G-sisgen-lei-13123`).
 
 ---
 
 ## 4. Alcance (`D-030`)
 
-- **Olhado:** `trilhas/2026-11-22_logica/falas-vicente.md` (falas 1–13), `trilhas/2026-11-22_logica/base.md`, `trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md` (falas 6 e 7), `trilhas/decisoes/D-060.json`, `trilhas/decisoes/D-061.json`, `trilhas/decisoes/D-057.json`, `trilhas/insumos-planejamento.md` (insumo 144) e `00_Fundacao_Cultura_Liquida.md` v0.2 (l. 1–160, 510–710, 800–930, 1690).
-- **Fora:** os 32 insumos abertos da limpeza de 20/11 e os insumos 142–143 (entram no Passo 3); as 9 referências lógicas de `base.md` §7 (ficam `"não conferido"` até conferência própria); `scripts/`, `esquemas/`, `testes/`, `acervo/` e `legado/` (inalterados).
+- **Olhado:** `trilhas/2026-11-22_logica/falas-vicente.md` (falas 1–14), `trilhas/2026-11-22_logica/base.md`, `trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md` (falas 6 e 7), `trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md`, `trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md`, `trilhas/insumos-planejamento.md` (os 32 insumos da limpeza e 142–144), `trilhas/decisoes/D-060.json`, `trilhas/decisoes/D-061.json`, `trilhas/decisoes/D-057.json`, `00_Fundacao_Cultura_Liquida.md` v0.2 (l. 1–160, 510–710, 800–930, 1690), `scripts/`, `esquemas/` e `.claude/skills/*/SKILL.md` e `exemplos/` citados nas evidências de `passo3-proposta.jsonl`.
+- **Fora:** as 9 referências lógicas de `base.md` §7 (ficam `"não conferido"` até conferência própria); código, esquemas, testes, acervo e `legado/` (inalterados).
