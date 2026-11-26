@@ -136,3 +136,16 @@ Trilha das falas (acordo 4). Uma essência só vale como diretriz depois de conf
 > Confirma fala 11. mas isso é uma resposta sobre linguagem, sobre termos que sao usados como regras de sistema que fecham o sistema apenas em poucos casos. Isso não estava evidente?
 
 Leitura do curador: confirma a abertura do K-011 nos quatro passos desenhados acima e a regra de que exemplos e linguagem ilustrativa não entram no sistema, nos códigos nem nas ferramentas, explicitando o núcleo do ponto: termos e exemplos usados para explicar não podem virar regras fechadas de sistema que reduzam o sistema a poucos casos conhecidos (princípio já presente em D-017, P5 e P24, mas violado na prática em listas fixas e escopos). Seguindo o alerta da fala 7 de 25/11 (não multiplicar D-xx) e o passo 2 acima (l. 114), o K-011 abre no quadro já com o passo 1 executado em `trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md`, deixando todas as mudanças de regra (fala 6, fala 11 e os itens "a confirmar" de `base.md`) para uma única decisão consolidada no fechamento do passo 2.
+
+## Fala 13 (26/11/2026 — confirmação do Passo 2 do K-011 e retorno do Claude)
+
+> 1. sim, dao conta no momento.
+> 2. sim.
+> 3. Se foi o que desenhamos confirmo que sim.
+> 4. sim.
+> 5. a declaracao é como uma observação nas fichas, o wiki inteiro declararia como? mudaria se entrarem nocas clbs ou seria estatico? nao vejo necessidade de em campos de acao demonstrar vies, me convenca de que é necessario.
+> 6. sim para o que discutimos até o momento.
+>
+> o claude voltou, quando formos para o k-004 voces dois devem dialogar para chegar as melhores solucoes possiveis para os objetivos do sistema.
+
+Leitura do curador: fecha a rodada única do Passo 2 do K-011 e autoriza a gravação da decisão única consolidada `D-061` (`trilhas/decisoes/D-061.json`), reunindo o encerramento do piloto na cajuína sem rodar o K-126 (fala 6 de 20/11, substituindo a D-057), a fronteira operacional de linguagem e exemplos fora do sistema/código/ferramentas (falas 11 e 12, estendendo a D-017), a abertura formal do K-011 (exceção à D-046), os fundamentos confirmados de 22/11 e 26/11 (11 atos no momento, duas vozes, lógica não clássica nos cinco lugares de `base.md` §4, μ e λ apenas como descrição de linhagens, vieses declarados como observação nas fichas) e a harmonização com a D-060 com diálogo sequencial entre Antigravity e Claude Code no K-004. Mantidos explicitamente `[ABERTO]` sem completar por inferência: (i) lógica na voz própria como regra explícita vs. declaração de quadro (`base.md` §4); (ii) formato da declaração de vieses no wiki inteiro (estático vs. dinâmico); (iii) necessidade ou não de declarar viés em artefatos do campo de ação.

@@ -438,6 +438,7 @@
 ## Conversa de planejamento de 24/11/2026 (D-060, Antigravity), sem agentes
 
 - [x] **D-060 (24/11):** análise desde a Fundação com suíte completa (272 OK, 0 FALHA, 3 PENDENTE) e provas em sandbox temporária; essência confirmada por Vicente ("confirmo. gravar..."); `trilhas/decisoes/D-060.json`; linha no `AGENTS.md` e passagem de bastão no `RETOMAR.md`. **Conflito registrado:** altera a D-029 (cooperação sequencial Claude Code + Antigravity sobre `.claude/`, sem espelho `.agents/`) e dispensa a adaptação do `orcamento.py` (D-040) até sua descontinuação futura; não altera a tabela "Semana da conta". Trilha em `trilhas/2026-11-24_acordo-llm/falas-vicente.md`.
+- [x] **D-061 (26/11):** decisão única consolidada do Passo 2 do K-011 confirmada por Vicente (`trilhas/decisoes/D-061.json`, linha no `AGENTS.md`, K-126 encerrado sem execução no `quadro.md`, `fundamentos.md` e `RETOMAR.md` atualizados). **Conflito registrado:** substitui a D-057 (piloto encerra na cajuína de 14/11 sem rodar o K-126; demais CLB seguem candidatas pela D-039), estende operacionalmente a D-017 (linguagem ilustrativa e exemplos fora de sistema/código/ferramentas) e formaliza exceção pontual à D-046 para o K-011, mantendo a D-060. Trilhas em `trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md` (falas 6–7) e `trilhas/2026-11-22_logica/falas-vicente.md` (falas 1–13).
 
 ## Consumo semanal de agentes (D-023)
 
