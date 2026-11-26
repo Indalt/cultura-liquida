@@ -82,7 +82,7 @@ Trilha das falas (acordo 4). Uma essência só vale como diretriz depois de conf
 
 > correto. mas nao precisa fixar o nome, este nome para esta bebida aparece sempre. também nao se deve incluir nada no sistema, nos codigos e nas tools do que é tratado como exemplo. quero tratar do que foi conversado aqui de modo fundamental antes da reuniao e o resultado vai pra reuniao. tudo o que foi conversado e que ficou acertado. porque eu tenho a impressao de que boa parte dos insumos do piloto surgiram em razao da falta de clareza sobre tudo o que foi falado aqui. Vamos planejar resolver com a organizacao do que foi dito em um novo K que vai ser uma especie de limpeza que eu acho que estavamos fazendo. podemos consolidar essa limpeza nos insumos da sessao sobre "rumo do projeto cajuina" que foi quando eu notei haver muitas fragilidades. apos esse K é possivel que tenhamos pouco a resolver para sair do piloto.
 
-### Essência devolvida (à espera de confirmação; vira a D-060)
+### Essência devolvida (confirmada nas falas 12 e 13; gravada na D-061, porque o número D-060 ficou com o acordo de 24/11)
 
 1. **Um cartão de planejamento, o K-011, antes da reunião do K-004.** Ele organiza o que ficou acertado nesta conversa e na sessão "Rumo do projeto Cajuína" (20/11, fala 6 em `trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md`) como fundamentos do sistema. Depois relê os insumos abertos contra esses fundamentos. O resultado vai à reunião. É uma exceção à D-046 (1), que só Vicente abre.
 2. **O que se trata como exemplo não entra no sistema, nos códigos nem nas ferramentas.** Não vira dado, regra, lista, valor, teste nem escopo. Fica só no texto que explica. Vale também para o exemplo que a própria sessão escolhe (o caso do insumo 142). Estende a D-017.

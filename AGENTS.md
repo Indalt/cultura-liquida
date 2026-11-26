@@ -55,7 +55,7 @@ O texto inteiro: D-030 em diante em `trilhas/decisoes/D-nnn.json`; D-015 a D-029
 - **D-026:** fase 1 só com Vicente e agentes, com logs; segunda leitura = validador + verificador de harness diferente + amostra sorteada.
 - **D-027:** execução em Opus 5.5 médio, subagentes em Sonnet 5.5 alto; depois, o modelo de cada tarefa escolhido por teste.
 - **D-028:** a execução não para para aprovar o que já foi decidido.
-- **D-029:** agentes, habilidades e harness em `.claude/` antes da v0.2, operados só pelo Claude Code; o caso-piloto continua no Passo 1.
+- **D-029:** agentes, habilidades e harness em `.claude/` antes da v0.2, operados só pelo Claude Code; o caso-piloto continua no Passo 1. *(Alterada pela D-060: Claude Code e Antigravity operam em sequência.)*
 - **D-030:** os logs dizem o **alcance**: o que se olhou e o que ficou fora; fala-se só do que se conseguiu olhar, como a ciência preconiza.
 - **D-031:** o caso-piloto é a cajuína, começando pelo caju.
 - **D-032:** o piloto é teste da ferramenta inteira; as rotinas acham CLB em geral; piloto não é publicação.
@@ -83,7 +83,7 @@ O texto inteiro: D-030 em diante em `trilhas/decisoes/D-nnn.json`; D-015 a D-029
 - **D-054:** a automatização na API do Gemini; estacionada pela D-056.
 - **D-055:** o Claude na segunda leitura da rotina do Gemini; estacionada pela D-056.
 - **D-056:** o piloto se entrega com o kit (K-114) e o relatório (K-116); K-125, K-115b e K-115c estacionados; até haver financiamento, a IA da operação é a rotina do Claude (o avaliador propõe, o auditor relê, o portão decide).
-- **D-057:** o piloto termina com as três CLB já achadas (vinho de caju, mocororó, e caoi ou caoim, com "caium" de Vicente), no K-126, como proposta, sem verificação nem teste.
+- **D-057:** *(substituída pela D-061: o K-126 não roda)* o piloto termina com as três CLB já achadas (vinho de caju, mocororó, e caoi ou caoim, com "caium" de Vicente), no K-126, como proposta, sem verificação nem teste.
 - **D-058:** a lista de insumos se limpa antes de virar fila (o repetido se junta; o que não é problema da promessa sai, com o motivo); só depois se libera a operação com IA em escala.
 - **D-059:** **limpar e arrumar a ferramenta é o primeiro passo da correção** (K-127): limpar não muda comportamento; lote que quebra volta inteiro; **teste mudado ou tirado só entra com a confirmação de Vicente** (`scripts/trava_testes.py`).
 - **D-060:** Claude Code e Antigravity (Gemini) operam juntos de forma sequencial (sem paralelismo), lendo diretamente `AGENTS.md` e `.claude/` (sem `.agents/` nem `GEMINI.md`), com passagem de bastão em `RETOMAR.md`; novas habilidades/agentes entram em `.claude/` sem quebrar testes nem adaptar `orcamento.py` (a descontinuar); `clb coleta` fica para depois.

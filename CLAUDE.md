@@ -2,7 +2,7 @@
 
 # Notas do Claude Code
 
-Só o Claude Code opera os agentes deste projeto (D-029): pasta `.claude/`, sem espelho `.agents/`.
+Claude Code e Antigravity (Gemini) operam os agentes deste projeto em sequência, um por vez, sem paralelismo (D-060, que altera a D-029): pasta única `.claude/`, sem espelho `.agents/` nem `GEMINI.md`; o bastão passa pelo `RETOMAR.md` e pelas trilhas.
 
 ## Ambiente Windows
 - **Python real:** `C:/Users/alqui/AppData/Local/Programs/Python/Python312/python.exe`. O `python` do PATH é um atalho da Microsoft Store e falha (código 49).
