@@ -435,6 +435,11 @@
 - [x] **D-057 (20/11):** essência v5 confirmada por Vicente ("pode"); `trilhas/decisoes/D-057.json`; o K-126 no quadro (desenvolvimento, A fazer, primeiro). **Conflito registrado:** muda, só para as três CLB, a D-039, a D-038 (leitura do auditor), a D-056 (triagem jurídica e segunda leitura) e a D-046 (cartão fora do K-004).
 - [x] **D-058 (20/11):** o comentário da fala 11 (limpar a lista do que foi anotado antes da fila do K-004; automatizações só depois), essência e leituras confirmadas por Vicente ("correto"); `trilhas/decisoes/D-058.json`. **Conflito registrado:** muda a D-056 nos itens 4 e 6 (a operação com IA em escala espera a fila do K-004) e acrescenta à D-046 a limpeza antes dos cartões novos. [ABERTO]: se a liberação espera a fila montada ou resolvida.
 
+## Conversa de planejamento de 24/11/2026 (D-060, Antigravity), sem agentes
+
+- [x] **D-060 (24/11):** análise desde a Fundação com suíte completa (272 OK, 0 FALHA, 3 PENDENTE) e provas em sandbox temporária; essência confirmada por Vicente ("confirmo. gravar..."); `trilhas/decisoes/D-060.json`; linha no `AGENTS.md` e passagem de bastão no `RETOMAR.md`. **Conflito registrado:** altera a D-029 (cooperação sequencial Claude Code + Antigravity sobre `.claude/`, sem espelho `.agents/`) e dispensa a adaptação do `orcamento.py` (D-040) até sua descontinuação futura; não altera a tabela "Semana da conta". Trilha em `trilhas/2026-11-24_acordo-llm/falas-vicente.md`.
+- [x] **D-061 (26/11):** decisão única consolidada do Passo 2 do K-011 confirmada por Vicente (`trilhas/decisoes/D-061.json`, linha no `AGENTS.md`, K-126 encerrado sem execução no `quadro.md`, `fundamentos.md` e `RETOMAR.md` atualizados). **Conflito registrado:** substitui a D-057 (piloto encerra na cajuína de 14/11 sem rodar o K-126; demais CLB seguem candidatas pela D-039), estende operacionalmente a D-017 (linguagem ilustrativa e exemplos fora de sistema/código/ferramentas) e formaliza exceção pontual à D-046 para o K-011, mantendo a D-060. Trilhas em `trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md` (falas 6–7) e `trilhas/2026-11-22_logica/falas-vicente.md` (falas 1–13).
+
 ## Consumo semanal de agentes (D-023)
 
 | Semana | Agente / lote | Tokens | Chamadas | Acumulado da semana |

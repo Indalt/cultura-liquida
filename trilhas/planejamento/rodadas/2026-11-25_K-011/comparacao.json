@@ -1,0 +1,958 @@
+{
+ "versao_regra": "comparar-passo3-0.1",
+ "total": 35,
+ "concordam": 18,
+ "divergem_no_destino": [
+  58,
+  62,
+  112,
+  132,
+  135,
+  139
+ ],
+ "divergem_so_em_outro_campo": [
+  68,
+  69,
+  77,
+  87,
+  97,
+  104,
+  123,
+  128,
+  136,
+  141,
+  142
+ ],
+ "destino_final": {
+  "fica como problema da ferramenta": 30,
+  "já foi resolvido depois de 20/11": 2,
+  "dissolve-se num fundamento e vai à reunião como texto da Fundação": 2,
+  "junta-se a outro insumo": 1
+ },
+ "itens": [
+  {
+   "insumo": 46,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/logs/2026-10-23_recorte.jsonl:1-4 (EX-0019 a EX-0023); esquemas/log.schema.json:7-24; trilhas/2026-11-20_K-127/lista.md:151 (escopo do Lote 5 do K-127)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:52; trilhas/2026-11-20_K-127/lista.md:151 (K-127, lote 5, ainda não feito): a Execução descartada sem marca no log e os IDs reemitidos são defeito do registro, não falta de fundamento"
+  },
+  {
+   "insumo": 49,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "esquemas/entrada.schema.json:146-175; scripts/deduplicar.py:90-95; scripts/wayback.py:1-90",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:55; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:50: deduplicar.py não olha 'retirado' e a regex de barreira é mais estreita que as fichas"
+  },
+  {
+   "insumo": 52,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "os dois",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "os dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "os dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "esquemas/ficha-acesso.schema.json:56-62; esquemas/triagem-fixa.json:39; .claude/skills/ficha-de-acesso/SKILL.md:19-30",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:58; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:62: a proibição expressa fica em texto livre na ficha (habilidade ficha-de-acesso) e nenhum script a lê; o conserto pede campo estruturado na habilidade e leitura por script"
+  },
+  {
+   "insumo": 53,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "esquemas/triagem-fixa.json:176-280; scripts/triagem_fixa.py:1-90; .claude/skills/triagem-juridica/SKILL.md:45-55 (inclui o insumo 67 e a lista de palavras do 124)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:59; trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:25 (fundamento 10: o termo de explicação não vira lista fechada); trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:67 e trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:170,180 (67 e 124: a pergunta de bebida alcoólica e a lista que não pega 'índios'/'indígenas'); trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md, §3 item 4 (exemplos das habilidades como casos de prova): as listas da triagem fixa (scripts/triagem_fixa.py) são lista fechada montada sem medida; as normas pedem o juridico na fonte oficial"
+  },
+  {
+   "insumo": 55,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "esquemas/falta.schema.json:21-40; scripts/recorte.py:1-120; acervo/faltas/F-0006.json a F-0011.json (inclui o insumo 45)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:61; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:51: a Falta de busca sem tipo próprio e sem encerramento quando o Recorte se completa (esquema e script)"
+  },
+  {
+   "insumo": 58,
+   "concorda": false,
+   "divergem": [
+    "destino",
+    "via",
+    "junta_a"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "junta-se a outro insumo",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": 140
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/pretriagem.py:12,40-48,71-82; acervo/termos/TE-0001.json; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:38-42",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:64; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:40; trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:25: a pré-triagem só lê as formas dos Termos da Consulta, e o que fica fora não tem regra; mesmo mecanismo do 140 (o nome conhecido vira o limite), mas em outra etapa, por isso não se junta"
+  },
+  {
+   "insumo": 61,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/assistido.py:1-35; scripts/entrada_link.py:1-35; 00_Fundacao_Cultura_Liquida.md:667,815",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:67; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:77: as portas da fase 1 que dependem de Vicente são comandos de terminal (scripts/assistido.py, scripts/entrada_link.py)"
+  },
+  {
+   "insumo": 62,
+   "concorda": false,
+   "divergem": [
+    "destino",
+    "fundamento",
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 9,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "os dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/2026-11-22_logica/base.md:70 (viés do arquivo: sub-representa oralidade); 00_Fundacao_Cultura_Liquida.md:816,844,895 (D-009, P48 adiados); scripts/localizar_trecho.py:234-237",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:68; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:78: a ferramenta não transcreve a oralidade gravada; o fundamento 9 (trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:24, viés do arquivo) obriga declarar o viés, mas não evitaria a lacuna"
+  },
+  {
+   "insumo": 63,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/fila_curadoria.py:162-175; trilhas/2026-11-20_K-127/lista.md:151 (escopo do Lote 5 do K-127)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:69; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:56; trilhas/2026-11-20_K-127/lista.md:151 (K-127, lote 5, ainda não feito)"
+  },
+  {
+   "insumo": 68,
+   "concorda": false,
+   "divergem": [
+    "fundamento"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 2,
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/ler_fonte.py:68-120; trilhas/2026-11-22_logica/base.md:19 (inclui a leitura do agregador do insumo 130)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:74; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:45 e trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:181 (130: o caso Oasisbr/Sucupira com robots vedado entra no 68)"
+  },
+  {
+   "insumo": 69,
+   "concorda": false,
+   "divergem": [
+    "fundamento"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 2,
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/localizar_trecho.py:126-141; acervo/trechos/TR-0070.json; acervo/trechos/TR-0071.json; trilhas/2026-11-22_logica/base.md:19",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:75; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:46: texto extraído com caracteres trocados entra no acervo sem aviso (scripts/ler_fonte.py, scripts/localizar_trecho.py)"
+  },
+  {
+   "insumo": 70,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/sortear_amostra.py:40-75; esquemas/valores-provisorios.json:471 (inclui a parte da amostra da camada 2 do insumo 130)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:76; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:32 e trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:181 (130: a amostra da camada 2 vai escrita no 70); scripts/sortear_amostra.py"
+  },
+  {
+   "insumo": 77,
+   "concorda": false,
+   "divergem": [
+    "fundamento",
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 2,
+    "via": "habilidade ou agente",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": ".claude/skills/extrair-evidencia/SKILL.md:28-31; scripts/gravar_extracao.py:90-145",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:83; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:72: falta a regra de quando a junção de formas do nome de pessoa vale e quem confere; a regra é de Vicente (D-038), e só depois a habilidade do avaliador e o script a aplicam"
+  },
+  {
+   "insumo": 87,
+   "concorda": false,
+   "divergem": [
+    "fundamento",
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "habilidade ou agente",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/decisoes/D-047.json:4-5; .claude/skills/triagem-juridica/SKILL.md:45,97; .claude/skills/triagem-juridica/exemplos/falta-conhecimento-tradicional.json:15 (inclui insumos 66, 90 e 124 e achado 4 da §3 de revisao-claude-26-11.md:50-51)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:93; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:68; AGENTS.md:76 (D-047: outra CLB só recebe a mesma leitura pelas regras); a D-057 citada no insumo foi substituída pela D-061 (trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:26), o que não cria a regra geral de conhecimento tradicional; nenhum dos 12 fundamentos trata disso; regra de Vicente"
+  },
+  {
+   "insumo": 94,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/decisoes/D-059.json:4-5; trilhas/2026-11-20_K-127/lista.md:1-153 (escopo do K-127)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:100; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:87; RETOMAR.md, item 1a (passo de limpeza do código por inventário, ainda não feito); fica dentro da lista fechada do K-127 (trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:27, fundamento 12)"
+  },
+  {
+   "insumo": 97,
+   "concorda": false,
+   "divergem": [
+    "fundamento",
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 8,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "acervo/proposicoes/PR-0412.json; .claude/skills/extrair-evidencia/SKILL.md:29; scripts/gravar_extracao.py:1-90; trilhas/2026-11-22_logica/base.md:49,81",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:103; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:82: Proposição cujo trecho não nomeia termo e cujo contexto aponta outra CLB; o fundamento 11 (trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:26) guarda as outras CLB como candidatas, mas não diz onde fica a Proposição em dúvida; regra de Vicente, depois aplicada pela habilidade extrair-evidencia"
+  },
+  {
+   "insumo": 101,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "commit 1ce9c4a (K-127, lote 4); esquemas/valores-provisorios.json:623; scripts/agendar.py:33 (a calibração dos números do registro segue na 3ª passada do K-005)",
+   "evidencia_releitura": "commit 1ce9c4a (K-127, lote 4): cadencia_rotinas no registro de valores 0.4.0 (esquemas/valores-provisorios.json:623); a calibração pelo rendimento passa a caber no escopo escrito do K-005 ('os números do registro'), que era o motivo da refutação em trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:155"
+  },
+  {
+   "insumo": 104,
+   "concorda": false,
+   "divergem": [
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/2026-11-04_K-112/conferencia-termos-actions.json; .github/workflows/rotina-diaria.yml; 00_Fundacao_Cultura_Liquida.md:510",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:110; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:34; .github/workflows/rotinas.yml:10-11 (cron diário): não se sabe se o GitHub desliga o agendamento depois de 60 dias sem atividade; não conferido nesta releitura"
+  },
+  {
+   "insumo": 105,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "commit c16feab (K-127, lote 3); scripts/checar_cabecalhos.py:23-65; scripts/rodar_testes.py",
+   "evidencia_releitura": "commit c16feab (K-127, lote 3): scripts/checar_cabecalhos.py (cabecalhos-0.1) na suíte, com 4 casos em testes/cabecalhos/casos.json, no pre-commit e no portão"
+  },
+  {
+   "insumo": 111,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/relatorio_dia.py:44-52,127; trilhas/2026-11-20_K-127/lista.md:151 (escopo do Lote 5 do K-127, dependente do escopo workflow do insumo 107)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:117; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:57; trilhas/2026-11-20_K-127/lista.md:151 (K-127, lote 5, ainda não feito); depende da ordem dos passos no workflow das rotinas (insumo 107, RETOMAR.md item 1a)"
+  },
+  {
+   "insumo": 112,
+   "concorda": false,
+   "divergem": [
+    "destino",
+    "fundamento"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 9,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/decisoes/D-049.json:5; acervo/faltas/F-0034.json; trilhas/2026-11-22_logica/base.md:70; commit 1ce9c4a (inclui o insumo 109 e destrava o K-208)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:118; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:63; AGENTS.md, D-049 ([ABERTO] o alcance de 'intervenção humana'): é regra de Vicente, não da ferramenta"
+  },
+  {
+   "insumo": 123,
+   "concorda": false,
+   "divergem": [
+    "fundamento",
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 2,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": ".claude/skills/registrar-termo/SKILL.md:24-27; scripts/validar_acervo.py:1-120; trilhas/decisoes/D-041.json:4-5",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:129; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:83: nenhuma regra escrita diz se Evidência de leitura divergente abona o nome do Termo; o fundamento 3 (trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:18, voz da atribuição) poderia sustentar uma leitura, mas completar a regra por inferência não cabe; regra de Vicente"
+  },
+  {
+   "insumo": 126,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": ".github/workflows/rotina-ia-vigia.yml; .github/workflows/rotina-ia-juncao.yml; trilhas/2026-11-13_K-113/rotina-de-teste-resultado.md (inclui o insumo 113)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:132; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:35 e trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:179 (113 junto: a regra de proteção do main deve prever a volta do pull request); hoje a barreira é só instrução"
+  },
+  {
+   "insumo": 128,
+   "concorda": false,
+   "divergem": [
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/rotina_ia.py:1-80; scripts/gravar_extracao.py:90-145; esquemas/valores-provisorios.json:505",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:134; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:73: a tabela código→nome fica fora do Git por dado pessoal (D-021, D-043); onde a rotina com IA a alcança sem expor dado pessoal é regra de Vicente antes de ser script"
+  },
+  {
+   "insumo": 129,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "esquemas/valores-provisorios.json:401-425; scripts/portao_camada2.py:1-90",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:135; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:36: as duas camadas gravam na mesma faixa de IDs; hoje só o horário e o portão evitam a colisão"
+  },
+  {
+   "insumo": 132,
+   "concorda": false,
+   "divergem": [
+    "destino",
+    "via",
+    "junta_a"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "junta-se a outro insumo",
+    "fundamento": "nenhum",
+    "via": "nenhum dos dois",
+    "junta_a": 136
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/decisoes/D-060.json:5; trilhas/2026-11-22_logica/falas-vicente.md (fala 14); esquemas/log.schema.json:41-44 (inclui insumos 38 e 127; calibração de lotes vai à 3ª passada do K-005)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:138; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:25; ligado ao 136 e a trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md, §3 item 2 (descontinuar o orcamento.py na reunião do K-004): a medida da sessão da rotina e a calibração do lote seguem sem script"
+  },
+  {
+   "insumo": 135,
+   "concorda": false,
+   "divergem": [
+    "destino"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "já foi resolvido depois de 20/11",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "commits c16feab, 1ce9c4a e 814c2b5 (K-127, lotes 2 e 4 e fala 5); scripts/manutencao.py:59-66; esquemas/valores-provisorios.json:648; AGENTS.md:98",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:141; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:89; resolvido em parte depois de 20/11: limites em esquemas/valores-provisorios.json:648 (1ce9c4a), resumo_coleta.py e a ramificação remota fora (c16feab), AGENTS.md encurtado (814c2b5); fica quando a vistoria roda sozinha (trilhas/2026-11-20_K-127/lista.md:152, proposto a Vicente, não aplicado)"
+  },
+  {
+   "insumo": 136,
+   "concorda": false,
+   "divergem": [
+    "fundamento"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 1,
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 2,
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "esquemas/log.schema.json:66-71; scripts/relatorio_piloto.py:224-246; trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md:38-41 (inclui insumos 15 e 43 e o achado 1 da §3: aceitar tokens null com motivo_sem_consumo para sessão sem medida)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:142; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:26; trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:17 (fundamento 2: não dizer mais do que se mediu); trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md, §3 item 1 (logs EX-0166 a EX-0168 com tokens 0 querendo dizer 'não medido'; esquemas/log.schema.json:41 só aceita null em script, rotina, pessoa e agente de workflow) e item 2 (descontinuar o orcamento.py, que usaria o 0 como medida); com as cláusulas do Workflow (15) e do agente retomado (43), trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:165,168"
+  },
+  {
+   "insumo": 137,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "ambientes/AM-0021.json; ambientes/AM-0029.json; scripts/recorte.py:1-120; trilhas/2026-11-20_K-127/lista.md:151 (escopo do Lote 5 do K-127)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:143; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:58; trilhas/2026-11-20_K-127/lista.md:151 (K-127, lote 5, ainda não feito): nada calcula o estado do Ambiente pelos seus Recortes"
+  },
+  {
+   "insumo": 139,
+   "concorda": false,
+   "divergem": [
+    "destino",
+    "fundamento",
+    "via",
+    "junta_a"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "junta-se a outro insumo",
+    "fundamento": 12,
+    "via": "nenhum dos dois",
+    "junta_a": 136
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 2,
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/orcamento.py:48-50; scripts/relatorio_piloto.py:65-74; trilhas/decisoes/D-060.json:5; trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md:42-45 (achado 2 da §3); trilhas/2026-11-22_logica/falas-vicente.md (fala 14: descontinuação formal de orcamento.py e dos 6 casos da trava no K-004, mantendo modelo e esforço por tarefa)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:145; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:27; scripts/orcamento.py:48 e scripts/relatorio_piloto.py:65 (duas cópias de numero()); medido e estimado na mesma célula (fundamento 2, trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:17); relatorio_piloto.py fica para o K-007 (trilhas/2026-11-20_K-127/lista.md:146) e o orcamento.py vai à reunião do K-004 (trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md, §3 item 2): se ele for descontinuado, o 139 pode se esvaziar, o que não está decidido"
+  },
+  {
+   "insumo": 140,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 10,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "scripts/gerar_termo.py:52-53,104-135; scripts/pretriagem.py:40-48; scripts/mencoes_incidentais.py:83-98; ambientes/consultas/CO-0008.json; trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md:50-51 (inclui insumos 21, 57, 58, 103 e o achado 4 da §3: exemplos/ das skills são casos de prova e não lista fechada, mas os scripts fecharam as buscas nos descritores/termos do piloto)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:146; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:41; trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:25 (fundamento 10, que cita o caso do 142) e trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:26 (fundamento 11: as outras CLB seguem candidatas para as buscas); trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md, §3 item 4 (exemplos das habilidades, como os de .claude/skills/consulta/exemplos/, a conferir se funcionam como lista fechada; não conferido nesta releitura); a rotina só acha o nome já conhecido: conserto nas Consultas e nos scripts (pretriagem.py, mencoes_incidentais.py) e na habilidade consulta; com 21, 57 e 103 (trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:166,169,178)"
+  },
+  {
+   "insumo": 141,
+   "concorda": false,
+   "divergem": [
+    "fundamento",
+    "via"
+   ],
+   "final": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": null,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": 11,
+    "via": "os dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "fica como problema da ferramenta",
+    "fundamento": "nenhum",
+    "via": "script",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/2026-11-14_relatorio-piloto/dados.json; .claude/skills/montar-ficha/SKILL.md:21-35; .claude/skills/gerar-grafo/SKILL.md:21-35; trilhas/decisoes/D-061.json:4-5 (inclui o insumo 93)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:147; trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:28: custo por parte não medido e ficha e grafo por script não testados; a essência de 'quase independente de IA' segue a confirmar"
+  },
+  {
+   "insumo": 142,
+   "concorda": false,
+   "divergem": [
+    "via"
+   ],
+   "final": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 10,
+    "via": null,
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 10,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 10,
+    "via": "habilidade ou agente",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/decisoes/D-061.json:4-5 (diretrizes 1 e 2); trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:25-26; .claude/skills/registrar-decisao/SKILL.md:21-28",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:148; trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:25 (o fundamento 10 cita o insumo 142) e D-061 (substitui a D-057, cujo escopo errado o 142 descreve); fica o ajuste de texto na habilidade registrar-decisao (separar a resposta que confirma a lista da que responde parte), ligado ao K-006 por trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md:184"
+  },
+  {
+   "insumo": 143,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "junta-se a outro insumo",
+    "fundamento": 7,
+    "via": "nenhum dos dois",
+    "junta_a": 144
+   },
+   "proposta": {
+    "destino": "junta-se a outro insumo",
+    "fundamento": 7,
+    "via": "nenhum dos dois",
+    "junta_a": 144
+   },
+   "releitura": {
+    "destino": "junta-se a outro insumo",
+    "fundamento": 7,
+    "via": "nenhum dos dois",
+    "junta_a": 144
+   },
+   "evidencia_proposta": "trilhas/insumos-planejamento.md:149-150; trilhas/decisoes/D-061.json:5 (diretriz 4d-e); scripts/fila_curadoria.py:57-60; trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md:46-49 (achado 3 da §3)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:149-150 (o 144 'substitui o critério do insumo 143'); trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:22 (fundamento 7: μ e λ só descrevem linhagens); trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md, §3 item 3: o estado 'inconsistente' ainda abre o cartão de conflito (scripts/fila_curadoria.py:58); leitura desta releitura: é gatilho para chamar Vicente, não veredito, e no piloto nenhuma Proposição ficou 'inconsistente'; se continua é da reunião"
+  },
+  {
+   "insumo": 144,
+   "concorda": true,
+   "divergem": [],
+   "final": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 6,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "proposta": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 6,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "releitura": {
+    "destino": "dissolve-se num fundamento e vai à reunião como texto da Fundação",
+    "fundamento": 6,
+    "via": "nenhum dos dois",
+    "junta_a": null
+   },
+   "evidencia_proposta": "trilhas/decisoes/D-061.json:4-5 (diretriz 4d-g e [ABERTO] i); trilhas/2026-11-22_logica/base.md:30-60; scripts/fila_curadoria.py:57-60; trilhas/planejamento/rodadas/2026-11-25_K-011/revisao-claude-26-11.md:46-49 (achado 3 da §3: o gatilho de conflito da D-037 para conferir leitura do eixo 3 continua, mas o critério em fila_curadoria.py:58 vai à reunião junto com o texto lógico da Fundação)",
+   "evidencia_releitura": "trilhas/insumos-planejamento.md:150; trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:20-21 (fundamentos 5 e 6, D-061): dentro da ferramenta a tensão se situa ou se predica; a lógica de Newton da Costa como possível regra do sistema, declarada como viés, com o [ABERTO] regra explícita vs. declaração do quadro (trilhas/planejamento/rodadas/2026-11-25_K-011/fundamentos.md:35) para o K-004"
+  }
+ ]
+}

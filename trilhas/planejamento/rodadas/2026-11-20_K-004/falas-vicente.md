@@ -82,3 +82,11 @@ Leitura do curador: autoriza encurtar as decisões do AGENTS.md mantendo a essê
 ### Essência devolvida (à espera de confirmação; trocaria a D-057)
 
 O piloto é o entregue em 14/11, só com a cajuína: o K-126 não roda e as três CLB seguem candidatas (D-039). A próxima conversa de trabalho é o K-004, com um fim só: a nova versão da Fundação escrita. Até lá, sem exceção às regras que já existem (D-034, D-035, D-038, D-046); o K-127 termina só a lista que já tem e não segura o K-004.
+
+## Fala 7 (25/11/2026 — confirmação da fala 6)
+
+> Confirmo fala 6. não precisa de outros clbs para construcao do sistema. foi isso que demos o nome de piloto. Cajuina tem historia, tem tensoes entre industria/mercado/cultura etc. o que ja foi coletado de cultura liquida fica pra ser tratado no momento de trabahar as buscas e assimilação.
+>
+> cuidado ao criar mais um D-xx e não entrar no mesmo loop anterior ao gemini ou apenas substituir o executor de tarefas que quer fazer do seu jeito e nao fazer o que ainda nao foi feito pelo claude
+
+Leitura do curador: confirma a fala 6 (piloto encerrado na cajuína entregue em 14/11; o K-126 não roda; o que já foi coletado de outras CLB fica guardado como candidatas pela D-039 para o momento das buscas e assimilação). Alerta para não gerar um D-xx isolado a cada fala nem reinventar o trabalho pendente do Claude: seguindo o passo 2 desenhado em `trilhas/2026-11-22_logica/falas-vicente.md`, a substituição formal da D-057 entra junto numa única decisão consolidada ao fechar o passo 2 do K-011.

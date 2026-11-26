@@ -1,0 +1,37 @@
+{
+  "id": "D-061",
+  "data": "2026-11-26",
+  "essencia": "Decisão consolidada do Passo 2 do K-011: o piloto encerra-se na cajuína conforme entregue em 14/11 (D-056), sem executar o K-126 (substituindo a D-057), e o coletado de outras CLB fica como candidatas (D-039) para o momento das buscas e assimilação. Linguagem ilustrativa e exemplos usados para explicar ficam apenas no texto explicativo e nunca entram no sistema, nos códigos, nas listas fixas, nas ferramentas, nos valores, nos testes nem no escopo (operacionalizando a D-017). Abre-se o cartão K-011 antes do K-004 (exceção à D-046) e assentam-se os fundamentos do sistema: os 11 atos de base.md dão conta no momento (lista aberta); o rigor é não dizer mais do que as fontes permitem, separando voz da atribuição (lógica comum) e voz própria; regimes de saber são situados e a ferramenta não precisa de lógica não clássica nova; μ, λ e o Para-analisador são descrição documental de linhagens, não a lógica do sistema nem veredito; cultura muda no tempo (modelo de identidade fixa em tensão com a lei); uma lógica não clássica pode valer além da ferramenta nos cinco lugares de base.md §4, sempre declarada como viés; e os vieses entram como observação nas fichas. Mantém-se a D-060 sem exceções novas às regras vigentes até a próxima Fundação (K-004), com diálogo sequencial entre Antigravity e Claude Code no K-004 e o K-127 cumprindo só sua lista fechada sem segurar o K-004.",
+  "diretriz": "(1) Piloto e K-126 (substitui D-057): o piloto é o entregue em 14/11 só com a cajuína (D-056); o cartão K-126 encerra-se sem execução no quadro e as CLB candidatas (CL-0002, CL-0003, CL-0004) permanecem como candidatas (D-039) para o momento das buscas e assimilação. (2) Fronteira de linguagem e exemplos (estende D-017): termos ilustrativos e exemplos usados para explicar um conceito (inclusive trazidos por agentes ou sessões, como no insumo 142) nunca viram regra fechada, dado, lista fixa, valor, teste, código, ferramenta nem escopo do sistema; ficam restritos ao texto explicativo. (3) Cartão K-011 (exceção à D-046 aberta por Vicente): precede a reunião do K-004 em quatro passos fechados (fundamentos, rodada única de confirmação, releitura dos 32 insumos abertos + 142-144 integrando a checagem scripts x habilidades da D-060 com releitura independente D-038, e documento único de saída absorvendo base.md). O K-127 cumpre apenas sua lista fechada e não segura o K-004. (4) Fundamentos confirmados para a próxima Fundação (K-004): (a) os 11 atos de base.md §2 dão conta do que o sistema faz no momento (lista aberta, D-017); (b) rigor = não dizer mais do que as fontes permitem; (c) separação entre voz da atribuição (lógica comum) e voz própria (onde entra escolha lógica); (d) regimes de saber situados resolvidos dentro da ferramenta situando ou predicando tensões, sem lógica não clássica nova na ferramenta; (e) μ, λ (scripts/calcular_mu_lambda.py) e o Para-analisador registrados apenas como descrição documental de linhagens, não como lógica paraconsistente nem critério de veredito; (f) cultura em transformação e identidade no tempo reconhecidos como eixo central em tensão com o modelo de ID/termo fixo; (g) nos cinco lugares além da ferramenta mapeados em base.md §4 (voz própria, alcance parcial, rigor com o poder, normas em conflito e identidade no tempo), uma lógica não clássica pode valer como regra do sistema, declarada como viés; (h) a declaração de vieses entra como observação nas fichas. (5) Diálogo entre LLMs e disciplina até o K-004: mantida a D-060 (operação sequencial sem paralelismo), no K-004 Antigravity e Claude Code dialogam via RETOMAR.md e trilhas/ para chegar às melhores soluções para os objetivos do sistema; até a escrita da próxima versão da Fundação, não se abrem exceções novas às regras vigentes (D-034, D-035, D-038, D-046). [ABERTO]: (i) se a lógica não clássica entra na voz própria como regra explícita ou apenas como declaração do quadro adotado (base.md §4); (ii) formato da declaração de vieses no wiki inteiro (estática vs. dinâmica conforme entram novas CLB); (iii) necessidade ou não de declarar viés em artefatos do campo de ação além do carimbo mínimo e link para a ficha.",
+  "confirmada_por_vicente": true,
+  "data_confirmacao": "2026-11-26",
+  "fala_original_ref": "trilhas/planejamento/rodadas/2026-11-20_K-004/falas-vicente.md (falas 6 e 7); trilhas/2026-11-22_logica/falas-vicente.md (falas 1 a 13)",
+  "palavras_conferidas": [
+    {
+      "palavra": "não precisa fixar o nome",
+      "sentido_confirmado": "nome reconhecido como inventor da cajuína; aparece sempre nas fontes, não se fixa a partir da lembrança e não entra em base.md"
+    },
+    {
+      "palavra": "os insumos da sessão 'rumo do projeto cajuina'",
+      "sentido_confirmado": "como aquela sessão não gerou insumos numerados, trata-se do material da fala 6 de 20/11 e da leitura 'onde nos perdemos' (mais fala 7 de 25/11), incorporado no Passo 1 do K-011"
+    },
+    {
+      "palavra": "pouco a resolver para sair do piloto",
+      "sentido_confirmado": "hipótese empírica a ser testada por contagem na releitura dos Passos 3 e 4 do K-011"
+    },
+    {
+      "palavra": "exemplos fora do sistema (falas 11 e 12)",
+      "sentido_confirmado": "fronteira de linguagem: termos e exemplos usados para explicar nunca viram regras fechadas, listas fixas, código, ferramentas ou escopo que restrinjam o sistema a poucos casos conhecidos"
+    },
+    {
+      "palavra": "dao conta no momento (fala 13)",
+      "sentido_confirmado": "os 11 atos de base.md §2 representam o sistema no momento, mantendo a lista aberta (D-017)"
+    },
+    {
+      "palavra": "observação nas fichas (fala 13)",
+      "sentido_confirmado": "a declaração de vieses nas fichas entra como observação; ficam [ABERTO] o modo de declarar no wiki inteiro e a necessidade ou não em artefatos do campo de ação"
+    }
+  ],
+  "substitui": "Substitui a D-057 (encerra o piloto na cajuína de 14/11 sem rodar o K-126, mantendo as outras CLB como candidatas pela D-039), operacionaliza e estende a D-017 (linguagem ilustrativa e exemplos fora de sistema/código/ferramentas) e formaliza a exceção pontual à D-046 para o cartão K-011, preservando a D-060.",
+  "marcador": "VIGENTE"
+}
