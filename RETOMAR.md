@@ -1,12 +1,16 @@
 # RETOMAR — reunião do K-004 (D-046, D-061)
 
-**Bastão (D-060, 27/11/2026, Claude Code, depois da fala 3 de Vicente):** o **serviço do primeiro momento do K-004** está preparado em `trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md`. **Estado: preparado; a execução começa com a autorização de Vicente.**
+**Bastão (D-060, 27/11/2026, Claude Code, depois das falas 3 e 4 de Vicente):** o **serviço do primeiro momento do K-004** está preparado em `trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md` e atualizado com as respostas dele (seção 7). **Estado: pronto para executar. Começa pelo Prompt 1 da seção 10, numa conversa nova.** Ordem: Prompt 1 (O1), Prompt 2 (O3), Prompt 3 (O2, com Vicente); depois os prompts 4 (Antigravity audita) e 5 (Claude Code responde), alternados até o acordo.
 - **Objetivos:** O1, a coleta diária volta a gravar: o portão reprova desde 14/11, e desde 21/11 a causa é a ordenação da trava no Linux (`scripts/trava_testes.py:65`), com o conserto conferido (0 de 275 impressões mudam). O2, uma decisão só, com a confirmação de Vicente. O3, as 5 aulas do caju pelo K-121 (campo-de-acao).
 - **Modelos:** Claude Code em Opus 5.5, médio; o campo-de-acao em Sonnet 5.5, alto.
 - **Previsto:** de 7 a 12 pp do Claude; restam 30% na leitura declarada de 27/11; a semana renova em 2/12, 23h.
 - **O que falta** fica isolado na seção 5 e só entra se interagir com um objetivo.
 - **No fim:** a Antigravity (Gemini 4 Neon, esforço alto) audita e devolve na seção 8.
-- **A desambiguar (seção 7, com valores provisórios):** a essência do O2; o público e a duração das aulas; se o material circula; se a auditoria corrige ou só aponta.
+- **Desambiguado (fala 4):**
+  - o que falta são os insumos, isolados e não esquecidos;
+  - o público das aulas fica em aberto, e a duração é uma hora-aula (50 minutos, "não conferido");
+  - o material fica com Vicente e as turmas;
+  - a auditoria aponta, e só se corrige depois do acordo.
 - **Nada mudou** em código, esquemas, testes ou acervo.
 
 **Bastão (D-060, 27/11/2026, Claude Code, na reunião com Vicente):** cartão em `Fazendo`: **K-004** (o K-011 fechou em 27/11, na abertura).

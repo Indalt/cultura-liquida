@@ -1,6 +1,6 @@
 # Serviço do K-004, primeiro momento: a ferramenta funcionando e as 5 aulas do caju
 
-**Preparado em 27/11/2026** pelo Claude Code (Opus 5.5, esforço médio), a pedido de Vicente (fala 3, abaixo). **Estado: preparado. A execução começa com a autorização de Vicente.** Nada aqui é decisão nova: o que muda regra entra no O2, só com a confirmação dele (`registrar-decisao`).
+**Preparado em 27/11/2026** pelo Claude Code (Opus 5.5, esforço médio), a pedido de Vicente (fala 3, abaixo), e **atualizado no mesmo dia com as respostas dele (fala 4)**. **Estado: preparado. A execução começa pelos prompts da seção 10, um por conversa.** Nada aqui é decisão nova: o que muda regra entra no O2, só com a confirmação dele (`registrar-decisao`).
 
 **De onde vem:** a leitura de 27/11 na conversa com Vicente (o que impede a ferramenta de funcionar, o que a reunião pode fazer já, os módulos e o desenho das 5 aulas), feita só por leitura, sem agentes e sem mudar nada; e as falas abaixo.
 
@@ -8,9 +8,11 @@
 1. "[...] viabilizar o cultura liquida com rigor sem ter de finalizar todas as pendencias, e programando de forma organizada os melhoramentos. [...] A urgencia é ser capaz de bolar um programa de 5 aulas para falar sobre culturas liquidas brasileira começando com o caju [...] nao criar taferas novas para essa urgencia. já temos o plano disso em campo de acao, apenas dar foco. [...] a ideia é ficar pronto na primeira semana de dezembro."
 2. "tenho 30% de tokens semanais do claude e 30% de tokens semanais do antigravity gemini para entregar a suite funcionando com as aulas do caju. O que daria pra realizar com isso sobre o que falta?"
 3. "Prepare o serviço para voce realizar, diga o modelos, esforços, e os objetivos. o fim da linha não existe e por isso o funcionamento nao pode ser dependente do que falta. o que falta não pode ser esquecido durante o serviço, mas deve ser isolado dos objetivos. se o que falta precisar interagir com o serviço entra para o serviço. após o serviço que não precisa ir até o fim do prazo (poderia ser terminado antes e isso seria positivo) o gemini faz a auditoria e devolve. caso algo tenha ficado sem ser compreendido retorne para desambiguar."
+4. Respostas à seção 7: "1: isolado: são os insumos que coletamos durante a construção e o piloto. São tools, reflexões, melhorias, e necessidades para que o cultura liquida se torne uma aplicação madura e realmente imponente para a cultura brasileira e os estudos das culturas liquidas. para servir de referencia baseada em evidencias. 2. Não importa para quem são as aulas. Público e etc. será decidido por outra pessoa/IA/Ferramenta etc. O tempo da aula é o padrão brasileiro. 3. Fica comigo e as turmas. 4. Aponta. Quem faz não corrige sem reflexão. Pontua até chegar em um acordo. atualizar e me entregar os prompts"
 
-## 1. Regra deste serviço (fala 3; a essência vira regra geral só pelo O2)
+## 1. Regra deste serviço (falas 3 e 4; a essência vira regra geral só pelo O2)
 - Não existe fim da linha. O funcionamento não depende do que falta.
+- **O que falta são os insumos coletados na construção e no piloto** (fala 4): ferramentas, reflexões, melhorias e necessidades para a Cultura Líquida se tornar uma aplicação madura, referência baseada em evidências para a cultura brasileira e os estudos das culturas líquidas.
 - O que falta não se esquece: fica na seção 5, isolado dos objetivos.
 - O que falta entra no serviço só quando interage com ele, isto é, quando impede um objetivo de chegar ao seu "pronto quando".
 - O que aparecer no caminho vira uma linha na seção 5, sem explorar (D-035).
@@ -58,7 +60,7 @@
     - Primeiro se resolve o que impede a coleta verificada, a organização e os planos de aula.
     - O resto vira módulos, programados de uma vez (Bloco 8, D-046).
     - A escrita da Fundação passa a ser um dos módulos, e não o "fim só" do K-004 (fala 6 de 20/11).
-  - **(b) A regra da fala 3** (seção 1).
+  - **(b) A regra das falas 3 e 4** (seção 1), com a definição de Vicente: o que falta são os insumos, isolados dos objetivos e não esquecidos.
   - **(c) Os 3 [ABERTO] da D-061, pelas leituras em que as duas LLMs concordaram:**
     - declarar o quadro lógico agora, com a identidade no tempo como primeiro caso a observar;
     - uma página fixa de vieses no wiki e um bloco gerado por script, que vira módulo;
@@ -81,6 +83,11 @@
   - toda marca `[PR-nnnn]` e toda Fonte `FO-nnnn` citadas existem no acervo;
   - nenhum dado pessoal (`scripts/procurar_dado_pessoal.py`);
   - o carimbo mínimo em cada aula: versão da ficha, nível, Faltas, data, "como citar" e o aviso "não é orientação jurídica nem sanitária".
+- **Parâmetros (fala 4):**
+  - **Público:** em aberto. Quem decide é outra pessoa, IA ou ferramenta. Cada aula serve a qualquer público e traz um campo "ajuste ao público", vazio, para quem decidir.
+  - **Duração:** cada aula numa hora-aula, o padrão brasileiro. O valor de trabalho é 50 minutos, com a marca "não conferido": nenhuma norma foi aberta.
+  - **Uso:** o material fica com Vicente e as turmas, não é publicado. O K-010 não entra. As precauções das Faltas jurídicas valem mesmo assim, como regra de cuidado.
+  - **BNCC:** só como anexo opcional, com as habilidades sugeridas do ensino médio da camada Educação.
 - **Quadro:** o K-121 entra em Fazendo durante o O3; o K-004 fica com o estado salvo no RETOMAR e volta depois (D-035).
 - **Depois do O3:** a revisão de Vicente. Os ajustes podem cair na semana nova, de 3 a 4/12.
 
@@ -109,9 +116,9 @@ Dizer o grau de cada frase também ensina: μ 0,5 é uma linhagem só.
 
 ## 4. Ordem
 1. **O1.** Não depende de nada.
-2. **O3.** Depois das respostas da seção 7, ou com os valores provisórios ditos lá.
+2. **O3.** Com os parâmetros da fala 4 (seção 3).
 3. **O2.** Quando Vicente confirmar a essência; pode entrar antes, entre ou depois dos outros.
-4. **Fim:** bastão à Antigravity para a auditoria (seção 6).
+4. **Fim:** a auditoria da Antigravity e a troca até o acordo (seção 6). Se o O2 ainda esperar Vicente, a auditoria começa por O1 e O3.
 
 ## 5. O que falta (isolado; não entra no serviço salvo se interagir)
 
@@ -119,7 +126,7 @@ Dizer o grau de cada frase também ensina: μ 0,5 é uma linhagem só.
 |---|---|---|
 | Os 30 insumos, em 9 módulos (M1 relatórios: 46, 63, 111, 137, mais o aviso de reprovações seguidas; M2 escala: 70, 126, 128, 129, 132; M3 medida: 136, 139 e o fim do `orcamento.py`; M4 termos e outras CLB: 77, 87, 97, 123, 91, 131; M5 achar e ler: 49, 52, 53, 55, 58, 68, 69, 140; M6 receber: 61, 62, 112; M7 casa: 94, 104, 135; M8 menos IA: 141; M9 planejamento: Fundação v0.3, K-005, K-006, estacionados) | `saida-K-004.md` e `trilhas/insumos-planejamento.md` | algum deles impedir O1, O2 ou O3 (o M1 só entra se o O1 não puder ser provado sem ele) |
 | O [ABERTO] da D-058 (liberar a leitura com IA em escala) | `trilhas/decisoes/D-058.json` | Vicente o incluir no O2 |
-| Publicar: o K-010 e as Faltas "só para publicar" (F-0024 em parte, F-0025, F-0032, F-0033) | quadro, K-010 e K-203 a K-206 | o material das aulas for circular aberto (seção 7, item 3) |
+| Publicar: o K-010 e as Faltas "só para publicar" (F-0024 em parte, F-0025, F-0032, F-0033) | quadro, K-010 e K-203 a K-206 | não entra: o material fica com Vicente e as turmas (fala 4, item 3) |
 | As Faltas de conteúdo das aulas (caju no Ceará hoje; a gastronomia cearense atual; o Guia Alimentar; as três CLB candidatas; a BNCC do fundamental) | seção 3, tabela das aulas | Vicente trouxer links: aí entram pela porta da entrada por link, com o avaliador (Haiku 5.5, alto) e o auditor (Sonnet 5.5, alto), de 4 a 6 pp, de preferência depois de 2/12 |
 | Os acréscimos 1 e 2 da conferência dos exemplos | `reuniao.md`, seção 3 | nunca neste serviço (texto da Fundação, M9) |
 | Depois (surgido no caminho) | — | — |
@@ -136,23 +143,27 @@ Dizer o grau de cada frase também ensina: μ 0,5 é uma linhagem só.
      - nenhum nome de quem pratica; nenhum detalhe ritual de povo nomeado;
      - nenhum fato sem fonte; nenhum exemplo virou regra (D-061, item 2).
   4. **Seção 5:** nada se perdeu e nada que falta entrou sem interagir.
-- **Como devolve:** notas na seção 8 deste arquivo e o bastão no RETOMAR, para o Claude Code e Vicente. Valor provisório (seção 7, item 4): ela não corrige direto; quem fez corrige. No fim, anota quanto gastou.
+- **Como devolve (fala 4, item 4):** a Antigravity aponta e não corrige.
+  - Os pontos vão na seção 8, numerados (A1, A2...).
+  - Quem fez reflete sobre cada ponto e responde "concordo", "concordo em parte" ou "discordo", com o porquê e a evidência. Não corrige sem essa reflexão.
+  - A troca segue ponto a ponto até o acordo. Só o que tiver acordo se corrige, com a conferência por script refeita.
+  - *Valor provisório:* um ponto sem acordo depois de duas voltas vai a Vicente como divergência, com as duas leituras (D-037).
+  - Cada volta passa pelo bastão no RETOMAR. No fim de cada volta, a Antigravity anota quanto gastou.
 
-## 7. A desambiguar com Vicente (cada item tem um valor provisório, para o serviço não depender da resposta)
-1. **A essência do O2** (seção 3) está certa? Palavras a conferir:
-   - "fim da linha": lido como o estado em que nada falta, que não existe;
-   - "isolado": listado à parte, sem trabalho nele durante o serviço;
-   - "interagir": quando o que falta impede um objetivo de chegar ao "pronto quando";
-   - "suíte funcionando": a suíte de testes e a rotina diária gravando.
-   - *Provisório:* o O2 espera; O1 e O3 seguem.
-2. **Para quem são as 5 aulas, onde, e quanto tempo tem cada uma?**
-   - *Provisório:* turma adulta de curso livre de gastronomia e cultura alimentar, aulas de 2 h em blocos de 30 min, e a BNCC como anexo para quem usar no ensino médio.
-3. **O material das aulas fica com você e a turma, ou vai circular aberto?**
-   - *Provisório:* rascunho para uso seu, não publicado. Se for circular, o K-010 entra no serviço.
-4. **"A auditoria devolve":** a Antigravity só aponta, ou pode corrigir texto direto, como fez em 27/11 no `saida-K-004.md`?
-   - *Provisório:* só aponta; quem fez corrige.
+## 7. Desambiguação (respondida por Vicente na fala 4, 27/11)
+1. **"Isolado":** são os insumos coletados na construção e no piloto: ferramentas, reflexões, melhorias e necessidades para a aplicação madura, referência baseada em evidências.
+   - Seguem como leitura, conferida de novo no O2: "fim da linha" é o estado em que nada falta, que não existe; "interagir" é impedir um objetivo de chegar ao "pronto quando"; "suíte funcionando" é a suíte de testes e a rotina diária gravando.
+   - A essência final do O2 volta a Vicente antes de se gravar.
+2. **Público:** não importa; quem decide é outra pessoa, IA ou ferramenta. Duração: o padrão brasileiro, uma hora-aula, com 50 minutos como valor de trabalho, "não conferido".
+3. **O material** fica com Vicente e as turmas; não é publicado.
+4. **A auditoria** aponta; quem fez não corrige sem reflexão; pontua-se até o acordo (seção 6).
 
-## 8. Auditoria da Antigravity (a preencher por ela)
+## 8. Auditoria da Antigravity (a preencher na troca)
+Formato de cada ponto:
+- **A-n:** arquivo:linha, o que se viu, o que se propõe.
+- **Resposta de quem fez:** concordo, concordo em parte ou discordo, com o porquê e a evidência.
+- **Volta seguinte:** "acordo" ou novo apontamento.
+- **Estado:** em troca, acordo (corrigido no commit X) ou a Vicente.
 
 ## 9. Alcance (D-030)
 - **Olhado em 27/11:**
@@ -164,3 +175,102 @@ Dizer o grau de cada frase também ensina: μ 0,5 é uma linhagem só.
   - o log da rodada diária de 26/11 no GitHub Actions e os logs do portão de 14 a 21/11 na ramificação `rotinas`;
   - a trava rodada no main, numa cópia limpa e num clone da `rotinas`, e a simulação da ordem do Linux.
 - **Fora:** as 2.544 Entradas brutas; nenhum fato externo conferido; o gasto desta conversa, que não foi medido.
+
+## 10. Prompts (um por conversa nova; a ordem é a da seção 4)
+Cada prompt abre uma conversa nova: custa menos que continuar uma conversa longa. Na troca da auditoria, os prompts 4 e 5 se alternam até o acordo.
+
+### Prompt 1 — Claude Code, O1 (Opus 5.5, esforço médio)
+```
+Serviço do primeiro momento do K-004, objetivo O1. Confira o modelo: Opus 5.5, esforço médio; se for outro, avise e pare.
+Leia o topo do RETOMAR.md e as seções 1, 2, 3 (O1) e 5 de trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md.
+Faça só o O1:
+- Em scripts/trava_testes.py:65, ordene os arquivos por key=lambda x: tuple(s.lower() for s in x.relative_to(p).parts), com um comentário de uma linha dizendo por quê (ordem igual no Windows e no Linux). A versão fica em trava-testes-0.1.
+Prove antes do commit:
+(1) trava_testes.py: 275 casos em ordem;
+(2) rodar_testes.py com o .venv: 272 OK, 0 FALHA, 3 PENDENTE;
+(3) procurar_dado_pessoal.py --git.
+Faça o commit e o push.
+Pronto quando: a próxima rodada diária grava "portão: passa". Para conferir: git fetch, a ramificação rotinas e trilhas/logs/AAAA-MM-DD_portao-rotina.jsonl. Se a rodada ainda não tiver rodado, deixe no RETOMAR o que conferir e feche.
+Se o portão reprovar por outra causa, ela entra no O1.
+Qualquer outra coisa que aparecer vira uma linha na seção 5 do servico.md, sem explorar.
+Sem agentes.
+Ao fechar: o bastão no RETOMAR para o O3, commit e push.
+```
+
+### Prompt 2 — Claude Code, O3 (sessão em Opus 5.5, médio; agente campo-de-acao em Sonnet 5.5, alto)
+```
+Serviço do primeiro momento do K-004, objetivo O3 (K-121, pedido real de Vicente). Confira o modelo da sessão: Opus 5.5, esforço médio; se for outro, avise e pare.
+Leia o topo do RETOMAR.md e as seções 1, 2, 3 (O3, com o pedido, os parâmetros e os cuidados), 5 e 7 do servico.md.
+No quadro, ponha o K-121 em Fazendo; o K-004 fica com o estado salvo.
+Antes do agente, diga quantas chamadas faz e quanto devem gastar (1 ou 2; o kit mediu 103.960 tokens numa chamada).
+Chame o agente campo-de-acao (Sonnet 5.5, alto; teto de 25 turnos; sem web) com:
+- as fontes: acervo/fichas/CL-0001.md, acervo/fichas/educacao/CL-0001.md, campo_de_acao/kit-fonte-primaria-cajuina.md e a tabela das 5 aulas da seção 3 do servico.md;
+- os parâmetros:
+  - público em aberto: cada aula traz um campo "ajuste ao público", vazio;
+  - cada aula numa hora-aula de 50 minutos, marcada "não conferido";
+  - uso de Vicente e das turmas, não publicado;
+- as regras:
+  - toda frase sobre a cajuína termina com [PR-nnnn] que existe no acervo, e diz o grau quando a Proposição é intermediária;
+  - Faltas à vista e carimbo mínimo em cada aula;
+  - nenhum nome de quem pratica;
+  - nenhum detalhe ritual de povo nomeado;
+  - nada sanitário nem jurídico;
+  - nenhum fato fora do acervo: o que falta é Falta;
+- a saída: grave item a item em campo_de_acao/aulas-caju/ (programa.md, aula-1.md a aula-5.md), cada um marcado "rascunho, não publicado".
+Depois, sem IA:
+- confira por script que todas as marcas PR e FO existem;
+- rode procurar_dado_pessoal.py;
+- confira o carimbo em cada arquivo;
+- grave o log de cada chamada com scripts/registrar_log.py.
+Faça o commit e o push.
+Pronto quando: os 6 arquivos gravados, 100% das marcas existindo, entregues a Vicente para a revisão.
+O que aparecer vira uma linha na seção 5. Acima de 80% na leitura oficial, termine o passo e grave o RETOMAR.
+Ao fechar: o bastão no RETOMAR.
+```
+
+### Prompt 3 — Claude Code, O2 (Opus 5.5, médio; com Vicente presente)
+```
+Serviço do primeiro momento do K-004, objetivo O2: uma decisão só. Confira o modelo: Opus 5.5, esforço médio; se for outro, avise e pare.
+Leia o topo do RETOMAR.md; as seções 0, 1, 3 (O2) e 7 do servico.md; trilhas/decisoes/D-058.json e D-061.json; e a seção 5 de trilhas/planejamento/rodadas/2026-11-27_K-004/reuniao.md.
+Pela habilidade registrar-decisao:
+- devolva a Vicente a essência final dos itens (a) a (d) do O2, com a definição dele de "o que falta" (fala 4);
+- confira as palavras ainda lidas e não confirmadas;
+- pergunte só se o item (e), a D-058, entra.
+Grave trilhas/decisoes/D-062.json só depois da confirmação dele, com o lugar onde ele confirmou. Ponha uma linha de essência no AGENTS.md. Valide com scripts/validar.py.
+Faça o commit e o push. Sem agentes.
+Pronto quando: a D-062 gravada e válida.
+Ao fechar: o bastão no RETOMAR.
+```
+
+### Prompt 4 — Antigravity, auditoria (Gemini 4 Neon, esforço alto)
+```
+Auditoria do serviço do primeiro momento do K-004. Você não fez o serviço (D-038). Modelo: Gemini 4 Neon, esforço alto.
+Leia AGENTS.md, o topo do RETOMAR.md e trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md inteiro.
+Volta 1, pela lista da seção 6:
+- O1: o commit do O1 mexe só na linha da ordenação e no comentário; a trava tem 275 casos em ordem; o log do portão da rodada seguinte diz "passa".
+- O2: a D-062 é a essência confirmada, e não a transcrição; não há exceção nova às regras (D-061, item 5). Se a D-062 ainda não existir, deixe o O2 para a volta seguinte.
+- O3: abra cada acervo/proposicoes/PR-nnnn.json citado e confira:
+  - cada frase é fiel ao valor da Proposição;
+  - o grau é dito quando a Proposição é intermediária;
+  - as Faltas e o carimbo estão em cada aula;
+  - nenhum nome de quem pratica nem detalhe ritual de povo nomeado;
+  - nenhum fato sem fonte; nenhum exemplo virou regra (D-061, item 2).
+- Seção 5: nada se perdeu e nada entrou sem interagir.
+Só aponte; não corrija nada. Escreva na seção 8, no formato dela: A1, A2..., com arquivo:linha, o que viu e o que propõe.
+Voltas seguintes: leia as respostas de quem fez, e responda "acordo" ou aponte de novo, com o porquê.
+No fim de cada volta: anote o modelo e quanto gastou; commit e push só do servico.md e do RETOMAR, com o bastão ao Claude Code.
+```
+
+### Prompt 5 — Claude Code, resposta à auditoria (Opus 5.5, médio; a cada volta)
+```
+Resposta à auditoria do serviço do primeiro momento do K-004. Confira o modelo: Opus 5.5, esforço médio; se for outro, avise e pare.
+Leia o topo do RETOMAR.md e as seções 6 e 8 do servico.md.
+Para cada ponto A-n sem estado final, reflita antes de responder e escreva logo abaixo dele: "concordo" (com o que vai mudar), "concordo em parte" ou "discordo", sempre com o porquê e a evidência (arquivo:linha).
+Não corrija nada que não tenha "acordo" da Antigravity.
+Nos pontos com acordo:
+- aplique a correção;
+- refaça a conferência por script do objetivo tocado;
+- marque o estado "acordo (corrigido no commit X)".
+Ponto sem acordo depois de duas voltas: marque "a Vicente", com as duas leituras.
+Faça o commit e o push. Ao fechar: o bastão no RETOMAR à Antigravity, ou o fim do serviço se todos os pontos tiverem estado final.
+```
