@@ -130,6 +130,8 @@ Dizer o grau de cada frase também ensina: μ 0,5 é uma linhagem só.
 | As Faltas de conteúdo das aulas (caju no Ceará hoje; a gastronomia cearense atual; o Guia Alimentar; as três CLB candidatas; a BNCC do fundamental) | seção 3, tabela das aulas | Vicente trouxer links: aí entram pela porta da entrada por link, com o avaliador (Haiku 5.5, alto) e o auditor (Sonnet 5.5, alto), de 4 a 6 pp, de preferência depois de 2/12 |
 | Os acréscimos 1 e 2 da conferência dos exemplos | `reuniao.md`, seção 3 | nunca neste serviço (texto da Fundação, M9) |
 | Depois (surgido no caminho) | — | — |
+| `trilhas/logs/2026-11-27_desconhecido.jsonl`, não rastreado, já presente ao abrir o O1 (origem não vista) | pasta de trabalho, fora do Git | nunca neste serviço (M7 casa) |
+| O workflow `rotinas` termina como "failure" no GitHub quando o portão reprova; a reprovação de 14 a 26/11 só se via na ramificação `rotinas` | `gh run list --workflow rotinas.yml` | o M1 (aviso de reprovações seguidas), se o O1 não se provar |
 
 ## 6. Auditoria da Antigravity (depois do serviço)
 - **Quem:** a Antigravity (Gemini 4 Neon, o da releitura de 27/11), esforço alto. Ela não fez o serviço (D-038).
