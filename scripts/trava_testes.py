@@ -62,7 +62,9 @@ def _hash_caminho(p: Path) -> str:
     if p.is_file():
         h.update(_bytes(p))
     else:
-        for f in sorted(x for x in p.rglob("*") if x.is_file() and "__pycache__" not in x.parts):
+        # Chave sem caixa por partes: a mesma ordem no Windows (onde a trava foi gravada) e no Linux.
+        for f in sorted((x for x in p.rglob("*") if x.is_file() and "__pycache__" not in x.parts),
+                        key=lambda x: tuple(s.lower() for s in x.relative_to(p).parts)):
             h.update(f.relative_to(p).as_posix().encode())
             h.update(hashlib.sha256(_bytes(f)).digest())
     return h.hexdigest()
