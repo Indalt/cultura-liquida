@@ -1,5 +1,14 @@
 # RETOMAR — reunião do K-004 (D-046, D-061)
 
+**Bastão (D-060, 27/11/2026, Claude Code, depois da fala 3 de Vicente):** o **serviço do primeiro momento do K-004** está preparado em `trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md`. **Estado: preparado; a execução começa com a autorização de Vicente.**
+- **Objetivos:** O1, a coleta diária volta a gravar: o portão reprova desde 14/11, e desde 21/11 a causa é a ordenação da trava no Linux (`scripts/trava_testes.py:65`), com o conserto conferido (0 de 275 impressões mudam). O2, uma decisão só, com a confirmação de Vicente. O3, as 5 aulas do caju pelo K-121 (campo-de-acao).
+- **Modelos:** Claude Code em Opus 5.5, médio; o campo-de-acao em Sonnet 5.5, alto.
+- **Previsto:** de 7 a 12 pp do Claude; restam 30% na leitura declarada de 27/11; a semana renova em 2/12, 23h.
+- **O que falta** fica isolado na seção 5 e só entra se interagir com um objetivo.
+- **No fim:** a Antigravity (Gemini 4 Neon, esforço alto) audita e devolve na seção 8.
+- **A desambiguar (seção 7, com valores provisórios):** a essência do O2; o público e a duração das aulas; se o material circula; se a auditoria corrige ou só aponta.
+- **Nada mudou** em código, esquemas, testes ou acervo.
+
 **Bastão (D-060, 27/11/2026, Claude Code, na reunião com Vicente):** cartão em `Fazendo`: **K-004** (o K-011 fechou em 27/11, na abertura).
 - **Feito pelo Claude Code (Opus 5.5, esforço médio):** `relatorio_dia.py`; quadro com K-011 em Concluído e K-004 em Fazendo; a trilha da reunião em `trilhas/planejamento/rodadas/2026-11-27_K-004/reuniao.md`: a leitura das 6 notas da Antigravity (concorda em 4; reparo no 112; diverge em parte no 62, que tem uma parte da fase 1, a oralidade já gravada em acervo público, e outra da fase 2, P48), a segunda conferência dos exemplos das habilidades (confirma a Antigravity; dois acréscimos para a reunião), a pauta em 10 blocos com os pontos de bastão à Antigravity (⇄) e o **Bloco 1** (os 3 [ABERTO] da D-061 e o gatilho "inconsistente") apresentado a Vicente. Nada mudou em código, esquemas, testes ou acervo; nenhuma decisão nova gravada.
 - **Próximo:** as respostas de Vicente ao Bloco 1 (seção 5 de `reuniao.md`); com a essência confirmada, ⇄ a Antigravity relê o texto da decisão antes de gravar; depois, o Bloco 2. **Modelo e esforço:** Claude Code em Opus 5.5, médio; Antigravity em esforço médio.
