@@ -1,6 +1,6 @@
 # K-011 · Passo 4 — Saída única para a reunião do K-004
 
-**Data:** 26/11/2026 · **Escrito por:** Claude Code (Opus 5.5, esforço médio), que tinha o bastão depois da comparação · **Relê antes da reunião:** a Antigravity (D-060; `revisao-claude-26-11.md`, §4).
+**Data:** 26/11/2026 (relido em 27/11/2026) · **Escrito por:** Claude Code (Opus 5.5, esforço médio), que tinha o bastão depois da comparação · **Relido por:** Antigravity (Gemini 4 Neon, esforço alto) em 27/11/2026 (D-038; D-060; `revisao-claude-26-11.md`, §4).
 
 Este é o documento único que o cartão K-011 pede (`trilhas/2026-11-22_logica/falas-vicente.md`, passo 4): os fundamentos confirmados, o destino de cada insumo e a contagem do que resta. A `trilhas/2026-11-22_logica/base.md` se absorve aqui (seções 3 e 4). **Nada aqui é decisão nova:** o que muda regra é da reunião (D-046, D-061).
 
@@ -58,14 +58,14 @@ O enunciado inteiro, a fonte e as linhas da Fundação de cada um estão em `fun
 | 112 ([ABERTO] da D-049, "intervenção humana") | dissolve-se no fund. 9 | fica (regra de Vicente) | As duas concordam que a via é "nenhum dos dois". O [ABERTO] é da D-049, não de um fundamento. |
 | 132 (custo da rotina com IA) | junta-se ao 136 | fica (script) | Se a medida da sessão da rotina e a calibração do lote cabem no conserto da medida única (136). |
 | 135 (vistoria da casa) | já resolvido (c16feab, 1ce9c4a, 814c2b5) | fica (script) | Quatro das cinco partes foram resolvidas. Falta decidir quando a vistoria roda sozinha (`trilhas/2026-11-20_K-127/lista.md`, proposto a Vicente). |
-| 139 (duas cópias de `numero()`) | junta-se ao 136 (fund. 12) | fica (fund. 2, script) | Depende da descontinuação do `orcamento.py` (seção 4). O `relatorio_piloto.py` fica para o K-007. |
+| 139 (duas cópias de `numero()`) | junta-se ao 136 (fund. 12) | fica (fund. 2, script) | Depende da descontinuação do `orcamento.py` (seção 5, item 3). O `relatorio_piloto.py` fica para o K-007. |
 
 ### 2.2 Divergências só em fundamento, via ou junção (11)
 
 Nenhuma muda o destino. Os itens seguem a tabela em `comparacao.md`. O padrão principal:
-- **Fundamento.** A Antigravity ligou mais insumos a um fundamento: o 2 nos insumos 68, 69, 77 e 123; o 8 no 97; o 10 no 87; o 11 no 141; o 1 no 136. A releitura só ligou onde o fundamento claro teria evitado o insumo, e marcou "nenhum" nos defeitos de código.
+- **Fundamento.** A Antigravity ligou mais insumos a um fundamento: o 2 nos insumos 68, 69, 77 e 123; o 8 no 97; o 10 no 87; o 11 no 141; o 1 no 136 (onde a releitura marcou o 2). A releitura só ligou onde o fundamento claro teria evitado o insumo, e marcou "nenhum" nos defeitos de código.
 - **Via.** Em 77, 87, 97, 123 e 128, a releitura leu "nenhum dos dois": falta primeiro uma regra de Vicente (D-038), e só depois habilidade ou script a aplicam. A proposta leu a via de quem aplicaria a regra.
-- **Outros casos:** 104 (proposta "nenhum dos dois"; releitura "script"), 141 (os dois ou script) e 142 (proposta "nenhum dos dois"; releitura "habilidade": o texto da `registrar-decisao`).
+- **Outros casos:** 104 (proposta "nenhum dos dois"; releitura "script"), 141 (os dois ou script) e 142 (proposta "nenhum dos dois"; releitura "habilidade ou agente": o texto da `registrar-decisao`).
 
 ### 2.3 Os 30 que ficam como problema da ferramenta, por família da limpeza de 20/11
 
@@ -73,7 +73,7 @@ Nenhuma muda o destino. Os itens seguem a tabela em `comparacao.md`. O padrão p
 |---|---|---|
 | A. Medida e custo | 132, 136, 139, 141 | 136: script; os outros divergem |
 | B. Rotinas | 70, 104, 126, 129 | script (104 diverge) |
-| D. Achar outras CLB | 58, 140 | 140: os dois (fund. 10) |
+| D. Achar outras CLB | 58, 140 | 140: os dois (fund. 10); 58: via diverge (fund. 10) |
 | E. Ler a fonte | 68, 69 | script |
 | F. Coleta | 49, 55 | script |
 | G. Registros e relatórios | 46, 63, 111, 137 | script (lote 5 do K-127) |
@@ -101,7 +101,7 @@ Nenhuma muda o destino. Os itens seguem a tabela em `comparacao.md`. O padrão p
 
 ## 3. A lógica que o sistema pede (absorve a `base.md`, §2 a §4)
 
-A `base.md` era a base escrita em 22/11 para esta reunião. As essências que ela marcava "a confirmar" foram confirmadas na D-061 (fundamentos 1 e 9). O texto dela entra aqui, resumido. A tabela dos atos fica na `base.md`, §2, como trilha.
+A `base.md` era a base escrita em 22/11 para esta reunião. As essências que ela marcava "a confirmar" entraram na D-061 (fundamento 1 confirmado; fundamento 9 confirmado em parte, com wiki inteiro e campo de ação ainda [ABERTO]). O texto dela entra aqui, resumido. A tabela dos atos fica na `base.md`, §2, como trilha.
 
 - **Cada ato pressupõe algo, e o que ele pressupõe é o seu viés.**
   - Buscar só acha o que se sabe nomear.
@@ -126,7 +126,7 @@ A `base.md` era a base escrita em 22/11 para esta reunião. As essências que el
 Declarar não corrige o viés: diz de onde se vê (Haraway, 1988, "não conferido"). A lista de 14 vieses, com o efeito de cada um e se já é dito hoje, está na `base.md`, §5. Ficaram decididos e em aberto estes pontos:
 - **Decidido pela D-061:** o viés se declara como observação nas fichas.
 - **Em aberto:** o wiki inteiro e o campo de ação (seção 1, itens 2 e 3).
-- **Não ditos hoje nem como viés:** o lógico, o da língua, o do quadro de coordenadas, o da lei como definição, o da contagem, o do que é uma CLB e o da identidade. São o conteúdo da página fixa proposta para o wiki.
+- **Não ditos hoje nem como viés:** o lógico, o da língua, o do quadro de coordenadas, o da lei como definição, o da contagem, o do que é uma CLB e o da identidade. São o núcleo da página fixa proposta para o wiki (junto com o da máquina e o de valor — este já dito hoje como princípio, não como viés; `base.md`, §5; `revisao-claude-26-11.md`, §5, item 2).
 
 ---
 
@@ -137,8 +137,17 @@ Declarar não corrige o viés: diz de onde se vê (Haraway, 1988, "não conferid
 3. **A descontinuação formal do `orcamento.py`,** com a confirmação de Vicente para os 6 casos da trava (fala 14; D-059). Ela mexe nos insumos 132, 136 e 139.
 4. **Logs com tokens 0 que querem dizer "não medido".** O esquema só aceita null em script, rotina, pessoa e agente de workflow. O conserto muda um esquema e se junta ao 136 (`revisao-claude-26-11.md`, §3, item 1).
 5. **O estado "inconsistente", que abre o cartão de conflito** (`scripts/fila_curadoria.py:58`). Leitura das duas leituras do Passo 3: é gatilho para chamar Vicente, não veredito (fundamento 7). Fica como está até a reunião (insumo 143, junto ao 144).
-6. **Os exemplos das habilidades** (`.claude/skills/*/exemplos/`), à luz do fundamento 10. A conferência de quais funcionam como lista fechada não foi feita (insumos 53 e 140).
-7. **O resto da pauta do K-004, sem mudança:** o K-006, a 3ª passada do K-005 e os estacionados (K-125, K-115b, K-115c). Também a pergunta de Vicente sobre se arrumar a casa (insumos 94 e 135) é parte da promessa da ferramenta.
+6. **Os exemplos das habilidades** (`.claude/skills/*/exemplos/`), à luz do fundamento 10. Na proposta do Passo 3 (`passo3-proposta.jsonl`, linhas 14 e 31; `fundamentos.md`, §3 e §4), a Antigravity conferiu as 15 pastas `exemplos/` e registrou que funcionam como casos de prova, e não como lista fechada em execução (salvo o nome antigo de guia em `triagem-juridica/exemplos/falta-conhecimento-tradicional.json:15`), situando as listas fechadas nos scripts (`gerar_termo.py`, `pretriagem.py`, `mencoes_incidentais.py`, `triagem_fixa.py`) e em `esquemas/triagem-fixa.json`. Falta a segunda conferência independente pelo Claude Code (D-038; insumos 53, 87 e 140).
+7. **O resto da pauta do K-004, sem mudança:** o K-006, a 3ª passada do K-005 e os estacionados (K-125, K-115b, K-115c). Também a pergunta a Vicente (levantada pelo agrupador cego da limpeza de 20/11) sobre se arrumar a casa (insumos 94 e 135) é parte da promessa da ferramenta.
+
+### Notas da releitura da Antigravity (27/11/2026 — discordâncias de leitura e posição para a reunião, D-038)
+
+1. **Insumo 112 ([ABERTO] da D-049, "intervenção humana"):** concorda em mantê-lo para decisão de Vicente (`via: "nenhum dos dois"`), mas discorda da leitura da §2.1 de que o ponto seria alheio a um fundamento: a `base.md` (§5, l. 70) inclui expressamente a D-049 (sem conta nem cadastro) e a D-044 (robôs barrados) no **viés do arquivo (fundamento 9)**. A reunião decide o alcance de "intervenção humana" já sabendo que o que ficar fora entra como declaração desse viés, não como contorno na ferramenta.
+2. **Insumo 62 (oralidade não transcrita):** discorda de tratá-lo como problema da ferramenta na fase 1; P48 e entrevistas orais estão adiados na Fundação (`00_Fundacao_Cultura_Liquida.md`, l. 816, 844 e 895; K-008, fase 2). Na fase 1, vale declarar o viés do arquivo (fundamento 9, `base.md`, l. 70); a transcrição pertence à decisão da fase 2 (K-008), não à saída do piloto.
+3. **Insumos 58, 132, 135 e 139 (divergências de destino):** aceita a regra conservadora que mantém todos visíveis para a reunião (D-037) e **concorda com o reparo do Claude Code no 135** (faltou 1 das 5 partes: decidir quando a vistoria roda sozinha, `trilhas/2026-11-20_K-127/lista.md`, l. 152). Mantém para a reunião que o 58 convém ser tratado junto ao 140 (mesmo fundamento 10 em pré-triagem e Consultas) e que 132 e 139 convém caminhar com o 136 após a descontinuação formal do `orcamento.py`.
+4. **Posição inicial sobre o [ABERTO] 1 da D-061 (lógica como regra ou como declaração, §1):** converge com a posição do Claude Code (declarar o quadro lógico agora e só virar regra explícita onde a voz própria concluir algo e um caso real pedir), com um acréscimo para a reunião: separar o 5º lugar (**identidade no tempo**, fundamento 8) da contagem de `"inconsistente"` da Eτ, porque 0 `"inconsistente"` no piloto mede só contradição do eixo 3, enquanto a tensão de identidade (`CL-nnnn` fixo vs. transformação da prática) já está presente na própria cajuína (fala 10 de 22/11).
+5. **Padrão das cinco divergências de via (77, 87, 97, 123 e 128):** não há desacordo real entre `script` e `habilidade`; o Claude Code marcou `"nenhum dos dois"` por faltar primeiro a regra de Vicente (D-038), e a Antigravity apontou quem a executa depois de decidida. Assim, fixada a regra na reunião, o executor já está mapeado.
+6. **Teste da hipótese "pouco a resolver para sair do piloto" (D-061, palavras conferidas; `trilhas/2026-11-22_logica/falas-vicente.md`, l. 94 e 121):** a contagem mostra que os fundamentos sozinhos não esvaziaram a maior parte dos 35 insumos — 2 se dissolvem direto em texto da Fundação, 1 se junta, 2 já foram resolvidos e **30 (em 12 famílias)** seguem abertos, dos quais 5 já estão no escopo escrito do K-127, 5 tocam a liberação da operação com IA em escala (D-058) e 6 pedem antes uma regra de Vicente. Fica dito explicitamente para a reunião (P96, D-030).
 
 ---
 
@@ -149,6 +158,7 @@ Declarar não corrige o viés: diz de onde se vê (Haraway, 1988, "não conferid
   - o caso "F-0024 completada por inferência" com o Python sem `jsonschema`;
   - o nome do guia em `.claude/skills/triagem-juridica/exemplos/falta-conhecimento-tradicional.json:15` (`fundamentos.md`, §3).
 - A primeira versão do `comparar_passo3.py`, no commit 91edbc0, apagava os campos concordantes quando o destino divergia. Foi corrigida neste passo. A contagem de divergências não mudou.
+- Na etapa 5 do K-004, realocar os alvos que a limpeza de 20/11 apontou para o K-126 (encerrado sem execução pela D-061): insumos 91, 131 e a nota do 99 (`trilhas/planejamento/rodadas/2026-11-20_K-004/limpeza/resultado.md`, l. 114, 123 e 175).
 
 ## 7. Alcance (D-030)
 
@@ -157,9 +167,10 @@ Declarar não corrige o viés: diz de onde se vê (Haraway, 1988, "não conferid
   - as falas de 22/11 (passos do K-011 e falas 12 a 14);
   - a proposta, a releitura e a comparação;
   - o `resultado.md` da limpeza;
-  - a lista do K-127.
+  - a lista do K-127;
+  - na releitura da Antigravity (27/11): conferência cruzada de `saida-K-004.md` contra `fundamentos.md`, `comparacao.md`, `comparacao.json`, `comparar_passo3.py`, `passo3-proposta.jsonl`, `passo3-releitura.jsonl`, `base.md`, `D-061.json`, `revisao-claude-26-11.md` e `limpeza/resultado.md`.
 - **Fora:**
-  - a releitura deste documento pela Antigravity, que é o próximo passo;
+  - a conferência independente pelo Claude Code dos exemplos das habilidades (conferidos na proposta da Antigravity, ainda sem segunda leitura pela D-038);
+  - alteração de código, esquemas, testes ou acervo;
   - os textos completos das referências lógicas;
-  - a conferência dos exemplos das habilidades;
   - o consumo desta conversa, que não foi medido: o esquema de log exige número, e não se grava 0.
