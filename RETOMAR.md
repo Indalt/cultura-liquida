@@ -2,7 +2,7 @@
 
 **Bastão (D-060, 27/11/2026, Claude Code, O2 feito):** cartões em `Fazendo`: **K-004** e **K-121**.
 - **Feito (Claude Code em Opus 5.5, médio; sem agentes):** a **D-062** gravada em `trilhas/decisoes/D-062.json` e válida (`scripts/validar.py decisao`: PASSA), com a confirmação de Vicente nesta conversa (falas 5 a 8 na seção 0 do `servico.md`; corrigida no mesmo dia, fala 8). **Nomes novos, daqui em diante:** **módulo** (ferramenta própria, serviço próprio, integração, conector de parceria/MCP), **sprint** (o "serviço do K-004" é o primeiro), **backlog** (os antigos "insumos"; o arquivo e os scripts mantêm o nome), **versão estável** e **definição de pronto**. Fecha os 3 [ABERTO] da D-061 e o destino de 143 e 144; o [ABERTO] da D-058 segue aberto até o fim do sprint e da auditoria. Linha de essência no `AGENTS.md`. Sem log de execução: Vicente o dispensou por não ser necessário à comunicação entre as LLMs (o bastão e a D-062 bastam).
-- **Falta:** O1, a rodada diária de 27/11 ainda não rodou (a de 26/11 reprovou antes do conserto); conferir "portão: passa". O3, a revisão de Vicente, depois, sem segurar nada.
+- **O1 pronto:** a rotina diária de 27/11 gravou "portão: passa" (commit abe59dd, juntado ao main), a primeira desde 14/11. **Falta:** O3, a revisão de Vicente, depois, sem segurar nada.
 - **Próximo:** o **Prompt 4** do `servico.md`, a auditoria da Antigravity (Gemini 4 Neon, alto), que relê também a D-062 (Vicente: "segue o serviço") e passa a usar os nomes novos; depois o Prompt 5, alternados até o acordo.
 
 **Bastão (D-060, 27/11/2026, Claude Code, O3 feito e à espera da revisão de Vicente):** cartões em `Fazendo`: **K-121** (o O3) e **K-004** (estado salvo neste RETOMAR e no `servico.md`).
