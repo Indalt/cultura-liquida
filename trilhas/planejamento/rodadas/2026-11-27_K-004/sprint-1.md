@@ -1,4 +1,6 @@
-# Serviço do K-004, primeiro momento: a ferramenta funcionando e as 5 aulas do caju
+# Sprint 1 do K-004 (antes "serviço do primeiro momento"): a ferramenta funcionando e as 5 aulas do caju
+
+*Renomeado em 27/11/2026 de `servico.md` para `sprint-1.md` (D-062: a unidade de trabalho é o sprint; "serviço" é tipo de módulo). O texto abaixo mantém a palavra "serviço" onde foi escrito antes da D-062.*
 
 **Preparado em 27/11/2026** pelo Claude Code (Opus 5.5, esforço médio), a pedido de Vicente (fala 3, abaixo), e **atualizado no mesmo dia com as respostas dele (fala 4)**. **Estado: preparado. A execução começa pelos prompts da seção 10, um por conversa.** Nada aqui é decisão nova: o que muda regra entra no O2, só com a confirmação dele (`registrar-decisao`).
 
@@ -191,7 +193,7 @@ Cada prompt abre uma conversa nova: custa menos que continuar uma conversa longa
 ### Prompt 1 — Claude Code, O1 (Opus 5.5, esforço médio)
 ```
 Serviço do primeiro momento do K-004, objetivo O1. Confira o modelo: Opus 5.5, esforço médio; se for outro, avise e pare.
-Leia o topo do RETOMAR.md e as seções 1, 2, 3 (O1) e 5 de trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md.
+Leia o topo do RETOMAR.md e as seções 1, 2, 3 (O1) e 5 de trilhas/planejamento/rodadas/2026-11-27_K-004/sprint-1.md.
 Faça só o O1:
 - Em scripts/trava_testes.py:65, ordene os arquivos por key=lambda x: tuple(s.lower() for s in x.relative_to(p).parts), com um comentário de uma linha dizendo por quê (ordem igual no Windows e no Linux). A versão fica em trava-testes-0.1.
 Prove antes do commit:
@@ -201,7 +203,7 @@ Prove antes do commit:
 Faça o commit e o push.
 Pronto quando: a próxima rodada diária grava "portão: passa". Para conferir: git fetch, a ramificação rotinas e trilhas/logs/AAAA-MM-DD_portao-rotina.jsonl. Se a rodada ainda não tiver rodado, deixe no RETOMAR o que conferir e feche.
 Se o portão reprovar por outra causa, ela entra no O1.
-Qualquer outra coisa que aparecer vira uma linha na seção 5 do servico.md, sem explorar.
+Qualquer outra coisa que aparecer vira uma linha na seção 5 do sprint-1.md, sem explorar.
 Sem agentes.
 Ao fechar: o bastão no RETOMAR para o O3, commit e push.
 ```
@@ -209,11 +211,11 @@ Ao fechar: o bastão no RETOMAR para o O3, commit e push.
 ### Prompt 2 — Claude Code, O3 (sessão em Opus 5.5, médio; agente campo-de-acao em Sonnet 5.5, alto)
 ```
 Serviço do primeiro momento do K-004, objetivo O3 (K-121, pedido real de Vicente). Confira o modelo da sessão: Opus 5.5, esforço médio; se for outro, avise e pare.
-Leia o topo do RETOMAR.md e as seções 1, 2, 3 (O3, com o pedido, os parâmetros e os cuidados), 5 e 7 do servico.md.
+Leia o topo do RETOMAR.md e as seções 1, 2, 3 (O3, com o pedido, os parâmetros e os cuidados), 5 e 7 do sprint-1.md.
 No quadro, ponha o K-121 em Fazendo; o K-004 fica com o estado salvo.
 Antes do agente, diga quantas chamadas faz e quanto devem gastar (1 ou 2; o kit mediu 103.960 tokens numa chamada).
 Chame o agente campo-de-acao (Sonnet 5.5, alto; teto de 25 turnos; sem web) com:
-- as fontes: acervo/fichas/CL-0001.md, acervo/fichas/educacao/CL-0001.md, campo_de_acao/kit-fonte-primaria-cajuina.md e a tabela das 5 aulas da seção 3 do servico.md;
+- as fontes: acervo/fichas/CL-0001.md, acervo/fichas/educacao/CL-0001.md, campo_de_acao/kit-fonte-primaria-cajuina.md e a tabela das 5 aulas da seção 3 do sprint-1.md;
 - os parâmetros:
   - público em aberto: cada aula traz um campo "ajuste ao público", vazio;
   - cada aula numa hora-aula de 50 minutos, marcada "não conferido";
@@ -240,7 +242,7 @@ Ao fechar: o bastão no RETOMAR.
 ### Prompt 3 — Claude Code, O2 (Opus 5.5, médio; com Vicente presente)
 ```
 Serviço do primeiro momento do K-004, objetivo O2: uma decisão só. Confira o modelo: Opus 5.5, esforço médio; se for outro, avise e pare.
-Leia o topo do RETOMAR.md; as seções 0, 1, 3 (O2) e 7 do servico.md; trilhas/decisoes/D-058.json e D-061.json; e a seção 5 de trilhas/planejamento/rodadas/2026-11-27_K-004/reuniao.md.
+Leia o topo do RETOMAR.md; as seções 0, 1, 3 (O2) e 7 do sprint-1.md; trilhas/decisoes/D-058.json e D-061.json; e a seção 5 de trilhas/planejamento/rodadas/2026-11-27_K-004/reuniao.md.
 Pela habilidade registrar-decisao:
 - devolva a Vicente a essência final dos itens (a) a (d) do O2, com a definição dele de "o que falta" (fala 4);
 - confira as palavras ainda lidas e não confirmadas;
@@ -254,7 +256,7 @@ Ao fechar: o bastão no RETOMAR.
 ### Prompt 4 — Antigravity, auditoria (Gemini 4 Neon, esforço alto)
 ```
 Auditoria do serviço do primeiro momento do K-004. Você não fez o serviço (D-038). Modelo: Gemini 4 Neon, esforço alto.
-Leia AGENTS.md, o topo do RETOMAR.md e trilhas/planejamento/rodadas/2026-11-27_K-004/servico.md inteiro.
+Leia AGENTS.md, o topo do RETOMAR.md e trilhas/planejamento/rodadas/2026-11-27_K-004/sprint-1.md inteiro.
 Volta 1, pela lista da seção 6:
 - O1: o commit do O1 mexe só na linha da ordenação e no comentário; a trava tem 275 casos em ordem; o log do portão da rodada seguinte diz "passa".
 - O2: a D-062 é a essência confirmada, e não a transcrição; não há exceção nova às regras (D-061, item 5). Se a D-062 ainda não existir, deixe o O2 para a volta seguinte.
@@ -267,13 +269,13 @@ Volta 1, pela lista da seção 6:
 - Seção 5: nada se perdeu e nada entrou sem interagir.
 Só aponte; não corrija nada. Escreva na seção 8, no formato dela: A1, A2..., com arquivo:linha, o que viu e o que propõe.
 Voltas seguintes: leia as respostas de quem fez, e responda "acordo" ou aponte de novo, com o porquê.
-No fim de cada volta: anote o modelo e quanto gastou; commit e push só do servico.md e do RETOMAR, com o bastão ao Claude Code.
+No fim de cada volta: anote o modelo e quanto gastou; commit e push só do sprint-1.md e do RETOMAR, com o bastão ao Claude Code.
 ```
 
 ### Prompt 5 — Claude Code, resposta à auditoria (Opus 5.5, médio; a cada volta)
 ```
 Resposta à auditoria do serviço do primeiro momento do K-004. Confira o modelo: Opus 5.5, esforço médio; se for outro, avise e pare.
-Leia o topo do RETOMAR.md e as seções 6 e 8 do servico.md.
+Leia o topo do RETOMAR.md e as seções 6 e 8 do sprint-1.md.
 Para cada ponto A-n sem estado final, reflita antes de responder e escreva logo abaixo dele: "concordo" (com o que vai mudar), "concordo em parte" ou "discordo", sempre com o porquê e a evidência (arquivo:linha).
 Não corrija nada que não tenha "acordo" da Antigravity.
 Nos pontos com acordo:
