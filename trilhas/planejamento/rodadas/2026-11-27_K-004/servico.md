@@ -132,6 +132,9 @@ Dizer o grau de cada frase também ensina: μ 0,5 é uma linhagem só.
 | Depois (surgido no caminho) | — | — |
 | `trilhas/logs/2026-11-27_desconhecido.jsonl`, não rastreado, já presente ao abrir o O1 (origem não vista) | pasta de trabalho, fora do Git | nunca neste serviço (M7 casa) |
 | O workflow `rotinas` termina como "failure" no GitHub quando o portão reprova; a reprovação de 14 a 26/11 só se via na ramificação `rotinas` | `gh run list --workflow rotinas.yml` | o M1 (aviso de reprovações seguidas), se o O1 não se provar |
+| O3: a tabela das aulas (seção 3) diverge do acervo em três pontos, e as aulas seguiram o acervo: na aula 3, só PR-0235, PR-0408 e PR-0236 têm μ 0,5 (o modo de fazer tem μ 1,0; PR-0065 e PR-0401 são paracompletas); PR-0130 diz "suco clarificado depois de cortado", não "cajuína crua"; "cauim" e "caium" não estão em Termo nenhum (o TE-0005 só tem "caoi") e o insumo 91 trata do TE-0003 | relatório do agente (EX-0172); `campo_de_acao/aulas-caju/` | a revisão de Vicente pedir outra leitura |
+| O3: 25 turnos não bastaram para os 6 arquivos (parou com 4; a 2ª chamada, retomada, terminou); o retorno do Agent na retomada pode acumular os números da 1ª | EX-0171, EX-0172 | nunca neste serviço (M3 medida) |
+| O3: a marca fecha o item, não cada frase; frases sobre o próprio acervo (as candidatas CL-0002 a CL-0004, o resumo do PR-0019) ficaram sem marca; μ 1,0 descrito como "duas ou mais linhagens" por dedução de `calcular_mu_lambda.py` | relatório do agente (EX-0172) | a revisão de Vicente ou a auditoria pedir |
 
 ## 6. Auditoria da Antigravity (depois do serviço)
 - **Quem:** a Antigravity (Gemini 4 Neon, o da releitura de 27/11), esforço alto. Ela não fez o serviço (D-038).
