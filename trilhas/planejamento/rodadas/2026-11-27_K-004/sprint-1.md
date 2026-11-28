@@ -97,7 +97,15 @@
 - **Quadro:** o K-121 entra em Fazendo durante o O3; o K-004 fica com o estado salvo no RETOMAR e volta depois (D-035).
 - **Depois do O3:** a revisão de Vicente. Os ajustes podem cair na semana nova, de 3 a 4/12.
 
-#### O pedido (o desenho das aulas, da leitura de 27/11)
+#### O3, revisão (D-063, 28/11/2026): o que muda
+A revisão de Vicente (trilha em `revisao-aulas/`) achou as aulas contaminadas pelo sistema. A causa estava na encomenda abaixo ("O pedido"): o fio pelas dimensões da ferramenta, o "rigor da casa" com códigos, o grau numérico em aula e a marca em cada frase. **Vale a D-063 onde ela diverge do "O pedido"**; da tabela abaixo fica só a escolha de conteúdo (quais afirmações vão a cada aula), como base para o agente.
+- **Produtor consertado (28/11):** o campo-de-acao passa ao harness 0.3.0 (responde por todo o campo de ação) com a habilidade nova `planejar-aulas` 0.1.0.
+- **Saída nova em `campo_de_acao/aulas-caju/`:** `aula-1.md` (abre com o programa em até 15 minutos) a `aula-5.md`, `nota-do-educador.md` (rastreio, cuidados, carimbo, espaço para anotar) e `kit-do-professor.md` (explicação breve e, no fim, a aula ao grande público sobre como o programa foi feito com base nas ciências). Sai o `programa.md`.
+- **Entram também** os pontos procedentes das críticas de outra LLM (`revisao-aulas/critica-llm-1.md` e `critica-llm-2-kit.md`): a ficha mínima de registro de fonte, primária ou secundária "em relação a qual pergunta", o texto curto de consentimento na aula 4, o tempo real da tarefa, o código como proteção provisória (não apagamento), o acolhimento de estudantes de municípios produtores.
+- **Conferência:** a autoconferência da habilidade e a do campo de ação (marcas existentes, dado pessoal, carimbo, agora na nota do educador); sem script novo e sem segunda leitura. Depois, a revisão de Vicente.
+- **Prompt:** o 2b da seção 10, numa conversa nova (agente editado só carrega em conversa nova).
+
+#### O pedido (o desenho das aulas, da leitura de 27/11; substituído pela D-063 no fio, no rigor com códigos e no grau em aula)
 **O fio:** cada aula segue uma dimensão da ferramenta (X insumo, Z tempo, Y processo, W compreensão local, e o hoje). Em toda aula se pratica o rigor da casa:
 - separar "a fonte diz" de "eu digo" (fundamento 3);
 - dizer a Falta em vez de completá-la (D-018);
@@ -235,6 +243,25 @@ Depois, sem IA:
 - grave o log de cada chamada com scripts/registrar_log.py.
 Faça o commit e o push.
 Pronto quando: os 6 arquivos gravados, 100% das marcas existindo, entregues a Vicente para a revisão.
+O que aparecer vira uma linha na seção 5. Acima de 80% na leitura oficial, termine o passo e grave o RETOMAR.
+Ao fechar: o bastão no RETOMAR.
+```
+
+### Prompt 2b — Claude Code, O3 refeito pela D-063 (sessão em Opus 5.5, médio; agente campo-de-acao em Sonnet 5.5, alto)
+```
+O3 refeito (K-121), pela D-063. Confira o modelo da sessão: Opus 5.5, esforço médio; se for outro, avise e pare.
+Leia o topo do RETOMAR.md, a D-063 (trilhas/decisoes/D-063.json), a seção 3 do sprint-1.md (O3, com "O3, revisão") e as duas críticas em trilhas/planejamento/rodadas/2026-11-27_K-004/revisao-aulas/.
+Antes do agente, diga quantas chamadas faz e quanto devem gastar (2 ou 3; a primeira versão mediu duas chamadas de até 25 turnos; o kit, 103.960 tokens numa).
+Chame o agente campo-de-acao (harness 0.3.0, habilidade planejar-aulas; Sonnet 5.5, alto; teto de 25 turnos; sem web), uma chamada por vez, com:
+- as fontes: acervo/fichas/CL-0001.md, acervo/fichas/educacao/CL-0001.md, as Proposições e Fontes do acervo, e a escolha de conteúdo da tabela das aulas (seção 3 do sprint-1.md), só como lista de afirmações por aula;
+- a primeira versão (campo_de_acao/aulas-caju/, commit 3b11877) só como fonte de conteúdo já conferido e como contraexemplo de forma;
+- os parâmetros: 5 aulas de uma hora-aula (50 minutos, "não conferido"); público em aberto (o "Ajuste ao público:" vazio fica na nota do educador); uso de Vicente e das turmas, rascunho não publicado;
+- os pontos procedentes das críticas (lista em "O3, revisão");
+- a saída, gravada arquivo a arquivo em campo_de_acao/aulas-caju/: aula-1.md a aula-5.md, nota-do-educador.md e kit-do-professor.md. Remova programa.md no fim (o conteúdo útil dele vai para a abertura da aula 1, a nota e o kit).
+Sugestão de divisão: chamada 1, aulas 1 a 3 e a parte delas na nota; chamada 2, aulas 4 e 5, o resto da nota e o kit do professor.
+Depois, sem IA: confira que todo código PR e FO da nota existe no acervo; rode procurar_dado_pessoal.py nos arquivos; confira o carimbo e o espaço de anotações na nota; grave o log de cada chamada com scripts/registrar_log.py.
+Faça o commit e o push.
+Pronto quando: os 7 arquivos gravados, programa.md removido, 100% dos códigos da nota existindo, entregues a Vicente para a revisão.
 O que aparecer vira uma linha na seção 5. Acima de 80% na leitura oficial, termine o passo e grave o RETOMAR.
 Ao fechar: o bastão no RETOMAR.
 ```
