@@ -24,6 +24,18 @@ Depois, a 2ª crítica de outra LLM, sobre o kit (em [critica-llm-2-kit.md](crit
 ## Fala 6 (28/11)
 "1. desnecessario eu dizer que programa é uma palavra polissemica. 2. neste caso o programa sempre fará parte da aula 1 - será breve para ser dado em no maximo 15 minutos por tratar de topicos. precisa encantar quem vai acompanhar as proximas aulas. desnecessario colocar um script de conferencia para procurar o que nao foi produzido. se as aulas nao dizem pra fazer nao vai encontrar. ja deve ter scripts de conferencia do campo de acao e este talvez precise ser atualizado. desnecessario tb fazer dupla conferencia se o agente for bem pensado. Caso nao tenha, esse agente deveria ser responsavel por todo o campo de acao e carregar as habilidades necessarias para cada acao. o kit é uma explicacao breve e simples para o professor e no final uma aula que qualquer professor poderia dar para o grande publico para explicar como o programa de aulas foi feito com base nas ciencias. isso pode incluir um breve comentario sobre a didatica. 3. nota de educador pode incluir espaço para digitar anotacoes ou manuscrito. vamos fazer isso agora e com um prompt em uma nova sessao se nao houver mais um sprint O1 o2 ou 3para liberar o sistema. me traga sugestoes e modelos pedagogicos, assim como para as outras tarefas do campo de ação."
 
+## Fala 7 (28/11)
+"O guia para salvaguarda é algo que tb vai mudar. é muito pretensioso criar uma guia para um orgao que faz guias há decadas. isso foi passando para nao gerar muitas tarefas, mas ainda nao toquei nele por isso. e nao vamos tocar agora. nao precisa usar agente pra isso agora. apenas anote isso ao criar ou mudar o agente. o programa de aula nao é fixo em 5, pode ser 3, 1 etc. esse do caju ja pode se adequar a isso e ao inves de caju falamos da cajuina tornando o caju como parte do que se fala da cajuina, obviamente. topo olhar o que o agente se propoe a fazer de forma resumida antes de mudar novamente. pode ser interessante, mas tem de ser capaz de se adaptar ao publico, certo? se adaptar tb ao educador que poderia ser um indigena."
+
+## Fala 8 (28/11)
+"1 esse agente pode ser um script? 2 corresponde e vale para qualquer educador, tem de ser adaptavel e nao apenas para educador indigena."
+
+## Fala 9 (28/11)
+"entao se depender de IA, deve-se incluir nas habilidades dos respectivos agentes (que devem estar conectados e serem necessarias para os agentes) o que um script faria para nao gastar tokens fazendo, isso é possivel? ajudaria na economia? e como nao deixar a IA criar coisas que nao estao no cultura liquida? sim, o educador pode fazer na nota se nao atrapalhar o programa. acho que nao atrapalha. o programa é da CLB, no grupo de aulas que estamos trabalhando cajuina."
+
+## Fala 10 (28/11)
+"pode" (ao resumo: D-063 ampliada, agente com a nota do guia, habilidade só com blocos, `scripts/montar_programa.py`, Prompt 2b acertado, a regra geral para todos os agentes no backlog).
+
 ## O que a sessão reconheceu como causa (28/11)
 1. A encomenda do O3 (`sprint-1.md`, seção 3, "O pedido") mandava o fio das aulas seguir as dimensões da ferramenta, praticar "o rigor da casa" com códigos de decisão, dizer o μ em aula e marcar cada frase com PR. O agente cumpriu a encomenda.
 2. O campo-de-acao só tinha a habilidade do kit, escrita na língua interna do sistema; não havia habilidade de planejar aula.

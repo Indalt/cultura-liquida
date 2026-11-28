@@ -330,7 +330,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 13 | 357-364 | horas e consumo | — | — | sem cartão: registro desde o K-108 (D-035) | medida da O e do P; as horas se releem pela D-037 (A-08; K-003) |
 | 14 | 366-372 | relatório do piloto para o planejamento | redator, auditor | a aprovação da v0.3 passa ao K-004 (D-035) | K-116 | P: K-004 e K-007 |
 
-## 6. Insumos 1 a 147 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
+## 6. Insumos 1 a 148 (os 15 a 19 nasceram no K-001; os 20 a 26, no K-003)
 
 | Insumo | Frente | Vira |
 |---|---|---|
@@ -481,6 +481,7 @@ O roteiro serviu à aprovação de 17/10; para a execução, vale o brief onde o
 | 145, Revisar a nomenclatura do projeto | P; D | a definir pelo planejamento |
 | 146, correções do kit de fonte primária | D | a definir pelo planejamento |
 | 147, aula sobre o sistema como prática do campo de ação | P | K-121 |
+| 148, o que um script faz, a IA não faz, em todos os agentes | D; P | a definir pelo planejamento |
 
 ## 7. Decisões D-001 a D-043
 

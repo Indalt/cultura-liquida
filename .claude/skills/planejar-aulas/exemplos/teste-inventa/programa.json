@@ -1,0 +1,13 @@
+{
+  "clb": "CL-0001",
+  "titulo": "A cajuína (teste do montar_programa.py)",
+  "minutos_por_aula": 50,
+  "carimbo": {"versao_ficha": "CL-0001, ficha de 30/10/2026", "nivel": "teste", "data": "2026-11-28", "como_citar": "teste"},
+  "cuidados": ["Nunca imagem, voz ou nome de criança ou adolescente."],
+  "faltas": ["F-0025: o nome do autor das primeiras fontes não consta."],
+  "blocos": [
+    {"id": "abertura", "titulo": "O que é a cajuína", "minutos": 15, "proposicoes": ["PR-0001"]},
+    {"id": "nome", "titulo": "O nome do caju", "minutos": 20, "proposicoes": ["PR-0022"]}
+  ],
+  "montagens": {"1": [["abertura", "nome"]], "2": [["abertura"], ["nome"]]}
+}

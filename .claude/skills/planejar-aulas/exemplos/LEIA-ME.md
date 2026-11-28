@@ -1,5 +1,5 @@
 # Exemplos da habilidade planejar-aulas
 
-**Pendente.** O primeiro par real é o programa de aulas do caju (`campo_de_acao/aulas-caju/`), refeito pela D-063. Ele entra aqui como exemplo (com `casos.json`, pela trava dos testes, `scripts/trava_testes.py --gravar-novos`) só depois da revisão de Vicente.
-
-A primeira versão das aulas do caju (commit 3b11877) fica como **contraexemplo**: seguia as dimensões do sistema, usava os graus numéricos e os códigos no texto da aula e repetia o assunto de uma aula na outra (trilha em `trilhas/planejamento/rodadas/2026-11-27_K-004/revisao-aulas/`).
+- **`casos.json`:** os casos de teste do `scripts/montar_programa.py` (conferir, material, montar), com dois programas mínimos: `teste/` (passa) e `teste-inventa/` (um bloco com ano, cronista e afirmação de outro bloco, que a conferência barra). A saída dos testes vai para `.saida-testes/` (fora do Git).
+- **Par real: pendente.** O primeiro é o programa da cajuína (`campo_de_acao/aulas-cajuina/`), refeito pela D-063; entra aqui depois da revisão de Vicente.
+- **Contraexemplo de forma:** a primeira versão das aulas do caju (commit 3b11877) seguia as dimensões do sistema, punha graus numéricos e códigos no texto da aula e repetia o assunto de uma aula na outra (trilha em `trilhas/planejamento/rodadas/2026-11-27_K-004/revisao-aulas/`).

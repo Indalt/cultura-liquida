@@ -17,3 +17,6 @@ wiki-local/
 # Chaves locais (nunca no Git público; D-021)
 .env
 .env.*
+
+# Saída dos testes do montar_programa.py (recriada a cada rodada)
+.saida-testes/

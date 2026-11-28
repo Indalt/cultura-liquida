@@ -1,0 +1,41 @@
+{
+  "habilidade": "planejar-aulas (scripts/montar_programa.py; D-063)",
+  "rodada": "B",
+  "casos": [
+    {
+      "nome": "conferir: blocos só com o material passam",
+      "espera": "passa",
+      "comando": ["scripts/montar_programa.py", "conferir", ".claude/skills/planejar-aulas/exemplos/teste/programa.json"],
+      "saida_contem": "montar-programa-0.1: PASSA",
+      "criterio": "marcas do material, números, datas e nomes próprios presentes nas afirmações e fontes do bloco"
+    },
+    {
+      "nome": "conferir: invenção reprova (data, nome e marca fora do material)",
+      "espera": "reprova",
+      "comando": ["scripts/montar_programa.py", "conferir", ".claude/skills/planejar-aulas/exemplos/teste-inventa/programa.json"],
+      "saida_contem": "nome próprio fora do material: Gandavo",
+      "criterio": "o bloco que põe ano (1532), cronista e uma afirmação de outro bloco não passa"
+    },
+    {
+      "nome": "material: prepara o material fechado de cada bloco",
+      "espera": "passa",
+      "comando": ["scripts/montar_programa.py", "material", ".claude/skills/planejar-aulas/exemplos/teste/programa.json", "--saida", ".saida-testes/planejar-aulas"],
+      "saida_contem": "material de 2 bloco(s)",
+      "criterio": "um arquivo por bloco, com o grau em palavras e a citação curta"
+    },
+    {
+      "nome": "montar: o mesmo programa em 2 aulas, com nota e kit",
+      "espera": "passa",
+      "comando": ["scripts/montar_programa.py", "montar", ".claude/skills/planejar-aulas/exemplos/teste/programa.json", "--aulas", "2", "--saida", ".saida-testes/planejar-aulas"],
+      "saida_contem": "2 aula(s), nota do educador e kit",
+      "criterio": "o número de aulas vem da montagem pedida; referências e nota feitas por script"
+    },
+    {
+      "nome": "montar: número de aulas sem montagem reprova",
+      "espera": "reprova",
+      "comando": ["scripts/montar_programa.py", "montar", ".claude/skills/planejar-aulas/exemplos/teste/programa.json", "--aulas", "5", "--saida", ".saida-testes/planejar-aulas"],
+      "saida_contem": "não tem montagem para 5",
+      "criterio": "o script não inventa a divisão das aulas"
+    }
+  ]
+}
